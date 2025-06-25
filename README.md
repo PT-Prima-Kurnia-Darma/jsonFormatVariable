@@ -1,5 +1,12 @@
 # Tipe Data
 
+## users
+{
+userId : str
+password : str
+name : str
+}
+
 ## BAP
 
 1. instalasi listrik
