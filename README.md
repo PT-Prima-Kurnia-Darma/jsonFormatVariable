@@ -1,6 +1,6 @@
-## Tipe Data
+# Tipe Data
 
-# BAP
+## BAP
 
 1. instalasi listrik
 day : str
