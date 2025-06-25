@@ -1,11 +1,9 @@
 # Tipe Data
 
 ## users
-{
 userId : str
 password : str
 name : str
-}
 
 ## BAP
 
