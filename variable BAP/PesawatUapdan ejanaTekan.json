@@ -1,0 +1,23 @@
+{
+  "typeInspection": "",
+  "typeProductionPower": "",
+  "day": "",
+  "time": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageCompany": "",
+  "location": "",
+  "type": "",
+  "factory": "",
+  "yearCountryManufacture": "",
+  "serialNumber": null,
+  "fuelType": "",
+  "pressureVessel": "",
+  "designPressure": null,
+  "maxPressure": null,
+  "materialType": "",
+  "safetyType": "",
+  "volumePressure": null,
+  "visualInspection": "",
+  "testing": ""
+}

@@ -1,0 +1,14 @@
+{
+  "day": "",
+  "time": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "location": "",
+  "powerSourcePln": null,
+  "powerSourceGenerator": null,
+  "lightingPowerUsage": null,
+  "powerUsage": "",
+  "visualInspection": "",
+  "testing": ""
+}
