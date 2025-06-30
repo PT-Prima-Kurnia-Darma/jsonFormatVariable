@@ -1,17 +1,50 @@
 {
   "id": "",
-  "typeInspection": "",
+  "typeInspection": "Pemeriksaan PAA Gondola",
+  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
   "companyLocation": "",
-  "usageCompany": "",
+  "usageLocation": "",
   "location": "",
-  "factory": "",
-  "yearCountryManufacture": "",
-  "serialNumber": null,
-  "maxLifting": null,
-  "speedLifting": null,
-  "visualInspection": "",
-  "testing": ""
+  "manufacturer": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "hasConstructionDrawing": null,
+  "hasMaterialCertificate": null,
+  "liftingPurpose": "Orang dan Barang Kerja",
+  "maxLiftingCapacity": {
+    "kg": null,
+    "people": null
+  },
+  "liftingSpeedMpm": null,
+  "safetyEquipment": "Safety lock, Body harness, Safety helmet, Handy talkie, Safety life line, Safety hardness anchorage, dan APD lainnya.",
+  "visualInspection": {
+    "isSlingDiameterAcceptable": null,
+    "isBumperInstalled": null,
+    "isCapacityMarkingDisplayed": null,
+    "isPlatformConditionAcceptable": null,
+    "driveMotorCondition": {
+      "isGoodCondition": null,
+      "hasOilLeak": null
+    },
+    "isControlPanelClean": null,
+    "isBodyHarnessAvailable": null,
+    "isLifelineAvailable": null,
+    "isButtonLabelsDisplayed": null
+  },
+  "testing": {
+    "isWireRopeMeasurementOk": null,
+    "isUpDownFunctionOk": null,
+    "isDriveMotorFunctionOk": null,
+    "isEmergencyStopFunctional": null,
+    "isSafetyLifelineFunctional": null,
+    "ndtTest": {
+      "method": "",
+      "isResultGood": null,
+      "hasCrackIndication": null
+    }
+  }
 }

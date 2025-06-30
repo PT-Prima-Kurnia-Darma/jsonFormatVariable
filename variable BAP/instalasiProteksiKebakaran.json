@@ -1,6 +1,7 @@
 {
   "id": "",
   "typeInspection": "",
+  "inspectionSchedule": "",
   "typeFireProtection": "",
   "day": "",
   "time": null,
@@ -26,6 +27,46 @@
   "emergencyExit": null,
   "APAR": null,
   "seriesNumber": null,
-  "visualInspection": "",
-  "testing": ""
+  "visualInspection": {
+    "aparStatus": {
+      "isAvailable": null,
+      "isGoodCondition": null
+    },
+    "isHydrantPanelGoodCondition": null,
+    "pumpStatus": {
+      "jockeyPump": {
+        "isAvailable": null,
+        "isGoodCondition": null
+      },
+      "electricPump": {
+        "isAvailable": null,
+        "isGoodCondition": null
+      },
+      "dieselPump": {
+        "isAvailable": null,
+        "isGoodCondition": null
+      }
+    },
+    "sprinklerSystemStatus": {
+      "isAvailable": null,
+      "isGoodCondition": null
+    },
+    "detectorSystemStatus": {
+      "isAvailable": null,
+      "isGoodCondition": null
+    }
+  },
+  "testing": {
+    "isAparFunctional": null,
+    "pumpTestResults": {
+      "isJockeyPumpFunctional": null,
+      "isElectricPumpFunctional": null,
+      "isDieselPumpFunctional": null
+    },
+    "isSprinklerFunctional": null,
+    "detectorTestResults": {
+      "isFunctional": null,
+      "isConnectedToMcfa": null
+    }
+  }
 }

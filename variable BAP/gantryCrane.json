@@ -1,18 +1,47 @@
 {
   "id": "",
-  "typeInspection": "",
+  "typeInspection": "Pemeriksaan PAA Gantry Crane",
+  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
   "companyLocation": "",
-  "usageCompany": "",
+  "usageLocation": "",
   "location": "",
-  "type": "",
-  "factory": "",
-  "yearCountryManufacture": "",
-  "serialNumber": null,
-  "maxLifting": null,
-  "speedLifting": null,
-  "visualInspection": "",
-  "testing": ""
+  "brandOrType": "",
+  "manufacturer": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "liftingPurpose": "Material dan Barang",
+  "maxLiftingCapacityKg": null,
+  "liftingSpeedMpm": null,
+  "safetyEquipment": "Emergency stop",
+  "visualInspection": {
+    "isMainStructureGood": null,
+    "areBoltsAndNutsSecure": null,
+    "isWireRopeGoodCondition": null,
+    "isHookGoodCondition": null,
+    "gearboxCondition": {
+      "isGoodCondition": null,
+      "hasOilLeak": null
+    },
+    "isWarningLampGoodCondition": null,
+    "isCapacityMarkingDisplayed": null
+  },
+  "testing": {
+    "isForwardReverseFunctionOk": null,
+    "isHoistingFunctionOk": null,
+    "isLimitSwitchFunctional": null,
+    "ndtTest": {
+      "method": "",
+      "isResultGood": null
+    },
+    "loadingTest": {
+      "loadKg": null,
+      "liftHeightMeters": null,
+      "holdTimeSeconds": null,
+      "isResultGood": null
+    }
+  }
 }

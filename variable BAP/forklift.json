@@ -1,16 +1,47 @@
 {
   "id": "",
-  "typeInspection": "",
+  "typeInspection": "Pemeriksaan PAA Forklift",
+  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
   "companyLocation": "",
-  "usageCompany": "",
+  "usageLocation": "",
   "location": "",
-  "type": "",
-  "factory": "",
-  "liftingCapacity": null,
-  "liftingHeight": null,
-  "visualInspection": "",
-  "testing": ""
+  "brandOrType": "",
+  "manufacturer": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "hasConstructionDrawing": null,
+  "hasMaterialCertificate": null,
+  "liftingPurpose": "Mengangkat dan memindahkan barang / material",
+  "liftingCapacityKg": null,
+  "liftingHeightMeters": null,
+  "safetyEquipment": "Safety sign, Safety lamp, Safety helmet, dan APD lainnya.",
+  "visualInspection": {
+    "hasForkDefects": null,
+    "isNameplateAttached": null,
+    "isAparAvailable": null,
+    "isCapacityMarkingDisplayed": null,
+    "hasHydraulicLeak": null,
+    "isChainGoodCondition": null
+  },
+  "testing": {
+    "loadAndTravelTest": {
+      "loadKg": null,
+      "liftHeightMeters": null,
+      "isAbleToLiftAndHold": null,
+      "isFunctioningWell": null
+    },
+    "ndtHeelForkTest": {
+      "method": "Magnetic Test",
+      "hasCrackIndication": null
+    },
+    "isEmergencyStopFunctional": null,
+    "indicatorsTest": {
+      "isWarningLampFunctional": null,
+      "isHornFunctional": null
+    }
+  }
 }

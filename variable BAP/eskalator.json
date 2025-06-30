@@ -1,0 +1,40 @@
+{
+  "id": "",
+  "typeInspection": "Pemeriksaan Eskalator",
+  "inspectionSchedule": "",
+  "day": "",
+  "time": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "location": "",
+  "escalatorType": "",
+  "manufacturer": "",
+  "installer": "",
+  "brandOrType": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "capacityDescription": "",
+  "speedMps": null,
+  "floorsServed": "",
+  "visualInspection": {
+    "isMachineRoomConditionAcceptable": null,
+    "isPanelGoodCondition": null,
+    "lightingCondition": {
+      "isMachineRoomLightOk": null,
+      "isPitLightOk": null
+    },
+    "areSafetySignsAvailable": null
+  },
+  "testing": {
+    "isNdtThermographPanelOk": null,
+    "areSafetyDevicesFunctional": null,
+    "isLimitSwitchFunctional": null,
+    "pitEmergencyStopStatus": {
+      "isAvailable": null,
+      "isFunctional": null
+    },
+    "isEscalatorFunctionOk": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "id": "",
-  "typeInspection": "Pemeriksaan Pesawat Tenaga dan Produksi",
+  "typeInspection": "Pemeriksaan Pesawat Uap & Bejana Tekan",
   "inspectionSchedule": "",
-  "typeProductionPower": "",
+  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
@@ -14,17 +14,18 @@
   "manufactureYear": null,
   "manufactureCountry": "",
   "serialNumber": "",
-  "capacityDescription": "",
-  "driveMotorPowerKw": null,
-  "specialSpecification": "",
-  "dimensionsDescription": "",
-  "rotationRpm": null,
-  "frequencyHz": null,
-  "currentAmperes": null,
-  "machineWeightKg": null,
-  "areSafetyFeaturesInstalled": null,
+  "fuelType": "",
+  "pressureVesselContent": "",
+  "designPressureKgCm2": null,
+  "maxWorkingPressureKgCm2": null,
+  "materialType": "",
+  "safetyValveType": "",
+  "volumeLiters": null,
   "visualInspection": {
-    "isMachineGoodCondition": null,
+    "engineAndGeneratorStatus": {
+      "isDieselMotorGood": null,
+      "isGeneratorGood": null
+    },
     "areElectricalIndicatorsGood": null,
     "safetyEquipmentStatus": {
       "isAparAvailable": null,
@@ -32,21 +33,16 @@
     },
     "isGroundingInstalled": null,
     "isBatteryGoodCondition": null,
-    "hasLubricationLeak": null,
-    "isFoundationGoodCondition": null,
-    "hasHydraulicLeak": null
+    "hasLubricationLeak": null
   },
   "testing": {
     "isLightingCompliant": null,
     "isNoiseLevelCompliant": null,
     "isEmergencyStopFunctional": null,
-    "isMachineFunctional": null,
+    "isDieselMotorFunctional": null,
     "isVibrationLevelCompliant": null,
     "isInsulationResistanceOk": null,
     "isShaftRotationCompliant": null,
-    "isGroundingResistanceCompliant": null,
-    "isNdtWeldTestOk": null,
-    "isVoltageBetweenPhasesNormal": null,
-    "isPhaseLoadBalanced": null
+    "isGroundingResistanceCompliant": null
   }
 }
