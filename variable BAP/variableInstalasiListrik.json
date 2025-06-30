@@ -1,5 +1,7 @@
 {
   "id": "",
+  "typeInspection": "",
+  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
@@ -9,7 +11,23 @@
   "powerSourcePln": null,
   "powerSourceGenerator": null,
   "lightingPowerUsage": null,
-  "powerUsage": "",
-  "visualInspection": "",
-  "testing": ""
+  "powerUsage": null,
+  "electricalCurrentType": "3 Phase 50 HZ, 220 – 380 V",
+  "serialNumber": "",
+  "visualInspection": {
+  "panelRoomCondition": { 
+    "isRoomClean": null, 
+    "isRoomClearItems": null 
+  },
+    "hasSingleLineDiagram": null,
+    "hasProtectiveCover": null,
+    "isLabelingComplete": null,
+    "isFireExtinguisherAvailable": null
+  },
+  "testing": {
+    "isThermographTestOk": null,
+    "areSafetyDevicesFunctional": null,
+    "isVoltageBetweenPhasesNormal": null,
+    "isPhaseLoadBalanced": null
+  }
 }

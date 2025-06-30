@@ -1,20 +1,50 @@
 {
   "id": "",
-  "typeInspection": "",
+  "typeInspection": "Pemeriksaan PAA Mobile Crane",
+  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
   "companyLocation": "",
-  "usageCompany": "",
+  "usageLocation": "",
   "location": "",
-  "factory": "",
-  "yearCountryManufacture": "",
-  "serialNumber": null,
-  "certificateNumber": null,
-  "maxLifting": null,
-  "maxHeight": null,
-  "speedLifting": null,
-  "LocationRiksauji": "",
-  "visualInspection": "",
-  "testing": ""
+  "manufacturer": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "materialCertificateNumber": "",
+  "liftingPurpose": "Barang",
+  "maxLiftingCapacityKg": null,
+  "maxLiftingHeightMeters": null,
+  "liftingSpeedMpm": null,
+  "safetyEquipmentNote": "Terpasang Lengkap",
+  "inspectionTestLocation": "",
+  "visualInspection": {
+    "hasBoomDefects": null,
+    "isNameplateAttached": null,
+    "areBoltsAndNutsSecure": null,
+    "isSlingGoodCondition": null,
+    "isHookGoodCondition": null,
+    "isSafetyLatchInstalled": null,
+    "isTireGoodCondition": null,
+    "lightingStatus": {
+      "isWorkLampFunctional": null,
+      "isSignalLampFunctional": null
+    }
+  },
+  "testing": {
+    "isForwardReverseFunctionOk": null,
+    "isSwingFunctionOk": null,
+    "isHoistingFunctionOk": null,
+    "loadingTest": {
+      "loadKg": null,
+      "liftHeightMeters": null,
+      "holdTimeSeconds": null,
+      "isResultGood": null
+    },
+    "ndtTest": {
+      "method": "",
+      "isResultGood": null
+    }
+  }
 }

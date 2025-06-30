@@ -1,0 +1,53 @@
+{
+  "id": "",
+  "typeInspection": "Pemeriksaan Elevator",
+  "inspectionSchedule": "",
+  "elevatorPurpose": "",
+  "day": "",
+  "time": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "location": "",
+  "elevatorType": "",
+  "manufacturer": "",
+  "installer": "",
+  "brandOrType": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "capacity": {
+    "kg": null,
+    "people": null
+  },
+  "speedMps": null,
+  "floorsServed": "",
+  "visualInspection": {
+    "isMachineRoomConditionAcceptable": null,
+    "isPanelGoodCondition": null,
+    "isAparAvailableInPanelRoom": null,
+    "lightingCondition": {
+      "isMachineRoomLightOk": null,
+      "isCarLightOk": null,
+      "isPitLightOk": null
+    },
+    "isPitLadderAvailable": null
+  },
+  "testing": {
+    "isNdtThermographPanelOk": null,
+    "isArdFunctional": null,
+    "isGovernorFunctional": null,
+    "isSlingConditionOkByTester": null,
+    "limitSwitchTest": {
+      "isTopSwitchFunctional": null,
+      "isFinalSwitchFunctional": null
+    },
+    "isDoorSwitchFunctional": null,
+    "pitEmergencyStopStatus": {
+      "isAvailable": null,
+      "isFunctional": null
+    },
+    "isIntercomFunctional": null,
+    "isFiremanSwitchFunctional": null
+  }
+}
