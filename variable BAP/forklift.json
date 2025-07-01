@@ -19,29 +19,19 @@
   "liftingCapacityKg": null,
   "liftingHeightMeters": null,
   "safetyEquipment": "Safety sign, Safety lamp, Safety helmet, dan APD lainnya.",
-  "visualInspection": {
-    "hasForkDefects": null,
-    "isNameplateAttached": null,
-    "isAparAvailable": null,
-    "isCapacityMarkingDisplayed": null,
-    "hasHydraulicLeak": null,
-    "isChainGoodCondition": null
-  },
-  "testing": {
-    "loadAndTravelTest": {
-      "loadKg": null,
-      "liftHeightMeters": null,
-      "isAbleToLiftAndHold": null,
-      "isFunctioningWell": null
-    },
-    "ndtHeelForkTest": {
-      "method": "Magnetic Test",
-      "hasCrackIndication": null
-    },
-    "isEmergencyStopFunctional": null,
-    "indicatorsTest": {
-      "isWarningLampFunctional": null,
-      "isHornFunctional": null
-    }
-  }
+  "viHasForkDefects": null,
+  "viIsNameplateAttached": null,
+  "viIsAparAvailable": null,
+  "viIsCapacityMarkingDisplayed": null,
+  "viHasHydraulicLeak": null,
+  "viIsChainGood": null,
+  "testLoadKg": null,
+  "testLiftHeightMeters": null,
+  "testIsAbleToLiftAndHold": null,
+  "testIsFunctioningWell": null,
+  "testNdtHeelForkMethod": "Magnetic Test",
+  "testNdtHeelForkHasCrack": null,
+  "testIsEmergencyStopFunctional": null,
+  "testIsWarningLampFunctional": null,
+  "testIsHornFunctional": null
 }

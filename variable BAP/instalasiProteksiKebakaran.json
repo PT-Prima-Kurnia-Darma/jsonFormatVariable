@@ -13,60 +13,38 @@
   "buildingSize": null,
   "buildingHeight": null,
   "totalFloors": null,
-  "totalHydrantPilar": null,
+  "totalHydrantPillar": null,
   "totalHydrantBuilding": null,
-  "totalHoseRell": null,
-  "totalSpinkler": null,
+  "totalHoseReel": null,
+  "totalSprinkler": null,
   "totalHeatDetector": null,
   "totalSmokeDetector": null,
   "totalFlameDetector": null,
   "totalGasDetector": null,
-  "manualButton": null,
-  "alarmBell": null,
-  "signalAlarmLamp": null,
-  "emergencyExit": null,
-  "APAR": null,
-  "seriesNumber": null,
-  "visualInspection": {
-    "aparStatus": {
-      "isAvailable": null,
-      "isGoodCondition": null
-    },
-    "isHydrantPanelGoodCondition": null,
-    "pumpStatus": {
-      "jockeyPump": {
-        "isAvailable": null,
-        "isGoodCondition": null
-      },
-      "electricPump": {
-        "isAvailable": null,
-        "isGoodCondition": null
-      },
-      "dieselPump": {
-        "isAvailable": null,
-        "isGoodCondition": null
-      }
-    },
-    "sprinklerSystemStatus": {
-      "isAvailable": null,
-      "isGoodCondition": null
-    },
-    "detectorSystemStatus": {
-      "isAvailable": null,
-      "isGoodCondition": null
-    }
-  },
-  "testing": {
-    "isAparFunctional": null,
-    "pumpTestResults": {
-      "isJockeyPumpFunctional": null,
-      "isElectricPumpFunctional": null,
-      "isDieselPumpFunctional": null
-    },
-    "isSprinklerFunctional": null,
-    "detectorTestResults": {
-      "isFunctional": null,
-      "isConnectedToMcfa": null
-    }
-  }
+  "totalManualButton": null,
+  "totalAlarmBell": null,
+  "totalSignalLamp": null,
+  "totalEmergencyExit": null,
+  "totalApar": null,
+  "serialNumber": null,
+  "viIsAparAvailable": null,
+  "viIsAparGood": null,
+  "viIsHydrantPanelGood": null,
+  "viIsJockeyPumpAvailable": null,
+  "viIsJockeyPumpGood": null,
+  "viIsElectricPumpAvailable": null,
+  "viIsElectricPumpGood": null,
+  "viIsDieselPumpAvailable": null,
+  "viIsDieselPumpGood": null,
+  "viIsSprinklerAvailable": null,
+  "viIsSprinklerGood": null,
+  "viIsDetectorAvailable": null,
+  "viIsDetectorGood": null,
+  "testIsAparFunctional": null,
+  "testIsJockeyPumpFunctional": null,
+  "testIsElectricPumpFunctional": null,
+  "testIsDieselPumpFunctional": null,
+  "testIsSprinklerFunctional": null,
+  "testIsDetectorFunctional": null,
+  "testIsDetectorConnectedToMcfa": null
 }

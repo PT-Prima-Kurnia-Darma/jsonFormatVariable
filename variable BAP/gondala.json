@@ -15,36 +15,26 @@
   "hasConstructionDrawing": null,
   "hasMaterialCertificate": null,
   "liftingPurpose": "Orang dan Barang Kerja",
-  "maxLiftingCapacity": {
-    "kg": null,
-    "people": null
-  },
+  "maxLiftingCapacityKg": null,
+  "maxLiftingCapacityPeople": null,
   "liftingSpeedMpm": null,
   "safetyEquipment": "Safety lock, Body harness, Safety helmet, Handy talkie, Safety life line, Safety hardness anchorage, dan APD lainnya.",
-  "visualInspection": {
-    "isSlingDiameterAcceptable": null,
-    "isBumperInstalled": null,
-    "isCapacityMarkingDisplayed": null,
-    "isPlatformConditionAcceptable": null,
-    "driveMotorCondition": {
-      "isGoodCondition": null,
-      "hasOilLeak": null
-    },
-    "isControlPanelClean": null,
-    "isBodyHarnessAvailable": null,
-    "isLifelineAvailable": null,
-    "isButtonLabelsDisplayed": null
-  },
-  "testing": {
-    "isWireRopeMeasurementOk": null,
-    "isUpDownFunctionOk": null,
-    "isDriveMotorFunctionOk": null,
-    "isEmergencyStopFunctional": null,
-    "isSafetyLifelineFunctional": null,
-    "ndtTest": {
-      "method": "",
-      "isResultGood": null,
-      "hasCrackIndication": null
-    }
-  }
+  "viIsSlingDiameterAcceptable": null,
+  "viIsBumperInstalled": null,
+  "viIsCapacityMarkingDisplayed": null,
+  "viIsPlatformOk": null,
+  "viIsDriveMotorGood": null,
+  "viHasDriveMotorOilLeak": null,
+  "viIsControlPanelClean": null,
+  "viIsBodyHarnessAvailable": null,
+  "viIsLifelineAvailable": null,
+  "viIsButtonLabelsDisplayed": null,
+  "testIsWireRopeMeasurementOk": null,
+  "testIsUpDownOk": null,
+  "testIsDriveMotorOk": null,
+  "testIsEmergencyStopFunctional": null,
+  "testIsSafetyLifelineFunctional": null,
+  "testNdtMethod": "",
+  "testNdtIsResultGood": null,
+  "testNdtHasCrackIndication": null
 }

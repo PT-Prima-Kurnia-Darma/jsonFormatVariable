@@ -17,31 +17,21 @@
   "maxLiftingCapacityKg": null,
   "liftingSpeedMpm": null,
   "safetyEquipment": "Emergency stop",
-  "visualInspection": {
-    "isMainStructureGood": null,
-    "areBoltsAndNutsSecure": null,
-    "isWireRopeGoodCondition": null,
-    "isHookGoodCondition": null,
-    "gearboxCondition": {
-      "isGoodCondition": null,
-      "hasOilLeak": null
-    },
-    "isWarningLampGoodCondition": null,
-    "isCapacityMarkingDisplayed": null
-  },
-  "testing": {
-    "isForwardReverseFunctionOk": null,
-    "isHoistingFunctionOk": null,
-    "isLimitSwitchFunctional": null,
-    "ndtTest": {
-      "method": "",
-      "isResultGood": null
-    },
-    "loadingTest": {
-      "loadKg": null,
-      "liftHeightMeters": null,
-      "holdTimeSeconds": null,
-      "isResultGood": null
-    }
-  }
+  "viIsMainStructureGood": null,
+  "viAreBoltsAndNutsSecure": null,
+  "viIsWireRopeGood": null,
+  "viIsHookGood": null,
+  "viIsGearboxGood": null,
+  "viHasGearboxOilLeak": null,
+  "viIsWarningLampGood": null,
+  "viIsCapacityMarkingDisplayed": null,
+  "testIsForwardReverseOk": null,
+  "testIsHoistingOk": null,
+  "testIsLimitSwitchFunctional": null,
+  "testNdtMethod": "",
+  "testNdtIsResultGood": null,
+  "testLoadKg": null,
+  "testLiftHeightMeters": null,
+  "testHoldTimeSeconds": null,
+  "testLoadIsResultGood": null
 }
