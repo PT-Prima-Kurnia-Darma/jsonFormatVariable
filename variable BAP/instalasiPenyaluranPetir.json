@@ -18,16 +18,12 @@
   "conductorDescription": "",
   "installationYear": null,
   "groundingResistance": null,
-  "visualInspection": {
-    "isSystemOverallGood": null,
-    "isReceiverConditionGood": null,
-    "isReceiverPoleConditionGood": null,
-    "isConductorInsulated": null,
-    "isControlBoxAvailable": null,
-    "isControlBoxConditionGood": null
-  },
-  "testing": {
-    "conductorContinuityResult": "",
-    "measuredGroundingResistance": null
-  }
+  "viIsSystemOverallGood": null,
+  "viIsReceiverGood": null,
+  "viIsReceiverPoleGood": null,
+  "viIsConductorInsulated": null,
+  "viIsControlBoxAvailable": null,
+  "viIsControlBoxGood": null,
+  "testConductorContinuityResult": "",
+  "testMeasuredGroundingResistance": null
 }

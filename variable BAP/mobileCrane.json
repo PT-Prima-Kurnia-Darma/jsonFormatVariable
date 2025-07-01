@@ -19,32 +19,22 @@
   "liftingSpeedMpm": null,
   "safetyEquipmentNote": "Terpasang Lengkap",
   "inspectionTestLocation": "",
-  "visualInspection": {
-    "hasBoomDefects": null,
-    "isNameplateAttached": null,
-    "areBoltsAndNutsSecure": null,
-    "isSlingGoodCondition": null,
-    "isHookGoodCondition": null,
-    "isSafetyLatchInstalled": null,
-    "isTireGoodCondition": null,
-    "lightingStatus": {
-      "isWorkLampFunctional": null,
-      "isSignalLampFunctional": null
-    }
-  },
-  "testing": {
-    "isForwardReverseFunctionOk": null,
-    "isSwingFunctionOk": null,
-    "isHoistingFunctionOk": null,
-    "loadingTest": {
-      "loadKg": null,
-      "liftHeightMeters": null,
-      "holdTimeSeconds": null,
-      "isResultGood": null
-    },
-    "ndtTest": {
-      "method": "",
-      "isResultGood": null
-    }
-  }
+  "viHasBoomDefects": null,
+  "viIsNameplateAttached": null,
+  "viAreBoltsAndNutsSecure": null,
+  "viIsSlingGood": null,
+  "viIsHookGood": null,
+  "viIsSafetyLatchInstalled": null,
+  "viIsTireGood": null,
+  "viIsWorkLampFunctional": null,
+  "viIsSignalLampFunctional": null,
+  "testIsForwardReverseOk": null,
+  "testIsSwingOk": null,
+  "testIsHoistingOk": null,
+  "testLoadKg": null,
+  "testLiftHeightMeters": null,
+  "testHoldTimeSeconds": null,
+  "testLoadIsResultGood": null,
+  "testNdtMethod": "",
+  "testNdtIsResultGood": null
 }

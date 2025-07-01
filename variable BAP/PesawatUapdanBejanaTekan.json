@@ -2,7 +2,6 @@
   "id": "",
   "typeInspection": "Pemeriksaan Pesawat Uap & Bejana Tekan",
   "inspectionSchedule": "",
-  "inspectionSchedule": "",
   "day": "",
   "time": null,
   "companyName": "",
@@ -21,28 +20,20 @@
   "materialType": "",
   "safetyValveType": "",
   "volumeLiters": null,
-  "visualInspection": {
-    "engineAndGeneratorStatus": {
-      "isDieselMotorGood": null,
-      "isGeneratorGood": null
-    },
-    "areElectricalIndicatorsGood": null,
-    "safetyEquipmentStatus": {
-      "isAparAvailable": null,
-      "isPpeAvailable": null
-    },
-    "isGroundingInstalled": null,
-    "isBatteryGoodCondition": null,
-    "hasLubricationLeak": null
-  },
-  "testing": {
-    "isLightingCompliant": null,
-    "isNoiseLevelCompliant": null,
-    "isEmergencyStopFunctional": null,
-    "isDieselMotorFunctional": null,
-    "isVibrationLevelCompliant": null,
-    "isInsulationResistanceOk": null,
-    "isShaftRotationCompliant": null,
-    "isGroundingResistanceCompliant": null
-  }
+  "viIsDieselMotorGood": null,
+  "viIsGeneratorGood": null,
+  "viAreIndicatorsGood": null,
+  "viIsAparAvailable": null,
+  "viIsPpeAvailable": null,
+  "viIsGroundingInstalled": null,
+  "viIsBatteryGood": null,
+  "viHasLubeLeak": null,
+  "testIsLightingCompliant": null,
+  "testIsNoiseCompliant": null,
+  "testIsEmergencyStopFunctional": null,
+  "testIsDieselMotorFunctional": null,
+  "testIsVibrationCompliant": null,
+  "testIsInsulationResistanceOk": null,
+  "testIsShaftRotationCompliant": null,
+  "testIsGroundingCompliant": null
 }

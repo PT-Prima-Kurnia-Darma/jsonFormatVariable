@@ -17,31 +17,19 @@
   "maxLiftingCapacityKg": null,
   "liftingSpeedMpm": null,
   "safetyEquipment": "Emergency stop",
-  "visualInspection": {
-    "constructionDefects": {
-      "hasGirderDefects": null,
-      "hasWireropeDefects": null,
-      "hasHookDefects": null
-    },
-    "hookHasSafetyLatch": null,
-    "isEmergencyStopInstalled": null,
-    "isWireropeGoodCondition": null,
-    "operatorHasK3License": null
-  },
-  "testing": {
-    "functionTest": {
-      "isSlewingFunctionOk": null,
-      "isLiftingFunctionOk": null
-    },
-    "loadTest": {
-      "loadTon": null,
-      "isAbleToLift": null,
-      "hasLoadDrop": null
-    },
-    "ndtHookTest": {
-      "method": "Magnetic Test",
-      "isResultGood": null,
-      "hasCrackIndication": null
-    }
-  }
+  "viHasGirderDefects": null,
+  "viHasWireropeDefects": null,
+  "viHasHookDefects": null,
+  "viHookHasSafetyLatch": null,
+  "viIsEmergencyStopInstalled": null,
+  "viIsWireropeGood": null,
+  "viOperatorHasK3License": null,
+  "testIsSlewingOk": null,
+  "testIsLiftingOk": null,
+  "testLoadTon": null,
+  "testIsAbleToLift": null,
+  "testHasLoadDrop": null,
+  "testNdtHookMethod": "Magnetic Test",
+  "testNdtHookIsResultGood": null,
+  "testNdtHookHasCrack": null
 }

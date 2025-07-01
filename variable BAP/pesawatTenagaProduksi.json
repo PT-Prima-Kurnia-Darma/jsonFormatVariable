@@ -23,30 +23,24 @@
   "currentAmperes": null,
   "machineWeightKg": null,
   "areSafetyFeaturesInstalled": null,
-  "visualInspection": {
-    "isMachineGoodCondition": null,
-    "areElectricalIndicatorsGood": null,
-    "safetyEquipmentStatus": {
-      "isAparAvailable": null,
-      "isPpeAvailable": null
-    },
-    "isGroundingInstalled": null,
-    "isBatteryGoodCondition": null,
-    "hasLubricationLeak": null,
-    "isFoundationGoodCondition": null,
-    "hasHydraulicLeak": null
-  },
-  "testing": {
-    "isLightingCompliant": null,
-    "isNoiseLevelCompliant": null,
-    "isEmergencyStopFunctional": null,
-    "isMachineFunctional": null,
-    "isVibrationLevelCompliant": null,
-    "isInsulationResistanceOk": null,
-    "isShaftRotationCompliant": null,
-    "isGroundingResistanceCompliant": null,
-    "isNdtWeldTestOk": null,
-    "isVoltageBetweenPhasesNormal": null,
-    "isPhaseLoadBalanced": null
-  }
+  "viIsMachineGood": null,
+  "viAreIndicatorsGood": null,
+  "viIsAparAvailable": null,
+  "viIsPpeAvailable": null,
+  "viIsGroundingInstalled": null,
+  "viIsBatteryGood": null,
+  "viHasLubeLeak": null,
+  "viIsFoundationGood": null,
+  "viHasHydraulicLeak": null,
+  "testIsLightingCompliant": null,
+  "testIsNoiseCompliant": null,
+  "testIsEmergencyStopFunctional": null,
+  "testIsMachineFunctional": null,
+  "testIsVibrationCompliant": null,
+  "testIsInsulationResistanceOk": null,
+  "testIsShaftRotationCompliant": null,
+  "testIsGroundingCompliant": null,
+  "testIsNdtWeldOk": null,
+  "testIsVoltageNormal": null,
+  "testIsPhaseLoadBalanced": null
 }
