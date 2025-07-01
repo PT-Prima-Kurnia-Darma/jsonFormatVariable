@@ -1,6 +1,6 @@
 {
   "id": "",
-  "typeInspection": "Laporan Pemeriksaan dan Pengujian PAA",
+  "typeInspection": "",
   "paaType": "",
   "registrationNumber": "",
   "day": "",
@@ -17,105 +17,61 @@
   "liftingHeightMeters": null,
   "liftingCapacityDescription": "",
   "liftingSpeedMpm": null,
-  "componentChecks": {
-    "suspensionArm": {
-      "condition": "",
-      "function": "",
-      "notes": ""
-    },
-    "wireRopeAndClamps": {
-      "condition": "",
-      "function": "",
-      "notes": ""
-    },
-    "basketOrCage": {
-      "condition": "",
-      "function": "",
-      "notes": ""
-    },
-    "weldedJoints": {
-      "condition": "",
-      "function": "",
-      "notes": ""
-    },
-    "winderDrum": {
-      "condition": "",
-      "function": "",
-      "notes": ""
-    },
-    "electricalSystem": {
-      "powerSupply": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "driveMotor": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "controlPanelBox": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "electricCircuit": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "powerCable": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      }
-    },
-    "ppe": {
-      "safetyBodyHarness": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "autostop": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "carmantelRope": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "safetyHelmet": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "safetyGloves": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "safetyShoes": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      },
-      "otherPpe": {
-        "condition": "",
-        "function": "",
-        "notes": ""
-      }
-    },
-    "communicationDevice": {
-      "condition": "",
-      "function": "",
-      "notes": ""
-    }
-  },
+  "suspensionArmCondition": "",
+  "suspensionArmFunction": "",
+  "suspensionArmNotes": "",
+  "wireRopeCondition": "",
+  "wireRopeFunction": "",
+  "wireRopeNotes": "",
+  "basketCondition": "",
+  "basketFunction": "",
+  "basketNotes": "",
+  "weldedJointsCondition": "",
+  "weldedJointsFunction": "",
+  "weldedJointsNotes": "",
+  "winderDrumCondition": "",
+  "winderDrumFunction": "",
+  "winderDrumNotes": "",
+  "powerSupplyCondition": "",
+  "powerSupplyFunction": "",
+  "powerSupplyNotes": "",
+  "driveMotorCondition": "",
+  "driveMotorFunction": "",
+  "driveMotorNotes": "",
+  "controlPanelCondition": "",
+  "controlPanelFunction": "",
+  "controlPanelNotes": "",
+  "electricCircuitCondition": "",
+  "electricCircuitFunction": "",
+  "electricCircuitNotes": "",
+  "powerCableCondition": "",
+  "powerCableFunction": "",
+  "powerCableNotes": "",
+  "harnessCondition": "",
+  "harnessFunction": "",
+  "harnessNotes": "",
+  "autostopCondition": "",
+  "autostopFunction": "",
+  "autostopNotes": "",
+  "carmantelRopeCondition": "",
+  "carmantelRopeFunction": "",
+  "carmantelRopeNotes": "",
+  "helmetCondition": "",
+  "helmetFunction": "",
+  "helmetNotes": "",
+  "glovesCondition": "",
+  "glovesFunction": "",
+  "glovesNotes": "",
+  "shoesCondition": "",
+  "shoesFunction": "",
+  "shoesNotes": "",
+  "otherPpeCondition": "",
+  "otherPpeFunction": "",
+  "otherPpeNotes": "",
+  "commDeviceCondition": "",
+  "commDeviceFunction": "",
+  "commDeviceNotes": "",
   "testingNotes": "",
-  "conclusion": {
-    "summary": "",
-    "recommendations": []
-  }
+  "conclusionSummary": "",
+  "recommendations": []
 }
