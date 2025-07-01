@@ -1,0 +1,223 @@
+{
+  "type": "",
+  "id": "",
+  "typeInspection": "",
+  "generalData": {
+    "ownerCompany": {
+      "name": "",
+      "address": ""
+    },
+    "userCompany": {
+      "name": "",
+      "address": ""
+    },
+    "personInCharge": "",
+    "unitLocation": "",
+    "brandOrModel": "",
+    "serialNumberOrUnitNumber": "",
+    "manufacturerOrInstaller": "",
+    "manufactureLocationAndYear": "",
+    "capacityOrRotation": "",
+    "intendedUse": "",
+    "pjk3PermitNumber": "",
+    "ak3PermitNumber": "",
+    "legalBasis": [
+      "Undang-Undang No 1 Tahun 1970",
+      "Permenaker No 38 Tahun 2016",
+      "Permenaker No 5 Tahun 2018"
+    ],
+    "classification": "",
+    "usagePermitNumberAndIssuer": "",
+    "operatorName": "",
+    "dieselEngineHistory": ""
+  },
+  "technicalData": {
+    "dieselEngine": {
+      "brandOrModel": "",
+      "manufacturerCountryYear": "",
+      "classification": "",
+      "serialNumber": "",
+      "powerOrRotation": "",
+      "startingPower": "",
+      "cylinderCount": ""
+    },
+    "generator": {
+      "brandOrType": "",
+      "manufacturerCountryYear": "",
+      "serialNumber": "",
+      "power": "",
+      "frequency": "",
+      "rotation": "",
+      "voltage": "",
+      "powerFactor": "",
+      "current": ""
+    }
+  },
+  "visualInspection": {
+    "foundationConstruction": {
+      "foundation": { "condition": "", "notes": "" },
+      "dieselHousing": { "condition": "", "notes": "" },
+      "support": { "condition": "", "notes": "" },
+      "anchorBolt": { "condition": "", "notes": "" }
+    },
+    "structuralConstruction": {
+      "dailyTank": { "condition": "", "notes": "" },
+      "muffler": { "condition": "", "notes": "" },
+      "airVessel": { "condition": "", "notes": "" },
+      "panel": { "condition": "", "notes": "" }
+    },
+    "lubricationSystem": {
+      "oil": { "condition": "", "notes": "" },
+      "oilStrainerCarter": { "condition": "", "notes": "" },
+      "oilCooler": { "condition": "", "notes": "" },
+      "oilFilter": { "condition": "", "notes": "" },
+      "byPassFilter": { "condition": "", "notes": "" },
+      "safetyValve": { "condition": "", "notes": "" },
+      "packing": { "condition": "", "notes": "" }
+    },
+    "fuelSystem": {
+      "dailyTank": { "condition": "", "notes": "" },
+      "fuelInjector": { "condition": "", "notes": "" },
+      "connections": { "condition": "", "notes": "" },
+      "floatTank": { "condition": "", "notes": "" },
+      "fuelFilter": { "condition": "", "notes": "" },
+      "fuelInjectorPump": { "condition": "", "notes": "" },
+      "magneticScreen": { "condition": "", "notes": "" },
+      "governor": { "condition": "", "notes": "" },
+      "throttleShaft": { "condition": "", "notes": "" },
+      "regulator": { "condition": "", "notes": "" },
+      "shutOffValve": { "condition": "", "notes": "" }
+    },
+    "engineStartingAids": {
+      "feedPump": { "condition": "", "notes": "" },
+      "fuelValve": { "condition": "", "notes": "" },
+      "primingRingPump": { "condition": "", "notes": "" },
+      "heaterPlug": { "condition": "", "notes": "" },
+      "heaterSwitch": { "condition": "", "notes": "" },
+      "preHeater": { "condition": "", "notes": "" },
+      "waterSignal": { "condition": "", "notes": "" },
+      "startingSwitch": { "condition": "", "notes": "" },
+      "batteryPoles": { "condition": "", "notes": "" },
+      "thermostartTank": { "condition": "", "notes": "" },
+      "thermostart": { "condition": "", "notes": "" },
+      "heaterSignal": { "condition": "", "notes": "" },
+      "thermostartSwitch": { "condition": "", "notes": "" },
+      "glowPlug": { "condition": "", "notes": "" },
+      "engineSpeedSensor": { "condition": "", "notes": "" },
+      "serviceMeter": { "condition": "", "notes": "" },
+      "waterTemperatureSensor": { "condition": "", "notes": "" },
+      "starterMotor": { "condition": "", "notes": "" }
+    },
+    "coolingSystem": {
+      "coolingWater": { "condition": "", "notes": "" },
+      "fasteningBolts": { "condition": "", "notes": "" },
+      "fasteningClamps": { "condition": "", "notes": "" },
+      "radiator": { "condition": "", "notes": "" },
+      "thermostart": { "condition": "", "notes": "" },
+      "fan": { "condition": "", "notes": "" },
+      "fanGuard": { "condition": "", "notes": "" },
+      "fanRotation": { "condition": "", "notes": "" },
+      "mountings": { "condition": "", "notes": "" }
+    },
+    "airCirculationSystem": {
+      "preCleaner": { "condition": "", "notes": "" },
+      "dustIndicator": { "condition": "", "notes": "" },
+      "airCleanerFilter": { "condition": "", "notes": "" },
+      "turboCharger": { "condition": "", "notes": "" },
+      "fasteningClamps": { "condition": "", "notes": "" },
+      "afterCooler": { "condition": "", "notes": "" },
+      "muffler": { "condition": "", "notes": "" },
+      "silencer": { "condition": "", "notes": "" },
+      "heatShield": { "condition": "", "notes": "" },
+      "fasteningBolts": { "condition": "", "notes": "" }
+    },
+    "mainComponents": {
+      "damperFasteningBolts": { "condition": "", "notes": "" },
+      "support": { "condition": "", "notes": "" },
+      "flyWheelHousing": { "condition": "", "notes": "" },
+      "flyWheel": { "condition": "", "notes": "" },
+      "vibrationDamper": { "condition": "", "notes": "" },
+      "beltAndPulley": { "condition": "", "notes": "" },
+      "crankshaft": { "condition": "", "notes": "" }
+    },
+    "generatorComponents": {
+      "generatorTerminalConnection": { "condition": "", "notes": "" },
+      "generatorToPanelCable": { "condition": "", "notes": "" },
+      "panelBoard": { "condition": "", "notes": "" },
+      "ampereMeter": { "condition": "", "notes": "" },
+      "voltMeter": { "condition": "", "notes": "" },
+      "frequencyMeter": { "condition": "", "notes": "" },
+      "circuitBreaker": { "condition": "", "notes": "" },
+      "onOffSwitch": { "condition": "", "notes": "" }
+    },
+    "transmission": {
+      "gear": { "condition": "", "notes": "" },
+      "beltTransmission": { "condition": "", "notes": "" },
+      "chainTransmission": { "condition": "", "notes": "" }
+    },
+    "mainDistributorPanel": {
+      "panelToMdpCable": { "condition": "", "notes": "" },
+      "mdpCondition": { "condition": "", "notes": "" },
+      "ampereMeter": { "condition": "", "notes": "" },
+      "voltMeter": { "condition": "", "notes": "" },
+      "mainCircuitBreaker": { "condition": "", "notes": "" }
+    },
+    "safetyDevices": {
+      "grounding": { "condition": "", "notes": "" },
+      "lightningArrester": { "condition": "", "notes": "" },
+      "emergencyStop": { "condition": "", "notes": "" },
+      "governor": { "condition": "", "notes": "" },
+      "thermostart": { "condition": "", "notes": "" },
+      "waterSignal": { "condition": "", "notes": "" },
+      "fanGuard": { "condition": "", "notes": "" },
+      "silencer": { "condition": "", "notes": "" },
+      "vibrationDamper": { "condition": "", "notes": "" },
+      "circuitBreaker": { "condition": "", "notes": "" },
+      "avr": { "condition": "", "notes": "" }
+    }
+  },
+  "testing": {
+    "ndt": {
+      "dieselShaftRpm": { "result": "", "notes": "" },
+      "weldJointTest": { "result": "", "notes": "" },
+      "noiseTest": { "result": "", "notes": "" },
+      "lightingTest": { "result": "", "notes": "" },
+      "loadTest": { "result": "", "notes": "" }
+    },
+    "safetyDeviceTest": {
+      "governor": { "result": "", "notes": "" },
+      "emergencyStop": { "result": "", "notes": "" },
+      "groundingResistance": { "result": "", "notes": "" },
+      "indicatorPanels": { "result": "", "notes": "" },
+      "pressureGauge": { "result": "", "notes": "" },
+      "temperatureIndicator": { "result": "", "notes": "" },
+      "waterIndicator": { "result": "", "notes": "" },
+      "safetyValves": { "result": "", "notes": "" },
+      "radiator": { "result": "", "notes": "" }
+    },
+    "electricalTest": {
+      "panelControl": {
+        "ampereRating": "",
+        "voltage": {
+          "rs": "",
+          "rt": "",
+          "st": "",
+          "rn": "",
+          "rg": "",
+          "ng": ""
+        },
+        "frequency": "",
+        "cosQ": "",
+        "current": {
+          "r": "",
+          "s": "",
+          "t": ""
+        },
+        "notes": ""
+      }
+    }
+  },
+"conclusion":
+  { "summary": ""
+  }
+}
