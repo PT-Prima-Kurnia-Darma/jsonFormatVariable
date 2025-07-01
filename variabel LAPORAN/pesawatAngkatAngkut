@@ -1,0 +1,121 @@
+{
+  "id": "",
+  "typeInspection": "Laporan Pemeriksaan dan Pengujian PAA",
+  "paaType": "",
+  "registrationNumber": "",
+  "day": "",
+  "time": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "location": "",
+  "manufacturer": "",
+  "manufactureYear": null,
+  "manufactureCountry": "",
+  "serialNumber": "",
+  "brandOrType": "",
+  "liftingHeightMeters": null,
+  "liftingCapacityDescription": "",
+  "liftingSpeedMpm": null,
+  "componentChecks": {
+    "suspensionArm": {
+      "condition": "",
+      "function": "",
+      "notes": ""
+    },
+    "wireRopeAndClamps": {
+      "condition": "",
+      "function": "",
+      "notes": ""
+    },
+    "basketOrCage": {
+      "condition": "",
+      "function": "",
+      "notes": ""
+    },
+    "weldedJoints": {
+      "condition": "",
+      "function": "",
+      "notes": ""
+    },
+    "winderDrum": {
+      "condition": "",
+      "function": "",
+      "notes": ""
+    },
+    "electricalSystem": {
+      "powerSupply": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "driveMotor": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "controlPanelBox": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "electricCircuit": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "powerCable": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      }
+    },
+    "ppe": {
+      "safetyBodyHarness": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "autostop": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "carmantelRope": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "safetyHelmet": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "safetyGloves": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "safetyShoes": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      },
+      "otherPpe": {
+        "condition": "",
+        "function": "",
+        "notes": ""
+      }
+    },
+    "communicationDevice": {
+      "condition": "",
+      "function": "",
+      "notes": ""
+    }
+  },
+  "testingNotes": "",
+  "conclusion": {
+    "summary": "",
+    "recommendations": []
+  }
+}
