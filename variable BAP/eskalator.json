@@ -18,23 +18,15 @@
   "capacityDescription": "",
   "speedMps": null,
   "floorsServed": "",
-  "visualInspection": {
-    "isMachineRoomConditionAcceptable": null,
-    "isPanelGoodCondition": null,
-    "lightingCondition": {
-      "isMachineRoomLightOk": null,
-      "isPitLightOk": null
-    },
-    "areSafetySignsAvailable": null
-  },
-  "testing": {
-    "isNdtThermographPanelOk": null,
-    "areSafetyDevicesFunctional": null,
-    "isLimitSwitchFunctional": null,
-    "pitEmergencyStopStatus": {
-      "isAvailable": null,
-      "isFunctional": null
-    },
-    "isEscalatorFunctionOk": null
-  }
+  "viMachineRoomOk": null,
+  "viPanelOk": null,
+  "viLightMachineRoomOk": null,
+  "viLightPitOk": null,
+  "viSafetySignsAvailable": null,
+  "testNdtPanelOk": null,
+  "testSafetyDevicesFunctional": null,
+  "testLimitSwitchFunctional": null,
+  "testPitEmergencyStopAvailable": null,
+  "testPitEmergencyStopFunctional": null,
+  "testEscalatorFunctionOk": null
 }
