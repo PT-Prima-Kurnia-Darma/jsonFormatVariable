@@ -1,0 +1,120 @@
+{
+  "id": "",
+  "k3ObjectType": "",
+  "inspectionType": "",
+  "inspectionDate": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "vesselData": {
+    "usagePurpose": "",
+    "capacityDescription": "",
+    "manufacturer": "",
+    "manufactureYear": null,
+    "manufactureCountry": "",
+    "serialNumber": "",
+    "brandOrType": "",
+    "volumeLiters": null,
+    "gasContent": "",
+    "workingPressure": "",
+    "maxAllowedWorkingPressure": "",
+    "designPressure": "",
+    "safetyDeviceType": "",
+    "foundationType": "",
+    "vesselShape": "",
+    "materialType": "",
+    "maxTemperature": "",
+    "dimensions": {
+      "headLengthMm": null,
+      "bodyThicknessMm": null,
+      "headThicknessMm": null,
+      "innerDiameterMm": null
+    }
+  },
+  "visualChecks": {
+    "vesselLegs": { "status": "", "notes": "" },
+    "foundationAndBolts": { "status": "", "notes": "" },
+    "pressureMeter": { "status": "", "notes": "" },
+    "safetyValve": { "status": "", "notes": "" },
+    "stopValve": { "status": "", "notes": "" },
+    "manhole": { "status": "", "notes": "" },
+    "crackInspection": { "status": "", "notes": "" },
+    "thicknessInspection": { "status": "", "notes": "" },
+    "emergencyStop": { "status": "", "notes": "" },
+    "rustAndPainting": { "status": "", "notes": "" },
+    "inputPipe": { "status": "", "notes": "" },
+    "outputPipe": { "status": "", "notes": "" },
+    "ventilation": { "status": "", "notes": "" },
+    "manometer": { "status": "", "notes": "" }
+  },
+  "ndtReport": {
+    "clientName": "",
+    "projectName": "",
+    "workOrderNumber": "",
+    "ndtDate": null,
+    "ndtObjectType": "",
+    "equipmentUsed": "",
+    "probeType": "",
+    "probeStyle": "",
+    "surfaceCondition": "",
+    "laminatingCheck": "",
+    "methodUsed": "",
+    "materialType": "",
+    "operatingTemp": "",
+    "weldingProcess": "",
+    "couplantUsed": "",
+    "dyePenetrantTest": {
+      "procedureReference": "",
+      "method": "Dye Penetrant / Spot Check",
+      "cleanerType": "",
+      "penetrantType": "",
+      "developerType": "",
+      "materialThickness": ""
+    },
+    "thicknessMeasurements": [
+      {
+        "position": "Top Head",
+        "nominalMm": null,
+        "point1": null,
+        "point2": null,
+        "point3": null,
+        "minimum": null,
+        "maximum": null
+      },
+      {
+        "position": "Shell",
+        "nominalMm": null,
+        "point1": null,
+        "point2": null,
+        "point3": null,
+        "minimum": null,
+        "maximum": null
+      },
+      {
+        "position": "Bottom Head",
+        "nominalMm": null,
+        "point1": null,
+        "point2": null,
+        "point3": null,
+        "minimum": null,
+        "maximum": null
+      }
+    ]
+  },
+  "calculationData": {
+    "items": [
+        { "name": "Tebal plat badan", "symbol": "T", "unit": "mm", "value": null },
+        { "name": "Tekanan kerja", "symbol": "P", "unit": "Kg / Cm2", "value": null },
+        { "name": "Garis tengah sisi dalam", "symbol": "D", "unit": "mm", "value": null },
+        { "name": "Radius sisi dalam", "symbol": "R", "unit": "mm", "value": null },
+        { "name": "Faktor sambungan", "symbol": "E", "unit": "", "value": null },
+        { "name": "Batas mulur bahan", "symbol": "S", "unit": "", "value": null },
+        { "name": "Penambahan ketebalan akibat korosi", "symbol": "CA", "unit": "", "value": null }
+    ],
+    "notes": "Harga E & S lihat di table"
+  },
+  "conclusion": {
+    "summary": "",
+    "recommendations": []
+  }
+}
