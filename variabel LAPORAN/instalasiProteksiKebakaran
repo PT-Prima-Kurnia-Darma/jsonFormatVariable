@@ -1,0 +1,84 @@
+{
+  "id": "",
+  "typeInspection": "Laporan Pemeriksaan dan Pengujian",
+  "inspectionSchedule": "",
+  "alarmSystemType": "",
+  "registrationNumber": "",
+  "certificateNumber": "",
+  "day": "",
+  "time": null,
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "location": "",
+  "documentStatus": {
+    "hasTechnicalDrawing": null,
+    "hasInspectionDocumentation": null,
+    "hasApplicationLetter": null,
+    "hasSpecificationDocument": null
+  },
+  "buildingData": {
+    "landAreaSqm": null,
+    "buildingAreaSqm": null,
+    "buildingHeightMeters": null,
+    "totalFloors": null,
+    "yearBuilt": null,
+    "buildingConstruction": {
+      "mainStructure": "",
+      "floorStructure": "",
+      "exteriorWall": "",
+      "interiorWall": "",
+      "ceilingFrame": "",
+      "ceilingCover": "",
+      "roofFrame": "",
+      "roofCover": ""
+    }
+  },
+  "equipmentSummary": {
+    "aparStatus": "",
+    "indoorHydrantStatus": "",
+    "outdoorHydrantStatus": "",
+    "siameseConnectionStatus": "",
+    "sprinklerStatus": "",
+    "detectorStatus": "",
+    "exitSignStatus": "",
+    "emergencyStairsStatus": "",
+    "assemblyPointStatus": ""
+  },
+  "mcfaDetails": {
+    "brandOrType": "",
+    "serialNumber": "",
+    "zoneDescription": "",
+    "backupBatteryDescription": "",
+    "hasPowerIndicator": null,
+    "hasZoneIndicator": null,
+    "hasTroubleIndicator": null,
+    "hasSilenceSwitch": null,
+    "hasResetSwitch": null,
+    "hasGeneralAlarmSwitch": null,
+    "hasBuzzer": null
+  },
+  "heatDetectorDetails": {
+    "brandOrType": "",
+    "spacingDescription": "",
+    "workingTemperature": ""
+  },
+  "smokeDetectorDetails": {
+    "brandOrType": "",
+    "spacingDescription": "",
+    "workingTemperature": ""
+  },
+  "alarmSystemTestResults": {
+    "isPanelFunctionOk": null,
+    "isAlarmTestOk": null,
+    "alarmTestNotes": "",
+    "isFaultTestOk": null,
+    "faultTestNotes": ""
+  },
+  "conclusion": {
+    "summary": "Instalasi Proteksi Kebakaran layak untuk dioperasikan.",
+    "recommendations": [],
+    "nextInspectionDate": null
+  },
+  "reportNotes": ""
+}
