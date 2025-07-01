@@ -1,0 +1,131 @@
+{
+  "id": "",
+  "objectType": "Eskalator",
+  "registrationNumber": "",
+  "inspectionType": "Laporan Pemeriksaan dan Pengujian",
+  "inspectionDate": null,
+  "companyName": "",
+  "usageLocation": "",
+  "k3ObjectDescription": "",
+  "usagePurpose": "",
+  "usagePermitNumber": "",
+  "technicalSpecifications": {
+    "manufacturer": "",
+    "brand": "",
+    "manufactureCountry": "",
+    "manufactureYear": null,
+    "serialNumber": "",
+    "transportPurpose": "",
+    "capacityDescription": "",
+    "liftingHeightMeters": null,
+    "liftingSpeedMps": null,
+    "driveType": "",
+    "motorCurrentAmperes": null,
+    "motorPowerKw": null,
+    "safetyDevicesDescription": ""
+  },
+  "checklist": {
+    "a_frameMachineRoomAndPit": {
+      "frame": { "requirement": "≥ 30 N/cm2...", "result": "", "complies": null },
+      "supportBeams": { "requirement": "Dilapisi karet peredam", "result": "", "complies": null },
+      "machineRoomCondition": { "requirement": "Bersih", "result": "", "complies": null },
+      "freeSpace": { "requirement": "< 0,3 m2", "result": "", "complies": null },
+      "lighting": { "requirement": "≥ 100 lux", "result": "", "complies": null },
+      "machineCoverPlate": { "requirement": "Tersedia dan kuat", "result": "", "complies": null },
+      "pitCondition": { "requirement": "Bersih", "result": "", "complies": null },
+      "pitFreeSpace": { "requirement": "≥ 0,3 m2", "result": "", "complies": null },
+      "pitStepCoverPlate": { "requirement": "Ada & Kuat", "result": "", "complies": null }
+    },
+    "b_driveEquipment": {
+      "driveMachine": { "requirement": "Hanya menggerakkan 1 eskalator...", "result": "", "complies": null },
+      "escalatorSlopeLessThan30": { "requirement": "Kecepatan maksimal 0,75 m/s", "result": "", "complies": null },
+      "escalatorSlope30to35": { "requirement": "Kecepatan maksimal 0,5 m/s", "result": "", "complies": null },
+      "palletTypeEscalator": { "requirement": "Kecepatan maksimal 0,75 m/s...", "result": "", "complies": null },
+      "stopDistance_0_5mps": { "requirement": "200mm < jarak < 1000mm", "result": "", "complies": null },
+      "stopDistance_0_75mps": { "requirement": "350mm < jarak < 1500mm", "result": "", "complies": null },
+      "stopDistance_0_90mps": { "requirement": "550mm < jarak < 1700mm", "result": "", "complies": null },
+      "driveChain": { "requirement": "Pelat baja yang dikeling", "result": "", "complies": null },
+      "chainBreakingStrength": { "requirement": "≥ 140 kg tiap lembar rantai", "result": "", "complies": null }
+    },
+    "c_stepsOrPallets": {
+      "material": { "requirement": "Palet baja, baja tuang...", "result": "", "complies": null },
+      "stepDimensions": { "requirement": "Lebar ≥ 400mm...", "result": "", "complies": null },
+      "palletDimensions": { "requirement": "Lebar ≥ 150mm...", "result": "", "complies": null },
+      "surface": { "requirement": "Terbuat dari bahan yang padat, rata...", "result": "", "complies": null },
+      "flatness": { "requirement": "≥ 600mm", "result": "", "complies": null },
+      "skirtBrush": { "requirement": "Terpasang sepanjang pelindung bawah", "result": "", "complies": null },
+      "stepWheels": { "requirement": "Mempunyai 4 buah roda...", "result": "", "complies": null }
+    },
+    "d_landingArea": {
+        "landingPlates": { "requirement": "Terpasang berderet dan Dikencangkan...", "result": "", "complies": null },
+        "combTeeth": { "requirement": "Terbuat dari bahan yang mudah patah...", "result": "", "complies": null },
+        "combTeethCondition": { "requirement": "Boleh kondisi patah maksimal 2", "result": "", "complies": null },
+        "landingCover": { "requirement": "Dari bahan yang kuat dan tidak licin...", "result": "", "complies": null },
+        "entryExitArea": { "requirement": "Ruang bebas ≥ 160mm...", "result": "", "complies": null }
+    },
+    "e_balustrade": {
+        "sideProtection": { "requirement": "Dari baja dan kuat", "result": "", "complies": null },
+        "sideProtectionHeight": { "requirement": "750 < tinggi < 1100mm", "result": "", "complies": null },
+        "sideProtectionSidePressure": { "requirement": "> 58,5 kg/m2", "result": "", "complies": null },
+        "sideProtectionVerticalPressure": { "requirement": "> 73 kg/m2", "result": "", "complies": null },
+        "skirtPanel": { "requirement": "Dari bahan tahan benturan...", "result": "", "complies": null },
+        "skirtPanelFlexibility": { "requirement": "< 4mm jika diberi tekanan 50kg", "result": "", "complies": null },
+        "stepGap": { "requirement": "< 4mm dan jumlah jarak < 7mm", "result": "", "complies": null }
+    },
+    "f_handrail": {
+        "condition": { "requirement": "Kuat, tidak cacat...", "result": "", "complies": null },
+        "speedSynchronization": { "requirement": "Harus sama dan searah atau < 2%...", "result": "", "complies": null },
+        "width": { "requirement": "70 – 100mm", "result": "", "complies": null }
+    },
+    "g_void": {
+        "beamStrengthAndPosition": { "requirement": "Disesuaikan dengan spesifikasi", "result": "", "complies": null },
+        "watertightWall": { "requirement": "Kedap air", "result": "", "complies": null },
+        "escalatorFrame": { "requirement": "Tertutup dan dari bahan...", "result": "", "complies": null },
+        "lighting": { "requirement": "> 50 lux", "result": "", "complies": null },
+        "objectClearance": { "requirement": "> 2300 mm", "result": "", "complies": null },
+        "guardrailGap": { "requirement": "< 120 mm", "result": "", "complies": null },
+        "guardrailHeight": { "requirement": "> 100 mm dari permukaan ban pegangan", "result": "", "complies": null },
+        "ornamentPlacement": { "requirement": "Berjarak > 80 mm dan tinggi > 2100 mm", "result": "", "complies": null },
+        "outdoorEscalator": { "requirement": "Jarak antara pelindung luar... > 400 mm", "result": "", "complies": null }
+    },
+    "h_safetyDevices": {
+        "operationKey": { "requirement": "Tersedia", "result": "", "complies": null },
+        "emergencyStopSwitch": { "requirement": "Tersedia", "result": "", "complies": null },
+        "stepChainSafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "driveChainSafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "stepPalletSafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "handrailSafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "antiReverseSafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "handrailEntrySafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "combPlateSafety": { "requirement": "Tersedia", "result": "", "complies": null },
+        "innerSkirtBrush": { "requirement": "Tersedia", "result": "", "complies": null },
+        "stopButton": { "requirement": "Posisi mudah dicapai...", "result": "", "complies": null }
+    },
+    "i_electricalInstallation": {
+        "standardsCompliance": { "requirement": "SNI dan standar internasional", "result": "", "complies": null },
+        "electricalPanel": { "requirement": "Panel khusus untuk eskalator", "result": "", "complies": null },
+        "groundingCable": { "requirement": "Penampang ≥ 6mm2 ≤ 5 Ω (ohm)", "result": "", "complies": null },
+        "fireAlarmConnection": { "requirement": "Terhubung dan beroperasi otomatis", "result": "", "complies": null }
+    },
+    "j_outdoorEscalatorSpecifics": {
+        "pitWaterPump": { "requirement": "Tersedia", "result": "", "complies": null },
+        "componentWeatherproofing": { "requirement": "Tahan air, suhu/cuaca", "result": "", "complies": null }
+    },
+    "k_userSafetySignage": {
+        "noLargeItemsSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "noJumpingSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "childSupervisionSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "noTrolleySign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "noLeaningSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "noSteppingOnSkirtSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "softFootwearWarningSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "noSittingOnStepsSign": { "requirement": "Tersedia", "result": "", "complies": null },
+        "holdHandrailSign": { "requirement": "Tersedia", "result": "", "complies": null }
+    }
+  },
+  "testingNotes": "",
+  "conclusion": {
+    "summary": "",
+    "recommendations": []
+  }
+}
