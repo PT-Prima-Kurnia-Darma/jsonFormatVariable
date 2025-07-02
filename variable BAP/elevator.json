@@ -16,26 +16,38 @@
   "manufactureYear": null,
   "manufactureCountry": "",
   "serialNumber": "",
-  "capacityKg": null,
-  "capacityPeople": null,
+  "capacity": {
+    "kg": null,
+    "people": null
+  },
   "speedMps": null,
   "floorsServed": "",
-  "viMachineRoomOk": null,
-  "viPanelOk": null,
-  "viAparAvailable": null,
-  "viLightMachineRoomOk": null,
-  "viLightCarOk": null,
-  "viLightPitOk": null,
-  "viPitLadderAvailable": null,
-  "testNdtPanelOk": null,
-  "testArdFunctional": null,
-  "testGovernorFunctional": null,
-  "testSlingOk": null,
-  "testLimitSwitchTopFunctional": null,
-  "testLimitSwitchFinalFunctional": null,
-  "testDoorSwitchFunctional": null,
-  "testPitEmergencyStopAvailable": null,
-  "testPitEmergencyStopFunctional": null,
-  "testIntercomFunctional": null,
-  "testFiremanSwitchFunctional": null
+  "visualInspection": {
+    "isMachineRoomConditionAcceptable": null,
+    "isPanelGoodCondition": null,
+    "isAparAvailableInPanelRoom": null,
+    "lightingCondition": {
+      "isMachineRoomLightOk": null,
+      "isCarLightOk": null,
+      "isPitLightOk": null
+    },
+    "isPitLadderAvailable": null
+  },
+  "testing": {
+    "isNdtThermographPanelOk": null,
+    "isArdFunctional": null,
+    "isGovernorFunctional": null,
+    "isSlingConditionOkByTester": null,
+    "limitSwitchTest": {
+      "isTopSwitchFunctional": null,
+      "isFinalSwitchFunctional": null
+    },
+    "isDoorSwitchFunctional": null,
+    "pitEmergencyStopStatus": {
+      "isAvailable": null,
+      "isFunctional": null
+    },
+    "isIntercomFunctional": null,
+    "isFiremanSwitchFunctional": null
+  }
 }
