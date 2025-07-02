@@ -1,0 +1,100 @@
+{
+  "typeInspection": "",
+  "paaType": "",
+  "generalData": {
+    "owner": {
+      "name": "",
+      "address": ""
+    },
+    "user": {
+      "name": ""
+    },
+    "personInCharge": "",
+    "unitLocation": "",
+    "operator": {
+      "name": ""
+    },
+    "equipmentType": "",
+    "manufacturer": {
+      "name": "",
+      "modelOrType": "",
+      "year": ""
+    },
+    "serialNumber": "",
+    "capacity": "",
+    "standardUsed": "",
+    "intendedUse": "",
+    "permitNumber": "",
+    "historyData": ""
+  },
+  "technicalData": {
+    "capacity": "",
+    "attachment": "",
+    "forkDimensions": {
+      "length": "",
+      "width": "",
+      "height": ""
+    },
+    "speed": {
+      "lifting": "",
+      "lowering": "",
+      "travelling": ""
+    },
+    "primeMover": {
+      "rpm": "",
+      "brandOrType": "",
+      "serialNumber": "",
+      "year": "",
+      "power": "",
+      "cylinderCount": ""
+    },
+    "dimensions": {
+      "length": "",
+      "width": "",
+      "height": "",
+      "forkLiftHeight": ""
+    },
+    "driveWheel": {
+      "size": "",
+      "type": ""
+    },
+    "steeringWheel": {
+      "size": "",
+      "type": ""
+    },
+    "travellingBrake": {
+      "size": "",
+      "type": ""
+    },
+    "hydraulicPump": {
+      "pressure": "",
+      "type": "",
+      "reliefValve": ""
+    }
+  },
+  "visualAndFunctionInspection": {
+    "chassis": {},
+    "primeMover": {},
+    "powerTrain": {},
+    "attachment": {},
+    "hydraulicComponents": {}
+  },
+  "engineOnInspection": {},
+  "liftingChainInspection": [],
+  "nonDestructiveTest": {
+    "testType": "",
+    "results": []
+  },
+  "loadTest": [],
+  "conclusion": {
+    "findings": []
+  },
+  "recommendations": [],
+  "nextInspectionDate": "",
+  "inspector": {
+    "reportDate": "",
+    "company": "",
+    "name": "",
+    "title": ""
+  }
+}
