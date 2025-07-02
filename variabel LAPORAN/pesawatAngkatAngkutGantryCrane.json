@@ -1,0 +1,110 @@
+{
+  "typeInspection": "",
+  "paaType": "",
+  "generalData": {
+    "owner": {
+      "name": "",
+      "address": ""
+    },
+    "user": {
+      "name": ""
+    },
+    "personInCharge": {
+      "name": ""
+    },
+    "unitLocation": "",
+    "equipmentType": "",
+    "manufacturer": {
+      "name": "",
+      "brandOrType": "",
+      "year": ""
+    },
+    "serialNumber": "",
+    "capacity": "",
+    "legalBasis": "",
+    "intendedUse": "",
+    "usagePermitNumber": "",
+    "operator": {
+      "certificateStatus": ""
+    },
+    "technicalDataManualStatus": ""
+  },
+  "technicalData": {
+    "specifications": {
+      "liftHeight": "",
+      "girderLength": "",
+      "hoistingSpeed": "",
+      "travelingSpeed": "",
+      "traversingSpeed": ""
+    },
+    "driveMotor": {
+      "hoisting": {},
+      "traveling": {},
+      "traversing": {}
+    },
+    "brake": {
+      "type": "",
+      "model": ""
+    },
+    "hook": {
+      "type": "",
+      "capacity": "",
+      "material": ""
+    },
+    "wireRope": {
+      "type": "",
+      "construction": "",
+      "diameter": "",
+      "length": ""
+    }
+  },
+  "visualInspection": {
+    "foundation": {},
+    "frame": {},
+    "railSupportBeam": {},
+    "travelingRail": {},
+    "traversingRail": {},
+    "girder": {},
+    "travelingGearbox": {},
+    "driveWheels": {},
+    "traversingGearbox": {},
+    "trolleyDriveWheels": {},
+    "drum": {},
+    "brake": {},
+    "hoistGearBox": {},
+    "pulleys": {},
+    "hooks": {},
+    "wireRopes": {},
+    "chains": {},
+    "limitSwitches": {},
+    "operatorControls": {},
+    "electricalComponents": {}
+  },
+  "nonDestructiveTest": {
+    "wireRope": {},
+    "mainHook": {},
+    "girder": []
+  },
+  "testing": {
+    "dynamicTest": {
+      "noLoad": {},
+      "withLoad": []
+    },
+    "staticTest": {
+      "spanLength": "",
+      "standardDeflection": "",
+      "deflectionResults": []
+    }
+  },
+  "conclusion": {
+    "findings": []
+  },
+  "recommendations": [],
+  "nextInspectionDate": "",
+  "inspector": {
+    "reportDate": "",
+    "company": "",
+    "name": "",
+    "title": ""
+  }
+}
