@@ -1,6 +1,6 @@
 {
   "EskOrElevType": "",
-  "typeInspection": "",  
+  "typeInspection": "",
   "companyData": {
     "companyOrBuildingName": "",
     "usageAddress": "",
@@ -24,103 +24,103 @@
   },
   "inspectionAndTesting": {
     "frameAndMachineRoom": {
-      "frame": { "stipulation": "", "result": "", "status": "" },
-      "supportBeams": { "stipulation": "", "result": "", "status": "" },
-      "machineRoomCondition": { "stipulation": "", "result": "", "status": "" },
-      "machineRoomClearance": { "stipulation": "", "result": "", "status": "" },
-      "machineRoomLighting": { "stipulation": "", "result": "", "status": "" },
-      "machineCoverPlate": { "stipulation": "", "result": "", "status": "" },
-      "pitCondition": { "stipulation": "", "result": "", "status": "" },
-      "pitClearance": { "stipulation": "", "result": "", "status": "" },
-      "pitStepCoverPlate": { "stipulation": "", "result": "", "status": "" }
+      "frame": { "result": "", "status": "" },
+      "supportBeams": { "result": "", "status": "" },
+      "machineRoomCondition": { "result": "", "status": "" },
+      "machineRoomClearance": { "result": "", "status": "" },
+      "machineRoomLighting": { "result": "", "status": "" },
+      "machineCoverPlate": { "result": "", "status": "" },
+      "pitCondition": { "result": "", "status": "" },
+      "pitClearance": { "result": "", "status": "" },
+      "pitStepCoverPlate": { "result": "", "status": "" }
     },
     "driveEquipment": {
-      "driveMachine": { "stipulation": "", "result": "", "status": "" },
-      "speedUnder30Degrees": { "stipulation": "", "result": "", "status": "" },
-      "speed30to35Degrees": { "stipulation": "", "result": "", "status": "" },
-      "travelatorSpeed": { "stipulation": "", "result": "", "status": "" },
-      "stoppingDistance0_5": { "stipulation": "", "result": "", "status": "" },
-      "stoppingDistance0_75": { "stipulation": "", "result": "", "status": "" },
-      "stoppingDistance0_90": { "stipulation": "", "result": "", "status": "" },
-      "driveChain": { "stipulation": "", "result": "", "status": "" },
-      "chainBreakingStrength": { "stipulation": "", "result": "", "status": "" }
+      "driveMachine": { "result": "", "status": "" },
+      "speedUnder30Degrees": { "result": "", "status": "" },
+      "speed30to35Degrees": { "result": "", "status": "" },
+      "travelatorSpeed": { "result": "", "status": "" },
+      "stoppingDistance0_5": { "result": "", "status": "" },
+      "stoppingDistance0_75": { "result": "", "status": "" },
+      "stoppingDistance0_90": { "result": "", "status": "" },
+      "driveChain": { "result": "", "status": "" },
+      "chainBreakingStrength": { "result": "", "status": "" }
     },
     "stepsOrPallets": {
-      "stepMaterial": { "stipulation": "", "result": "", "status": "" },
-      "stepDimensions": { "stipulation": "", "result": "", "status": "" },
-      "palletDimensions": { "stipulation": "", "result": "", "status": "" },
-      "stepSurface": { "stipulation": "", "result": "", "status": "" },
-      "stepLevelness": { "stipulation": "", "result": "", "status": "" },
-      "skirtBrush": { "stipulation": "", "result": "", "status": "" },
-      "stepWheels": { "stipulation": "", "result": "", "status": "" }
+      "stepMaterial": { "result": "", "status": "" },
+      "stepDimensions": { "result": "", "status": "" },
+      "palletDimensions": { "result": "", "status": "" },
+      "stepSurface": { "result": "", "status": "" },
+      "stepLevelness": { "result": "", "status": "" },
+      "skirtBrush": { "result": "", "status": "" },
+      "stepWheels": { "result": "", "status": "" }
     },
     "landingArea": {
-      "landingPlates": { "stipulation": "", "result": "", "status": "" },
-      "combTeeth": { "stipulation": "", "result": "", "status": "" },
-      "combCondition": { "stipulation": "", "result": "", "status": "" },
-      "landingCover": { "stipulation": "", "result": "", "status": "" },
-      "landingAccessArea": { "stipulation": "", "result": "", "status": "" }
+      "landingPlates": { "result": "", "status": "" },
+      "combTeeth": { "result": "", "status": "" },
+      "combCondition": { "result": "", "status": "" },
+      "landingCover": { "result": "", "status": "" },
+      "landingAccessArea": { "result": "", "status": "" }
     },
     "balustrade": {
       "balustradePanel": {
-        "material": { "stipulation": "", "result": "", "status": "" },
-        "height": { "stipulation": "", "result": "", "status": "" },
-        "sidePressure": { "stipulation": "", "result": "", "status": "" },
-        "verticalPressure": { "stipulation": "", "result": "", "status": "" }
+        "material": { "result": "", "status": "" },
+        "height": { "result": "", "status": "" },
+        "sidePressure": { "result": "", "status": "" },
+        "verticalPressure": { "result": "", "status": "" }
       },
-      "skirtPanel": { "stipulation": "", "result": "", "status": "" },
-      "skirtPanelFlexibility": { "stipulation": "", "result": "", "status": "" },
-      "stepToSkirtClearance": { "stipulation": "", "result": "", "status": "" }
+      "skirtPanel": { "result": "", "status": "" },
+      "skirtPanelFlexibility": { "result": "", "status": "" },
+      "stepToSkirtClearance": { "result": "", "status": "" }
     },
     "handrail": {
-      "handrailCondition": { "stipulation": "", "result": "", "status": "" },
-      "handrailSpeedSynchronization": { "stipulation": "", "result": "", "status": "" },
-      "handrailWidth": { "stipulation": "", "result": "", "status": "" }
+      "handrailCondition": { "result": "", "status": "" },
+      "handrailSpeedSynchronization": { "result": "", "status": "" },
+      "handrailWidth": { "result": "", "status": "" }
     },
     "runway": {
-      "beamStrengthAndPosition": { "stipulation": "", "result": "", "status": "" },
-      "pitWallCondition": { "stipulation": "", "result": "", "status": "" },
-      "escalatorFrameEnclosure": { "stipulation": "", "result": "", "status": "" },
-      "lighting": { "stipulation": "", "result": "", "status": "" },
-      "headroomClearance": { "stipulation": "", "result": "", "status": "" },
-      "balustradeToObjectClearance": { "stipulation": "", "result": "", "status": "" },
-      "antiClimbDeviceHeight": { "stipulation": "", "result": "", "status": "" },
-      "ornamentPlacement": { "stipulation": "", "result": "", "status": "" },
-      "outdoorClearance": { "stipulation": "", "result": "", "status": "" }
+      "beamStrengthAndPosition": { "result": "", "status": "" },
+      "pitWallCondition": { "result": "", "status": "" },
+      "escalatorFrameEnclosure": { "result": "", "status": "" },
+      "lighting": { "result": "", "status": "" },
+      "headroomClearance": { "result": "", "status": "" },
+      "balustradeToObjectClearance": { "result": "", "status": "" },
+      "antiClimbDeviceHeight": { "result": "", "status": "" },
+      "ornamentPlacement": { "result": "", "status": "" },
+      "outdoorClearance": { "result": "", "status": "" }
     },
     "safetyEquipment": {
-      "operationControlKey": { "stipulation": "", "result": "", "status": "" },
-      "emergencyStopSwitch": { "stipulation": "", "result": "", "status": "" },
-      "stepChainSafetyDevice": { "stipulation": "", "result": "", "status": "" },
-      "driveChainSafetyDevice": { "stipulation": "", "result": "", "status": "" },
-      "stepSafetyDevice": { "stipulation": "", "result": "", "status": "" },
-      "handrailSafetyDevice": { "stipulation": "", "result": "", "status": "" },
-      "reversalStopDevice": { "stipulation": "", "result": "", "status": "" },
-      "handrailEntryGuard": { "stipulation": "", "result": "", "status": "" },
-      "combPlateSafetyDevice": { "stipulation": "", "result": "", "status": "" },
-      "innerDeckingBrush": { "stipulation": "", "result": "", "status": "" },
-      "stopButtons": { "stipulation": "", "result": "", "status": "" }
+      "operationControlKey": { "result": "", "status": "" },
+      "emergencyStopSwitch": { "result": "", "status": "" },
+      "stepChainSafetyDevice": { "result": "", "status": "" },
+      "driveChainSafetyDevice": { "result": "", "status": "" },
+      "stepSafetyDevice": { "result": "", "status": "" },
+      "handrailSafetyDevice": { "result": "", "status": "" },
+      "reversalStopDevice": { "result": "", "status": "" },
+      "handrailEntryGuard": { "result": "", "status": "" },
+      "combPlateSafetyDevice": { "result": "", "status": "" },
+      "innerDeckingBrush": { "result": "", "status": "" },
+      "stopButtons": { "result": "", "status": "" }
     },
     "electricalInstallation": {
-      "installationStandard": { "stipulation": "", "result": "", "status": "" },
-      "electricalPanel": { "stipulation": "", "result": "", "status": "" },
-      "groundingCable": { "stipulation": "", "result": "", "status": "" },
-      "fireAlarmConnection": { "stipulation": "", "result": "", "status": "" }
+      "installationStandard": { "result": "", "status": "" },
+      "electricalPanel": { "result": "", "status": "" },
+      "groundingCable": { "result": "", "status": "" },
+      "fireAlarmConnection": { "result": "", "status": "" }
     },
     "outdoorSpecifics": {
-      "pitWaterPump": { "stipulation": "", "result": "", "status": "" },
-      "weatherproofComponents": { "stipulation": "", "result": "", "status": "" }
+      "pitWaterPump": { "result": "", "status": "" },
+      "weatherproofComponents": { "result": "", "status": "" }
     },
     "userSafetySignage": {
-      "noBulkyItems": { "stipulation": "", "result": "", "status": "" },
-      "noJumping": { "stipulation": "", "result": "", "status": "" },
-      "unattendedChildren": { "stipulation": "", "result": "", "status": "" },
-      "noTrolleysOrStrollers": { "stipulation": "", "result": "", "status": "" },
-      "noLeaning": { "stipulation": "", "result": "", "status": "" },
-      "noSteppingOnSkirt": { "stipulation": "", "result": "", "status": "" },
-      "softSoleFootwearWarning": { "stipulation": "", "result": "", "status": "" },
-      "noSittingOnSteps": { "stipulation": "", "result": "", "status": "" },
-      "holdHandrail": { "stipulation": "", "result": "", "status": "" }
+      "noBulkyItems": { "result": "", "status": "" },
+      "noJumping": { "result": "", "status": "" },
+      "unattendedChildren": { "result": "", "status": "" },
+      "noTrolleysOrStrollers": { "result": "", "status": "" },
+      "noLeaning": { "result": "", "status": "" },
+      "noSteppingOnSkirt": { "result": "", "status": "" },
+      "softSoleFootwearWarning": { "result": "", "status": "" },
+      "noSittingOnSteps": { "result": "", "status": "" },
+      "holdHandrail": { "result": "", "status": "" }
     }
   },
   "testingSummary": {
@@ -131,11 +131,5 @@
   "conclusion": {
     "status": "",
     "conditions": []
-  },
-  "nextInspectionDate": "",
-  "inspector": {
-    "company": "",
-    "name": "",
-    "title": ""
   }
 }
