@@ -1,107 +1,111 @@
 {
-  "id": "",
-  "k3ObjectType": "",
   "inspectionType": "",
-  "inspectionDate": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "usagePurpose": "",
-  "capacityDescription": "",
-  "manufacturer": "",
-  "manufactureYear": null,
-  "manufactureCountry": "",
-  "serialNumber": "",
-  "brandOrType": "",
-  "volumeLiters": null,
-  "gasContent": "",
-  "workingPressure": "",
-  "maxAllowedWorkingPressure": "",
-  "designPressure": "",
-  "safetyDeviceType": "",
-  "foundationType": "",
-  "vesselShape": "",
-  "vesselMaterialType": "",
-  "maxTemperature": "",
-  "headLengthMm": null,
-  "bodyThicknessMm": null,
-  "headThicknessMm": null,
-  "innerDiameterMm": null,
-  "vesselLegsStatus": "",
-  "vesselLegsNotes": "",
-  "foundationStatus": "",
-  "foundationNotes": "",
-  "pressureMeterStatus": "",
-  "pressureMeterNotes": "",
-  "safetyValveStatus": "",
-  "safetyValveNotes": "",
-  "stopValveStatus": "",
-  "stopValveNotes": "",
-  "manholeStatus": "",
-  "manholeNotes": "",
-  "crackInspectionStatus": "",
-  "crackInspectionNotes": "",
-  "thicknessInspectionStatus": "",
-  "thicknessInspectionNotes": "",
-  "emergencyStopStatus": "",
-  "emergencyStopNotes": "",
-  "rustPaintingStatus": "",
-  "rustPaintingNotes": "",
-  "inputPipeStatus": "",
-  "inputPipeNotes": "",
-  "outputPipeStatus": "",
-  "outputPipeNotes": "",
-  "ventilationStatus": "",
-  "ventilationNotes": "",
-  "manometerStatus": "",
-  "manometerNotes": "",
-  "ndtClientName": "",
-  "ndtProjectName": "",
-  "ndtWorkOrderNumber": "",
-  "ndtDate": null,
-  "ndtObjectType": "",
-  "ndtEquipmentUsed": "",
-  "ndtProbeType": "",
-  "ndtProbeStyle": "",
-  "ndtSurfaceCondition": "",
-  "ndtLaminatingCheck": "",
-  "ndtMethodUsed": "",
-  "ndtMaterialType": "",
-  "ndtOperatingTemp": "",
-  "ndtWeldingProcess": "",
-  "ndtCouplantUsed": "",
-  "dptProcedureReference": "",
-  "dptMethod": "",
-  "dptCleanerType": "",
-  "dptPenetrantType": "",
-  "dptDeveloperType": "",
-  "dptMaterialThickness": "",
-  "topHeadNominalMm": null,
-  "topHeadPoint1": null,
-  "topHeadPoint2": null,
-  "topHeadPoint3": null,
-  "topHeadMin": null,
-  "topHeadMax": null,
-  "shellNominalMm": null,
-  "shellPoint1": null,
-  "shellPoint2": null,
-  "shellPoint3": null,
-  "shellMin": null,
-  "shellMax": null,
-  "bottomHeadNominalMm": null,
-  "bottomHeadPoint1": null,
-  "bottomHeadPoint2": null,
-  "bottomHeadPoint3": null,
-  "bottomHeadMin": null,
-  "bottomHeadMax": null,
-  "calcT": null,
-  "calcP": null,
-  "calcD": null,
-  "calcR": null,
-  "calcE": null,
-  "calcS": null,
-  "calcCA": null,
-  "calculationNotes": "",
-  "conclusionSummary": "",
-  "recommendations": []
+  "generalData": {
+    "owner": {
+      "name": "",
+      "address": ""
+    },
+    "user": {
+      "name": "",
+      "address": ""
+    },
+    "operator": {
+      "name": "",
+      "certificateStatus": ""
+    },
+    "equipment": {
+      "type": "",
+      "serialNumber": ""
+    },
+    "manufacturer": {
+      "name": "",
+      "brandModelType": "",
+      "countryAndYear": ""
+    },
+    "intendedUse": "",
+    "permitNumber": "",
+    "historyData": ""
+  },
+  "technicalData": {
+    "designPressure": "",
+    "maxAllowableWorkingPressure": "",
+    "capacity": "",
+    "steamTemperature": "",
+    "operatingPressure": "",
+    "fuelType": "",
+    "shell": {
+      "roundShellCount": "",
+      "jointMethod": "",
+      "material": "",
+      "thickness": "",
+      "length": ""
+    },
+    "heads": {
+      "type": "",
+      "top": {
+        "diameter": "",
+        "thickness": ""
+      },
+      "rear": {
+        "diameter": "",
+        "thickness": ""
+      }
+    },
+    "furnace": {
+      "type": "",
+      "material": ""
+    },
+    "waterTubes": {
+      "firstPass": {
+        "diameter": "",
+        "thickness": "",
+        "length": "",
+        "count": ""
+      },
+      "stayTubes": {},
+      "jointMethodToTubePlate": ""
+    }
+  },
+  "visualInspection": {
+    "boilerComponents": {},
+    "boilerAccessories": {},
+    "safetyDevices": {},
+    "controlEquipment": {},
+    "identification": {}
+  },
+  "thicknessMeasurement": {
+    "shell": {},
+    "furnace": {},
+    "fireTube": {}
+  },
+  "measurementResults": [],
+  "ndtResults": {
+    "shell": [],
+    "furnace": [],
+    "fireTubes": []
+  },
+  "hydrotest": {
+    "testPressure": "",
+    "mawp": "",
+    "medium": "",
+    "date": "",
+    "result": ""
+  },
+  "appendagesInspection": {},
+  "safetyValveTest": {
+    "openingPressure": "",
+    "manufacturer": "",
+    "openingTime": "",
+    "closingTime": ""
+  },
+  "conclusion": {
+    "findings": []
+  },
+  "recommendations": [],
+  "nextInspectionDate": "",
+  "inspector": {
+    "company": "",
+    "name": "",
+    "title": ""
+  }
 }
