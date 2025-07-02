@@ -1,0 +1,134 @@
+{
+  "typeInspection": "",
+  "paaType": "",
+  "generalData": {
+    "owner": {
+      "name": "",
+      "address": ""
+    },
+    "user": {
+      "name": "",
+      "address": ""
+    },
+    "unitLocation": "",
+    "operator": {
+      "name": "",
+      "certificateStatus": ""
+    },
+    "equipmentType": "",
+    "manufacturer": {
+      "name": "",
+      "brandOrType": "",
+      "locationAndYear": "",
+      "serialNumber": ""
+    },
+    "capacity": "",
+    "standardUsed": "",
+    "intendedUse": "",
+    "usagePermitNumber": "",
+    "historyData": ""
+  },
+  "technicalData": {
+    "maxCapacity": "",
+    "boomLength": "",
+    "maxJibLength": "",
+    "maxJibWorkingLoad": "",
+    "maxBoomPlusJibLength": "",
+    "craneWeight": "",
+    "maxLiftHeight": "",
+    "boomWorkingAngle": "",
+    "driveMotor": {
+      "engineNumber": "",
+      "type": "",
+      "cylinderCount": "",
+      "netPower": "",
+      "brandAndYear": "",
+      "manufacturer": ""
+    },
+    "mainHook": {
+      "type": "",
+      "capacity": "",
+      "material": "",
+      "serialNumber": ""
+    },
+    "auxiliaryHook": {
+      "type": "",
+      "capacity": "",
+      "material": "",
+      "serialNumber": ""
+    },
+    "mainHoistRope": {
+      "diameter": "",
+      "type": "",
+      "construction": "",
+      "breakingStrength": "",
+      "length": ""
+    },
+    "auxiliaryHoistRope": {
+      "diameter": "",
+      "type": "",
+      "construction": "",
+      "breakingStrength": "",
+      "length": ""
+    },
+    "boomHoistRope": {
+      "diameter": "",
+      "type": "",
+      "construction": "",
+      "breakingStrength": "",
+      "length": ""
+    }
+  },
+  "visualInspection": {
+    "foundationAndStructure": {},
+    "accessComponents": {},
+    "outriggers": {},
+    "turntable": {},
+    "latticeBoom": {},
+    "mechanicalSystems": {},
+    "winches": {},
+    "pulleysAndHooks": {},
+    "wireRopes": {},
+    "limitSwitches": {},
+    "engine": {},
+    "hydraulics": {},
+    "pneumatics": {},
+    "operatorCabin": {},
+    "electricalComponents": {},
+    "safetyDevices": {}
+  },
+  "nonDestructiveTest": {
+    "wireRope": [],
+    "boom": [],
+    "mainHook": {},
+    "auxiliaryHook": {},
+    "mainDrum": {},
+    "auxiliaryDrum": {},
+    "mainPulley": {},
+    "auxiliaryPulley": {}
+  },
+  "testing": {
+    "functionalTest": {},
+    "loadTest": {
+      "dynamic": {
+        "mainHook": [],
+        "auxiliaryHook": []
+      },
+      "static": {
+        "mainHook": [],
+        "auxiliaryHook": []
+      }
+    }
+  },
+  "conclusion": {
+    "findings": []
+  },
+  "recommendations": [],
+  "nextInspectionDate": "",
+  "inspector": {
+    "reportDate": "",
+    "company": "",
+    "name": "",
+    "title": ""
+  }
+}
