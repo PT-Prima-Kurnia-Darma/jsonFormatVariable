@@ -1,0 +1,106 @@
+{
+  "ptpType": "",
+  "typeInspection": "",
+  "generalData": {
+    "owner": {
+      "name": "",
+      "address": ""
+    },
+    "user": {
+      "name": "",
+      "address": ""
+    },
+    "personInCharge": "",
+    "unitLocation": "",
+    "equipment": {
+      "type": "",
+      "brandOrType": "",
+      "serialNumber": ""
+    },
+    "manufacturerOrInstaller": "",
+    "locationAndYear": "",
+    "driveMotorPower": "",
+    "intendedUse": "",
+    "pjk3PermitNumber": "",
+    "ak3PermitNumber": "",
+    "usagePermitNumber": "",
+    "operatorName": "",
+    "machineHistory": ""
+  },
+  "technicalData": {
+    "type": "",
+    "maxFeederSpeed": "",
+    "maxPlateWidth": "",
+    "plateThickness": "",
+    "maxPlateWeight": "",
+    "maxInnerCoilDiameter": "",
+    "maxOuterCoilDiameter": "",
+    "driveMotor": {
+      "type": "",
+      "power": ""
+    },
+    "brandAndSerialNumber": "",
+    "locationAndYear": "",
+    "machineDimensions": {
+      "weight": "",
+      "overall": ""
+    },
+    "foundationDimensions": {
+      "dimensions": "",
+      "spacing": "",
+      "vibrationDamperType": "",
+      "weight": ""
+    }
+  },
+  "inspection": {
+    "foundation": {},
+    "frame": {},
+    "roller": {},
+    "controlPanel": {},
+    "display": {},
+    "operationButtons": {},
+    "electricalComponents": {},
+    "safetyDevices": {},
+    "hydraulicPump": {},
+    "hydraulicHose": {}
+  },
+  "testing": {
+    "safetyDeviceTests": {},
+    "speedTest": {},
+    "functionTest": {},
+    "weldJointTest": {},
+    "vibrationTest": {},
+    "lightingTest": {},
+    "noiseTest": {},
+    "electricalMeasurements": {}
+  },
+  "conclusion": {
+    "findings": [],
+    "status": ""
+  },
+  "requirements": [],
+  "nextInspectionDate": "",
+  "inspector": {
+    "reportDate": "",
+    "company": "",
+    "name": "",
+    "title": ""
+  },
+  "foundationAnalysis": {
+    "machineWeight": "",
+    "totalWeight": "",
+    "minFoundationWeight": "",
+    "foundationHeight": "",
+    "conclusion": ""
+  },
+  "environmentalMeasurement": {
+    "noise": {
+      "result": "",
+      "analysis": ""
+    },
+    "lighting": {
+      "result": "",
+      "analysis": ""
+    }
+  }
+}
