@@ -1,6 +1,7 @@
 {
+  "id": "",
   "typeInspection": "",
-  "registrationNumber": "",{
+  "registrationNumber": "",
   "serviceProvider": {
     "nameAndAddress": "",
     "companyPermitNumber": "",
@@ -10,18 +11,18 @@
   },
   "assetOwner": {
     "companyName": "",
-    "companyAddress": "",
+    "companyLocation": "",
     "usageLocation": "",
     "objectType": "",
     "examinationType": "",
     "approvalNumber": "",
-    "examinationDate": ""
+    "inspectionDate": null
   },
   "technicalData": {
     "conductorType": "",
-    "buildingHeight": "",
-    "buildingArea": "",
-    "receiverHeight": "",
+    "buildingHeight": null,
+    "buildingArea": null,
+    "receiverHeight": null,
     "receiverCount": 0,
     "testJointCount": 0,
     "downConductorCount": 0,
@@ -62,10 +63,10 @@
     "groundingResistanceValue": "",
     "notes": ""
   },
-  "conclusionAndConditions": {
+  "conclusion": {
     "status": "",
-    "conditions": [],
-    "nextInspectionDate": ""
+    "recommendations": [],
+    "nextInspectionDate": null
   },
   "inspector": {
     "name": "",
