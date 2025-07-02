@@ -1,66 +1,157 @@
-{
-  "id": "",
+{  
   "typeInspection": "",
-  "inspectionSchedule": "",
-  "alarmSystemType": "",
   "registrationNumber": "",
-  "certificateNumber": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "hasTechnicalDrawing": null,
-  "hasInspectionDocumentation": null,
-  "hasApplicationLetter": null,
-  "hasSpecificationDocument": null,
-  "landAreaSqm": null,
-  "buildingAreaSqm": null,
-  "buildingHeightMeters": null,
-  "totalFloors": null,
-  "yearBuilt": null,
-  "mainStructure": "",
-  "floorStructure": "",
-  "exteriorWall": "",
-  "interiorWall": "",
-  "ceilingFrame": "",
-  "ceilingCover": "",
-  "roofFrame": "",
-  "roofCover": "",
-  "aparStatus": "",
-  "indoorHydrantStatus": "",
-  "outdoorHydrantStatus": "",
-  "siameseConnectionStatus": "",
-  "sprinklerStatus": "",
-  "detectorStatus": "",
-  "exitSignStatus": "",
-  "emergencyStairsStatus": "",
-  "assemblyPointStatus": "",
-  "mcfaBrandOrType": "",
-  "mcfaSerialNumber": "",
-  "mcfaZoneDescription": "",
-  "mcfaBackupBatteryDescription": "",
-  "mcfaHasPowerIndicator": null,
-  "mcfaHasZoneIndicator": null,
-  "mcfaHasTroubleIndicator": null,
-  "mcfaHasSilenceSwitch": null,
-  "mcfaHasResetSwitch": null,
-  "mcfaHasGeneralAlarmSwitch": null,
-  "mcfaHasBuzzer": null,
-  "heatDetectorBrandOrType": "",
-  "heatDetectorSpacing": "",
-  "heatDetectorTemp": "",
-  "smokeDetectorBrandOrType": "",
-  "smokeDetectorSpacing": "",
-  "smokeDetectorTemp": "",
-  "isPanelFunctionOk": null,
-  "isAlarmTestOk": null,
-  "alarmTestNotes": "",
-  "isFaultTestOk": null,
-  "faultTestNotes": "",
-  "conclusionSummary": "",
-  "recommendations": [],
-  "nextInspectionDate": null,
-  "reportNotes": ""
+  "documentChecklist": {
+    "technicalDrawing": { "status": "", "notes": "" },
+    "previousTestDocumentation": { "status": "", "notes": "" },
+    "requestLetter": { "status": "", "notes": "" },
+    "specificationDocument": { "status": "", "notes": "" }
+  },
+  "equipmentUsed": [],
+  "owner": {
+    "name": "",
+    "address": "",
+    "location": "",
+    "certificateNumber": "",
+    "objectType": ""
+  },
+  "buildingData": {
+    "landArea": "",
+    "buildingArea": "",
+    "buildingHeight": "",
+    "floorCount": "",
+    "yearBuilt": "",
+    "construction": {
+      "mainStructure": "",
+      "floorStructure": "",
+      "exteriorWalls": "",
+      "interiorWalls": "",
+      "ceilingFrame": "",
+      "ceilingCover": "",
+      "roofFrame": "",
+      "roofCover": ""
+    },
+    "protectionEquipment": {
+      "portableExtinguishers": "",
+      "indoorHydrantBox": "",
+      "pillarAndOutdoorHydrant": "",
+      "siameseConnection": "",
+      "sprinklerSystem": "",
+      "heatAndSmokeDetectors": "",
+      "exitSigns": "",
+      "emergencyStairs": "",
+      "assemblyPoint": ""
+    }
+  },
+  "fireAlarmSystem": {
+    "mcfa": {
+      "brandOrType": "",
+      "backupBattery": "",
+      "powerIndicator": "",
+      "zoneIndicator": "",
+      "troubleIndicator": "",
+      "silenceSwitch": "",
+      "resetSwitch": "",
+      "generalAlarmSwitch": "",
+      "buzzer": ""
+    },
+    "heatDetector": {
+      "brandOrType": "",
+      "pointCount": "",
+      "spacing": "",
+      "operatingTemperature": ""
+    },
+    "smokeDetector": {
+      "brandOrType": "",
+      "pointCount": "",
+      "spacing": "",
+      "operatingTemperature": ""
+    },
+    "apar": {
+      "brandOrType": "",
+      "count": "",
+      "spacing": "",
+      "placement": ""
+    }
+  },
+  "alarmInstallationData": [],
+  "alarmTestResults": {
+    "panelFunction": "",
+    "alarmTest": "",
+    "faultTest": "",
+    "interconnectionTest": ""
+  },
+  "hydrantSystem": {
+    "waterSource": {
+      "type": "",
+      "reservoirCapacity": ""
+    },
+    "siameseConnection": {
+      "count": "",
+      "status": ""
+    },
+    "jockeyPump": {
+      "model": "",
+      "serialNumber": "",
+      "power": "",
+      "rpm": "",
+      "flowRate": "",
+      "head": "",
+      "autoStartPressure": "",
+      "autoStopPressure": ""
+    },
+    "electricPump": {
+      "model": "",
+      "serialNumber": "",
+      "power": "",
+      "rpm": "",
+      "flowRate": "",
+      "head": "",
+      "autoStartPressure": "",
+      "stopType": ""
+    },
+    "dieselPump": {
+      "model": "",
+      "serialNumber": "",
+      "engineType": "",
+      "flowRate": "",
+      "head": "",
+      "autoStartPressure": "",
+      "stopType": ""
+    },
+    "buildingHydrant": {
+      "pointCount": "",
+      "outletDiameter": "",
+      "hoseLength": "",
+      "nozzleDiameter": ""
+    },
+    "pillarHydrant": {
+      "pointCount": "",
+      "outletDiameter": "",
+      "hoseLength": "",
+      "nozzleDiameter": ""
+    },
+    "fireDepartmentConnection": {
+      "pointCount": "",
+      "inletDiameter": "",
+      "outletDiameter": "",
+      "couplingType": ""
+    }
+  },
+  "pumpFunctionTest": {
+    "jockeyPump": { "startPressure": "", "stopPressure": "" },
+    "electricPump": { "startPressure": "", "stopPressure": "" },
+    "dieselPump": { "startPressure": "", "stopPressure": "" }
+  },
+  "operationalTestResults": [],
+  "conclusion": {
+    "summary": "",
+    "conditions": [],
+    "nextInspectionDate": ""
+  },
+  "inspector": {
+    "company": "",
+    "name": "",
+    "title": ""
+  }
 }
