@@ -1,116 +1,141 @@
 {
-  "id": "",
-  "objectType": "Eskalator",
-  "registrationNumber": "",
-  "inspectionType": "Laporan Pemeriksaan dan Pengujian",
-  "inspectionDate": null,
-  "companyName": "",
-  "usageLocation": "",
-  "k3ObjectDescription": "",
-  "usagePurpose": "",
-  "usagePermitNumber": "",
-
-  "techSpecManufacturer": "",
-  "techSpecBrand": "",
-  "techSpecManufactureCountry": "",
-  "techSpecManufactureYear": null,
-  "techSpecSerialNumber": "",
-  "techSpecTransportPurpose": "",
-  "techSpecCapacityDescription": "",
-  "techSpecLiftingHeightMeters": null,
-  "techSpecLiftingSpeedMps": null,
-  "techSpecDriveType": "",
-  "techSpecMotorCurrentAmps": null,
-  "techSpecMotorPowerKw": null,
-  "techSpecSafetyDevicesDesc": "",
-
-  "clAFrameReq": "≥ 30 N/cm2...", "clAFrameRes": "", "clAFrameComp": null,
-  "clASupportBeamsReq": "Dilapisi karet peredam", "clASupportBeamsRes": "", "clASupportBeamsComp": null,
-  "clAMachineRoomCondReq": "Bersih", "clAMachineRoomCondRes": "", "clAMachineRoomCondComp": null,
-  "clAFreeSpaceReq": "< 0,3 m2", "clAFreeSpaceRes": "", "clAFreeSpaceComp": null,
-  "clALightingReq": "≥ 100 lux", "clALightingRes": "", "clALightingComp": null,
-  "clAMachineCoverReq": "Tersedia dan kuat", "clAMachineCoverRes": "", "clAMachineCoverComp": null,
-  "clAPitCondReq": "Bersih", "clAPitCondRes": "", "clAPitCondComp": null,
-  "clAPitFreeSpaceReq": "≥ 0,3 m2", "clAPitFreeSpaceRes": "", "clAPitFreeSpaceComp": null,
-  "clAPitStepCoverReq": "Ada & Kuat", "clAPitStepCoverRes": "", "clAPitStepCoverComp": null,
-
-  "clBDriveMachineReq": "Hanya menggerakkan 1 eskalator...", "clBDriveMachineRes": "", "clBDriveMachineComp": null,
-  "clBSlopeLt30Req": "Kecepatan maksimal 0,75 m/s", "clBSlopeLt30Res": "", "clBSlopeLt30Comp": null,
-  "clBSlope30to35Req": "Kecepatan maksimal 0,5 m/s", "clBSlope30to35Res": "", "clBSlope30to35Comp": null,
-  "clBPalletTypeReq": "Kecepatan maksimal 0,75 m/s...", "clBPalletTypeRes": "", "clBPalletTypeComp": null,
-  "clBStopDist05mpsReq": "200mm < jarak < 1000mm", "clBStopDist05mpsRes": "", "clBStopDist05mpsComp": null,
-  "clBStopDist075mpsReq": "350mm < jarak < 1500mm", "clBStopDist075mpsRes": "", "clBStopDist075mpsComp": null,
-  "clBStopDist090mpsReq": "550mm < jarak < 1700mm", "clBStopDist090mpsRes": "", "clBStopDist090mpsComp": null,
-  "clBDriveChainReq": "Pelat baja yang dikeling", "clBDriveChainRes": "", "clBDriveChainComp": null,
-  "clBChainStrengthReq": "≥ 140 kg tiap lembar rantai", "clBChainStrengthRes": "", "clBChainStrengthComp": null,
-
-  "clCMaterialReq": "Palet baja, baja tuang...", "clCMaterialRes": "", "clCMaterialComp": null,
-  "clCStepDimsReq": "Lebar ≥ 400mm...", "clCStepDimsRes": "", "clCStepDimsComp": null,
-  "clCPalletDimsReq": "Lebar ≥ 150mm...", "clCPalletDimsRes": "", "clCPalletDimsComp": null,
-  "clCSurfaceReq": "Terbuat dari bahan yang padat, rata...", "clCSurfaceRes": "", "clCSurfaceComp": null,
-  "clCFlatnessReq": "≥ 600mm", "clCFlatnessRes": "", "clCFlatnessComp": null,
-  "clCSkirtBrushReq": "Terpasang sepanjang pelindung bawah", "clCSkirtBrushRes": "", "clCSkirtBrushComp": null,
-  "clCStepWheelsReq": "Mempunyai 4 buah roda...", "clCStepWheelsRes": "", "clCStepWheelsComp": null,
-
-  "clDLandingPlatesReq": "Terpasang berderet dan Dikencangkan...", "clDLandingPlatesRes": "", "clDLandingPlatesComp": null,
-  "clDCombTeethReq": "Terbuat dari bahan yang mudah patah...", "clDCombTeethRes": "", "clDCombTeethComp": null,
-  "clDCombTeethCondReq": "Boleh kondisi patah maksimal 2", "clDCombTeethCondRes": "", "clDCombTeethCondComp": null,
-  "clDLandingCoverReq": "Dari bahan yang kuat dan tidak licin...", "clDLandingCoverRes": "", "clDLandingCoverComp": null,
-  "clDEntryExitAreaReq": "Ruang bebas ≥ 160mm...", "clDEntryExitAreaRes": "", "clDEntryExitAreaComp": null,
-
-  "clESideProtectionReq": "Dari baja dan kuat", "clESideProtectionRes": "", "clESideProtectionComp": null,
-  "clEHeightReq": "750 < tinggi < 1100mm", "clEHeightRes": "", "clEHeightComp": null,
-  "clESidePressureReq": "> 58,5 kg/m2", "clESidePressureRes": "", "clESidePressureComp": null,
-  "clEVerticalPressureReq": "> 73 kg/m2", "clEVerticalPressureRes": "", "clEVerticalPressureComp": null,
-  "clESkirtPanelReq": "Dari bahan tahan benturan...", "clESkirtPanelRes": "", "clESkirtPanelComp": null,
-  "clESkirtPanelFlexReq": "< 4mm jika diberi tekanan 50kg", "clESkirtPanelFlexRes": "", "clESkirtPanelFlexComp": null,
-  "clEStepGapReq": "< 4mm dan jumlah jarak < 7mm", "clEStepGapRes": "", "clEStepGapComp": null,
-
-  "clFHandrailCondReq": "Kuat, tidak cacat...", "clFHandrailCondRes": "", "clFHandrailCondComp": null,
-  "clFSpeedSyncReq": "Harus sama dan searah atau < 2%...", "clFSpeedSyncRes": "", "clFSpeedSyncComp": null,
-  "clFWidthReq": "70 – 100mm", "clFWidthRes": "", "clFWidthComp": null,
-
-  "clGBeamStrengthReq": "Disesuaikan dengan spesifikasi", "clGBeamStrengthRes": "", "clGBeamStrengthComp": null,
-  "clGWatertightWallReq": "Kedap air", "clGWatertightWallRes": "", "clGWatertightWallComp": null,
-  "clGEscalatorFrameReq": "Tertutup dan dari bahan...", "clGEscalatorFrameRes": "", "clGEscalatorFrameComp": null,
-  "clGLightingReq": "> 50 lux", "clGLightingRes": "", "clGLightingComp": null,
-  "clGObjectClearanceReq": "> 2300 mm", "clGObjectClearanceRes": "", "clGObjectClearanceComp": null,
-  "clGGuardrailGapReq": "< 120 mm", "clGGuardrailGapRes": "", "clGGuardrailGapComp": null,
-  "clGGuardrailHeightReq": "> 100 mm dari permukaan ban pegangan", "clGGuardrailHeightRes": "", "clGGuardrailHeightComp": null,
-  "clGOrnamentPlacementReq": "Berjarak > 80 mm dan tinggi > 2100 mm", "clGOrnamentPlacementRes": "", "clGOrnamentPlacementComp": null,
-  "clGOutdoorEscalatorReq": "Jarak antara pelindung luar... > 400 mm", "clGOutdoorEscalatorRes": "", "clGOutdoorEscalatorComp": null,
-
-  "clHOperationKeyReq": "Tersedia", "clHOperationKeyRes": "", "clHOperationKeyComp": null,
-  "clHEmergencyStopReq": "Tersedia", "clHEmergencyStopRes": "", "clHEmergencyStopComp": null,
-  "clHStepChainSafetyReq": "Tersedia", "clHStepChainSafetyRes": "", "clHStepChainSafetyComp": null,
-  "clHDriveChainSafetyReq": "Tersedia", "clHDriveChainSafetyRes": "", "clHDriveChainSafetyComp": null,
-  "clHStepPalletSafetyReq": "Tersedia", "clHStepPalletSafetyRes": "", "clHStepPalletSafetyComp": null,
-  "clHHandrailSafetyReq": "Tersedia", "clHHandrailSafetyRes": "", "clHHandrailSafetyComp": null,
-  "clHAntiReverseSafetyReq": "Tersedia", "clHAntiReverseSafetyRes": "", "clHAntiReverseSafetyComp": null,
-  "clHHandrailEntrySafetyReq": "Tersedia", "clHHandrailEntrySafetyRes": "", "clHHandrailEntrySafetyComp": null,
-  "clHCombPlateSafetyReq": "Tersedia", "clHCombPlateSafetyRes": "", "clHCombPlateSafetyComp": null,
-  "clHInnerSkirtBrushReq": "Tersedia", "clHInnerSkirtBrushRes": "", "clHInnerSkirtBrushComp": null,
-  "clHStopButtonReq": "Posisi mudah dicapai...", "clHStopButtonRes": "", "clHStopButtonComp": null,
-
-  "clIStandardsComplianceReq": "SNI dan standar internasional", "clIStandardsComplianceRes": "", "clIStandardsComplianceComp": null,
-  "clIElectricalPanelReq": "Panel khusus untuk eskalator", "clIElectricalPanelRes": "", "clIElectricalPanelComp": null,
-  "clIGroundingCableReq": "Penampang ≥ 6mm2 ≤ 5 Ω (ohm)", "clIGroundingCableRes": "", "clIGroundingCableComp": null,
-  "clIFireAlarmConnectionReq": "Terhubung dan beroperasi otomatis", "clIFireAlarmConnectionRes": "", "clIFireAlarmConnectionComp": null,
-
-  "clJPitWaterPumpReq": "Tersedia", "clJPitWaterPumpRes": "", "clJPitWaterPumpComp": null,
-  "clJComponentWeatherproofingReq": "Tahan air, suhu/cuaca", "clJComponentWeatherproofingRes": "", "clJComponentWeatherproofingComp": null,
-
-  "clKSignNoLargeItemsReq": "Tersedia", "clKSignNoLargeItemsRes": "", "clKSignNoLargeItemsComp": null,
-  "clKSignNoJumpingReq": "Tersedia", "clKSignNoJumpingRes": "", "clKSignNoJumpingComp": null,
-  "clKSignChildSupervisionReq": "Tersedia", "clKSignChildSupervisionRes": "", "clKSignChildSupervisionComp": null,
-  "clKSignNoTrolleyReq": "Tersedia", "clKSignNoTrolleyRes": "", "clKSignNoTrolleyComp": null,
-  "clKSignNoLeaningReq": "Tersedia", "clKSignNoLeaningRes": "", "clKSignNoLeaningComp": null,
-  "clKSignNoSteppingOnSkirtReq": "Tersedia", "clKSignNoSteppingOnSkirtRes": "", "clKSignNoSteppingOnSkirtComp": null,
-  "clKSignSoftFootwearWarningReq": "Tersedia", "clKSignSoftFootwearWarningRes": "", "clKSignSoftFootwearWarningComp": null,
-  "clKSignNoSittingOnStepsReq": "Tersedia", "clKSignNoSittingOnStepsRes": "", "clKSignNoSittingOnStepsComp": null,
-  "clKSignHoldHandrailReq": "Tersedia", "clKSignHoldHandrailRes": "", "clKSignHoldHandrailComp": null,
-  
-  "testingNotes": "",
-  "conclusionSummary": "",
-  "conclusionRecommendations": []
+  "EskOrElevType": "",
+  "typeInspection": "",  
+  "companyData": {
+    "companyOrBuildingName": "",
+    "usageAddress": "",
+    "safetyObjectTypeAndNumber": "",
+    "intendedUse": "",
+    "usagePermit": ""
+  },
+  "technicalData": {
+    "manufacturer": "",
+    "brand": "",
+    "countryAndYear": "",
+    "serialNumber": "",
+    "transports": "",
+    "capacity": "",
+    "liftHeight": "",
+    "speed": "",
+    "driveType": "",
+    "motorCurrent": "",
+    "motorPower": "",
+    "safetyDevices": ""
+  },
+  "inspectionAndTesting": {
+    "frameAndMachineRoom": {
+      "frame": { "stipulation": "", "result": "", "status": "" },
+      "supportBeams": { "stipulation": "", "result": "", "status": "" },
+      "machineRoomCondition": { "stipulation": "", "result": "", "status": "" },
+      "machineRoomClearance": { "stipulation": "", "result": "", "status": "" },
+      "machineRoomLighting": { "stipulation": "", "result": "", "status": "" },
+      "machineCoverPlate": { "stipulation": "", "result": "", "status": "" },
+      "pitCondition": { "stipulation": "", "result": "", "status": "" },
+      "pitClearance": { "stipulation": "", "result": "", "status": "" },
+      "pitStepCoverPlate": { "stipulation": "", "result": "", "status": "" }
+    },
+    "driveEquipment": {
+      "driveMachine": { "stipulation": "", "result": "", "status": "" },
+      "speedUnder30Degrees": { "stipulation": "", "result": "", "status": "" },
+      "speed30to35Degrees": { "stipulation": "", "result": "", "status": "" },
+      "travelatorSpeed": { "stipulation": "", "result": "", "status": "" },
+      "stoppingDistance0_5": { "stipulation": "", "result": "", "status": "" },
+      "stoppingDistance0_75": { "stipulation": "", "result": "", "status": "" },
+      "stoppingDistance0_90": { "stipulation": "", "result": "", "status": "" },
+      "driveChain": { "stipulation": "", "result": "", "status": "" },
+      "chainBreakingStrength": { "stipulation": "", "result": "", "status": "" }
+    },
+    "stepsOrPallets": {
+      "stepMaterial": { "stipulation": "", "result": "", "status": "" },
+      "stepDimensions": { "stipulation": "", "result": "", "status": "" },
+      "palletDimensions": { "stipulation": "", "result": "", "status": "" },
+      "stepSurface": { "stipulation": "", "result": "", "status": "" },
+      "stepLevelness": { "stipulation": "", "result": "", "status": "" },
+      "skirtBrush": { "stipulation": "", "result": "", "status": "" },
+      "stepWheels": { "stipulation": "", "result": "", "status": "" }
+    },
+    "landingArea": {
+      "landingPlates": { "stipulation": "", "result": "", "status": "" },
+      "combTeeth": { "stipulation": "", "result": "", "status": "" },
+      "combCondition": { "stipulation": "", "result": "", "status": "" },
+      "landingCover": { "stipulation": "", "result": "", "status": "" },
+      "landingAccessArea": { "stipulation": "", "result": "", "status": "" }
+    },
+    "balustrade": {
+      "balustradePanel": {
+        "material": { "stipulation": "", "result": "", "status": "" },
+        "height": { "stipulation": "", "result": "", "status": "" },
+        "sidePressure": { "stipulation": "", "result": "", "status": "" },
+        "verticalPressure": { "stipulation": "", "result": "", "status": "" }
+      },
+      "skirtPanel": { "stipulation": "", "result": "", "status": "" },
+      "skirtPanelFlexibility": { "stipulation": "", "result": "", "status": "" },
+      "stepToSkirtClearance": { "stipulation": "", "result": "", "status": "" }
+    },
+    "handrail": {
+      "handrailCondition": { "stipulation": "", "result": "", "status": "" },
+      "handrailSpeedSynchronization": { "stipulation": "", "result": "", "status": "" },
+      "handrailWidth": { "stipulation": "", "result": "", "status": "" }
+    },
+    "runway": {
+      "beamStrengthAndPosition": { "stipulation": "", "result": "", "status": "" },
+      "pitWallCondition": { "stipulation": "", "result": "", "status": "" },
+      "escalatorFrameEnclosure": { "stipulation": "", "result": "", "status": "" },
+      "lighting": { "stipulation": "", "result": "", "status": "" },
+      "headroomClearance": { "stipulation": "", "result": "", "status": "" },
+      "balustradeToObjectClearance": { "stipulation": "", "result": "", "status": "" },
+      "antiClimbDeviceHeight": { "stipulation": "", "result": "", "status": "" },
+      "ornamentPlacement": { "stipulation": "", "result": "", "status": "" },
+      "outdoorClearance": { "stipulation": "", "result": "", "status": "" }
+    },
+    "safetyEquipment": {
+      "operationControlKey": { "stipulation": "", "result": "", "status": "" },
+      "emergencyStopSwitch": { "stipulation": "", "result": "", "status": "" },
+      "stepChainSafetyDevice": { "stipulation": "", "result": "", "status": "" },
+      "driveChainSafetyDevice": { "stipulation": "", "result": "", "status": "" },
+      "stepSafetyDevice": { "stipulation": "", "result": "", "status": "" },
+      "handrailSafetyDevice": { "stipulation": "", "result": "", "status": "" },
+      "reversalStopDevice": { "stipulation": "", "result": "", "status": "" },
+      "handrailEntryGuard": { "stipulation": "", "result": "", "status": "" },
+      "combPlateSafetyDevice": { "stipulation": "", "result": "", "status": "" },
+      "innerDeckingBrush": { "stipulation": "", "result": "", "status": "" },
+      "stopButtons": { "stipulation": "", "result": "", "status": "" }
+    },
+    "electricalInstallation": {
+      "installationStandard": { "stipulation": "", "result": "", "status": "" },
+      "electricalPanel": { "stipulation": "", "result": "", "status": "" },
+      "groundingCable": { "stipulation": "", "result": "", "status": "" },
+      "fireAlarmConnection": { "stipulation": "", "result": "", "status": "" }
+    },
+    "outdoorSpecifics": {
+      "pitWaterPump": { "stipulation": "", "result": "", "status": "" },
+      "weatherproofComponents": { "stipulation": "", "result": "", "status": "" }
+    },
+    "userSafetySignage": {
+      "noBulkyItems": { "stipulation": "", "result": "", "status": "" },
+      "noJumping": { "stipulation": "", "result": "", "status": "" },
+      "unattendedChildren": { "stipulation": "", "result": "", "status": "" },
+      "noTrolleysOrStrollers": { "stipulation": "", "result": "", "status": "" },
+      "noLeaning": { "stipulation": "", "result": "", "status": "" },
+      "noSteppingOnSkirt": { "stipulation": "", "result": "", "status": "" },
+      "softSoleFootwearWarning": { "stipulation": "", "result": "", "status": "" },
+      "noSittingOnSteps": { "stipulation": "", "result": "", "status": "" },
+      "holdHandrail": { "stipulation": "", "result": "", "status": "" }
+    }
+  },
+  "testingSummary": {
+    "safetyDevices": "",
+    "noLoadTest": "",
+    "brakeTest": ""
+  },
+  "conclusion": {
+    "status": "",
+    "conditions": []
+  },
+  "nextInspectionDate": "",
+  "inspector": {
+    "company": "",
+    "name": "",
+    "title": ""
+  }
 }
