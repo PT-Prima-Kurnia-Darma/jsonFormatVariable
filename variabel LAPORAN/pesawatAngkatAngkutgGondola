@@ -1,0 +1,107 @@
+{
+  "typeInspection": "",
+  "paaType": "",
+  "generalData": {
+    "owner": {
+      "name": "",
+      "address": ""
+    },
+    "user": {
+      "name": ""
+    },
+    "personInCharge": "",
+    "unitLocation": "",
+    "operator": {
+      "name": "",
+      "certificateStatus": ""
+    },
+    "manufacturer": {
+      "name": "",
+      "brandOrType": "",
+      "year": "",
+      "serialNumber": ""
+    },
+    "equipmentType": "",
+    "capacity": {
+      "load": "",
+      "personnel": ""
+    },
+    "standardUsed": "",
+    "intendedUse": "",
+    "usagePermitNumber": ""
+  },
+  "technicalData": {
+    "gondola": {
+      "supportMastHeight": "",
+      "frontBeamLength": "",
+      "middleBeamLength": "",
+      "rearBeamLength": "",
+      "balanceWeightDistance": "",
+      "capacity": "",
+      "speed": "",
+      "platformDimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "wireRopeDiameter": ""
+    },
+    "hoist": {
+      "model": "",
+      "liftingCapacity": "",
+      "electricMotor": {
+        "type": "",
+        "power": "",
+        "voltage": ""
+      }
+    },
+    "safetyLock": {
+      "type": ""
+    },
+    "suspension": {
+      "supportMastHeight": "",
+      "frontBeamLength": "",
+      "material": ""
+    },
+    "weights": {
+      "platformTotal": "",
+      "suspensionMechanical": "",
+      "balanceWeight": "",
+      "machineTotal": ""
+    }
+  },
+  "visualInspection": {
+    "suspensionStructure": {},
+    "wireRopes": {},
+    "electricalSystem": {},
+    "platform": {},
+    "safetyDevices": {}
+  },
+  "nonDestructiveTest": {
+    "wireRopes": [],
+    "suspensionStructure": [],
+    "gondolaCage": [],
+    "clamps": []
+  },
+  "testing": {
+    "dynamicLoadTest": {
+      "results": [],
+      "notes": ""
+    },
+    "staticLoadTest": {
+      "results": [],
+      "notes": ""
+    }
+  },
+  "conclusion": {
+    "findings": []
+  },
+  "recommendations": [],
+  "nextInspectionDate": "",
+  "inspector": {
+    "reportDate": "",
+    "company": "",
+    "name": "",
+    "title": ""
+  }
+}
