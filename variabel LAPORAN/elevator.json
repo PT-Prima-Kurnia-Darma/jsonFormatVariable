@@ -47,7 +47,7 @@
         "machineRoomless": {
           "panelPlacement": {"panelPlacementresult":"","panelPlacementstatus":""},
           "lightingWorkArea": {"lightingWorkArearesult":"","lightingWorkAreatatus":""},
-          "lightingBetweenWorkArea": {"lightingBetweenWorkAreasult":"","lightingBetweenWorkAreastatus":""},
+          "lightingBetweenWorkArea": {"lightingBetweenWorkArearesult":"","lightingBetweenWorkAreastatus":""},
           "manualBrakeRelease": {"manualBrakeReleaseresult":"","manualBrakeReleasestatus":""},
           "fireExtinguisherPlacement": {"fireExtinguisherPlacementresult":"","fireExtinguisherPlacementstatus":""}
         },
