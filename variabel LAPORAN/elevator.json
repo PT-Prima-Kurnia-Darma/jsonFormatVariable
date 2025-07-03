@@ -4,14 +4,10 @@
   "typeInspection": "",
   "EskOrElevType": "",
   "generalData": {
-    "owner": {
-      "name": "",
-      "address": ""
-    },
-    "usageLocation": {
-      "name": "",
-      "address": ""
-    },
+    "ownerName": "",
+    "ownerAddress": "",
+    "nameUsageLocation": "",
+    "addressUsageLocation": "",
     "manufacturerOrInstaller": "",
     "elevatorType": "",
     "brandOrType": "",
@@ -33,160 +29,158 @@
     "safeWorkProcedure": ""
   },
   "inspectionAndTesting": {
-    "machineRoomAndMachinery": {
-      "machineMounting": { "result": "", "status": "" },
-      "mechanicalBrake": { "result": "", "status": "" },
-      "electricalBrake": { "result": "", "status": "" },
-      "machineRoomConstruction": { "result": "", "status": "" },
-      "machineRoomClearance": { "result": "", "status": "" },
-      "machineRoomLighting": { "result": "", "status": "" },
-      "ventilation": { "result": "", "status": "" },
-      "machineRoomDoor": { "result": "", "status": "" },
-      "mainPowerPanelPosition": { "result": "", "status": "" },
-      "rotatingPartsGuard": { "result": "", "status": "" },
-      "ropeHoleGuard": { "result": "", "status": "" },
-      "machineRoomAccessLadder": { "result": "", "status": "" },
-      "floorLevelDifference": { "result": "", "status": "" },
-      "fireExtinguisher": { "result": "", "status": "" },
-      "machineRoomless": {
-        "panelPlacement": { "result": "", "status": "" },
-        "lightingWorkArea": { "result": "", "status": "" },
-        "lightingBetweenWorkArea": { "result": "", "status": "" },
-        "manualBrakeRelease": { "result": "", "status": "" },
-        "fireExtinguisherPlacement": { "result": "", "status": "" }
+      "machineRoomAndMachinery": {
+        "machineMounting": {"machineMountingresult":"","machineMountingstatus":""},
+        "mechanicalBrake": {"mechanicalBrakeresult":"","mechanicalBrakestatus":""},
+        "electricalBrake": {"electricalBrakeresult":"","electricalBrakestatus":""},
+        "machineRoomConstruction": {"machineRoomConstructionresult":"","machineRoomConstructionstatus":""},
+        "machineRoomClearance": {"machineRoomClearanceresult":"","machineRoomClearancestatus":""},
+        "machineRoomLighting": {"machineRoomLightingresult":"","machineRoomLightingstatus":""},
+        "ventilation": {"ventilationresult":"","ventilationstatus":""},
+        "machineRoomDoor": {"machineRoomDoorresult":"","machineRoomDoorstatus":""},
+        "mainPowerPanelPosition": {"mainPowerPanelPositionresult":"","mainPowerPanelPositionstatus":""},
+        "rotatingPartsGuard": {"rotatingPartsGuardresult":"","rotatingPartsGuardstatus":""},
+        "ropeHoleGuard": {"ropeHoleGuardresult":"","ropeHoleGuardstatus":""},
+        "machineRoomAccessLadder": {"machineRoomAccessLadderresult":"","machineRoomAccessLadderstatus":""},
+        "floorLevelDifference": {"floorLevelDifferenceresult":"","floorLevelDifferencestatus":""},
+        "fireExtinguisher": {"fireExtinguisherresult":"","fireExtinguisherstatus":""},
+        "machineRoomless": {
+          "panelPlacement": {"panelPlacementresult":"","panelPlacementstatus":""},
+          "lightingWorkArea": {"lightingWorkArearesult":"","lightingWorkAreatatus":""},
+          "lightingBetweenWorkArea": {"lightingBetweenWorkAresult":"","lightingBetweenWorkAreatatus":""},
+          "manualBrakeRelease": {"manualBrakeReleaseresult":"","manualBrakeReleasestatus":""},
+          "fireExtinguisherPlacement": {"fireExtinguisherPlacementresult":"","fireExtinguisherPlacementstatus":""}
+        },
+        "emergencyStopSwitch": {"emergencyStopSwitchresult":"","emergencyStopSwitchstatus":""}
       },
-      "emergencyStopSwitch": { "result": "", "status": "" }
-    },
-    "suspensionRopesAndBelts": {
-      "condition": { "result": "", "status": "" },
-      "chainUsage": { "result": "", "status": "" },
-      "safetyFactor": { "result": "", "status": "" },
-      "ropeWithCounterweight": { "result": "", "status": "" },
-      "ropeWithoutCounterweight": { "result": "", "status": "" },
-      "belt": { "result": "", "status": "" },
-      "slackRopeDevice": { "result": "", "status": "" }
-    },
-    "drumsAndSheaves": {
-      "drumGrooves": { "result": "", "status": "" },
-      "passengerDrumDiameter": { "result": "", "status": "" },
-      "governorDrumDiameter": { "result": "", "status": "" }
-    },
-    "hoistwayAndPit": {
-      "construction": { "result": "", "status": "" },
-      "walls": { "result": "", "status": "" },
-      "inclinedElevatorTrackBed": { "result": "", "status": "" },
-      "cleanliness": { "result": "", "status": "" },
-      "lighting": { "result": "", "status": "" },
-      "emergencyDoorNonStop": { "result": "", "status": "" },
-      "emergencyDoorSize": { "result": "", "status": "" },
-      "emergencyDoorSafetySwitch": { "result": "", "status": "" },
-      "emergencyDoorBridge": { "result": "", "status": "" },
-      "carTopClearance": { "result": "", "status": "" },
-      "pitClearance": { "result": "", "status": "" },
-      "pitLadder": { "result": "", "status": "" },
-      "pitBelowWorkingArea": { "result": "", "status": "" },
-      "pitAccessSwitch": { "result": "", "status": "" },
-      "pitScreen": { "result": "", "status": "" },
-      "hoistwayDoorLeaf": { "result": "", "status": "" },
-      "hoistwayDoorInterlock": { "result": "", "status": "" },
-      "floorLeveling": { "result": "", "status": "" },
-      "hoistwaySeparatorBeam": { "result": "", "status": "" },
-      "inclinedElevatorStairs": { "result": "", "status": "" }
-    },
-    "car": {
-      "frame": { "result": "", "status": "" },
-      "body": { "result": "", "status": "" },
-      "wallHeight": { "result": "", "status": "" },
-      "floorArea": { "result": "", "status": "" },
-      "carAreaExpansion": { "result": "", "status": "" },
-      "carDoor": { "result": "", "status": "" },
-      "carDoorSpecs": {
-        "size": { "result": "", "status": "" },
-        "lockAndSwitch": { "result": "", "status": "" },
-        "sillClearance": { "result": "", "status": "" }
+      "suspensionRopesAndBelts": {
+        "condition": {"conditionresult":"","conditionstatus":""},
+        "chainUsage": {"chainUsageresult":"","chainUsagestatus":""},
+        "safetyFactor": {"safetyFactorresult":"","safetyFactorstatus":""},
+        "ropeWithCounterweight": {"ropeWithCounterweightresult":"","ropeWithCounterweightstatus":""},
+        "ropeWithoutCounterweight": {"ropeWithoutCounterweightresult":"","ropeWithoutCounterweightstatus":""},
+        "belt": {"beltresult":"","beltstatus":""},
+        "slackRopeDevice": {"slackRopeDeviceresult":"","slackRopeDevicestatus":""}
       },
-      "carToBeamClearance": { "result": "", "status": "" },
-      "alarmBell": { "result": "", "status": "" },
-      "backupPowerARD": { "result": "", "status": "" },
-      "intercom": { "result": "", "status": "" },
-      "ventilation": { "result": "", "status": "" },
-      "emergencyLighting": { "result": "", "status": "" },
-      "operatingPanel": { "result": "", "status": "" },
-      "carPositionIndicator": { "result": "", "status": "" },
-      "carSignage": {
-        "manufacturerName": { "result": "", "status": "" },
-        "loadCapacity": { "result": "", "status": "" },
-        "noSmokingSign": { "result": "", "status": "" },
-        "overloadIndicator": { "result": "", "status": "" },
-        "doorOpenCloseButtons": { "result": "", "status": "" },
-        "floorButtons": { "result": "", "status": "" },
-        "alarmButton": { "result": "", "status": "" },
-        "twoWayIntercom": { "result": "", "status": "" }
+      "drumsAndSheaves": {
+        "drumGrooves": {"drumGroovesresult":"","drumGroovesstatus":""},
+        "passengerDrumDiameter": {"passengerDrumDiameterresult":"","passengerDrumDiameterstatus":""},
+        "governorDrumDiameter": {"governorDrumDiameterresult":"","governorDrumDiameterstatus":""}
       },
-      "carRoofStrength": { "result": "", "status": "" },
-      "carTopEmergencyExit": { "result": "", "status": "" },
-      "carSideEmergencyExit": { "result": "", "status": "" },
-      "carTopGuardRail": { "result": "", "status": "" },
-      "guardRailHeight300to850": { "result": "", "status": "" },
-      "guardRailHeightOver850": { "result": "", "status": "" },
-      "carTopLighting": { "result": "", "status": "" },
-      "manualOperationButtons": { "result": "", "status": "" },
-      "carInterior": { "result": "", "status": "" }
-    },
-    "governorAndSafetyBrake": {
-      "governorRopeClamp": { "result": "", "status": "" },
-      "governorSwitch": { "result": "", "status": "" },
-      "safetyBrakeSpeed": { "result": "", "status": "" },
-      "safetyBrakeType": { "result": "", "status": "" },
-      "safetyBrakeMechanism": { "result": "", "status": "" },
-      "progressiveSafetyBrake": { "result": "", "status": "" },
-      "instantaneousSafetyBrake": { "result": "", "status": "" },
-      "safetyBrakeOperation": { "result": "", "status": "" },
-      "electricalCutoutSwitch": { "result": "", "status": "" },
-      "limitSwitch": { "result": "", "status": "" },
-      "overloadDevice": { "result": "", "status": "" }
-    },
-    "counterweightGuideRailsAndBuffers": {
-      "counterweightMaterial": { "result": "", "status": "" },
-      "counterweightGuardScreen": { "result": "", "status": "" },
-      "guideRailConstruction": { "result": "", "status": "" },
-      "bufferType": { "result": "", "status": "" },
-      "bufferFunction": { "result": "", "status": "" },
-      "bufferSafetySwitch": { "result": "", "status": "" }
-    },
-    "electricalInstallation": {
-      "installationStandard": { "result": "", "status": "" },
-      "electricalPanel": { "result": "", "status": "" },
-      "backupPowerARD": { "result": "", "status": "" },
-      "groundingCable": { "result": "", "status": "" },
-      "fireAlarmConnection": { "result": "", "status": "" },
-      "fireServiceElevator": {
-        "backupPower": { "result": "", "status": "" },
-        "specialOperation": { "result": "", "status": "" },
-        "fireSwitch": { "result": "", "status": "" },
-        "label": { "result": "", "status": "" },
-        "electricalFireResistance": { "result": "", "status": "" },
-        "hoistwayWallFireResistance": { "result": "", "status": "" },
-        "carSize": { "result": "", "status": "" },
-        "doorSize": { "result": "", "status": "" },
-        "travelTime": { "result": "", "status": "" },
-        "evacuationFloor": { "result": "", "status": "" }
+      "hoistwayAndPit": {
+        "construction": {"constructionresult":"","constructionstatus":""},
+        "walls": {"wallsresult":"","wallsstatus":""},
+        "inclinedElevatorTrackBed": {"inclinedElevatorTrackBedresult":"","inclinedElevatorTrackBedstatus":""},
+        "cleanliness": {"cleanlinessresult":"","cleanlinessstatus":""},
+        "lighting": {"lightingresult":"","lightingstatus":""},
+        "emergencyDoorNonStop": {"emergencyDoorNonStopresult":"","emergencyDoorNonStopstatus":""},
+        "emergencyDoorSize": {"emergencyDoorSizeresult":"","emergencyDoorSizestatus":""},
+        "emergencyDoorSafetySwitch": {"emergencyDoorSafetySwitchresult":"","emergencyDoorSafetySwitchstatus":""},
+        "emergencyDoorBridge": {"emergencyDoorBridgeresult":"","emergencyDoorBridgestatus":""},
+        "carTopClearance": {"carTopClearanceresult":"","carTopClearancestatus":""},
+        "pitClearance": {"pitClearanceresult":"","pitClearancestatus":""},
+        "pitLadder": {"pitLadderresult":"","pitLadderstatus":""},
+        "pitBelowWorkingArea": {"pitBelowWorkingArearresult":"","pitBelowWorkingAreastatus":""},
+        "pitAccessSwitch": {"pitAccessSwitchresult":"","pitAccessSwitchstatus":""},
+        "pitScreen": {"pitScreenresult":"","pitScreenstatus":""},
+        "hoistwayDoorLeaf": {"hoistwayDoorLeafresult":"","hoistwayDoorLeafstatus":""},
+        "hoistwayDoorInterlock": {"hoistwayDoorInterlockresult":"","hoistwayDoorInterlockstatus":""},
+        "floorLeveling": {"floorLevelingresult":"","floorLevelingstatus":""},
+        "hoistwaySeparatorBeam": {"hoistwaySeparatorBeamresult":"","hoistwaySeparatorBeamstatus":""},
+        "inclinedElevatorStairs": {"inclinedElevatorStairsresult":"","inclinedElevatorStairsstatus":""}
       },
-      "accessibilityElevator": {
-        "operatingPanel": { "result": "", "status": "" },
-        "panelHeight": { "result": "", "status": "" },
-        "doorOpenTime": { "result": "", "status": "" },
-        "doorWidth": { "result": "", "status": "" },
-        "audioInformation": { "result": "", "status": "" },
-        "label": { "result": "", "status": "" }
+      "car": {
+        "frame": {"frameresult":"","framestatus":""},
+        "body": {"bodyresult":"","bodystatus":""},
+        "wallHeight": {"wallHeightresult":"","wallHeightstatus":""},
+        "floorArea": {"floorAraeresult":"","floorAreatatus":""},
+        "carAreaExpansion": {"carAreaExpansionresult":"","carAreaExpansionstatus":""},
+        "carDoor": {"carDoorresult":"","carDoorstatus":""},
+        "carDoorSpecs": {
+          "size": {"sizeresult":"","sizestatus":""},
+          "lockAndSwitch": {"lockAndSwitchresult":"","lockAndSwitchstatus":""},
+          "sillClearance": {"sillClearanceresult":"","sillClearancestatus":""}
+        },
+        "carToBeamClearance": {"carToBeamClearanceresult":"","carToBeamClearancestatus":""},
+        "alarmBell": {"alarmBellresult":"","alarmBellstatus":""},
+        "backupPowerARD": {"backupPowerARDresult":"","backupPowerARDstatus":""},
+        "intercom": {"intercomresult":"","intercomstatus":""},
+        "ventilation": {"ventilationresult":"","ventilationstatus":""},
+        "emergencyLighting": {"emergencyLightingresult":"","emergencyLightingstatus":""},
+        "operatingPanel": {"operatingPanelresult":"","operatingPanelstatus":""},
+        "carPositionIndicator": {"carPositionIndicatorresult":"","carPositionIndicatorstatus":""},
+        "carSignage": {
+          "manufacturerName": {"manufacturerNameresult":"","manufacturerNamestatus":""},
+          "loadCapacity": {"loadCapacityresult":"","loadCapacitystatus":""},
+          "noSmokingSign": {"noSmokingSignresult":"","noSmokingSignstatus":""},
+          "overloadIndicator": {"overloadIndicatorresult":"","overloadIndicatorstatus":""},
+          "doorOpenCloseButtons": {"doorOpenCloseButtonsresult":"","doorOpenCloseButtonsstatus":""},
+          "floorButtons": {"floorButtonsresult":"","floorButtonsstatus":""},
+          "alarmButton": {"alarmButtonresult":"","alarmButtonstatus":""},
+          "twoWayIntercom": {"twoWayIntercomresult":"","twoWayIntercomstatus":""}
+        },
+        "carRoofStrength": {"carRoofStrengthresult":"","carRoofStrengthstatus":""},
+        "carTopEmergencyExit": {"carTopEmergencyExitresult":"","carTopEmergencyExitstatus":""},
+        "carSideEmergencyExit": {"carSideEmergencyExitresult":"","carSideEmergencyExitstatus":""},
+        "carTopGuardRail": {"carTopGuardRailresult":"","carTopGuardRalstatus":""},
+        "guardRailHeight300to850": {"guardRailHeight300to850result":"","guardRailHeight300to850status":""},
+        "guardRailHeightOver850": {"guardRailHeightOver850result":"","guardRailHeightOver850status":""},
+        "carTopLighting": {"carTopLightingresult":"","carTopLightingstatus":""},
+        "manualOperationButtons": {"manualOperationButtonsresult":"","manualOperationButtonsstatus":""},
+        "carInterior": {"carInteriorresult":"","carInteriorstatus":""}
       },
-      "seismicSensor": {
-        "availability": { "result": "", "status": "" },
-        "function": { "result": "", "status": "" }
+      "governorAndSafetyBrake": {
+        "governorRopeClamp": {"governorRopeClampresult":"","governorRopeClampstatus":""},
+        "governorSwitch": {"governorSwitchresult":"","governorSwitchstatus":""},
+        "safetyBrakeSpeed": {"safetyBrakeSpeedresult":"","safetyBrakeSpeedstatus":""},
+        "safetyBrakeType": {"safetyBrakeTyperesult":"","safetyBrakeTypestatus":""},
+        "safetyBrakeMechanism": {"safetyBrakeMechanismresult":"","safetyBrakeMechanismstatus":""},
+        "progressiveSafetyBrake": {"progressiveSafetyBrakeresult":"","progressiveSafetyBrakestatus":""},
+        "instantaneousSafetyBrake": {"instantaneousSafetyBrakeresult":"","instantaneousSafetyBrakestatus":""},
+        "safetyBrakeOperation": {"safetyBrakeOperationresult":"","safetyBrakeOperationstatus":""},
+        "electricalCutoutSwitch": {"electricalCutoutSwitchresult":"","electricalCutoutSwitchstatus":""},
+        "limitSwitch": {"limitSwitchresult":"","limitSwitchstatus":""},
+        "overloadDevice": {"overloadDeviceresult":"","overloadDevicestatus":""}
+      },
+      "counterweightGuideRailsAndBuffers": {
+        "counterweightMaterial": {"counterweightMaterialresult":"","counterweightMaterialstatus":""},
+        "counterweightGuardScreen": {"counterweightGuardScreenresult":"","counterweightGuardScreenstatus":""},
+        "guideRailConstruction": {"guideRailConstructionresult":"","guideRailConstructionstatus":""},
+        "bufferType": {"bufferTyperesult":"","bufferTypestatus":""},
+        "bufferFunction": {"bufferFunctionresult":"","bufferFunctionstatus":""},
+        "bufferSafetySwitch": {"bufferSafetySwitchresult":"","bufferSafetySwitchstatus":""}
+      },
+      "electricalInstallation": {
+        "installationStandard": {"installationStandardresult":"","installationStandardstatus":""},
+        "electricalPanel": {"electricalPanelresult":"","electricalPanelstatus":""},
+        "backupPowerARD": {"backupPowerARDresult":"","backupPowerARDstatus":""},
+        "groundingCable": {"groundingCableresult":"","groundingCablestatus":""},
+        "fireAlarmConnection": {"fireAlarmConnectionresult":"","fireAlarmConnectionstatus":""},
+        "fireServiceElevator": {
+          "backupPower": {"backupPowerresult":"","backupPowerstatus":""},
+          "specialOperation": {"specialOperationresult":"","specialOperationstatus":""},
+          "fireSwitch": {"fireSwitchresult":"","fireSwitchstatus":""},
+          "label": {"labelresult":"","labelstatus":""},
+          "electricalFireResistance": {"electricalFireResistanceresult":"","electricalFireResistancestatus":""},
+          "hoistwayWallFireResistance": {"hoistwayWallFireResistanceresult":"","hoistwayWallFireResistancestatus":""},
+          "carSize": {"carSizeresult":"","carSizestatus":""},
+          "doorSize": {"doorSizeresult":"","doorSizestatus":""},
+          "travelTime": {"travelTimeresult":"","travelTimestatus":""},
+          "evacuationFloor": {"evacuationFloorresult":"","evacuationFloorstatus":""}
+        },
+        "accessibilityElevator": {
+          "operatingPanel": {"operatingPanelresult":"","operatingPanelstatus":""},
+          "panelHeight": {"panelHeightresult":"","panelHeightstatus":""},
+          "doorOpenTime": {"doorOpenTimeresult":"","doorOpenTimestatus":""},
+          "doorWidth": {"doorWidthresult":"","doorWidthstatus":""},
+          "audioInformation": {"audioInformationresult":"","audioInformationstatus":""},
+          "label": {"labelresult":"","labelstatus":""}
+        },
+        "seismicSensor": {
+          "availability": {"availabilityresult":"","availabilitystatus":""},
+          "function": {"functionresult":"","functionstatus":""}
+        }
       }
-    }
   },
-  "conclusion": {
-    "status": ""
-  }
+  "conclusion": ""
 }
