@@ -35,7 +35,7 @@
         "electricalBrake": {"electricalBrakeresult":"","electricalBrakestatus":""},
         "machineRoomConstruction": {"machineRoomConstructionresult":"","machineRoomConstructionstatus":""},
         "machineRoomClearance": {"machineRoomClearanceresult":"","machineRoomClearancestatus":""},
-        "machineRoomLighting": {"machineRoomLightingresult":"","machineRoomLightingstatus":""},
+        "machineRoomImplementation": {"machineRoomImplementationresult":"","machineRoomImplementationstatus":""},
         "ventilation": {"ventilationresult":"","ventilationstatus":""},
         "machineRoomDoor": {"machineRoomDoorresult":"","machineRoomDoorstatus":""},
         "mainPowerPanelPosition": {"mainPowerPanelPositionresult":"","mainPowerPanelPositionstatus":""},
@@ -47,7 +47,7 @@
         "machineRoomless": {
           "panelPlacement": {"panelPlacementresult":"","panelPlacementstatus":""},
           "lightingWorkArea": {"lightingWorkArearesult":"","lightingWorkAreatatus":""},
-          "lightingBetweenWorkArea": {"lightingBetweenWorkAresult":"","lightingBetweenWorkAreatatus":""},
+          "lightingBetweenWorkArea": {"lightingBetweenWorkAreasult":"","lightingBetweenWorkAreastatus":""},
           "manualBrakeRelease": {"manualBrakeReleaseresult":"","manualBrakeReleasestatus":""},
           "fireExtinguisherPlacement": {"fireExtinguisherPlacementresult":"","fireExtinguisherPlacementstatus":""}
         },
