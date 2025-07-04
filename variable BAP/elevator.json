@@ -1,9 +1,11 @@
 {
-  "generalData":{
+  "GeneralData":{
     "ownerName": "",
     "ownerAddress": "",
     "nameUsageLocation": "",
-    "addressUsageLocation": "",
+    "addressUsageLocation": ""
+  },
+  "technicalData":{
     "elevatorType": "",
     "manufacturerOrInstaller": "",
     "brandOrType": "",
