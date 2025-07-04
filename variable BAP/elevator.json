@@ -1,36 +1,23 @@
 {
-  "id": "",
-  "typeInspection": "Pemeriksaan Elevator",
-  "inspectionSchedule": "",
-  "elevatorPurpose": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "elevatorType": "",
-  "manufacturer": "",
-  "installer": "",
-  "brandOrType": "",
-  "manufactureYear": null,
-  "manufactureCountry": "",
-  "serialNumber": "",
-  "capacity": {
-    "kg": null,
-    "people": null
+  "generalData":{
+    "ownerName": "",
+    "ownerAddress": "",
+    "nameUsageLocation": "",
+    "addressUsageLocation": "",
+    "elevatorType": "",
+    "manufacturerOrInstaller": "",
+    "brandOrType": "",
+    "countryAndYear": "",
+    "serialNumber": "",
+    "capacity": "",
+    "speed": "",
+    "floorsServed": ""
   },
-  "speedMps": null,
-  "floorsServed": "",
   "visualInspection": {
     "isMachineRoomConditionAcceptable": null,
     "isPanelGoodCondition": null,
     "isAparAvailableInPanelRoom": null,
-    "lightingCondition": {
-      "isMachineRoomLightOk": null,
-      "isCarLightOk": null,
-      "isPitLightOk": null
-    },
+    "lightingCondition": null,
     "isPitLadderAvailable": null
   },
   "testing": {
@@ -38,15 +25,9 @@
     "isArdFunctional": null,
     "isGovernorFunctional": null,
     "isSlingConditionOkByTester": null,
-    "limitSwitchTest": {
-      "isTopSwitchFunctional": null,
-      "isFinalSwitchFunctional": null
-    },
+    "limitSwitchTest": null,
     "isDoorSwitchFunctional": null,
-    "pitEmergencyStopStatus": {
-      "isAvailable": null,
-      "isFunctional": null
-    },
+    "pitEmergencyStopStatus": null,
     "isIntercomFunctional": null,
     "isFiremanSwitchFunctional": null
   }
