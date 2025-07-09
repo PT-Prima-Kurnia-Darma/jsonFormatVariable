@@ -1,40 +1,34 @@
 {
-  "id": "",
-  "typeInspection": "Pemeriksaan Eskalator",
-  "inspectionSchedule": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
+  "examinationType": "",
+  "inspectionType": "",
+  "inspectionDate": "",
+  "ownerName": "",
   "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "escalatorType": "",
-  "manufacturer": "",
-  "installer": "",
-  "brandOrType": "",
-  "manufactureYear": null,
-  "manufactureCountry": "",
-  "serialNumber": "",
-  "capacityDescription": "",
-  "speedMps": null,
-  "floorsServed": "",
+  "nameUsageLocation": "",
+  "locationUsageLocation": "",
+  "technicalData": {
+    "equipmentType": "",
+    "technicalDatamanufacturer": "",
+    "technicalDatabrand": "",
+    "technicalDatacountryAndYear": "",
+    "technicalDataserialNumber": "",
+    "technicalDatacapacity": "",
+    "technicalDataspeed": "",
+    "technicalDatatransports": ""
+  },
   "visualInspection": {
-    "isMachineRoomConditionAcceptable": null,
-    "isPanelGoodCondition": null,
-    "lightingCondition": {
-      "isMachineRoomLightOk": null,
-      "isPitLightOk": null
-    },
-    "areSafetySignsAvailable": null
+    "isMachineRoomConditionAcceptable": true,
+    "isPanelConditionAcceptable": true,
+    "islightingConditionisPitLightAcceptable": true,
+    "areSafetySignsAvailable": true
   },
   "testing": {
-    "isNdtThermographPanelOk": null,
-    "areSafetyDevicesFunctional": null,
-    "isLimitSwitchFunctional": null,
-    "pitEmergencyStopStatus": {
-      "isAvailable": null,
-      "isFunctional": null
-    },
-    "isEscalatorFunctionOk": null
+    "testingisNdtThermographPanel": true,
+    "testingareSafetyDevicesFunctional": true,
+    "testingisLimitSwitchFunctional": true,
+    "testingisDoorSwitchFunctiona": true,
+    "testingpitEmergencyStopStatusisAvailable": true,
+    "testingpitEmergencyStopStatusisFunctional": true,
+    "isEscalatorFunctionOk": true
   }
 }

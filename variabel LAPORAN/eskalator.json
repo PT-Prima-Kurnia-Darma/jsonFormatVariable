@@ -1,5 +1,6 @@
 {
-  "equipmentType": "ESCALATOR",
+  "inspectionType": "Elevator dan Eskalator",
+  "equipmentType": "Eskalator Penumpang",
   "ownerName": "Gedung Perkantoran Sentral",
   "nameUsageLocation": "Jalan Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
   "safetyObjectTypeAndNumber": "Eskalator / E-03",
@@ -8,265 +9,340 @@
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
   "inspectionDate": "15 Juli 2025",
   "technicalData": {
-    "manufacturer": "PT. Escalator Maju Jaya",
-    "brand": "SIGMA",
-    "countryAndYear": "Korea Selatan / 2018",
-    "serialNumber": "SN-ESC-100345",
-    "transports": "Orang",
-    "capacity": "9000 Orang/Jam",
-    "liftHeight": "4.5 meter",
-    "speed": "0.5 m/s",
-    "driveType": "Motor Listrik AC",
-    "motorCurrent": "15 A",
-    "motorPower": "7.5 kW",
-    "safetyDevices": "Lengkap sesuai standar"
+    "technicalDatamanufacturer": "PT. Escalator Maju Jaya",
+    "technicalDatabrand": "SIGMA",
+    "technicalDatacountryAndYear": "Korea Selatan / 2018",
+    "technicalDataserialNumber": "SN-ESC-100345",
+    "technicalDatatransports": "Orang",
+    "technicalDatacapacity": "9000 Orang/Jam",
+    "technicalDataliftHeight": "4.5 meter",
+    "technicalDataspeed": "0.5 m/s",
+    "technicalDatadriveType": "Motor Listrik AC",
+    "technicalDatamotorCurrent": "15 A",
+    "technicalDatamotorPower": "7.5 kW",
+    "technicalDatasafetyDevices": "Lengkap sesuai standar"
   },
   "inspectionAndTestingframeAndMachineRoom": {
-    "frameresult": "Kuat & Kokoh",
-    "frameMemenuhi": "✔",
-    "frameTidakMemenuhi": "",
-    "supportBeams_iresults": "Terlapisi Baik",
-    "supportBeamsMemenuhi": "✔",
-    "supportBeamsTidakMemenuhi": "",
-    "machineRoomConditionresult": "Bersih dan Terawat",
-    "machineRoomConditionMemenuhi": "✔",
-    "machineRoomConditionTidakMemenuhi": "",
-    "machineRoomClearanceresult": "0.4 m²",
-    "machineRoomClearanceMemenuhi": "✔",
-    "machineRoomClearanceTidakMemenuhi": "",
-    "machineRoomLightingresult": "150 lux",
-    "machineRoomLightingMemenuhi": "✔",
-    "machineRoomLightingTidakMemenuhi": "",
-    "machineCoverPlateresult": "Tersedia & Kuat",
-    "machineCoverPlateMemenuhi": "✔",
-    "machineCoverPlateTidakMemenuhi": "",
-    "pitConditionresult": "Bersih dan Kering",
-    "pitConditionMemenuhi": "✔",
-    "pitConditionTidakMemenuhi": "",
-    "pitClearanceresult": "0.5 m²",
-    "pitClearanceMemenuhi": "✔",
-    "pitClearanceTidakMemenuhi": "",
-    "pitStepCoverPlateresult": "Tersedia & Kuat",
-    "pitStepCoverPlateMemenuhi": "✔",
-    "pitStepCoverPlateTidakMemenuhi": ""
+    "inspectionAndTestingframeAndMachineRoomframeresult": {
+      "result": "Kuat & Kokoh",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoomsupportBeams iresults": {
+      "result": "Terlapisi Baik",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoommachineRoomConditionresult": {
+      "result": "Bersih dan Terawat",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoommachineRoomClearanceresult": {
+      "result": "0.4 m²",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoommachineRoomLightingresult": {
+      "result": "150 lux",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoommachineCoverPlateresult": {
+      "result": "Tersedia & Kuat",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoompitConditionresult": {
+      "result": "Bersih dan Kering",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoompitClearanceresult": {
+      "result": "0.5 m²",
+      "status": true
+    },
+    "inspectionAndTestingframeAndMachineRoompitStepCoverPlateresult": {
+      "result": "Tersedia & Kuat",
+      "status": true
+    }
   },
   "driveEquipment": {
-    "driveMachineresult": "Berfungsi baik",
-    "driveMachineMemenuhi": "✔",
-    "driveMachineTidakMemenuhi": "",
-    "speedUnder30Degreesresult": "N/A",
-    "speedUnder30DegreesMemenuhi": "✔",
-    "speedUnder30DegreesTidakMemenuhi": "",
-    "speed30to35Degreesresult": "0.5 m/s",
-    "speed30to35DegreesMemenuhi": "✔",
-    "speed30to35DegreesTidakMemenuhi": "",
-    "travelatorSpeedresult": "N/A",
-    "travelatorSpeedMemenuhi": "✔",
-    "travelatorSpeedTidakMemenuhi": "",
-    "stoppingDistance0_5result": "850 mm",
-    "stoppingDistance0_5Memenuhi": "✔",
-    "stoppingDistance0_5TidakMemenuhi": "",
-    "stoppingDistance0_75result": "N/A",
-    "stoppingDistance0_75Memenuhi": "✔",
-    "stoppingDistance0_75TidakMemenuhi": "",
-    "stoppingDistance0_90result": "N/A",
-    "stoppingDistance0_90Memenuhi": "✔",
-    "stoppingDistance0_90TidakMemenuhi": "",
-    "driveChainresult": "Baik",
-    "driveChainMemenuhi": "✔",
-    "driveChainTidakMemenuhi": "",
-    "chainBreakingStrengthresult": ">140 kg",
-    "chainBreakingStrengthMemenuhi": "✔",
-    "chainBreakingStrengthTidakMemenuhi": ""
+    "driveEquipmentdriveMachineresult": {
+      "result": "Berfungsi baik",
+      "status": true
+    },
+    "driveEquipmentspeedUnder30Degreesresult": {
+      "result": "N/A",
+      "status": true
+    },
+    "driveEquipmentspeed30to35Degreesresult": {
+      "result": "0.5 m/s",
+      "status": true
+    },
+    "driveEquipmenttravelatorSpeedresult": {
+      "result": "N/A",
+      "status": true
+    },
+    "driveEquipmentstoppingDistance0_5result": {
+      "result": "850 mm",
+      "status": true
+    },
+    "driveEquipmentstoppingDistance0_75result": {
+      "result": "N/A",
+      "status": true
+    },
+    "driveEquipmentstoppingDistance0_90result": {
+      "result": "N/A",
+      "status": true
+    },
+    "driveEquipmentdriveChainresult": {
+      "result": "Baik",
+      "status": true
+    },
+    "driveEquipmentchainBreakingStrengthresult": {
+      "result": ">140 kg",
+      "status": true
+    }
   },
   "stepsOrPallets": {
-    "stepMaterialresult": "Alumunium",
-    "stepMaterialMemenuhi": "✔",
-    "stepMaterialTidakMemenuhi": "",
-    "stepDimensionsresult": "Sesuai",
-    "stepDimensionsMemenuhi": "✔",
-    "stepDimensionsTidakMemenuhi": "",
-    "palletDimensionsresult": "N/A",
-    "palletDimensionsMemenuhi": "✔",
-    "palletDimensionsTidakMemenuhi": "",
-    "stepSurfaceresult": "Tidak Licin",
-    "stepSurfaceMemenuhi": "✔",
-    "stepSurfaceTidakMemenuhi": "",
-    "stepLevelnessresult": ">600 mm",
-    "stepLevelnessMemenuhi": "✔",
-    "stepLevelnessTidakMemenuhi": "",
-    "skirtBrushresult": "Terpasang",
-    "skirtBrushMemenuhi": "✔",
-    "skirtBrushTidakMemenuhi": "",
-    "stepWheelsresult": "Kondisi baik, 4 buah",
-    "stepWheelsMemenuhi": "✔",
-    "stepWheelsTidakMemenuhi": ""
+    "stepsOrPalletsstepMaterialresult": {
+      "result": "Alumunium",
+      "status": true
+    },
+    "stepsOrPalletsstepDimensionsresult": {
+      "result": "Sesuai",
+      "status": true
+    },
+    "stepsOrPalletspalletDimensionsresult": {
+      "result": "N/A",
+      "status": true
+    },
+    "stepsOrPalletsstepSurfaceresult": {
+      "result": "Tidak Licin",
+      "status": true
+    },
+    "stepsOrPalletsstepLevelnessresult": {
+      "result": ">600 mm",
+      "status": true
+    },
+    "stepsOrPalletsskirtBrushresult": {
+      "result": "Terpasang",
+      "status": true
+    },
+    "stepsOrPalletsstepWheelsresult": {
+      "result": "Kondisi baik, 4 buah",
+      "status": true
+    }
   },
   "landingArea": {
-    "landingPlatesresult": "Terpasang kencang",
-    "landingPlatesMemenuhi": "✔",
-    "landingPlatesTidakMemenuhi": "",
-    "combTeethresult": "Sesuai",
-    "combTeethMemenuhi": "✔",
-    "combTeethTidakMemenuhi": "",
-    "combConditionresult": "Tidak ada yg patah",
-    "combConditionMemenuhi": "✔",
-    "combConditionTidakMemenuhi": "",
-    "landingCoverresult": "Kuat, saklar berfungsi",
-    "landingCoverMemenuhi": "✔",
-    "landingCoverTidakMemenuhi": "",
-    "landingAccessArearesult": "Sesuai",
-    "landingAccessAreaMemenuhi": "✔",
-    "landingAccessAreaTidakMemenuhi": ""
+    "landingArealandingPlatesresult": {
+      "result": "Terpasang kencang",
+      "status": true
+    },
+    "landingAreacombTeethresult": {
+      "result": "Sesuai",
+      "status": true
+    },
+    "landingAreacombConditionresult": {
+      "result": "Tidak ada yg patah",
+      "status": true
+    },
+    "landingArealandingCoverresult": {
+      "result": "Kuat, saklar berfungsi",
+      "status": true
+    },
+    "landingArealandingAccessArearesult": {
+      "result": "Sesuai",
+      "status": true
+    }
   },
   "balustrade": {
-    "balustradePanelmaterialresult": "Kaca Tempered",
-    "balustradePanelmaterialMemenuhi": "✔",
-    "balustradePanelmaterialTidakMemenuhi": "",
-    "balustradePanelheightresult": "950 mm",
-    "balustradePanelheightMemenuhi": "✔",
-    "balustradePanelheightTidakMemenuhi": "",
-    "balustradePanelsidePressureresult": ">58,5 kg/m²",
-    "balustradePanelsidePressureMemenuhi": "✔",
-    "balustradePanelsidePressureTidakMemenuhi": "",
-    "balustradePanelverticalPressureresult": ">73 kg/m²",
-    "balustradePanelverticalPressureMemenuhi": "✔",
-    "balustradePanelverticalPressureTidakMemenuhi": "",
-    "skirtPanelresult": "Permukaan licin",
-    "skirtPanelMemenuhi": "✔",
-    "skirtPanelTidakMemenuhi": "",
-    "skirtPanelFlexibilityresult": "<4 mm",
-    "skirtPanelFlexibilityMemenuhi": "✔",
-    "skirtPanelFlexibilityTidakMemenuhi": "",
-    "stepToSkirtClearanceresult": "3.5 mm",
-    "stepToSkirtClearanceMemenuhi": "✔",
-    "stepToSkirtClearanceTidakMemenuhi": ""
+    "balustradebalustradePanelmaterialresult": {
+      "result": "Kaca Tempered",
+      "status": true
+    },
+    "balustradebalustradePanelheightresult": {
+      "result": "950 mm",
+      "status": true
+    },
+    "balustradebalustradePanelsidePressureresult": {
+      "result": ">58,5 kg/m²",
+      "status": true
+    },
+    "balustradebalustradePanelverticalPressureresult": {
+      "result": ">73 kg/m²",
+      "status": true
+    },
+    "balustradeskirtPanelresult": {
+      "result": "Permukaan licin",
+      "status": true
+    },
+    "balustradeskirtPanelFlexibilityresult": {
+      "result": "<4 mm",
+      "status": true
+    },
+    "balustradestepToSkirtClearanceresult": {
+      "result": "3.5 mm",
+      "status": true
+    }
   },
   "handrail": {
-    "handrailConditionresult": "Kuat, tidak cacat",
-    "handrailConditionMemenuhi": "✔",
-    "handrailConditionTidakMemenuhi": "",
-    "handrailSpeedSynchronizationresult": "Sinkron",
-    "handrailSpeedSynchronizationMemenuhi": "✔",
-    "handrailSpeedSynchronizationTidakMemenuhi": "",
-    "handrailWidthresult": "80 mm",
-    "handrailWidthMemenuhi": "✔",
-    "handrailWidthTidakMemenuhi": ""
+    "handrailhandrailConditionresult": {
+      "result": "Kuat, tidak cacat",
+      "status": true
+    },
+    "handrailhandrailSpeedSynchronizationresult": {
+      "result": "Sinkron",
+      "status": true
+    },
+    "handrailhandrailWidthresult": {
+      "result": "80 mm",
+      "status": true
+    }
   },
   "runway": {
-    "beamStrengthAndPositionresult": "Sesuai",
-    "beamStrengthAndPositionMemenuhi": "✔",
-    "beamStrengthAndPositionTidakMemenuhi": "",
-    "pitWallConditionresult": "Kedap air",
-    "pitWallConditionMemenuhi": "✔",
-    "pitWallConditionTidakMemenuhi": "",
-    "escalatorFrameEnclosureresult": "Tertutup",
-    "escalatorFrameEnclosureMemenuhi": "✔",
-    "escalatorFrameEnclosureTidakMemenuhi": "",
-    "lightingresult": ">50 lux",
-    "lightingMemenuhi": "✔",
-    "lightingTidakMemenuhi": "",
-    "headroomClearanceresult": ">2300 mm",
-    "headroomClearanceMemenuhi": "✔",
-    "headroomClearancesTidakMemenuhi": "",
-    "balustradeToObjectClearanceresult": "<120 mm",
-    "balustradeToObjectClearanceMemenuhi": "✔",
-    "balustradeToObjectClearancesTidakMemenuhi": "",
-    "antiClimbDeviceHeightresult": ">100 mm",
-    "antiClimbDeviceHeightMemenuhi": "✔",
-    "antiClimbDeviceHeightsTidakMemenuhi": "",
-    "ornamentPlacementresult": "Sesuai",
-    "ornamentPlacementMemenuhi": "✔",
-    "ornamentPlacementTidakMemenuhi": "",
-    "outdoorClearanceresult": "N/A",
-    "outdoorClearanceMemenuhi": "✔",
-    "outdoorClearanceTidakMemenuhi": ""
+    "runwaybeamStrengthAndPositionresult": {
+      "result": "Sesuai",
+      "status": true
+    },
+    "runwaypitWallConditionresult": {
+      "result": "Kedap air",
+      "status": true
+    },
+    "runwayescalatorFrameEnclosureresult": {
+      "result": "Tertutup",
+      "status": true
+    },
+    "runwaylightingresult": {
+      "result": ">50 lux",
+      "status": true
+    },
+    "runwayheadroomClearanceresult": {
+      "result": ">2300 mm",
+      "status": true
+    },
+    "runwaybalustradeToObjectClearanceresult": {
+      "result": "<120 mm",
+      "status": true
+    },
+    "runwayantiClimbDeviceHeightresult": {
+      "result": ">100 mm",
+      "status": true
+    },
+    "runwayornamentPlacementresult": {
+      "result": "Sesuai",
+      "status": true
+    },
+    "runwayoutdoorClearanceresult": {
+      "result": "N/A",
+      "status": true
+    }
   },
   "safetyEquipment": {
-    "operationControlKeyresult": "Tersedia & berfungsi",
-    "operationControlKeyMemenuhi": "✔",
-    "operationControlKeyTidakMemenuhi": "",
-    "emergencyStopSwitchresult": "Tersedia & berfungsi",
-    "emergencyStopSwitchMemenuhi": "✔",
-    "emergencyStopSwitchTidakMemenuhi": "",
-    "stepChainSafetyDeviceresult": "Tersedia & berfungsi",
-    "stepChainSafetyDeviceMemenuhi": "✔",
-    "stepChainSafetyDeviceTidakMemenuhi": "",
-    "driveChainSafetyDeviceresult": "Tersedia & berfungsi",
-    "driveChainSafetyDeviceMemenuhi": "✔",
-    "driveChainSafetyDeviceTidakMemenuhi": "",
-    "stepSafetyDeviceresult": "Tersedia & berfungsi",
-    "stepSafetyDeviceMemenuhi": "✔",
-    "stepSafetyDeviceTidakMemenuhi": "",
-    "handrailSafetyDeviceresult": "Tersedia & berfungsi",
-    "handrailSafetyDeviceMemenuhi": "✔",
-    "handrailSafetyDeviceTidakMemenuhi": "",
-    "reversalStopDeviceresult": "Tersedia & berfungsi",
-    "reversalStopDeviceMemenuhi": "✔",
-    "reversalStopDeviceTidakMemenuhi": "",
-    "handrailEntryGuardresult": "Tersedia & berfungsi",
-    "handrailEntryGuardMemenuhi": "✔",
-    "handrailEntryGuardTidakMemenuhi": "",
-    "combPlateSafetyDeviceresult": "Tersedia & berfungsi",
-    "combPlateSafetyDeviceMemenuhi": "✔",
-    "combPlateSafetyDeviceTidakMemenuhi": "",
-    "innerDeckingBrushresult": "Tersedia",
-    "innerDeckingBrushMemenuhi": "✔",
-    "innerDeckingBrushTidakMemenuhi": "",
-    "stopButtonsresult": "Tersedia & berfungsi",
-    "stopButtonsMemenuhi": "✔",
-    "stopButtonsTidakMemenuhi": ""
+    "safetyEquipmentoperationControlKeyresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentemergencyStopSwitchresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentstepChainSafetyDeviceresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentdriveChainSafetyDeviceresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentstepSafetyDeviceresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmenthandrailSafetyDeviceresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentreversalStopDeviceresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmenthandrailEntryGuardresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentcombPlateSafetyDeviceresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    },
+    "safetyEquipmentinnerDeckingBrushresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "safetyEquipmentstopButtonsresult": {
+      "result": "Tersedia & berfungsi",
+      "status": true
+    }
   },
   "electricalInstallation": {
-    "installationStandardresult": "Sesuai SNI",
-    "installationStandardMemenuhi": "✔",
-    "installationStandardTidakMemenuhi": "",
-    "electricalPanelresult": "Panel khusus",
-    "electricalPanelMemenuhi": "✔",
-    "electricalPanelTidakMemenuhi": "",
-    "groundingCableresult": "3 Ω",
-    "groundingCableMemenuhi": "✔",
-    "groundingCableTidakMemenuhi": "",
-    "fireAlarmConnectionresult": "Terhubung",
-    "fireAlarmConnectionMemenuhi": "✔",
-    "fireAlarmConnectionTidakMemenuhi": ""
+    "electricalInstallationinstallationStandardresult": {
+      "result": "Sesuai SNI",
+      "status": true
+    },
+    "electricalInstallationelectricalPanelresult": {
+      "result": "Panel khusus",
+      "status": true
+    },
+    "electricalInstallationgroundingCableresult": {
+      "result": "3 Ω",
+      "status": true
+    },
+    "electricalInstallationfireAlarmConnectionresult": {
+      "result": "Terhubung",
+      "status": true
+    }
   },
   "outdoorSpecifics": {
-    "pitWaterPumpresult": "N/A",
-    "pitWaterPumpMemenuhi": "✔",
-    "pitWaterPumpTidakMemenuhi": "",
-    "weatherproofComponentsresult": "N/A",
-    "weatherproofComponentsMemenuhi": "✔",
-    "weatherproofComponentsTidakMemenuhi": ""
+    "outdoorSpecificspitWaterPumpresult": {
+      "result": "N/A",
+      "status": true
+    },
+    "outdoorSpecificsweatherproofComponentsresult": {
+      "result": "N/A",
+      "status": true
+    }
   },
   "userSafety": {
-    "SignagenoBulkyItemsresult": "Tersedia",
-    "SignagenoBulkyItemsMemenuhi": "✔",
-    "SignagenoBulkyItemsTidakMemenuhi": "",
-    "SignagenoJumpingresult": "Tersedia",
-    "SignagenoJumpingMemenuhi": "✔",
-    "SignagenoJumpingTidakMemenuhi": "",
-    "SignageunattendedChildrenresult": "Tersedia",
-    "SignageunattendedChildrenMemenuhi": "✔",
-    "SignageunattendedChildrenTidakMemenuhi": "",
-    "SignagenoTrolleysOrStrollersresult": "Tersedia",
-    "SignagenoTrolleysOrStrollersMemenuhi": "✔",
-    "SignagenoTrolleysOrStrollersTidakMemenuhi": "",
-    "SignagenoLeaningresult": "Tersedia",
-    "SignagenoLeaningMemenuhi": "✔",
-    "SignagenoLeaningTidakMemenuhi": "",
-    "SignagenoSteppingOnSkirtresult": "Tersedia",
-    "SignagenoSteppingOnSkirtMemenuhi": "✔",
-    "SignagenoSteppingOnSkirtTidakMemenuhi": "",
-    "SignagesoftSoleFootwearWarningresult": "Tersedia",
-    "SignagesoftSoleFootwearWarningMemenuhi": "✔",
-    "SignagesoftSoleFootwearWarningTidakMemenuhi": "",
-    "SignagenoSittingOnStepsresult": "Tersedia",
-    "SignagenoSittingOnStepsMemenuhi": "✔",
-    "SignagenoSittingOnStepsTidakMemenuhi": "",
-    "SignageholdHandrailresult": "Tersedia",
-    "SignageholdHandrailMemenuhi": "✔",
-    "SignageholdHandrailTidakMemenuhi": ""
+    "userSafetySignagenoBulkyItemsresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignagenoJumpingresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignageunattendedChildrenresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignagenoTrolleysOrStrollersresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignagenoLeaningresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignagenoSteppingOnSkirtresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignagesoftSoleFootwearWarningresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignagenoSittingOnStepsresult": {
+      "result": "Tersedia",
+      "status": true
+    },
+    "userSafetySignageholdHandrailresult": {
+      "result": "Tersedia",
+      "status": true
+    }
   },
   "testingScalator": "1. Pengujian fungsi tombol berhenti darurat: Berfungsi dengan baik, eskalator berhenti seketika.\n2. Pengujian sensor plat sisir: Berfungsi, eskalator berhenti saat ada tekanan pada plat sisir.\n3. Pengujian sinkronisasi kecepatan ban pegangan: Kecepatan sesuai dengan kecepatan anak tangga (<2% deviasi).\n4. Pengujian rem utama: Jarak pemberhentian sesuai dengan standar yang ditetapkan.",
   "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian yang telah dilakukan, Pesawat Eskalator dengan No. Reg: SK.123/MEN/2020 dinyatakan LAIK dan dapat dioperasikan dengan aman, dengan syarat dilakukan perawatan rutin sesuai jadwal dari pabrikan dan pemeriksaan berkala setiap tahun."
