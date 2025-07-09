@@ -39,38 +39,38 @@
       "manufacturer": ""
     },
     "mainHook": {
-      "type": "",
-      "capacity": "",
-      "material": "",
-      "serialNumber": ""
+      "mainHookType": "",
+      "mainHookCapacity": "",
+      "mainHookMaterial": "",
+      "mainHookSerialNumber": ""
     },
     "auxiliaryHook": {
-      "type": "",
-      "capacity": "",
-      "material": "",
-      "serialNumber": ""
+      "auxiliaryHookType": "",
+      "auxiliaryHookCapacity": "",
+      "auxiliaryHookMaterial": "",
+      "auxiliaryHookSerialNumber": ""
     },
     "wireRope": {
       "mainLoadHoistDrum": {
-        "diameter": "",
-        "type": "",
-        "construction": "",
-        "breakingStrength": "",
-        "length": ""
+        "wireRopeMainLoadHoistDrumDiameter": "",
+        "wireRopeMainLoadHoistDrumType": "",
+        "wireRopeMainLoadHoistDrumConstruction": "",
+        "wireRopeMainLoadHoistDrumBreakingStrength": "",
+        "wireRopeMainLoadHoistDrumLength": ""
       },
       "auxiliaryLoadHoistDrum": {
-        "diameter": "",
-        "type": "",
-        "construction": "",
-        "length": "",
-        "breakingStrength": ""
+        "wireRopeAuxiliaryLoadHoistDrumDiameter": "",
+        "wireRopeAuxiliaryLoadHoistDrumType": "",
+        "wireRopeAuxiliaryLoadHoistDrumConstruction": "",
+        "wireRopeAuxiliaryLoadHoistDrumLength": "",
+        "wireRopeAuxiliaryLoadHoistDrumBreakingStrength": ""
       },
       "boomHoistDrum": {
-        "diameter": "",
-        "type": "",
-        "construction": "",
-        "length": "",
-        "breakingStrength": ""
+        "wireRopeBoomHoistDrumDiameter": "",
+        "wireRopeBoomHoistDrumType": "",
+        "wireRopeBoomHoistDrumConstruction": "",
+        "wireRopeBoomHoistDrumLength": "",
+        "wireRopeBoomHoistDrumBreakingStrength": ""
       }
     }
   },
