@@ -1,100 +1,915 @@
 {
-  "typeInspection": "",
-  "paaType": "",
+  "examinationType": "",
+  "subInspectionType": "",
   "generalData": {
-    "owner": {
-      "name": "",
-      "address": ""
-    },
-    "user": {
-      "name": ""
-    },
-    "personInCharge": "",
+    "ownerNamwe": "",
+    "ownerAddress": "",
+    "userInCharge": "",
+    "subcontractorPersonInCharge": "",
     "unitLocation": "",
-    "operator": {
-      "name": ""
-    },
+    "operatorName": "",
     "equipmentType": "",
-    "manufacturer": {
-      "name": "",
-      "modelOrType": "",
-      "year": ""
-    },
-    "serialNumber": "",
-    "capacity": "",
-    "standardUsed": "",
+    "manufacturer": "",
+    "brandType": "",
+    "locationAndYearOfManufacture": "",
+    "serialNumberUnitNumber": "",
+    "capacityWorkingLoad": "",
     "intendedUse": "",
-    "permitNumber": "",
-    "historyData": ""
+    "certificateNumber": "",
+    "equipmentHistory": ""
   },
   "technicalData": {
-    "capacity": "",
-    "attachment": "",
-    "forkDimensions": {
-      "length": "",
-      "width": "",
-      "height": ""
+    "specification": {
+      "specificationSerialNumber": "",
+      "specificationCapacity": "",
+      "specificationAttachment": "",
+      "specificationForkDimensions": ""
     },
-    "speed": {
-      "lifting": "",
-      "lowering": "",
-      "travelling": ""
+    "specificationSpeed": {
+      "specificationSpeedLifting": "",
+      "specificationSpeedLowering": "",
+      "specificationSpeedTravelling": ""
     },
     "primeMover": {
-      "rpm": "",
-      "brandOrType": "",
-      "serialNumber": "",
-      "year": "",
-      "power": "",
-      "cylinderCount": ""
+      "primeMoverBrandType": "",
+      "primeMoverSerialNumber": "",
+      "primeMoverYearOfManufacture": "",
+      "primeMoverRevolution": "",
+      "primeMoverPower": "",
+      "primeMoverNumberOfCylinders": ""
     },
-    "dimensions": {
-      "length": "",
-      "width": "",
-      "height": "",
-      "forkLiftHeight": ""
+    "dimension": {
+      "dimensionLength": "",
+      "dimensionWidth": "",
+      "dimensionHeight": "",
+      "dimensionForkLiftingHeight": ""
+    },
+    "tirePressure": {
+      "tirePressureDriveWheel": "",
+      "tirePressureSteeringWheel": ""
     },
     "driveWheel": {
-      "size": "",
-      "type": ""
+      "driveWheelSize": "",
+      "driveWheelType": ""
     },
     "steeringWheel": {
-      "size": "",
-      "type": ""
+      "steeringWheelSize": "",
+      "steeringWheelType": ""
     },
     "travellingBrake": {
-      "size": "",
-      "type": ""
+      "travellingBrakeSize": "",
+      "travellingBrakeType": ""
     },
     "hydraulicPump": {
-      "pressure": "",
-      "type": "",
-      "reliefValve": ""
+      "hydraulicPumpPressure": "",
+      "hydraulicPumpType": "",
+      "hydraulicPumpReliefValve": ""
     }
   },
-  "visualAndFunctionInspection": {
-    "chassis": {},
-    "primeMover": {},
-    "powerTrain": {},
-    "attachment": {},
-    "hydraulicComponents": {}
+  "visualAndFunctionCheck": {
+    "mainFrameChassis": {
+      "reinforcingFrame": {
+        "corrosion": {
+          "mainFrameReinforcingCorrosionMemenuhi": "",
+          "mainFrameReinforcingCorrosionTidakMemenuhi": "",
+          "mainFrameReinforcingCorrosionResult": ""
+        },
+        "cracks": {
+          "mainFrameReinforcingCracksMemenuhi": "",
+          "mainFrameReinforcingCracksTidakMemenuhi": "",
+          "mainFrameReinforcingCracksResult": ""
+        },
+        "deformation": {
+          "mainFrameReinforcingDeformationMemenuhi": "",
+          "mainFrameReinforcingDeformationTidakMemenuhi": "",
+          "mainFrameReinforcingDeformationResult": ""
+        }
+      }
+    },
+    "counterweight": {
+      "corrosion": {
+        "counterweightCorrosionMemenuhi": "",
+        "counterweightCorrosionTidakMemenuhi": "",
+        "counterweightCorrosionResult": ""
+      },
+      "condition": {
+        "counterweightConditionMemenuhi": "",
+        "counterweightConditionTidakMemenuhi": "",
+        "counterweightConditionResult": ""
+      }
+    },
+    "otherEquipment": {
+      "otherEquipmentFloorDeck": {
+        "otherEquipmentFloorDeckMemenuhi": "",
+        "otherEquipmentFloorDeckTidakMemenuhi": "",
+        "otherEquipmentFloorDeckResult": ""
+      },
+      "otherEquipmentStairsSteps": {
+        "otherEquipmentStairsStepsMemenuhi": "",
+        "otherEquipmentStairsStepsTidakMemenuhi": "",
+        "otherEquipmentStairsStepsResult": ""
+      },
+      "otherEquipmentFasteningBolts": {
+        "otherEquipmentFasteningBoltsMemenuhi": "",
+        "otherEquipmentFasteningBoltsTidakMemenuhi": "",
+        "otherEquipmentFasteningBoltsResult": ""
+      },
+      "otherEquipmentOperatorSeat": {
+        "otherEquipmentOperatorSeatMemenuhi": "",
+        "otherEquipmentOperatorSeatTidakMemenuhi": "",
+        "otherEquipmentOperatorSeatResult": ""
+      }
+    },
+    "primeMover": {
+      "system": {
+        "cooling": {
+          "primeMoverSystemCoolingMemenuhi": "",
+          "primeMoverSystemCoolingTidakMemenuhi": "",
+          "primeMoverSystemCoolingResult": ""
+        },
+        "lubrication": {
+          "primeMoverSystemLubricationMemenuhi": "",
+          "primeMoverSystemLubricationTidakMemenuhi": "",
+          "primeMoverSystemLubricationResult": ""
+        },
+        "fuel": {
+          "primeMoverSystemFuelMemenuhi": "",
+          "primeMoverSystemFuelTidakMemenuhi": "",
+          "primeMoverSystemFuelResult": ""
+        },
+        "airIntake": {
+          "primeMoverSystemAirIntakeMemenuhi": "",
+          "primeMoverSystemAirIntakeTidakMemenuhi": "",
+          "primeMoverSystemAirIntakeResult": ""
+        },
+        "exhaustGas": {
+          "primeMoverSystemExhaustGasMemenuhi": "",
+          "primeMoverSystemExhaustGasTidakMemenuhi": "",
+          "primeMoverSystemExhaustGasResult": ""
+        },
+        "starter": {
+          "primeMoverSystemStarterMemenuhi": "",
+          "primeMoverSystemStarterTidakMemenuhi": "",
+          "primeMoverSystemStarterResult": ""
+        }
+      },
+      "electrical": {
+        "battery": {
+          "primeMoverElectricalBatteryMemenuhi": "",
+          "primeMoverElectricalBatteryTidakMemenuhi": "",
+          "primeMoverElectricalBatteryResult": ""
+        },
+        "startingDynamo": {
+          "primeMoverElectricalStartingDynamoMemenuhi": "",
+          "primeMoverElectricalStartingDynamoTidakMemenuhi": "",
+          "primeMoverElectricalStartingDynamoResult": ""
+        },
+        "alternator": {
+          "primeMoverElectricalAlternatorMemenuhi": "",
+          "primeMoverElectricalAlternatorTidakMemenuhi": "",
+          "primeMoverElectricalAlternatorResult": ""
+        },
+        "batteryCable": {
+          "primeMoverElectricalBatteryCableMemenuhi": "",
+          "primeMoverElectricalBatteryCableTidakMemenuhi": "",
+          "primeMoverElectricalBatteryCableResult": ""
+        },
+        "installationCable": {
+          "primeMoverElectricalInstallationCableMemenuhi": "",
+          "primeMoverElectricalInstallationCableTidakMemenuhi": "",
+          "primeMoverElectricalInstallationCableResult": ""
+        },
+        "lightingLamps": {
+          "primeMoverElectricalLightingLampsMemenuhi": "",
+          "primeMoverElectricalLightingLampsTidakMemenuhi": "",
+          "primeMoverElectricalLightingLampsResult": ""
+        },
+        "safetySignalLamps": {
+          "primeMoverElectricalSafetyLampsMemenuhi": "",
+          "primeMoverElectricalSafetyLampsTidakMemenuhi": "",
+          "primeMoverElectricalSafetyLampsResult": ""
+        },
+        "horn": {
+          "primeMoverElectricalHornMemenuhi": "",
+          "primeMoverElectricalHornTidakMemenuhi": "",
+          "primeMoverElectricalHornResult": ""
+        },
+        "fuse": {
+          "primeMoverElectricalFuseMemenuhi": "",
+          "primeMoverElectricalFuseTidakMemenuhi": "",
+          "primeMoverElectricalFuseResult": ""
+        }
+      }
+    },
+    "dashboard": {
+      "temperatureIndicator": {
+        "dashboardTempIndicatorMemenuhi": "",
+        "dashboardTempIndicatorTidakMemenuhi": "",
+        "dashboardTempIndicatorResult": ""
+      },
+      "engineOilPressure": {
+        "dashboardOilPressureMemenuhi": "",
+        "dashboardOilPressureTidakMemenuhi": "",
+        "dashboardOilPressureResult": ""
+      },
+      "hydraulicPressure": {
+        "dashboardHydraulicPressureMemenuhi": "",
+        "dashboardHydraulicPressureTidakMemenuhi": "",
+        "dashboardHydraulicPressureResult": ""
+      },
+      "hourMeter": {
+        "dashboardHourMeterMemenuhi": "",
+        "dashboardHourMeterTidakMemenuhi": "",
+        "dashboardHourMeterResult": ""
+      },
+      "glowPlug": {
+        "dashboardGlowPlugMemenuhi": "",
+        "dashboardGlowPlugTidakMemenuhi": "",
+        "dashboardGlowPlugResult": ""
+      },
+      "fuelIndicator": {
+        "dashboardFuelIndicatorMemenuhi": "",
+        "dashboardFuelIndicatorTidakMemenuhi": "",
+        "dashboardFuelIndicatorResult": ""
+      },
+      "loadIndicator": {
+        "dashboardLoadIndicatorMemenuhi": "",
+        "dashboardLoadIndicatorTidakMemenuhi": "",
+        "dashboardLoadIndicatorResult": ""
+      },
+      "loadChart": {
+        "dashboardLoadChartMemenuhi": "",
+        "dashboardLoadChartTidakMemenuhi": "",
+        "dashboardLoadChartResult": ""
+      }
+    },
+    "powerTrain": {
+      "steeringSystem": {
+        "starterDynamo": {
+          "powerTrainStarterDynamoMemenuhi": "",
+          "powerTrainStarterDynamoTidakMemenuhi": "",
+          "powerTrainStarterDynamoResult": ""
+        },
+        "wheelSteering": {
+          "powerTrainSteeringWheelMemenuhi": "",
+          "powerTrainSteeringWheelTidakMemenuhi": "",
+          "powerTrainSteeringWheelResult": ""
+        },
+        "steeringRod": {
+          "powerTrainSteeringRodMemenuhi": "",
+          "powerTrainSteeringRodTidakMemenuhi": "",
+          "powerTrainSteeringRodResult": ""
+        },
+        "gearBox": {
+          "powerTrainSteeringGearBoxMemenuhi": "",
+          "powerTrainSteeringGearBoxTidakMemenuhi": "",
+          "powerTrainSteeringGearBoxResult": ""
+        },
+        "pitmanArm": {
+          "powerTrainSteeringPitmanMemenuhi": "",
+          "powerTrainSteeringPitmanTidakMemenuhi": "",
+          "powerTrainSteeringPitmanResult": ""
+        },
+        "dragLink": {
+          "powerTrainSteeringDragLinkMemenuhi": "",
+          "powerTrainSteeringDragLinkTidakMemenuhi": "",
+          "powerTrainSteeringDragLinkResult": ""
+        },
+        "tieRod": {
+          "powerTrainSteeringTieRodMemenuhi": "",
+          "powerTrainSteeringTieRodTidakMemenuhi": "",
+          "powerTrainSteeringTieRodResult": ""
+        },
+        "lubrication": {
+          "powerTrainSteeringLubeMemenuhi": "",
+          "powerTrainSteeringLubeTidakMemenuhi": "",
+          "powerTrainSteeringLubeResult": ""
+        }
+      },
+      "wheels": {
+        "frontDriveWheel": {
+          "powerTrainWheelsFrontMemenuhi": "",
+          "powerTrainWheelsFrontTidakMemenuhi": "",
+          "powerTrainWheelsFrontResult": ""
+        },
+        "rearSteeringWheel": {
+          "powerTrainWheelsRearMemenuhi": "",
+          "powerTrainWheelsRearTidakMemenuhi": "",
+          "powerTrainWheelsRearResult": ""
+        },
+        "fasteningBolts": {
+          "powerTrainWheelsBoltsMemenuhi": "",
+          "powerTrainWheelsBoltsTidakMemenuhi": "",
+          "powerTrainWheelsBoltsResult": ""
+        },
+        "drumHub": {
+          "powerTrainWheelsDrumMemenuhi": "",
+          "powerTrainWheelsDrumTidakMemenuhi": "",
+          "powerTrainWheelsDrumResult": ""
+        },
+        "lubrication": {
+          "powerTrainWheelsLubeMemenuhi": "",
+          "powerTrainWheelsLubeTidakMemenuhi": "",
+          "powerTrainWheelsLubeResult": ""
+        },
+        "mechanicalParts": {
+          "powerTrainWheelsMechanicalMemenuhi": "",
+          "powerTrainWheelsMechanicalTidakMemenuhi": "",
+          "powerTrainWheelsMechanicalResult": ""
+        }
+      },
+      "clutch": {
+        "clutchHousing": {
+          "powerTrainClutchHousingMemenuhi": "",
+          "powerTrainClutchHousingTidakMemenuhi": "",
+          "powerTrainClutchHousingResult": ""
+        },
+        "clutchCondition": {
+          "powerTrainClutchConditionMemenuhi": "",
+          "powerTrainClutchConditionTidakMemenuhi": "",
+          "powerTrainClutchConditionResult": ""
+        },
+        "transmissionOil": {
+          "powerTrainClutchTransOilMemenuhi": "",
+          "powerTrainClutchTransOilTidakMemenuhi": "",
+          "powerTrainClutchTransOilResult": ""
+        },
+        "transmissionLeakage": {
+          "powerTrainClutchTransLeakMemenuhi": "",
+          "powerTrainClutchTransLeakTidakMemenuhi": "",
+          "powerTrainClutchTransLeakResult": ""
+        },
+        "connectingShaft": {
+          "powerTrainClutchShaftMemenuhi": "",
+          "powerTrainClutchShaftTidakMemenuhi": "",
+          "powerTrainClutchShaftResult": ""
+        },
+        "mechanicalParts": {
+          "powerTrainClutchMechanicalMemenuhi": "",
+          "powerTrainClutchMechanicalTidakMemenuhi": "",
+          "powerTrainClutchMechanicalResult": ""
+        }
+      },
+      "differential": {
+        "differentialHousing": {
+          "powerTrainDiffHousingMemenuhi": "",
+          "powerTrainDiffHousingTidakMemenuhi": "",
+          "powerTrainDiffHousingResult": ""
+        },
+        "differentialCondition": {
+          "powerTrainDiffConditionMemenuhi": "",
+          "powerTrainDiffConditionTidakMemenuhi": "",
+          "powerTrainDiffConditionResult": ""
+        },
+        "differentialOil": {
+          "powerTrainDiffOilMemenuhi": "",
+          "powerTrainDiffOilTidakMemenuhi": "",
+          "powerTrainDiffOilResult": ""
+        },
+        "differentialLeakage": {
+          "powerTrainDiffLeakMemenuhi": "",
+          "powerTrainDiffLeakTidakMemenuhi": "",
+          "powerTrainDiffLeakResult": ""
+        },
+        "connectingShaft": {
+          "powerTrainDiffShaftMemenuhi": "",
+          "powerTrainDiffShaftTidakMemenuhi": "",
+          "powerTrainDiffShaftResult": ""
+        }
+      },
+      "brakes": {
+        "mainBrake": {
+          "powerTrainBrakesMainMemenuhi": "",
+          "powerTrainBrakesMainTidakMemenuhi": "",
+          "powerTrainBrakesMainResult": ""
+        },
+        "handBrake": {
+          "powerTrainBrakesHandMemenuhi": "",
+          "powerTrainBrakesHandTidakMemenuhi": "",
+          "powerTrainBrakesHandResult": ""
+        },
+        "emergencyBrake": {
+          "powerTrainBrakesEmergencyMemenuhi": "",
+          "powerTrainBrakesEmergencyTidakMemenuhi": "",
+          "powerTrainBrakesEmergencyResult": ""
+        },
+        "leakage": {
+          "powerTrainBrakesLeakMemenuhi": "",
+          "powerTrainBrakesLeakTidakMemenuhi": "",
+          "powerTrainBrakesLeakResult": ""
+        },
+        "mechanicalComponents": {
+          "powerTrainBrakesMechanicalMemenuhi": "",
+          "powerTrainBrakesMechanicalTidakMemenuhi": "",
+          "powerTrainBrakesMechanicalResult": ""
+        }
+      },
+      "transmission": {
+        "transmissionHousing": {
+          "powerTrainTransHousingMemenuhi": "",
+          "powerTrainTransHousingTidakMemenuhi": "",
+          "powerTrainTransHousingResult": ""
+        },
+        "transmissionOil": {
+          "powerTrainTransOilMemenuhi": "",
+          "powerTrainTransOilTidakMemenuhi": "",
+          "powerTrainTransOilResult": ""
+        },
+        "transmissionLeakage": {
+          "powerTrainTransLeakMemenuhi": "",
+          "powerTrainTransLeakTidakMemenuhi": "",
+          "powerTrainTransLeakResult": ""
+        },
+        "mechanicalParts": {
+          "powerTrainTransMechanicalMemenuhi": "",
+          "powerTrainTransMechanicalTidakMemenuhi": "",
+          "powerTrainTransMechanicalResult": ""
+        }
+      }
+    }
   },
-  "engineOnInspection": {},
-  "liftingChainInspection": [],
-  "nonDestructiveTest": {
-    "testType": "",
-    "results": []
+  "attachments": {
+    "mast": {
+      "wear": {
+        "attachmentMastWearMemenuhi": "",
+        "attachmentMastWearTidakMemenuhi": "",
+        "attachmentMastWearResult": ""
+      },
+      "cracks": {
+        "attachmentMastCracksMemenuhi": "",
+        "attachmentMastCracksTidakMemenuhi": "",
+        "attachmentMastCracksResult": ""
+      },
+      "deformation": {
+        "attachmentMastDeformationMemenuhi": "",
+        "attachmentMastDeformationTidakMemenuhi": "",
+        "attachmentMastDeformationResult": ""
+      },
+      "lubrication": {
+        "attachmentMastLubeMemenuhi": "",
+        "attachmentMastLubeTidakMemenuhi": "",
+        "attachmentMastLubeResult": ""
+      },
+      "shaftAndBearings": {
+        "attachmentMastShaftBearingMemenuhi": "",
+        "attachmentMastShaftBearingTidakMemenuhi": "",
+        "attachmentMastShaftBearingResult": ""
+      }
+    },
+    "liftChain": {
+      "chainCondition": {
+        "attachmentLiftChainConditionMemenuhi": "",
+        "attachmentLiftChainConditionTidakMemenuhi": "",
+        "attachmentLiftChainConditionResult": ""
+      },
+      "deformation": {
+        "attachmentLiftChainDeformationMemenuhi": "",
+        "attachmentLiftChainDeformationTidakMemenuhi": "",
+        "attachmentLiftChainDeformationResult": ""
+      },
+      "chainLubrication": {
+        "attachmentLiftChainLubeMemenuhi": "",
+        "attachmentLiftChainLubeTidakMemenuhi": "",
+        "attachmentLiftChainLubeResult": ""
+      }
+    },
+    "personalBasket": {
+      "workingFloor": {
+        "corrosion": {
+          "basketFloorCorrosionMemenuhi": "",
+          "basketFloorCorrosionTidakMemenuhi": "",
+          "basketFloorCorrosionResult": ""
+        },
+        "cracks": {
+          "basketFloorCracksMemenuhi": "",
+          "basketFloorCracksTidakMemenuhi": "",
+          "basketFloorCracksResult": ""
+        },
+        "deformation": {
+          "basketFloorDeformationMemenuhi": "",
+          "basketFloorDeformationTidakMemenuhi": "",
+          "basketFloorDeformationResult": ""
+        },
+        "fastening": {
+          "basketFloorFasteningMemenuhi": "",
+          "basketFloorFasteningTidakMemenuhi": "",
+          "basketFloorFasteningResult": ""
+        }
+      },
+      "basketFrame": {
+        "corrosion": {
+          "basketFrameCorrosionMemenuhi": "",
+          "basketFrameCorrosionTidakMemenuhi": "",
+          "basketFrameCorrosionResult": ""
+        },
+        "cracks": {
+          "basketFrameCracksMemenuhi": "",
+          "basketFrameCracksTidakMemenuhi": "",
+          "basketFrameCracksResult": ""
+        },
+        "deformation": {
+          "basketFrameDeformationMemenuhi": "",
+          "basketFrameDeformationTidakMemenuhi": "",
+          "basketFrameDeformationResult": ""
+        },
+        "crossBracing": {
+          "basketFrameCrossBracingMemenuhi": "",
+          "basketFrameCrossBracingTidakMemenuhi": "",
+          "basketFrameCrossBracingResult": ""
+        },
+        "diagonalBracing": {
+          "basketFrameDiagonalBracingMemenuhi": "",
+          "basketFrameDiagonalBracingTidakMemenuhi": "",
+          "basketFrameDiagonalBracingResult": ""
+        }
+      },
+      "fasteningBolts": {
+        "corrosion": {
+          "basketBoltsCorrosionMemenuhi": "",
+          "basketBoltsCorrosionTidakMemenuhi": "",
+          "basketBoltsCorrosionResult": ""
+        },
+        "cracks": {
+          "basketBoltsCracksMemenuhi": "",
+          "basketBoltsCracksTidakMemenuhi": "",
+          "basketBoltsCracksResult": ""
+        },
+        "deformation": {
+          "basketBoltsDeformationMemenuhi": "",
+          "basketBoltsDeformationTidakMemenuhi": "",
+          "basketBoltsDeformationResult": ""
+        },
+        "fastening": {
+          "basketBoltsFasteningMemenuhi": "",
+          "basketBoltsFasteningTidakMemenuhi": "",
+          "basketBoltsFasteningResult": ""
+        }
+      },
+      "door": {
+        "corrosion": {
+          "basketDoorCorrosionMemenuhi": "",
+          "basketDoorCorrosionTidakMemenuhi": "",
+          "basketDoorCorrosionResult": ""
+        },
+        "cracks": {
+          "basketDoorCracksMemenuhi": "",
+          "basketDoorCracksTidakMemenuhi": "",
+          "basketDoorCracksResult": ""
+        },
+        "deformation": {
+          "basketDoorDeformationMemenuhi": "",
+          "basketDoorDeformationTidakMemenuhi": "",
+          "basketDoorDeformationResult": ""
+        },
+        "fastening": {
+          "basketDoorFasteningMemenuhi": "",
+          "basketDoorFasteningTidakMemenuhi": "",
+          "basketDoorFasteningResult": ""
+        }
+      }
+    },
+    "handRail": {
+      "cracks": {
+        "handrailCracksMemenuhi": "",
+        "handrailCracksTidakMemenuhi": "",
+        "handrailCracksResult": ""
+      },
+      "wear": {
+        "handrailWearMemenuhi": "",
+        "handrailWearTidakMemenuhi": "",
+        "handrailWearResult": ""
+      },
+      "cracks2": {
+        "handrailCracks2Memenuhi": "",
+        "handrailCracks2TidakMemenuhi": "",
+        "handrailCracks2Result": ""
+      },
+      "railStraightness": {
+        "handrailRailStraightnessMemenuhi": "",
+        "handrailRailStraightnessTidakMemenuhi": "",
+        "handrailRailStraightnessResult": ""
+      },
+      "railJoints": {
+        "handrailRailJointsMemenuhi": "",
+        "handrailRailJointsTidakMemenuhi": "",
+        "handrailRailJointsResult": ""
+      },
+      "interRailStraightness": {
+        "handrailInterRailStraightnessMemenuhi": "",
+        "handrailInterRailStraightnessTidakMemenuhi": "",
+        "handrailInterRailStraightnessResult": ""
+      },
+      "railJointGap": {
+        "handrailRailJointGapMemenuhi": "",
+        "handrailRailJointGapTidakMemenuhi": "",
+        "handrailRailJointGapResult": ""
+      },
+      "railFasteners": {
+        "handrailRailFastenersMemenuhi": "",
+        "handrailRailFastenersTidakMemenuhi": "",
+        "handrailRailFastenersResult": ""
+      },
+      "railStopper": {
+        "handrailRailStopperMemenuhi": "",
+        "handrailRailStopperTidakMemenuhi": "",
+        "handrailRailStopperResult": ""
+      }
+    }
   },
-  "loadTest": [],
-  "conclusion": {
-    "findings": []
+  "hydraulicComponents": {
+    "tank": {
+      "leakage": {
+        "hydraulicTankLeakageMemenuhi": "",
+        "hydraulicTankLeakageTidakMemenuhi": "",
+        "hydraulicTankLeakageResult": ""
+      },
+      "oilLevel": {
+        "hydraulicTankOilLevelMemenuhi": "",
+        "hydraulicTankOilLevelTidakMemenuhi": "",
+        "hydraulicTankOilLevelResult": ""
+      },
+      "oilCondition": {
+        "hydraulicTankOilConditionMemenuhi": "",
+        "hydraulicTankOilConditionTidakMemenuhi": "",
+        "hydraulicTankOilConditionResult": ""
+      },
+      "suctionLineCondition": {
+        "hydraulicTankSuctionLineMemenuhi": "",
+        "hydraulicTankSuctionLineTidakMemenuhi": "",
+        "hydraulicTankSuctionLineResult": ""
+      },
+      "returnLineCondition": {
+        "hydraulicTankReturnLineMemenuhi": "",
+        "hydraulicTankReturnLineTidakMemenuhi": "",
+        "hydraulicTankReturnLineResult": ""
+      }
+    },
+    "pump": {
+      "leakage": {
+        "hydraulicPumpLeakageMemenuhi": "",
+        "hydraulicPumpLeakageTidakMemenuhi": "",
+        "hydraulicPumpLeakageResult": ""
+      },
+      "suctionLineCondition": {
+        "hydraulicPumpSuctionLineMemenuhi": "",
+        "hydraulicPumpSuctionLineTidakMemenuhi": "",
+        "hydraulicPumpSuctionLineResult": ""
+      },
+      "pressureLineCondition": {
+        "hydraulicPumpPressureLineMemenuhi": "",
+        "hydraulicPumpPressureLineTidakMemenuhi": "",
+        "hydraulicPumpPressureLineResult": ""
+      },
+      "function": {
+        "hydraulicPumpFunctionMemenuhi": "",
+        "hydraulicPumpFunctionTidakMemenuhi": "",
+        "hydraulicPumpFunctionResult": ""
+      },
+      "abnormalNoise": {
+        "hydraulicPumpNoiseMemenuhi": "",
+        "hydraulicPumpNoiseTidakMemenuhi": "",
+        "hydraulicPumpNoiseResult": ""
+      }
+    },
+    "controlValve": {
+      "leakage": {
+        "hydraulicValveLeakageMemenuhi": "",
+        "hydraulicValveLeakageTidakMemenuhi": "",
+        "hydraulicValveLeakageResult": ""
+      },
+      "lineCondition": {
+        "hydraulicValveLineConditionMemenuhi": "",
+        "hydraulicValveLineConditionTidakMemenuhi": "",
+        "hydraulicValveLineConditionResult": ""
+      },
+      "reliefValveFunction": {
+        "hydraulicValveReliefFunctionMemenuhi": "",
+        "hydraulicValveReliefFunctionTidakMemenuhi": "",
+        "hydraulicValveReliefFunctionResult": ""
+      },
+      "abnormalNoise": {
+        "hydraulicValveNoiseMemenuhi": "",
+        "hydraulicValveNoiseTidakMemenuhi": "",
+        "hydraulicValveNoiseResult": ""
+      },
+      "liftCylinderValveFunction": {
+        "hydraulicValveLiftCylinderMemenuhi": "",
+        "hydraulicValveLiftCylinderTidakMemenuhi": "",
+        "hydraulicValveLiftCylinderResult": ""
+      },
+      "tiltCylinderValveFunction": {
+        "hydraulicValveTiltCylinderMemenuhi": "",
+        "hydraulicValveTiltCylinderTidakMemenuhi": "",
+        "hydraulicValveTiltCylinderResult": ""
+      },
+      "steeringCylinderValveFunction": {
+        "hydraulicValveSteeringCylinderMemenuhi": "",
+        "hydraulicValveSteeringCylinderTidakMemenuhi": "",
+        "hydraulicValveSteeringCylinderResult": ""
+      }
+    },
+    "actuator": {
+      "leakage": {
+        "hydraulicActuatorLeakageMemenuhi": "",
+        "hydraulicActuatorLeakageTidakMemenuhi": "",
+        "hydraulicActuatorLeakageResult": ""
+      },
+      "lineCondition": {
+        "hydraulicActuatorLineConditionMemenuhi": "",
+        "hydraulicActuatorLineConditionTidakMemenuhi": "",
+        "hydraulicActuatorLineConditionResult": ""
+      },
+      "abnormalNoise": {
+        "hydraulicActuatorNoiseMemenuhi": "",
+        "hydraulicActuatorNoiseTidakMemenuhi": "",
+        "hydraulicActuatorNoiseResult": ""
+      }
+    }
   },
+  "engineOnCheck": {
+    "starterDynamo": {
+      "engineOnStarterDynamoMemenuhi": "",
+      "engineOnStarterDynamoTidakMemenuhi": "",
+      "engineOnStarterDynamoResult": ""
+    },
+    "instrumentFunction": {
+      "engineOnInstrumentMemenuhi": "",
+      "engineOnInstrumentTidakMemenuhi": "",
+      "engineOnInstrumentResult": ""
+    },
+    "electricalFunction": {
+      "engineOnElectricalMemenuhi": "",
+      "engineOnElectricalTidakMemenuhi": "",
+      "engineOnElectricalResult": ""
+    },
+    "leakage": {
+      "engineOil": {
+        "leakageEngineOilMemenuhi": "",
+        "leakageEngineOilTidakMemenuhi": "",
+        "leakageEngineOilResult": ""
+      },
+      "fuel": {
+        "leakageFuelMemenuhi": "",
+        "leakageFuelTidakMemenuhi": "",
+        "leakageFuelResult": ""
+      },
+      "coolant": {
+        "leakageCoolantMemenuhi": "",
+        "leakageCoolantTidakMemenuhi": "",
+        "leakageCoolantResult": ""
+      },
+      "hydraulicOil": {
+        "leakageHydraulicOilMemenuhi": "",
+        "leakageHydraulicOilTidakMemenuhi": "",
+        "leakageHydraulicOilResult": ""
+      },
+      "transmissionOil": {
+        "leakageTransmissionOilMemenuhi": "",
+        "leakageTransmissionOilTidakMemenuhi": "",
+        "leakageTransmissionOilResult": ""
+      },
+      "finalDriveOil": {
+        "leakageFinalDriveOilMemenuhi": "",
+        "leakageFinalDriveOilTidakMemenuhi": "",
+        "leakageFinalDriveOilResult": ""
+      },
+      "brakeFluid": {
+        "leakageBrakeFluidMemenuhi": "",
+        "leakageBrakeFluidTidakMemenuhi": "",
+        "leakageBrakeFluidResult": ""
+      }
+    },
+    "clutchFunction": {
+      "engineOnClutchMemenuhi": "",
+      "engineOnClutchTidakMemenuhi": "",
+      "engineOnClutchResult": ""
+    },
+    "transmissionFunction": {
+      "engineOnTransmissionMemenuhi": "",
+      "engineOnTransmissionTidakMemenuhi": "",
+      "engineOnTransmissionResult": ""
+    },
+    "brakeFunction": {
+      "engineOnBrakeMemenuhi": "",
+      "engineOnBrakeTidakMemenuhi": "",
+      "engineOnBrakeResult": ""
+    },
+    "hornAndAlarmFunction": {
+      "engineOnHornAlarmMemenuhi": "",
+      "engineOnHornAlarmTidakMemenuhi": "",
+      "engineOnHornAlarmResult": ""
+    },
+    "lampsFunction": {
+      "engineOnLampsMemenuhi": "",
+      "engineOnLampsTidakMemenuhi": "",
+      "engineOnLampsResult": ""
+    },
+    "hydraulicMotorFunction": {
+      "engineOnHydraulicMotorMemenuhi": "",
+      "engineOnHydraulicMotorTidakMemenuhi": "",
+      "engineOnHydraulicMotorResult": ""
+    },
+    "steeringCylinderFunction": {
+      "engineOnSteeringCylinderMemenuhi": "",
+      "engineOnSteeringCylinderTidakMemenuhi": "",
+      "engineOnSteeringCylinderResult": ""
+    },
+    "liftingCylinderFunction": {
+      "engineOnLiftingCylinderMemenuhi": "",
+      "engineOnLiftingCylinderTidakMemenuhi": "",
+      "engineOnLiftingCylinderResult": ""
+    },
+    "tiltingCylinderFunction": {
+      "engineOnTiltingCylinderMemenuhi": "",
+      "engineOnTiltingCylinderTidakMemenuhi": "",
+      "engineOnTiltingCylinderResult": ""
+    },
+    "exhaustGasCondition": {
+      "engineOnExhaustGasMemenuhi": "",
+      "engineOnExhaustGasTidakMemenuhi": "",
+      "engineOnExhaustGasResult": ""
+    },
+    "controlLeversFunction": {
+      "engineOnControlLeversMemenuhi": "",
+      "engineOnControlLeversTidakMemenuhi": "",
+      "engineOnControlLeversResult": ""
+    },
+    "abnormalNoise": {
+      "fromEngine": {
+        "noiseEngineMemenuhi": "",
+        "noiseEngineTidakMemenuhi": "",
+        "noiseEngineResult": ""
+      },
+      "fromTurbocharger": {
+        "noiseTurbochargerMemenuhi": "",
+        "noiseTurbochargerTidakMemenuhi": "",
+        "noiseTurbochargerResult": ""
+      },
+      "fromTransmission": {
+        "noiseTransmissionMemenuhi": "",
+        "noiseTransmissionTidakMemenuhi": "",
+        "noiseTransmissionResult": ""
+      },
+      "fromHydraulicPump": {
+        "noiseHydraulicPumpMemenuhi": "",
+        "noiseHydraulicPumpTidakMemenuhi": "",
+        "noiseHydraulicPumpResult": ""
+      },
+      "fromProtectiveCover": {
+        "noiseProtectiveCoverMemenuhi": "",
+        "noiseProtectiveCoverTidakMemenuhi": "",
+        "noiseProtectiveCoverResult": ""
+      }
+    }
+  },
+  "chainInspection": {
+    "chainInspectionInspectedChains": [
+      {
+        "chainInspectionInspectedPart": "",
+        "chainInspectionContructionType": "",
+        "chainInspectionStandardPitch": "",
+        "chainInspectionMeasuredPitch": "",
+        "chainInspectionStandardPin": "",
+        "chainInspectionMeasuredPin": "",
+        "chainInspectionInspectResult": ""
+      }
+    ]
+  },
+  "nonDestructiveTestNdtType": [
+    {
+      "nonDestructiveTestInspectedPart": "",
+      "nonDestructiveTestLocation": "",
+      "nonDestructiveTestDefectTrue": "",
+      "nonDestructiveTestDefectFalse": "",
+      "nonDestructiveTestResult": ""
+    }
+  ],
+  "loadTest": [
+    {
+      "loadTestLiftingHeight": "",
+      "loadTestTestLoad": "",
+      "loadTestSpeed": "",
+      "loadTestMovement": "",
+      "loadTestRemarks": "",
+      "loadTestResult": ""
+    }
+  ],
+  "conclusion": [],
   "recommendations": [],
-  "nextInspectionDate": "",
+  "evaluation": {
+    "by": ""
+  },
   "inspector": {
-    "reportDate": "",
+    "location": "",
+    "date": "",
     "company": "",
     "name": "",
     "title": ""
-  }
+  },
+  "documentation": [
+    {
+      "description": "",
+      "url": ""
+    }
+  ]
 }
