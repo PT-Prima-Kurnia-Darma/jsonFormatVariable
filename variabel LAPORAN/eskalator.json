@@ -348,6 +348,6 @@
       }
     }
   },
-  "testingScalator": "1. Pengujian fungsi tombol berhenti darurat: Berfungsi dengan baik, eskalator berhenti seketika.\n2. Pengujian sensor plat sisir: Berfungsi, eskalator berhenti saat ada tekanan pada plat sisir.\n3. Pengujian sinkronisasi kecepatan ban pegangan: Kecepatan sesuai dengan kecepatan anak tangga (<2% deviasi).\n4. Pengujian rem utama: Jarak pemberhentian sesuai dengan standar yang ditetapkan.",
+  "testingEscalator": "1. Pengujian fungsi tombol berhenti darurat: Berfungsi dengan baik, eskalator berhenti seketika.\n2. Pengujian sensor plat sisir: Berfungsi, eskalator berhenti saat ada tekanan pada plat sisir.\n3. Pengujian sinkronisasi kecepatan ban pegangan: Kecepatan sesuai dengan kecepatan anak tangga (<2% deviasi).\n4. Pengujian rem utama: Jarak pemberhentian sesuai dengan standar yang ditetapkan.",
   "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian yang telah dilakukan, Pesawat Eskalator dengan No. Reg: SK.123/MEN/2020 dinyatakan LAIK dan dapat dioperasikan dengan aman, dengan syarat dilakukan perawatan rutin sesuai jadwal dari pabrikan dan pemeriksaan berkala setiap tahun."
 }
