@@ -1,135 +1,130 @@
 {
-  "EskOrElevType": "",
-  "typeInspection": "",
+  "inspectionType": "Elevator dan Eskalator",
+  "equipmentType": "Eskalator Bandara",
   "companyData": {
-    "companyOrBuildingName": "",
-    "usageAddress": "",
-    "safetyObjectTypeAndNumber": "",
-    "intendedUse": "",
-    "usagePermit": ""
+    "name": "Gedung Perkantoran Sentral",
+    "usageLocation": "Jalan Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+    "safetyObjectTypeAndNumber": "Eskalator / E-03",
+    "intendedUse": "Angkutan Penumpang",
+    "permitNumber": "SK.123/MEN/2020",
+    "examinationType": "Pemeriksaan dan Pengujian Berkala",
+    "inspectionDate": "15 Juli 2025"
   },
   "technicalData": {
-    "manufacturer": "",
-    "brand": "",
-    "countryAndYear": "",
-    "serialNumber": "",
-    "transports": "",
-    "capacity": "",
-    "liftHeight": "",
-    "speed": "",
-    "driveType": "",
-    "motorCurrent": "",
-    "motorPower": "",
-    "safetyDevices": ""
+    "manufacturer": "PT. Escalator Maju Jaya",
+    "brand": "SIGMA",
+    "countryAndYear": "Korea Selatan / 2018",
+    "serialNumber": "SN-ESC-100345",
+    "transports": "Orang",
+    "capacity": "9000 Orang/Jam",
+    "liftHeight": "4.5 meter",
+    "speed": "0.5 m/s",
+    "driveType": "Motor Listrik AC",
+    "motorCurrent": "15 A",
+    "motorPower": "7.5 kW",
+    "safetyDevices": "Lengkap sesuai standar"
   },
   "inspectionAndTesting": {
     "frameAndMachineRoom": {
-      "frame": { "result": "", "status": "" },
-      "supportBeams": { "result": "", "status": "" },
-      "machineRoomCondition": { "result": "", "status": "" },
-      "machineRoomClearance": { "result": "", "status": "" },
-      "machineRoomLighting": { "result": "", "status": "" },
-      "machineCoverPlate": { "result": "", "status": "" },
-      "pitCondition": { "result": "", "status": "" },
-      "pitClearance": { "result": "", "status": "" },
-      "pitStepCoverPlate": { "result": "", "status": "" }
+      "frame": { "result": "Kuat & Kokoh", "status": true },
+      "supportBeams": { "result": "Terlapisi Baik", "status": true },
+      "machineRoomCondition": { "result": "Bersih dan Terawat", "status": true },
+      "machineRoomClearance": { "result": "0.4 m²", "status": true },
+      "machineRoomLighting": { "result": "150 lux", "status": true },
+      "machineCoverPlate": { "result": "Tersedia & Kuat", "status": true },
+      "pitCondition": { "result": "Bersih dan Kering", "status": true },
+      "pitClearance": { "result": "0.5 m²", "status": true },
+      "pitStepCoverPlate": { "result": "Tersedia & Kuat", "status": true }
     },
     "driveEquipment": {
-      "driveMachine": { "result": "", "status": "" },
-      "speedUnder30Degrees": { "result": "", "status": "" },
-      "speed30to35Degrees": { "result": "", "status": "" },
-      "travelatorSpeed": { "result": "", "status": "" },
-      "stoppingDistance0_5": { "result": "", "status": "" },
-      "stoppingDistance0_75": { "result": "", "status": "" },
-      "stoppingDistance0_90": { "result": "", "status": "" },
-      "driveChain": { "result": "", "status": "" },
-      "chainBreakingStrength": { "result": "", "status": "" }
+      "driveMachine": { "result": "Berfungsi baik", "status": true },
+      "speedUnder30Degrees": { "result": "N/A", "status": true },
+      "speed30to35Degrees": { "result": "0.5 m/s", "status": true },
+      "travelatorSpeed": { "result": "N/A", "status": true },
+      "stoppingDistance0_5": { "result": "850 mm", "status": true },
+      "stoppingDistance0_75": { "result": "N/A", "status": true },
+      "stoppingDistance0_90": { "result": "N/A", "status": true },
+      "driveChain": { "result": "Baik", "status": true },
+      "chainBreakingStrength": { "result": ">140 kg", "status": true }
     },
     "stepsOrPallets": {
-      "stepMaterial": { "result": "", "status": "" },
-      "stepDimensions": { "result": "", "status": "" },
-      "palletDimensions": { "result": "", "status": "" },
-      "stepSurface": { "result": "", "status": "" },
-      "stepLevelness": { "result": "", "status": "" },
-      "skirtBrush": { "result": "", "status": "" },
-      "stepWheels": { "result": "", "status": "" }
+      "stepMaterial": { "result": "Alumunium", "status": true },
+      "stepDimensions": { "result": "Sesuai", "status": true },
+      "palletDimensions": { "result": "N/A", "status": true },
+      "stepSurface": { "result": "Tidak Licin", "status": true },
+      "stepLevelness": { "result": ">600 mm", "status": true },
+      "skirtBrush": { "result": "Terpasang", "status": true },
+      "stepWheels": { "result": "Kondisi baik, 4 buah", "status": true }
     },
     "landingArea": {
-      "landingPlates": { "result": "", "status": "" },
-      "combTeeth": { "result": "", "status": "" },
-      "combCondition": { "result": "", "status": "" },
-      "landingCover": { "result": "", "status": "" },
-      "landingAccessArea": { "result": "", "status": "" }
+      "landingPlates": { "result": "Terpasang kencang", "status": true },
+      "combTeeth": { "result": "Sesuai", "status": true },
+      "combCondition": { "result": "Tidak ada yg patah", "status": true },
+      "landingCover": { "result": "Kuat, saklar berfungsi", "status": true },
+      "landingAccessArea": { "result": "Sesuai", "status": true }
     },
     "balustrade": {
-      "balustradePanel": {
-        "material": { "result": "", "status": "" },
-        "height": { "result": "", "status": "" },
-        "sidePressure": { "result": "", "status": "" },
-        "verticalPressure": { "result": "", "status": "" }
+      "balustradePanel":{
+        "material": { "result": "Kaca Tempered", "status": true },
+        "height": { "result": "950 mm", "status": true },
+        "sidePressure": { "result": ">58,5 kg/m²", "status": true },
+        "verticalPressure": { "result": ">73 kg/m²", "status": true }
       },
-      "skirtPanel": { "result": "", "status": "" },
-      "skirtPanelFlexibility": { "result": "", "status": "" },
-      "stepToSkirtClearance": { "result": "", "status": "" }
+      "skirtPanel": { "result": "Permukaan licin", "status": true },
+      "skirtPanelFlexibility": { "result": "<4 mm", "status": true },
+      "stepToSkirtClearance": { "result": "3.5 mm", "status": true }
     },
     "handrail": {
-      "handrailCondition": { "result": "", "status": "" },
-      "handrailSpeedSynchronization": { "result": "", "status": "" },
-      "handrailWidth": { "result": "", "status": "" }
+      "handrailCondition": { "result": "Kuat, tidak cacat", "status": true },
+      "handrailSpeedSynchronization": { "result": "Sinkron", "status": true },
+      "handrailWidth": { "result": "80 mm", "status": true }
     },
     "runway": {
-      "beamStrengthAndPosition": { "result": "", "status": "" },
-      "pitWallCondition": { "result": "", "status": "" },
-      "escalatorFrameEnclosure": { "result": "", "status": "" },
-      "lighting": { "result": "", "status": "" },
-      "headroomClearance": { "result": "", "status": "" },
-      "balustradeToObjectClearance": { "result": "", "status": "" },
-      "antiClimbDeviceHeight": { "result": "", "status": "" },
-      "ornamentPlacement": { "result": "", "status": "" },
-      "outdoorClearance": { "result": "", "status": "" }
+      "beamStrengthAndPosition": { "result": "Sesuai", "status": true },
+      "pitWallCondition": { "result": "Kedap air", "status": true },
+      "escalatorFrameEnclosure": { "result": "Tertutup", "status": true },
+      "lighting": { "result": ">50 lux", "status": true },
+      "headroomClearance": { "result": ">2300 mm", "status": true },
+      "balustradeToObjectClearance": { "result": "<120 mm", "status": true },
+      "antiClimbDeviceHeight": { "result": ">100 mm", "status": true },
+      "ornamentPlacement": { "result": "Sesuai", "status": true },
+      "outdoorClearance": { "result": "N/A", "status": true }
     },
     "safetyEquipment": {
-      "operationControlKey": { "result": "", "status": "" },
-      "emergencyStopSwitch": { "result": "", "status": "" },
-      "stepChainSafetyDevice": { "result": "", "status": "" },
-      "driveChainSafetyDevice": { "result": "", "status": "" },
-      "stepSafetyDevice": { "result": "", "status": "" },
-      "handrailSafetyDevice": { "result": "", "status": "" },
-      "reversalStopDevice": { "result": "", "status": "" },
-      "handrailEntryGuard": { "result": "", "status": "" },
-      "combPlateSafetyDevice": { "result": "", "status": "" },
-      "innerDeckingBrush": { "result": "", "status": "" },
-      "stopButtons": { "result": "", "status": "" }
+      "operationControlKey": { "result": "Tersedia & berfungsi", "status": true },
+      "emergencyStopSwitch": { "result": "Tersedia & berfungsi", "status": true },
+      "stepChainSafetyDevice": { "result": "Tersedia & berfungsi", "status": true },
+      "driveChainSafetyDevice": { "result": "Tersedia & berfungsi", "status": true },
+      "stepSafetyDevice": { "result": "Tersedia & berfungsi", "status": true },
+      "handrailSafetyDevice": { "result": "Tersedia & berfungsi", "status": true },
+      "reversalStopDevice": { "result": "Tersedia & berfungsi", "status": true },
+      "handrailEntryGuard": { "result": "Tersedia & berfungsi", "status": true },
+      "combPlateSafetyDevice": { "result": "Tersedia & berfungsi", "status": true },
+      "innerDeckingBrush": { "result": "Tersedia", "status": true },
+      "stopButtons": { "result": "Tersedia & berfungsi", "status": true }
     },
     "electricalInstallation": {
-      "installationStandard": { "result": "", "status": "" },
-      "electricalPanel": { "result": "", "status": "" },
-      "groundingCable": { "result": "", "status": "" },
-      "fireAlarmConnection": { "result": "", "status": "" }
+      "installationStandard": { "result": "Sesuai SNI", "status": true },
+      "electricalPanel": { "result": "Panel khusus", "status": true },
+      "groundingCable": { "result": "3 Ω", "status": true },
+      "fireAlarmConnection": { "result": "Terhubung", "status": true }
     },
     "outdoorSpecifics": {
-      "pitWaterPump": { "result": "", "status": "" },
-      "weatherproofComponents": { "result": "", "status": "" }
+      "pitWaterPump": { "result": "N/A", "status": true },
+      "weatherproofComponents": { "result": "N/A", "status": true }
     },
-    "userSafetySignage": {
-      "noBulkyItems": { "result": "", "status": "" },
-      "noJumping": { "result": "", "status": "" },
-      "unattendedChildren": { "result": "", "status": "" },
-      "noTrolleysOrStrollers": { "result": "", "status": "" },
-      "noLeaning": { "result": "", "status": "" },
-      "noSteppingOnSkirt": { "result": "", "status": "" },
-      "softSoleFootwearWarning": { "result": "", "status": "" },
-      "noSittingOnSteps": { "result": "", "status": "" },
-      "holdHandrail": { "result": "", "status": "" }
+    "userSafety": {
+      "signageNoBulkyItems": { "result": "Tersedia", "status": true },
+      "signageNoJumping": { "result": "Tersedia", "status": true },
+      "signageUnattendedChildren": { "result": "Tersedia", "status": true },
+      "signageNoTrolleysOrStrollers": { "result": "Tersedia", "status": true },
+      "signageNoLeaning": { "result": "Tersedia", "status": true },
+      "signageNoSteppingOnSkirt": { "result": "Tersedia", "status": true },
+      "signageSoftSoleFootwearWarning": { "result": "Tersedia", "status": true },
+      "signageNoSittingOnSteps": { "result": "Tersedia", "status": true },
+      "signageHoldHandrail": { "result": "Tersedia", "status": true }
     }
   },
-  "testingSummary": {
-    "safetyDevices": "",
-    "noLoadTest": "",
-    "brakeTest": ""
-  },
-  "conclusion": {
-    "status": "",
-    "conditions": []
-  }
+  "escalatorTesting": "1. Pengujian fungsi tombol berhenti darurat: Berfungsi dengan baik, eskalator berhenti seketika.\n2. Pengujian sensor plat sisir: Berfungsi, eskalator berhenti saat ada tekanan pada plat sisir.\n3. Pengujian sinkronisasi kecepatan ban pegangan: Kecepatan sesuai dengan kecepatan anak tangga (<2% deviasi).\n4. Pengujian rem utama: Jarak pemberhentian sesuai dengan standar yang ditetapkan.",
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian yang telah dilakukan, Pesawat Eskalator dengan No. Reg: SK.123/MEN/2020 dinyatakan LAIK dan dapat dioperasikan dengan aman, dengan syarat dilakukan perawatan rutin sesuai jadwal dari pabrikan dan pemeriksaan berkala setiap tahun."
 }
