@@ -2,10 +2,12 @@
   "examinationType": "",
   "inspectionType": "",
   "inspectionDate": "",
-  "ownerName": "",
-  "companyLocation": "",
-  "nameUsageLocation": "",
-  "locationUsageLocation": "",
+  "generalData":{
+    "ownerName": "",
+    "companyLocation": "",
+    "nameUsageLocation": "",
+    "locationUsageLocation": ""
+  },
   "technicalData": {
     "equipmentType": "",
     "technicalDatamanufacturer": "",
