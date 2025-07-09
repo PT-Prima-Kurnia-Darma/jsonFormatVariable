@@ -1,107 +1,414 @@
 {
-  "typeInspection": "",
-  "paaType": "",
+  "examinationType": "",
+  "subInspectionType": "",
   "generalData": {
-    "owner": {
-      "name": "",
-      "address": ""
-    },
-    "user": {
-      "name": ""
-    },
-    "personInCharge": "",
+    "ownerName": "",
+    "ownerAddress": "",
+    "userInCharge": "",
+    "subcontractorPersonInCharge": "",
     "unitLocation": "",
-    "operator": {
-      "name": "",
-      "certificateStatus": ""
-    },
-    "manufacturer": {
-      "name": "",
-      "brandOrType": "",
-      "year": "",
-      "serialNumber": ""
-    },
+    "operatorName": "",
     "equipmentType": "",
-    "capacity": {
-      "load": "",
-      "personnel": ""
-    },
-    "standardUsed": "",
+    "manufacturer": "",
+    "brandType": "",
+    "locationAndYearOfManufacture": "",
+    "serialNumberUnitNumber": "",
+    "capacityWorkingLoad": "",
     "intendedUse": "",
-    "usagePermitNumber": ""
+    "usagePermitNumber": "",
+    "operatorCertificate": ""
   },
   "technicalData": {
-    "gondola": {
-      "supportMastHeight": "",
-      "frontBeamLength": "",
-      "middleBeamLength": "",
-      "rearBeamLength": "",
-      "balanceWeightDistance": "",
-      "capacity": "",
-      "speed": "",
-      "platformDimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "wireRopeDiameter": ""
+    "gondolaSpecification": {
+      "gondolaSpecificationSupportMastHeight": "",
+      "gondolaSpecificationFrontBeamLength": "",
+      "gondolaSpecificationMiddleBeamLength": "",
+      "gondolaSpecificationRearBeamLength": "",
+      "gondolaSpecificationBalanceWeightDistance": "",
+      "gondolaSpecificationCapacity": "",
+      "gondolaSpecificationSpeed": "",
+      "gondolaSpecificationPlatformSize": "",
+      "gondolaSpecificationWireRopeDiameter": ""
     },
     "hoist": {
-      "model": "",
-      "liftingCapacity": "",
-      "electricMotor": {
-        "type": "",
-        "power": "",
-        "voltage": ""
+      "hoistModel": "",
+      "hoistLiftingCapacity": "",
+      "hoistElectricMotor": {
+        "hoistlElectricMotorType": "",
+        "hoistElectricMotorPower": "",
+        "hoistElectricMotorVoltage": "",
+        "hoistElectricMotorVoltageHz": ""
       }
     },
-    "safetyLock": {
-      "type": ""
+    "safetyLockType": "",
+    "brake": {
+      "brakeType": "",
+      "brakeModel": "",
+      "brakeCapacity": ""
     },
-    "suspension": {
-      "supportMastHeight": "",
-      "frontBeamLength": "",
-      "material": ""
+    "suspensionMechanical": {
+      "suspensionMechanicalSupportMastHeight": "",
+      "suspensionMechanicalFrontBeamLength": "",
+      "suspensionMechanicalMaterial": ""
     },
-    "weights": {
-      "platformTotal": "",
-      "suspensionMechanical": "",
-      "balanceWeight": "",
-      "machineTotal": ""
+    "machineWeight": {
+      "machineWeightTotalPlatformWeight": "",
+      "machineWeightSuspensionMechanicalWeight": "",
+      "machineWeightBalanceWeight": "",
+      "machineWeightTotalMachineWeight": ""
     }
   },
-  "visualInspection": {
-    "suspensionStructure": {},
-    "wireRopes": {},
-    "electricalSystem": {},
-    "platform": {},
-    "safetyDevices": {}
+  "visualCheck": {
+    "suspensionStructure": {
+      "suspensionStructureFrontBeam": {
+        "suspensionStructureFrontBeamMemenuhi": "",
+        "suspensionStructureFrontBeamTidakMemenuhi": "",
+        "suspensionStructureFrontBeamResult": ""
+      },
+      "suspensionStructureMiddleBeam": {
+        "suspensionStructureMiddleBeamMemenuhi": "",
+        "suspensionStructureMiddleBeamTidakMemenuhi": "",
+        "suspensionStructureMiddleBeamResult": ""
+      },
+      "suspensionStructureRearBeam": {
+        "suspensionStructureRearBeamMemenuhi": "",
+        "suspensionStructureRearBeamTidakMemenuhi": "",
+        "suspensionStructureRearBeamResult": ""
+      },
+      "suspensionStructureFrontBeamSupportMast": {
+        "suspensionStructureFrontBeamSupportMastMemenuhi": "",
+        "suspensionStructureFrontBeamSupportMastTidakMemenuhi": "",
+        "suspensionStructureFrontBeamSupportMastResult": ""
+      },
+      "suspensionStructureLowerFrontBeamSupportMast": {
+        "suspensionStructureLowerFrontBeamSupportMastMemenuhi": "",
+        "suspensionStructureLowerFrontBeamSupportMastTidakMemenuhi": "",
+        "suspensionStructureLowerFrontBeamSupportMastResult": ""
+      },
+      "suspensionStructureSupportMastAndBeamClamp": {
+        "suspensionStructureMastAndBeamClampMemenuhi": "",
+        "suspensionStructureMastAndBeamClampTidakMemenuhi": "",
+        "suspensionStructureMastAndBeamClampResult": ""
+      },
+      "suspensionStructureCouplingSleeve": {
+        "suspensionStructureCouplingSleeveMemenuhi": "",
+        "suspensionStructureCouplingSleeveTidakMemenuhi": "",
+        "suspensionStructureCouplingSleeveResult": ""
+      },
+      "suspensionStructureTurnBuckle": {
+        "suspensionStructureTurnBuckleMemenuhi": "",
+        "suspensionStructureTurnBuckleTidakMemenuhi": "",
+        "suspensionStructureTurnBuckleResult": ""
+      },
+      "suspensionStructureReinforcementRope": {
+        "suspensionStructureReinforcementRopeMemenuhi": "",
+        "suspensionStructureReinforcementRopeTidakMemenuhi": "",
+        "suspensionStructureReinforcementRopeResult": ""
+      },
+      "suspensionStructureRearSupportMast": {
+        "suspensionStructureRearSupportMastMemenuhi": "",
+        "suspensionStructureRearSupportMastTidakMemenuhi": "",
+        "suspensionStructureRearSupportMastResult": ""
+      },
+      "suspensionStructureBalanceWeight": {
+        "suspensionStructureBalanceWeightMemenuhi": "",
+        "suspensionStructureBalanceWeightTidakMemenuhi": "",
+        "suspensionStructureBalanceWeightResult": ""
+      },
+      "suspensionStructureFrontBeamSupportBase": {
+        "suspensionStructureFrontBeamSupportBaseMemenuhi": "",
+        "suspensionStructureFrontBeamSupportBaseTidakMemenuhi": "",
+        "suspensionStructureFrontBeamSupportBaseResult": ""
+      },
+      "suspensionStructureRearBeamSupportBase": {
+        "suspensionStructureRearBeamSupportBaseMemenuhi": "",
+        "suspensionStructureRearBeamSupportBaseTidakMemenuhi": "",
+        "suspensionStructureRearBeamSupportBaseResult": ""
+      },
+      "suspensionStructureJackBaseJoint": {
+        "suspensionStructureJackBaseJointMemenuhi": "",
+        "suspensionStructureJackBaseJointTidakMemenuhi": "",
+        "suspensionStructureJackBaseJointResult": ""
+      },
+      "suspensionStructureConnectionBolts": {
+        "suspensionStructureConnectionBoltsMemenuhi": "",
+        "suspensionStructureConnectionBoltsTidakMemenuhi": "",
+        "suspensionStructureConnectionBoltsResult": ""
+      }
+    },
+    "steelWireRope": {
+      "steelWireRopeMainWireRope": {
+        "steelWireRopeMainWireRopeMemenuhi": "",
+        "steelWireRopeMainWireRopeTidakMemenuhi": "",
+        "steelWireRopeMainWireRopeResult": ""
+      },
+      "steelWireRopeSafetyRope": {
+        "steelWireRopeSafetyRopeMemenuhi": "",
+        "steelWireRopeSafetyRopeTidakMemenuhi": "",
+        "steelWireRopeSafetyRopeResult": ""
+      },
+      "steelWireRopeSlingFasteners": {
+        "steelWireRopeSlingFastenersMemenuhi": "",
+        "steelWireRopeSlingFastenersTidakMemenuhi": "",
+        "steelWireRopeSlingFastenersResult": ""
+      }
+    },
+    "electricalSystem": {
+      "electricalSystemHoistMotor": {
+        "electricalSystemHoistMotorMemenuhi": "",
+        "electricalSystemHoistMotorTidakMemenuhi": "",
+        "electricalSystemHoistMotorResult": ""
+      },
+      "electricalSystemBrakeRelease": {
+        "electricalSystemBrakeReleaseMemenuhi": "",
+        "electricalSystemBrakeReleaseTidakMemenuhi": "",
+        "electricalSystemBrakeReleaseResult": ""
+      },
+      "electricalSystemManualRelease": {
+        "electricalSystemManualReleaseMemenuhi": "",
+        "electricalSystemManualReleaseTidakMemenuhi": "",
+        "electricalSystemManualReleaseResult": ""
+      },
+      "electricalSystemPowerControl": {
+        "electricalSystemPowerControlMemenuhi": "",
+        "electricalSystemPowerControlTidakMemenuhi": "",
+        "electricalSystemPowerControlResult": ""
+      },
+      "electricalSystemPowerCable": {
+        "electricalSystemPowerCableMemenuhi": "",
+        "electricalSystemPowerCableTidakMemenuhi": "",
+        "electricalSystemPowerCableResult": ""
+      },
+      "electricalSystemHandleSwitch": {
+        "electricalSystemHandleSwitchMemenuhi": "",
+        "electricalSystemHandleSwitchTidakMemenuhi": "",
+        "electricalSystemHandleSwitchResult": ""
+      },
+      "electricalSystemUpperLimitSwitch": {
+        "electricalSystemUpperLimitSwitchMemenuhi": "",
+        "electricalSystemUpperLimitSwitchTidakMemenuhi": "",
+        "electricalSystemUpperLimitSwitchResult": ""
+      },
+      "electricalSystemLimitStopper": {
+        "electricalSystemLimitStopperMemenuhi": "",
+        "electricalSystemLimitStopperTidakMemenuhi": "",
+        "electricalSystemLimitStopperResult": ""
+      },
+      "electricalSystemSocketFitting": {
+        "electricalSystemSocketFittingMemenuhi": "",
+        "electricalSystemSocketFittingTidakMemenuhi": "",
+        "electricalSystemSocketFittingResult": ""
+      },
+      "electricalSystemGrounding": {
+        "electricalSystemGroundingMemenuhi": "",
+        "electricalSystemGroundingTidakMemenuhi": "",
+        "electricalSystemGroundingResult": ""
+      },
+      "electricalSystemBreakerFuse": {
+        "electricalSystemBreakerFuseMemenuhi": "",
+        "electricalSystemBreakerFuseTidakMemenuhi": "",
+        "electricalSystemBreakerFuseResult": ""
+      },
+      "electricalSystemEmergencyStop": {
+        "electricalSystemEmergencyStopMemenuhi": "",
+        "electricalSystemEmergencyStopTidakMemenuhi": "",
+        "electricalSystemEmergencyStopResult": ""
+      }
+    },
+    "platform": {
+      "platformHoistMountFrame": {
+        "platformHoistMountFrameMemenuhi": "",
+        "platformHoistMountFrameTidakMemenuhi": "",
+        "platformHoistMountFrameResult": ""
+      },
+      "platformFrame": {
+        "platformFrameMemenuhi": "",
+        "platformFrameTidakMemenuhi": "",
+        "platformFrameResult": ""
+      },
+      "platformBottomPlate": {
+        "platformBottomPlateMemenuhi": "",
+        "platformBottomPlateTidakMemenuhi": "",
+        "platformBottomPlateResult": ""
+      },
+      "platformPinsAndBolts": {
+        "platformPinsAndBoltsMemenuhi": "",
+        "platformPinsAndBoltsTidakMemenuhi": "",
+        "platformPinsAndBoltsResult": ""
+      },
+      "platformBracket": {
+        "platformBracketMemenuhi": "",
+        "platformBracketTidakMemenuhi": "",
+        "platformBracketResult": ""
+      },
+      "platformToeBoard": {
+        "platformToeBoardMemenuhi": "",
+        "platformToeBoardTidakMemenuhi": "",
+        "platformToeBoardResult": ""
+      },
+      "platformRollerAndGuidePulley": {
+        "platformRollerAndGuidePulleyMemenuhi": "",
+        "platformRollerAndGuidePulleyTidakMemenuhi": "",
+        "platformRollerAndGuidePulleyResult": ""
+      },
+      "platformNamePlate": {
+        "platformNamePlateMemenuhi": "",
+        "platformNamePlateTidakMemenuhi": "",
+        "platformNamePlateResult": ""
+      }
+    },
+    "safetyDevices": {
+      "safetyDevicesSafetyLock": {
+        "safetyDevicesSafetyLockMemenuhi": "",
+        "safetyDevicesSafetyLockTidakMemenuhi": "",
+        "safetyDevicesSafetyLockResult": ""
+      },
+      "safetyDevicesRubberBumper": {
+        "safetyDevicesRubberBumperMemenuhi": "",
+        "safetyDevicesRubberBumperTidakMemenuhi": "",
+        "safetyDevicesRubberBumperResult": ""
+      },
+      "safetyDevicesSafetyLifeLine": {
+        "safetyDevicesSafetyLifeLineMemenuhi": "",
+        "safetyDevicesSafetyLifeLineTidakMemenuhi": "",
+        "safetyDevicesSafetyLifeLineResult": ""
+      },
+      "safetyDevicesLoadLimitSwitch": {
+        "safetyDevicesLoadLimitSwitchMemenuhi": "",
+        "safetyDevicesLoadLimitSwitchTidakMemenuhi": "",
+        "safetyDevicesLoadLimitSwitchResult": ""
+      },
+      "safetyDevicesLimitBlock": {
+        "safetyDevicesLimitBlockMemenuhi": "",
+        "safetyDevicesLimitBlockTidakMemenuhi": "",
+        "safetyDevicesLimitBlockResult": ""
+      },
+      "safetyDevicesUpperLimitSwitch": {
+        "safetyDevicesUpperLimitSwitchMemenuhi": "",
+        "safetyDevicesUpperLimitSwitchTidakMemenuhi": "",
+        "safetyDevicesUpperLimitSwitchResult": ""
+      },
+      "safetyDevicesBodyHarness": {
+        "safetyDevicesBodyHarnessMemenuhi": "",
+        "safetyDevicesBodyHarnessTidakMemenuhi": "",
+        "safetyDevicesBodyHarnessResult": ""
+      },
+      "safetyDevicesSafetyHarnessAnchorage": {
+        "safetyDevicesHarnessAnchorageMemenuhi": "",
+        "safetyDevicesHarnessAnchorageTidakMemenuhi": "",
+        "safetyDevicesHarnessAnchorageResult": ""
+      },
+      "safetyDevicesCommunicationTool": {
+        "safetyDevicesCommunicationToolMemenuhi": "",
+        "safetyDevicesCommunicationToolTidakMemenuhi": "",
+        "safetyDevicesCommunicationToolResult": ""
+      },
+      "safetyDevicesSafetyHelmet": {
+        "safetyDevicesSafetyHelmetMemenuhi": "",
+        "safetyDevicesSafetyHelmetTidakMemenuhi": "",
+        "safetyDevicesSafetyHelmetResult": ""
+      },
+      "safetyDevicesHandRail": {
+        "safetyDevicesHandRailMemenuhi": "",
+        "safetyDevicesHandRailTidakMemenuhi": "",
+        "safetyDevicesHandRailResult": ""
+      },
+      "safetyDevicesOtherPpe": {
+        "safetyDevicesOtherPpeMemenuhi": "",
+        "safetyDevicesOtherPpeTidakMemenuhi": "",
+        "safetyDevicesOtherPpeResult": ""
+      },
+      "safetyDevicesCoupForGlass": {
+        "safetyDevicesCoupForGlassMemenuhi": "",
+        "safetyDevicesCoupForGlassTidakMemenuhi": "",
+        "safetyDevicesCoupForGlassResult": ""
+      }
+    }
   },
   "nonDestructiveTest": {
-    "wireRopes": [],
-    "suspensionStructure": [],
-    "gondolaCage": [],
-    "clamps": []
+    "nonDestructiveTestWireRope": [
+      {
+        "nonDestructiveTestWireRopeUsage": "",
+        "nonDestructiveTestWireRopeSpecDiameter": "",
+        "nonDestructiveTestWireRopeActualDiameter": "",
+        "nonDestructiveTestWireRopeConstruction": "",
+        "nonDestructiveTestWireRopeType": "",
+        "nonDestructiveTestWireRopeLength": "",
+        "nonDestructiveTestWireRopeAge": "",
+        "nonDestructiveTestWireRopeDefectTrue": "",
+        "nonDestructiveTestWireRopeDefectFalse": "",
+        "nonDestructiveTestWireRopeResult": ""
+      }
+    ],
+    "nonDestructiveTestWireRopeNdtType": "",
+    "suspensionStructure": {
+      "suspensionStructureNdtType": "",
+      "inspectedItems": [
+        {
+          "suspensionStructurePart": "",
+          "suspensionStructureLocation": "",
+          "suspensionStructureDefectTrue": "",
+          "suspensionStructureDefectFalse": "",
+          "suspensionStructureResult": ""
+        }
+      ]
+    },
+    "gondolaCage": {
+      "gondolaCageNdtType": "",
+      "inspectedItems": [
+        {
+          "gondolaCagePart": "",
+          "gondolaCageLocation": "",
+          "gondolaCageDefectTrue": "",
+          "gondolaCageDefectFalse": "",
+          "gondolaCageResult": ""
+        }
+      ]
+    },
+    "clamps": {
+      "clampsNdtType": "",
+      "inspectedItems": [
+        {
+          "clampsPart": "",
+          "clampsLocation": "",
+          "clampsDefectTrue": "",
+          "clampsDefectFalse": "",
+          "clampsResult": ""
+        }
+      ]
+    }
   },
   "testing": {
     "dynamicLoadTest": {
-      "results": [],
-      "notes": ""
+      "dynamicLoadTestTests": [
+        {
+          "dynamicLoadTestLoadPercentage": "",
+          "dynamicLoadTestLoadDetails": "",
+          "dynamicLoadTestRemarks": "",
+          "dynamicLoadTestResult": ""
+        }
+      ],
+      "dynamicLoadTestNotOrHappensNote": ""
     },
     "staticLoadTest": {
-      "results": [],
-      "notes": ""
+      "staticLoadTestTests": [
+        {
+          "staticLoadTestLoadPercentage": "",
+          "staticLoadTestLoadDetails": "",
+          "staticLoadTestRemarks": "",
+          "staticLoadTestResult": ""
+        }
+      ],
+      "staticLoadTestNotOrHappensNote": ""
     }
   },
-  "conclusion": {
-    "findings": []
-  },
+  "conclusion": [],
   "recommendations": [],
-  "nextInspectionDate": "",
   "inspector": {
-    "reportDate": "",
+    "locationAndDate": "",
     "company": "",
     "name": "",
     "title": ""
-  }
+  },
+  "documentation": []
 }
