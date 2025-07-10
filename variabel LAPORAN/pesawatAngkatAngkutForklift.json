@@ -895,21 +895,5 @@
     }
   ],
   "conclusion": [],
-  "recommendations": [],
-  "evaluation": {
-    "by": ""
-  },
-  "inspector": {
-    "location": "",
-    "date": "",
-    "company": "",
-    "name": "",
-    "title": ""
-  },
-  "documentation": [
-    {
-      "description": "",
-      "url": ""
-    }
-  ]
+  "recommendations": []
 }
