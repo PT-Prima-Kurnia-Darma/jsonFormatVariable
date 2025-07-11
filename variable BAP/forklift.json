@@ -1,47 +1,37 @@
 {
-  "id": "",
-  "typeInspection": "Pemeriksaan PAA Forklift",
-  "inspectionSchedule": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "brandOrType": "",
-  "manufacturer": "",
-  "manufactureYear": null,
-  "manufactureCountry": "",
-  "serialNumber": "",
-  "hasConstructionDrawing": null,
-  "hasMaterialCertificate": null,
-  "liftingPurpose": "Mengangkat dan memindahkan barang / material",
-  "liftingCapacityKg": null,
-  "liftingHeightMeters": null,
-  "safetyEquipment": "Safety sign, Safety lamp, Safety helmet, dan APD lainnya.",
-  "visualInspection": {
-    "hasForkDefects": null,
-    "isNameplateAttached": null,
-    "isAparAvailable": null,
-    "isCapacityMarkingDisplayed": null,
-    "hasHydraulicLeak": null,
-    "isChainGoodCondition": null
+  "examinationType": "",
+  "subInspectionType": "",
+  "inspectionDate": "",
+  "generalData": {
+    "ownerName": "",
+    "ownerAddress": "",
+    "userInCharge": ""
   },
-  "testing": {
-    "loadAndTravelTest": {
-      "loadKg": null,
-      "liftHeightMeters": null,
-      "isAbleToLiftAndHold": null,
-      "isFunctioningWell": null
+  "technicalData": {
+    "brandType": "",
+    "manufacturer": "",
+    "locationAndYearOfManufacture": "",
+    "serialNumberUnitNumber": "",
+    "capacityWorkingLoad": "",
+    "liftingHeightMeters": ""
+  },
+  "inspectionResult": {
+    "visualCheck": {
+      "hasForkDefects": "",
+      "isNameplateAttached": "",
+      "isAparAvailable": "",
+      "isCapacityMarkingDisplayed": "",
+      "hasHydraulicLeak": "",
+      "isChainGoodCondition": ""
     },
-    "ndtHeelForkTest": {
-      "method": "Magnetic Test",
-      "hasCrackIndication": null
-    },
-    "isEmergencyStopFunctional": null,
-    "indicatorsTest": {
-      "isWarningLampFunctional": null,
-      "isHornFunctional": null
+    "functionalTest": {
+      "loadKg": "",
+      "liftHeightMeters": "",
+      "isAbleToLiftAndHold": "",
+      "isFunctioningWell": "",
+      "hasCrackIndication": "",
+      "isEmergencyStopFunctional": "",
+      "isWarningLampHornFunctional": ""
     }
   }
 }
