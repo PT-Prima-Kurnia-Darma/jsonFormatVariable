@@ -1,96 +1,387 @@
 {
-  "typeInspection": "",
-  "paaType": "",
-  "generalData": {
-    "owner": {
-      "name": "",
-      "address": ""
-    },
-    "user": {
-      "name": ""
-    },
-    "personInCharge": {
-      "name": ""
-    },
-    "unitLocation": "",
-    "equipmentType": "",
-    "manufacturer": {
-      "name": "",
-      "brandOrType": "",
-      "year": ""
-    },
-    "serialNumber": "",
-    "capacity": "",
-    "legalBasis": "",
-    "intendedUse": "",
-    "usagePermitNumber": "",
-    "operator": {
-      "certificateStatus": ""
-    },
+  "examinationType": "",
+  "subInspectionType": "",
+  "reportNumber": "",
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "personInCharge": "",
+  "location": "",
+  "equipmentType": "",
+  "manufacturer": "",
+  "brandOrType": "",
+  "manufactureYear": "",
+  "serialNumber": "",
+  "maxLiftingCapacityKg": "",
+  "legalBasis": "",
+  "liftingPurpose": "",
+  "usagePermitNumber": "",
+  "operator": {
+    "certificateStatus": "",
     "technicalDataManualStatus": ""
   },
-  "technicalData": {
-    "specifications": {
-      "liftHeight": "",
-      "girderLength": "",
-      "hoistingSpeed": "",
-      "travelingSpeed": "",
-      "traversingSpeed": ""
+  "specifications": {
+    "liftHeight": "",
+    "girderLength": "",
+    "hoistingSpeed": "",
+    "travelingSpeed": "",
+    "traversingSpeed": ""
+  },
+  "driveMotor": {
+    "capacity": "",
+    "hoisting": {
+      "powerKw": "",
+      "type": "",
+      "rpm": "",
+      "voltageV": "",
+      "currentA": "",
+      "frequencyHz": "",
+      "phase": "",
+      "powerSupply": ""
     },
-    "driveMotor": {
-      "hoisting": {},
-      "traveling": {},
-      "traversing": {}
+    "traveling": {
+      "powerKw": "",
+      "type": "",
+      "rpm": "",
+      "voltageV": "",
+      "currentA": "",
+      "frequencyHz": "",
+      "phase": "",
+      "powerSupply": ""
     },
-    "brake": {
+    "traversing": {
+      "powerKw": "",
+      "type": "",
+      "rpm": "",
+      "voltageV": "",
+      "currentA": "",
+      "frequencyHz": "",
+      "phase": "",
+      "powerSupply": ""
+    }
+  },
+  "startingResistor": {
+    "hoisting": {
+      "type": "",
+      "voltageV": "",
+      "currentA": ""
+    },
+    "traveling": {
+      "type": "",
+      "voltageV": "",
+      "currentA": ""
+    },
+    "traversing": {
+      "type": "",
+      "voltageV": "",
+      "currentA": ""
+    }
+  },
+  "brake": {
+    "type": "",
+    "model": ""
+  },
+  "controlBrake": {
+    "hoisting": {
       "type": "",
       "model": ""
     },
-    "hook": {
+    "traveling": {
+      "type": "",
+      "model": ""
+    },
+    "traversing": {
+      "type": "",
+      "model": ""
+    }
+  },
+  "hook": {
+    "hoisting": {
       "type": "",
       "capacity": "",
       "material": ""
     },
-    "wireRope": {
+    "traveling": {
+      "type": "",
+      "capacity": "",
+      "material": ""
+    },
+    "traversing": {
+      "type": "",
+      "capacity": "",
+      "material": ""
+    }
+  },
+  "wireRopeOrChain": {
+    "mediumType": "",
+    "hoisting": {
+      "type": "",
+      "construction": "",
+      "diameter": "",
+      "length": ""
+    },
+    "traveling": {
+      "type": "",
+      "construction": "",
+      "diameter": "",
+      "length": ""
+    },
+    "traversing": {
       "type": "",
       "construction": "",
       "diameter": "",
       "length": ""
     }
   },
-  "visualInspection": {
-    "foundation": {},
-    "frame": {},
-    "railSupportBeam": {},
-    "travelingRail": {},
-    "traversingRail": {},
-    "girder": {},
-    "travelingGearbox": {},
-    "driveWheels": {},
-    "traversingGearbox": {},
-    "trolleyDriveWheels": {},
-    "drum": {},
-    "brake": {},
-    "hoistGearBox": {},
-    "pulleys": {},
-    "hooks": {},
-    "wireRopes": {},
-    "chains": {},
-    "limitSwitches": {},
-    "operatorControls": {},
-    "electricalComponents": {}
+  "anchorBolts": {
+    "corrosion": "",
+    "cracks": "",
+    "deformation": "",
+    "fastening": ""
+  },
+  "columnFrame": {
+    "corrosion": "",
+    "cracks": "",
+    "deformation": "",
+    "fastening": "",
+    "transverseReinforcement": "",
+    "diagonalReinforcement": ""
+  },
+  "ladder": {
+    "corrosion": "",
+    "cracks": "",
+    "deformation": "",
+    "fastening": ""
+  },
+  "workingFloor": {
+    "corrosion": "",
+    "cracks": "",
+    "deformation": "",
+    "fastening": ""
+  },
+  "railSupportBeam": {
+    "corrosion": "",
+    "cracks": "",
+    "deformation": "",
+    "fastening": ""
+  },
+  "travelingRail": {
+    "corrosion": "",
+    "cracks": "",
+    "railConnection": "",
+    "railAlignment": "",
+    "interRailAlignment": "",
+    "interRailFlatness": "",
+    "railConnectionGap": "",
+    "railFastener": "",
+    "railStopper": ""
+  },
+  "traversingRail": {
+    "corrosion": "",
+    "cracks": "",
+    "railConnection": "",
+    "railAlignment": "",
+    "interRailAlignment": "",
+    "interRailFlatness": "",
+    "railConnectionGap": "",
+    "railFastener": "",
+    "railStopper": ""
+  },
+  "girder": {
+    "corrosion": "",
+    "cracks": "",
+    "camber": "",
+    "girderConnection": "",
+    "endGirderConnection": "",
+    "truckMountingOnGirder": ""
+  },
+  "travelingGearbox": {
+    "corrosion": "",
+    "cracks": "",
+    "lubricatingOil": "",
+    "oilSeal": ""
+  },
+  "driveWheels": {
+    "wear": "",
+    "cracks": "",
+    "deformation": "",
+    "flangeCondition": "",
+    "chainCondition": ""
+  },
+  "idleWheels": {
+    "safety": "",
+    "cracks": "",
+    "deformation": "",
+    "flangeCondition": ""
+  },
+  "wheelConnector": {
+    "alignment": "",
+    "crossJoint": "",
+    "lubrication": ""
+  },
+  "girderStopper": {
+    "condition": "",
+    "reinforcement": ""
+  },
+  "trolleyTraversingGearbox": {
+    "fastening": "",
+    "corrosion": "",
+    "cracks": "",
+    "lubricatingOil": "",
+    "oilSeal": ""
+  },
+  "trolleyDriveWheels": {
+    "wear": "",
+    "cracks": "",
+    "deformation": "",
+    "flangeCondition": "",
+    "chainCondition": ""
+  },
+  "trolleyIdleWheels": {
+    "wear": "",
+    "cracks": "",
+    "deformation": "",
+    "flangeCondition": ""
+  },
+  "trolleyWheelConnector": {
+    "alignment": "",
+    "crossJoint": "",
+    "lubrication": ""
+  },
+  "trolleyGirderStopper": {
+    "condition": "",
+    "reinforcement": ""
+  },
+  "windingDrum": {
+    "groove": "",
+    "grooveLip": "",
+    "flanges": ""
+  },
+  "visualBrakeInspection": {
+    "wear": "",
+    "adjustment": ""
+  },
+  "hoistGearbox": {
+    "lubrication": "",
+    "oilSeal": ""
+  },
+  "pulleySprocket": {
+    "pulleyGroove": "",
+    "pulleyLip": "",
+    "pulleyPin": "",
+    "bearing": "",
+    "pulleyGuard": "",
+    "ropeChainGuard": ""
+  },
+  "mainHookInspection": {
+    "wear": "",
+    "hookOpeningGap": "",
+    "swivelNutAndBearing": "",
+    "trunnion": ""
+  },
+  "auxiliaryHookInspection": {
+    "wear": "",
+    "hookOpeningGap": "",
+    "swivelNutAndBearing": "",
+    "trunnion": ""
+  },
+  "mainWireRopeInspection": {
+    "corrosion": "",
+    "wear": "",
+    "breakage": "",
+    "deformation": ""
+  },
+  "auxiliaryWireRopeInspection": {
+    "corrosion": "",
+    "wear": "",
+    "breakage": "",
+    "deformation": ""
+  },
+  "mainChainInspection": {
+    "corrosion": "",
+    "wear": "",
+    "crackOrBreakage": "",
+    "deformation": ""
+  },
+  "auxiliaryChainInspection": {
+    "corrosion": "",
+    "wear": "",
+    "crackOrBreakage": "",
+    "deformation": ""
+  },
+  "limitSwitch": {
+    "longTravel": "",
+    "crossTravel": "",
+    "hoist": ""
+  },
+  "operatorCabin": {
+    "safetyLadder": "",
+    "door": "",
+    "window": "",
+    "fanOrAC": "",
+    "controlLeversOrButtons": "",
+    "pendantControl": "",
+    "lighting": "",
+    "horn": "",
+    "fuseProtection": "",
+    "communicationDevice": "",
+    "fireExtinguisher": "",
+    "operationalSigns": "",
+    "ignitionOrMasterSwitch": ""
+  },
+  "electricalComponents": {
+    "voltageInfo": "220/380 Volt 3 Phase 50 HZ",
+    "panelConductorConnector": "",
+    "conductorProtection": "",
+    "motorInstallationSafetySystem": "",
+    "groundingSystem": "",
+    "installation": ""
   },
   "nonDestructiveTest": {
-    "wireRope": {},
-    "mainHook": {},
-    "girder": []
+    "wireRope": {
+      "method": "",
+      "main": {
+        "specification": "",
+        "measurement": "",
+        "construction": "",
+        "type": "",
+        "length": "",
+        "age": "",
+        "defect": "",
+        "notes": ""
+      }
+    },
+    "mainHook": {
+      "method": "",
+      "result": "",
+      "notes": "",
+      "dimensions": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": "",
+        "E": "",
+        "F": "",
+        "G": "",
+        "H": ""
+      },
+      "tolerances": {
+        "A": "",
+        "C": "",
+        "F": "",
+        "G": "",
+        "H": ""
+      }
+    },
+    "girderTest": []
   },
   "testing": {
     "dynamicTest": {
-      "noLoad": {},
+      "noLoad": [],
       "withLoad": []
     },
     "staticTest": {
+      "loadPercentage": "",
       "spanLength": "",
       "standardDeflection": "",
       "deflectionResults": []
