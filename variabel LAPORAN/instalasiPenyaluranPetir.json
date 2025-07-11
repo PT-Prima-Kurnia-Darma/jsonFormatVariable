@@ -1,75 +1,143 @@
 {
-  "id": "",
+  "companyPermitNo": "",
+  "expertPermitNo": "",
+  "expertName": "",
+  "companyName": "",
+  "companyLocation": "",
+  "usageLocation": "",
+  "objectType": "",
   "typeInspection": "",
-  "registrationNumber": "",
-  "serviceProvider": {
-    "nameAndAddress": "",
-    "companyPermitNumber": "",
-    "expertPermitNumber": "",
-    "expertName": "",
-    "testEquipmentUsed": ""
-  },
-  "assetOwner": {
-    "companyName": "",
-    "companyLocation": "",
-    "usageLocation": "",
-    "objectType": "",
-    "examinationType": "",
-    "approvalNumber": "",
-    "inspectionDate": null
-  },
-  "technicalData": {
-    "conductorType": "",
-    "buildingHeight": null,
-    "buildingArea": null,
-    "receiverHeight": null,
-    "receiverCount": 0,
-    "testJointCount": 0,
-    "downConductorCount": 0,
-    "downConductorTypeAndSize": "",
-    "earthSpreadResistance": "",
-    "installationYear": ""
-  },
-  "physicalInspection": {
-    "installationSystem": { "condition": "", "notes": "" },
-    "receiverHead": { "condition": "", "notes": "" },
-    "receiverMast": { "condition": "", "notes": "" },
-    "mastSupportSystem": { "condition": "", "notes": "" },
-    "downConductor": { "condition": "", "notes": "" },
-    "conductorClamps": { "condition": "", "notes": "" },
-    "jointConnections": { "condition": "", "notes": "" },
-    "conductorAndGroundingTerminalBox": { "condition": "", "notes": "" },
-    "controlBox": { "condition": "", "notes": "" },
-    "groundingSystem": { "condition": "", "notes": "" },
-    "directSurfaceConnection": { "condition": "", "notes": "" }
-  },
-  "visualGroundingInspection": {
-    "airTerminal": "",
-    "downConductor": "",
-    "groundingAndTestJoint": ""
-  },
-  "otherStandardChecks": {
-    "isAsBuiltDrawingCompliant": { "result": "", "qualification": "", "notes": "" },
-    "isAirTerminalConnectedToConductor": { "result": "", "qualification": "", "notes": "" },
-    "hasConnectionsOnConductor": { "result": "", "qualification": "", "notes": "" },
-    "usesTestJointBox": { "result": "", "qualification": "", "notes": "" },
-    "isConductorStandardCompliant": { "result": "", "qualification": "", "notes": "" },
-    "hasLightningCounter": { "result": "", "qualification": "", "notes": "" },
-    "hasRadioactiveOrBattery": { "result": "", "qualification": "", "notes": "" },
-    "usesNonCorrosiveCopperRod": { "result": "", "qualification": "", "notes": "" },
-    "hasSurgeArrester": { "result": "", "qualification": "", "notes": "" }
-  },
-  "testResults": {
-    "groundingResistanceValue": "",
+  "certificateNo": "",
+  "inspectionDate": "",
+  "conductorType": "",
+  "buildingHeight": "",
+  "buildingArea": "",
+  "receiverHeight": "",
+  "receiverCount": "",
+  "testJointCount": "",
+  "downConductorCount": "",
+  "conductorDescription": "",
+  "groundingResistance": "",
+  "installationYear": "",
+  "installer": "",
+  "installationSystem": {
+    "good": "",
+    "fair": "",
+    "poor": "",
     "notes": ""
   },
-  "conclusion": {
-    "status": "",
-    "recommendations": [],
-    "nextInspectionDate": null
+  "receiverHead": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
   },
-  "inspector": {
-    "name": "",
-    "title": ""
+  "receiverPole": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "poleReinforcement": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "downConductor": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "conductorClamps": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "jointConnections": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "groundingTerminalBox": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "controlBox": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "groundingSystem": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "conductorToGroundConnection": {
+    "good": "",
+    "fair": "",
+    "poor": "",
+    "notes": ""
+  },
+  "asBuiltDrawingCompliance": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "terminalToConductorConnection": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "downConductorJoints": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "testJointBoxInstallation": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "conductorMaterialStandard": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "lightningCounterInstalled": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "radioactiveTerminal": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "groundingRodMaterial": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
+  },
+  "arresterInstallation": {
+    "good": "",
+    "poor": "",
+    "qualification": "",
+    "notes": ""
   }
 }
