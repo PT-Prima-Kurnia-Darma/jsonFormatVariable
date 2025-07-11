@@ -1,7 +1,30 @@
 {
-  "inspectionType": "",
-  "id": "",
+  "examinationType": "",
   "companyName": "",
+  "companyAddress": "",
+  "initialDocumentVerification": {
+    "singleLineDiagram": {
+      "initialDocSldAda": "",
+      "initialDocSldTidakAda": "",
+      "initialDocSldResult": ""
+    },
+    "layout": {
+      "initialDocLayoutAda": "",
+      "initialDocLayoutTidakAda": "",
+      "initialDocLayoutResult": ""
+    },
+    "usagePermitCertificate": {
+      "initialDocPermitAda": "",
+      "initialDocPermitTidakAda": "",
+      "initialDocPermitResult": ""
+    },
+    "technicianLicense": {
+      "initialDocLicenseAda": "",
+      "initialDocLicenseTidakAda": "",
+      "initialDocLicenseResult": ""
+    }
+  },
+  "testEquipment": [],
   "generalData": {
     "companyName": "",
     "companyAddress": "",
@@ -11,80 +34,438 @@
     "safetyServiceProvider": "",
     "ohsExpert": "",
     "permitNumber": "",
+    "generalDataTime": "",
     "inspectionLocation": ""
   },
-  "documentCheck": {
-    "singleLineDiagram": {
-      "status": "",
-      "description": "",
-      "reference": ""
+  "technicalData": {
+    "powerSource": {
+      "technicalDataPlnPower": "",
+      "technicalDataGeneratorPower": ""
     },
-    "layout": {
-      "status": "",
-      "description": "",
-      "reference": ""
+    "loadingSystem": {
+      "technicalDataTotalInstalledLoad": "",
+      "technicalDataLightingPower": "",
+      "technicalDataPowerLoad": ""
     },
-    "usageCertificate": {
-      "status": "",
-      "description": "",
-      "reference": ""
+    "currentAndVoltageType": ""
+  },
+  "documentInspection": {
+    "documentInspection1": {
+      "planningPermit": {
+        "doc1PlanningPermitResult": ""
+      },
+      "locationMap": {
+        "doc1LocationMapResult": ""
+      },
+      "singleLineDiagram": {
+        "doc1SldResult": ""
+      },
+      "layoutAndCabling": {
+        "doc1LayoutResult": ""
+      },
+      "wiringDiagram": {
+        "doc1WiringDiagramResult": ""
+      },
+      "areaClassification": {
+        "doc1AreaClassificationResult": ""
+      },
+      "panelComponentList": {
+        "doc1PanelComponentListResult": ""
+      },
+      "shortCircuitCurrentCalc": {
+        "doc1ShortCircuitCalcResult": ""
+      },
+      "manualBook": {
+        "doc1ManualBookResult": ""
+      },
+      "maintenanceAndOperationBook": {
+        "doc1MaintenanceBookResult": ""
+      },
+      "warningSigns": {
+        "doc1WarningSignsResult": ""
+      },
+      "manufacturerCertification": {
+        "doc1ManufacturerCertResult": ""
+      },
+      "technicalSpecification": {
+        "doc1TechSpecResult": ""
+      },
+      "technicalSpecificationCertificate": {
+        "doc1TechSpecCertifResult": ""
+      },
+
+      "equipmentCertification": {
+        "doc1EquipmentCertResult": ""
+      },
+      "powerRecapitulation": {
+        "doc1PowerRecapResult": ""
+      },
+      "dailyRecord": {
+        "doc1DailyRecordResult": ""
+      },
+      "panelPointCount": {
+        "doc1PanelPointCountResult": ""
+      },
+      "panelCover": {
+        "doc1PanelCoverResult": ""
+      },
+      "otherSupportingData": {
+        "doc1OtherDataResult": ""
+      }
     },
-    "technicianLicense": {
-      "status": "",
-      "description": "",
-      "reference": ""
+    "documentInspection2": {
+      "unitConstruction": {
+        "doc2UnitConstructionResult": ""
+      },
+      "placement": {
+        "doc2PlacementResult": ""
+      },
+      "nameplateVerification": {
+        "doc2NameplateResult": ""
+      },
+      "areaClassification": {
+        "doc2AreaClassificationResult": ""
+      },
+      "shockAndForeignObjectProtection": {
+        "doc2ProtectionResult": ""
+      },
+      "radiationShielding": {
+        "doc2RadiationShieldingResult": ""
+      },
+      "panelDoorHolder": {
+        "doc2PanelDoorHolderResult": ""
+      },
+      "boltsAndScrews": {
+        "doc2BoltsAndScrewsResult": ""
+      },
+      "busbarIsolation": {
+        "doc2BusbarIsolationResult": ""
+      },
+      "busbarClearance": {
+        "doc2BusbarClearanceResult": ""
+      },
+      "cableInstallation": {
+        "doc2CableInstallationResult": ""
+      },
+      "doorCableProtection": {
+        "doc2DoorCableProtectionResult": ""
+      },
+      "fuseReplacementSafety": {
+        "doc2FuseSafetyResult": ""
+      },
+      "cableTerminalProtection": {
+        "doc2CableTerminalProtectionResult": ""
+      },
+      "instrumentMarking": {
+        "doc2InstrumentMarkingResult": ""
+      },
+      "equipmentCoding": {
+        "doc2EquipmentCodingResult": ""
+      },
+      "cableInOutInstallation": {
+        "doc2CableInOutResult": ""
+      },
+      "busbarSize": {
+        "doc2BusbarSizeResult": ""
+      },
+      "busbarCleanliness": {
+        "doc2BusbarCleanlinessResult": ""
+      },
+      "busbarPhaseMarking": {
+        "doc2BusbarMarkingResult": ""
+      },
+      "groundingCableInstallation": {
+        "doc2GroundingCableResult": ""
+      },
+      "panelDoorInstallation": {
+        "doc2PanelDoorResult": ""
+      },
+      "sparepartSpecification": {
+        "doc2SparepartSpecResult": ""
+      },
+      "safetyFacilities": {
+        "doc2SafetyFacilitiesResult": ""
+      },
+      "powerBreakerData": {
+        "currentRating": {
+          "doc2BreakerCurrentRatingResult": ""
+        },
+        "voltageRating": {
+          "doc2BreakerVoltageRatingResult": ""
+        },
+        "breakingCurrentRating": {
+          "doc2BreakerBreakingCurrentResult": ""
+        },
+        "controlVoltage": {
+          "doc2BreakerControlVoltageResult": ""
+        },
+        "manufacturer": {
+          "doc2BreakerManufacturerResult": ""
+        },
+        "type": {
+          "doc2BreakerTypeResult": ""
+        },
+        "serialNumber": {
+          "doc2BreakerSerialResult": ""
+        }
+      }
     }
   },
-  "technicalDocuments": {
-    "planningPermit": { "status": "", "description": "", "reference": "" },
-    "locationMap": { "status": "", "description": "", "reference": "" },
-    "singleLineDiagram": { "status": "", "description": "", "reference": "" },
-    "installationLayout": { "status": "", "description": "", "reference": "" },
-    "wiringDiagram": { "status": "", "description": "", "reference": "" },
-    "areaClarificationDrawing": { "status": "", "description": "", "reference": "" },
-    "panelComponentList": { "status": "", "description": "", "reference": "" },
-    "shortCircuitCalculation": { "status": "", "description": "", "reference": "" },
-    "manual": { "status": "", "description": "", "reference": "" },
-    "maintenanceLog": { "status": "", "description": "", "reference": "" },
-    "warningSign": { "status": "", "description": "", "reference": "" },
-    "manufacturerCertificate": { "status": "", "description": "", "reference": "" },
-    "equipmentSpecifications": { "status": "", "description": "", "reference": "" },
-    "equipmentCertification": { "status": "", "description": "", "reference": "" },
-    "powerRecapitulation": { "status": "", "description": "", "reference": "" },
-    "dailyRecord": { "status": "", "description": "", "reference": "" },
-    "panelPointCount": 0,
-    "panelCoverCondition": "",
-    "otherSupportingData": { "status": "", "description": "", "reference": "" }
+  "testing": {
+    "insulationResistanceTest": {
+      "testingInsulationResult": ""
+    },
+    "groundingResistanceTest": {
+      "testingGroundingResult": ""
+    },
+    "powerBreakerEquipmentTest": {
+      "currentTransformer": {
+        "testingBreakerCtResult": ""
+      },
+      "voltageTransformer": {
+        "testingBreakerPtResult": ""
+      },
+      "instruments": {
+        "testingBreakerInstrumentsResult": ""
+      },
+      "fuseRating": {
+        "testingBreakerFuseResult": ""
+      },
+      "mechanicalBreaker": {
+        "testingBreakerMechanicalResult": ""
+      },
+      "cableTerminal": {
+        "testingBreakerTerminalResult": ""
+      },
+      "terminalMarking": {
+        "testingBreakerTerminalMarkingResult": ""
+      },
+      "interlockSystem": {
+        "testingBreakerInterlockResult": ""
+      },
+      "auxiliarySwitch": {
+        "testingBreakerAuxSwitchResult": ""
+      },
+      "mechanicalTrip": {
+        "testingBreakerMechanicalTripResult": ""
+      }
+    },
+    "overloadTripTest": {
+      "testingOverloadTripResult": ""
+    },
+    "reversePowerRelayTest": {
+      "testingReversePowerRelayResult": ""
+    },
+    "reverseCurrentRelayTest": {
+      "testingReverseCurrentRelayResult": ""
+    },
+    "breakerTripTest": {
+      "testingBreakerTripResult": ""
+    },
+    "temperatureMeasurement": {
+      "testingTemperatureResult": ""
+    },
+    "indicatorLampTest": {
+      "testingIndicatorLampResult": ""
+    },
+    "meterDeviationTest": {
+      "testingMeterDeviationResult": ""
+    },
+    "synchronizationTest": {
+      "testingSynchronizationResult": ""
+    },
+    "conductorAmpacity": {
+      "testingConductorAmpacityResult": ""
+    },
+    "protectionRating": {
+      "testingProtectionRatingResult": ""
+    },
+    "voltageDrop": {
+      "testingVoltageDropResult": ""
+    },
+    "lossConnection": {
+      "testingLossConnectionResult": ""
+    }
   },
-  "testingResults": {
-    "insulationResistance": "",
-    "groundingResistance": "",
-    "circuitBreakerTest": "",
-    "currentTransformerTest": "",
-    "voltageTransformerTest": "",
-    "measuringInstrumentTest": "",
-    "fuseRatingTest": "",
-    "mechanicalBreakerTest": "",
-    "cableTerminalTest": "",
-    "terminalMarkingTest": "",
-    "interlockSystemTest": "",
-    "auxiliarySwitchTest": "",
-    "mechanicalTripTest": "",
-    "underVoltageTripTest": "",
-    "reversePowerRelayTest": "",
-    "reverseCurrentRelayTest": "",
-    "breakerTripTest": "",
-    "temperatureMeasurement": "",
-    "indicatorLampFunctionTest": "",
-    "meterDeviationTest": "",
-    "synchronizationFunctionTest": "",
-    "conductorAmpacity": "",
-    "protectionRating": "",
-    "voltageDrop": "",
-    "lossConnectionTest": ""
+  "sdpVisualInspection": {
+    "frontView": {
+      "panelIndicatorLamps": {
+        "sdpFrontIndicatorLampsResult": ""
+      },
+      "panelDoorClearance": {
+        "sdpFrontDoorClearanceResult": ""
+      },
+      "lighting": {
+        "productionArea": {
+          "sdpFrontLightingProdResult": ""
+        },
+        "office": {
+          "sdpFrontLightingOfficeResult": ""
+        },
+        "mainPanel": {
+          "sdpFrontLightingMainPanelResult": ""
+        },
+        "warehouse": {
+          "sdpFrontLightingWarehouseResult": ""
+        }
+      },
+      "unusedItems": {
+        "sdpFrontUnusedItemsResult": ""
+      },
+      "ventilationAndWarningSigns": {
+        "sdpFrontVentilationResult": ""
+      }
+    },
+    "insideViewFloor1": {
+      "touchVoltageProtectionCover": {
+        "sdpFloor1CoverResult": ""
+      },
+      "singleLineDiagramAndHistory": {
+        "sdpFloor1SldResult": ""
+      },
+      "bondingCable": {
+        "sdpFloor1BondingResult": ""
+      },
+      "labeling": {
+        "sdpFloor1LabelingResult": ""
+      },
+      "cableColorCode": {
+        "sdpFloor1ColorCodeResult": ""
+      },
+      "panelCleanliness": {
+        "sdpFloor1CleanlinessResult": ""
+      },
+      "installationNeatness": {
+        "sdpFloor1NeatnessResult": ""
+      }
+    },
+    "insideViewFloor2": {
+      "touchVoltageProtectionCover": {
+        "sdpFloor2CoverResult": ""
+      },
+      "singleLineDiagramAndHistory": {
+        "sdpFloor2SldResult": ""
+      },
+      "bondingCable": {
+        "sdpFloor2BondingResult": ""
+      },
+      "labeling": {
+        "sdpFloor2LabelingResult": ""
+      },
+      "cableColorCode": {
+        "sdpFloor2ColorCodeResult": ""
+      },
+      "panelCleanliness": {
+        "sdpFloor2CleanlinessResult": ""
+      },
+      "installationNeatness": {
+        "sdpFloor2NeatnessResult": ""
+      }
+    },
+    "insideViewFloor3": {
+      "touchVoltageProtectionCover": {
+        "sdpFloor3CoverResult": ""
+      },
+      "singleLineDiagramAndHistory": {
+        "sdpFloor3SldResult": ""
+      },
+      "bondingCable": {
+        "sdpFloor3BondingResult": ""
+      },
+      "labeling": {
+        "sdpFloor3LabelingResult": ""
+      },
+      "cableColorCode": {
+        "sdpFloor3ColorCodeResult": ""
+      },
+      "panelCleanliness": {
+        "sdpFloor3CleanlinessResult": ""
+      },
+      "installationNeatness": {
+        "sdpFloor3NeatnessResult": ""
+      }
+    },
+    "insideViewFloor4": {
+      "touchVoltageProtectionCover": {
+        "sdpFloor4CoverResult": ""
+      },
+      "singleLineDiagramAndHistory": {
+        "sdpFloor4SldResult": ""
+      },
+      "bondingCable": {
+        "sdpFloor4BondingResult": ""
+      },
+      "labeling": {
+        "sdpFloor4LabelingResult": ""
+      },
+      "cableColorCode": {
+        "sdpFloor4ColorCodeResult": ""
+      },
+      "panelCleanliness": {
+        "sdpFloor4CleanlinessResult": ""
+      },
+      "installationNeatness": {
+        "sdpFloor4NeatnessResult": ""
+      }
+    },
+    "terminalSystem": {
+      "busbar": {
+        "sdpTerminalBusbarResult": ""
+      },
+      "breaker": {
+        "sdpTerminalBreakerResult": ""
+      },
+      "cableLugs": {
+        "sdpTerminalCableLugsResult": ""
+      },
+      "groundingSystem": {
+        "sdpTerminalGroundingResult": ""
+      },
+      "busbarToBusbarDistance": {
+        "sdpTerminalBusbarDistanceResult": ""
+      }
+    }
   },
-  "findings": "",
-  "conclusion": "",
-  "recommendations": "",
-  "nextInspectionDate": ""
+  "sdpTesting": {
+    "voltageTest": {
+      "sdpTestingVoltageResult": ""
+    },
+    "currentTest": {
+      "sdpTestingCurrentResult": ""
+    },
+    "meteringTest": {
+      "sdpTestingMeteringResult": ""
+    },
+    "panelLabelTest": {
+      "sdpTestingPanelLabelResult": ""
+    },
+    "warningSignTest": {
+      "sdpTestingWarningSignResult": ""
+    },
+    "selectorSwitchAndLockTest": {
+      "sdpTestingSwitchLockResult": ""
+    },
+    "terminalHeatTest": {
+      "sdpTestingTerminalHeatResult": ""
+    },
+    "groundingTest": {
+      "sdpTestingGroundingResult": ""
+    },
+    "mainConductorAmpacityTest": {
+      "sdpTestingConductorAmpacityResult": ""
+    },
+    "mainProtectionRatingTest": {
+      "sdpTestingProtectionRatingResult": ""
+    }
+  },
+  "findings": [],
+  "conclusion": [],
+  "recommendations": [],
+  "inspector": {
+    "locationAndDate": "",
+    "company": "",
+    "name": "",
+    "titleAndRegNo": ""
+  },
+  "documentation": []
 }
