@@ -1,106 +1,310 @@
 {
-  "ptpType": "",
-  "typeInspection": "",
+  "examinationType": "",
+  "subInspectionType": "",
   "generalData": {
-    "owner": {
-      "name": "",
-      "address": ""
-    },
-    "user": {
-      "name": "",
-      "address": ""
-    },
-    "personInCharge": "",
+    "ownerNamwe": "",
+    "ownerAddress": "",
+    "userInCharge": "",
+    "userAddressInCharge": "",
+    "subcontractorPersonInCharge": "",
     "unitLocation": "",
-    "equipment": {
-      "type": "",
-      "brandOrType": "",
-      "serialNumber": ""
-    },
-    "manufacturerOrInstaller": "",
-    "locationAndYear": "",
-    "driveMotorPower": "",
+    "equipmentType": "",
+    "brandType": "",
+    "serialNumberUnitNumber": "",
+    "manufacturer": "",
+    "locationAndYearOfManufacture": "",
+    "capacityWorkingLoad": "",
+    "motorPower": "",
     "intendedUse": "",
-    "pjk3PermitNumber": "",
-    "ak3PermitNumber": "",
+    "pjk3SkpNo": "",
+    "ak3SkpNo": "",
+    "portableOrStationer": "",
     "usagePermitNumber": "",
     "operatorName": "",
-    "machineHistory": ""
+    "equipmentHistory": ""
   },
   "technicalData": {
-    "type": "",
-    "maxFeederSpeed": "",
-    "maxPlateWidth": "",
-    "plateThickness": "",
-    "maxPlateWeight": "",
-    "maxInnerCoilDiameter": "",
-    "maxOuterCoilDiameter": "",
-    "driveMotor": {
-      "type": "",
-      "power": ""
+    "technicalDataType": "",
+    "technicalDataMaxFeederSpeed": "",
+    "technicalDataMaxPlateWidth": "",
+    "technicalDataPlateThickness": "",
+    "technicalDataMaxPlateWeight": "",
+    "technicalDataMaxInnerCoilDiameter": "",
+    "technicalDataMaxOuterCoilDiameter": "",
+    "technicalDataDriveMotor": "",
+    "technicalDataMotorPower": "",
+    "technicalDataBrandAndSerial": "",
+    "technicalDataLocationAndYear": "",
+    "machineDimension": {
+      "technicalDataMachineWeight": "",
+      "technicalDataOverallDimension": ""
     },
-    "brandAndSerialNumber": "",
-    "locationAndYear": "",
-    "machineDimensions": {
-      "weight": "",
-      "overall": ""
-    },
-    "foundationDimensions": {
-      "dimensions": "",
-      "spacing": "",
-      "vibrationDamperType": "",
-      "weight": ""
+    "foundationDimension": {
+      "technicalDataFoundationDim": "",
+      "technicalDataFoundationDistance": "",
+      "technicalDataVibrationDamperType": "",
+      "technicalDataFoundationWeight1": "",
+      "technicalDataFoundationWeight2": ""
     }
   },
-  "inspection": {
-    "foundation": {},
-    "frame": {},
-    "roller": {},
-    "controlPanel": {},
-    "display": {},
-    "operationButtons": {},
-    "electricalComponents": {},
-    "safetyDevices": {},
-    "hydraulicPump": {},
-    "hydraulicHose": {}
+  "visualCheck": {
+    "machineFoundation": {
+      "visualCheckFoundationBaik": "",
+      "visualCheckFoundationBuruk": "",
+      "visualCheckFoundationResult": ""
+    },
+    "foundationBearing": {
+      "visualCheckFoundationBearingBaik": "",
+      "visualCheckFoundationBearingBuruk": "",
+      "visualCheckFoundationBearingResult": ""
+    },
+    "machineFrame": {
+      "mainFrame": {
+        "visualCheckMainFrameBaik": "",
+        "visualCheckMainFrameBuruk": "",
+        "visualCheckMainFrameResult": ""
+      },
+      "braceFrame": {
+        "visualCheckBraceFrameBaik": "",
+        "visualCheckBraceFrameBuruk": "",
+        "visualCheckBraceFrameResult": ""
+      }
+    },
+    "roller": {
+      "visualCheckRollerBaik": "",
+      "visualCheckRollerBuruk": "",
+      "visualCheckRollerResult": ""
+    },
+    "controlPanel": {
+      "visualCheckControlPanelBaik": "",
+      "visualCheckControlPanelBuruk": "",
+      "visualCheckControlPanelResult": ""
+    },
+    "display": {
+      "visualCheckDisplayBaik": "",
+      "visualCheckDisplayBuruk": "",
+      "visualCheckDisplayResult": ""
+    },
+    "operationButtons": {
+      "visualCheckOperationButtonsBaik": "",
+      "visualCheckOperationButtonsBuruk": "",
+      "visualCheckOperationButtonsResult": ""
+    },
+    "electricalComponents": {
+      "voltage": {
+        "visualCheckElectricalVoltageBaik": "",
+        "visualCheckElectricalVoltageBuruk": "",
+        "visualCheckElectricalVoltageResult": ""
+      },
+      "power": {
+        "visualCheckElectricalPowerBaik": "",
+        "visualCheckElectricalPowerBuruk": "",
+        "visualCheckElectricalPowerResult": ""
+      },
+      "phase": {
+        "visualCheckElectricalPhaseBaik": "",
+        "visualCheckElectricalPhaseBuruk": "",
+        "visualCheckElectricalPhaseResult": ""
+      },
+      "frequency": {
+        "visualCheckElectricalFrequencyBaik": "",
+        "visualCheckElectricalFrequencyBuruk": "",
+        "visualCheckElectricalFrequencyResult": ""
+      },
+      "current": {
+        "visualCheckElectricalCurrentBaik": "",
+        "visualCheckElectricalCurrentBuruk": "",
+        "visualCheckElectricalCurrentResult": ""
+      },
+      "electricalPanel": {
+        "visualCheckElectricalPanelBaik": "",
+        "visualCheckElectricalPanelBuruk": "",
+        "visualCheckElectricalPanelResult": ""
+      },
+      "conductor": {
+        "visualCheckElectricalConductorBaik": "",
+        "visualCheckElectricalConductorBuruk": "",
+        "visualCheckElectricalConductorResult": ""
+      },
+      "insulation": {
+        "visualCheckElectricalInsulationBaik": "",
+        "visualCheckElectricalInsulationBuruk": "",
+        "visualCheckElectricalInsulationResult": ""
+      }
+    },
+    "safetyDevice": {
+      "limitSwitchUp": {
+        "visualCheckSafetyLimitSwitchUpBaik": "",
+        "visualCheckSafetyLimitSwitchUpBuruk": "",
+        "visualCheckSafetyLimitSwitchUpResult": ""
+      },
+      "limitSwitchDown": {
+        "visualCheckSafetyLimitSwitchDownBaik": "",
+        "visualCheckSafetyLimitSwitchDownBuruk": "",
+        "visualCheckSafetyLimitSwitchDownResult": ""
+      },
+      "groundingResistance": {
+        "visualCheckSafetyGroundingBaik": "",
+        "visualCheckSafetyGroundingBuruk": "",
+        "visualCheckSafetyGroundingResult": ""
+      },
+      "safetyGuard": {
+        "visualCheckSafetyGuardBaik": "",
+        "visualCheckSafetyGuardBuruk": "",
+        "visualCheckSafetyGuardResult": ""
+      },
+      "stampLock": {
+        "visualCheckSafetyStampLockBaik": "",
+        "visualCheckSafetyStampLockBuruk": "",
+        "visualCheckSafetyStampLockResult": ""
+      },
+      "pressureIndicator": {
+        "visualCheckSafetyPressureIndicatorBaik": "",
+        "visualCheckSafetyPressureIndicatorBuruk": "",
+        "visualCheckSafetyPressureIndicatorResult": ""
+      },
+      "emergencyStop": {
+        "visualCheckSafetyEmergencyStopBaik": "",
+        "visualCheckSafetyEmergencyStopBuruk": "",
+        "visualCheckSafetyEmergencyStopResult": ""
+      },
+      "handSensor": {
+        "visualCheckSafetyHandSensorBaik": "",
+        "visualCheckSafetyHandSensorBuruk": "",
+        "visualCheckSafetyHandSensorResult": ""
+      }
+    },
+    "hydraulicPump": {
+      "visualCheckHydraulicPumpBaik": "",
+      "visualCheckHydraulicPumpBuruk": "",
+      "visualCheckHydraulicPumpResult": ""
+    },
+    "hydraulicHose": {
+      "visualCheckHydraulicHoseBaik": "",
+      "visualCheckHydraulicHoseBuruk": "",
+      "visualCheckHydraulicHoseResult": ""
+    }
   },
-  "testing": {
-    "safetyDeviceTests": {},
-    "speedTest": {},
-    "functionTest": {},
-    "weldJointTest": {},
-    "vibrationTest": {},
-    "lightingTest": {},
-    "noiseTest": {},
-    "electricalMeasurements": {}
+  "measurementAndTesting": {
+    "safetyDeviceTest": {
+      "groundingResistance": {
+        "testingSafetyGroundingMemenuhi": "",
+        "testingSafetyGroundingTidakMemenuhi": "",
+        "testingSafetyGroundingResult": ""
+      },
+      "safetyGuard": {
+        "testingSafetyGuardMemenuhi": "",
+        "testingSafetyGuardTidakMemenuhi": "",
+        "testingSafetyGuardResult": ""
+      },
+      "roller": {
+        "testingSafetyRollerMemenuhi": "",
+        "testingSafetyRollerTidakMemenuhi": "",
+        "testingSafetyRollerResult": ""
+      },
+      "emergencyStop": {
+        "testingSafetyEmergencyStopMemenuhi": "",
+        "testingSafetyEmergencyStopTidakMemenuhi": "",
+        "testingSafetyEmergencyStopResult": ""
+      }
+    },
+    "speedTest": {
+      "testingSpeedMemenuhi": "",
+      "testingSpeedTidakMemenuhi": "",
+      "testingSpeedResult": ""
+    },
+    "functionTest": {
+      "testingFunctionMemenuhi": "",
+      "testingFunctionTidakMemenuhi": "",
+      "testingFunctionResult": ""
+    },
+    "weldJointTest": {
+      "testingWeldJointMemenuhi": "",
+      "testingWeldJointTidakMemenuhi": "",
+      "testingWeldJointResult": ""
+    },
+    "vibrationTest": {
+      "testingVibrationMemenuhi": "",
+      "testingVibrationTidakMemenuhi": "",
+      "testingVibrationResult": ""
+    },
+    "lightingTest": {
+      "testingLightingMemenuhi": "",
+      "testingLightingTidakMemenuhi": "",
+      "testingLightingResult": ""
+    },
+    "noiseTest": {
+      "testingNoiseMemenuhi": "",
+      "testingNoiseTidakMemenuhi": "",
+      "testingNoiseResult": ""
+    }
   },
-  "conclusion": {
-    "findings": [],
-    "status": ""
+  "electricalMeasurement": {
+    "panelControl": {
+      "panelControlKa": "",
+      "voltage": {
+        "panelControlVoltageRs": "",
+        "panelControlVoltageRt": "",
+        "panelControlVoltageSt": "",
+        "panelControlVoltageRn": "",
+        "panelControlVoltageRg": "",
+        "panelControlVoltageNg": ""
+      }
+    },
+    "powerInfo": {
+      "panelControlPowerInfoFrequency": "",
+      "panelControlPowerInfoCosQ": "",
+      "panelControlPowerInfoAmpere": {
+        "panelControlPowerInfoAmpereR": "",
+        "panelControlPowerInfoAmpereS": "",
+        "panelControlPowerInfoAmpereT": ""
+      }
+    },
+    "panelControlPowerInfoResult": ""
   },
+  "conclusion": [],
   "requirements": [],
-  "nextInspectionDate": "",
   "inspector": {
-    "reportDate": "",
+    "locationAndDate": "",
     "company": "",
     "name": "",
     "title": ""
   },
-  "foundationAnalysis": {
-    "machineWeight": "",
-    "totalWeight": "",
-    "minFoundationWeight": "",
-    "foundationHeight": "",
-    "conclusion": ""
-  },
-  "environmentalMeasurement": {
-    "noise": {
-      "result": "",
-      "analysis": ""
-    },
-    "lighting": {
-      "result": "",
-      "analysis": ""
+  "calculations": {
+    "mcbCalculation": {
+      "known": {
+        "phase": "",
+        "voltage": "",
+        "cosQ": "",
+        "gensetPowerKva": "",
+        "gensetPowerKw": ""
+      },
+      "question": "ACB terpasang?",
+      "answer": {
+        "formulaI": "",
+        "RemarksI": "",
+        "formulaI125": "",
+        "RemarksI125": ""
+      },
+      "suggestion": ""
     }
-  }
+  },
+  "environmentalMeasurements": {
+    "noiseMeasurement": {
+      "location": "",
+      "RemarksA": "",
+      "RemarksB": "",
+      "analysis": "",
+      "rule": "Permenaker No. 5 Tahun 2018"
+    },
+    "lightingMeasurement": {
+      "location": "",
+      "RemarksA": "",
+      "RemarksB": "",
+      "analysis": "",
+      "rule": "Permenaker No. 5 Tahun 2018"
+    }
+  },
+  "documentation": []
 }
+
