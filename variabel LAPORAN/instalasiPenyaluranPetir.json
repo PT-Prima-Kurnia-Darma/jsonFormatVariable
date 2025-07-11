@@ -86,6 +86,9 @@
     "poor": "",
     "notes": ""
   },
+  "airTerminal": "",
+  "downConductorCheck": "",
+  "groundingAndTestJoint": "",
   "asBuiltDrawingCompliance": {
     "good": "",
     "poor": "",
