@@ -1,0 +1,1929 @@
+openapi: 3.0.0
+info:
+  title: "API Lengkap - PT Prima Kurnia Darma"
+  description: "Dokumentasi API lengkap yang mencakup layanan Autentikasi, Laporan dan BAP untuk Elevator serta Eskalator."
+  version: "1.0.1"
+servers:
+  - url: "http://localhost:3000"
+    description: "Server Development"
+tags:
+  - name: "Auth"
+    description: "Endpoint untuk manajemen pengguna: registrasi, login, update, dll."
+  - name: "Laporan Elevator"
+    description: "Manajemen data Laporan Pemeriksaan untuk Elevator."
+  - name: "BAP Elevator"
+    description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Elevator."
+  - name: "Laporan Eskalator"
+    description: "Manajemen data Laporan Pemeriksaan untuk Eskalator."
+  - name: "BAP Eskalator"
+    description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Eskalator."
+
+paths:
+  # ====================================================================
+  # == AUTH ENDPOINTS
+  # ====================================================================
+  /auth/register:
+    post:
+      tags:
+        - "Auth"
+      summary: "Registrasi Pengguna Baru"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterPayload'
+      responses:
+        '201':
+          description: "Pengguna berhasil dibuat."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterSuccessResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
+  /auth/login:
+    post:
+      tags:
+        - "Auth"
+      summary: "Login Pengguna"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginPayload'
+      responses:
+        '200':
+          description: "Login berhasil."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /auth/change:
+    put:
+      tags:
+        - "Auth"
+      summary: "Perbarui Profil Pengguna"
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProfilePayload'
+      responses:
+        '200':
+          description: "Profil berhasil diperbarui."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateProfileSuccessResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+  /auth/logout:
+    post:
+      tags:
+        - "Auth"
+      summary: "Logout Pengguna"
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "Logout berhasil."
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  status:
+                    type: "string"
+                    example: "success"
+                  message:
+                    type: "string"
+                    example: "Logout berhasil"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /auth/delete/{id}:
+    delete:
+      tags:
+        - "Auth"
+      summary: "Hapus Pengguna"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Pengguna berhasil dihapus."
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  status:
+                    type: "string"
+                    example: "success"
+                  message:
+                    type: "string"
+                    example: "User berhasil dihapus"
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /auth/validateToken:
+    post:
+      tags:
+        - "Auth"
+      summary: "Validasi Token"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: "object"
+              properties:
+                token:
+                  type: "string"
+      responses:
+        '200':
+          description: "Token valid."
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  status:
+                    type: "string"
+                    example: "success"
+                  message:
+                    type: "string"
+                    example: "Token valid"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  # ====================================================================
+  # == LAPORAN ELEVATOR ENDPOINTS
+  # ====================================================================
+  /elevatorEskalator/elevator/laporan:
+    post:
+      tags:
+        - "Laporan Elevator"
+      summary: "Buat Laporan Elevator Baru"
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanElevatorPayload'
+      responses:
+        '201':
+          description: "Laporan berhasil dibuat."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanElevatorSuccessResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      tags:
+        - "Laporan Elevator"
+      summary: "Dapatkan Semua Laporan Elevator"
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "Berhasil mengambil daftar laporan."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllLaporanElevatorResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /elevatorEskalator/elevator/laporan/{id}:
+    get:
+      tags:
+        - "Laporan Elevator"
+      summary: "Dapatkan Laporan Elevator Berdasarkan ID"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Berhasil mengambil data laporan."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanElevatorSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags:
+        - "Laporan Elevator"
+      summary: "Perbarui Laporan Elevator"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanElevatorPayload'
+      responses:
+        '200':
+          description: "Laporan berhasil diperbarui."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanElevatorSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      tags:
+        - "Laporan Elevator"
+      summary: "Hapus Laporan Elevator"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Laporan berhasil dihapus."
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  status:
+                    type: "string"
+                    example: "success"
+                  message:
+                    type: "string"
+                    example: "laporan elevator berhasil dihapus"
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /elevatorEskalator/elevator/laporan/download/{id}:
+    get:
+      tags:
+        - "Laporan Elevator"
+      summary: "Unduh Dokumen Laporan Elevator"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "File .docx."
+          headers:
+            message:
+              schema:
+                type: string
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ====================================================================
+  # == BAP ELEVATOR ENDPOINTS
+  # ====================================================================
+  /elevatorEskalator/elevator/bap/prefill/{LaporanId}:
+    get:
+      tags:
+        - "BAP Elevator"
+      summary: "Ambil Data Prefill untuk BAP"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "LaporanId"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Berhasil mengambil data untuk prefill BAP."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapPrefillSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /elevatorEskalator/elevator/bap:
+    post:
+      tags:
+        - "BAP Elevator"
+      summary: "Buat BAP Elevator Baru"
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapElevatorPayload'
+      responses:
+        '201':
+          description: "BAP berhasil dibuat."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapElevatorSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    get:
+      tags:
+        - "BAP Elevator"
+      summary: "Dapatkan Semua BAP Elevator"
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "Berhasil mengambil daftar BAP."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllBapElevatorResponse'
+  /elevatorEskalator/elevator/bap/{id}:
+    get:
+      tags:
+        - "BAP Elevator"
+      summary: "Dapatkan BAP Elevator Berdasarkan ID"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Berhasil mengambil data BAP."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapElevatorSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      tags:
+        - "BAP Elevator"
+      summary: "Perbarui BAP Elevator"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapElevatorPayload'
+      responses:
+        '200':
+          description: "BAP berhasil diperbarui."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapElevatorSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      tags:
+        - "BAP Elevator"
+      summary: "Hapus BAP Elevator"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "BAP berhasil dihapus."
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  status:
+                    type: "string"
+                    example: "success"
+                  message:
+                    type: "string"
+                    example: "BAP elevator berhasil dihapus"
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /elevatorEskalator/elevator/bap/download/{id}:
+    get:
+      tags:
+        - "BAP Elevator"
+      summary: "Unduh Dokumen BAP Elevator"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "File .docx."
+          headers:
+            message:
+              schema:
+                type: string
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ====================================================================
+  # == LAPORAN ESKALATOR ENDPOINTS
+  # ====================================================================
+  /elevatorEskalator/eskalator/laporan:
+    post:
+      summary: Membuat Laporan Eskalator Baru
+      tags:
+        - Laporan Eskalator
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanEskalatorPayload'
+      responses:
+        '201':
+          description: Laporan eskalator berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan eskalator berhasil dibuat
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        $ref: '#/components/schemas/LaporanEskalator'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua Laporan Eskalator
+      tags:
+        - Laporan Eskalator
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Data laporan eskalator berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Data laporan eskalator berhasil didapatkan
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/LaporanEskalator'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /elevatorEskalator/eskalator/laporan/{id}:
+    get:
+      summary: Mengambil Laporan Eskalator Berdasarkan ID
+      tags:
+        - Laporan Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data Laporan eskalator berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Data Laporan eskalator berhasil didapatkan
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        $ref: '#/components/schemas/LaporanEskalator'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui Laporan Eskalator
+      tags:
+        - Laporan Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanEskalatorPayload'
+      responses:
+        '200':
+          description: Laporan eskalator berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan eskalator berhasil diperbarui
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        $ref: '#/components/schemas/LaporanEskalator'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus Laporan Eskalator
+      tags:
+        - Laporan Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan eskalator berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan eskalator berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /elevatorEskalator/eskalator/laporan/download/{id}:
+    get:
+      summary: Download Dokumen Laporan Eskalator
+      tags:
+        - Laporan Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Eskalator-PT-Pler-xxx.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  
+  # ====================================================================
+  # == BAP ESKALATOR ENDPOINTS
+  # ====================================================================
+  /elevatorEskalator/eskalator/bap/prefill/{LaporanId}:
+    get:
+      summary: Mengambil data dari laporan untuk mengisi form BAP
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: LaporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Data BAP berhasil didapatkan
+                  data:
+                    $ref: '#/components/schemas/BAPEskalator'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /elevatorEskalator/eskalator/bap:
+    post:
+      summary: Membuat BAP Eskalator Baru
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BAPEskalatorPayload'
+      responses:
+        '201':
+          description: BAP eskalator berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP eskalator berhasil dibuat
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        $ref: '#/components/schemas/BAPEskalator'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua BAP Eskalator
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Semua data BAP eskalator berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Semua data BAP eskalator berhasil didapatkan
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/BAPEskalator'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /elevatorEskalator/eskalator/bap/{id}:
+    get:
+      summary: Mengambil BAP Eskalator Berdasarkan ID
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP eskalator berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Data BAP eskalator berhasil didapatkan
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        $ref: '#/components/schemas/BAPEskalator'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui BAP Eskalator
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BAPEskalatorPayload'
+      responses:
+        '200':
+          description: BAP eskalator berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP eskalator berhasil diperbarui
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        $ref: '#/components/schemas/BAPEskalator'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus BAP Eskalator
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP eskalator berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP eskalator berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /elevatorEskalator/eskalator/bap/download/{id}:
+    get:
+      summary: Download Dokumen BAP Eskalator
+      tags:
+        - BAP Eskalator
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Eskalator berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Eskalator-PT-Properti-Megah-xxx.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: "http"
+      scheme: "bearer"
+      bearerFormat: "JWT"
+  responses:
+    NotFound:
+      description: "Resource tidak ditemukan."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    BadRequest:
+      description: "Request tidak valid karena kesalahan input dari client."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Unauthorized:
+      description: "Akses ditolak karena kredensial tidak valid atau tidak ada."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Conflict:
+      description: "Terjadi konflik, misalnya data yang sama sudah ada."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    InternalServerError:
+      description: "Terjadi kesalahan pada server."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    # ====================================================================
+    # == COMMON & AUTH SCHEMAS
+    # ====================================================================
+    ErrorResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+          example: "error"
+        message:
+          type: "string"
+          example: "Pesan error spesifik."
+    RegisterPayload:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        username:
+          type: "string"
+        password:
+          type: "string"
+    RegisterSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            id:
+              type: "string"
+            name:
+              type: "string"
+            username:
+              type: "string"
+            createdAt:
+              type: "string"
+    LoginPayload:
+      type: "object"
+      properties:
+        username:
+          type: "string"
+        password:
+          type: "string"
+    LoginSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            user:
+              type: "object"
+              properties:
+                id:
+                  type: "string"
+                username:
+                  type: "string"
+                name:
+                  type: "string"
+            token:
+              type: "string"
+    UpdateProfilePayload:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        username:
+          type: "string"
+        oldPassword:
+          type: "string"
+        newPassword:
+          type: "string"
+    UpdateProfileSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            username:
+              type: "string"
+            name:
+              type: "string"
+            userId:
+              type: "string"
+
+    # ====================================================================
+    # == LAPORAN ELEVATOR SCHEMAS
+    # ====================================================================
+    InspectionItem:
+      type: "object"
+      properties:
+        result:
+          type: "string"
+        status:
+          type: "boolean"
+    LaporanElevatorPayload:
+      type: "object"
+      properties:
+        inspectionType:
+          type: "string"
+        examinationType:
+          type: "string"
+        equipmentType:
+          type: "string"
+        generalData:
+          type: "object"
+          properties:
+            ownerName:
+              type: "string"
+            ownerAddress:
+              type: "string"
+            nameUsageLocation:
+              type: "string"
+            addressUsageLocation:
+              type: "string"
+            manufacturerOrInstaller:
+              type: "string"
+            elevatorType:
+              type: "string"
+            brandOrType:
+              type: "string"
+            countryAndYear:
+              type: "string"
+            serialNumber:
+              type: "string"
+            capacity:
+              type: "string"
+            speed:
+              type: "string"
+            floorsServed:
+              type: "string"
+            permitNumber:
+              type: "string"
+            inspectionDate:
+              type: "string"
+        technicalDocumentInspection:
+          type: "object"
+          properties:
+            designDrawing:
+              type: "boolean"
+            technicalCalculation:
+              type: "boolean"
+            materialCertificate:
+              type: "boolean"
+            controlPanelDiagram:
+              type: "boolean"
+            asBuiltDrawing:
+              type: "boolean"
+            componentCertificates:
+              type: "boolean"
+            safeWorkProcedure:
+              type: "boolean"
+        inspectionAndTesting:
+          type: "object"
+          properties:
+            machineRoomAndMachinery:
+              type: "object"
+              properties:
+                machineMounting:
+                  $ref: '#/components/schemas/InspectionItem'
+                mechanicalBrake:
+                  $ref: '#/components/schemas/InspectionItem'
+                electricalBrake:
+                  $ref: '#/components/schemas/InspectionItem'
+                machineRoomConstruction:
+                  $ref: '#/components/schemas/InspectionItem'
+                machineRoomClearance:
+                  $ref: '#/components/schemas/InspectionItem'
+                machineRoomImplementation:
+                  $ref: '#/components/schemas/InspectionItem'
+                ventilation:
+                  $ref: '#/components/schemas/InspectionItem'
+                machineRoomDoor:
+                  $ref: '#/components/schemas/InspectionItem'
+                mainPowerPanelPosition:
+                  $ref: '#/components/schemas/InspectionItem'
+                rotatingPartsGuard:
+                  $ref: '#/components/schemas/InspectionItem'
+                ropeHoleGuard:
+                  $ref: '#/components/schemas/InspectionItem'
+                machineRoomAccessLadder:
+                  $ref: '#/components/schemas/InspectionItem'
+                floorLevelDifference:
+                  $ref: '#/components/schemas/InspectionItem'
+                fireExtinguisher:
+                  $ref: '#/components/schemas/InspectionItem'
+                machineRoomless:
+                  type: "object"
+                  properties:
+                    panelPlacement:
+                      $ref: '#/components/schemas/InspectionItem'
+                    lightingWorkArea:
+                      $ref: '#/components/schemas/InspectionItem'
+                    lightingBetweenWorkArea:
+                      $ref: '#/components/schemas/InspectionItem'
+                    manualBrakeRelease:
+                      $ref: '#/components/schemas/InspectionItem'
+                    fireExtinguisherPlacement:
+                      $ref: '#/components/schemas/InspectionItem'
+                emergencyStopSwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+            suspensionRopesAndBelts:
+              type: "object"
+              properties:
+                condition:
+                  $ref: '#/components/schemas/InspectionItem'
+                chainUsage:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyFactor:
+                  $ref: '#/components/schemas/InspectionItem'
+                ropeWithCounterweight:
+                  $ref: '#/components/schemas/InspectionItem'
+                ropeWithoutCounterweight:
+                  $ref: '#/components/schemas/InspectionItem'
+                belt:
+                  $ref: '#/components/schemas/InspectionItem'
+                slackRopeDevice:
+                  $ref: '#/components/schemas/InspectionItem'
+            drumsAndSheaves:
+              type: "object"
+              properties:
+                drumGrooves:
+                  $ref: '#/components/schemas/InspectionItem'
+                passengerDrumDiameter:
+                  $ref: '#/components/schemas/InspectionItem'
+                governorDrumDiameter:
+                  $ref: '#/components/schemas/InspectionItem'
+            hoistwayAndPit:
+              type: "object"
+              properties:
+                construction:
+                  $ref: '#/components/schemas/InspectionItem'
+                walls:
+                  $ref: '#/components/schemas/InspectionItem'
+                inclinedElevatorTrackBed:
+                  $ref: '#/components/schemas/InspectionItem'
+                cleanliness:
+                  $ref: '#/components/schemas/InspectionItem'
+                lighting:
+                  $ref: '#/components/schemas/InspectionItem'
+                emergencyDoorNonStop:
+                  $ref: '#/components/schemas/InspectionItem'
+                emergencyDoorSize:
+                  $ref: '#/components/schemas/InspectionItem'
+                emergencyDoorSafetySwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+                emergencyDoorBridge:
+                  $ref: '#/components/schemas/InspectionItem'
+                carTopClearance:
+                  $ref: '#/components/schemas/InspectionItem'
+                pitClearance:
+                  $ref: '#/components/schemas/InspectionItem'
+                pitLadder:
+                  $ref: '#/components/schemas/InspectionItem'
+                pitBelowWorkingArea:
+                  $ref: '#/components/schemas/InspectionItem'
+                pitAccessSwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+                pitScreen:
+                  $ref: '#/components/schemas/InspectionItem'
+                hoistwayDoorLeaf:
+                  $ref: '#/components/schemas/InspectionItem'
+                hoistwayDoorInterlock:
+                  $ref: '#/components/schemas/InspectionItem'
+                floorLeveling:
+                  $ref: '#/components/schemas/InspectionItem'
+                hoistwaySeparatorBeam:
+                  $ref: '#/components/schemas/InspectionItem'
+                inclinedElevatorStairs:
+                  $ref: '#/components/schemas/InspectionItem'
+            car:
+              type: "object"
+              properties:
+                frame:
+                  $ref: '#/components/schemas/InspectionItem'
+                body:
+                  $ref: '#/components/schemas/InspectionItem'
+                wallHeight:
+                  $ref: '#/components/schemas/InspectionItem'
+                floorArea:
+                  $ref: '#/components/schemas/InspectionItem'
+                carAreaExpansion:
+                  $ref: '#/components/schemas/InspectionItem'
+                carDoor:
+                  $ref: '#/components/schemas/InspectionItem'
+                carDoorSpecs:
+                  type: "object"
+                  properties:
+                    size:
+                      $ref: '#/components/schemas/InspectionItem'
+                    lockAndSwitch:
+                      $ref: '#/components/schemas/InspectionItem'
+                    sillClearance:
+                      $ref: '#/components/schemas/InspectionItem'
+                carToBeamClearance:
+                  $ref: '#/components/schemas/InspectionItem'
+                alarmBell:
+                  $ref: '#/components/schemas/InspectionItem'
+                backupPowerARD:
+                  $ref: '#/components/schemas/InspectionItem'
+                intercom:
+                  $ref: '#/components/schemas/InspectionItem'
+                ventilation:
+                  $ref: '#/components/schemas/InspectionItem'
+                emergencyLighting:
+                  $ref: '#/components/schemas/InspectionItem'
+                operatingPanel:
+                  $ref: '#/components/schemas/InspectionItem'
+                carPositionIndicator:
+                  $ref: '#/components/schemas/InspectionItem'
+                carSignage:
+                  type: "object"
+                  properties:
+                    manufacturerName:
+                      $ref: '#/components/schemas/InspectionItem'
+                    loadCapacity:
+                      $ref: '#/components/schemas/InspectionItem'
+                    noSmokingSign:
+                      $ref: '#/components/schemas/InspectionItem'
+                    overloadIndicator:
+                      $ref: '#/components/schemas/InspectionItem'
+                    doorOpenCloseButtons:
+                      $ref: '#/components/schemas/InspectionItem'
+                    floorButtons:
+                      $ref: '#/components/schemas/InspectionItem'
+                    alarmButton:
+                      $ref: '#/components/schemas/InspectionItem'
+                    twoWayIntercom:
+                      $ref: '#/components/schemas/InspectionItem'
+                carRoofStrength:
+                  $ref: '#/components/schemas/InspectionItem'
+                carTopEmergencyExit:
+                  $ref: '#/components/schemas/InspectionItem'
+                carSideEmergencyExit:
+                  $ref: '#/components/schemas/InspectionItem'
+                carTopGuardRail:
+                  $ref: '#/components/schemas/InspectionItem'
+                guardRailHeight300to850:
+                  $ref: '#/components/schemas/InspectionItem'
+                guardRailHeightOver850:
+                  $ref: '#/components/schemas/InspectionItem'
+                carTopLighting:
+                  $ref: '#/components/schemas/InspectionItem'
+                manualOperationButtons:
+                  $ref: '#/components/schemas/InspectionItem'
+                carInterior:
+                  $ref: '#/components/schemas/InspectionItem'
+            governorAndSafetyBrake:
+              type: "object"
+              properties:
+                governorRopeClamp:
+                  $ref: '#/components/schemas/InspectionItem'
+                governorSwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyBrakeSpeed:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyBrakeType:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyBrakeMechanism:
+                  $ref: '#/components/schemas/InspectionItem'
+                progressiveSafetyBrake:
+                  $ref: '#/components/schemas/InspectionItem'
+                instantaneousSafetyBrake:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyBrakeOperation:
+                  $ref: '#/components/schemas/InspectionItem'
+                electricalCutoutSwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+                limitSwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+                overloadDevice:
+                  $ref: '#/components/schemas/InspectionItem'
+            counterweightGuideRailsAndBuffers:
+              type: "object"
+              properties:
+                counterweightMaterial:
+                  $ref: '#/components/schemas/InspectionItem'
+                counterweightGuardScreen:
+                  $ref: '#/components/schemas/InspectionItem'
+                guideRailConstruction:
+                  $ref: '#/components/schemas/InspectionItem'
+                bufferType:
+                  $ref: '#/components/schemas/InspectionItem'
+                bufferFunction:
+                  $ref: '#/components/schemas/InspectionItem'
+                bufferSafetySwitch:
+                  $ref: '#/components/schemas/InspectionItem'
+            electricalInstallation:
+              type: "object"
+              properties:
+                installationStandard:
+                  $ref: '#/components/schemas/InspectionItem'
+                electricalPanel:
+                  $ref: '#/components/schemas/InspectionItem'
+                backupPowerARD:
+                  $ref: '#/components/schemas/InspectionItem'
+                groundingCable:
+                  $ref: '#/components/schemas/InspectionItem'
+                fireAlarmConnection:
+                  $ref: '#/components/schemas/InspectionItem'
+                fireServiceElevator:
+                  type: "object"
+                  properties:
+                    backupPower:
+                      $ref: '#/components/schemas/InspectionItem'
+                    specialOperation:
+                      $ref: '#/components/schemas/InspectionItem'
+                    fireSwitch:
+                      $ref: '#/components/schemas/InspectionItem'
+                    label:
+                      $ref: '#/components/schemas/InspectionItem'
+                    electricalFireResistance:
+                      $ref: '#/components/schemas/InspectionItem'
+                    hoistwayWallFireResistance:
+                      $ref: '#/components/schemas/InspectionItem'
+                    carSize:
+                      $ref: '#/components/schemas/InspectionItem'
+                    doorSize:
+                      $ref: '#/components/schemas/InspectionItem'
+                    travelTime:
+                      $ref: '#/components/schemas/InspectionItem'
+                    evacuationFloor:
+                      $ref: '#/components/schemas/InspectionItem'
+                accessibilityElevator:
+                  type: "object"
+                  properties:
+                    operatingPanel:
+                      $ref: '#/components/schemas/InspectionItem'
+                    panelHeight:
+                      $ref: '#/components/schemas/InspectionItem'
+                    doorOpenTime:
+                      $ref: '#/components/schemas/InspectionItem'
+                    doorWidth:
+                      $ref: '#/components/schemas/InspectionItem'
+                    audioInformation:
+                      $ref: '#/components/schemas/InspectionItem'
+                    label:
+                      $ref: '#/components/schemas/InspectionItem'
+                seismicSensor:
+                  type: "object"
+                  properties:
+                    availability:
+                      $ref: '#/components/schemas/InspectionItem'
+                    function:
+                      $ref: '#/components/schemas/InspectionItem'
+        conclusion:
+          type: "string"
+    LaporanElevatorResponseData:
+      allOf:
+        - $ref: '#/components/schemas/LaporanElevatorPayload'
+        - type: "object"
+          properties:
+            id:
+              type: "string"
+            subInspectionType:
+              type: "string"
+            documentType:
+              type: "string"
+            createdAt:
+              type: "string"
+    LaporanElevatorSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            laporan:
+              $ref: '#/components/schemas/LaporanElevatorResponseData'
+    GetAllLaporanElevatorResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            laporan:
+              type: "array"
+              items:
+                $ref: '#/components/schemas/LaporanElevatorResponseData'
+    
+    # ====================================================================
+    # == BAP ELEVATOR SCHEMAS
+    # ====================================================================
+    BapElevatorPayload:
+      type: "object"
+      required:
+        - "laporanId"
+      properties:
+        laporanId:
+          type: "string"
+        inspectionDate:
+          type: "string"
+        examinationType:
+          type: "string"
+        equipmentType:
+          type: "string"
+        generalData:
+          type: "object"
+          properties:
+            ownerName:
+              type: "string"
+            ownerAddress:
+              type: "string"
+            nameUsageLocation:
+              type: "string"
+            addressUsageLocation:
+              type: "string"
+        technicalData:
+          type: "object"
+          properties:
+            elevatorType:
+              type: "string"
+            manufacturerOrInstaller:
+              type: "string"
+            brandOrType:
+              type: "string"
+            countryAndYear:
+              type: "string"
+            serialNumber:
+              type: "string"
+            capacity:
+              type: "string"
+            speed:
+              type: "string"
+            floorsServed:
+              type: "string"
+        visualInspection:
+          type: "object"
+          properties:
+            isMachineRoomConditionAcceptable:
+              type: "boolean"
+            isPanelGoodCondition:
+              type: "boolean"
+            isAparAvailableInPanelRoom:
+              type: "boolean"
+            lightingCondition:
+              type: "boolean"
+            isPitLadderAvailable:
+              type: "boolean"
+        testing:
+          type: "object"
+          properties:
+            isNdtThermographPanelOk:
+              type: "boolean"
+            isArdFunctional:
+              type: "boolean"
+            isGovernorFunctional:
+              type: "boolean"
+            isSlingConditionOkByTester:
+              type: "boolean"
+            limitSwitchTest:
+              type: "boolean"
+            isDoorSwitchFunctional:
+              type: "boolean"
+            pitEmergencyStopStatus:
+              type: "boolean"
+            isIntercomFunctional:
+              type: "boolean"
+            isFiremanSwitchFunctional:
+              type: "boolean"
+    BapElevatorResponseData:
+      allOf:
+        - $ref: '#/components/schemas/BapElevatorPayload'
+        - type: "object"
+          properties:
+            id:
+              type: "string"
+            subInspectionType:
+              type: "string"
+            documentType:
+              type: "string"
+            createdAt:
+              type: "string"
+    BapElevatorSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            bap:
+              $ref: '#/components/schemas/BapElevatorResponseData'
+    GetAllBapElevatorResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            bap:
+              type: "array"
+              items:
+                $ref: '#/components/schemas/BapElevatorResponseData'
+    BapPrefillSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          $ref: '#/components/schemas/BapElevatorPayload'
+
+    # ====================================================================
+    # == LAPORAN ESKALATOR SCHEMAS
+    # ====================================================================
+    LaporanEskalatorPayload:
+      type: object
+      properties:
+        inspectionType:
+          type: string
+        equipmentType:
+          type: string
+        generalData:
+          type: object
+          properties:
+            ownerName:
+              type: string
+            nameUsageLocation:
+              type: string
+            safetyObjectTypeAndNumber:
+              type: string
+            intendedUse:
+              type: string
+            permitNumber:
+              type: string
+            examinationType:
+              type: string
+            inspectionDate:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            technicalDatamanufacturer:
+              type: string
+            technicalDatabrand:
+              type: string
+            technicalDatacountryAndYear:
+              type: string
+            technicalDataserialNumber:
+              type: string
+            technicalDatatransports:
+              type: string
+            technicalDatacapacity:
+              type: string
+            technicalDataliftHeight:
+              type: string
+            technicalDataspeed:
+              type: string
+            technicalDatadriveType:
+              type: string
+            technicalDatamotorCurrent:
+              type: string
+            technicalDatamotorPower:
+              type: string
+            technicalDatasafetyDevices:
+              type: string
+        inspectionAndTesting:
+          type: object
+          properties:
+            inspectionAndTestingframeAndMachineRoom:
+              type: object
+              properties:
+                inspectionAndTestingframeAndMachineRoomframeresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoomsupportBeamsiresults:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoommachineRoomConditionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoommachineRoomClearanceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoommachineRoomLightingresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoommachineCoverPlateresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoompitConditionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoompitClearanceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                inspectionAndTestingframeAndMachineRoompitStepCoverPlateresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            driveEquipment:
+              type: object
+              properties:
+                driveEquipmentdriveMachineresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentspeedUnder30Degreesresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentspeed30to35Degreesresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmenttravelatorSpeedresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentstoppingDistance0_5result:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentstoppingDistance0_75result:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentstoppingDistance0_90result:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentdriveChainresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                driveEquipmentchainBreakingStrengthresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            stepsOrPallets:
+              type: object
+              properties:
+                stepsOrPalletsstepMaterialresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                stepsOrPalletsstepDimensionsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                stepsOrPalletspalletDimensionsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                stepsOrPalletsstepSurfaceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                stepsOrPalletsstepLevelnessresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                stepsOrPalletsskirtBrushresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                stepsOrPalletsstepWheelsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            landingArea:
+              type: object
+              properties:
+                landingArealandingPlatesresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                landingAreacombTeethresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                landingAreacombConditionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                landingArealandingCoverresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                landingArealandingAccessArearesult:
+                  $ref: '#/components/schemas/InspectionItem'
+            balustrade:
+              type: object
+              properties:
+                balustradebalustradePanelmaterialresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                balustradebalustradePanelheightresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                balustradebalustradePanelsidePressureresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                balustradebalustradePanelverticalPressureresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                balustradeskirtPanelresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                balustradeskirtPanelFlexibilityresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                balustradestepToSkirtClearanceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            handrail:
+              type: object
+              properties:
+                handrailhandrailConditionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                handrailhandrailSpeedSynchronizationresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                handrailhandrailWidthresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            runway:
+              type: object
+              properties:
+                runwaybeamStrengthAndPositionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwaypitWallConditionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwayescalatorFrameEnclosureresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwaylightingresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwayheadroomClearanceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwaybalustradeToObjectClearanceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwayantiClimbDeviceHeightresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwayornamentPlacementresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                runwayoutdoorClearanceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            safetyEquipment:
+              type: object
+              properties:
+                safetyEquipmentoperationControlKeyresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentemergencyStopSwitchresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentstepChainSafetyDeviceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentdriveChainSafetyDeviceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentstepSafetyDeviceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmenthandrailSafetyDeviceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentreversalStopDeviceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmenthandrailEntryGuardresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentcombPlateSafetyDeviceresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentinnerDeckingBrushresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                safetyEquipmentstopButtonsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            electricalInstallation:
+              type: object
+              properties:
+                electricalInstallationinstallationStandardresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                electricalInstallationelectricalPanelresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                electricalInstallationgroundingCableresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                electricalInstallationfireAlarmConnectionresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            outdoorSpecifics:
+              type: object
+              properties:
+                outdoorSpecificspitWaterPumpresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                outdoorSpecificsweatherproofComponentsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+            userSafety:
+              type: object
+              properties:
+                userSafetySignagenoBulkyItemsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignagenoJumpingresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignageunattendedChildrenresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignagenoTrolleysOrStrollersresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignagenoLeaningresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignagenoSteppingOnSkirtresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignagesoftSoleFootwearWarningresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignagenoSittingOnStepsresult:
+                  $ref: '#/components/schemas/InspectionItem'
+                userSafetySignageholdHandrailresult:
+                  $ref: '#/components/schemas/InspectionItem'
+        testingEscalator:
+          type: string
+        conclusion:
+          type: string
+    LaporanEskalator:
+      allOf:
+        - $ref: '#/components/schemas/LaporanEskalatorPayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+
+    # ====================================================================
+    # == BAP ESKALATOR SCHEMAS
+    # ====================================================================
+    BAPEskalatorPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId:
+          type: string
+        examinationType:
+          type: string
+        inspectionType:
+          type: string
+        inspectionDate:
+          type: string
+        generalData:
+          type: object
+          properties:
+            ownerName:
+              type: string
+            companyLocation:
+              type: string
+            nameUsageLocation:
+              type: string
+            locationUsageLocation:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            equipmentType:
+              type: string
+            technicalDatamanufacturer:
+              type: string
+            technicalDatabrand:
+              type: string
+            technicalDatacountryAndYear:
+              type: string
+            technicalDataserialNumber:
+              type: string
+            technicalDatacapacity:
+              type: string
+            technicalDataspeed:
+              type: string
+            technicalDatatransports:
+              type: string
+        visualInspection:
+          type: object
+          properties:
+            isMachineRoomConditionAcceptable:
+              type: boolean
+            isPanelConditionAcceptable:
+              type: boolean
+            islightingConditionisPitLightAcceptable:
+              type: boolean
+            areSafetySignsAvailable:
+              type: boolean
+        testing:
+          type: object
+          properties:
+            testingisNdtThermographPanel:
+              type: boolean
+            testingareSafetyDevicesFunctional:
+              type: boolean
+            testingisLimitSwitchFunctional:
+              type: boolean
+            testingisDoorSwitchFunctiona:
+              type: boolean
+            testingpitEmergencyStopStatusisAvailable:
+              type: boolean
+            testingpitEmergencyStopStatusisFunctional:
+              type: boolean
+            isEscalatorFunctionOk:
+              type: boolean
+    BAPEskalator:
+      allOf:
+        - $ref: '#/components/schemas/BAPEskalatorPayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
