@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   title: "API Lengkap - PT Prima Kurnia Darma"
-  description: "Dokumentasi API lengkap yang mencakup layanan Autentikasi, Laporan dan BAP untuk Elevator serta Eskalator."
-  version: "1.0.1"
+  description: "Dokumentasi API lengkap yang mencakup layanan Autentikasi, Laporan dan BAP untuk Elevator, Eskalator, serta Forklift."
+  version: "1.0.2"
 servers:
   - url: "http://localhost:3000"
     description: "Server Development"
@@ -17,6 +17,10 @@ tags:
     description: "Manajemen data Laporan Pemeriksaan untuk Eskalator."
   - name: "BAP Eskalator"
     description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Eskalator."
+  - name: "Laporan Forklift"
+    description: "Manajemen data Laporan Pemeriksaan untuk Forklift."
+  - name: "BAP Forklift"
+    description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Forklift."
 
 paths:
   # ====================================================================
@@ -906,6 +910,422 @@ paths:
               schema:
                 type: string
                 example: attachment; filename="BAP-Eskalator-PT-Properti-Megah-xxx.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ====================================================================
+  # == LAPORAN FORKLIFT ENDPOINTS
+  # ====================================================================
+  /paa/forklift/laporan:
+    post:
+      summary: Membuat Laporan Forklift Baru
+      tags:
+        - Laporan Forklift
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanForkliftPayload'
+      responses:
+        '201':
+          description: Laporan Forklift berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Forklift berhasil dibuat
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        $ref: '#/components/schemas/LaporanForklift'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua Laporan Forklift
+      tags:
+        - Laporan Forklift
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua Laporan Forklift.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/LaporanForklift'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/forklift/laporan/{id}:
+    get:
+      summary: Mengambil Laporan Forklift Berdasarkan ID
+      tags:
+        - Laporan Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data Laporan Forklift.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      laporan:
+                        $ref: '#/components/schemas/LaporanForklift'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui Laporan Forklift
+      tags:
+        - Laporan Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanForkliftPayload'
+      responses:
+        '200':
+          description: Laporan Forklift berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Forklift berhasil diperbarui
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus Laporan Forklift
+      tags:
+        - Laporan Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan Forklift berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Forklift berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/forklift/laporan/download/{id}:
+    get:
+      summary: Download Dokumen Laporan Forklift
+      tags:
+        - Laporan Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dokumen Laporan Forklift berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Forklift-PT-GACOR-xxx.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+        
+  # ====================================================================
+  # == BAP FORKLIFT ENDPOINTS
+  # ====================================================================
+  /paa/forklift/bap/prefill/{LaporanId}:
+    get:
+      summary: Mengambil data dari laporan untuk mengisi form BAP Forklift
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: LaporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP Forklift berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    $ref: '#/components/schemas/BapForklift'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/forklift/bap:
+    post:
+      summary: Membuat BAP Forklift Baru
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapForkliftPayload'
+      responses:
+        '201':
+          description: BAP Forklift berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Forklift berhasil dibuat
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        $ref: '#/components/schemas/BapForklift'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua BAP Forklift
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua BAP Forklift.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/BapForklift'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/forklift/bap/{id}:
+    get:
+      summary: Mengambil BAP Forklift Berdasarkan ID
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data BAP Forklift.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  data:
+                    type: object
+                    properties:
+                      bap:
+                        $ref: '#/components/schemas/BapForklift'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui BAP Forklift
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapForkliftPayload'
+      responses:
+        '200':
+          description: BAP Forklift berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Forklift berhasil diperbarui
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus BAP Forklift
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Forklift berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Forklift berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/forklift/bap/download/{id}:
+    get:
+      summary: Download Dokumen BAP Forklift
+      tags:
+        - BAP Forklift
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Forklift berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Forklift-PT-Mitra-Logistik-Jaya-xxx.docx"
           content:
             application/vnd.openxmlformats-officedocument.wordprocessingml.document:
               schema:
@@ -1923,6 +2343,601 @@ components:
             subInspectionType:
               type: string
             documentType:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+    
+    # ====================================================================
+    # == LAPORAN FORKLIFT SCHEMAS
+    # ====================================================================
+    InspectionResultItemForklift:
+      type: object
+      properties:
+        result:
+          type: string
+          nullable: true
+        status:
+          type: boolean
+          nullable: true
+          description: "true = Baik/Lulus, false = Cacat/Gagal, null = Tidak Diperiksa"
+    LaporanForkliftPayload:
+      type: object
+      properties:
+        InspectionType:
+          type: string
+        examinationType:
+          type: string
+        inspectionDate:
+          type: string
+          format: date
+        generalData:
+          type: object
+          properties:
+            ownerName:
+              type: string
+            ownerAddress:
+              type: string
+            userInCharge:
+              type: string
+            subcontractorPersonInCharge:
+              type: string
+            unitLocation:
+              type: string
+            operatorName:
+              type: string
+            equipmentType:
+              type: string
+            manufacturer:
+              type: string
+            brandType:
+              type: string
+            locationAndYearOfManufacture:
+              type: string
+            serialNumberUnitNumber:
+              type: string
+            capacityWorkingLoad:
+              type: string
+            intendedUse:
+              type: string
+            certificateNumber:
+              type: string
+            equipmentHistory:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            specificationSerialNumber:
+              type: string
+            specificationCapacity:
+              type: string
+            specificationAttachment:
+              type: string
+            specificationForkDimensions:
+              type: string
+            specificationSpeedLifting:
+              type: string
+            specificationSpeedLowering:
+              type: string
+            specificationSpeedTravelling:
+              type: string
+            primeMoverBrandType:
+              type: string
+            primeMoverSerialNumber:
+              type: string
+            primeMoverYearOfManufacture:
+              type: string
+            primeMoverRevolution:
+              type: string
+            primeMoverPower:
+              type: string
+            primeMoverNumberOfCylinders:
+              type: string
+            dimensionLength:
+              type: string
+            dimensionWidth:
+              type: string
+            dimensionHeight:
+              type: string
+            dimensionForkLiftingHeight:
+              type: string
+            tirePressureDriveWheel:
+              type: string
+            tirePressureSteeringWheel:
+              type: string
+            driveWheelSize:
+              type: string
+            driveWheelType:
+              type: string
+            steeringWheelSize:
+              type: string
+            steeringWheelType:
+              type: string
+            travellingBrakeSize:
+              type: string
+            travellingBrakeType:
+              type: string
+            hydraulicPumpPressure:
+              type: string
+            hydraulicPumpType:
+              type: string
+            hydraulicPumpReliefValve:
+              type: string
+        inspectionAndTesting:
+          type: object
+          properties:
+            mainFrameAndChassis:
+              type: object
+              properties:
+                reinforcingFrameCorrosionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                reinforcingFrameCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                reinforcingFrameDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                counterweightCorrosionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                counterweightConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                otherEquipmentFloorDeckResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                otherEquipmentStairsStepsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                otherEquipmentFasteningBoltsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                otherEquipmentOperatorSeatResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            primeMover:
+              type: object
+              properties:
+                systemCoolingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                systemLubricationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                systemFuelResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                systemAirIntakeResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                systemExhaustGasResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                systemStarterResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalBatteryResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalStartingDynamoResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalAlternatorResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalBatteryCableResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalInstallationCableResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalLightingLampsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalSafetyLampsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalHornResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalFuseResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            dashboard:
+              type: object
+              properties:
+                tempIndicatorResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                oilPressureResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                hydraulicPressureResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                hourMeterResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                glowPlugResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                fuelIndicatorResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                loadIndicatorResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                loadChartResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            powerTrain:
+              type: object
+              properties:
+                starterDynamoResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringWheelResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringRodResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringGearBoxResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringPitmanResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringDragLinkResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringTieRodResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringLubeResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                wheelsFrontResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                wheelsRearResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                wheelsBoltsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                wheelsDrumResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                wheelsLubeResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                wheelsMechanicalResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchHousingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchTransOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchTransLeakResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchShaftResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchMechanicalResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                diffHousingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                diffConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                diffOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                diffLeakResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                diffShaftResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                brakesMainResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                brakesHandResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                brakesEmergencyResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                brakesLeakResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                brakesMechanicalResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                transHousingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                transOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                transLeakResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                transMechanicalResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            attachments:
+              type: object
+              properties:
+                mastWearResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                mastCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                mastDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                mastLubeResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                mastShaftBearingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                liftChainConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                liftChainDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                liftChainLubeResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            personalBasketAndHandrail:
+              type: object
+              properties:
+                basketFloorCorrosionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFloorCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFloorDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFloorFasteningResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFrameCorrosionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFrameCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFrameDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFrameCrossBracingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketFrameDiagonalBracingResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketBoltsCorrosionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketBoltsCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketBoltsDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketBoltsFasteningResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketDoorCorrosionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketDoorCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketDoorDeformationResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                basketDoorFasteningResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailCracksResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailWearResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailCracks2Result:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailRailStraightnessResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailRailJointsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailInterRailStraightnessResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailRailJointGapResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailRailFastenersResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                handrailRailStopperResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            hydraulicComponents:
+              type: object
+              properties:
+                tankLeakageResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                tankOilLevelResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                tankOilConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                tankSuctionLineResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                tankReturnLineResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                pumpLeakageResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                pumpSuctionLineResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                pumpPressureLineResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                pumpFunctionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                pumpNoiseResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveLeakageResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveLineConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveReliefFunctionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveNoiseResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveLiftCylinderResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveTiltCylinderResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                valveSteeringCylinderResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                actuatorLeakageResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                actuatorLineConditionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                actuatorNoiseResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+            engineOnChecks:
+              type: object
+              properties:
+                starterDynamoResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                instrumentResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                electricalResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageEngineOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageFuelResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageCoolantResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageHydraulicOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageTransmissionOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageFinalDriveOilResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                leakageBrakeFluidResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                clutchResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                transmissionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                brakeResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                hornAlarmResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                lampsResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                hydraulicMotorResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                steeringCylinderResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                liftingCylinderResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                tiltingCylinderResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                exhaustGasResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                controlLeversResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                noiseEngineResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                noiseTurbochargerResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                noiseTransmissionResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                noiseHydraulicPumpResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+                noiseProtectiveCoverResult:
+                  $ref: '#/components/schemas/InspectionResultItemForklift'
+        testingForklift:
+          type: object
+          properties:
+            liftingChainInspection:
+              type: array
+              items:
+                type: object
+                properties:
+                  inspectedPart:
+                    type: string
+                  constructionType:
+                    type: string
+                  standardPitch:
+                    type: string
+                  measuredPitch:
+                    type: string
+                  standardPin:
+                    type: string
+                  measuredPin:
+                    type: string
+                  result:
+                    type: string
+            nonDestructiveTesting:
+              type: object
+              properties:
+                ndtType:
+                  type: string
+                results:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      inspectedPart:
+                        type: string
+                      location:
+                        type: string
+                      defectFound:
+                        type: string
+                      defectNotFound:
+                        type: string
+                      result:
+                        type: string
+            loadTesting:
+              type: array
+              items:
+                type: object
+                properties:
+                  liftingHeight:
+                    type: string
+                  testLoad:
+                    type: string
+                  speed:
+                    type: string
+                  movement:
+                    type: string
+                  remarks:
+                    type: string
+                  result:
+                    type: string
+        conclusion:
+          type: string
+        recommendation:
+          type: string
+    LaporanForklift:
+      allOf:
+        - $ref: '#/components/schemas/LaporanForkliftPayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+
+    # ====================================================================
+    # == BAP FORKLIFT SCHEMAS
+    # ====================================================================
+    BapForkliftPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId:
+          type: string
+        examinationType:
+          type: string
+        subInspectionType:
+          type: string
+        inspectionDate:
+          type: string
+          format: date
+        generalData:
+          type: object
+          properties:
+            ownerName:
+              type: string
+            ownerAddress:
+              type: string
+            userInCharge:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            brandType:
+              type: string
+            manufacturer:
+              type: string
+            locationAndYearOfManufacture:
+              type: string
+            serialNumberUnitNumber:
+              type: string
+            capacityWorkingLoad:
+              type: string
+            liftingHeightMeters:
+              type: string
+        inspectionResult:
+          type: object
+          properties:
+            visualCheck:
+              type: object
+              properties:
+                hasForkDefects:
+                  type: boolean
+                isNameplateAttached:
+                  type: boolean
+                isAparAvailable:
+                  type: boolean
+                isCapacityMarkingDisplayed:
+                  type: boolean
+                hasHydraulicLeak:
+                  type: boolean
+                isChainGoodCondition:
+                  type: boolean
+            functionalTest:
+              type: object
+              properties:
+                loadKg:
+                  type: string
+                liftHeightMeters:
+                  type: string
+                isAbleToLiftAndHold:
+                  type: boolean
+                isFunctioningWell:
+                  type: string # Note: This was a string 'false' in the example
+                hasCrackIndication:
+                  type: boolean
+                isEmergencyStopFunctional:
+                  type: boolean
+                isWarningLampHornFunctional:
+                  type: boolean
+    BapForklift:
+      allOf:
+        - $ref: '#/components/schemas/BapForkliftPayload'
+        - type: object
+          properties:
+            id:
               type: string
             createdAt:
               type: string
