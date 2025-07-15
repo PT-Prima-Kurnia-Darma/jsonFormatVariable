@@ -1,8 +1,10 @@
 {
   "inspectionType": "Elevator dan Eskalator",
   "equipmentType": "Eskalator Penumpang",
+  "extraId":   123,
+  "createdAt": "2025-07-15T11:36:36.173Z",
   "generalData":{
-    "ownerName": "Gedung Perkantoran Sentral",
+    "ownerName": "PT pler",
     "nameUsageLocation": "Jalan Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
     "safetyObjectTypeAndNumber": "Eskalator / E-03",
     "intendedUse": "Angkutan Penumpang",

@@ -1,8 +1,9 @@
 {
   "inspectionType": "Elevator dan Eskalator",
-  "subInspectionType": "Elevator",
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
+  "createdAt": "2025-07-15T11:36:36.173Z",
   "equipmentType": "Elevator Penumpang",
+  "extraId":   123,
   "generalData": {
     "ownerName": "PT ANIME SEJAHTERA",
     "ownerAddress": "Jl. Pejompongan Raya No. 15, Jakarta Pusat",

@@ -1,37 +1,39 @@
 {
-  "examinationType": "",
-  "subInspectionType": "",
-  "inspectionDate": "",
+  "laporanId":"Wt1yFSTPk5zZUz8b1pho",
+  "examinationType": "Pemeriksaan Berkala",
+  "inspectionDate": "2025-07-15",
+  "extraId":   123,
+  "createdAt": "2025-07-15T11:36:36.173Z",
   "generalData": {
-    "ownerName": "",
-    "ownerAddress": "",
-    "userInCharge": ""
+    "ownerName": "PT. Mitra Logistik Jaya",
+    "ownerAddress": "Jl. Raya Industri No. 45, Kawasan Industri Bekasi",
+    "userInCharge": "Departemen Gudang"
   },
   "technicalData": {
-    "brandType": "",
-    "manufacturer": "",
-    "locationAndYearOfManufacture": "",
-    "serialNumberUnitNumber": "",
-    "capacityWorkingLoad": "",
-    "liftingHeightMeters": ""
+    "brandType": "Caterpillar C5000",
+    "manufacturer": "Caterpillar Inc.",
+    "locationAndYearOfManufacture": "USA / 2020",
+    "serialNumberUnitNumber": "CAT-XYZ-2020-007",
+    "capacityWorkingLoad": "5000",
+    "liftingHeightMeters": "4"
   },
   "inspectionResult": {
     "visualCheck": {
-      "hasForkDefects": "",
-      "isNameplateAttached": "",
-      "isAparAvailable": "",
-      "isCapacityMarkingDisplayed": "",
-      "hasHydraulicLeak": "",
-      "isChainGoodCondition": ""
+      "hasForkDefects": false,
+      "isNameplateAttached": true,
+      "isAparAvailable": true,
+      "isCapacityMarkingDisplayed": true,
+      "hasHydraulicLeak": false,
+      "isChainGoodCondition": true
     },
     "functionalTest": {
-      "loadKg": "",
-      "liftHeightMeters": "",
-      "isAbleToLiftAndHold": "",
-      "isFunctioningWell": "",
-      "hasCrackIndication": "",
-      "isEmergencyStopFunctional": "",
-      "isWarningLampHornFunctional": ""
+      "loadKg": "5500",
+      "liftHeightMeters": "2",
+      "isAbleToLiftAndHold": true,
+      "isFunctioningWell": "false",
+      "hasCrackIndication": false,
+      "isEmergencyStopFunctional": true,
+      "isWarningLampHornFunctional": false
     }
   }
 }

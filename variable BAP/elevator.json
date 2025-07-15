@@ -1,10 +1,12 @@
 {
-    "laporanId": "zNRArbBB15edAtVHC0Lc",
+    "laporanId": "W5M2auFIxLd0hWK0fafL",
     "inspectionDate": "Sabtu, 5 Juli 2025",
     "examinationType": "Pemeriksaan dan Pengujian Berkala",
     "equipmentType": "Elevator Penumpang",
+    "extraId":   123,
+    "createdAt": "2025-07-15T11:36:36.173Z",
     "generalData": {
-        "ownerName": "PT ANIME SEJAHTERA ",
+        "ownerName": "PT ANIME SEJAHTERA SEJAHTERA ",
         "ownerAddress": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Barat",
         "nameUsageLocation": "Menara Perkantoran Sentral",
         "addressUsageLocation": "Jl. MH Thamrin No. 1, Jakarta Pusat"

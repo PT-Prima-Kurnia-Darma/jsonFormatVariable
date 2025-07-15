@@ -1,28 +1,31 @@
 {
-  "examinationType": "",
-  "inspectionType": "",
-  "inspectionDate": "",
+  "laporanId": "9AAq1vcVlFov3KHAUSVt",
+  "examinationType": "Pemeriksaan dan Pengujian Berkala",
+  "inspectionType": "Elevator dan Eskalator",
+  "inspectionDate": "9 Juli 2025",
+  "extraId":   123,
+  "createdAt": "2025-07-15T11:36:36.173Z",
   "generalData":{
-    "ownerName": "",
-    "companyLocation": "",
-    "nameUsageLocation": "",
-    "locationUsageLocation": ""
+    "ownerName": "PT Properti Megah",
+    "companyLocation": "Jl. Gatot Subroto No. 12, Jakarta Selatan",
+    "nameUsageLocation": "Menara Perkantoran Cendana",
+    "locationUsageLocation": "Lantai 1 ke Lantai 2, Lobby Utama"
   },
   "technicalData": {
-    "equipmentType": "",
-    "technicalDatamanufacturer": "",
-    "technicalDatabrand": "",
-    "technicalDatacountryAndYear": "",
-    "technicalDataserialNumber": "",
-    "technicalDatacapacity": "",
-    "technicalDataspeed": "",
-    "technicalDatatransports": ""
+    "equipmentType": "Eskalator Penumpang",
+    "technicalDatamanufacturer": "Global Escalator Corp.",
+    "technicalDatabrand": "OTIS",
+    "technicalDatacountryAndYear": "Jerman / 2019",
+    "technicalDataserialNumber": "ES-19-8872-B",
+    "technicalDatacapacity": "9000 Orang/Jam",
+    "technicalDataspeed": "0.5 m/s",
+    "technicalDatatransports": "Orang"
   },
   "visualInspection": {
     "isMachineRoomConditionAcceptable": true,
     "isPanelConditionAcceptable": true,
     "islightingConditionisPitLightAcceptable": true,
-    "areSafetySignsAvailable": true
+    "areSafetySignsAvailable": false
   },
   "testing": {
     "testingisNdtThermographPanel": true,
