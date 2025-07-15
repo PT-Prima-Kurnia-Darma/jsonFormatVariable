@@ -1,50 +1,50 @@
 {
-  "id": "",
-  "typeInspection": "Pemeriksaan PAA Mobile Crane",
-  "inspectionSchedule": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "manufacturer": "",
-  "manufactureYear": null,
-  "manufactureCountry": "",
-  "serialNumber": "",
-  "materialCertificateNumber": "",
-  "liftingPurpose": "Barang",
-  "maxLiftingCapacityKg": null,
-  "maxLiftingHeightMeters": null,
-  "liftingSpeedMpm": null,
-  "safetyEquipmentNote": "Terpasang Lengkap",
-  "inspectionTestLocation": "",
-  "visualInspection": {
-    "hasBoomDefects": null,
-    "isNameplateAttached": null,
-    "areBoltsAndNutsSecure": null,
-    "isSlingGoodCondition": null,
-    "isHookGoodCondition": null,
-    "isSafetyLatchInstalled": null,
-    "isTireGoodCondition": null,
-    "lightingStatus": {
-      "isWorkLampFunctional": null,
-      "isSignalLampFunctional": null
+  "laporanId": "kkDkOemfYg5xK3RH2joH",
+  "examinationType": "Pemeriksaan dan Pengujian Berkala",
+  "subInspectionType": "MOBILE CRANE",
+  "inspectionDate": "15 Juli 2025",
+  "generalData": {
+    "ownerName": "PT. IVAN JAGO NEW PART 2",
+    "ownerAddress": "Jl. Gatot Subroto No. 112, Jakarta Selatan",
+    "userAddress": "Kawasan Industri MM2100, Blok G, Cibitung"
+  },
+  "technicalData": {
+    "manufacturer": "Liebherr",
+    "locationAndYearOfManufacture": "Jerman / 2020",
+    "serialNumberUnitNumber": "LTM1090-98765",
+    "capacityWorkingLoad": "90.000 kg",
+    "maxLiftingHeight": "77.5 m",
+    "materialCertificateNumber": "CERT-MAT-12345",
+    "liftingSpeedMpm": "120 m/min"
+  },
+  "inspectionResult": {
+    "visualCheck": {
+      "hasBoomDefects": false,
+      "isNameplateAttached": true,
+      "areBoltsAndNutsSecure": true,
+      "isSlingGoodCondition": true,
+      "isHookGoodCondition": true,
+      "isSafetyLatchInstalled": false,
+      "isTireGoodCondition": true,
+      "isWorkLampFunctional": false
+    },
+    "functionalTest": {
+      "isForwardReverseFunctionOk": true,
+      "isSwingFunctionOk": true,
+      "isHoistingFunctionOk": true,
+      "loadTest": {
+        "loadKg": "80000",
+        "liftHeightMeters": "15",
+        "holdTimeSeconds": "600",
+        "isResultGood": true
+      },
+      "ndtTest": {
+        "method": "Magnetic Particle",
+        "isResultGood": true
+      }
     }
   },
-  "testing": {
-    "isForwardReverseFunctionOk": null,
-    "isSwingFunctionOk": null,
-    "isHoistingFunctionOk": null,
-    "loadingTest": {
-      "loadKg": null,
-      "liftHeightMeters": null,
-      "holdTimeSeconds": null,
-      "isResultGood": null
-    },
-    "ndtTest": {
-      "method": "",
-      "isResultGood": null
-    }
+  "signature": {
+      "companyName": "PT. IVAN ALIF HADRIAN"
   }
 }

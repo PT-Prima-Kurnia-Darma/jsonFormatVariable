@@ -1,10 +1,12 @@
 {
   "inspectionType": "PESAWAT ANGKAT ANGKUT JENIS",
+  "createdAt": "2025-07-15T11:36:36.173Z",
   "equipmentType": "MOBILE CRANE",
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
   "subInspectionType": "MOBILE CRANE",
+
   "generalData": {
-    "generalDataOwnerName": "PT. IVAN ALIF HADRIAN",
+    "generalDataOwnerName": "PT. IVAN JAGO",
     "generalDataOwnerAddress": "Jl. Gatot Subroto No. 112, Jakarta Selatan",
     "generalDataUserSubcontractorPersonInCharge": "PT. Bangun Cipta Graha",
     "generalDataUserAddress": "Kawasan Industri MM2100, Blok G, Cibitung",
