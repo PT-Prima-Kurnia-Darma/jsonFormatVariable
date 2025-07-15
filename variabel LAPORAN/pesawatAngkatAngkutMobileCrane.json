@@ -411,54 +411,95 @@
     "testingFunctionSwingAlarmResult": { "result": "Berfungsi dengan baik", "status": true },
     "testingFunctionReverseAlarmResult": { "result": "Berfungsi dengan baik", "status": true },
     "testingFunctionOverloadAlarmResult": { "result": "Berfungsi dengan baik", "status": true },
-    "testingDynamicMainHook1BoomLength": "30.0",
-    "testingDynamicMainHook1Radius": "10.0",
-    "testingDynamicMainHook1BoomAngle": "72",
-    "testingDynamicMainHook1TestLoad": "55000",
-    "testingDynamicMainHook1SafeWorkingLoad": "50000",
-    "testingDynamicMainHook1Result": "Baik",
-    "testingDynamicMainHook2BoomLength": "60.0",
-    "testingDynamicMainHook2Radius": "18.0",
-    "testingDynamicMainHook2BoomAngle": "70",
-    "testingDynamicMainHook2TestLoad": "13200",
-    "testingDynamicMainHook2SafeWorkingLoad": "12000",
-    "testingDynamicMainHook2Result": "Baik",
-    "testingDynamicAuxiliaryHook1BoomLength": "60.0",
-    "testingDynamicAuxiliaryHook1Radius": "22.0",
-    "testingDynamicAuxiliaryHook1BoomAngle": "65",
-    "testingDynamicAuxiliaryHook1TestLoad": "8800",
-    "testingDynamicAuxiliaryHook1SafeWorkingLoad": "8000",
-    "testingDynamicAuxiliaryHook1Result": "Baik",
-    "testingDynamicAuxiliaryHook2BoomLength": "60.0",
-    "testingDynamicAuxiliaryHook2Radius": "28.0",
-    "testingDynamicAuxiliaryHook2BoomAngle": "58",
-    "testingDynamicAuxiliaryHook2TestLoad": "4400",
-    "testingDynamicAuxiliaryHook2SafeWorkingLoad": "4000",
-    "testingDynamicAuxiliaryHook2Result": "Baik",
-    "testingStaticMainHook1BoomLength": "30.0",
-    "testingStaticMainHook1Radius": "10.0",
-    "testingStaticMainHook1BoomAngle": "72",
-    "testingStaticMainHook1TestLoad": "62500",
-    "testingStaticMainHook1SafeWorkingLoad": "50000",
-    "testingStaticMainHook1Result": "Baik, tidak ada penurunan",
-    "testingStaticMainHook2BoomLength": "60.0",
-    "testingStaticMainHook2Radius": "18.0",
-    "testingStaticMainHook2BoomAngle": "70",
-    "testingStaticMainHook2TestLoad": "15000",
-    "testingStaticMainHook2SafeWorkingLoad": "12000",
-    "testingStaticMainHook2Result": "Baik, tidak ada penurunan",
-    "testingStaticAuxiliaryHook1BoomLength": "60.0",
-    "testingStaticAuxiliaryHook1Radius": "22.0",
-    "testingStaticAuxiliaryHook1BoomAngle": "65",
-    "testingStaticAuxiliaryHook1TestLoad": "10000",
-    "testingStaticAuxiliaryHook1SafeWorkingLoad": "8000",
-    "testingStaticAuxiliaryHook1Result": "Baik, tidak ada penurunan",
-    "testingStaticAuxiliaryHook2BoomLength": "60.0",
-    "testingStaticAuxiliaryHook2Radius": "28.0",
-    "testingStaticAuxiliaryHook2BoomAngle": "58",
-    "testingStaticAuxiliaryHook2TestLoad": "5000",
-    "testingStaticAuxiliaryHook2SafeWorkingLoad": "4000",
-    "testingStaticAuxiliaryHook2Result": "Baik, tidak ada penurunan"
+    
+    "dynamicMainHookTests": [
+      {
+        "boomLength": "30.0",
+        "radius": "10.0",
+        "boomAngle": "72",
+        "testLoad": "55000",
+        "safeWorkingLoad": "50000",
+        "result": "Baik"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "18.0",
+        "boomAngle": "70",
+        "testLoad": "13200",
+        "safeWorkingLoad": "12000",
+        "result": "Baik"
+      },
+      {
+        "boomLength": "45.0",
+        "radius": "14.0",
+        "boomAngle": "75",
+        "testLoad": "27500",
+        "safeWorkingLoad": "25000",
+        "result": "Baik, sedikit goyangan terdeteksi"
+      }
+    ],
+    "dynamicAuxiliaryHookTests": [
+      {
+        "boomLength": "60.0",
+        "radius": "22.0",
+        "boomAngle": "65",
+        "testLoad": "8800",
+        "safeWorkingLoad": "8000",
+        "result": "Baik"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "28.0",
+        "boomAngle": "58",
+        "testLoad": "4400",
+        "safeWorkingLoad": "4000",
+        "result": "Baik"
+      }
+    ],
+    "staticMainHookTests": [
+      {
+        "boomLength": "30.0",
+        "radius": "10.0",
+        "boomAngle": "72",
+        "testLoad": "62500",
+        "safeWorkingLoad": "50000",
+        "result": "Baik, tidak ada penurunan"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "18.0",
+        "boomAngle": "70",
+        "testLoad": "15000",
+        "safeWorkingLoad": "12000",
+        "result": "Baik, tidak ada penurunan"
+      }
+    ],
+    "staticAuxiliaryHookTests": [
+      {
+        "boomLength": "60.0",
+        "radius": "22.0",
+        "boomAngle": "65",
+        "testLoad": "10000",
+        "safeWorkingLoad": "8000",
+        "result": "Baik, tidak ada penurunan"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "28.0",
+        "boomAngle": "58",
+        "testLoad": "5000",
+        "safeWorkingLoad": "4000",
+        "result": "Baik, tidak ada penurunan"
+      },
+      {
+        "boomLength": "76.0",
+        "radius": "34.0",
+        "boomAngle": "55",
+        "testLoad": "2750",
+        "safeWorkingLoad": "2500",
+        "result": "Baik, penurunan 0.1% terdeteksi (dalam batas aman)"
+      }
+    ]
   },
   "conclusion": "Mobile Crane dinyatakan LAIK DIOPERASIKAN dengan beberapa catatan perbaikan. Sebagian besar sistem utama berfungsi baik, namun memerlukan perhatian pada beberapa komponen minor untuk memastikan keamanan operasional yang maksimal.",
   "recommendation": "1. Segera lakukan perbaikan pada retak rambut di baut pondasi #3 dan Jib Section 2.\n2. Ganti kampas rem dan tali kawat baja pada winch tambahan yang terindikasi aus.\n3. Lakukan kalibrasi ulang pada Load Moment Indicator (LMI).\n4. Perbaiki safety latch pada kait tambahan dan ganti kaca lampu rotary.\n5. Lakukan pembersihan dan pengecatan pada area yang terkorosi.\n6. Pemeriksaan dan pengujian berkala berikutnya dilakukan sebelum 15 Juli 2026."
