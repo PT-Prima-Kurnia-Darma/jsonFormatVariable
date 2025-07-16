@@ -21,9 +21,9 @@ tags:
     description: "Manajemen data Laporan Pemeriksaan untuk Forklift."
   - name: "BAP Forklift"
     description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Forklift."
-  - name: "Laporan Mobile Crane"
+  - name: "Laporan- Mobile Crane"
     description: "Manajemen data Laporan Pemeriksaan untuk Mobile Crane."
-  - name: "BAP Mobile Crane"
+  - name: "BAP - Mobile Crane"
     description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Mobile Crane."
 paths:
   # ====================================================================
@@ -1345,7 +1345,7 @@ paths:
   /paa/mobileCrane/laporan:
     post:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Membuat Laporan Mobile Crane Baru
       description: Endpoint untuk membuat entri baru laporan hasil inspeksi mobile crane. Membutuhkan token otentikasi JWT.
       security:
@@ -1381,7 +1381,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
     get:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Mendapatkan Semua Laporan Mobile Crane
       description: Mengambil daftar semua laporan mobile crane yang tersimpan. Membutuhkan otentikasi JWT.
       security:
@@ -1415,7 +1415,7 @@ paths:
   /paa/mobileCrane/laporan/{id}:
     get:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Mendapatkan Laporan Mobile Crane by ID
       description: Mengambil detail satu laporan mobile crane berdasarkan ID uniknya.
       security:
@@ -1466,7 +1466,7 @@ paths:
 
     put:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Memperbarui Laporan Mobile Crane by ID
       description: Memperbarui data laporan mobile crane yang sudah ada berdasarkan ID.
       security:
@@ -1523,7 +1523,7 @@ paths:
           
     delete:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Menghapus Laporan Mobile Crane by ID
       description: Menghapus data laporan mobile crane secara permanen.
       security:
@@ -1570,7 +1570,7 @@ paths:
   /paa/mobileCrane/laporan/download/{id}:
     get:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Download Dokumen Laporan Mobile Crane
       description: Mengunduh dokumen laporan dalam format .docx berdasarkan ID laporan.
       security:
@@ -1622,7 +1622,7 @@ paths:
   /paa/mobileCrane/bap:
     post:
       tags:
-        - BAP Mobile Crane
+        - BAP - Mobile Crane
       summary: Membuat BAP Mobile Crane Baru
       description: Endpoint untuk membuat Berita Acara Pemeriksaan (BAP) baru untuk mobile crane.
       security:
@@ -1672,7 +1672,7 @@ paths:
           
     get:
       tags:
-        - Laporan Mobile Crane
+        - Laporan - Mobile Crane
       summary: Mendapatkan Semua BAP Mobile Crane
       description: Mengambil daftar semua BAP mobile crane yang tersimpan.
       security:
@@ -1706,7 +1706,7 @@ paths:
   /paa/mobileCrane/bap/{id}:
     get:
       tags:
-        - BAP Mobile Crane
+        - BAP - Mobile Crane
       summary: Mendapatkan BAP Mobile Crane by ID
       description: Mengambil detail satu BAP mobile crane berdasarkan ID uniknya.
       security:
@@ -1757,7 +1757,7 @@ paths:
           
     put:
       tags:
-        - BAP Mobile Crane
+        - BAP - Mobile Crane
       summary: Memperbarui BAP Mobile Crane by ID
       description: Memperbarui data BAP mobile crane yang sudah ada berdasarkan ID.
       security:
@@ -1814,7 +1814,7 @@ paths:
           
     delete:
       tags:
-        - BAP Mobile Crane
+        - BAP - Mobile Crane
       summary: Menghapus BAP Mobile Crane by ID
       description: Menghapus data BAP mobile crane secara permanen.
       security:
@@ -1861,7 +1861,7 @@ paths:
   /paa/mobileCrane/bap/download/{id}:
     get:
       tags:
-        - BAP Mobile Crane
+        - BAP - Mobile Crane
       summary: Download Dokumen BAP Mobile Crane
       description: Mengunduh dokumen BAP dalam format .docx berdasarkan ID BAP.
       security:
@@ -1913,7 +1913,7 @@ paths:
   /paa/mobileCrane/bap/prefill/{laporanId}:
     get:
       tags:
-        - BAP Mobile Crane
+        - BAP - Mobile Crane
       summary: Prefill Data BAP dari Laporan
       description: Mengambil data yang relevan dari laporan mobile crane untuk mengisi form BAP baru secara otomatis.
       security:
