@@ -2,8 +2,10 @@
   "laporanId": "string",
   "examinationType": "string",
   "inspectionType": "string",
-  "subInspectionType": "string",
   "inspectionDate": "string",
+  "equipmentType": "",
+  "createdAt": "string",
+  "extraId": "number",
   "generalData": {
     "companyName": "string",
     "companyLocation": "string",
