@@ -1,10 +1,11 @@
 {
+  "laporanId": "JPFMYLkJfGP1hKctr14v",
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
   "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
-  "subInspectionType": "Gantry Crane",
   "inspectionDate": "16 Juli 2025",
+  "extraId": 123,
   "generalData": {
-    "companyName": "PT. Baja Perkasa Industri",
+    "companyName": "PT. IVAN GACOR PAR 2",
     "companyLocation": "Kawasan Industri Modern, Jl. Logam No. 17, Cikande, Serang",
     "usageLocation": "Gudang Fabrikasi Utama",
     "location": "PT. Baja Perkasa Industri"
