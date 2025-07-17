@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: "API Lengkap - PT Prima Kurnia Darma"
-  description: "Dokumentasi API lengkap yang mencakup layanan Autentikasi, Laporan dan BAP untuk Elevator, Eskalator, Forklift, dan Mobile Crane."
-  version: "1.0.2"
+  title: API Lengkap - PT Prima Kurnia Darma
+  description: Dokumentasi API lengkap
+  version: 1.0.2
 servers:
-  - url: "http://localhost:3000"
-    description: "Server Development"
+  - url: http://localhost:3000
+    description: server Development
 tags:
   - name: "Auth"
     description: "Endpoint untuk manajemen pengguna: registrasi, login, update, dll."
@@ -26,9 +26,6 @@ tags:
   - name: "BAP Mobile Crane"
     description: "Manajemen data Berita Acara Pemeriksaan (BAP) untuk Mobile Crane."
 paths:
-  # ====================================================================
-  # == AUTH ENDPOINTS
-  # ====================================================================
   /auth/register:
     post:
       tags:
@@ -176,9 +173,6 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 
-  # ====================================================================
-  # == LAPORAN ELEVATOR ENDPOINTS
-  # ====================================================================
   /elevatorEskalator/elevator/laporan:
     post:
       tags:
@@ -1347,7 +1341,6 @@ paths:
       tags:
         - Laporan Mobile Crane
       summary: Membuat Laporan Mobile Crane Baru
-      description: Endpoint untuk membuat entri baru laporan hasil inspeksi mobile crane. Membutuhkan token otentikasi JWT.
       security:
         - bearerAuth: []
       requestBody:
@@ -1362,19 +1355,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane berhasil dibuat
-                  data:
-                    type: object
-                    properties:
-                      laporan:
-                        $ref: '#/components/schemas/LaporanMobileCrane'
+                $ref: '#/components/schemas/LaporanMobileCraneSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '500':
@@ -1383,7 +1364,6 @@ paths:
       tags:
         - Laporan Mobile Crane
       summary: Mendapatkan Semua Laporan Mobile Crane
-      description: Mengambil daftar semua laporan mobile crane yang tersimpan. Membutuhkan otentikasi JWT.
       security:
         - bearerAuth: []
       responses:
@@ -1392,21 +1372,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane berhasil didapat
-                  data:
-                    type: object
-                    properties:
-                      laporan:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/LaporanMobileCrane'
+                $ref: '#/components/schemas/GetAllLaporanMobileCraneResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '500':
@@ -1417,14 +1383,12 @@ paths:
       tags:
         - Laporan Mobile Crane
       summary: Mendapatkan Laporan Mobile Crane by ID
-      description: Mengambil detail satu laporan mobile crane berdasarkan ID uniknya.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari laporan mobile crane.
           schema:
             type: string
       responses:
@@ -1433,49 +1397,23 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane berhasil didapat
-                  data:
-                    type: object
-                    properties:
-                      laporan:
-                        $ref: '#/components/schemas/LaporanMobileCrane'
+                $ref: '#/components/schemas/LaporanMobileCraneSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: Laporan tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
-
     put:
       tags:
         - Laporan Mobile Crane
       summary: Memperbarui Laporan Mobile Crane by ID
-      description: Memperbarui data laporan mobile crane yang sudah ada berdasarkan ID.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari laporan yang akan diperbarui.
           schema:
             type: string
       requestBody:
@@ -1490,49 +1428,23 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane berhasil diperbarui
-                  data:
-                    type: object
-                    properties:
-                      laporan:
-                        $ref: '#/components/schemas/LaporanMobileCrane'
+                $ref: '#/components/schemas/LaporanMobileCraneSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: Laporan tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Gagal memperbarui, Laporan Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
-          
     delete:
       tags:
         - Laporan Mobile Crane
       summary: Menghapus Laporan Mobile Crane by ID
-      description: Menghapus data laporan mobile crane secara permanen.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari laporan yang akan dihapus.
           schema:
             type: string
       responses:
@@ -1541,29 +1453,11 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane berhasil dihapus
+                $ref: '#/components/schemas/DeleteSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: Laporan tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Gagal menghapus, Laporan Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
 
@@ -1572,14 +1466,12 @@ paths:
       tags:
         - Laporan Mobile Crane
       summary: Download Dokumen Laporan Mobile Crane
-      description: Mengunduh dokumen laporan dalam format .docx berdasarkan ID laporan.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari laporan yang akan diunduh.
           schema:
             type: string
       responses:
@@ -1587,15 +1479,9 @@ paths:
           description: Berhasil mengunduh dokumen.
           headers:
             Content-Disposition:
-              description: Menentukan nama file dan bahwa file harus diunduh.
               schema:
                 type: string
-                example: attachment; filename="Laporan-MobileCrane-PT_IVAN_JAGO-MteWqz7wZKBIbooRuCcL.docx"
-            message:
-              description: Pesan status unduhan.
-              schema:
-                type: string
-                example: Laporan Mobile Crane berhasil diunduh
+                example: attachment; filename="Laporan-MobileCrane-PT_IVAN_JAGO-Y8HjSQx5AIjoBgpmuooT.docx"
           content:
             application/vnd.openxmlformats-officedocument.wordprocessingml.document:
               schema:
@@ -1604,18 +1490,7 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: Laporan tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Gagal membuat dokumen, Laporan Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
 
@@ -1624,7 +1499,6 @@ paths:
       tags:
         - BAP Mobile Crane
       summary: Membuat BAP Mobile Crane Baru
-      description: Endpoint untuk membuat Berita Acara Pemeriksaan (BAP) baru untuk mobile crane.
       security:
         - bearerAuth: []
       requestBody:
@@ -1639,42 +1513,17 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: BAP Mobile Crane berhasil dibuat
-                  data:
-                    type: object
-                    properties:
-                      bap:
-                        $ref: '#/components/schemas/BapMobileCrane'
+                $ref: '#/components/schemas/BapMobileCraneSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: Laporan terkait tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Laporan Mobile Crane dengan ID tersebut tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
-          
     get:
       tags:
-        - Laporan Mobile Crane
+        - BAP Mobile Crane
       summary: Mendapatkan Semua BAP Mobile Crane
-      description: Mengambil daftar semua BAP mobile crane yang tersimpan.
       security:
         - bearerAuth: []
       responses:
@@ -1683,21 +1532,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: BAP Mobile Crane berhasil didapatkan
-                  data:
-                    type: object
-                    properties:
-                      bap:
-                        type: array
-                        items:
-                          $ref: '#/components/schemas/BapMobileCrane'
+                $ref: '#/components/schemas/GetAllBapMobileCraneResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '500':
@@ -1708,14 +1543,12 @@ paths:
       tags:
         - BAP Mobile Crane
       summary: Mendapatkan BAP Mobile Crane by ID
-      description: Mengambil detail satu BAP mobile crane berdasarkan ID uniknya.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari BAP mobile crane.
           schema:
             type: string
       responses:
@@ -1724,49 +1557,23 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: BAP Mobile Crane berhasil didapatkan
-                  data:
-                    type: object
-                    properties:
-                      bap:
-                        $ref: '#/components/schemas/BapMobileCrane'
+                $ref: '#/components/schemas/BapMobileCraneSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: BAP tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: BAP Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
-          
     put:
       tags:
         - BAP Mobile Crane
       summary: Memperbarui BAP Mobile Crane by ID
-      description: Memperbarui data BAP mobile crane yang sudah ada berdasarkan ID.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari BAP yang akan diperbarui.
           schema:
             type: string
       requestBody:
@@ -1781,49 +1588,23 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: BAP Mobile Crane berhasil diperbarui
-                  data:
-                    type: object
-                    properties:
-                      bap:
-                        $ref: '#/components/schemas/BapMobileCrane'
+                $ref: '#/components/schemas/BapMobileCraneSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: BAP tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Gagal memperbarui, BAP Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
-          
     delete:
       tags:
         - BAP Mobile Crane
       summary: Menghapus BAP Mobile Crane by ID
-      description: Menghapus data BAP mobile crane secara permanen.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari BAP yang akan dihapus.
           schema:
             type: string
       responses:
@@ -1832,29 +1613,11 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: BAP Mobile Crane berhasil dihapus
+                $ref: '#/components/schemas/DeleteSuccessResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: BAP tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Gagal menghapus, BAP Mobile Crane tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
 
@@ -1863,14 +1626,12 @@ paths:
       tags:
         - BAP Mobile Crane
       summary: Download Dokumen BAP Mobile Crane
-      description: Mengunduh dokumen BAP dalam format .docx berdasarkan ID BAP.
       security:
         - bearerAuth: []
       parameters:
         - name: id
           in: path
           required: true
-          description: ID unik dari BAP yang akan diunduh.
           schema:
             type: string
       responses:
@@ -1878,15 +1639,9 @@ paths:
           description: Berhasil mengunduh dokumen.
           headers:
             Content-Disposition:
-              description: Menentukan nama file dan bahwa file harus diunduh.
               schema:
                 type: string
-                example: attachment; filename="BAP-MobileCrane-PT_IVAN_ALIF_HADRIAN-someId.docx"
-            message:
-              description: Pesan status unduhan.
-              schema:
-                type: string
-                example: BAP Mobile Crane berhasil diunduh
+                example: attachment; filename="BAP-MobileCrane-PT_IVAN_ALIF_HADRIAN-i5eivPwDswRg8q5bpuX9.docx"
           content:
             application/vnd.openxmlformats-officedocument.wordprocessingml.document:
               schema:
@@ -1895,71 +1650,2653 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: BAP tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/mobileCrane/bap/prefill/{laporanId}:
+
+  # ====================================================================
+  # == LAPORAN & BAP GANTRY CRANE ENDPOINTS
+  # ====================================================================
+  /paa/gantryCrane/laporan:
+    post:
+      tags:
+        - Laporan Gantry Crane
+      summary: Membuat Laporan Gantry Crane Baru
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanGantryCranePayload'
+      responses:
+        '201':
+          description: Laporan Gantry Crane berhasil dibuat.
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Gagal membuat dokumen, BAP Mobile Crane tidak ditemukan.
+                $ref: '#/components/schemas/LaporanGantryCraneSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      tags:
+        - Laporan Gantry Crane
+      summary: Mendapatkan Semua Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Data semua laporan gantry crane berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllLaporanGantryCraneResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/laporan/{id}:
+    get:
+      tags:
+        - Laporan Gantry Crane
+      summary: Mendapatkan Laporan Gantry Crane by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data laporan gantry crane berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGantryCraneSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      tags:
+        - Laporan Gantry Crane
+      summary: Memperbarui Laporan Gantry Crane by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanGantryCranePayload'
+      responses:
+        '200':
+          description: Laporan gantry crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGantryCraneSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      tags:
+        - Laporan Gantry Crane
+      summary: Menghapus Laporan Gantry Crane by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan gantry crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/laporan/download/{id}:
+    get:
+      tags:
+        - Laporan Gantry Crane
+      summary: Download Dokumen Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengunduh dokumen laporan gantry crane.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-GantryCrane-PT_IVAN_GACOR-fIWx7TB1SJJg3g5f0H7j.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/bap:
+    post:
+      tags:
+        - BAP Gantry Crane
+      summary: Membuat BAP Gantry Crane Baru
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapGantryCranePayload'
+      responses:
+        '201':
+          description: BAP Gantry Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCraneSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      tags:
+        - BAP Gantry Crane
+      summary: Mendapatkan Semua BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Data semua BAP gantry crane berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllBapGantryCraneResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/bap/{id}:
+    get:
+      tags:
+        - BAP Gantry Crane
+      summary: Mendapatkan BAP Gantry Crane by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP gantry crane berhasil didapatkan.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCraneSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      tags:
+        - BAP Gantry Crane
+      summary: Memperbarui BAP Gantry Crane by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapGantryCranePayload'
+      responses:
+        '200':
+          description: BAP gantry crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCraneSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      tags:
+        - BAP Gantry Crane
+      summary: Menghapus BAP Gantry Crane by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP gantry crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteSuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/bap/download/{id}:
+    get:
+      tags:
+        - BAP Gantry Crane
+      summary: Download Dokumen BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengunduh dokumen BAP gantry crane.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-GantryCrane-PT_IVAN_GACOR_PAR_2-ysZse9NsrQV0vxjIV239.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
           
-  /paa/mobileCrane/bap/prefill/{laporanId}:
+  /paa/gantryCrane/bap/prefill/{laporanId}:
     get:
       tags:
-        - BAP Mobile Crane
-      summary: Prefill Data BAP dari Laporan
-      description: Mengambil data yang relevan dari laporan mobile crane untuk mengisi form BAP baru secara otomatis.
+        - BAP Gantry Crane
+      summary: Prefill Data BAP Gantry Crane dari Laporan
       security:
         - bearerAuth: []
       parameters:
         - name: laporanId
           in: path
           required: true
-          description: ID dari laporan mobile crane yang akan dijadikan sumber data.
           schema:
             type: string
       responses:
         '200':
-          description: Data BAP berhasil didapatkan.
+          description: Data BAP gantry crane berhasil didapatkan.
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: success
-                  message:
-                    type: string
-                    example: Data BAP Mobile Crane berhasil didapat
-                  data:
-                    $ref: '#/components/schemas/BapMobileCrane'
+                $ref: '#/components/schemas/BapGantryCranePrefillResponse'
         '401':
           $ref: '#/components/responses/Unauthorized'
         '404':
-          description: Laporan tidak ditemukan.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: Data Laporan Mobile Crane dengan ID tersebut tidak ditemukan.
+          $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/InternalServerError'
 
-components:
+  securitySchemes:
+    bearerAuth:
+      type: "http"
+      scheme: "bearer"
+      bearerFormat: "JWT"
+  responses:
+    NotFound:
+      description: "Resource tidak ditemukan."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    BadRequest:
+      description: "Request tidak valid karena kesalahan input dari client."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Unauthorized:
+      description: "Akses ditolak karena kredensial tidak valid atau tidak ada."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Conflict:
+      description: "Terjadi konflik, misalnya data yang sama sudah ada."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    InternalServerError:
+      description: "Terjadi kesalahan pada server."
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    # ====================================================================
+    # == COMMON & AUTH SCHEMAS
+    # ====================================================================
+    ErrorResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+          example: "fail"
+        message:
+          type: "string"
+          example: "Pesan error spesifik."
+    DeleteSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+          example: "success"
+        message:
+          type: "string"
+          example: "Resource berhasil dihapus."
+    RegisterPayload:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        username:
+          type: "string"
+        password:
+          type: "string"
+    RegisterSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            id:
+              type: "string"
+            name:
+              type: "string"
+            username:
+              type: "string"
+            createdAt:
+              type: "string"
+    LoginPayload:
+      type: "object"
+      properties:
+        username:
+          type: "string"
+        password:
+          type: "string"
+    LoginSuccessResponse:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"
+        data:
+          type: "object"
+          properties:
+            user:
+              type: "object"
+              properties:
+                id:
+                  type: "string"
+                username:
+                  type: "string"
+                name:
+                  type: "string"
+            token:
+              type: "string"
+    InspectionItem:
+      type: "object"
+      properties:
+        result:
+          type: "string"
+        status:
+          type: "boolean"
+
+    # ====================================================================
+    # == MOBILE CRANE SCHEMAS
+    # ====================================================================
+    DynamicLoadTestItem:
+      type: object
+      properties:
+        boomLength:
+          type: string
+        radius:
+          type: string
+        boomAngle:
+          type: string
+        testLoad:
+          type: string
+        safeWorkingLoad:
+          type: string
+        result:
+          type: string
+          
+    StaticLoadTestItem:
+      type: object
+      properties:
+        boomLength:
+          type: string
+        radius:
+          type: string
+        boomAngle:
+          type: string
+        testLoad:
+          type: string
+        safeWorkingLoad:
+          type: string
+        result:
+          type: string
+          
+    LaporanMobileCranePayload:
+      type: object
+      properties:
+        inspectionType:
+          type: string
+        equipmentType:
+          type: string
+        examinationType:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        extraId:
+          type: number
+        generalData:
+          type: object
+          properties:
+            generalDataOwnerName:
+              type: string
+            generalDataOwnerAddress:
+              type: string
+            generalDataUserSubcontractorPersonInCharge:
+              type: string
+            generalDataUserAddress:
+              type: string
+            generalDataUnitLocation:
+              type: string
+            generalDataOperatorName:
+              type: string
+            generalDataManufacturer:
+              type: string
+            generalDataBrandType:
+              type: string
+            generalDataLocationAndYearOfManufacture:
+              type: string
+            generalDataSerialNumberUnitNumber:
+              type: string
+            generalDataCapacityWorkingLoad:
+              type: string
+            generalDataIntendedUse:
+              type: string
+            generalDataUsagePermitNumber:
+              type: string
+            generalDataOperatorCertificate:
+              type: string
+            generalDataEquipmentHistory:
+              type: string
+            generalDataInspectionDate:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            technicalDataMaximumWorkingLoadCapacity:
+              type: string
+            technicalDataBoomLength:
+              type: string
+            technicalDataMaximumJibLength:
+              type: string
+            technicalDataMaximumJibWorkingLoad:
+              type: string
+            technicalDataMaxBoomJibLength:
+              type: string
+            technicalDataCraneWeight:
+              type: string
+            technicalDataMaxLiftingHeight:
+              type: string
+            technicalDataBoomWorkingAngle:
+              type: string
+            technicalDataEngineNumber:
+              type: string
+            technicalDataType:
+              type: string
+            technicalDataNumberOfCylinders:
+              type: string
+            technicalDataNetPower:
+              type: string
+            technicalDataBrandYearOfManufacture:
+              type: string
+            technicalDataHookManufacturer:
+              type: string
+            technicalDataMainHookType:
+              type: string
+            technicalDataMainHookCapacity:
+              type: string
+            technicalDataMainHookMaterial:
+              type: string
+            technicalDataMainHookSerialNumber:
+              type: string
+            technicalDataAuxiliaryHookType:
+              type: string
+            technicalDataAuxiliaryHookCapacity:
+              type: string
+            technicalDataAuxiliaryHookMaterial:
+              type: string
+            technicalDataAuxiliaryHookSerialNumber:
+              type: string
+            technicalDataWireRopeMainLoadHoistDrumDiameter:
+              type: string
+            technicalDataWireRopeMainLoadHoistDrumType:
+              type: string
+            technicalDataWireRopeMainLoadHoistDrumConstruction:
+              type: string
+            technicalDataWireRopeMainLoadHoistDrumBreakingStrength:
+              type: string
+            technicalDataWireRopeMainLoadHoistDrumLength:
+              type: string
+            technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter:
+              type: string
+            technicalDataWireRopeAuxiliaryLoadHoistDrumType:
+              type: string
+            technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction:
+              type: string
+            technicalDataWireRopeAuxiliaryLoadHoistDrumLength:
+              type: string
+            technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength:
+              type: string
+            technicalDataWireRopeBoomHoistDrumDiameter:
+              type: string
+            technicalDataWireRopeBoomHoistDrumType:
+              type: string
+            technicalDataWireRopeBoomHoistDrumConstruction:
+              type: string
+            technicalDataWireRopeBoomHoistDrumLength:
+              type: string
+            technicalDataWireRopeBoomHoistDrumBreakingStrength:
+              type: string
+        inspectionAndTesting:
+          type: object
+          properties:
+            visualFoundationAndBoltsCorrosionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFoundationAndBoltsCracksResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFoundationAndBoltsDeformationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFoundationAndBoltsTightnessResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFrameColumnsOnFoundationCorrosionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFrameColumnsOnFoundationCracksResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFrameColumnsOnFoundationDeformationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFrameColumnsOnFoundationFasteningResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFrameColumnsOnFoundationTransverseReinforcementResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualFrameColumnsOnFoundationDiagonalReinforcementResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLadderCorrosionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLadderCracksResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLadderDeformationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLadderFasteningResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualWorkingPlatformCorrosionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualWorkingPlatformCracksResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualWorkingPlatformDeformationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualWorkingPlatformFasteningResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOutriggersOutriggerArmHousingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOutriggersOutriggerArmsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOutriggersJackResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOutriggersOutriggerPadsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOutriggersHousingConnectionToChassisResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOutriggersOutriggerSafetyLocksResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableSlewingRollerBearingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableBrakeHousingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntablePressureCylinderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableDrumAxleResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableLeversPinsBoltsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTurntableGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomMainBoomResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomBoomSectionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomTopPulleyResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomPulleyGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomWireRopeGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomPulleyGrooveLipResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomPivotPinResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLatticeBoomWireRopeGuidePulleyResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSteeringMainClutchResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTransmissionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSteeringFrontWheelResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSteeringMiddleWheelResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSteeringRearWheelResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeServiceBrakeResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeParkingBrakeResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeBrakeHousingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeLeversPinsBoltsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualBrakeGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTravelDrumClutchHousingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTravelDrumClutchLiningResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTravelDrumClutchDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTravelDrumLeversPinsBoltsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualTravelDrumGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchDrumMountingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchWindingDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchBrakeDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchBrakeHousingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchClutchLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchClutchDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchGrooveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchGrooveLipResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchFlangesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWinchBrakeActuatorLeversPinsAndBoltsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchDrumMountingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchWindingDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchBrakeDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchBrakeHousingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchClutchLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchClutchDrumSurfaceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchGrooveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchGrooveLipResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchFlangesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWinchBrakeActuatorLeversPinsAndBoltsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHoistGearBlockLubricationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHoistGearBlockOilSealResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainPulleyPulleyGrooveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainPulleyPulleyGrooveLipResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainPulleyPulleyPinResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainPulleyBearingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainPulleyPulleyGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainPulleyWireRopeGuardResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainHookSwivelNutAndBearingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainHookTrunnionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainHookSafetyLatchResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryHookFreeFallWeightResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryHookSwivelNutAndBearingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryHookSafetyLatchResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWireRopeCorrosionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWireRopeWearResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWireRopeBreakageResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualMainWireRopeDeformationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWireRopeCorrosionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWireRopeWearResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWireRopeBreakageResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualAuxiliaryWireRopeDeformationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLimitSwitchLongTravelResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLimitSwitchCrossTravelResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualLimitSwitchHoistingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineCoolingSystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineLubricationSystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineEngineMountingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineSafetyGuardEquipmentResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineExhaustSystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineFuelSystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEnginePowerTransmissionSystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineBatteryResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineStarterMotorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineWiringInstallationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualInternalCombustionEngineTurbochargerResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicPumpResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicLinesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicFilterResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicTankResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicMainWinchMotorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicAuxiliaryWinchMotorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicBoomWinchMotorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicSwingMotorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveReliefValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveMainWinchValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveAuxiliaryWinchValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveBoomWinchValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveBoomMovementValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveSteeringCylinderValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveAxleOscillationValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualControlValveOutriggerMovementValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicCylinderBoomMovementCylinderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicCylinderOutriggerCylinderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicCylinderSteeringWheelCylinderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicCylinderAxleOscillationCylinderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualHydraulicCylinderTelescopicCylinderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualPneumaticCompressorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualPneumaticTankAndSafetyValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualPneumaticPressurizedAirLinesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualPneumaticAirFilterResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualPneumaticControlValveResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinSafetyLadderResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinDoorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinWindowResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinFanAcResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinControlLeversButtonsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinPendantControlResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinLightingResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinHornSignalAlarmResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinFuseResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinCommunicationDeviceResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinFireExtinguisherResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinOperatingSignsResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinIgnitionKeyMasterSwitchResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualOperatorCabinButtonsHandlesLeversResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualElectricalComponentsPanelConductorConnectorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualElectricalComponentsConductorProtectionResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualElectricalComponentsMotorInstallationSafetySystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualElectricalComponentsGroundingSystemResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualElectricalComponentsInstallationResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesLadderHandrailResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesEngineOilLubricantPressureResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesHydraulicOilPressureResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesAirPressureResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesAmperemeterResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesVoltageResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesEngineTemperatureResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesTransmissionTemperatureResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterOilTemperaturePressureResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterSpeedometerIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterRotaryLampResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterMainHoistRopeUpDownLimitResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterAuxiliaryHoistRopeUpDownLimitResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterSwingMotionLimitResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterLevelIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterLoadWeightIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterLoadChartResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterAnemometerWindSpeedResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterBoomAngleIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterAirPressureIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterHydraulicPressureIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterSafetyValvesResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterMainWindingDrumSafetyLockResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterAuxiliaryWindingDrumSafetyLockResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterTelescopicMotionLimitResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterLightningArresterResult: { $ref: '#/components/schemas/InspectionItem' }
+            visualSafetyDevicesConverterLiftingHeightIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtWireRopeMainLoadSpecDiameter: { type: string }
+            ndtWireRopeMainLoadActualDiameter: { type: string }
+            ndtWireRopeMainLoadConstruction: { type: string }
+            ndtWireRopeMainLoadType: { type: string }
+            ndtWireRopeMainLoadLength: { type: string }
+            ndtWireRopeMainLoadAge: { type: string }
+            ndtWireRopeMainLoadResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtWireRopeAuxiliaryLoadSpecDiameter: { type: string }
+            ndtWireRopeAuxiliaryLoadActualDiameter: { type: string }
+            ndtWireRopeAuxiliaryLoadConstruction: { type: string }
+            ndtWireRopeAuxiliaryLoadType: { type: string }
+            ndtWireRopeAuxiliaryLoadLength: { type: string }
+            ndtWireRopeAuxiliaryLoadAge: { type: string }
+            ndtWireRopeAuxiliaryLoadResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtWireRopeBoomHoistSpecDiameter: { type: string }
+            ndtWireRopeBoomHoistActualDiameter: { type: string }
+            ndtWireRopeBoomHoistConstruction: { type: string }
+            ndtWireRopeBoomHoistType: { type: string }
+            ndtWireRopeBoomHoistLength: { type: string }
+            ndtWireRopeBoomHoistAge: { type: string }
+            ndtWireRopeBoomHoistResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtBoomType: { type: string }
+            ndtBoomNdtType: { type: string }
+            ndtBoomInspection1Part: { type: string }
+            ndtBoomInspection1Location: { type: string }
+            ndtBoomInspection1Result: { $ref: '#/components/schemas/InspectionItem' }
+            ndtBoomInspection2Part: { type: string }
+            ndtBoomInspection2Location: { type: string }
+            ndtBoomInspection2Result: { $ref: '#/components/schemas/InspectionItem' }
+            ndtBoomInspection3Part: { type: string }
+            ndtBoomInspection3Location: { type: string }
+            ndtBoomInspection3Result: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainHookNdtType: { type: string }
+            ndtMainHookSpecificationA: { type: string }
+            ndtMainHookSpecificationB: { type: string }
+            ndtMainHookSpecificationC: { type: string }
+            ndtMainHookSpecificationD: { type: string }
+            ndtMainHookSpecificationE: { type: string }
+            ndtMainHookSpecificationF: { type: string }
+            ndtMainHookSpecificationG: { type: string }
+            ndtMainHookSpecificationH: { type: string }
+            ndtMainHookSpecificationResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainHookMeasurementResultsA: { type: string }
+            ndtMainHookMeasurementResultsB: { type: string }
+            ndtMainHookMeasurementResultsC: { type: string }
+            ndtMainHookMeasurementResultsD: { type: string }
+            ndtMainHookMeasurementResultsE: { type: string }
+            ndtMainHookMeasurementResultsF: { type: string }
+            ndtMainHookMeasurementResultsG: { type: string }
+            ndtMainHookMeasurementResultsH: { type: string }
+            ndtMainHookMeasurementResultsResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainHookToleranceMeasureA: { type: string }
+            ndtMainHookToleranceMeasureB: { type: string }
+            ndtMainHookToleranceMeasureC: { type: string }
+            ndtMainHookToleranceMeasureD: { type: string }
+            ndtMainHookToleranceMeasureE: { type: string }
+            ndtMainHookToleranceMeasureF: { type: string }
+            ndtMainHookToleranceMeasureG: { type: string }
+            ndtMainHookToleranceMeasureH: { type: string }
+            ndtMainHookToleranceMeasureResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryHookNdtType: { type: string }
+            ndtAuxiliaryHookSpecificationA: { type: string }
+            ndtAuxiliaryHookSpecificationB: { type: string }
+            ndtAuxiliaryHookSpecificationC: { type: string }
+            ndtAuxiliaryHookSpecificationD: { type: string }
+            ndtAuxiliaryHookSpecificationE: { type: string }
+            ndtAuxiliaryHookSpecificationF: { type: string }
+            ndtAuxiliaryHookSpecificationG: { type: string }
+            ndtAuxiliaryHookSpecificationH: { type: string }
+            ndtAuxiliaryHookSpecificationResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryHookMeasurementResultsA: { type: string }
+            ndtAuxiliaryHookMeasurementResultsB: { type: string }
+            ndtAuxiliaryHookMeasurementResultsC: { type: string }
+            ndtAuxiliaryHookMeasurementResultsD: { type: string }
+            ndtAuxiliaryHookMeasurementResultsE: { type: string }
+            ndtAuxiliaryHookMeasurementResultsF: { type: string }
+            ndtAuxiliaryHookMeasurementResultsG: { type: string }
+            ndtAuxiliaryHookMeasurementResultsH: { type: string }
+            ndtAuxiliaryHookMeasurementResultsResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryHookToleranceMeasureA: { type: string }
+            ndtAuxiliaryHookToleranceMeasureB: { type: string }
+            ndtAuxiliaryHookToleranceMeasureC: { type: string }
+            ndtAuxiliaryHookToleranceMeasureD: { type: string }
+            ndtAuxiliaryHookToleranceMeasureE: { type: string }
+            ndtAuxiliaryHookToleranceMeasureF: { type: string }
+            ndtAuxiliaryHookToleranceMeasureG: { type: string }
+            ndtAuxiliaryHookToleranceMeasureH: { type: string }
+            ndtAuxiliaryHookToleranceMeasureResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainDrumNdtType: { type: string }
+            ndtMainDrumSpecificationA: { type: string }
+            ndtMainDrumSpecificationB: { type: string }
+            ndtMainDrumSpecificationC: { type: string }
+            ndtMainDrumSpecificationD: { type: string }
+            ndtMainDrumSpecificationE: { type: string }
+            ndtMainDrumSpecificationF: { type: string }
+            ndtMainDrumSpecificationG: { type: string }
+            ndtMainDrumSpecificationResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainDrumMeasurementResultsA: { type: string }
+            ndtMainDrumMeasurementResultsB: { type: string }
+            ndtMainDrumMeasurementResultsC: { type: string }
+            ndtMainDrumMeasurementResultsD: { type: string }
+            ndtMainDrumMeasurementResultsE: { type: string }
+            ndtMainDrumMeasurementResultsF: { type: string }
+            ndtMainDrumMeasurementResultsG: { type: string }
+            ndtMainDrumMeasurementResultsResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryDrumNdtType: { type: string }
+            ndtAuxiliaryDrumSpecificationA: { type: string }
+            ndtAuxiliaryDrumSpecificationB: { type: string }
+            ndtAuxiliaryDrumSpecificationC: { type: string }
+            ndtAuxiliaryDrumSpecificationD: { type: string }
+            ndtAuxiliaryDrumSpecificationE: { type: string }
+            ndtAuxiliaryDrumSpecificationF: { type: string }
+            ndtAuxiliaryDrumSpecificationG: { type: string }
+            ndtAuxiliaryDrumSpecificationResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryDrumMeasurementResultsA: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsB: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsC: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsD: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsE: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsF: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsG: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainPulleySpecificationA: { type: string }
+            ndtMainPulleySpecificationB: { type: string }
+            ndtMainPulleySpecificationC: { type: string }
+            ndtMainPulleySpecificationD: { type: string }
+            ndtMainPulleySpecificationE: { type: string }
+            ndtMainPulleySpecificationResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtMainPulleyMeasurementResultsA: { type: string }
+            ndtMainPulleyMeasurementResultsB: { type: string }
+            ndtMainPulleyMeasurementResultsC: { type: string }
+            ndtMainPulleyMeasurementResultsD: { type: string }
+            ndtMainPulleyMeasurementResultsE: { type: string }
+            ndtMainPulleyMeasurementResultsResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryPulleySpecificationA: { type: string }
+            ndtAuxiliaryPulleySpecificationB: { type: string }
+            ndtAuxiliaryPulleySpecificationC: { type: string }
+            ndtAuxiliaryPulleySpecificationD: { type: string }
+            ndtAuxiliaryPulleySpecificationE: { type: string }
+            ndtAuxiliaryPulleySpecificationResult: { $ref: '#/components/schemas/InspectionItem' }
+            ndtAuxiliaryPulleyMeasurementResultsA: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsB: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsC: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsD: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsE: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionHoistingLoweringResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionExtendedRectractedBoomResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionExtendedRectractedOutriggerResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionSwingSlewingResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionAntiTwoBlockResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionBoomStopResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionAnemometerWindSpeedResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionBrakeLockingDeviceResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionLoadMomentIndicatorResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionTurnSignalResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionDrivingLightsResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionLoadIndicatorLightResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionRotaryLampResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionHornResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionSwingAlarmResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionReverseAlarmResult: { $ref: '#/components/schemas/InspectionItem' }
+            testingFunctionOverloadAlarmResult: { $ref: '#/components/schemas/InspectionItem' }
+            dynamicMainHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/DynamicLoadTestItem'
+            dynamicAuxiliaryHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/DynamicLoadTestItem'
+            staticMainHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/StaticLoadTestItem'
+            staticAuxiliaryHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/StaticLoadTestItem'
+        conclusion:
+          type: string
+        recommendation:
+          type: string
+
+    LaporanMobileCraneResponseData:
+      allOf:
+        - $ref: '#/components/schemas/LaporanMobileCranePayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
+
+    LaporanMobileCraneSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Mobile Crane berhasil dibuat
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: '#/components/schemas/LaporanMobileCraneResponseData'
+
+    GetAllLaporanMobileCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Mobile Crane berhasil didapat
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: '#/components/schemas/LaporanMobileCraneResponseData'
+
+    BapMobileCranePayload:
+      type: object
+      properties:
+        laporanId:
+          type: string
+        examinationType:
+          type: string
+        inspectionDate:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        extraId:
+          type: number
+        generalData:
+          type: object
+          properties:
+            ownerName:
+              type: string
+            ownerAddress:
+              type: string
+            userAddress:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            manufacturer:
+              type: string
+            locationAndYearOfManufacture:
+              type: string
+            serialNumberUnitNumber:
+              type: string
+            capacityWorkingLoad:
+              type: string
+            maxLiftingHeight:
+              type: string
+            materialCertificateNumber:
+              type: string
+            liftingSpeedMpm:
+              type: string
+        inspectionResult:
+          type: object
+          properties:
+            visualCheck:
+              type: object
+              properties:
+                hasBoomDefects:
+                  type: boolean
+                isNameplateAttached:
+                  type: boolean
+                areBoltsAndNutsSecure:
+                  type: boolean
+                isSlingGoodCondition:
+                  type: boolean
+                isHookGoodCondition:
+                  type: boolean
+                isSafetyLatchInstalled:
+                  type: boolean
+                isTireGoodCondition:
+                  type: boolean
+                isWorkLampFunctional:
+                  type: boolean
+            functionalTest:
+              type: object
+              properties:
+                isForwardReverseFunctionOk:
+                  type: boolean
+                isSwingFunctionOk:
+                  type: boolean
+                isHoistingFunctionOk:
+                  type: boolean
+                loadTest:
+                  type: object
+                  properties:
+                    loadKg:
+                      type: string
+                    liftHeightMeters:
+                      type: string
+                    holdTimeSeconds:
+                      type: string
+                    isResultGood:
+                      type: boolean
+                ndtTest:
+                  type: object
+                  properties:
+                    method:
+                      type: string
+                    isResultGood:
+                      type: boolean
+        signature:
+          type: object
+          properties:
+            companyName:
+              type: string
+
+    BapMobileCraneResponseData:
+      allOf:
+        - $ref: '#/components/schemas/BapMobileCranePayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
+
+    BapMobileCraneSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Mobile Crane berhasil dibuat
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: '#/components/schemas/BapMobileCraneResponseData'
+
+    GetAllBapMobileCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Mobile Crane berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: '#/components/schemas/BapMobileCraneResponseData'
+
+    BapMobileCranePrefillResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP Mobile Crane berhasil didapat
+        data:
+          $ref: '#/components/schemas/BapMobileCranePayload'
+
+    # ====================================================================
+    # == GANTRY CRANE SCHEMAS
+    # ====================================================================
+    NdtWireropeItemGantry:
+      type: object
+      properties:
+        wireropeNumber:
+          type: string
+        wireropeUsed:
+          type: string
+        dimensionSpec:
+          type: string
+        dimensionResult:
+          type: string
+        construction:
+          type: string
+        type:
+          type: string
+        length:
+          type: string
+        age:
+          type: string
+        defectAda:
+          type: boolean
+        defectTidakAda:
+          type: boolean
+        description:
+          type: string
+
+    NdtGriderItemGantry:
+      type: object
+      properties:
+        griderNumber:
+          type: string
+        griderLocation:
+          type: string
+        griderAda:
+          type: boolean
+        griderTidakAda:
+          type: boolean
+        griderDesc:
+          type: string
+
+    DefleksiItemGantry:
+      type: object
+      properties:
+        defleksiPosision:
+          type: string
+        defleksiMeasuraments:
+          type: string
+        defleksiStandard:
+          type: string
+        defleksiDesc:
+          type: string
+
+    LaporanGantryCranePayload:
+      type: object
+      properties:
+        examinationType:
+          type: string
+        inspectionType:
+          type: string
+        reportNumber:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        extraId:
+          type: number
+        equipmentType:
+          type: string
+        generalData:
+          type: object
+          properties:
+            companyName:
+              type: string
+            companyLocation:
+              type: string
+            usageLocation:
+              type: string
+            location:
+              type: string
+            manufacturerHoist:
+              type: string
+            manufacturerStructure:
+              type: string
+            brandOrType:
+              type: string
+            manufactureYear:
+              type: string
+            serialNumber:
+              type: string
+            maxLiftingCapacityKg:
+              type: string
+            usagePermitNumber:
+              type: string
+            operatorcertificateStatus:
+              type: string
+            technicalDataManualStatus:
+              type: string
+            inspectionDate:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            liftHeight:
+              type: string
+            girderLength:
+              type: string
+            hoistingSpeed:
+              type: string
+            travelingSpeed:
+              type: string
+            traversingSpeed:
+              type: string
+            driveMotorcapacity:
+              type: string
+            hoistingpowerKw:
+              type: string
+            travelingpowerKw:
+              type: string
+            traversingpowerKw:
+              type: string
+            hoistingtype:
+              type: string
+            travelingtype:
+              type: string
+            traversingtype:
+              type: string
+            hoistingrpm:
+              type: string
+            travelingrpm:
+              type: string
+            traversingrpm:
+              type: string
+            hoistingvoltageV:
+              type: string
+            travelingvoltageV:
+              type: string
+            traversingvoltageV:
+              type: string
+            hoistingcurrentA:
+              type: string
+            travelingcurrentA:
+              type: string
+            traversingcurrentA:
+              type: string
+            hoistingfrequencyHz:
+              type: string
+            travelingfrequencyHz:
+              type: string
+            traversingfrequencyHz:
+              type: string
+            hoistingphase:
+              type: string
+            travelingphase:
+              type: string
+            traversingphase:
+              type: string
+            hoistingpowerSupply:
+              type: string
+            travelingpowerSupply:
+              type: string
+            traversingpowerSupply:
+              type: string
+            braketype:
+              type: string
+            brakemodel:
+              type: string
+            controlBrakehoistingtype:
+              type: string
+            controlBraketravelingtype:
+              type: string
+            controlBraketraversingtype:
+              type: string
+            controlBrakehoistingmodel:
+              type: string
+            controlBraketravelingmodel:
+              type: string
+            controlBraketraversingmodel:
+              type: string
+            hookhoistingtype:
+              type: string
+            hooktravelingtype:
+              type: string
+            hooktraversingtype:
+              type: string
+            hookhoistingcapacity:
+              type: string
+            hooktravelingcapacity:
+              type: string
+            hooktraversingcapacity:
+              type: string
+            hookhoistingmaterial:
+              type: string
+            hooktravelingmaterial:
+              type: string
+            hooktraversingmaterial:
+              type: string
+            wireRopeOrChainmediumType:
+              type: string
+            mediumTypehoistingtype:
+              type: string
+            mediumTypetravelingtype:
+              type: string
+            mediumTypetraversingtype:
+              type: string
+            mediumTypehoistingconstruction:
+              type: string
+            mediumTypetravelingconstruction:
+              type: string
+            mediumTypetraversingconstruction:
+              type: string
+            mediumTypehoistingdiameter:
+              type: string
+            mediumTypetravelingdiameter:
+              type: string
+            mediumTypetraversingdiameter:
+              type: string
+            mediumTypehoistinglength:
+              type: string
+            mediumTypetravelinglength:
+              type: string
+            mediumTypetraversinglength:
+              type: string
+        visualInspection:
+          type: object
+          properties:
+            anchorBoltscorrosionMemenuhi:
+              type: boolean
+            anchorBoltscorrosionTidakMemenuhi:
+              type: boolean
+            anchorBoltscorrosionResult:
+              type: string
+            anchorBoltscracksMemenuhi:
+              type: boolean
+            anchorBoltscracksTidakMemenuhi:
+              type: boolean
+            anchorBoltscracksResult:
+              type: string
+            anchorBoltsdeformationMemenuhi:
+              type: boolean
+            anchorBoltsdeformationTidakMemenuhi:
+              type: boolean
+            anchorBoltsdeformationResult:
+              type: string
+            anchorBoltsfasteningMemenuhi:
+              type: boolean
+            anchorBoltsfasteningTidakMemenuhi:
+              type: boolean
+            anchorBoltsfasteningResult:
+              type: string
+            columnFramecorrosionMemenuhi:
+              type: boolean
+            columnFramecorrosionTidakMemenuhi:
+              type: boolean
+            columnFramecorrosionResult:
+              type: string
+            columnFramecracksMemenuhi:
+              type: boolean
+            columnFramecracksTidakMemenuhi:
+              type: boolean
+            columnFramecracksResult:
+              type: string
+            columnFramedeformationMemenuhi:
+              type: boolean
+            columnFramedeformationTidakMemenuhi:
+              type: boolean
+            columnFramedeformationResult:
+              type: string
+            columnFramefasteningMemenuhi:
+              type: boolean
+            columnFramefasteningTidakMemenuhi:
+              type: boolean
+            columnFramefasteningResult:
+              type: string
+            columnFrametransverseReinforcementMemenuhi:
+              type: boolean
+            columnFrametransverseReinforcementTidakMemenuhi:
+              type: boolean
+            columnFrametransverseReinforcementResult:
+              type: string
+            columnFramediagonalReinforcementMemenuhi:
+              type: boolean
+            columnFramediagonalReinforcementTidakMemenuhi:
+              type: boolean
+            columnFramediagonalReinforcementResult:
+              type: string
+            laddercorrosionMemenuhi:
+              type: boolean
+            laddercorrosionTidakMemenuhi:
+              type: boolean
+            laddercorrosionResult:
+              type: string
+            laddercracksMemenuhi:
+              type: boolean
+            laddercracksTidakMemenuhi:
+              type: boolean
+            laddercracksResult:
+              type: string
+            ladderdeformationMemenuhi:
+              type: boolean
+            ladderdeformationTidakMemenuhi:
+              type: boolean
+            ladderdeformationResult:
+              type: string
+            ladderfasteningMemenuhi:
+              type: boolean
+            ladderfasteningTidakMemenuhi:
+              type: boolean
+            ladderfasteningResult:
+              type: string
+            workingFloorcorrosionMemenuhi:
+              type: boolean
+            workingFloorcorrosionTidakMemenuhi:
+              type: boolean
+            workingFloorcorrosionResult:
+              type: string
+            workingFloorcracksMemenuhi:
+              type: boolean
+            workingFloorcracksTidakMemenuhi:
+              type: boolean
+            workingFloorcracksResult:
+              type: string
+            workingFloordeformationMemenuhi:
+              type: boolean
+            workingFloordeformationTidakMemenuhi:
+              type: boolean
+            workingFloordeformationResult:
+              type: string
+            workingFloorfasteningMemenuhi:
+              type: boolean
+            workingFloorfasteningTidakMemenuhi:
+              type: boolean
+            workingFloorfasteningResult:
+              type: string
+            railSupportBeamcorrosionMemenuhi:
+              type: boolean
+            railSupportBeamcorrosionTidakMemenuhi:
+              type: boolean
+            railSupportBeamcorrosionResult:
+              type: string
+            railSupportBeamcracksMemenuhi:
+              type: boolean
+            railSupportBeamcracksTidakMemenuhi:
+              type: boolean
+            railSupportBeamcracksResult:
+              type: string
+            railSupportBeamdeformationMemenuhi:
+              type: boolean
+            railSupportBeamdeformationTidakMemenuhi:
+              type: boolean
+            railSupportBeamdeformationResult:
+              type: string
+            railSupportBeamfasteningMemenuhi:
+              type: boolean
+            railSupportBeamfasteningTidakMemenuhi:
+              type: boolean
+            railSupportBeamfasteningResult:
+              type: string
+            travelingRailcorrosionMemenuhi:
+              type: boolean
+            travelingRailcracksTidakMemenuhi:
+              type: boolean
+            travelingRailcracksResult:
+              type: string
+            travelingcracksMemenuhi:
+              type: boolean
+            travelingcracksTidakMemenuhi:
+              type: boolean
+            travelingcracksResult:
+              type: string
+            travelingrailConnectionMemenuhi:
+              type: boolean
+            travelingrailConnectionTidakMemenuhi:
+              type: boolean
+            travelingrailConnectionResult:
+              type: string
+            travelingrailAlignmentMemenuhi:
+              type: boolean
+            travelingrailAlignmentTidakMemenuhi:
+              type: boolean
+            travelingrailAlignmentResult:
+              type: string
+            travelinginterRailAlignmentMemenuhi:
+              type: boolean
+            travelinginterRailAlignmentTidakMemenuhi:
+              type: boolean
+            travelinginterRailAlignmentResult:
+              type: string
+            travelinginterRailFlatnessMemenuhi:
+              type: boolean
+            travelinginterRailFlatnessTidakMemenuhi:
+              type: boolean
+            travelinginterRailFlatnessResult:
+              type: string
+            travelingrailConnectionGapMemenuhi:
+              type: boolean
+            travelingrailConnectionGapTidakMemenuhi:
+              type: boolean
+            travelingrailConnectionGapResult:
+              type: string
+            travelingrailFastenerMemenuhi:
+              type: boolean
+            travelingrailFastenerTidakMemenuhi:
+              type: boolean
+            travelingrailFastenerResult:
+              type: string
+            travelingrailStopperMemenuhi:
+              type: boolean
+            travelingrailStopperTidakMemenuhi:
+              type: boolean
+            travelingrailStopperResult:
+              type: string
+            traversingRailcorrosionMemenuhi:
+              type: boolean
+            traversingRailcorrosionTidakMemenuhi:
+              type: boolean
+            traversingRailcorrosionResult:
+              type: string
+            traversingRailcracksMemenuhi:
+              type: boolean
+            traversingRailcracksTidakMemenuhi:
+              type: boolean
+            traversingRailcracksResult:
+              type: string
+            traversingRailrailConnectionMemenuhi:
+              type: boolean
+            traversingRailrailConnectionTidakMemenuhi:
+              type: boolean
+            traversingRailrailConnectionResult:
+              type: string
+            traversingRailrailAlignmentMemenuhi:
+              type: boolean
+            traversingRailrailAlignmentTidakMemenuhi:
+              type: boolean
+            traversingRailrailAlignmentResult:
+              type: string
+            traversingRailinterRailAlignmentMemenuhi:
+              type: boolean
+            traversingRailinterRailAlignmentTidakMemenuhi:
+              type: boolean
+            traversingRailinterRailAlignmentResult:
+              type: string
+            traversingRailinterRailFlatnessMemenuhi:
+              type: boolean
+            traversingRailinterRailFlatnessTidakMemenuhi:
+              type: boolean
+            traversingRailinterRailFlatnessResult:
+              type: string
+            traversingRailrailConnectionGapMemenuhi:
+              type: boolean
+            traversingRailrailConnectionGapTidakMemenuhi:
+              type: boolean
+            traversingRailrailConnectionGapResult:
+              type: string
+            traversingRailrailFastenerMemenuhi:
+              type: boolean
+            traversingRailrailFastenerTidakMemenuhi:
+              type: boolean
+            traversingRailrailFastenerResult:
+              type: string
+            traversingRailrailStopperMemenuhi:
+              type: boolean
+            traversingRailrailStopperTidakMemenuhi:
+              type: boolean
+            traversingRailrailStopperResult:
+              type: string
+            girdercorrosionMemenuhi:
+              type: boolean
+            girdercorrosionTidakMemenuhi:
+              type: boolean
+            girdercorrosionResult:
+              type: string
+            girdercracksMemenuhi:
+              type: boolean
+            girdercracksTidakMemenuhi:
+              type: boolean
+            girdercracksResult:
+              type: string
+            girdercamberMemenuhi:
+              type: boolean
+            girdercamberTidakMemenuhi:
+              type: boolean
+            girdercamberResult:
+              type: string
+            girderConnectionMemenuhi:
+              type: boolean
+            girderConnectionTidakMemenuhi:
+              type: boolean
+            girderConnectionResult:
+              type: string
+            girderendGirderConnectionMemenuhi:
+              type: boolean
+            girderendGirderConnectionTidakMemenuhi:
+              type: boolean
+            girderendGirderConnectionResult:
+              type: string
+            girdertruckMountingOnGirderMemenuhi:
+              type: boolean
+            girdertruckMountingOnGirderTidakMemenuhi:
+              type: boolean
+            girdertruckMountingOnGirderResult:
+              type: string
+            travelingGearboxcorrosionMemenuhi:
+              type: boolean
+            travelingGearboxcorrosionTidakMemenuhi:
+              type: boolean
+            travelingGearboxcorrosionResult:
+              type: string
+            travelingGearboxcracksMemenuhi:
+              type: boolean
+            travelingGearboxcracksTidakMemenuhi:
+              type: boolean
+            travelingGearboxcracksResult:
+              type: string
+            travelingGearboxlubricatingOilMemenuhi:
+              type: boolean
+            travelingGearboxlubricatingOilTidakMemenuhi:
+              type: boolean
+            travelingGearboxlubricatingOilResult:
+              type: string
+            travelingGearboxoilSealMemenuhi:
+              type: boolean
+            travelingGearboxoilSealTidakMemenuhi:
+              type: boolean
+            travelingGearboxoilSealResult:
+              type: string
+            driveWheelswearMemenuhi:
+              type: boolean
+            driveWheelswearTidakMemenuhi:
+              type: boolean
+            driveWheelswearResult:
+              type: string
+            driveWheelscracksMemenuhi:
+              type: boolean
+            driveWheelscracksTidakMemenuhi:
+              type: boolean
+            driveWheelscracksResult:
+              type: string
+            driveWheelsdeformationMemenuhi:
+              type: boolean
+            driveWheelsdeformationTidakMemenuhi:
+              type: boolean
+            driveWheelsdeformationResult:
+              type: string
+            driveWheelsflangeConditionMemenuhi:
+              type: boolean
+            driveWheelsflangeConditionTidakMemenuhi:
+              type: boolean
+            driveWheelsflangeConditionResult:
+              type: string
+            driveWheelschainConditionMemenuhi:
+              type: boolean
+            driveWheelschainConditionTidakMemenuhi:
+              type: boolean
+            driveWheelschainConditionResult:
+              type: string
+            idleWheelssafetyMemenuhi:
+              type: boolean
+            idleWheelssafetyTidakMemenuhi:
+              type: boolean
+            idleWheelssafetyResult:
+              type: string
+            idleWheelscracksMemenuhi:
+              type: boolean
+            idleWheelscracksTidakMemenuhi:
+              type: boolean
+            idleWheelscracksResult:
+              type: string
+            idleWheelsdeformationMemenuhi:
+              type: boolean
+            idleWheelsdeformationTidakMemenuhi:
+              type: boolean
+            idleWheelsdeformationResult:
+              type: string
+            idleWheelsflangeConditionMemenuhi:
+              type: boolean
+            idleWheelsflangeConditionTidakMemenuhi:
+              type: boolean
+            idleWheelsflangeConditionResult:
+              type: string
+            wheelConnectoralignmentMemenuhi:
+              type: boolean
+            wheelConnectoralignmentTidakMemenuhi:
+              type: boolean
+            wheelConnectoralignmentResult:
+              type: string
+            wheelConnectorcrossJointMemenuhi:
+              type: boolean
+            wheelConnectorcrossJointTidakMemenuhi:
+              type: boolean
+            wheelConnectorcrossJointResult:
+              type: string
+            wheelConnectorlubricationMemenuhi:
+              type: boolean
+            wheelConnectorlubricationTidakMemenuhi:
+              type: boolean
+            wheelConnectorlubricationResult:
+              type: string
+            girderStopperconditionMemenuhi:
+              type: boolean
+            girderStopperconditionTidakMemenuhi:
+              type: boolean
+            girderStopperconditionResult:
+              type: string
+            girderStopperreinforcementMemenuhi:
+              type: boolean
+            girderStopperreinforcementTidakMemenuhi:
+              type: boolean
+            girderStopperreinforcementResult:
+              type: string
+            trolleyTraversingGearboxfasteningMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxfasteningTidakMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxfasteningResult:
+              type: string
+            trolleyTraversingGearboxcorrosionMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxcorrosionTidakMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxcorrosionResult:
+              type: string
+            trolleyTraversingGearboxcracksMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxcracksTidakMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxcracksResult:
+              type: string
+            trolleyTraversingGearboxlubricatingOilMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxlubricatingOilTidakMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxlubricatingOilResult:
+              type: string
+            trolleyTraversingGearboxoilSealMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxoilSealTidakMemenuhi:
+              type: boolean
+            trolleyTraversingGearboxoilSealResult:
+              type: string
+            trolleyDriveWheelswearMemenuhi:
+              type: boolean
+            trolleyDriveWheelswearTidakMemenuhi:
+              type: boolean
+            trolleyDriveWheelswearResult:
+              type: string
+            trolleyDriveWheelscracksMemenuhi:
+              type: boolean
+            trolleyDriveWheelscracksTidakMemenuhi:
+              type: boolean
+            trolleyDriveWheelscracksResult:
+              type: string
+            trolleyDriveWheelsdeformationMemenuhi:
+              type: boolean
+            trolleyDriveWheelsdeformationTidakMemenuhi:
+              type: boolean
+            trolleyDriveWheelsdeformationResult:
+              type: string
+            trolleyDriveWheelsflangeConditionMemenuhi:
+              type: boolean
+            trolleyDriveWheelsflangeConditionTidakMemenuhi:
+              type: boolean
+            trolleyDriveWheelsflangeConditionResult:
+              type: string
+            trolleyDriveWheelschainConditionMemenuhi:
+              type: boolean
+            trolleyDriveWheelschainConditionTidakMemenuhi:
+              type: boolean
+            trolleyDriveWheelschainConditionResult:
+              type: string
+            trolleyIdleWheelswearMemenuhi:
+              type: boolean
+            trolleyIdleWheelswearTidakMemenuhi:
+              type: boolean
+            trolleyIdleWheelswearResult:
+              type: string
+            trolleyIdleWheelscracksMemenuhi:
+              type: boolean
+            trolleyIdleWheelscracksTidakMemenuhi:
+              type: boolean
+            trolleyIdleWheelscracksResult:
+              type: string
+            trolleyIdleWheelsdeformationMemenuhi:
+              type: boolean
+            trolleyIdleWheelsdeformationTidakMemenuhi:
+              type: boolean
+            trolleyIdleWheelsdeformationResult:
+              type: string
+            trolleyIdleWheelsflangeConditionMemenuhi:
+              type: boolean
+            trolleyIdleWheelsflangeConditionTidakMemenuhi:
+              type: boolean
+            trolleyIdleWheelsflangeConditionResult:
+              type: string
+            trolleyWheelConnectoralignmentMemenuhi:
+              type: boolean
+            trolleyWheelConnectoralignmentTidakMemenuhi:
+              type: boolean
+            trolleyWheelConnectoralignmentResult:
+              type: string
+            trolleyWheelConnectorcrossJointMemenuhi:
+              type: boolean
+            trolleyWheelConnectorcrossJointTidakMemenuhi:
+              type: boolean
+            trolleyWheelConnectorcrossJointResult:
+              type: string
+            trolleyWheelConnectorlubricationMemenuhi:
+              type: boolean
+            trolleyWheelConnectorlubricationTidakMemenuhi:
+              type: boolean
+            trolleyWheelConnectorlubricationResult:
+              type: string
+            trolleyGirderStopperconditionMemenuhi:
+              type: boolean
+            trolleyGirderStopperconditionTidakMemenuhi:
+              type: boolean
+            trolleyGirderStopperconditionResult:
+              type: string
+            trolleyGirderStopperreinforcementMemenuhi:
+              type: boolean
+            trolleyGirderStopperreinforcementTidakMemenuhi:
+              type: boolean
+            trolleyGirderStopperreinforcementResult:
+              type: string
+            windingDrumgrooveMemenuhi:
+              type: boolean
+            windingDrumgrooveTidakMemenuhi:
+              type: boolean
+            windingDrumgrooveResult:
+              type: string
+            windingDrumgrooveLipMemenuhi:
+              type: boolean
+            windingDrumgrooveLipTidakMemenuhi:
+              type: boolean
+            windingDrumgrooveLipResult:
+              type: string
+            windingDrumflangesMemenuhi:
+              type: boolean
+            windingDrumflangesTidakMemenuhi:
+              type: boolean
+            windingDrumflangesResult:
+              type: string
+            visualBrakeInspectionwearMemenuhi:
+              type: boolean
+            visualBrakeInspectionwearTidakMemenuhi:
+              type: boolean
+            visualBrakeInspectionwearResult:
+              type: string
+            visualBrakeInspectionadjustmentMemenuhi:
+              type: boolean
+            visualBrakeInspectionadjustmentTidakMemenuhi:
+              type: boolean
+            visualBrakeInspectionadjustmentResult:
+              type: string
+            hoistGearboxlubricationMemenuhi:
+              type: boolean
+            hoistGearboxlubricationTidakMemenuhi:
+              type: boolean
+            hoistGearboxlubricationResult:
+              type: string
+            hoistGearboxoilSealMemenuhi:
+              type: boolean
+            hoistGearboxoilSealTidakMemenuhi:
+              type: boolean
+            hoistGearboxoilSealResult:
+              type: string
+            pulleySprocketpulleyGrooveMemenuhi:
+              type: boolean
+            pulleySprocketpulleyGrooveTidakMemenuhi:
+              type: boolean
+            pulleySprocketpulleyGrooveResult:
+              type: string
+            pulleySprocketpulleyLipMemenuhi:
+              type: boolean
+            pulleySprocketpulleyLipTidakMemenuhi:
+              type: boolean
+            pulleySprocketpulleyLipResult:
+              type: string
+            pulleySprocketpulleyPinMemenuhi:
+              type: boolean
+            pulleySprocketpulleyPinTidakMemenuhi:
+              type: boolean
+            pulleySprocketpulleyPinResult:
+              type: string
+            pulleySprocketbearingMemenuhi:
+              type: boolean
+            pulleySprocketbearingTidakMemenuhi:
+              type: boolean
+            pulleySprocketbearingResult:
+              type: string
+            pulleySprocketpulleyGuardMemenuhi:
+              type: boolean
+            pulleySprocketpulleyGuardTidakMemenuhi:
+              type: boolean
+            pulleySprocketpulleyGuardResult:
+              type: string
+            pulleySprocketropeChainGuardMemenuhi:
+              type: boolean
+            pulleySprocketropeChainGuardTidakMemenuhi:
+              type: boolean
+            pulleySprocketropeChainGuardResult:
+              type: string
+            mainHookInspectionwearMemenuhi:
+              type: boolean
+            mainHookInspectionwearTidakMemenuhi:
+              type: boolean
+            mainHookInspectionwearResult:
+              type: string
+            mainHookInspectionhookOpeningGapMemenuhi:
+              type: boolean
+            mainHookInspectionhookOpeningGapTidakMemenuhi:
+              type: boolean
+            mainHookInspectionhookOpeningGapResult:
+              type: string
+            mainHookInspectionswivelNutAndBearingMemenuhi:
+              type: boolean
+            mainHookInspectionswivelNutAndBearingTidakMemenuhi:
+              type: boolean
+            mainHookInspectionswivelNutAndBearingResult:
+              type: string
+            mainHookInspectiontrunnionMemenuhi:
+              type: boolean
+            mainHookInspectiontrunnionTidakMemenuhi:
+              type: boolean
+            mainHookInspectiontrunnionResult:
+              type: string
+            auxiliaryHookInspectionwearMemenuhi:
+              type: boolean
+            auxiliaryHookInspectionwearTidakMemenuhi:
+              type: boolean
+            auxiliaryHookInspectionwearResult:
+              type: string
+            auxiliaryHookInspectionhookOpeningGapMemenuhi:
+              type: boolean
+            auxiliaryHookInspectionhookOpeningGapTidakMemenuhi:
+              type: boolean
+            auxiliaryHookInspectionhookOpeningGapResult:
+              type: string
+            auxiliaryHookInspectionswivelNutAndBearingMemenuhi:
+              type: boolean
+            auxiliaryHookInspectionswivelNutAndBearingTidakMemenuhi:
+              type: boolean
+            auxiliaryHookInspectionswivelNutAndBearingResult:
+              type: string
+            auxiliaryHookInspectiontrunnionMemenuhi:
+              type: boolean
+            auxiliaryHookInspectiontrunnionTidakMemenuhi:
+              type: boolean
+            auxiliaryHookInspectiontrunnionResult:
+              type: string
+            mainWireRopeInspectioncorrosionMemenuhi:
+              type: boolean
+            mainWireRopeInspectioncorrosionTidakMemenuhi:
+              type: boolean
+            mainWireRopeInspectioncorrosionResult:
+              type: string
+            mainWireRopeInspectionwearMemenuhi:
+              type: boolean
+            mainWireRopeInspectionwearTidakMemenuhi:
+              type: boolean
+            mainWireRopeInspectionwearResult:
+              type: string
+            mainWireRopeInspectionbreakageMemenuhi:
+              type: boolean
+            mainWireRopeInspectionbreakageTidakMemenuhi:
+              type: boolean
+            mainWireRopeInspectionbreakageResult:
+              type: string
+            mainWireRopeInspectiondeformationMemenuhi:
+              type: boolean
+            mainWireRopeInspectiondeformationTidakMemenuhi:
+              type: boolean
+            mainWireRopeInspectiondeformationResult:
+              type: string
+            auxiliaryWireRopeInspectioncorrosionMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectioncorrosionTidakMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectioncorrosionResult:
+              type: string
+            auxiliaryWireRopeInspectionwearMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectionwearTidakMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectionwearResult:
+              type: string
+            auxiliaryWireRopeInspectionbreakageMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectionbreakageTidakMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectionbreakageResult:
+              type: string
+            auxiliaryWireRopeInspectiondeformationMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectiondeformationTidakMemenuhi:
+              type: boolean
+            auxiliaryWireRopeInspectiondeformationResult:
+              type: string
+            mainChainInspectioncorrosionMemenuhi:
+              type: boolean
+            mainChainInspectioncorrosionTidakMemenuhi:
+              type: boolean
+            mainChainInspectioncorrosionResult:
+              type: string
+            mainChainInspectionwearMemenuhi:
+              type: boolean
+            mainChainInspectionwearTidakMemenuhi:
+              type: boolean
+            mainChainInspectionwearResult:
+              type: string
+            mainChainInspectioncrackOrBreakageMemenuhi:
+              type: boolean
+            mainChainInspectioncrackOrBreakageTidakMemenuhi:
+              type: boolean
+            mainChainInspectioncrackOrBreakageResult:
+              type: string
+            mainChainInspectiondeformationMemenuhi:
+              type: boolean
+            mainChainInspectiondeformationTidakMemenuhi:
+              type: boolean
+            mainChainInspectiondeformationResult:
+              type: string
+            auxiliaryChainInspectioncorrosionMemenuhi:
+              type: boolean
+            auxiliaryChainInspectioncorrosionTidakMemenuhi:
+              type: boolean
+            auxiliaryChainInspectioncorrosionResult:
+              type: string
+            auxiliaryChainInspectionwearMemenuhi:
+              type: boolean
+            auxiliaryChainInspectionwearTidakMemenuhi:
+              type: boolean
+            auxiliaryChainInspectionwearResult:
+              type: string
+            auxiliaryChainInspectioncrackOrBreakageMemenuhi:
+              type: boolean
+            auxiliaryChainInspectioncrackOrBreakageTidakMemenuhi:
+              type: boolean
+            auxiliaryChainInspectioncrackOrBreakageResult:
+              type: string
+            auxiliaryChainInspectiondeformationMemenuhi:
+              type: boolean
+            auxiliaryChainInspectiondeformationTidakMemenuhi:
+              type: boolean
+            auxiliaryChainInspectiondeformationResult:
+              type: string
+            limitSwitchlongTravelMemenuhi:
+              type: boolean
+            limitSwitchlongTravelTidakMemenuhi:
+              type: boolean
+            limitSwitchlongTravelResult:
+              type: string
+            limitSwitchcrossTravelMemenuhi:
+              type: boolean
+            limitSwitchcrossTravelTidakMemenuhi:
+              type: boolean
+            limitSwitchcrossTravelResult:
+              type: string
+            limitSwitchhoistMemenuhi:
+              type: boolean
+            limitSwitchhoistTidakMemenuhi:
+              type: boolean
+            limitSwitchhoistResult:
+              type: string
+            operatorCabinsafetyLadderMemenuhi:
+              type: boolean
+            operatorCabinsafetyLadderTidakMemenuhi:
+              type: boolean
+            operatorCabinsafetyLadderResult:
+              type: string
+            operatorCabindoorMemenuhi:
+              type: boolean
+            operatorCabindoorTidakMemenuhi:
+              type: boolean
+            operatorCabindoorResult:
+              type: string
+            operatorCabinwindowMemenuhi:
+              type: boolean
+            operatorCabinwindowTidakMemenuhi:
+              type: boolean
+            operatorCabinwindowResult:
+              type: string
+            operatorCabinfanOrACMemenuhi:
+              type: boolean
+            operatorCabinfanOrACTidakMemenuhi:
+              type: boolean
+            operatorCabinfanOrACResult:
+              type: string
+            operatorCabincontrolLeversOrButtonsMemenuhi:
+              type: boolean
+            operatorCabincontrolLeversOrButtonsTidakMemenuhi:
+              type: boolean
+            operatorCabincontrolLeversOrButtonsResult:
+              type: string
+            operatorCabinpendantControlMemenuhi:
+              type: boolean
+            operatorCabinpendantControlTidakMemenuhi:
+              type: boolean
+            operatorCabinpendantControlResult:
+              type: string
+            operatorCabinlightingMemenuhi:
+              type: boolean
+            operatorCabinlightingTidakMemenuhi:
+              type: boolean
+            operatorCabinlightingResult:
+              type: string
+            operatorCabinhornMemenuhi:
+              type: boolean
+            operatorCabinhornTidakMemenuhi:
+              type: boolean
+            operatorCabinhornResult:
+              type: string
+            operatorCabinfuseProtectionMemenuhi:
+              type: boolean
+            operatorCabinfuseProtectionTidakMemenuhi:
+              type: boolean
+            operatorCabinfuseProtectionResult:
+              type: string
+            operatorCabincommunicationDeviceMemenuhi:
+              type: boolean
+            operatorCabincommunicationDeviceTidakMemenuhi:
+              type: boolean
+            operatorCabincommunicationDeviceResult:
+              type: string
+            operatorCabinfireExtinguisherMemenuhi:
+              type: boolean
+            operatorCabinfireExtinguisherTidakMemenuhi:
+              type: boolean
+            operatorCabinfireExtinguisherResult:
+              type: string
+            operatorCabinoperationalSignsMemenuhi:
+              type: boolean
+            operatorCabinoperationalSignsTidakMemenuhi:
+              type: boolean
+            operatorCabinoperationalSignsResult:
+              type: string
+            operatorCabinignitionOrMasterSwitchMemenuhi:
+              type: boolean
+            operatorCabinignitionOrMasterSwitchTidakMemenuhi:
+              type: boolean
+            operatorCabinignitionOrMasterSwitchResult:
+              type: string
+            electricalComponentspanelConductorConnectorMemenuhi:
+              type: boolean
+            electricalComponentspanelConductorConnectorTidakMemenuhi:
+              type: boolean
+            electricalComponentspanelConductorConnectorResult:
+              type: string
+            electricalComponentsconductorProtectionMemenuhi:
+              type: boolean
+            electricalComponentsconductorProtectionTidakMemenuhi:
+              type: boolean
+            electricalComponentsconductorProtectionResult:
+              type: string
+            electricalComponentsmotorInstallationSafetySystemMemenuhi:
+              type: boolean
+            electricalComponentsmotorInstallationSafetySystemTidakMemenuhi:
+              type: boolean
+            electricalComponentsmotorInstallationSafetySystemResult:
+              type: string
+            electricalComponentsgroundingSystemMemenuhi:
+              type: boolean
+            electricalComponentsgroundingSystemTidakMemenuhi:
+              type: boolean
+            electricalComponentsgroundingSystemResult:
+              type: string
+            electricalComponentsinstallationMemenuhi:
+              type: boolean
+            electricalComponentsinstallationTidakMemenuhi:
+              type: boolean
+            electricalComponentsinstallationResult:
+              type: string
+        ndt:
+          type: object
+          properties:
+            wireropeMethod:
+              type: string
+            wireropeNumber:
+              type: array
+              items:
+                $ref: '#/components/schemas/NdtWireropeItemGantry'
+            HookspecA:
+              type: string
+            HookspecB:
+              type: string
+            HookspecC:
+              type: string
+            HookspecD:
+              type: string
+            HookspecE:
+              type: string
+            HookspecF:
+              type: string
+            HookspecG:
+              type: string
+            HookspecH:
+              type: string
+            HookspecBaik:
+              type: boolean
+            HookspecTidakBaik:
+              type: boolean
+            HookspecDesc:
+              type: string
+            measurementResultsA:
+              type: string
+            measurementResultsB:
+              type: string
+            measurementResultsC:
+              type: string
+            measurementResultsD:
+              type: string
+            measurementResultsE:
+              type: string
+            measurementResultsF:
+              type: string
+            measurementResultsG:
+              type: string
+            measurementResultsH:
+              type: string
+            measurementResultsBaik:
+              type: boolean
+            measurementResultsTidakBaik:
+              type: boolean
+            measurementResultsDesc:
+              type: string
+            toleranceA:
+              type: string
+            toleranceB:
+              type: string
+            toleranceC:
+              type: string
+            toleranceD:
+              type: string
+            toleranceE:
+              type: string
+            toleranceF:
+              type: string
+            toleranceG:
+              type: string
+            toleranceH:
+              type: string
+            toleranceBaik:
+              type: boolean
+            toleranceTidakBaik:
+              type: boolean
+            toleranceDesc:
+              type: string
+            griderMethod:
+              type: string
+            griderNumber:
+              type: array
+              items:
+                $ref: '#/components/schemas/NdtGriderItemGantry'
+        dynamicTesting:
+          type: object
+          properties:
+            travellingStatus:
+              type: string
+            travellingDesc:
+              type: string
+            traversingStatus:
+              type: string
+            traversingDesc:
+              type: string
+            hoistingStatus:
+              type: string
+            hoistingDesc:
+              type: string
+            safetyDeviceStatus:
+              type: string
+            safetyDeviceDesc:
+              type: string
+            brakeSwitchStatus:
+              type: string
+            brakeSwitchDesc:
+              type: string
+            brakeLockingStatus:
+              type: string
+            brakeLockingDesc:
+              type: string
+            instalasionElectricStatus:
+              type: string
+            instalasionElectricDesc:
+              type: string
+            hoist25:
+              type: string
+            travesing25:
+              type: string
+            travelling25:
+              type: string
+            brakeSystem25:
+              type: string
+            desc25:
+              type: string
+            hoist50:
+              type: string
+            travesing50:
+              type: string
+            travelling50:
+              type: string
+            brakeSystem50:
+              type: string
+            desc50:
+              type: string
+            hoist75:
+              type: string
+            travesing75:
+              type: string
+            travelling75:
+              type: string
+            brakeSystem75:
+              type: string
+            desc75:
+              type: string
+            hoist100:
+              type: string
+            travesing100:
+              type: string
+            travelling100:
+              type: string
+            brakeSystem100:
+              type: string
+            desc100:
+              type: string
+        staticTesting:
+          type: object
+          properties:
+            loadTest:
+              type: string
+            basedDesign:
+              type: string
+            lengthSpan:
+              type: string
+            xspan:
+              type: string
+            resultDefleksi:
+              type: boolean
+            defleksiPosision:
+              type: array
+              items:
+                $ref: '#/components/schemas/DefleksiItemGantry'
+        conclusion:
+          type: string
+        recomendation:
+          type: string
+
+    LaporanGantryCraneResponseData:
+      allOf:
+        - $ref: '#/components/schemas/LaporanGantryCranePayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
+    
+    LaporanGantryCraneSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Gantry Crane berhasil dibuat
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: '#/components/schemas/LaporanGantryCraneResponseData'
+
+    GetAllLaporanGantryCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Gantry Crane berhasil didapat
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: '#/components/schemas/LaporanGantryCraneResponseData'
+
+    BapGantryCranePayload:
+      type: object
+      properties:
+        laporanId:
+          type: string
+        examinationType:
+          type: string
+        inspectionType:
+          type: string
+        subInspectionType:
+          type: string
+        inspectionDate:
+          type: string
+        generalData:
+          type: object
+          properties:
+            companyName:
+              type: string
+            companyLocation:
+              type: string
+            usageLocation:
+              type: string
+            location:
+              type: string
+        technicalData:
+          type: object
+          properties:
+            brandOrType:
+              type: string
+            manufacturerHoist:
+              type: string
+            manufactureStructure:
+              type: string
+            manufactureYear:
+              type: string
+            manufactureCountry:
+              type: string
+            serialNumber:
+              type: string
+            maxLiftingCapacityKg:
+              type: string
+            liftingSpeedMpm:
+              type: string
+        inspectionResult:
+          type: object
+          properties:
+            visualCheck:
+              type: object
+              properties:
+                isMainStructureGood:
+                  type: boolean
+                areBoltsAndNutsSecure:
+                  type: boolean
+                isWireRopeGoodCondition:
+                  type: boolean
+                isHookGoodCondition:
+                  type: boolean
+                isGearboxGoodCondition:
+                  type: boolean
+                hasGearboxOilLeak:
+                  type: boolean
+                isWarningLampGoodCondition:
+                  type: boolean
+                isCapacityMarkingDisplayed:
+                  type: boolean
+            functionalTest:
+              type: object
+              properties:
+                isForwardReverseFunctionOk:
+                  type: boolean
+                isHoistingFunctionOk:
+                  type: boolean
+                isLimitSwitchFunctional:
+                  type: boolean
+            ndtTest:
+              type: object
+              properties:
+                method:
+                  type: string
+                isNdtResultGood:
+                  type: boolean
+            loadTest:
+              type: object
+              properties:
+                loadKg:
+                  type: string
+                liftHeightMeters:
+                  type: string
+                holdTimeSeconds:
+                  type: string
+                isLoadTestResultGood:
+                  type: boolean
+
+    BapGantryCraneResponseData:
+      allOf:
+        - $ref: '#/components/schemas/BapGantryCranePayload'
+        - type: object
+          properties:
+            id:
+              type: string
+            documentType:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+
+    BapGantryCraneSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Gantry Crane berhasil dibuat
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: '#/components/schemas/BapGantryCraneResponseData'
+
+    GetAllBapGantryCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Gantry Crane berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: '#/components/schemas/BapGantryCraneResponseData'
+
+    BapGantryCranePrefillResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP Gantry Crane berhasil didapat
+        data:
+          $ref: '#/components/schemas/BapGantryCranePayload'
+
   securitySchemes:
     bearerAuth:
       type: "http"

@@ -1,414 +1,202 @@
 {
-  "examinationType": "",
-  "subInspectionType": "",
+  "inspectionType": "string",
+  "subInspectionType": "Gondola",
+  "examinationType": "string",
+  "inspectionDate": "string",
   "generalData": {
-    "ownerName": "",
-    "ownerAddress": "",
-    "userInCharge": "",
-    "subcontractorPersonInCharge": "",
-    "unitLocation": "",
-    "operatorName": "",
-    "equipmentType": "",
-    "manufacturer": "",
-    "brandType": "",
-    "locationAndYearOfManufacture": "",
-    "serialNumberUnitNumber": "",
-    "capacityWorkingLoad": "",
-    "intendedUse": "",
-    "usagePermitNumber": "",
-    "operatorCertificate": ""
+    "ownerName": "string",
+    "ownerAddress": "string",
+    "userInCharge": "string",
+    "subcontractorPersonInCharge": "string",
+    "unitLocation": "string",
+    "operatorName": "string",
+    "equipmentType": "string",
+    "manufacturer": "string",
+    "brandType": "string",
+    "locationAndYearOfManufacture": "string",
+    "serialNumberUnitNumber": "string",
+    "capacityWorkingLoad": "string",
+    "intendedUse": "string",
+    "usagePermitNumber": "string",
+    "operatorCertificate": "string"
   },
   "technicalData": {
     "gondolaSpecification": {
-      "gondolaSpecificationSupportMastHeight": "",
-      "gondolaSpecificationFrontBeamLength": "",
-      "gondolaSpecificationMiddleBeamLength": "",
-      "gondolaSpecificationRearBeamLength": "",
-      "gondolaSpecificationBalanceWeightDistance": "",
-      "gondolaSpecificationCapacity": "",
-      "gondolaSpecificationSpeed": "",
-      "gondolaSpecificationPlatformSize": "",
-      "gondolaSpecificationWireRopeDiameter": ""
+      "supportMastHeight": "number",
+      "frontBeamLength": "number",
+      "middleBeamLength": "number",
+      "rearBeamLength": "number",
+      "balanceWeightDistance": "number",
+      "capacity": "string",
+      "speed": "string",
+      "platformSize": "string",
+      "wireRopeDiameter": "number"
     },
     "hoist": {
-      "hoistModel": "",
-      "hoistLiftingCapacity": "",
-      "hoistElectricMotor": {
-        "hoistlElectricMotorType": "",
-        "hoistElectricMotorPower": "",
-        "hoistElectricMotorVoltage": "",
-        "hoistElectricMotorVoltageHz": ""
+      "model": "string",
+      "liftingCapacity": "number",
+      "electricMotor": {
+        "type": "string",
+        "power": "string",
+        "voltage": "number",
+        "voltageHz": "number"
       }
     },
-    "safetyLockType": "",
+    "safetyLockType": "string",
     "brake": {
-      "brakeType": "",
-      "brakeModel": "",
-      "brakeCapacity": ""
+      "type": "string",
+      "model": "string",
+      "capacity": "string"
     },
     "suspensionMechanical": {
-      "suspensionMechanicalSupportMastHeight": "",
-      "suspensionMechanicalFrontBeamLength": "",
-      "suspensionMechanicalMaterial": ""
+      "supportMastHeight": "number",
+      "frontBeamLength": "number",
+      "material": "string"
     },
     "machineWeight": {
-      "machineWeightTotalPlatformWeight": "",
-      "machineWeightSuspensionMechanicalWeight": "",
-      "machineWeightBalanceWeight": "",
-      "machineWeightTotalMachineWeight": ""
+      "totalPlatformWeight": "number",
+      "suspensionMechanicalWeight": "number",
+      "balanceWeight": "number",
+      "totalMachineWeight": "string"
     }
   },
-  "visualCheck": {
+  "visualInspection": {
     "suspensionStructure": {
-      "suspensionStructureFrontBeam": {
-        "suspensionStructureFrontBeamMemenuhi": "",
-        "suspensionStructureFrontBeamTidakMemenuhi": "",
-        "suspensionStructureFrontBeamResult": ""
-      },
-      "suspensionStructureMiddleBeam": {
-        "suspensionStructureMiddleBeamMemenuhi": "",
-        "suspensionStructureMiddleBeamTidakMemenuhi": "",
-        "suspensionStructureMiddleBeamResult": ""
-      },
-      "suspensionStructureRearBeam": {
-        "suspensionStructureRearBeamMemenuhi": "",
-        "suspensionStructureRearBeamTidakMemenuhi": "",
-        "suspensionStructureRearBeamResult": ""
-      },
-      "suspensionStructureFrontBeamSupportMast": {
-        "suspensionStructureFrontBeamSupportMastMemenuhi": "",
-        "suspensionStructureFrontBeamSupportMastTidakMemenuhi": "",
-        "suspensionStructureFrontBeamSupportMastResult": ""
-      },
-      "suspensionStructureLowerFrontBeamSupportMast": {
-        "suspensionStructureLowerFrontBeamSupportMastMemenuhi": "",
-        "suspensionStructureLowerFrontBeamSupportMastTidakMemenuhi": "",
-        "suspensionStructureLowerFrontBeamSupportMastResult": ""
-      },
-      "suspensionStructureSupportMastAndBeamClamp": {
-        "suspensionStructureMastAndBeamClampMemenuhi": "",
-        "suspensionStructureMastAndBeamClampTidakMemenuhi": "",
-        "suspensionStructureMastAndBeamClampResult": ""
-      },
-      "suspensionStructureCouplingSleeve": {
-        "suspensionStructureCouplingSleeveMemenuhi": "",
-        "suspensionStructureCouplingSleeveTidakMemenuhi": "",
-        "suspensionStructureCouplingSleeveResult": ""
-      },
-      "suspensionStructureTurnBuckle": {
-        "suspensionStructureTurnBuckleMemenuhi": "",
-        "suspensionStructureTurnBuckleTidakMemenuhi": "",
-        "suspensionStructureTurnBuckleResult": ""
-      },
-      "suspensionStructureReinforcementRope": {
-        "suspensionStructureReinforcementRopeMemenuhi": "",
-        "suspensionStructureReinforcementRopeTidakMemenuhi": "",
-        "suspensionStructureReinforcementRopeResult": ""
-      },
-      "suspensionStructureRearSupportMast": {
-        "suspensionStructureRearSupportMastMemenuhi": "",
-        "suspensionStructureRearSupportMastTidakMemenuhi": "",
-        "suspensionStructureRearSupportMastResult": ""
-      },
-      "suspensionStructureBalanceWeight": {
-        "suspensionStructureBalanceWeightMemenuhi": "",
-        "suspensionStructureBalanceWeightTidakMemenuhi": "",
-        "suspensionStructureBalanceWeightResult": ""
-      },
-      "suspensionStructureFrontBeamSupportBase": {
-        "suspensionStructureFrontBeamSupportBaseMemenuhi": "",
-        "suspensionStructureFrontBeamSupportBaseTidakMemenuhi": "",
-        "suspensionStructureFrontBeamSupportBaseResult": ""
-      },
-      "suspensionStructureRearBeamSupportBase": {
-        "suspensionStructureRearBeamSupportBaseMemenuhi": "",
-        "suspensionStructureRearBeamSupportBaseTidakMemenuhi": "",
-        "suspensionStructureRearBeamSupportBaseResult": ""
-      },
-      "suspensionStructureJackBaseJoint": {
-        "suspensionStructureJackBaseJointMemenuhi": "",
-        "suspensionStructureJackBaseJointTidakMemenuhi": "",
-        "suspensionStructureJackBaseJointResult": ""
-      },
-      "suspensionStructureConnectionBolts": {
-        "suspensionStructureConnectionBoltsMemenuhi": "",
-        "suspensionStructureConnectionBoltsTidakMemenuhi": "",
-        "suspensionStructureConnectionBoltsResult": ""
-      }
+      "frontBeam": { "status": true, "result": "string" },
+      "middleBeam": { "status": true, "result": "string" },
+      "rearBeam": { "status": true, "result": "string" },
+      "frontBeamSupportMast": { "status": true, "result": "string" },
+      "lowerFrontBeamSupportMast": { "status": true, "result": "string" },
+      "mastAndBeamClamp": { "status": true, "result": "string" },
+      "couplingSleeve": { "status": true, "result": "string" },
+      "turnBuckle": { "status": true, "result": "string" },
+      "reinforcementRope": { "status": true, "result": "string" },
+      "rearSupportMast": { "status": true, "result": "string" },
+      "balanceWeight": { "status": true, "result": "string" },
+      "frontBeamSupportBase": { "status": true, "result": "string" },
+      "rearBeamSupportBase": { "status": true, "result": "string" },
+      "jackBaseJoint": { "status": true, "result": "string" },
+      "connectionBolts": { "status": true, "result": "string" }
     },
     "steelWireRope": {
-      "steelWireRopeMainWireRope": {
-        "steelWireRopeMainWireRopeMemenuhi": "",
-        "steelWireRopeMainWireRopeTidakMemenuhi": "",
-        "steelWireRopeMainWireRopeResult": ""
-      },
-      "steelWireRopeSafetyRope": {
-        "steelWireRopeSafetyRopeMemenuhi": "",
-        "steelWireRopeSafetyRopeTidakMemenuhi": "",
-        "steelWireRopeSafetyRopeResult": ""
-      },
-      "steelWireRopeSlingFasteners": {
-        "steelWireRopeSlingFastenersMemenuhi": "",
-        "steelWireRopeSlingFastenersTidakMemenuhi": "",
-        "steelWireRopeSlingFastenersResult": ""
-      }
+      "mainWireRope": { "status": true, "result": "string" },
+      "safetyRope": { "status": true, "result": "string" },
+      "slingFasteners": { "status": true, "result": "string" }
     },
     "electricalSystem": {
-      "electricalSystemHoistMotor": {
-        "electricalSystemHoistMotorMemenuhi": "",
-        "electricalSystemHoistMotorTidakMemenuhi": "",
-        "electricalSystemHoistMotorResult": ""
-      },
-      "electricalSystemBrakeRelease": {
-        "electricalSystemBrakeReleaseMemenuhi": "",
-        "electricalSystemBrakeReleaseTidakMemenuhi": "",
-        "electricalSystemBrakeReleaseResult": ""
-      },
-      "electricalSystemManualRelease": {
-        "electricalSystemManualReleaseMemenuhi": "",
-        "electricalSystemManualReleaseTidakMemenuhi": "",
-        "electricalSystemManualReleaseResult": ""
-      },
-      "electricalSystemPowerControl": {
-        "electricalSystemPowerControlMemenuhi": "",
-        "electricalSystemPowerControlTidakMemenuhi": "",
-        "electricalSystemPowerControlResult": ""
-      },
-      "electricalSystemPowerCable": {
-        "electricalSystemPowerCableMemenuhi": "",
-        "electricalSystemPowerCableTidakMemenuhi": "",
-        "electricalSystemPowerCableResult": ""
-      },
-      "electricalSystemHandleSwitch": {
-        "electricalSystemHandleSwitchMemenuhi": "",
-        "electricalSystemHandleSwitchTidakMemenuhi": "",
-        "electricalSystemHandleSwitchResult": ""
-      },
-      "electricalSystemUpperLimitSwitch": {
-        "electricalSystemUpperLimitSwitchMemenuhi": "",
-        "electricalSystemUpperLimitSwitchTidakMemenuhi": "",
-        "electricalSystemUpperLimitSwitchResult": ""
-      },
-      "electricalSystemLimitStopper": {
-        "electricalSystemLimitStopperMemenuhi": "",
-        "electricalSystemLimitStopperTidakMemenuhi": "",
-        "electricalSystemLimitStopperResult": ""
-      },
-      "electricalSystemSocketFitting": {
-        "electricalSystemSocketFittingMemenuhi": "",
-        "electricalSystemSocketFittingTidakMemenuhi": "",
-        "electricalSystemSocketFittingResult": ""
-      },
-      "electricalSystemGrounding": {
-        "electricalSystemGroundingMemenuhi": "",
-        "electricalSystemGroundingTidakMemenuhi": "",
-        "electricalSystemGroundingResult": ""
-      },
-      "electricalSystemBreakerFuse": {
-        "electricalSystemBreakerFuseMemenuhi": "",
-        "electricalSystemBreakerFuseTidakMemenuhi": "",
-        "electricalSystemBreakerFuseResult": ""
-      },
-      "electricalSystemEmergencyStop": {
-        "electricalSystemEmergencyStopMemenuhi": "",
-        "electricalSystemEmergencyStopTidakMemenuhi": "",
-        "electricalSystemEmergencyStopResult": ""
-      }
+      "hoistMotor": { "status": true, "result": "string" },
+      "brakeRelease": { "status": true, "result": "string" },
+      "manualRelease": { "status": true, "result": "string" },
+      "powerControl": { "status": true, "result": "string" },
+      "powerCable": { "status": true, "result": "string" },
+      "handleSwitch": { "status": true, "result": "string" },
+      "upperLimitSwitch": { "status": true, "result": "string" },
+      "limitStopper": { "status": true, "result": "string" },
+      "socketFitting": { "status": true, "result": "string" },
+      "grounding": { "status": true, "result": "string" },
+      "breakerFuse": { "status": true, "result": "string" },
+      "emergencyStop": { "status": true, "result": "string" }
     },
     "platform": {
-      "platformHoistMountFrame": {
-        "platformHoistMountFrameMemenuhi": "",
-        "platformHoistMountFrameTidakMemenuhi": "",
-        "platformHoistMountFrameResult": ""
-      },
-      "platformFrame": {
-        "platformFrameMemenuhi": "",
-        "platformFrameTidakMemenuhi": "",
-        "platformFrameResult": ""
-      },
-      "platformBottomPlate": {
-        "platformBottomPlateMemenuhi": "",
-        "platformBottomPlateTidakMemenuhi": "",
-        "platformBottomPlateResult": ""
-      },
-      "platformPinsAndBolts": {
-        "platformPinsAndBoltsMemenuhi": "",
-        "platformPinsAndBoltsTidakMemenuhi": "",
-        "platformPinsAndBoltsResult": ""
-      },
-      "platformBracket": {
-        "platformBracketMemenuhi": "",
-        "platformBracketTidakMemenuhi": "",
-        "platformBracketResult": ""
-      },
-      "platformToeBoard": {
-        "platformToeBoardMemenuhi": "",
-        "platformToeBoardTidakMemenuhi": "",
-        "platformToeBoardResult": ""
-      },
-      "platformRollerAndGuidePulley": {
-        "platformRollerAndGuidePulleyMemenuhi": "",
-        "platformRollerAndGuidePulleyTidakMemenuhi": "",
-        "platformRollerAndGuidePulleyResult": ""
-      },
-      "platformNamePlate": {
-        "platformNamePlateMemenuhi": "",
-        "platformNamePlateTidakMemenuhi": "",
-        "platformNamePlateResult": ""
-      }
+      "hoistMountFrame": { "status": true, "result": "string" },
+      "frame": { "status": true, "result": "string" },
+      "bottomPlate": { "status": true, "result": "string" },
+      "pinsAndBolts": { "status": true, "result": "string" },
+      "bracket": { "status": true, "result": "string" },
+      "toeBoard": { "status": true, "result": "string" },
+      "rollerAndGuidePulley": { "status": true, "result": "string" },
+      "namePlate": { "status": true, "result": "string" }
     },
     "safetyDevices": {
-      "safetyDevicesSafetyLock": {
-        "safetyDevicesSafetyLockMemenuhi": "",
-        "safetyDevicesSafetyLockTidakMemenuhi": "",
-        "safetyDevicesSafetyLockResult": ""
-      },
-      "safetyDevicesRubberBumper": {
-        "safetyDevicesRubberBumperMemenuhi": "",
-        "safetyDevicesRubberBumperTidakMemenuhi": "",
-        "safetyDevicesRubberBumperResult": ""
-      },
-      "safetyDevicesSafetyLifeLine": {
-        "safetyDevicesSafetyLifeLineMemenuhi": "",
-        "safetyDevicesSafetyLifeLineTidakMemenuhi": "",
-        "safetyDevicesSafetyLifeLineResult": ""
-      },
-      "safetyDevicesLoadLimitSwitch": {
-        "safetyDevicesLoadLimitSwitchMemenuhi": "",
-        "safetyDevicesLoadLimitSwitchTidakMemenuhi": "",
-        "safetyDevicesLoadLimitSwitchResult": ""
-      },
-      "safetyDevicesLimitBlock": {
-        "safetyDevicesLimitBlockMemenuhi": "",
-        "safetyDevicesLimitBlockTidakMemenuhi": "",
-        "safetyDevicesLimitBlockResult": ""
-      },
-      "safetyDevicesUpperLimitSwitch": {
-        "safetyDevicesUpperLimitSwitchMemenuhi": "",
-        "safetyDevicesUpperLimitSwitchTidakMemenuhi": "",
-        "safetyDevicesUpperLimitSwitchResult": ""
-      },
-      "safetyDevicesBodyHarness": {
-        "safetyDevicesBodyHarnessMemenuhi": "",
-        "safetyDevicesBodyHarnessTidakMemenuhi": "",
-        "safetyDevicesBodyHarnessResult": ""
-      },
-      "safetyDevicesSafetyHarnessAnchorage": {
-        "safetyDevicesHarnessAnchorageMemenuhi": "",
-        "safetyDevicesHarnessAnchorageTidakMemenuhi": "",
-        "safetyDevicesHarnessAnchorageResult": ""
-      },
-      "safetyDevicesCommunicationTool": {
-        "safetyDevicesCommunicationToolMemenuhi": "",
-        "safetyDevicesCommunicationToolTidakMemenuhi": "",
-        "safetyDevicesCommunicationToolResult": ""
-      },
-      "safetyDevicesSafetyHelmet": {
-        "safetyDevicesSafetyHelmetMemenuhi": "",
-        "safetyDevicesSafetyHelmetTidakMemenuhi": "",
-        "safetyDevicesSafetyHelmetResult": ""
-      },
-      "safetyDevicesHandRail": {
-        "safetyDevicesHandRailMemenuhi": "",
-        "safetyDevicesHandRailTidakMemenuhi": "",
-        "safetyDevicesHandRailResult": ""
-      },
-      "safetyDevicesOtherPpe": {
-        "safetyDevicesOtherPpeMemenuhi": "",
-        "safetyDevicesOtherPpeTidakMemenuhi": "",
-        "safetyDevicesOtherPpeResult": ""
-      },
-      "safetyDevicesCoupForGlass": {
-        "safetyDevicesCoupForGlassMemenuhi": "",
-        "safetyDevicesCoupForGlassTidakMemenuhi": "",
-        "safetyDevicesCoupForGlassResult": ""
-      }
+      "safetyLock": { "status": true, "result": "string" },
+      "rubberBumper": { "status": true, "result": "string" },
+      "safetyLifeLine": { "status": true, "result": "string" },
+      "loadLimitSwitch": { "status": true, "result": "string" },
+      "limitBlock": { "status": true, "result": "string" },
+      "upperLimitSwitch": { "status": true, "result": "string" },
+      "bodyHarness": { "status": true, "result": "string" },
+      "harnessAnchorage": { "status": true, "result": "string" },
+      "communicationTool": { "status": true, "result": "string" },
+      "safetyHelmet": { "status": true, "result": "string" },
+      "handRail": { "status": true, "result": "string" },
+      "otherPpe": { "status": true, "result": "string" },
+      "coupForGlass": { "status": true, "result": "string" }
     }
   },
-  "nonDestructiveTest": {
-    "nonDestructiveTestWireRope": [
-      {
-        "nonDestructiveTestWireRopeUsage": "",
-        "nonDestructiveTestWireRopeSpecDiameter": "",
-        "nonDestructiveTestWireRopeActualDiameter": "",
-        "nonDestructiveTestWireRopeConstruction": "",
-        "nonDestructiveTestWireRopeType": "",
-        "nonDestructiveTestWireRopeLength": "",
-        "nonDestructiveTestWireRopeAge": "",
-        "nonDestructiveTestWireRopeDefectTrue": "",
-        "nonDestructiveTestWireRopeDefectFalse": "",
-        "nonDestructiveTestWireRopeResult": ""
-      }
-    ],
-    "nonDestructiveTestWireRopeNdtType": "",
-    "suspensionStructure": {
-      "suspensionStructureNdtType": "",
-      "inspectedItems": [
+  "nonDestructiveTesting": {
+    "steelCableRope": {
+      "ndtType": "string",
+      "items": [
         {
-          "suspensionStructurePart": "",
-          "suspensionStructureLocation": "",
-          "suspensionStructureDefectTrue": "",
-          "suspensionStructureDefectFalse": "",
-          "suspensionStructureResult": ""
+          "usage": "string",
+          "specDiameter": "string",
+          "actualDiameter": "string",
+          "construction": "string",
+          "type": "string",
+          "length": "string",
+          "age": "string",
+          "defectFound": false,
+          "result": "string"
+        }
+      ]
+    },
+    "suspensionStructure": {
+      "ndtType": "string",
+      "items": [
+        {
+          "part": "string",
+          "location": "string",
+          "defectFound": false,
+          "result": "string"
         }
       ]
     },
     "gondolaCage": {
-      "gondolaCageNdtType": "",
-      "inspectedItems": [
+      "ndtType": "string",
+      "items": [
         {
-          "gondolaCagePart": "",
-          "gondolaCageLocation": "",
-          "gondolaCageDefectTrue": "",
-          "gondolaCageDefectFalse": "",
-          "gondolaCageResult": ""
+          "part": "string",
+          "location": "string",
+          "defectFound": false,
+          "result": "string"
         }
       ]
     },
     "clamps": {
-      "clampsNdtType": "",
-      "inspectedItems": [
+      "items": [
         {
-          "clampsPart": "",
-          "clampsLocation": "",
-          "clampsDefectTrue": "",
-          "clampsDefectFalse": "",
-          "clampsResult": ""
+          "partCheck": "string",
+          "location": "string",
+          "defectFound": false,
+          "result": "string"
         }
       ]
     }
   },
   "testing": {
     "dynamicLoadTest": {
-      "dynamicLoadTestTests": [
+      "note": "string",
+      "items": [
         {
-          "dynamicLoadTestLoadPercentage": "",
-          "dynamicLoadTestLoadDetails": "",
-          "dynamicLoadTestRemarks": "",
-          "dynamicLoadTestResult": ""
+          "loadPercentage": "string",
+          "loadDetails": "string",
+          "remarks": "string",
+          "result": "string"
         }
-      ],
-      "dynamicLoadTestNotOrHappensNote": ""
+      ]
     },
     "staticLoadTest": {
-      "staticLoadTestTests": [
+      "note": "string",
+      "items": [
         {
-          "staticLoadTestLoadPercentage": "",
-          "staticLoadTestLoadDetails": "",
-          "staticLoadTestRemarks": "",
-          "staticLoadTestResult": ""
+          "loadPercentage": "string",
+          "loadDetails": "string",
+          "remarks": "string",
+          "result": "string"
         }
-      ],
-      "staticLoadTestNotOrHappensNote": ""
+      ]
     }
   },
-  "conclusion": [],
-  "recommendations": [],
-  "inspector": {
-    "locationAndDate": "",
-    "company": "",
-    "name": "",
-    "title": ""
-  },
-  "documentation": []
+  "conclusion": "string",
+  "recommendation": "string"
 }
