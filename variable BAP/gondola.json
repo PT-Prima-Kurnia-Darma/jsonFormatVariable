@@ -1,0 +1,49 @@
+{
+  "laporanId": "string",
+  "examinationType": "string",
+  "inspectionType": "string",
+  "subInspectionType": "string",
+  "inspectionDate": "string",
+  "generalData": {
+    "companyName": "string",
+    "companyLocation": "string",
+    "userInCharge": "string",
+    "ownerAddress": "string"
+  },
+  "technicalData": {
+    "manufacturer": "string",
+    "locationAndYearOfManufacture": "string",
+    "serialNumberUnitNumber": "string",
+    "intendedUse": "string",
+    "capacityWorkingLoad": "string",
+    "maxLiftingHeightMeters": "string"
+  },
+  "inspectionResult": {
+    "visualCheck": {
+      "isSlingDiameterAcceptable": true,
+      "isBumperInstalled": true,
+      "isCapacityMarkingDisplayed": true,
+      "isPlatformConditionAcceptable": true,
+      "driveMotorCondition": {
+        "isGoodCondition": true,
+        "hasOilLeak": false
+      },
+      "isControlPanelClean": true,
+      "isBodyHarnessAvailable": true,
+      "isLifelineAvailable": true,
+      "isButtonLabelsDisplayed": true
+    },
+    "functionalTest": {
+      "isWireRopeMeasurementOk": true,
+      "isUpDownFunctionOk": true,
+      "isDriveMotorFunctionOk": true,
+      "isEmergencyStopFunctional": true,
+      "isSafetyLifelineFunctional": true,
+      "ndtTest": {
+        "method": "string",
+        "isResultGood": true,
+        "hasCrackIndication": false
+      }
+    }
+  }
+}
