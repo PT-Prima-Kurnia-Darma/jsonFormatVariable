@@ -1,8 +1,9 @@
 {
   "inspectionType": "string",
-  "subInspectionType": "Gondola",
   "examinationType": "string",
   "inspectionDate": "string",
+  "extraId": "number",
+  "createdAt": "string",
   "generalData": {
     "ownerName": "string",
     "ownerAddress": "string",
