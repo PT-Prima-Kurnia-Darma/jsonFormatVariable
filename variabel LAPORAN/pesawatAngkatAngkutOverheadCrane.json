@@ -1,463 +1,144 @@
 {
-  "examinationType": "BERKALA",
+  "examinationType": "PERIODIK",
   "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
-  "inspectionDate": "Jakarta, 28 Maret 2024",
-  "extraId": 123,
-  "createdAt": "",
-
+  "inspectionDate": "Tangerang, 19 Juli 2025",
+  "extraId": 190725,
+  "createdAt": "2025-07-19T10:00:00.000Z",
   "generalData": {
-    "ownerName": "PT. Teco Multiguna Elektro",
-    "ownerAddress": "Jl. Bandengan Utara No. 83 / 1-2-3, Jakarta Utara",
-    "userInCharge": "PT. Teco Multiguna Elektro",
-    "subcontractorPersonInCharge": "Jl. Bandengan Utara No. 83 / 1-2-3, Jakarta Utara",
-    "unitLocation": "Warehouse PT. Teco Multiguna Elektro",
-    "equipmentType": "Electric Chain Hoist",
-    "manufacturer": "Teco Elec & Mach Co., Ltd / Taiwan",
-    "brandType": "TECO / EBEM",
-    "yearOfManufacture": "-",
-    "serialNumberUnitNumber": "R96010 – 01",
-    "capacityWorkingLoadKg": 1000,
+    "ownerName": "PT. Konstruksi Baja Perkasa",
+    "ownerAddress": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
+    "userInCharge": "PT. Konstruksi Baja Perkasa",
+    "subcontractorPersonInCharge": "Divisi Produksi",
+    "unitLocation": "Area Fabrikasi Utama",
+    "equipmentType": "Double Girder Overhead Crane",
+    "manufacturer": "Konecranes / Finland",
+    "brandType": "KONECRANES / CXT",
+    "yearOfManufacture": "2020",
+    "serialNumberUnitNumber": "KC-20-DG-98765",
+    "capacityWorkingLoadKg": "20000",
     "legalBasis": "Undang – Undang No.1 Tahun 1970 Tentang Keselamatan Kerja,Permenaker No. 8 Tahun 2020 Tentang Keselamatan dan Kesehatan Kerja Pesawat Angkat & Pesawat Angkut",
-    "intendedUse": "Mengangkat Dan Memindahkan Material / Barang",
-    "usagePermitNumber": "Berkala",
-    "operatorCertificate": "-",
-    "technicalOrManualData": "Ada"
+    "intendedUse": "Mengangkat dan memindahkan material baja berat",
+    "usagePermitNumber": "123/SK/PJK3/VII/2024",
+    "operatorCertificate": "Ada, SIO Kelas I (A/N Ahmad Dahlan)",
+    "technicalOrManualData": "Tersedia Lengkap"
   },
   "technicalData": {
     "specifications": {
-      "liftingHeight": {
-        "hoisting": 2.6,
-        "traveling": null,
-        "traversing": null
-      },
-      "girderLength": {
-        "hoisting": null,
-        "traveling": 15,
-        "traversing": 4
-      },
-      "speed_m_per_min": {
-        "hoisting": 2.5,
-        "traveling": 2.5,
-        "traversing": 2.5
-      }
+      "liftingHeight": { "hoisting": "12.0", "traveling": "12.0", "traversing": "12.0" },
+      "girderLength": { "hoisting": "15.0", "traveling": "30", "traversing": "15" },
+      "speed_m_per_min": { "hoisting": "5.0", "traveling": "25.0", "traversing": "15.0" }
     },
     "driveMotor": {
-      "capacity_ton": {
-        "hoisting": 1,
-        "traveling": null,
-        "traversing": null
-      },
-      "power_kw": {
-        "hoisting": 0.37,
-        "traveling": 0.37,
-        "traversing": 0.37
-      },
-      "type": {
-        "hoisting": "AC Motor",
-        "traveling": "AC Motor",
-        "traversing": "AC Motor"
-      },
-      "revolution_rpm": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      },
-      "voltage_v": {
-        "hoisting": 380,
-        "traveling": 380,
-        "traversing": 380
-      },
-      "current_a": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      },
-      "frequency_hz": {
-        "hoisting": 50,
-        "traveling": 50,
-        "traversing": 50
-      }
+      "capacity_ton": { "hoisting": "20.0", "traveling": "2.5", "traversing": "1.5" },
+      "power_kw": { "hoisting": "15.0", "traveling": "3.0", "traversing": "2.2" },
+      "type": { "hoisting": "AC Squirrel Cage", "traveling": "AC Geared Brake Motor", "traversing": "AC Geared Brake Motor" },
+      "revolution_rpm": { "hoisting": "1480", "traveling": "1450", "traversing": "1450" },
+      "voltage_v": { "hoisting": "380", "traveling": "380", "traversing": "380" },
+      "current_a": { "hoisting": "30.5", "traveling": "6.5", "traversing": "4.8" },
+      "frequency_hz": { "hoisting": "50", "traveling": "50", "traversing": "50" }
     },
     "startingResistor": {
-      "type": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      },
-      "voltage_v": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      },
-      "current_a": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      }
+      "type": { "hoisting": "Inverter", "traveling": "Inverter", "traversing": "Inverter" },
+      "voltage_v": { "hoisting": "380", "traveling": "380", "traversing": "380" },
+      "current_a": { "hoisting": "30.5", "traveling": "6.5", "traversing": "4.8" }
     },
     "brake": {
-      "kind": {
-        "hoisting": "Regenerative",
-        "traveling": null,
-        "traversing": null
-      },
-      "type": {
-        "hoisting": "Electric",
-        "traveling": null,
-        "traversing": null
-      }
+      "kind": { "hoisting": "Electromagnetic Disc", "traveling": "Electromagnetic Disc", "traversing": "Electromagnetic Disc" },
+      "type": { "hoisting": "Fail-safe DC Brake", "traveling": "Integrated Motor Brake", "traversing": "Integrated Motor Brake" }
     },
     "controllerBrake": {
-      "kind": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      },
-      "type": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      }
+      "kind": { "hoisting": "Regenerative Braking", "traveling": "Regenerative Braking", "traversing": "Regenerative Braking" },
+      "type": { "hoisting": "Inverter Controlled", "traveling": "Inverter Controlled", "traversing": "Inverter Controlled" }
     },
     "hook": {
-      "type": {
-        "hoisting": "Single Hook",
-        "traveling": null,
-        "traversing": null
-      },
-      "capacity": {
-        "hoisting": "1 ton",
-        "traveling": null,
-        "traversing": null
-      },
-      "material": {
-        "hoisting": "Baja",
-        "traveling": null,
-        "traversing": null
-      }
+      "type": { "hoisting": "Double Hook with Safety Latch", "traveling": "Double Hook with Safety Latch", "traversing": "Double Hook with Safety Latch" },
+      "capacity": { "hoisting": "20 ton", "traveling": "20 ton", "traversing": "20 ton" },
+      "material": { "hoisting": "High-tensile Forged Alloy Steel", "traveling": "High-tensile Forged Alloy Steel", "traversing": "High-tensile Forged Alloy Steel" }
     },
     "chain": {
-      "type": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      },
-      "construction": {
-        "hoisting": "Baja",
-        "traveling": null,
-        "traversing": null
-      },
-      "diameter": {
-        "hoisting": "10 mm",
-        "traveling": null,
-        "traversing": null
-      },
-      "length": {
-        "hoisting": null,
-        "traveling": null,
-        "traversing": null
-      }
+      "type": { "hoisting": "Wire Rope", "traveling": "Wire Rope", "traversing": "Wire Rope" },
+      "construction": { "hoisting": "6x36 WS-IWRC", "traveling": "6x36 WS-IWRC", "traversing": "6x36 WS-IWRC" },
+      "diameter": { "hoisting": "22 mm", "traveling": "22 mm", "traversing": "22 mm" },
+      "length": { "hoisting": "15 m", "traveling": "15 m", "traversing": "15 m" }
     }
   },
   "visualInspection": {
-    "foundation": {
-      "bolts": {
-        "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-        "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-        "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-        "fastening": { "status": "compliant", "remarks": "Kondisi Baik" }
-      }
-    },
-    "columnFrame": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "fastening": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "crossBracing": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "diagonalBracing": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "stairs": {
-      "corrosion": { "status": "na", "remarks": "" },
-      "cracks": { "status": "na", "remarks": "" },
-      "deformation": { "status": "na", "remarks": "" },
-      "fastening": { "status": "na", "remarks": "" }
-    },
-    "platform": {
-      "corrosion": { "status": "na", "remarks": "" },
-      "cracks": { "status": "na", "remarks": "" },
-      "deformation": { "status": "na", "remarks": "" },
-      "fastening": { "status": "na", "remarks": "" }
-    },
-    "railSupportBeam": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "fastening": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "travelingRail": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "joints": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "interRailStraightness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "interRailEvenness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "jointGap": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "fasteners": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "stopper": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "traversingRail": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "joints": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "interRailStraightness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "interRailEvenness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "jointGap": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "fasteners": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "stopper": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "girder": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "camber": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "joints": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "endJoints": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "truckMount": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "travelingGearbox": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "lubricant": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "oilSeal": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "driveWheel": {
-      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "flange": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "chain": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "idleWheel": {
-      "security": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "flange": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "wheelConnector": {
-      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "crossJoint": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "lubrication": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "girderBumper": {
-      "condition": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "reinforcement": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "trolleyGearbox": {
-      "fastening": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "lubricant": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "oilSeal": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "trolleyDriveWheel": {
-      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "flange": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "chain": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "trolleyIdleWheel": {
-      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "flange": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "trolleyWheelConnector": {
-      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "crossJoint": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "lubrication": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "trolleyBumper": {
-      "condition": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "reinforcement": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "drum": {
-      "groove": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "grooveLip": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "flanges": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "brakeVisual": {
-      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "adjustment": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "hoistGearBox": {
-      "lubrication": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "oilSeal": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "pulleyChainSprocket": {
-      "pulleyGroove": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "pulleyLip": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "pulleyPin": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "pulleyBearing": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "pulleyGuard": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "ropeChainGuard": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "mainHook": {
-      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "throatOpening": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "swivel": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "trunnion": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "auxHook": {
-      "wear": { "status": "na", "remarks": "-" },
-      "throatOpening": { "status": "na", "remarks": "-" },
-      "swivel": { "status": "na", "remarks": "-" },
-      "trunnion": { "status": "na", "remarks": "-" }
-    },
-    "mainWireRope": {
-      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "broken": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "auxWireRope": {
-      "corrosion": { "status": "na", "remarks": "-" },
-      "wear": { "status": "na", "remarks": "-" },
-      "broken": { "status": "na", "remarks": "-" },
-      "deformation": { "status": "na", "remarks": "-" }
-    },
-    "mainChain": {
-      "corrosion": { "status": "na", "remarks": "-" },
-      "wear": { "status": "na", "remarks": "-" },
-      "cracksBroken": { "status": "na", "remarks": "-" },
-      "deformation": { "status": "na", "remarks": "-" }
-    },
-    "auxChain": {
-      "corrosion": { "status": "na", "remarks": "-" },
-      "wear": { "status": "na", "remarks": "-" },
-      "cracksBroken": { "status": "na", "remarks": "-" },
-      "deformation": { "status": "na", "remarks": "-" }
-    },
-    "limitSwitch": {
-      "longTraveling": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "crossTraveling": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "lifting": { "status": "compliant", "remarks": "Kondisi Baik" }
-    },
-    "operatorCabin": {
-      "safetyStairs": { "status": "na", "remarks": "-" },
-      "door": { "status": "na", "remarks": "-" },
-      "window": { "status": "na", "remarks": "-" },
-      "fanAc": { "status": "na", "remarks": "-" },
-      "controlLevers": { "status": "na", "remarks": "-" },
-      "pendantControl": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "lighting": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "horn": { "status": "na", "remarks": "-" },
-      "fuse": { "status": "na", "remarks": "-" },
-      "commTool": { "status": "na", "remarks": "-" },
-      "fireExtinguisher": { "status": "na", "remarks": "-" },
-      "operatingSigns": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "masterSwitch": { "status": "na", "remarks": "-" }
-    },
-    "electricalComponents": {
-      "panelConnector": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "conductorGuard": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "motorSafetySystem": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "groundingSystem": { "status": "compliant", "remarks": "Kondisi Baik" },
-      "installation": { "status": "compliant", "remarks": "Kondisi Baik" }
-    }
+    "foundation": { "bolts": { "corrosion": { "status": true, "remarks": "Kondisi Baik" }, "cracks": { "status": false, "remarks": "Ditemukan retak rambut pada baut #3" }, "deformation": { "status": true, "remarks": "Tidak ada deformasi" }, "fastening": { "status": false, "remarks": "Baut #2 & #5 kendor, perlu dikencangkan" } } },
+    "columnFrame": { "corrosion": { "status": true, "remarks": "Coating utuh, kondisi baik" }, "cracks": { "status": true, "remarks": "Tidak ada retak pada sambungan las" }, "deformation": { "status": true, "remarks": "Tidak ada perubahan bentuk" }, "fastening": { "status": true, "remarks": "Pengikatan kokoh" }, "crossBracing": { "status": false, "remarks": "Ditemukan korosi pada bracing silang" }, "diagonalBracing": { "status": true, "remarks": "Terpasang kokoh" } },
+    "stairs": { "corrosion": { "status": false, "remarks": "Korosi pada railing tangga" }, "cracks": { "status": true, "remarks": "Tidak ada retak" }, "deformation": { "status": false, "remarks": "Anak tangga no 7 sedikit bengkok" }, "fastening": { "status": true, "remarks": "Ikatan kuat" } },
+    "platform": { "corrosion": { "status": true, "remarks": "Permukaan bersih" }, "cracks": { "status": false, "remarks": "Retak pada plat bordes dekat kolom A" }, "deformation": { "status": true, "remarks": "Tidak ada perubahan bentuk" }, "fastening": { "status": false, "remarks": "Pengikat platform kendor" } },
+    "railSupportBeam": { "corrosion": { "status": true, "remarks": "Kondisi Baik" }, "cracks": { "status": true, "remarks": "Kondisi Baik" }, "deformation": { "status": true, "remarks": "Kondisi Baik" }, "fastening": { "status": true, "remarks": "Kondisi Baik" } },
+    "travelingRail": { "corrosion": { "status": false, "remarks": "Korosi pada permukaan rel" }, "cracks": { "status": true, "remarks": "Tidak ada retak" }, "joints": { "status": false, "remarks": "Sambungan tidak rata" }, "straightness": { "status": true, "remarks": "Kelurusan baik" }, "interRailStraightness": { "status": false, "remarks": "Kelurusan antar rel perlu di-adjust" }, "interRailEvenness": { "status": true, "remarks": "Kerataan baik" }, "jointGap": { "status": false, "remarks": "Jarak tidak sesuai" }, "fasteners": { "status": true, "remarks": "Pengikat lengkap" }, "stopper": { "status": false, "remarks": "Baut stopper kendor" } },
+    "traversingRail": { "corrosion": { "status": true, "remarks": "Kondisi Baik" }, "cracks": { "status": true, "remarks": "Tidak ada retak" }, "joints": { "status": true, "remarks": "Sambungan rata" }, "straightness": { "status": true, "remarks": "Kelurusan baik" }, "interRailStraightness": { "status": true, "remarks": "Kelurusan antar rel baik" }, "interRailEvenness": { "status": true, "remarks": "Kerataan baik" }, "jointGap": { "status": true, "remarks": "Jarak sesuai" }, "fasteners": { "status": false, "remarks": "Baut pengikat rel hilang 1" }, "stopper": { "status": true, "remarks": "Stopper kokoh" } },
+    "girder": { "corrosion": { "status": true, "remarks": "Kondisi Baik" }, "cracks": { "status": false, "remarks": "Ditemukan retak pada sambungan girder" }, "camber": { "status": true, "remarks": "Kecembungan normal" }, "joints": { "status": true, "remarks": "Sambungan baik" }, "endJoints": { "status": false, "remarks": "Baut sambungan ujung girder korosi" }, "truckMount": { "status": true, "remarks": "Dudukan kokoh" } },
+    "travelingGearbox": { "corrosion": { "status": true, "remarks": "Kondisi Baik" }, "cracks": { "status": false, "remarks": "Terdapat rembesan oli" }, "lubricant": { "status": true, "remarks": "Volume cukup" }, "oilSeal": { "status": false, "remarks": "Seal oli getas, perlu diganti" } },
+    "driveWheel": { "wear": { "status": true, "remarks": "Keausan normal" }, "cracks": { "status": true, "remarks": "Tidak ada retak" }, "deformation": { "status": true, "remarks": "Tidak ada perubahan bentuk" }, "flange": { "status": false, "remarks": "Flensa roda aus" }, "chain": { "status": true, "remarks": "Menggunakan shaft" } },
+    "idleWheel": { "security": { "status": true, "remarks": "Terpasang aman" }, "cracks": { "status": false, "remarks": "Ditemukan retak pada roda idle" }, "deformation": { "status": true, "remarks": "Tidak ada perubahan bentuk" }, "flange": { "status": false, "remarks": "Flensa roda aus" } },
+    "wheelConnector": { "straightness": { "status": true, "remarks": "Kondisi Baik" }, "crossJoint": { "status": true, "remarks": "Kondisi Baik" }, "lubrication": { "status": false, "remarks": "Pelumasan kering" } },
+    "girderBumper": { "condition": { "status": true, "remarks": "Kondisi Baik" }, "reinforcement": { "status": false, "remarks": "Bumper girder sobek" } },
+    "trolleyGearbox": { "fastening": { "status": true, "remarks": "Kondisi Baik" }, "corrosion": { "status": true, "remarks": "Kondisi Baik" }, "cracks": { "status": false, "remarks": "Terdapat rembesan oli" }, "lubricant": { "status": true, "remarks": "Volume cukup" }, "oilSeal": { "status": false, "remarks": "Seal oli getas, perlu diganti" } },
+    "trolleyDriveWheel": { "wear": { "status": true, "remarks": "Keausan normal" }, "cracks": { "status": true, "remarks": "Tidak ada retak" }, "deformation": { "status": true, "remarks": "Tidak ada perubahan bentuk" }, "flange": { "status": false, "remarks": "Flensa roda aus" }, "chain": { "status": true, "remarks": "Menggunakan shaft" } },
+    "trolleyIdleWheel": { "wear": { "status": true, "remarks": "Keausan normal" }, "cracks": { "status": false, "remarks": "Ditemukan retak pada roda idle" }, "deformation": { "status": true, "remarks": "Tidak ada perubahan bentuk" }, "flange": { "status": false, "remarks": "Flensa roda aus" } },
+    "trolleyWheelConnector": { "straightness": { "status": true, "remarks": "Kondisi Baik" }, "crossJoint": { "status": true, "remarks": "Kondisi Baik" }, "lubrication": { "status": false, "remarks": "Pelumasan kering" } },
+    "trolleyBumper": { "condition": { "status": true, "remarks": "Kondisi Baik" }, "reinforcement": { "status": false, "remarks": "Bumper trolley sobek" } },
+    "drum": { "groove": { "status": true, "remarks": "Alur drum baik" }, "grooveLip": { "status": false, "remarks": "Bibir alur aus" }, "flanges": { "status": true, "remarks": "Flens utuh" } },
+    "brakeVisual": { "wear": { "status": false, "remarks": "Kampas rem tipis" }, "adjustment": { "status": true, "remarks": "Celah sesuai" } },
+    "hoistGearBox": { "lubrication": { "status": false, "remarks": "Volume oli kurang" }, "oilSeal": { "status": true, "remarks": "Tidak ada kebocoran" } },
+    "pulleyChainSprocket": { "pulleyGroove": { "status": true, "remarks": "Kondisi Baik" }, "pulleyLip": { "status": false, "remarks": "Bibir puli aus" }, "pulleyPin": { "status": true, "remarks": "Kondisi Baik" }, "pulleyBearing": { "status": false, "remarks": "Bantalan puli oblak" }, "pulleyGuard": { "status": true, "remarks": "Terpasang" }, "ropeChainGuard": { "status": false, "remarks": "Tidak terpasang" } },
+    "mainHook": { "wear": { "status": true, "remarks": "Keausan normal" }, "throatOpening": { "status": false, "remarks": "Bukaan tidak normal" }, "swivel": { "status": true, "remarks": "Berputar lancar" }, "trunnion": { "status": false, "remarks": "Trunnion retak" } },
+    "auxHook": { "wear": { "status": true, "remarks": "Keausan normal" }, "throatOpening": { "status": false, "remarks": "Bukaan tidak normal" }, "swivel": { "status": true, "remarks": "Berputar lancar" }, "trunnion": { "status": false, "remarks": "Trunnion retak" } },
+    "mainWireRope": { "corrosion": { "status": true, "remarks": "Tidak ada korosi" }, "wear": { "status": false, "remarks": "Keausan melebihi batas" }, "broken": { "status": true, "remarks": "Tidak ada kawat putus" }, "deformation": { "status": false, "remarks": "Wire rope tertekuk" } },
+    "auxWireRope": { "corrosion": { "status": true, "remarks": "Tidak ada korosi" }, "wear": { "status": false, "remarks": "Keausan melebihi batas" }, "broken": { "status": true, "remarks": "Tidak ada kawat putus" }, "deformation": { "status": false, "remarks": "Wire rope tertekuk" } },
+    "mainChain": { "corrosion": { "status": true, "remarks": "Tidak menggunakan rantai" }, "wear": { "status": true, "remarks": "Tidak menggunakan rantai" }, "cracksBroken": { "status": true, "remarks": "Tidak menggunakan rantai" }, "deformation": { "status": true, "remarks": "Tidak menggunakan rantai" } },
+    "auxChain": { "corrosion": { "status": true, "remarks": "Tidak menggunakan rantai" }, "wear": { "status": true, "remarks": "Tidak menggunakan rantai" }, "cracksBroken": { "status": true, "remarks": "Tidak menggunakan rantai" }, "deformation": { "status": true, "remarks": "Tidak menggunakan rantai" } },
+    "limitSwitch": { "longTraveling": { "status": true, "remarks": "Berfungsi baik" }, "crossTraveling": { "status": false, "remarks": "Tidak berfungsi" }, "lifting": { "status": true, "remarks": "Berfungsi baik (atas & bawah)" } },
+    "operatorCabin": { "safetyStairs": { "status": true, "remarks": "Aman" }, "door": { "status": false, "remarks": "Pintu tidak bisa dikunci" }, "window": { "status": true, "remarks": "Bersih" }, "fanAc": { "status": false, "remarks": "AC tidak dingin" }, "controlLevers": { "status": true, "remarks": "Berfungsi" }, "pendantControl": { "status": true, "remarks": "Berfungsi" }, "lighting": { "status": false, "remarks": "Lampu kabin mati" }, "horn": { "status": true, "remarks": "Nyaring" }, "fuse": { "status": true, "remarks": "Baik" }, "commTool": { "status": false, "remarks": "Radio mati" }, "fireExtinguisher": { "status": true, "remarks": "Tersedia & valid" }, "operatingSigns": { "status": false, "remarks": "Tidak terbaca" }, "masterSwitch": { "status": true, "remarks": "Berfungsi" } },
+    "electricalComponents": { "panelConnector": { "status": true, "remarks": "Kondisi Baik" }, "conductorGuard": { "status": false, "remarks": "Tidak terpasang" }, "motorSafetySystem": { "status": true, "remarks": "Overload berfungsi" }, "groundingSystem": { "status": false, "remarks": "Tahanan 2.5 Ohm, tidak baik" }, "installation": { "status": true, "remarks": "Rapi dan aman" } }
   },
   "nonDestructiveExamination": {
     "chain": {
-      "method": "Pengukuran dan Visual",
+      "method": "Visual & Measurement",
       "items": [
-        {
-          "location": "∅ D",
-          "specDimension_mm": 10,
-          "resultDimension_mm": 10.06,
-          "lengthExtension_percent": 0,
-          "wear_percent": null,
-          "defect": false,
-          "description": "Baik"
-        },
-        {
-          "location": "A",
-          "specDimension_mm": null,
-          "resultDimension_mm": 26.8,
-          "lengthExtension_percent": 0,
-          "wear_percent": null,
-          "defect": false,
-          "description": "Baik"
-        },
-        {
-          "location": "B",
-          "specDimension_mm": null,
-          "resultDimension_mm": 30.8,
-          "lengthExtension_percent": 0,
-          "wear_percent": null,
-          "defect": false,
-          "description": "Baik"
-        }
+        { "chainLocaton": "Main Rope", "specDimension": "22", "resultDimension": "21.8", "extendLengthMax": "0.4", "wearMax": "0.9", "safetyFactor": "6", "defectAda": false, "defectTidakAda": true, "description": "Baik" },
+        { "chainLocaton": "Aux Rope", "specDimension": "16", "resultDimension": "15.9", "extendLengthMax": "0.3", "wearMax": "0.45", "safetyFactor": "6", "defectAda": true, "defectTidakAda": false, "description": "Ditemukan cacat" },
+        { "chainLocaton": "Aux Rope", "specDimension": "16", "resultDimension": "15.9", "extendLengthMax": "0.3", "wearMax": "0.45", "safetyFactor": "6", "defectAda": true, "defectTidakAda": false, "description": "Ditemukan cacat" },
+        { "chainLocaton": "Aux Rope", "specDimension": "16", "resultDimension": "15.9", "extendLengthMax": "0.3", "wearMax": "0.45", "safetyFactor": "6", "defectAda": true, "defectTidakAda": false, "description": "Ditemukan cacat" }
       ]
     },
     "mainHook": {
-      "method": "Pengukuran dan Visual",
-      "measurements": {
-        "A": 36.25,
-        "B": 46.25,
-        "C": null,
-        "D": null,
-        "E": null,
-        "F": 29.2,
-        "G": 29.3,
-        "H": 28.5
-      },
-      "tolerances": {
-        "A": "Maks (5%) 38",
-        "F": "Min (10%) 26.1",
-        "G": "Min (10%) 26.1",
-        "H": "Min (10%) 26.1"
-      },
-      "result": "Baik"
+      "method": "Magnetic Particle Inspection & Visual",
+      "measurements": { "A": "75.2", "B": "80.5", "C": "50.3", "D": "150.1", "E": "300.0", "F": "50.2", "G": "50.3", "H": "50.4" },
+      "tolerances": { "A": "75.0", "B": "80.0", "C": "50.0", "D": "150.0", "E": "300.0", "F": "50.0", "G": "50.0", "H": "50.0" },
+      "result": "Ditemukan indikasi retak pada area leher hook."
     }
   },
   "testing": {
     "dynamicTest": {
       "withoutLoad": [
-        { "test": "Travelling/Memanjang", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
-        { "test": "Traversing/Melintang", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
-        { "test": "Hoisting/Angkat", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
-        { "test": "Safety Latch", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
-        { "test": "Brake Switch", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
-        { "test": "Brake Locking Device", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
-        { "test": "Instalasi Listrik", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" }
+        { "test": "Travelling/Memanjang", "shouldBe": "25.0 m/menit", "testedOrMeasured": "24.9 m/menit", "remarks": "Baik" },
+        { "test": "Traversing/Melintang", "shouldBe": "15.0 m/menit", "testedOrMeasured": "15.0 m/menit", "remarks": "Baik" },
+        { "test": "Hoisting/Angkat", "shouldBe": "5.0 m/menit", "testedOrMeasured": "5.1 m/menit", "remarks": "Baik" },
+        { "test": "Safety Latch", "shouldBe": "Berfungsi", "testedOrMeasured": "Dicoba", "remarks": "Berfungsi Baik" },
+        { "test": "Brake Switch", "shouldBe": "Berfungsi", "testedOrMeasured": "Dicoba", "remarks": "Berfungsi Baik" },
+        { "test": "Brake Locking Device", "shouldBe": "Berfungsi", "testedOrMeasured": "Dicoba", "remarks": "Berfungsi Baik" },
+        { "test": "Instalasi Listrik", "shouldBe": "Aman", "testedOrMeasured": "Diperiksa", "remarks": "Baik" }
       ],
       "withLoad": [
-        { "load": "Tanpa Beban", "hoist": "Baik", "traversing": "Baik", "traveling": null, "brakeSystem": "Berfungsi", "remarks": "Baik" },
-        { "load": "25% SWL", "hoist": null, "traversing": null, "traveling": null, "brakeSystem": null, "remarks": "N/A" },
-        { "load": "50% SWL", "hoist": null, "traversing": null, "traveling": null, "brakeSystem": null, "remarks": "N/A" },
-        { "load": "75% SWL", "hoist": null, "traversing": null, "traveling": null, "brakeSystem": null, "remarks": "N/A" },
-        { "load": "100% SWL", "hoist": "Baik", "traversing": "Baik", "traveling": null, "brakeSystem": "Berfungsi", "remarks": "Baik" }
+        { "load": "Tanpa Beban", "hoist": "Baik", "traversing": "Baik", "traveling": "Baik", "brakeSystem": "Berfungsi", "remarks": "Baik" },
+        { "load": "25% SWL", "hoist": "Baik", "traversing": "Baik", "traveling": "Baik", "brakeSystem": "Berfungsi", "remarks": "Baik" },
+        { "load": "50% SWL", "hoist": "Baik", "traversing": "Baik", "traveling": "Baik", "brakeSystem": "Berfungsi", "remarks": "Baik" },
+        { "load": "75% SWL", "hoist": "Baik", "traversing": "Baik", "traveling": "Baik", "brakeSystem": "Berfungsi", "remarks": "Baik" },
+        { "load": "100% SWL (20 Ton)", "hoist": "Baik", "traversing": "Baik", "traveling": "Baik", "brakeSystem": "Berfungsi", "remarks": "Baik, pengereman presisi." }
       ]
     },
     "staticTest": {
-      "testLoad": "125% SWL",
-      "deflection": {
-        "singleGirder": { "measurement": null, "description": null },
-        "doubleGirder": { "measurement": null, "description": null }
-      },
-      "singleGirder": {
-        "design_mm": null,
-        "span_mm": null,
-        "result": null
-      },
-      "doubleGirder": {
-        "design_mm": null,
-        "span_mm": null,
-        "result": null
-      },
-      "notes": "Pengujian Statis Tidak Dapat Dilakukan karena beban seberat 125% SWL tidak tersedia"
+      "testLoad": "125% SWL (25 Ton)",
+      "deflection": { "singleGirder": { "measurement": "12.0 mm", "description": "Di bawah batas izin" }, "doubleGirder": { "measurement": "11.5 mm", "description": "Di bawah batas izin" } },
+      "singleGirder": { "design_mm": "34.0", "span_mm": "30000", "result": true },
+      "doubleGirder": { "design_mm": "34.0", "span_mm": "30000", "result": false },
+      "notes": "Pengujian statis dilakukan selama 15 menit, tidak ditemukan deformasi permanen pada struktur girder."
     }
   },
-  "conclusion": {},
-  "recommendations": {}
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian periodik, ditemukan beberapa ketidaksesuaian yang memerlukan perbaikan. Double Girder Overhead Crane KONE-CRANES dengan nomor seri KC-20-DG-98765 dinyatakan TIDAK LAIK DIOPERASIKAN dan memerlukan perbaikan sebelum pemeriksaan ulang.",
+  "recommendations": "1. Ganti baut pondasi #3 yang retak dan kencangkan baut #2 & #5.\n2. Lakukan perbaikan korosi pada railing tangga dan bracing silang.\n3. Ganti seal oli pada gearbox traveling dan trolley.\n4. Ganti wire rope utama dan aux karena aus dan tertekuk.\n5. Perbaiki limit switch cross traveling.\n6. Perbaiki grounding system."
 }
