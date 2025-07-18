@@ -2,6 +2,8 @@
   "examinationType": "BERKALA",
   "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
   "inspectionDate": "Jakarta, 28 Maret 2024",
+  "extraId": 123,
+  "createdAt": "",
 
   "generalData": {
     "ownerName": "PT. Teco Multiguna Elektro",
