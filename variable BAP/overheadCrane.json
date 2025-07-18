@@ -1,47 +1,43 @@
 {
-  "id": "",
-  "typeInspection": "Pemeriksaan PAA Overhead Crane",
-  "inspectionSchedule": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "brandOrType": "",
-  "manufacturer": "",
-  "manufactureYear": null,
-  "manufactureCountry": "",
-  "serialNumber": "",
-  "liftingPurpose": "Material dan Barang",
-  "maxLiftingCapacityKg": null,
-  "liftingSpeedMpm": null,
-  "safetyEquipment": "Emergency stop",
-  "visualInspection": {
-    "constructionDefects": {
-      "hasGirderDefects": null,
-      "hasWireropeDefects": null,
-      "hasHookDefects": null
-    },
-    "hookHasSafetyLatch": null,
-    "isEmergencyStopInstalled": null,
-    "isWireropeGoodCondition": null,
-    "operatorHasK3License": null
+  "reportHeader": {
+    "examinationType": "string",
+    "inspectionDate": "string",
+    "extraId": "number",
+    "inspectionType": "string",
+    "createdaAt": "string",
+    "equipmentType": "string"
   },
-  "testing": {
-    "functionTest": {
-      "isSlewingFunctionOk": null,
-      "isLiftingFunctionOk": null
+  "generalData": {
+    "companyName": "string",
+    "companyLocation": "string",
+    "userInCharge": "string",
+    "ownerAddress": "string"
+  },
+  "technicalData": {
+    "brandType": "string",
+    "manufacturer": "string",
+    "locationAndYearOfManufacture": "string",
+    "serialNumberUnitNumber": "string",
+    "capacityWorkingLoad": "string",
+    "liftingSpeedMpm": "string"
+  },
+    "visualInspection": {
+      "hasConstructionDefects": "boolean",
+      "hookHasSafetyLatch": "boolean",
+      "isEmergencyStopInstalled": "boolean",
+      "isWireropeGoodCondition": "boolean",
+      "operatorHasK3License": "boolean"
     },
-    "loadTest": {
-      "loadTon": null,
-      "isAbleToLift": null,
-      "hasLoadDrop": null
-    },
-    "ndtHookTest": {
-      "method": "Magnetic Test",
-      "isResultGood": null,
-      "hasCrackIndication": null
+    "testing": {
+      "functionTest": "boolean",
+      "loadTest": {
+        "loadTon": "number",
+        "isAbleToLift": "boolean",
+        "hasLoadDrop": "boolean"
+      },
+      "ndtTest": {
+        "isNdtResultGood": "boolean",
+        "hasCrackIndication": "boolean"
+      }
     }
-  }
 }
