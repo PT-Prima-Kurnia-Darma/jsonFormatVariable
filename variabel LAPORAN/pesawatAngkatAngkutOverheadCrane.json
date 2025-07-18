@@ -1,1051 +1,487 @@
 {
-  "examinationType": "",
-  "subInspectionType": "",
+  "reportInfo": {
+    "examinationType": "BERKALA",
+    "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+    "subInspectionType": "ELECTRIC CHAIN HOIST",
+    "reportNumber": "842 / PKD / PAA / III / 2024"
+  },
   "generalData": {
-    "ownerName": "",
-    "ownerAddress": "",
-    "userInCharge": "",
-    "subcontractorPersonInCharge": "",
-    "unitLocation": "",
-    "equipmentType": "",
-    "manufacturer": "",
-    "brandType": "",
-    "locationAndYearOfManufacture": "",
-    "serialNumberUnitNumber": "",
-    "capacityWorkingLoad": "",
-    "intendedUse": "",
-    "usagePermitNumber": "",
-    "operatorCertificate": "",
-    "technicalOrManualData": ""
+    "ownerName": "PT. Teco Multiguna Elektro",
+    "ownerAddress": "Jl. Bandengan Utara No. 83 / 1-2-3, Jakarta Utara",
+    "userInCharge": "PT. Teco Multiguna Elektro",
+    "subcontractorPersonInCharge": "Jl. Bandengan Utara No. 83 / 1-2-3, Jakarta Utara",
+    "unitLocation": "Warehouse PT. Teco Multiguna Elektro",
+    "equipmentType": "Electric Chain Hoist",
+    "manufacturer": "Teco Elec & Mach Co., Ltd / Taiwan",
+    "brandType": "TECO / EBEM",
+    "yearOfManufacture": "-",
+    "serialNumberUnitNumber": "R96010 – 01",
+    "capacityWorkingLoadKg": 1000,
+    "legalBasis": "Undang – Undang No.1 Tahun 1970 Tentang Keselamatan Kerja,Permenaker No. 8 Tahun 2020 Tentang Keselamatan dan Kesehatan Kerja Pesawat Angkat & Pesawat Angkut",
+    "intendedUse": "Mengangkat Dan Memindahkan Material / Barang",
+    "usagePermitNumber": "Berkala",
+    "operatorCertificate": "-",
+    "technicalOrManualData": "Ada"
   },
   "technicalData": {
-    "specification": {
+    "specifications": {
       "liftingHeight": {
-        "specificationHoistingLiftingHeight": "",
-        "specificationTravelingLiftingHeight": "",
-        "specificationTraversingLiftingHeight": ""
+        "hoisting": 2.6,
+        "traveling": null,
+        "traversing": null
       },
       "girderLength": {
-        "specificationHoistingGirderLength": "",
-        "specificationTravelingGirderLength": "",
-        "specificationTraversingGirderLength": ""
+        "hoisting": null,
+        "traveling": 15,
+        "traversing": 4
       },
-      "speed": {
-        "specificationHoistingSpeed": "",
-        "specificationTravelingSpeed": "",
-        "specificationTraversingSpeed": ""
+      "speed_m_per_min": {
+        "hoisting": 2.5,
+        "traveling": 2.5,
+        "traversing": 2.5
       }
     },
     "driveMotor": {
-      "capacity": {
-        "driveMotorHoistingCapacity": "",
-        "driveMotorTravelingCapacity": "",
-        "driveMotorTraversingCapacity": ""
+      "capacity_ton": {
+        "hoisting": 1,
+        "traveling": null,
+        "traversing": null
       },
-      "power": {
-        "driveMotorHoistingPower": "",
-        "driveMotorTravelingPower": "",
-        "driveMotorTraversingPower": ""
+      "power_kw": {
+        "hoisting": 0.37,
+        "traveling": 0.37,
+        "traversing": 0.37
       },
       "type": {
-        "driveMotorHoistingType": "",
-        "driveMotorTravelingType": "",
-        "driveMotorTraversingType": ""
+        "hoisting": "AC Motor",
+        "traveling": "AC Motor",
+        "traversing": "AC Motor"
       },
-      "revolution": {
-        "driveMotorHoistingRevolution": "",
-        "driveMotorTravelingRevolution": "",
-        "driveMotorTraversingRevolution": ""
+      "revolution_rpm": {
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       },
-      "voltage": {
-        "driveMotorHoistingVoltage": "",
-        "driveMotorTravelingVoltage": "",
-        "driveMotorTraversingVoltage": ""
+      "voltage_v": {
+        "hoisting": 380,
+        "traveling": 380,
+        "traversing": 380
       },
-      "current": {
-        "driveMotorHoistingCurrent": "",
-        "driveMotorTravelingCurrent": "",
-        "driveMotorTraversingCurrent": ""
+      "current_a": {
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       },
-      "frequency": {
-        "driveMotorHoistingFrequency": "",
-        "driveMotorTravelingFrequency": "",
-        "driveMotorTraversingFrequency": ""
+      "frequency_hz": {
+        "hoisting": 50,
+        "traveling": 50,
+        "traversing": 50
       }
     },
     "startingResistor": {
       "type": {
-        "resistorHoistingType": "",
-        "resistorTravelingType": "",
-        "resistorTraversingType": ""
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       },
-      "voltage": {
-        "resistorHoistingVoltage": "",
-        "resistorTravelingVoltage": "",
-        "resistorTraversingVoltage": ""
+      "voltage_v": {
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       },
-      "current": {
-        "resistorHoistingCurrent": "",
-        "resistorTravelingCurrent": "",
-        "resistorTraversingCurrent": ""
+      "current_a": {
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       }
     },
     "brake": {
       "kind": {
-        "brakeHoistingKind": "",
-        "brakeTravelingKind": "",
-        "brakeTraversingKind": ""
+        "hoisting": "Regenerative",
+        "traveling": null,
+        "traversing": null
       },
       "type": {
-        "brakeHoistingType": "",
-        "brakeTravelingType": "",
-        "brakeTraversingType": ""
+        "hoisting": "Electric",
+        "traveling": null,
+        "traversing": null
       }
     },
     "controllerBrake": {
       "kind": {
-        "controllerBrakeHoistingKind": "",
-        "controllerBrakeTravelingKind": "",
-        "controllerBrakeTraversingKind": ""
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       },
       "type": {
-        "controllerBrakeHoistingType": "",
-        "controllerBrakeTravelingType": "",
-        "controllerBrakeTraversingType": ""
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       }
     },
     "hook": {
       "type": {
-        "hookHoistingType": "",
-        "hookTravelingType": "",
-        "hookTraversingType": ""
+        "hoisting": "Single Hook",
+        "traveling": null,
+        "traversing": null
       },
       "capacity": {
-        "hookHoistingCapacity": "",
-        "hookTravelingCapacity": "",
-        "hookTraversingCapacity": ""
+        "hoisting": "1 ton",
+        "traveling": null,
+        "traversing": null
       },
       "material": {
-        "hookHoistingMaterial": "",
-        "hookTravelingMaterial": "",
-        "hookTraversingMaterial": ""
+        "hoisting": "Baja",
+        "traveling": null,
+        "traversing": null
       }
     },
     "chain": {
       "type": {
-        "chainHoistingType": "",
-        "chainTravelingType": "",
-        "chainTraversingType": ""
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       },
       "construction": {
-        "chainHoistingConstruction": "",
-        "chainTravelingConstruction": "",
-        "chainTraversingConstruction": ""
+        "hoisting": "Baja",
+        "traveling": null,
+        "traversing": null
       },
       "diameter": {
-        "chainHoistingDiameter": "",
-        "chainTravelingDiameter": "",
-        "chainTraversingDiameter": ""
+        "hoisting": "10 mm",
+        "traveling": null,
+        "traversing": null
       },
       "length": {
-        "chainHoistingLength": "",
-        "chainTravelingLength": "",
-        "chainTraversingLength": ""
+        "hoisting": null,
+        "traveling": null,
+        "traversing": null
       }
     }
   },
-  "visualCheck": {
+  "visualInspection": {
     "foundation": {
-      "fasteningBolts": {
-        "corrosion": {
-          "foundationBoltsCorrosionMemenuhi": "",
-          "foundationBoltsCorrosionTidakMemenuhi": "",
-          "foundationBoltsCorrosionResult": ""
-        },
-        "cracks": {
-          "foundationBoltsCracksMemenuhi": "",
-          "foundationBoltsCracksTidakMemenuhi": "",
-          "foundationBoltsCracksResult": ""
-        },
-        "deformation": {
-          "foundationBoltsDeformationMemenuhi": "",
-          "foundationBoltsDeformationTidakMemenuhi": "",
-          "foundationBoltsDeformationResult": ""
-        },
-        "fastening": {
-          "foundationBoltsFasteningMemenuhi": "",
-          "foundationBoltsFasteningTidakMemenuhi": "",
-          "foundationBoltsFasteningResult": ""
-        }
+      "bolts": {
+        "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+        "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+        "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+        "fastening": { "status": "compliant", "remarks": "Kondisi Baik" }
       }
     },
     "columnFrame": {
-      "corrosion": {
-        "columnFrameCorrosionMemenuhi": "",
-        "columnFrameCorrosionTidakMemenuhi": "",
-        "columnFrameCorrosionResult": ""
-      },
-      "cracks": {
-        "columnFrameCracksMemenuhi": "",
-        "columnFrameCracksTidakMemenuhi": "",
-        "columnFrameCracksResult": ""
-      },
-      "deformation": {
-        "columnFrameDeformationMemenuhi": "",
-        "columnFrameDeformationTidakMemenuhi": "",
-        "columnFrameDeformationResult": ""
-      },
-      "fastening": {
-        "columnFrameFasteningMemenuhi": "",
-        "columnFrameFasteningTidakMemenuhi": "",
-        "columnFrameFasteningResult": ""
-      },
-      "crossBracing": {
-        "columnFrameCrossBracingMemenuhi": "",
-        "columnFrameCrossBracingTidakMemenuhi": "",
-        "columnFrameCrossBracingResult": ""
-      },
-      "diagonalBracing": {
-        "columnFrameDiagonalBracingMemenuhi": "",
-        "columnFrameDiagonalBracingTidakMemenuhi": "",
-        "columnFrameDiagonalBracingResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "fastening": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "crossBracing": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "diagonalBracing": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "stairs": {
-      "corrosion": {
-        "stairsCorrosionMemenuhi": "",
-        "stairsCorrosionTidakMemenuhi": "",
-        "stairsCorrosionResult": ""
-      },
-      "cracks": {
-        "stairsCracksMemenuhi": "",
-        "stairsCracksTidakMemenuhi": "",
-        "stairsCracksResult": ""
-      },
-      "deformation": {
-        "stairsDeformationMemenuhi": "",
-        "stairsDeformationTidakMemenuhi": "",
-        "stairsDeformationResult": ""
-      },
-      "fastening": {
-        "stairsFasteningMemenuhi": "",
-        "stairsFasteningTidakMemenuhi": "",
-        "stairsFasteningResult": ""
-      }
+      "corrosion": { "status": "na", "remarks": "" },
+      "cracks": { "status": "na", "remarks": "" },
+      "deformation": { "status": "na", "remarks": "" },
+      "fastening": { "status": "na", "remarks": "" }
     },
-    "workingPlatform": {
-      "corrosion": {
-        "platformCorrosionMemenuhi": "",
-        "platformCorrosionTidakMemenuhi": "",
-        "platformCorrosionResult": ""
-      },
-      "cracks": {
-        "platformCracksMemenuhi": "",
-        "platformCracksTidakMemenuhi": "",
-        "platformCracksResult": ""
-      },
-      "deformation": {
-        "platformDeformationMemenuhi": "",
-        "platformDeformationTidakMemenuhi": "",
-        "platformDeformationResult": ""
-      },
-      "fastening": {
-        "platformFasteningMemenuhi": "",
-        "platformFasteningTidakMemenuhi": "",
-        "platformFasteningResult": ""
-      }
+    "platform": {
+      "corrosion": { "status": "na", "remarks": "" },
+      "cracks": { "status": "na", "remarks": "" },
+      "deformation": { "status": "na", "remarks": "" },
+      "fastening": { "status": "na", "remarks": "" }
     },
     "railSupportBeam": {
-      "corrosion": {
-        "railSupportCorrosionMemenuhi": "",
-        "railSupportCorrosionTidakMemenuhi": "",
-        "railSupportCorrosionResult": ""
-      },
-      "cracks": {
-        "railSupportCracksMemenuhi": "",
-        "railSupportCracksTidakMemenuhi": "",
-        "railSupportCracksResult": ""
-      },
-      "deformation": {
-        "railSupportDeformationMemenuhi": "",
-        "railSupportDeformationTidakMemenuhi": "",
-        "railSupportDeformationResult": ""
-      },
-      "fastening": {
-        "railSupportFasteningMemenuhi": "",
-        "railSupportFasteningTidakMemenuhi": "",
-        "railSupportFasteningResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "fastening": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "travelingRail": {
-      "corrosion": {
-        "travelingRailCorrosionMemenuhi": "",
-        "travelingRailCorrosionTidakMemenuhi": "",
-        "travelingRailCorrosionResult": ""
-      },
-      "cracks": {
-        "travelingRailCracksMemenuhi": "",
-        "travelingRailCracksTidakMemenuhi": "",
-        "travelingRailCracksResult": ""
-      },
-      "railJoints": {
-        "travelingRailJointsMemenuhi": "",
-        "travelingRailJointsTidakMemenuhi": "",
-        "travelingRailJointsResult": ""
-      },
-      "railStraightness": {
-        "travelingRailStraightnessMemenuhi": "",
-        "travelingRailStraightnessTidakMemenuhi": "",
-        "travelingRailStraightnessResult": ""
-      },
-      "interRailStraightness": {
-        "travelingInterRailStraightnessMemenuhi": "",
-        "travelingInterRailStraightnessTidakMemenuhi": "",
-        "travelingInterRailStraightnessResult": ""
-      },
-      "interRailEvenness": {
-        "travelingInterRailEvennessMemenuhi": "",
-        "travelingInterRailEvennessTidakMemenuhi": "",
-        "travelingInterRailEvennessResult": ""
-      },
-      "railJointGap": {
-        "travelingRailJointGapMemenuhi": "",
-        "travelingRailJointGapTidakMemenuhi": "",
-        "travelingRailJointGapResult": ""
-      },
-      "railFasteners": {
-        "travelingRailFastenersMemenuhi": "",
-        "travelingRailFastenersTidakMemenuhi": "",
-        "travelingRailFastenersResult": ""
-      },
-      "railStopper": {
-        "travelingRailStopperMemenuhi": "",
-        "travelingRailStopperTidakMemenuhi": "",
-        "travelingRailStopperResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "joints": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "interRailStraightness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "interRailEvenness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "jointGap": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "fasteners": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "stopper": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "traversingRail": {
-      "corrosion": {
-        "traversingRailCorrosionMemenuhi": "",
-        "traversingRailCorrosionTidakMemenuhi": "",
-        "traversingRailCorrosionResult": ""
-      },
-      "cracks": {
-        "traversingRailCracksMemenuhi": "",
-        "traversingRailCracksTidakMemenuhi": "",
-        "traversingRailCracksResult": ""
-      },
-      "railJoints": {
-        "traversingRailJointsMemenuhi": "",
-        "traversingRailJointsTidakMemenuhi": "",
-        "traversingRailJointsResult": ""
-      },
-      "railStraightness": {
-        "traversingRailStraightnessMemenuhi": "",
-        "traversingRailStraightnessTidakMemenuhi": "",
-        "traversingRailStraightnessResult": ""
-      },
-      "interRailStraightness": {
-        "traversingInterRailStraightnessMemenuhi": "",
-        "traversingInterRailStraightnessTidakMemenuhi": "",
-        "traversingInterRailStraightnessResult": ""
-      },
-      "interRailEvenness": {
-        "traversingInterRailEvennessMemenuhi": "",
-        "traversingInterRailEvennessTidakMemenuhi": "",
-        "traversingInterRailEvennessResult": ""
-      },
-      "railJointGap": {
-        "traversingRailJointGapMemenuhi": "",
-        "traversingRailJointGapTidakMemenuhi": "",
-        "traversingRailJointGapResult": ""
-      },
-      "railFasteners": {
-        "traversingRailFastenersMemenuhi": "",
-        "traversingRailFastenersTidakMemenuhi": "",
-        "traversingRailFastenersResult": ""
-      },
-      "railStopper": {
-        "traversingRailStopperMemenuhi": "",
-        "traversingRailStopperTidakMemenuhi": "",
-        "traversingRailStopperResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "joints": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "interRailStraightness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "interRailEvenness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "jointGap": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "fasteners": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "stopper": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "girder": {
-      "corrosion": {
-        "girderCorrosionMemenuhi": "",
-        "girderCorrosionTidakMemenuhi": "",
-        "girderCorrosionResult": ""
-      },
-      "cracks": {
-        "girderCracksMemenuhi": "",
-        "girderCracksTidakMemenuhi": "",
-        "girderCracksResult": ""
-      },
-      "camber": {
-        "girderCamberMemenuhi": "",
-        "girderCamberTidakMemenuhi": "",
-        "girderCamberResult": ""
-      },
-      "girderJoints": {
-        "girderJointsMemenuhi": "",
-        "girderJointsTidakMemenuhi": "",
-        "girderJointsResult": ""
-      },
-      "girderEndJoints": {
-        "girderEndJointsMemenuhi": "",
-        "girderEndJointsTidakMemenuhi": "",
-        "girderEndJointsResult": ""
-      },
-      "truckMountOnGirder": {
-        "girderTruckMountMemenuhi": "",
-        "girderTruckMountTidakMemenuhi": "",
-        "girderTruckMountResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "camber": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "joints": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "endJoints": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "truckMount": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "travelingGearbox": {
-      "corrosion": {
-        "travelingGearboxCorrosionMemenuhi": "",
-        "travelingGearboxCorrosionTidakMemenuhi": "",
-        "travelingGearboxCorrosionResult": ""
-      },
-      "cracks": {
-        "travelingGearboxCracksMemenuhi": "",
-        "travelingGearboxCracksTidakMemenuhi": "",
-        "travelingGearboxCracksResult": ""
-      },
-      "lubricatingOil": {
-        "travelingGearboxLubricantMemenuhi": "",
-        "travelingGearboxLubricantTidakMemenuhi": "",
-        "travelingGearboxLubricantResult": ""
-      },
-      "oilSeal": {
-        "travelingGearboxOilSealMemenuhi": "",
-        "travelingGearboxOilSealTidakMemenuhi": "",
-        "travelingGearboxOilSealResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "lubricant": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "oilSeal": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "driveWheel": {
-      "wear": {
-        "driveWheelWearMemenuhi": "",
-        "driveWheelWearTidakMemenuhi": "",
-        "driveWheelWearResult": ""
-      },
-      "cracks": {
-        "driveWheelCracksMemenuhi": "",
-        "driveWheelCracksTidakMemenuhi": "",
-        "driveWheelCracksResult": ""
-      },
-      "deformation": {
-        "driveWheelDeformationMemenuhi": "",
-        "driveWheelDeformationTidakMemenuhi": "",
-        "driveWheelDeformationResult": ""
-      },
-      "flangeCondition": {
-        "driveWheelFlangeMemenuhi": "",
-        "driveWheelFlangeTidakMemenuhi": "",
-        "driveWheelFlangeResult": ""
-      },
-      "chainCondition": {
-        "driveWheelChainMemenuhi": "",
-        "driveWheelChainTidakMemenuhi": "",
-        "driveWheelChainResult": ""
-      }
+      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "flange": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "chain": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "idleWheel": {
-      "security": {
-        "idleWheelSecurityMemenuhi": "",
-        "idleWheelSecurityTidakMemenuhi": "",
-        "idleWheelSecurityResult": ""
-      },
-      "cracks": {
-        "idleWheelCracksMemenuhi": "",
-        "idleWheelCracksTidakMemenuhi": "",
-        "idleWheelCracksResult": ""
-      },
-      "deformation": {
-        "idleWheelDeformationMemenuhi": "",
-        "idleWheelDeformationTidakMemenuhi": "",
-        "idleWheelDeformationResult": ""
-      },
-      "flangeCondition": {
-        "idleWheelFlangeMemenuhi": "",
-        "idleWheelFlangeTidakMemenuhi": "",
-        "idleWheelFlangeResult": ""
-      }
+      "security": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "flange": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "wheelConnector": {
-      "straightness": {
-        "wheelConnectorStraightnessMemenuhi": "",
-        "wheelConnectorStraightnessTidakMemenuhi": "",
-        "wheelConnectorStraightnessResult": ""
-      },
-      "crossJoint": {
-        "wheelConnectorCrossJointMemenuhi": "",
-        "wheelConnectorCrossJointTidakMemenuhi": "",
-        "wheelConnectorCrossJointResult": ""
-      },
-      "lubrication": {
-        "wheelConnectorLubeMemenuhi": "",
-        "wheelConnectorLubeTidakMemenuhi": "",
-        "wheelConnectorLubeResult": ""
-      }
+      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "crossJoint": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "lubrication": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "girderStopperBumper": {
-      "condition": {
-        "girderBumperConditionMemenuhi": "",
-        "girderBumperConditionTidakMemenuhi": "",
-        "girderBumperConditionResult": ""
-      },
-      "reinforcement": {
-        "girderBumperReinforcementMemenuhi": "",
-        "girderBumperReinforcementTidakMemenuhi": "",
-        "girderBumperReinforcementResult": ""
-      }
+    "girderBumper": {
+      "condition": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "reinforcement": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "traversingTrolleyGearbox": {
-      "fastening": {
-        "trolleyGearboxFasteningMemenuhi": "",
-        "trolleyGearboxFasteningTidakMemenuhi": "",
-        "trolleyGearboxFasteningResult": ""
-      },
-      "corrosion": {
-        "trolleyGearboxCorrosionMemenuhi": "",
-        "trolleyGearboxCorrosionTidakMemenuhi": "",
-        "trolleyGearboxCorrosionResult": ""
-      },
-      "cracks": {
-        "trolleyGearboxCracksMemenuhi": "",
-        "trolleyGearboxCracksTidakMemenuhi": "",
-        "trolleyGearboxCracksResult": ""
-      },
-      "lubricatingOil": {
-        "trolleyGearboxLubricantMemenuhi": "",
-        "trolleyGearboxLubricantTidakMemenuhi": "",
-        "trolleyGearboxLubricantResult": ""
-      },
-      "oilSeal": {
-        "trolleyGearboxOilSealMemenuhi": "",
-        "trolleyGearboxOilSealTidakMemenuhi": "",
-        "trolleyGearboxOilSealResult": ""
-      }
+    "trolleyGearbox": {
+      "fastening": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "lubricant": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "oilSeal": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "trolleyDriveWheel": {
-      "wear": {
-        "trolleyDriveWheelWearMemenuhi": "",
-        "trolleyDriveWheelWearTidakMemenuhi": "",
-        "trolleyDriveWheelWearResult": ""
-      },
-      "cracks": {
-        "trolleyDriveWheelCracksMemenuhi": "",
-        "trolleyDriveWheelCracksTidakMemenuhi": "",
-        "trolleyDriveWheelCracksResult": ""
-      },
-      "deformation": {
-        "trolleyDriveWheelDeformationMemenuhi": "",
-        "trolleyDriveWheelDeformationTidakMemenuhi": "",
-        "trolleyDriveWheelDeformationResult": ""
-      },
-      "flangeCondition": {
-        "trolleyDriveWheelFlangeMemenuhi": "",
-        "trolleyDriveWheelFlangeTidakMemenuhi": "",
-        "trolleyDriveWheelFlangeResult": ""
-      },
-      "chainCondition": {
-        "trolleyDriveWheelChainMemenuhi": "",
-        "trolleyDriveWheelChainTidakMemenuhi": "",
-        "trolleyDriveWheelChainResult": ""
-      }
+      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "flange": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "chain": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "trolleyIdleWheel": {
-      "wear": {
-        "trolleyIdleWheelWearMemenuhi": "",
-        "trolleyIdleWheelWearTidakMemenuhi": "",
-        "trolleyIdleWheelWearResult": ""
-      },
-      "cracks": {
-        "trolleyIdleWheelCracksMemenuhi": "",
-        "trolleyIdleWheelCracksTidakMemenuhi": "",
-        "trolleyIdleWheelCracksResult": ""
-      },
-      "deformation": {
-        "trolleyIdleWheelDeformationMemenuhi": "",
-        "trolleyIdleWheelDeformationTidakMemenuhi": "",
-        "trolleyIdleWheelDeformationResult": ""
-      },
-      "flangeCondition": {
-        "trolleyIdleWheelFlangeMemenuhi": "",
-        "trolleyIdleWheelFlangeTidakMemenuhi": "",
-        "trolleyIdleWheelFlangeResult": ""
-      }
+      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "cracks": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "flange": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "trolleyWheelConnector": {
-      "straightness": {
-        "trolleyWheelConnectorStraightnessMemenuhi": "",
-        "trolleyWheelConnectorStraightnessTidakMemenuhi": "",
-        "trolleyWheelConnectorStraightnessResult": ""
-      },
-      "crossJoint": {
-        "trolleyWheelConnectorCrossJointMemenuhi": "",
-        "trolleyWheelConnectorCrossJointTidakMemenuhi": "",
-        "trolleyWheelConnectorCrossJointResult": ""
-      },
-      "lubrication": {
-        "trolleyWheelConnectorLubeMemenuhi": "",
-        "trolleyWheelConnectorLubeTidakMemenuhi": "",
-        "trolleyWheelConnectorLubeResult": ""
-      }
+      "straightness": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "crossJoint": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "lubrication": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "trolleyStopperBumper": {
-      "condition": {
-        "trolleyBumperConditionMemenuhi": "",
-        "trolleyBumperConditionTidakMemenuhi": "",
-        "trolleyBumperConditionResult": ""
-      },
-      "reinforcement": {
-        "trolleyBumperReinforcementMemenuhi": "",
-        "trolleyBumperReinforcementTidakMemenuhi": "",
-        "trolleyBumperReinforcementResult": ""
-      }
+    "trolleyBumper": {
+      "condition": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "reinforcement": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "windingDrum": {
-      "groove": {
-        "drumGrooveMemenuhi": "",
-        "drumGrooveTidakMemenuhi": "",
-        "drumGrooveResult": ""
-      },
-      "grooveLip": {
-        "drumGrooveLipMemenuhi": "",
-        "drumGrooveLipTidakMemenuhi": "",
-        "drumGrooveLipResult": ""
-      },
-      "flanges": {
-        "drumFlangesMemenuhi": "",
-        "drumFlangesTidakMemenuhi": "",
-        "drumFlangesResult": ""
-      }
+    "drum": {
+      "groove": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "grooveLip": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "flanges": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "brakeVisualCheck": {
-      "wear": {
-        "brakeWearMemenuhi": "",
-        "brakeWearTidakMemenuhi": "",
-        "brakeWearResult": ""
-      },
-      "adjustment": {
-        "brakeAdjustmentMemenuhi": "",
-        "brakeAdjustmentTidakMemenuhi": "",
-        "brakeAdjustmentResult": ""
-      }
+    "brakeVisual": {
+      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "adjustment": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "hoistGearBox": {
-      "lubrication": {
-        "hoistGearboxLubeMemenuhi": "",
-        "hoistGearboxLubeTidakMemenuhi": "",
-        "hoistGearboxLubeResult": ""
-      },
-      "oilSeal": {
-        "hoistGearboxOilSealMemenuhi": "",
-        "hoistGearboxOilSealTidakMemenuhi": "",
-        "hoistGearboxOilSealResult": ""
-      }
+      "lubrication": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "oilSeal": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "pulleySheaveSprocket": {
-      "pulleyGroove": {
-        "pulleyGrooveMemenuhi": "",
-        "pulleyGrooveTidakMemenuhi": "",
-        "pulleyGrooveResult": ""
-      },
-      "pulleyLip": {
-        "pulleyLipMemenuhi": "",
-        "pulleyLipTidakMemenuhi": "",
-        "pulleyLipResult": ""
-      },
-      "pulleyPin": {
-        "pulleyPinMemenuhi": "",
-        "pulleyPinTidakMemenuhi": "",
-        "pulleyPinResult": ""
-      },
-      "bearing": {
-        "pulleyBearingMemenuhi": "",
-        "pulleyBearingTidakMemenuhi": "",
-        "pulleyBearingResult": ""
-      },
-      "pulleyGuard": {
-        "pulleyGuardMemenuhi": "",
-        "pulleyGuardTidakMemenuhi": "",
-        "pulleyGuardResult": ""
-      },
-      "ropeChainGuard": {
-        "ropeChainGuardMemenuhi": "",
-        "ropeChainGuardTidakMemenuhi": "",
-        "ropeChainGuardResult": ""
-      }
+    "pulleyChainSprocket": {
+      "pulleyGroove": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "pulleyLip": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "pulleyPin": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "pulleyBearing": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "pulleyGuard": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "ropeChainGuard": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "mainHook": {
-      "wear": {
-        "mainHookWearMemenuhi": "",
-        "mainHookWearTidakMemenuhi": "",
-        "mainHookWearResult": ""
-      },
-      "throatOpening": {
-        "mainHookThroatOpeningMemenuhi": "",
-        "mainHookThroatOpeningTidakMemenuhi": "",
-        "mainHookThroatOpeningResult": ""
-      },
-      "swivelNutAndBearing": {
-        "mainHookSwivelMemenuhi": "",
-        "mainHookSwivelTidakMemenuhi": "",
-        "mainHookSwivelResult": ""
-      },
-      "trunnion": {
-        "mainHookTrunnionMemenuhi": "",
-        "mainHookTrunnionTidakMemenuhi": "",
-        "mainHookTrunnionResult": ""
-      }
+      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "throatOpening": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "swivel": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "trunnion": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "auxiliaryHook": {
-      "wear": {
-        "auxHookWearMemenuhi": "",
-        "auxHookWearTidakMemenuhi": "",
-        "auxHookWearResult": ""
-      },
-      "throatOpening": {
-        "auxHookThroatOpeningMemenuhi": "",
-        "auxHookThroatOpeningTidakMemenuhi": "",
-        "auxHookThroatOpeningResult": ""
-      },
-      "swivelNutAndBearing": {
-        "auxHookSwivelMemenuhi": "",
-        "auxHookSwivelTidakMemenuhi": "",
-        "auxHookSwivelResult": ""
-      },
-      "trunnion": {
-        "auxHookTrunnionMemenuhi": "",
-        "auxHookTrunnionTidakMemenuhi": "",
-        "auxHookTrunnionResult": ""
-      }
+    "auxHook": {
+      "wear": { "status": "na", "remarks": "-" },
+      "throatOpening": { "status": "na", "remarks": "-" },
+      "swivel": { "status": "na", "remarks": "-" },
+      "trunnion": { "status": "na", "remarks": "-" }
     },
     "mainWireRope": {
-      "corrosion": {
-        "mainWireRopeCorrosionMemenuhi": "",
-        "mainWireRopeCorrosionTidakMemenuhi": "",
-        "mainWireRopeCorrosionResult": ""
-      },
-      "wear": {
-        "mainWireRopeWearMemenuhi": "",
-        "mainWireRopeWearTidakMemenuhi": "",
-        "mainWireRopeWearResult": ""
-      },
-      "brokenWires": {
-        "mainWireRopeBrokenMemenuhi": "",
-        "mainWireRopeBrokenTidakMemenuhi": "",
-        "mainWireRopeBrokenResult": ""
-      },
-      "deformation": {
-        "mainWireRopeDeformationMemenuhi": "",
-        "mainWireRopeDeformationTidakMemenuhi": "",
-        "mainWireRopeDeformationResult": ""
-      }
+      "corrosion": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "wear": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "broken": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "deformation": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
-    "auxiliaryWireRope": {
-      "corrosion": {
-        "auxWireRopeCorrosionMemenuhi": "",
-        "auxWireRopeCorrosionTidakMemenuhi": "",
-        "auxWireRopeCorrosionResult": ""
-      },
-      "wear": {
-        "auxWireRopeWearMemenuhi": "",
-        "auxWireRopeWearTidakMemenuhi": "",
-        "auxWireRopeWearResult": ""
-      },
-      "brokenWires": {
-        "auxWireRopeBrokenMemenuhi": "",
-        "auxWireRopeBrokenTidakMemenuhi": "",
-        "auxWireRopeBrokenResult": ""
-      },
-      "deformation": {
-        "auxWireRopeDeformationMemenuhi": "",
-        "auxWireRopeDeformationTidakMemenuhi": "",
-        "auxWireRopeDeformationResult": ""
-      }
+    "auxWireRope": {
+      "corrosion": { "status": "na", "remarks": "-" },
+      "wear": { "status": "na", "remarks": "-" },
+      "broken": { "status": "na", "remarks": "-" },
+      "deformation": { "status": "na", "remarks": "-" }
     },
     "mainChain": {
-      "corrosion": {
-        "mainChainCorrosionMemenuhi": "",
-        "mainChainCorrosionTidakMemenuhi": "",
-        "mainChainCorrosionResult": ""
-      },
-      "wear": {
-        "mainChainWearMemenuhi": "",
-        "mainChainWearTidakMemenuhi": "",
-        "mainChainWearResult": ""
-      },
-      "cracksOrBroken": {
-        "mainChainCracksBrokenMemenuhi": "",
-        "mainChainCracksBrokenTidakMemenuhi": "",
-        "mainChainCracksBrokenResult": ""
-      },
-      "deformation": {
-        "mainChainDeformationMemenuhi": "",
-        "mainChainDeformationTidakMemenuhi": "",
-        "mainChainDeformationResult": ""
-      }
+      "corrosion": { "status": "na", "remarks": "-" },
+      "wear": { "status": "na", "remarks": "-" },
+      "cracksBroken": { "status": "na", "remarks": "-" },
+      "deformation": { "status": "na", "remarks": "-" }
     },
-    "auxiliaryChain": {
-      "corrosion": {
-        "auxChainCorrosionMemenuhi": "",
-        "auxChainCorrosionTidakMemenuhi": "",
-        "auxChainCorrosionResult": ""
-      },
-      "wear": {
-        "auxChainWearMemenuhi": "",
-        "auxChainWearTidakMemenuhi": "",
-        "auxChainWearResult": ""
-      },
-      "cracksOrBroken": {
-        "auxChainCracksBrokenMemenuhi": "",
-        "auxChainCracksBrokenTidakMemenuhi": "",
-        "auxChainCracksBrokenResult": ""
-      },
-      "deformation": {
-        "auxChainDeformationMemenuhi": "",
-        "auxChainDeformationTidakMemenuhi": "",
-        "auxChainDeformationResult": ""
-      }
+    "auxChain": {
+      "corrosion": { "status": "na", "remarks": "-" },
+      "wear": { "status": "na", "remarks": "-" },
+      "cracksBroken": { "status": "na", "remarks": "-" },
+      "deformation": { "status": "na", "remarks": "-" }
     },
     "limitSwitch": {
-      "longTraveling": {
-        "limitSwitchLongTravelingMemenuhi": "",
-        "limitSwitchLongTravelingTidakMemenuhi": "",
-        "limitSwitchLongTravelingResult": ""
-      },
-      "crossTraveling": {
-        "limitSwitchCrossTravelingMemenuhi": "",
-        "limitSwitchCrossTravelingTidakMemenuhi": "",
-        "limitSwitchCrossTravelingResult": ""
-      },
-      "liftingMovement": {
-        "limitSwitchLiftingMemenuhi": "",
-        "limitSwitchLiftingTidakMemenuhi": "",
-        "limitSwitchLiftingResult": ""
-      }
+      "longTraveling": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "crossTraveling": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "lifting": { "status": "compliant", "remarks": "Kondisi Baik" }
     },
     "operatorCabin": {
-      "safetyStairs": {
-        "cabinSafetyStairsMemenuhi": "",
-        "cabinSafetyStairsTidakMemenuhi": "",
-        "cabinSafetyStairsResult": ""
-      },
-      "door": {
-        "cabinDoorMemenuhi": "",
-        "cabinDoorTidakMemenuhi": "",
-        "cabinDoorResult": ""
-      },
-      "window": {
-        "cabinWindowMemenuhi": "",
-        "cabinWindowTidakMemenuhi": "",
-        "cabinWindowResult": ""
-      },
-      "fanAC": {
-        "cabinFanAcMemenuhi": "",
-        "cabinFanAcTidakMemenuhi": "",
-        "cabinFanAcResult": ""
-      },
-      "controlLeversButtons": {
-        "cabinControlLeversMemenuhi": "",
-        "cabinControlLeversTidakMemenuhi": "",
-        "cabinControlLeversResult": ""
-      },
-      "pendantControl": {
-        "cabinPendantControlMemenuhi": "",
-        "cabinPendantControlTidakMemenuhi": "",
-        "cabinPendantControlResult": ""
-      },
-      "lighting": {
-        "cabinLightingMemenuhi": "",
-        "cabinLightingTidakMemenuhi": "",
-        "cabinLightingResult": ""
-      },
-      "horn": {
-        "cabinHornMemenuhi": "",
-        "cabinHornTidakMemenuhi": "",
-        "cabinHornResult": ""
-      },
-      "fuse": {
-        "cabinFuseMemenuhi": "",
-        "cabinFuseTidakMemenuhi": "",
-        "cabinFuseResult": ""
-      },
-      "communicationTool": {
-        "cabinCommToolMemenuhi": "",
-        "cabinCommToolTidakMemenuhi": "",
-        "cabinCommToolResult": ""
-      },
-      "fireExtinguisher": {
-        "cabinFireExtinguisherMemenuhi": "",
-        "cabinFireExtinguisherTidakMemenuhi": "",
-        "cabinFireExtinguisherResult": ""
-      },
-      "operatingSigns": {
-        "cabinOperatingSignsMemenuhi": "",
-        "cabinOperatingSignsTidakMemenuhi": "",
-        "cabinOperatingSignsResult": ""
-      },
-      "masterSwitch": {
-        "cabinMasterSwitchMemenuhi": "",
-        "cabinMasterSwitchTidakMemenuhi": "",
-        "cabinMasterSwitchResult": ""
-      }
+      "safetyStairs": { "status": "na", "remarks": "-" },
+      "door": { "status": "na", "remarks": "-" },
+      "window": { "status": "na", "remarks": "-" },
+      "fanAc": { "status": "na", "remarks": "-" },
+      "controlLevers": { "status": "na", "remarks": "-" },
+      "pendantControl": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "lighting": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "horn": { "status": "na", "remarks": "-" },
+      "fuse": { "status": "na", "remarks": "-" },
+      "commTool": { "status": "na", "remarks": "-" },
+      "fireExtinguisher": { "status": "na", "remarks": "-" },
+      "operatingSigns": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "masterSwitch": { "status": "na", "remarks": "-" }
     },
     "electricalComponents": {
-      "voltageInfo": "220/380 Volt, 3 Phase, 50 HZ",
-      "panelConductorConnector": {
-        "electricalPanelConnectorMemenuhi": "",
-        "electricalPanelConnectorTidakMemenuhi": "",
-        "electricalPanelConnectorResult": ""
-      },
-      "conductorGuard": {
-        "electricalConductorGuardMemenuhi": "",
-        "electricalConductorGuardTidakMemenuhi": "",
-        "electricalConductorGuardResult": ""
-      },
-      "motorInstallationSafetySystem": {
-        "electricalMotorSafetySystemMemenuhi": "",
-        "electricalMotorSafetySystemTidakMemenuhi": "",
-        "electricalMotorSafetySystemResult": ""
-      },
-      "groundingSystem": {
-        "electricalGroundingSystemMemenuhi": "",
-        "electricalGroundingSystemTidakMemenuhi": "",
-        "electricalGroundingSystemResult": ""
-      },
-      "installation": {
-        "electricalInstallationMemenuhi": "",
-        "electricalInstallationTidakMemenuhi": "",
-        "electricalInstallationResult": ""
-      }
+      "panelConnector": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "conductorGuard": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "motorSafetySystem": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "groundingSystem": { "status": "compliant", "remarks": "Kondisi Baik" },
+      "installation": { "status": "compliant", "remarks": "Kondisi Baik" }
     }
   },
-  "nonDestructiveTest": {
+  "nonDestructiveExamination": {
+    "chain": {
+      "method": "Pengukuran dan Visual",
+      "items": [
+        {
+          "location": "∅ D",
+          "specDimension_mm": 10,
+          "resultDimension_mm": 10.06,
+          "lengthExtension_percent": 0,
+          "wear_percent": null,
+          "defect": false,
+          "description": "Baik"
+        },
+        {
+          "location": "A",
+          "specDimension_mm": null,
+          "resultDimension_mm": 26.8,
+          "lengthExtension_percent": 0,
+          "wear_percent": null,
+          "defect": false,
+          "description": "Baik"
+        },
+        {
+          "location": "B",
+          "specDimension_mm": null,
+          "resultDimension_mm": 30.8,
+          "lengthExtension_percent": 0,
+          "wear_percent": null,
+          "defect": false,
+          "description": "Baik"
+        }
+      ]
+    },
     "mainHook": {
-      "mainHookMethod": "",
-      "specification": {
-        "mainHookSpecificationA": "",
-        "mainHookSpecificationB": "",
-        "mainHookSpecificationC": "",
-        "mainHookSpecificationD": "",
-        "mainHookSpecificationE": "",
-        "mainHookSpecificationF": "",
-        "mainHookSpecificationG": "",
-        "mainHookSpecificationH": "",
-        "mainHookSpecificationTrue": "",
-        "mainHookSpecificationFalse": "",
-        "mainHookSpecificationResult": ""
+      "method": "Pengukuran dan Visual",
+      "measurements": {
+        "A": 36.25,
+        "B": 46.25,
+        "C": null,
+        "D": null,
+        "E": null,
+        "F": 29.2,
+        "G": 29.3,
+        "H": 28.5
       },
-      "measurementResults": {
-        "mainHookMeasurementResultsA": "",
-        "mainHookMeasurementResultsB": "",
-        "mainHookMeasurementResultsC": "",
-        "mainHookMeasurementResultsD": "",
-        "mainHookMeasurementResultsE": "",
-        "mainHookMeasurementResultsF": "",
-        "mainHookMeasurementResultsG": "",
-        "mainHookMeasurementResultsH": "",
-        "mainHookMeasurementResultsTrue": "",
-        "mainHookMeasurementResultsFalse": "",
-        "mainHookMeasurementResultsResult": ""
+      "tolerances": {
+        "A": "Maks (5%) 38",
+        "F": "Min (10%) 26.1",
+        "G": "Min (10%) 26.1",
+        "H": "Min (10%) 26.1"
       },
-      "toleranceMeasure": {
-        "mainHookToleranceMeasureA": "",
-        "mainHookToleranceMeasureB": "",
-        "mainHookToleranceMeasureC": "",
-        "mainHookToleranceMeasureD": "",
-        "mainHookToleranceMeasureE": "",
-        "mainHookToleranceMeasureF": "",
-        "mainHookToleranceMeasureG": "",
-        "mainHookToleranceMeasureH": "",
-        "mainHookToleranceMeasureTrue": "",
-        "mainHookToleranceMeasureFalse": "",
-        "mainHookToleranceMeasureResult": ""
-      }
+      "result": "Baik"
     }
   },
   "testing": {
     "dynamicTest": {
-      "withoutLoad": {
-        "dynamicTestWithoutLoadTraveling": {
-          "dynamicTestWithoutLoadTravelingShouldBe": "",
-          "dynamicTestWithoutLoadTravelingTestedOrMeasured": "",
-          "dynamicTestWithoutLoadTravelingResult": ""
-        },
-        "dynamicTestWithoutLoadTraversing": {
-          "dynamicTestWithoutLoadTraversingShouldBe": "",
-          "dynamicTestWithoutLoadTraversingTestedOrMeasured": "",
-          "dynamicTestWithoutLoadTraversingResult": ""
-        },
-        "dynamicTestWithoutLoadHoisting": {
-          "dynamicTestWithoutLoadHoistingShouldBe": "",
-          "dynamicTestWithoutLoadHoistingTestedOrMeasured": "",
-          "dynamicTestWithoutLoadHoistingResult": ""
-        },
-        "dynamicTestWithoutLoadSafetyLatch": {
-          "dynamicTestWithoutLoadSafetyLatchShouldBe": "",
-          "dynamicTestWithoutLoadSafetyLatchTestedOrMeasured": "",
-          "dynamicTestWithoutLoadSafetyLatchResult": ""
-        },
-        "dynamicTestWithoutLoadBrakeSwitch": {
-          "dynamicTestWithoutLoadBrakeSwitchShouldBe": "",
-          "dynamicTestWithoutLoadBrakeSwitchTestedOrMeasured": "",
-          "dynamicTestWithoutLoadBrakeSwitchResult": ""
-        },
-        "dynamicTestWithoutLoadBrakeLocking": {
-          "dynamicTestWithoutLoadBrakeLockingShouldBe": "",
-          "dynamicTestWithoutLoadBrakeLockingTestedOrMeasured": "",
-          "dynamicTestWithoutLoadBrakeLockingResult": ""
-        },
-        "dynamicTestWithoutLoadElectrical": {
-          "dynamicTestWithoutLoadElectricalShouldBe": "",
-          "dynamicTestWithoutLoadElectricalTestedOrMeasured": "",
-          "dynamicTestWithoutLoadElectricalResult": ""
-        }
+      "withoutLoad": [
+        { "test": "Travelling/Memanjang", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
+        { "test": "Traversing/Melintang", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
+        { "test": "Hoisting/Angkat", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
+        { "test": "Safety Latch", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
+        { "test": "Brake Switch", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
+        { "test": "Brake Locking Device", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" },
+        { "test": "Instalasi Listrik", "shouldBe": null, "testedOrMeasured": "Dicoba", "remarks": "Baik" }
+      ],
+      "withLoad": [
+        { "load": "Tanpa Beban", "hoist": "Baik", "traversing": "Baik", "traveling": null, "brakeSystem": "Berfungsi", "remarks": "Baik" },
+        { "load": "25% SWL", "hoist": null, "traversing": null, "traveling": null, "brakeSystem": null, "remarks": "N/A" },
+        { "load": "50% SWL", "hoist": null, "traversing": null, "traveling": null, "brakeSystem": null, "remarks": "N/A" },
+        { "load": "75% SWL", "hoist": null, "traversing": null, "traveling": null, "brakeSystem": null, "remarks": "N/A" },
+        { "load": "100% SWL", "hoist": "Baik", "traversing": "Baik", "traveling": null, "brakeSystem": "Berfungsi", "remarks": "Baik" }
+      ]
+    },
+    "staticTest": {
+      "testLoad": "125% SWL",
+      "deflection": {
+        "singleGirder": { "measurement": null, "description": null },
+        "doubleGirder": { "measurement": null, "description": null }
       },
-      "withLoad": {
-        "withLoadNoLoad": {
-          "withLoadNoLoadHoist": "",
-          "withLoadNoLoadTraversing": "",
-          "withLoadNoLoadTraveling": "",
-          "withLoadNoLoadBrakeSystem": "",
-          "withLoadNoLoadResult": ""
-        },
-        "withLoad25Swl": {
-          "withLoad25SwlHoist": "",
-          "withLoad25SwlTraversing": "",
-          "withLoad25SwlTraveling": "",
-          "withLoad25SwlBrakeSystem": "",
-          "withLoad25SwlResult": ""
-        },
-        "withLoad50Swl": {
-          "withLoad50SwlHoist": "",
-          "withLoad50SwlTraversing": "",
-          "withLoad50SwlTraveling": "",
-          "withLoad50SwlBrakeSystem": "",
-          "withLoad50SwlResult": ""
-        },
-        "withLoad75Swl": {
-          "withLoad75SwlHoist": "",
-          "withLoad75SwlTraversing": "",
-          "withLoad75SwlTraveling": "",
-          "withLoad75SwlBrakeSystem": "",
-          "withLoad75SwlResult": ""
-        },
-        "withLoad100Swl": {
-          "withLoad100SwlHoist": "",
-          "withLoad100SwlTraversing": "",
-          "withLoad100SwlTraveling": "",
-          "withLoad100SwlBrakeSystem": "",
-          "withLoad100SwlResult": ""
-        }
-      }
+      "singleGirder": {
+        "design_mm": null,
+        "span_mm": null,
+        "result": null
+      },
+      "doubleGirder": {
+        "design_mm": null,
+        "span_mm": null,
+        "result": null
+      },
+      "notes": "Pengujian Statis Tidak Dapat Dilakukan karena beban seberat 125% SWL tidak tersedia"
     }
+  },
+  "conclusion": [
+    "Tidak ditemukan cacat konstruksi dan perubahan bentuk (deformasi) yang permanen pada batang penopang (girder), wirerope dan hook.",
+    "Hook dilakukan penetrant test dan kondisi baik",
+    "Safety latch tidak terpasang.",
+    "Panel control Electric Chain Hoist berfungsi baik.",
+    "Pengujian Fungsi Hoisting, Traversing, dan Traveling dan diperoleh hasil semua dapat berfungsi dengan Baik",
+    "Pengujian beban menggunakan beban uji 1 ton sesuai SWL dan hasilnya baik.",
+    "Untuk selanjutnya Electric Chain Hoist laik beroperasi kembali dengan memenuhi saran-saran berikut."
+  ],
+  "recommendations": [
+    "Electric Chain Hoist agar dilengkapi dengan penanda keterangan SWL yang ditempatkan pada unit crane atau pada span (girder).",
+    "Electric Chain Hoist secara keseluruhan agar dilakukan pelumasan secara berkala untuk mengurangi laju korosi.",
+    "Electric Chain Hoist harap dipasang Grounding.",
+    "Sebelum mengoperasikan Electric Chain Hoist harap dilakukan pemeriksaan harian oleh operator.",
+    "Electric Chain Hoist agar dioperasikan tidak melebihi kapasitas beban yang sudah di tentukan.",
+    "Electric Chain Hoist agar dirawat sesuai petunjuk pabrik pembuat.",
+    "Electric Chain Hoist harus dioperasikan oleh operator yang memiliki lisensi K3 dari Kementerian Tenaga Kerja RI.",
+    "Electric Chain Hoist agar dilakukan pemeriksaan dan pengujian berkala berikutnya selambat-lambatnya pada tanggal Maret 2025 atau apabila pindah tempat kerja/lokasi harus dilakukan pemeriksaan ulang sesuai dengan Permenaker No. 08 Tahun 2020.",
+    "Untuk Selanjutnya hasil pemeriksaan dan pengujian akan di evaluasi oleh Dinas Tenaga Kerja, Transmigrasi, dan Energi Provinsi DKI Jakarta."
+  ],
+  "inspectionAuthority": {
+    "inspectionDate": "Jakarta, 28 Maret 2024",
+    "inspectorName": "BUDI SASMITO, S.T.",
+    "company": "PT. PRIMA KURNIA DARMA",
+    "title": "AHLI K3 PESAWAT ANGKAT DAN ANGKUT"
   }
 }
