@@ -1,10 +1,8 @@
 {
-  "reportInfo": {
-    "examinationType": "BERKALA",
-    "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
-    "subInspectionType": "ELECTRIC CHAIN HOIST",
-    "reportNumber": "842 / PKD / PAA / III / 2024"
-  },
+  "examinationType": "BERKALA",
+  "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+  "inspectionDate": "Jakarta, 28 Maret 2024",
+
   "generalData": {
     "ownerName": "PT. Teco Multiguna Elektro",
     "ownerAddress": "Jl. Bandengan Utara No. 83 / 1-2-3, Jakarta Utara",
@@ -458,30 +456,6 @@
       "notes": "Pengujian Statis Tidak Dapat Dilakukan karena beban seberat 125% SWL tidak tersedia"
     }
   },
-  "conclusion": [
-    "Tidak ditemukan cacat konstruksi dan perubahan bentuk (deformasi) yang permanen pada batang penopang (girder), wirerope dan hook.",
-    "Hook dilakukan penetrant test dan kondisi baik",
-    "Safety latch tidak terpasang.",
-    "Panel control Electric Chain Hoist berfungsi baik.",
-    "Pengujian Fungsi Hoisting, Traversing, dan Traveling dan diperoleh hasil semua dapat berfungsi dengan Baik",
-    "Pengujian beban menggunakan beban uji 1 ton sesuai SWL dan hasilnya baik.",
-    "Untuk selanjutnya Electric Chain Hoist laik beroperasi kembali dengan memenuhi saran-saran berikut."
-  ],
-  "recommendations": [
-    "Electric Chain Hoist agar dilengkapi dengan penanda keterangan SWL yang ditempatkan pada unit crane atau pada span (girder).",
-    "Electric Chain Hoist secara keseluruhan agar dilakukan pelumasan secara berkala untuk mengurangi laju korosi.",
-    "Electric Chain Hoist harap dipasang Grounding.",
-    "Sebelum mengoperasikan Electric Chain Hoist harap dilakukan pemeriksaan harian oleh operator.",
-    "Electric Chain Hoist agar dioperasikan tidak melebihi kapasitas beban yang sudah di tentukan.",
-    "Electric Chain Hoist agar dirawat sesuai petunjuk pabrik pembuat.",
-    "Electric Chain Hoist harus dioperasikan oleh operator yang memiliki lisensi K3 dari Kementerian Tenaga Kerja RI.",
-    "Electric Chain Hoist agar dilakukan pemeriksaan dan pengujian berkala berikutnya selambat-lambatnya pada tanggal Maret 2025 atau apabila pindah tempat kerja/lokasi harus dilakukan pemeriksaan ulang sesuai dengan Permenaker No. 08 Tahun 2020.",
-    "Untuk Selanjutnya hasil pemeriksaan dan pengujian akan di evaluasi oleh Dinas Tenaga Kerja, Transmigrasi, dan Energi Provinsi DKI Jakarta."
-  ],
-  "inspectionAuthority": {
-    "inspectionDate": "Jakarta, 28 Maret 2024",
-    "inspectorName": "BUDI SASMITO, S.T.",
-    "company": "PT. PRIMA KURNIA DARMA",
-    "title": "AHLI K3 PESAWAT ANGKAT DAN ANGKUT"
-  }
+  "conclusion": {},
+  "recommendations": {}
 }
