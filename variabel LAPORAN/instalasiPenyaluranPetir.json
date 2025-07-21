@@ -29,7 +29,7 @@
     "testJointCount": 2,
     "conductorDescription": "2 Jalur",
     "groundingResistance": "Kabel BC 70 mm²",
-    "installationYear": "0.45 Ohm",
+    "spreadingResistance": "bla bla",
     "installer": "2020 / PT. Listrik Aman"
   },
   "physicalInspection": {
