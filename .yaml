@@ -25,6 +25,18 @@ tags:
     description: Manajemen data Laporan Pemeriksaan untuk Mobile Crane.
   - name: BAP Mobile Crane
     description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Mobile Crane.
+  - name: Laporan Gantry Crane
+    description: Manajemen data Laporan Pemeriksaan untuk Gantry Crane.
+  - name: BAP Gantry Crane
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Gantry Crane.
+  - name: Laporan Gondola
+    description: Manajemen data Laporan Pemeriksaan untuk Gondola.
+  - name: BAP Gondola
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Gondola.
+  - name: Laporan Overhead Crane
+    description: Manajemen data Laporan Pemeriksaan untuk Overhead Crane.
+  - name: BAP Overhead Crane
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Overhead Crane.
 paths:
   # ======================================================
   #                 AUTENTIFIKASI
@@ -1782,6 +1794,1058 @@ paths:
         '500':
           $ref: '#/components/responses/InternalServerError'
 
+  # ======================================================
+  #                 LAPORAN GANTRY CRANE
+  # ======================================================
+  /paa/gantryCrane/laporan:
+    post:
+      summary: Membuat Laporan Gantry Crane Baru
+      tags:
+        - Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanGantryCranePayload'
+      responses:
+        '201':
+          description: Laporan Gantry Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGantryCraneSuccessResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua Laporan Gantry Crane
+      tags:
+        - Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua Laporan Gantry Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllLaporanGantryCraneResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/laporan/{id}:
+    get:
+      summary: Mengambil Laporan Gantry Crane Berdasarkan ID
+      tags:
+        - Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data Laporan Gantry Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGantryCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui Laporan Gantry Crane
+      tags:
+        - Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanGantryCranePayload'
+      responses:
+        '200':
+          description: Laporan Gantry Crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGantryCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus Laporan Gantry Crane
+      tags:
+        - Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan Gantry Crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Gantry Crane berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/laporan/download/{id}:
+    get:
+      summary: Download Dokumen Laporan Gantry Crane
+      tags:
+        - Laporan Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dokumen Laporan Gantry Crane berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-GantryCrane-PT-IVAN-GACOR--xxx.docx"
+            message:
+              schema:
+                type: string
+                example: Laporan Gantry Crane berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ======================================================
+  #                   BAP GANTRY CRANE
+  # ======================================================
+  /paa/gantryCrane/bap/prefill/{laporanId}:
+    get:
+      summary: Mengambil data dari laporan untuk mengisi form BAP Gantry Crane
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP Gantry Crane berhasil didapatkan untuk prefill.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCranePrefillSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/bap:
+    post:
+      summary: Membuat BAP Gantry Crane Baru
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapGantryCranePayload'
+      responses:
+        '201':
+          description: BAP Gantry Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCraneSuccessResponse'
+        '404':
+          description: Laporan Gantry Crane dengan laporanId yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua BAP Gantry Crane
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua BAP Gantry Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllBapGantryCraneResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/bap/{id}:
+    get:
+      summary: Mengambil BAP Gantry Crane Berdasarkan ID
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data BAP Gantry Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui BAP Gantry Crane
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapGantryCranePayload'
+      responses:
+        '200':
+          description: BAP Gantry Crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGantryCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus BAP Gantry Crane
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Gantry Crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Gantry Crane berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gantryCrane/bap/download/{id}:
+    get:
+      summary: Download Dokumen BAP Gantry Crane
+      tags:
+        - BAP Gantry Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Gantry Crane berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-GantryCrane-PT-IVAN-GACOR-PAR-2-xxx.docx"
+            message:
+              schema:
+                type: string
+                example: BAP Gantry Crane berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ======================================================
+  #                 LAPORAN GONDOLA
+  # ======================================================
+  /paa/gondola/laporan:
+    post:
+      summary: Membuat Laporan Gondola Baru
+      tags:
+        - Laporan Gondola
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanGondolaPayload'
+      responses:
+        '201':
+          description: Laporan Gondola berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGondolaSuccessResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua Laporan Gondola
+      tags:
+        - Laporan Gondola
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua Laporan Gondola.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllLaporanGondolaResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gondola/laporan/{id}:
+    get:
+      summary: Mengambil Laporan Gondola Berdasarkan ID
+      tags:
+        - Laporan Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data Laporan Gondola.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGondolaSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui Laporan Gondola
+      tags:
+        - Laporan Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanGondolaPayload'
+      responses:
+        '200':
+          description: Laporan Gondola berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanGondolaSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus Laporan Gondola
+      tags:
+        - Laporan Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan Gondola berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Gondola berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gondola/laporan/download/{id}:
+    get:
+      summary: Download Dokumen Laporan Gondola
+      tags:
+        - Laporan Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dokumen Laporan Gondola berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Gondola-PT-IPAN-NEW-101.docx"
+            message:
+              schema:
+                type: string
+                example: Laporan Gondola berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ======================================================
+  #                   BAP GONDOLA
+  # ======================================================
+  /paa/gondola/bap/prefill/{laporanId}:
+    get:
+      summary: Mengambil data dari laporan untuk mengisi form BAP Gondola
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP Gondola berhasil didapatkan untuk prefill.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGondolaPrefillSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gondola/bap:
+    post:
+      summary: Membuat BAP Gondola Baru
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapGondolaPayload'
+      responses:
+        '201':
+          description: BAP Gondola berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGondolaSuccessResponse'
+        '404':
+          description: Laporan Gondola dengan laporanId yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua BAP Gondola
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua BAP Gondola.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllBapGondolaResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gondola/bap/{id}:
+    get:
+      summary: Mengambil BAP Gondola Berdasarkan ID
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data BAP Gondola.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGondolaSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui BAP Gondola
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapGondolaPayload'
+      responses:
+        '200':
+          description: BAP Gondola berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapGondolaSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus BAP Gondola
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Gondola berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Gondola berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/gondola/bap/download/{id}:
+    get:
+      summary: Download Dokumen BAP Gondola
+      tags:
+        - BAP Gondola
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Gondola berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Gondola-PT-IPAN-NEW-2-201.docx"
+            message:
+              schema:
+                type: string
+                example: BAP Gondola berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ======================================================
+  #                 LAPORAN OVERHEAD CRANE
+  # ======================================================
+  /paa/overHeadCrane/laporan:
+    post:
+      summary: Membuat Laporan Overhead Crane Baru
+      tags:
+        - Laporan Overhead Crane
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanOverheadCranePayload'
+      responses:
+        '201':
+          description: Laporan Overhead Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanOverheadCraneSuccessResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua Laporan Overhead Crane
+      tags:
+        - Laporan Overhead Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua Laporan Overhead Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllLaporanOverheadCraneResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/overHeadCrane/laporan/{id}:
+    get:
+      summary: Mengambil Laporan Overhead Crane Berdasarkan ID
+      tags:
+        - Laporan Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data Laporan Overhead Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanOverheadCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui Laporan Overhead Crane
+      tags:
+        - Laporan Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanOverheadCranePayload'
+      responses:
+        '200':
+          description: Laporan Overhead Crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanOverheadCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus Laporan Overhead Crane
+      tags:
+        - Laporan Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan Overhead Crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Overhead Crane berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/overHeadCrane/laporan/download/{id}:
+    get:
+      summary: Download Dokumen Laporan Overhead Crane
+      tags:
+        - Laporan Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dokumen Laporan Overhead Crane berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-OverheadCrane-PT-Konstruksi-Baja-Perkasa-190725.docx"
+            message:
+              schema:
+                type: string
+                example: Laporan Overhead Crane berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ======================================================
+  #                   BAP OVERHEAD CRANE
+  # ======================================================
+  /paa/overHeadCrane/bap/prefill/{laporanId}:
+    get:
+      summary: Mengambil data dari laporan untuk mengisi form BAP Overhead Crane
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP Overhead Crane berhasil didapatkan untuk prefill.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapOverheadCranePrefillSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/overHeadCrane/bap:
+    post:
+      summary: Membuat BAP Overhead Crane Baru
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapOverheadCranePayload'
+      responses:
+        '201':
+          description: BAP Overhead Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapOverheadCraneSuccessResponse'
+        '404':
+          description: Laporan Overhead Crane dengan laporanId yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua BAP Overhead Crane
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua BAP Overhead Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllBapOverheadCraneResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/overHeadCrane/bap/{id}:
+    get:
+      summary: Mengambil BAP Overhead Crane Berdasarkan ID
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data BAP Overhead Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapOverheadCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui BAP Overhead Crane
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapOverheadCranePayload'
+      responses:
+        '200':
+          description: BAP Overhead Crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapOverheadCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus BAP Overhead Crane
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Overhead Crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Overhead Crane berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /paa/overHeadCrane/bap/download/{id}:
+    get:
+      summary: Download Dokumen BAP Overhead Crane
+      tags:
+        - BAP Overhead Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Overhead Crane berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-OverheadCrane-PT-Konstruksi-Baja-Perkasa-190725.docx"
+            message:
+              schema:
+                type: string
+                example: BAP Overhead Crane berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
 components:
   securitySchemes:
@@ -3530,3 +4594,999 @@ components:
           example: BAP Mobile Crane berhasil dibuat
         data:
           $ref: "#/components/schemas/BapMobileCranePayload"
+
+    # ======================================================
+    #                 GANTRY CRANE SCHEMAS
+    # ======================================================
+    LaporanGantryCranePayload:
+      type: object
+      required:
+        - examinationType
+        - inspectionType
+        - equipmentType
+        - generalData
+      properties:
+        examinationType: { type: string, example: "Pemeriksaan dan Pengujian Berkala" }
+        inspectionType: { type: string, example: "PESAWAT ANGKAT DAN ANGKUT JENIS" }
+        createdAt: { type: string, format: "date-time", example: "2025-07-15T11:36:36.173Z" }
+        extraId: { type: number, example: 123 }
+        equipmentType: { type: string, example: "Portable Gantry Crane" }
+        generalData:
+          type: object
+          required:
+            - inspectionDate
+          properties:
+            companyName: { type: string, example: "PT. IVAN GACOR " }
+            companyLocation: { type: string, example: "Kawasan Sentra Bizhub, Blok K No. 1, Jl. Raya Teluk Jambe, Teluk Jambe Timur, Karawang" }
+            usageLocation: { type: string, example: "PT. Sarana Steel Engineering" }
+            location: { type: string, example: "PT. Sarana Steel Engineering" }
+            manufacturerHoist: { type: string, example: "Samsung Hoist Co., Ltd / Korea" }
+            manufacturerStructure: { type: string, example: "PT. Jatayu Mahardika Fortuna / Indonesia" }
+            brandOrType: { type: string, example: "SAMSUNG / SD-10-N-H115" }
+            manufactureYear: { type: string, example: "2022" }
+            serialNumber: { type: string, example: "W2201016" }
+            maxLiftingCapacityKg: { type: string, example: "10.000" }
+            usagePermitNumber: { type: string, example: "566.4 / 9709 / UPTD-WIL.II / VII / 2022" }
+            operatorcertificateStatus: { type: string, example: "N/A" }
+            technicalDataManualStatus: { type: string, example: "Ada" }
+            inspectionDate: { type: string, example: "16 Juni 2023" }
+        technicalData:
+          type: object
+          properties:
+            liftHeight: { type: string, example: "8" }
+            girderLength: { type: string, example: "19,69" }
+            hoistingSpeed: { type: string, example: "3,8" }
+            travelingSpeed: { type: string, example: "N/A" }
+            traversingSpeed: { type: string, example: "12,5" }
+            driveMotorcapacity: { type: string, example: "10" }
+            hoistingpowerKw: { type: string, example: "9" }
+            travelingpowerKw: { type: string, example: "2,2" }
+            traversingpowerKw: { type: string, example: "0,75" }
+            hoistingtype: { type: string, example: "SD-10-N-H115" }
+            travelingtype: { type: string, example: "PGM 2.20" }
+            traversingtype: { type: string, example: "SD-10-N-H115" }
+            hoistingrpm: { type: string, example: "N/A" }
+            travelingrpm: { type: string, example: "N/A" }
+            traversingrpm: { type: string, example: "N/A" }
+            hoistingvoltageV: { type: string, example: "380" }
+            travelingvoltageV: { type: string, example: "380" }
+            traversingvoltageV: { type: string, example: "380" }
+            hoistingcurrentA: { type: string, example: "31,2" }
+            travelingcurrentA: { type: string, example: "5,5" }
+            traversingcurrentA: { type: string, example: "2,8" }
+            hoistingfrequencyHz: { type: string, example: "50" }
+            travelingfrequencyHz: { type: string, example: "50" }
+            traversingfrequencyHz: { type: string, example: "50" }
+            hoistingphase: { type: string, example: "3" }
+            travelingphase: { type: string, example: "3" }
+            traversingphase: { type: string, example: "3" }
+            hoistingpowerSupply: { type: string, example: "Motor Listrik" }
+            travelingpowerSupply: { type: string, example: "Motor Listrik" }
+            traversingpowerSupply: { type: string, example: "Motor Listrik" }
+            braketype: { type: string, example: "Mechanical Brake" }
+            brakemodel: { type: string, example: "DC Magnet Disk Brake" }
+            controlBrakehoistingtype: { type: string, example: "N/A" }
+            controlBraketravelingtype: { type: string, example: "N/A" }
+            controlBraketraversingtype: { type: string, example: "N/A" }
+            controlBrakehoistingmodel: { type: string, example: "N/A" }
+            controlBraketravelingmodel: { type: string, example: "N/A" }
+            controlBraketraversingmodel: { type: string, example: "N/A" }
+            hookhoistingtype: { type: string, example: "Single Hook" }
+            hooktravelingtype: { type: string, example: "N/A" }
+            hooktraversingtype: { type: string, example: "N/A" }
+            hookhoistingcapacity: { type: string, example: "20" }
+            hooktravelingcapacity: { type: string, example: "N/A" }
+            hooktraversingcapacity: { type: string, example: "N/A" }
+            hookhoistingmaterial: { type: string, example: "Baja" }
+            hooktravelingmaterial: { type: string, example: "N/A" }
+            hooktraversingmaterial: { type: string, example: "N/A" }
+            wireRopeOrChainmediumType: { type: string, example: "WIRE ROPE" }
+            mediumTypehoistingtype: { type: string, example: "Ordinary Lay" }
+            mediumTypetravelingtype: { type: string, example: "N/A" }
+            mediumTypetraversingtype: { type: string, example: "N/A" }
+            mediumTypehoistingconstruction: { type: string, example: "6xFC37 IWRC" }
+            mediumTypetravelingconstruction: { type: string, example: "N/A" }
+            mediumTypetraversingconstruction: { type: string, example: "N/A" }
+            mediumTypehoistingdiameter: { type: string, example: "16" }
+            mediumTypetravelingdiameter: { type: string, example: "N/A" }
+            mediumTypetraversingdiameter: { type: string, example: "N/A" }
+            mediumTypehoistinglength: { type: string, example: "±46" }
+            mediumTypetravelinglength: { type: string, example: "N/A" }
+            mediumTypetraversinglength: { type: string, example: "N/A" }
+        visualInspection:
+          type: object
+          properties:
+            # Dynamically create properties for each visual inspection item
+        ndt:
+          type: object
+          properties:
+            wireropeMethod: { type: string, example: "Pengukuran dan Visual" }
+            wireropeNumber:
+              type: array
+              items:
+                type: object
+                properties:
+                  wireropeNumber: { type: string, example: "1" }
+                  wireropeUsed: { type: string, example: "Wirerope Utama" }
+                  dimensionSpec: { type: string, example: "16 mm" }
+                  dimensionResult: { type: string, example: "16 mm" }
+                  construction: { type: string, example: "6x37 IWRC" }
+                  type: { type: string, example: "Ordinary Lay" }
+                  length: { type: string, example: "±46 m" }
+                  age: { type: string, example: "N/A" }
+                  defectAda: { type: boolean, example: false }
+                  defectTidakAda: { type: boolean, example: true }
+                  description: { type: string, example: "Baik" }
+            HookspecA: { type: string, example: "N/A" }
+            HookspecB: { type: string, example: "N/A" }
+            HookspecC: { type: string, example: "N/A" }
+            HookspecD: { type: string, example: "N/A" }
+            HookspecE: { type: string, example: "N/A" }
+            HookspecF: { type: string, example: "N/A" }
+            HookspecG: { type: string, example: "N/A" }
+            HookspecH: { type: string, example: "N/A" }
+            HookspecBaik: { type: boolean, example: false }
+            HookspecTidakBaik: { type: boolean, example: true }
+            HookspecDesc: { type: string, example: "N/A" }
+            measurementResultsA: { type: string, example: "100" }
+            measurementResultsB: { type: string, example: "125" }
+            measurementResultsC: { type: string, example: "108" }
+            measurementResultsD: { type: string, example: "N/A" }
+            measurementResultsE: { type: string, example: "N/A" }
+            measurementResultsF: { type: string, example: "85" }
+            measurementResultsG: { type: string, example: "98" }
+            measurementResultsH: { type: string, example: "105" }
+            measurementResultsBaik: { type: boolean, example: true }
+            measurementResultsTidakBaik: { type: boolean, example: false }
+            measurementResultsDesc: { type: string, example: "Hook tidak ada cacat dan Safety latch berfungsi baik." }
+            toleranceA: { type: string, example: "105.0" }
+            toleranceB: { type: string, example: "N/A" }
+            toleranceC: { type: string, example: "97.2" }
+            toleranceD: { type: string, example: "N/A" }
+            toleranceE: { type: string, example: "N/A" }
+            toleranceF: { type: string, example: "76.5" }
+            toleranceG: { type: string, example: "88.2" }
+            toleranceH: { type: string, example: "94.5" }
+            toleranceBaik: { type: boolean, example: false }
+            toleranceTidakBaik: { type: boolean, example: true }
+            toleranceDesc: { type: string, example: "N/A" }
+            griderMethod: { type: string, example: "Pengukuran dan MPI test" }
+            griderNumber:
+              type: array
+              items:
+                type: object
+                properties:
+                  griderNumber: { type: string, example: "N/A" }
+                  griderLocation: { type: string, example: "Las-Lasan Span Girder 1" }
+                  griderAda: { type: boolean, example: false }
+                  griderTidakAda: { type: boolean, example: true }
+                  griderDesc: { type: string, example: "Tidak ada cacat" }
+        dynamicTesting:
+          type: object
+          properties:
+            travellingStatus: { type: string, example: "Dicoba" }
+            travellingDesc: { type: string, example: "Baik" }
+            traversingStatus: { type: string, example: "Dicoba" }
+            traversingDesc: { type: string, example: "Baik" }
+            hoistingStatus: { type: string, example: "Dicoba" }
+            hoistingDesc: { type: string, example: "Baik" }
+            safetyDeviceStatus: { type: string, example: "Unit mati" }
+            safetyDeviceDesc: { type: string, example: "Baik" }
+            brakeSwitchStatus: { type: string, example: "Mengunci langsung" }
+            brakeSwitchDesc: { type: string, example: "Baik" }
+            brakeLockingStatus: { type: string, example: "Tidak turun" }
+            brakeLockingDesc: { type: string, example: "Baik" }
+            instalasionElectricStatus: { type: string, example: "Dicoba" }
+            instalasionElectricDesc: { type: string, example: "Baik" }
+            hoist25: { type: string, example: "N/A" }
+            travesing25: { type: string, example: "N/A" }
+            travelling25: { type: string, example: "N/A" }
+            brakeSystem25: { type: string, example: "N/A" }
+            desc25: { type: string, example: "N/A" }
+            hoist50: { type: string, example: "N/A" }
+            travesing50: { type: string, example: "N/A" }
+            travelling50: { type: string, example: "N/A" }
+            brakeSystem50: { type: string, example: "N/A" }
+            desc50: { type: string, example: "N/A" }
+            hoist75: { type: string, example: "N/A" }
+            travesing75: { type: string, example: "N/A" }
+            travelling75: { type: string, example: "N/A" }
+            brakeSystem75: { type: string, example: "N/A" }
+            desc75: { type: string, example: "N/A" }
+            hoist100: { type: string, example: "Baik" }
+            travesing100: { type: string, example: "Baik" }
+            travelling100: { type: string, example: "Baik" }
+            brakeSystem100: { type: string, example: "Berfungsi" }
+            desc100: { type: string, example: "Baik" }
+        staticTesting:
+          type: object
+          properties:
+            loadTest: { type: string, example: "125%" }
+            basedDesign: { type: string, example: "N/A" }
+            lengthSpan: { type: string, example: "19.960" }
+            xspan: { type: string, example: "32" }
+            resultDefleksi: { type: boolean, example: true }
+            defleksiPosision:
+              type: array
+              items:
+                type: object
+                properties:
+                  defleksiPosision: { type: string, example: "2" }
+                  defleksiMeasuraments: { type: string, example: "8 mm (8046 mm - 8038 mm)" }
+                  defleksiStandard: { type: string, example: "32 mm" }
+                  defleksiDesc: { type: string, example: "Memenuhi Standart" }
+        conclusion: { type: string, example: "Tidak ditemukan cacat konstruksi dan perubahan bentuk (deformasi) yang permanen pada batang penopang (girder), wirerope dan hook. Hook dilakukan Magnetic test dan kondisi baik. Safety latch berfungsi baik. Panel control Gantry Crane kondisi baik. Pengujian Fungsi Hoisting, Traversing, dan Traveling dan diperoleh hasil semua dapat berfungsi dengan Baik. Pengujian beban menggunakan beban uji 12,5 ton dan hasilnya baik. Untuk selanjutnya Gantry Crane laik beroperasi kembali dengan memenuhi saran-saran berikut." }
+        recomendation: { type: string, example: "Gantry Crane agar dilengkapi dengan penanda keterangan SWL yang ditempatkan pada unit crane atau pada span (girder).\nGantry Crane secara keseluruhan agar dilakukan pelumasan secara berkala untuk mengurangi laju korosi.\nGantry Crane harap dipasang Grounding.\nSebelum mengoperasikan Overhead Crane harap dilakukan pemeriksaan harian oleh operator.\nGantry Crane agar dioperasikan tidak melebihi kapasitas beban yang sudah di tentukan.\nGantry Crane agar dirawat sesuai petunjuk pabrik pembuat.\nGantry Crane harus dioperasikan oleh operator yang memiliki lisensi K3 dari Kementerian Tenaga Kerja RI.\nGantry Crane agar dilakukan pemeriksaan dan pengujian berkala berikutnya selambat-lambatnya pada tanggal 16 Juni 2024 atau apabila pindah tempat kerja/lokasi harus dilakukan pemeriksaan ulang sesuai dengan Permenaker No. 08 Tahun 2020.\nUntuk Selanjutnya hasil pemeriksaan dan pengujian akan di evaluasi oleh Dinas Tenaga Kerja terkait." }
+
+    LaporanGantryCraneResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanGantryCranePayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Gantry Crane" }
+            documentType: { type: string, example: "Laporan" }
+            createdAt: { type: string, format: "date-time" }
+
+    LaporanGantryCraneSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanGantryCraneResponseData"
+
+    GetAllLaporanGantryCraneResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanGantryCraneResponseData"
+
+    BapGantryCranePayload:
+      type: object
+      properties:
+        laporanId: { type: string }
+        examinationType: { type: string, example: "Pemeriksaan dan Pengujian Berkala" }
+        inspectionType: { type: string, example: "PESAWAT ANGKAT DAN ANGKUT" }
+        inspectionDate: { type: string, example: "16 Juli 2025" }
+        createdAt: { type: string, format: "date-time" }
+        extraId: { type: number, example: 123 }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string, example: "PT. IVAN GACOR PAR 2" }
+            companyLocation: { type: string, example: "Kawasan Industri Modern, Jl. Logam No. 17, Cikande, Serang" }
+            usageLocation: { type: string, example: "Gudang Fabrikasi Utama" }
+            location: { type: string, example: "PT. Baja Perkasa Industri" }
+        technicalData:
+          type: object
+          properties:
+            brandOrType: { type: string, example: "KITO / ER2-050S" }
+            manufacturerHoist: { type: string, example: "KITO / Jepang" }
+            manufactureStructure: { type: string, example: "PT. Karya Anak Bangsa" }
+            manufactureYear: { type: string, example: "2021" }
+            manufactureCountry: { type: string, example: "Indonesia" }
+            serialNumber: { type: string, example: "K21-98765" }
+            maxLiftingCapacityKg: { type: string, example: "5.000" }
+            liftingSpeedMpm: { type: string, example: "5.2" }
+        inspectionResult:
+          type: object
+          properties:
+            visualCheck:
+              type: object
+              properties:
+                isMainStructureGood: { type: boolean, example: true }
+                areBoltsAndNutsSecure: { type: boolean, example: false }
+                isWireRopeGoodCondition: { type: boolean, example: true }
+                isHookGoodCondition: { type: boolean, example: true }
+                isGearboxGoodCondition: { type: boolean, example: true }
+                hasGearboxOilLeak: { type: boolean, example: true }
+                isWarningLampGoodCondition: { type: boolean, example: false }
+                isCapacityMarkingDisplayed: { type: boolean, example: true }
+            functionalTest:
+              type: object
+              properties:
+                isForwardReverseFunctionOk: { type: boolean, example: true }
+                isHoistingFunctionOk: { type: boolean, example: true }
+                isLimitSwitchFunctional: { type: boolean, example: false }
+            ndtTest:
+              type: object
+              properties:
+                method: { type: string, example: "Magnetic Particle Inspection (MPI)" }
+                isNdtResultGood: { type: boolean, example: true }
+            loadTest:
+              type: object
+              properties:
+                loadKg: { type: string, example: "6.250 kg (125%)" }
+                liftHeightMeters: { type: string, example: "2 meter" }
+                holdTimeSeconds: { type: string, example: "600 detik (10 Menit)" }
+                isLoadTestResultGood: { type: boolean, example: true }
+
+    BapGantryCraneResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapGantryCranePayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Gantry Crane" }
+            documentType: { type: string, example: "Berita Acara dan Pemeriksaan Pengujian" }
+            createdAt: { type: string, format: "date-time" }
+
+    BapGantryCraneSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapGantryCraneResponseData"
+
+    GetAllBapGantryCraneResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapGantryCraneResponseData"
+    BapGantryCranePrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP Gantry Crane berhasil didapat
+        data:
+          $ref: "#/components/schemas/BapGantryCranePayload"
+
+    # ======================================================
+    #                 GONDOLA SCHEMAS
+    # ======================================================
+    LaporanGondolaPayload:
+      type: object
+      required:
+        - inspectionType
+        - examinationType
+        - inspectionDate
+        - generalData
+      properties:
+        inspectionType: { type: string, example: "PESAWAT ANGKAT DAN ANGKUT" }
+        examinationType: { type: string, example: "Pemeriksaan dan Pengujian Berkala" }
+        inspectionDate: { type: string, format: "date", example: "2023-12-15" }
+        extraId: { type: number, example: 101 }
+        createdAt: { type: string, format: "date-time", example: "2023-12-15T10:00:00Z" }
+        generalData:
+          type: object
+          required:
+            - ownerName
+            - ownerAddress
+            - equipmentType
+          properties:
+            ownerName: { type: string, example: "PT. IPAN NEW" }
+            ownerAddress: { type: string, example: "Ruko Citralake Sawangan Blok B06-01 Jl. Cinangka Raya, Bojongsari, Depok" }
+            userInCharge: { type: string, example: "PT. Gondola Alta Fortuna" }
+            subcontractorPersonInCharge: { type: string, example: "Budi Sasmito, S.T." }
+            unitLocation: { type: string, example: "Essence Darmawangsa Apartement Tower South, Jl. Darmawangsa-X No.86, Rt.7,RW.8 Cipete Utara, Kec. Kby Baru, Jakarta Selatan" }
+            operatorName: { type: string, example: "Slamet Riyadi" }
+            equipmentType: { type: string, example: "Gondola" }
+            manufacturer: { type: string, example: "Skymax" }
+            brandType: { type: string, example: "ZLP630" }
+            locationAndYearOfManufacture: { type: string, example: "2022 / China" }
+            serialNumberUnitNumber: { type: string, example: "HZRDHT20220704-HZRDHT20220705" }
+            capacityWorkingLoad: { type: string, example: "250 kg / 2 orang" }
+            intendedUse: { type: string, example: "Mengangkat orang dan barang" }
+            usagePermitNumber: { type: string, example: "505/PKD/PAA/XII/2023" }
+            operatorCertificate: { type: string, example: "Ada" }
+        technicalData:
+          type: object
+          properties:
+            gondolaSpecification:
+              type: object
+              properties:
+                supportMastHeight: { type: number, example: 1 }
+                frontBeamLength: { type: number, example: 4 }
+                middleBeamLength: { type: number, example: 4 }
+                rearBeamLength: { type: number, example: 0 }
+                balanceWeightDistance: { type: number, example: 0 }
+                capacity: { type: string, example: "250 kg / 2 orang" }
+                speed: { type: string, example: "9-11 m / menit" }
+                platformSize: { type: string, example: "400 x 70 x 100" }
+                wireRopeDiameter: { type: number, example: 8.3 }
+            hoist:
+              type: object
+              properties:
+                model: { type: string, example: "Electric Motor" }
+                liftingCapacity: { type: number, example: 630 }
+                electricMotor:
+                  type: object
+                  properties:
+                    type: { type: string, example: "LTD 63" }
+                    power: { type: string, example: "2 x 6.3 kN" }
+                    voltage: { type: number, example: 380 }
+                    voltageHz: { type: number, example: 50 }
+            safetyLockType: { type: string, example: "LSF-30" }
+            brake:
+              type: object
+              properties:
+                type: { type: string, example: "Automatic" }
+                model: { type: string, example: "Internal" }
+                capacity: { type: string, example: "Standard" }
+            suspensionMechanical:
+              type: object
+              properties:
+                supportMastHeight: { type: number, example: 1 }
+                frontBeamLength: { type: number, example: 4 }
+                material: { type: string, example: "IWF" }
+            machineWeight:
+              type: object
+              properties:
+                totalPlatformWeight: { type: number, example: 500 }
+                suspensionMechanicalWeight: { type: number, example: 300 }
+                balanceWeight: { type: number, example: 2000 }
+                totalMachineWeight: { type: string, example: "2800" }
+        visualInspection:
+          type: object
+          properties:
+            suspensionStructure:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItem'
+            steelWireRope:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItem'
+            electricalSystem:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItem'
+            platform:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItem'
+            safetyDevices:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItem'
+        nonDestructiveTesting:
+          type: object
+          properties:
+            steelCableRope:
+              type: object
+              properties:
+                ndtType: { type: string, example: "Visual dan Pengukuran" }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      usage: { type: string, example: "Wirerope Utama" }
+                      specDiameter: { type: string, example: "8,3 mm" }
+                      actualDiameter: { type: string, example: "8,2 mm" }
+                      construction: { type: string, example: "IWRC" }
+                      type: { type: string, example: "Galvanized Wire Rope" }
+                      length: { type: string, example: "100m" }
+                      age: { type: string, example: "1 tahun" }
+                      defectFound: { type: boolean, example: false }
+                      result: { type: string, example: "Kondisi Baik" }
+            suspensionStructure:
+              type: object
+              properties:
+                ndtType: { type: string, example: "Visual" }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      part: { type: string, example: "Beam" }
+                      location: { type: string, example: "Sambungan" }
+                      defectFound: { type: boolean, example: false }
+                      result: { type: string, example: "Tidak ditemukan cacat" }
+            gondolaCage:
+              type: object
+              properties:
+                ndtType: { type: string, example: "Visual" }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      part: { type: string, example: "Kerangka sangkar" }
+                      location: { type: string, example: "Sambungan las-lasan" }
+                      defectFound: { type: boolean, example: false }
+                      result: { type: string, example: "Tidak ditemukan cacat" }
+            clamps:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      partCheck: { type: string, example: "Tali penguat" }
+                      location: { type: string, example: "Clamp" }
+                      defectFound: { type: boolean, example: false }
+                      result: { type: string, example: "Clamp dipasang benar dan sesuai standard" }
+        testing:
+          type: object
+          properties:
+            dynamicLoadTest:
+              type: object
+              properties:
+                note: { type: string, example: "Tidak Terjadi Kesalahan" }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      loadPercentage: { type: string, example: "100% SWL" }
+                      loadDetails: { type: string, example: "2 orang" }
+                      remarks: { type: string, example: "Baik" }
+                      result: { type: string, example: "Mampu mengangkat" }
+            staticLoadTest:
+              type: object
+              properties:
+                note: { type: string, example: "Tidak Terjadi Kesalahan" }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      loadPercentage: { type: string, example: "100% SWL" }
+                      loadDetails: { type: string, example: "3 orang" }
+                      remarks: { type: string, example: "Baik" }
+                      result: { type: string, example: "Diangkat 50 cm dan ditahan selama 15 menit tidak terjadi penurunan" }
+        conclusion: { type: string, example: "Secara keseluruhan dalam keadaan baik dan dapat beroperasi secara aman dengan menerapkan Norma Keselamatan dan Kesehatan Kerja." }
+        recommendation: { type: string, example: "Operator Gondola wajib memiliki Lisensi K3 dari Kementrian Ketenagakerjaan. Gondola tidak boleh dioperasikan melebihi SWL yang ditentukan." }
+
+    LaporanGondolaResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanGondolaPayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Gondola" }
+            documentType: { type: string, example: "Laporan" }
+            createdAt: { type: string, format: "date-time" }
+
+    LaporanGondolaSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanGondolaResponseData"
+
+    GetAllLaporanGondolaResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanGondolaResponseData"
+
+    BapGondolaPayload:
+      type: object
+      required:
+        - laporanId
+        - examinationType
+        - inspectionType
+        - inspectionDate
+        - equipmentType
+        - generalData
+        - technicalData
+        - inspectionResult
+      properties:
+        laporanId: { type: string, example: "Hxo179TK4tAi8t7aAaDt" }
+        examinationType: { type: string, example: "PEMERIKSAAN DAN PENGUJIAN" }
+        inspectionType: { type: string, example: "BERKALA" }
+        inspectionDate: { type: string, format: "date", example: "2023-12-15" }
+        equipmentType: { type: string, example: "Gondola" }
+        createdAt: { type: string, format: "date-time", example: "2023-12-15T11:00:00Z" }
+        extraId: { type: number, example: 201 }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string, example: "PT. IPAN NEW 2" }
+            companyLocation: { type: string, example: "Ruko Citralake Sawangan Blok B06-01 Jl. Cinangka Raya, Bojongsari, Depok" }
+            userInCharge: { type: string, example: "PT. Gondola Alta Fortuna" }
+            ownerAddress: { type: string, example: "Essence Darmawangsa Apartement Tower South, Jl. Darmawangsa-X No.86, Jakarta Selatan" }
+        technicalData:
+          type: object
+          properties:
+            manufacturer: { type: string, example: "Skymax" }
+            locationAndYearOfManufacture: { type: string, example: "2022 / China" }
+            serialNumberUnitNumber: { type: string, example: "HZRDHT20220704-HZRDHT20220705" }
+            intendedUse: { type: string, example: "Mengangkat orang dan barang" }
+            capacityWorkingLoad: { type: string, example: "250 kg / 2 orang" }
+            maxLiftingHeightMeters: { type: string, example: "9-11" }
+        inspectionResult:
+          type: object
+          properties:
+            visualCheck:
+              type: object
+              properties:
+                isSlingDiameterAcceptable: { type: boolean, example: true }
+                isBumperInstalled: { type: boolean, example: true }
+                isCapacityMarkingDisplayed: { type: boolean, example: true }
+                isPlatformConditionAcceptable: { type: boolean, example: true }
+                driveMotorCondition:
+                  type: object
+                  properties:
+                    isGoodCondition: { type: boolean, example: true }
+                    hasOilLeak: { type: boolean, example: false }
+                isControlPanelClean: { type: boolean, example: true }
+                isBodyHarnessAvailable: { type: boolean, example: true }
+                isLifelineAvailable: { type: boolean, example: true }
+                isButtonLabelsDisplayed: { type: boolean, example: true }
+            functionalTest:
+              type: object
+              properties:
+                isWireRopeMeasurementOk: { type: boolean, example: true }
+                isUpDownFunctionOk: { type: boolean, example: true }
+                isDriveMotorFunctionOk: { type: boolean, example: true }
+                isEmergencyStopFunctional: { type: boolean, example: true }
+                isSafetyLifelineFunctional: { type: boolean, example: true }
+                ndtTest:
+                  type: object
+                  properties:
+                    method: { type: string, example: "Visual dan Pengukuran" }
+                    isResultGood: { type: boolean, example: true }
+                    hasCrackIndication: { type: boolean, example: false }
+
+    BapGondolaResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapGondolaPayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Gondola" }
+            documentType: { type: string, example: "Berita Acara dan Pemeriksaan Pengujian" }
+            createdAt: { type: string, format: "date-time" }
+
+    BapGondolaSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapGondolaResponseData"
+
+    GetAllBapGondolaResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapGondolaResponseData"
+    BapGondolaPrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data pre-fill BAP berhasil didapat
+        data:
+          $ref: "#/components/schemas/BapGondolaPayload"
+
+    # ======================================================
+    #                 OVERHEAD CRANE SCHEMAS
+    # ======================================================
+    LaporanOverheadCranePayload:
+      type: object
+      properties:
+        examinationType: { type: string, example: "PERIODIK" }
+        inspectionType: { type: string, example: "PESAWAT ANGKAT DAN ANGKUT" }
+        inspectionDate: { type: string, example: "Tangerang, 19 Juli 2025" }
+        extraId: { type: number, example: 190725 }
+        createdAt: { type: string, format: "date-time", example: "2025-07-19T10:00:00.000Z" }
+        generalData:
+          type: object
+          properties:
+            ownerName: { type: string, example: "PT. Konstruksi Baja Perkasa" }
+            ownerAddress: { type: string, example: "Jl. Raya Serang Km. 15, Cikupa, Tangerang" }
+            userInCharge: { type: string, example: "PT. Konstruksi Baja Perkasa" }
+            subcontractorPersonInCharge: { type: string, example: "Divisi Produksi" }
+            unitLocation: { type: string, example: "Area Fabrikasi Utama" }
+            equipmentType: { type: string, example: "Double Girder Overhead Crane" }
+            manufacturer: { type: string, example: "Konecranes / Finland" }
+            brandType: { type: string, example: "KONECRANES / CXT" }
+            yearOfManufacture: { type: string, example: "2020" }
+            serialNumberUnitNumber: { type: string, example: "KC-20-DG-98765" }
+            capacityWorkingLoadKg: { type: string, example: "20000" }
+            legalBasis: { type: string, example: "Undang – Undang No.1 Tahun 1970 Tentang Keselamatan Kerja,Permenaker No. 8 Tahun 2020 Tentang Keselamatan dan Kesehatan Kerja Pesawat Angkat & Pesawat Angkut" }
+            intendedUse: { type: string, example: "Mengangkat dan memindahkan material baja berat" }
+            usagePermitNumber: { type: string, example: "123/SK/PJK3/VII/2024" }
+            operatorCertificate: { type: string, example: "Ada, SIO Kelas I (A/N Ahmad Dahlan)" }
+            technicalOrManualData: { type: string, example: "Tersedia Lengkap" }
+        technicalData:
+          type: object
+          properties:
+            specifications:
+              type: object
+              properties:
+                liftingHeight: { type: object, properties: { hoisting: { type: string, example: "12.0" }, traveling: { type: string, example: "12.0" }, traversing: { type: string, example: "12.0" } } }
+                girderLength: { type: object, properties: { hoisting: { type: string, example: "15.0" }, traveling: { type: string, example: "30" }, traversing: { type: string, example: "15" } } }
+                speed_m_per_min: { type: object, properties: { hoisting: { type: string, example: "5.0" }, traveling: { type: string, example: "25.0" }, traversing: { type: string, example: "15.0" } } }
+            driveMotor:
+              type: object
+              properties:
+                capacity_ton: { type: object, properties: { hoisting: { type: string, example: "20.0" }, traveling: { type: string, example: "2.5" }, traversing: { type: string, example: "1.5" } } }
+                power_kw: { type: object, properties: { hoisting: { type: string, example: "15.0" }, traveling: { type: string, example: "3.0" }, traversing: { type: string, example: "2.2" } } }
+                type: { type: object, properties: { hoisting: { type: string, example: "AC Squirrel Cage" }, traveling: { type: string, example: "AC Geared Brake Motor" }, traversing: { type: string, example: "AC Geared Brake Motor" } } }
+                revolution_rpm: { type: object, properties: { hoisting: { type: string, example: "1480" }, traveling: { type: string, example: "1450" }, traversing: { type: string, example: "1450" } } }
+                voltage_v: { type: object, properties: { hoisting: { type: string, example: "380" }, traveling: { type: string, example: "380" }, traversing: { type: string, example: "380" } } }
+                current_a: { type: object, properties: { hoisting: { type: string, example: "30.5" }, traveling: { type: string, example: "6.5" }, traversing: { type: string, example: "4.8" } } }
+                frequency_hz: { type: object, properties: { hoisting: { type: string, example: "50" }, traveling: { type: string, example: "50" }, traversing: { type: string, example: "50" } } }
+            startingResistor:
+              type: object
+              properties:
+                type: { type: object, properties: { hoisting: { type: string, example: "Inverter" }, traveling: { type: string, example: "Inverter" }, traversing: { type: string, example: "Inverter" } } }
+                voltage_v: { type: object, properties: { hoisting: { type: string, example: "380" }, traveling: { type: string, example: "380" }, traversing: { type: string, example: "380" } } }
+                current_a: { type: object, properties: { hoisting: { type: string, example: "30.5" }, traveling: { type: string, example: "6.5" }, traversing: { type: string, example: "4.8" } } }
+            brake:
+              type: object
+              properties:
+                kind: { type: object, properties: { hoisting: { type: string, example: "Electromagnetic Disc" }, traveling: { type: string, example: "Electromagnetic Disc" }, traversing: { type: string, example: "Electromagnetic Disc" } } }
+                type: { type: object, properties: { hoisting: { type: string, example: "Fail-safe DC Brake" }, traveling: { type: string, example: "Integrated Motor Brake" }, traversing: { type: string, example: "Integrated Motor Brake" } } }
+            controllerBrake:
+              type: object
+              properties:
+                kind: { type: object, properties: { hoisting: { type: string, example: "Regenerative Braking" }, traveling: { type: string, example: "Regenerative Braking" }, traversing: { type: string, example: "Regenerative Braking" } } }
+                type: { type: object, properties: { hoisting: { type: string, example: "Inverter Controlled" }, traveling: { type: string, example: "Inverter Controlled" }, traversing: { type: string, example: "Inverter Controlled" } } }
+            hook:
+              type: object
+              properties:
+                type: { type: object, properties: { hoisting: { type: string, example: "Double Hook with Safety Latch" }, traveling: { type: string, example: "Double Hook with Safety Latch" }, traversing: { type: string, example: "Double Hook with Safety Latch" } } }
+                capacity: { type: object, properties: { hoisting: { type: string, example: "20 ton" }, traveling: { type: string, example: "20 ton" }, traversing: { type: string, example: "20 ton" } } }
+                material: { type: object, properties: { hoisting: { type: string, example: "High-tensile Forged Alloy Steel" }, traveling: { type: string, example: "High-tensile Forged Alloy Steel" }, traversing: { type: string, example: "High-tensile Forged Alloy Steel" } } }
+            chain:
+              type: object
+              properties:
+                type: { type: object, properties: { hoisting: { type: string, example: "Wire Rope" }, traveling: { type: string, example: "Wire Rope" }, traversing: { type: string, example: "Wire Rope" } } }
+                construction: { type: object, properties: { hoisting: { type: string, example: "6x36 WS-IWRC" }, traveling: { type: string, example: "6x36 WS-IWRC" }, traversing: { type: string, example: "6x36 WS-IWRC" } } }
+                diameter: { type: object, properties: { hoisting: { type: string, example: "22 mm" }, traveling: { type: string, example: "22 mm" }, traversing: { type: string, example: "22 mm" } } }
+                length: { type: object, properties: { hoisting: { type: string, example: "15 m" }, traveling: { type: string, example: "15 m" }, traversing: { type: string, example: "15 m" } } }
+        visualInspection:
+          type: object
+          properties:
+            # Dynamically create properties for each visual inspection item
+        nonDestructiveExamination:
+          type: object
+          properties:
+            chain:
+              type: object
+              properties:
+                method: { type: string, example: "Visual & Measurement" }
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      chainLocaton: { type: string, example: "Main Rope" }
+                      specDimension: { type: string, example: "22" }
+                      resultDimension: { type: string, example: "21.8" }
+                      extendLengthMax: { type: string, example: "0.4" }
+                      wearMax: { type: string, example: "0.9" }
+                      safetyFactor: { type: string, example: "6" }
+                      defectAda: { type: boolean, example: false }
+                      defectTidakAda: { type: boolean, example: true }
+                      description: { type: string, example: "Baik" }
+            mainHook:
+              type: object
+              properties:
+                method: { type: string, example: "Magnetic Particle Inspection & Visual" }
+                measurements: { type: object, additionalProperties: { type: string }, example: { "A": "75.2", "B": "80.5", "C": "50.3", "D": "150.1", "E": "300.0", "F": "50.2", "G": "50.3", "H": "50.4" } }
+                tolerances: { type: object, additionalProperties: { type: string }, example: { "A": "75.0", "B": "80.0", "C": "50.0", "D": "150.0", "E": "300.0", "F": "50.0", "G": "50.0", "H": "50.0" } }
+                result: { type: string, example: "Ditemukan indikasi retak pada area leher hook." }
+        testing:
+          type: object
+          properties:
+            dynamicTest:
+              type: object
+              properties:
+                withoutLoad:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      test: { type: string, example: "Travelling/Memanjang" }
+                      shouldBe: { type: string, example: "25.0 m/menit" }
+                      testedOrMeasured: { type: string, example: "24.9 m/menit" }
+                      remarks: { type: string, example: "Baik" }
+                withLoad:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      load: { type: string, example: "100% SWL (20 Ton)" }
+                      hoist: { type: string, example: "Baik" }
+                      traversing: { type: string, example: "Baik" }
+                      traveling: { type: string, example: "Baik" }
+                      brakeSystem: { type: string, example: "Berfungsi" }
+                      remarks: { type: string, example: "Baik, pengereman presisi." }
+            staticTest:
+              type: object
+              properties:
+                testLoad: { type: string, example: "125% SWL (25 Ton)" }
+                deflection:
+                  type: object
+                  properties:
+                    singleGirder: { type: object, properties: { measurement: { type: string, example: "12.0 mm" }, description: { type: string, example: "Di bawah batas izin" } } }
+                    doubleGirder: { type: object, properties: { measurement: { type: string, example: "11.5 mm" }, description: { type: string, example: "Di bawah batas izin" } } }
+                singleGirder: { type: object, properties: { design_mm: { type: string, example: "34.0" }, span_mm: { type: string, example: "30000" }, result: { type: boolean, example: true } } }
+                doubleGirder: { type: object, properties: { design_mm: { type: string, example: "34.0" }, span_mm: { type: string, example: "30000" }, result: { type: boolean, example: false } } }
+                notes: { type: string, example: "Pengujian statis dilakukan selama 15 menit, tidak ditemukan deformasi permanen pada struktur girder." }
+        conclusion: { type: string, example: "Berdasarkan hasil pemeriksaan dan pengujian periodik, ditemukan beberapa ketidaksesuaian yang memerlukan perbaikan. Double Girder Overhead Crane KONE-CRANES dengan nomor seri KC-20-DG-98765 dinyatakan TIDAK LAIK DIOPERASIKAN dan memerlukan perbaikan sebelum pemeriksaan ulang." }
+        recommendations: { type: string, example: "1. Ganti baut pondasi #3 yang retak dan kencangkan baut #2 & #5.\n2. Lakukan perbaikan korosi pada railing tangga dan bracing silang.\n3. Ganti seal oli pada gearbox traveling dan trolley.\n4. Ganti wire rope utama dan aux karena aus dan tertekuk.\n5. Perbaiki limit switch cross traveling.\n6. Perbaiki grounding system." }
+
+    LaporanOverheadCraneResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanOverheadCranePayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Overhead Crane" }
+            documentType: { type: string, example: "Laporan" }
+            createdAt: { type: string, format: "date-time" }
+
+    LaporanOverheadCraneSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanOverheadCraneResponseData"
+
+    GetAllLaporanOverheadCraneResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanOverheadCraneResponseData"
+
+    BapOverheadCranePayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId: { type: string, example: "DkBGHaNoG8dFruMczeNs" }
+        reportHeader:
+          type: object
+          properties:
+            examinationType: { type: string, example: "PERIODIK" }
+            inspectionDate: { type: string, example: "Tangerang, 19 Juli 2025" }
+            extraId: { type: number, example: 190725 }
+            inspectionType: { type: string, example: "PESAWAT ANGKAT DAN ANGKUT" }
+            createdAt: { type: string, format: "date-time", example: "2025-07-19T10:00:00.000Z" }
+            equipmentType: { type: string, example: "Double Girder Overhead Crane" }
+        generalData:
+          type: object
+          properties:
+            ownerName: { type: string, example: "update" }
+            companyLocation: { type: string, example: "Jl. Raya Serang Km. 15, Cikupa, Tangerang" }
+            userInCharge: { type: string, example: "Divisi Produksi" }
+            ownerAddress: { type: string, example: "Area Fabrikasi Utama" }
+            unitLocation: { type: string, example: "Jl. Raya Serang Km. 15, Cikupa, Tangerang" }
+        technicalData:
+          type: object
+          properties:
+            brandType: { type: string, example: "KONECRANES / CXT" }
+            manufacturer: { type: string, example: "Konecranes / Finland" }
+            locationAndYearOfManufacture: { type: string, example: "2020" }
+            serialNumberUnitNumber: { type: string, example: "KC-20-DG-98765" }
+            capacityWorkingLoad: { type: string, example: "20000" }
+            liftingSpeedMpm: { type: string, example: "5.0" }
+        visualInspection:
+          type: object
+          properties:
+            hasConstructionDefects: { type: boolean, example: false }
+            hookHasSafetyLatch: { type: boolean, example: true }
+            isEmergencyStopInstalled: { type: boolean, example: true }
+            isWireropeGoodCondition: { type: boolean, example: false }
+            operatorHasK3License: { type: boolean, example: true }
+        testing:
+          type: object
+          properties:
+            functionTest: { type: boolean, example: true }
+            loadTest:
+              type: object
+              properties:
+                loadTon: { type: number, example: 25 }
+                isAbleToLift: { type: boolean, example: true }
+                hasLoadDrop: { type: boolean, example: false }
+            ndtTest:
+              type: object
+              properties:
+                isNdtResultGood: { type: boolean, example: false }
+                hasCrackIndication: { type: boolean, example: true }
+
+    BapOverheadCraneResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapOverheadCranePayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Overhead Crane" }
+            documentType: { type: string, example: "Berita Acara dan Pemeriksaan Pengujian" }
+            createdAt: { type: string, format: "date-time" }
+
+    BapOverheadCraneSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapOverheadCraneResponseData"
+
+    GetAllBapOverheadCraneResponse:
+      type: object
+      properties:
+        status: { type: string, example: "success" }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapOverheadCraneResponseData"
+    BapOverheadCranePrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP Overhead Crane berhasil didapat
+        data:
+          $ref: "#/components/schemas/BapOverheadCranePayload"
+
