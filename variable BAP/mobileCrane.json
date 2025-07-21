@@ -1,10 +1,11 @@
 {
-  "laporanId": "kkDkOemfYg5xK3RH2joH",
+  "laporanId": "4plF1yKw4kHc0V7BZhu7",
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
-  "subInspectionType": "MOBILE CRANE",
   "inspectionDate": "15 Juli 2025",
+  "extraId": 123,
+  "createdAt": "2025-07-15T11:36:36.173Z",
   "generalData": {
-    "ownerName": "PT. IVAN JAGO NEW PART 2",
+    "ownerName": "PT. IVAN JAGO PART 3",
     "ownerAddress": "Jl. Gatot Subroto No. 112, Jakarta Selatan",
     "userAddress": "Kawasan Industri MM2100, Blok G, Cibitung"
   },
@@ -15,7 +16,7 @@
     "capacityWorkingLoad": "90.000 kg",
     "maxLiftingHeight": "77.5 m",
     "materialCertificateNumber": "CERT-MAT-12345",
-    "liftingSpeedMpm": "120 m/min"
+    "liftingSpeedMpm": "120 m/min" 
   },
   "inspectionResult": {
     "visualCheck": {

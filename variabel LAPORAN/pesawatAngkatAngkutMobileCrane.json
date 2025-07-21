@@ -1,9 +1,9 @@
 {
   "inspectionType": "PESAWAT ANGKAT ANGKUT JENIS",
   "createdAt": "2025-07-15T11:36:36.173Z",
+  "extraId": 123,
   "equipmentType": "MOBILE CRANE",
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
-  "subInspectionType": "MOBILE CRANE",
 
   "generalData": {
     "generalDataOwnerName": "PT. IVAN JAGO",

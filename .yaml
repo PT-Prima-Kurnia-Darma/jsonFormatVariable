@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: API Lengkap - PT Prima Kurnia Darma
-  description: Dokumentasi API lengkap yang mencakup layanan Autentikasi, Laporan, dan BAP untuk Elevator.
+  title: API Lengkap - Nakersolution
+  description: Dokumentasi API lengkap yang mencakup layanan Autentikasi, Laporan, dan BAP.
   version: 1.0.0
 servers:
   - url: http://localhost:3000
@@ -21,6 +21,10 @@ tags:
     description: Manajemen data Laporan Pemeriksaan untuk Forklift.
   - name: BAP Forklift
     description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Forklift.
+  - name: Laporan Mobile Crane
+    description: Manajemen data Laporan Pemeriksaan untuk Mobile Crane.
+  - name: BAP Mobile Crane
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Mobile Crane.
 paths:
   # ======================================================
   #                 AUTENTIFIKASI
@@ -1432,6 +1436,353 @@ paths:
         '500':
           $ref: '#/components/responses/InternalServerError'
 
+  # ======================================================
+  #               LAPORAN MOBILE CRANE
+  # ======================================================
+  /paa/mobileCrane/laporan:
+    post:
+      summary: Membuat Laporan Mobile Crane Baru
+      tags:
+        - Laporan Mobile Crane
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanMobileCranePayload'
+      responses:
+        '201':
+          description: Laporan Mobile Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanMobileCraneSuccessResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua Laporan Mobile Crane
+      tags:
+        - Laporan Mobile Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua Laporan Mobile Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllLaporanMobileCraneResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/mobileCrane/laporan/{id}:
+    get:
+      summary: Mengambil Laporan Mobile Crane Berdasarkan ID
+      tags:
+        - Laporan Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data Laporan Mobile Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanMobileCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui Laporan Mobile Crane
+      tags:
+        - Laporan Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LaporanMobileCranePayload'
+      responses:
+        '200':
+          description: Laporan Mobile Crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LaporanMobileCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus Laporan Mobile Crane
+      tags:
+        - Laporan Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Laporan Mobile Crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Mobile Crane berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/mobileCrane/laporan/download/{id}:
+    get:
+      summary: Download Dokumen Laporan Mobile Crane
+      tags:
+        - Laporan Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dokumen Laporan Mobile Crane berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Mobile-Crane-PT-IVAN-JAGO-123.docx"
+            message:
+              schema:
+                type: string
+                example: Laporan Mobile Crane berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ======================================================
+  #                 BAP MOBILE CRANE
+  # ======================================================
+  /paa/mobileCrane/bap/prefill/{laporanId}:
+    get:
+      summary: Mengambil data dari laporan untuk mengisi form BAP Mobile Crane
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data BAP Mobile Crane berhasil didapatkan untuk prefill.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapMobileCranePrefillSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/mobileCrane/bap:
+    post:
+      summary: Membuat BAP Mobile Crane Baru
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapMobileCranePayload'
+      responses:
+        '201':
+          description: BAP Mobile Crane berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapMobileCraneSuccessResponse'
+        '404':
+          description: Laporan Mobile Crane dengan laporanId yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    get:
+      summary: Mengambil Semua BAP Mobile Crane
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Berhasil mengambil semua BAP Mobile Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAllBapMobileCraneResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/mobileCrane/bap/{id}:
+    get:
+      summary: Mengambil BAP Mobile Crane Berdasarkan ID
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Berhasil mengambil data BAP Mobile Crane.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapMobileCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Memperbarui BAP Mobile Crane
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BapMobileCranePayload'
+      responses:
+        '200':
+          description: BAP Mobile Crane berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BapMobileCraneSuccessResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Menghapus BAP Mobile Crane
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Mobile Crane berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Mobile Crane berhasil dihapus
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /paa/mobileCrane/bap/download/{id}:
+    get:
+      summary: Download Dokumen BAP Mobile Crane
+      tags:
+        - BAP Mobile Crane
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: BAP Mobile Crane berhasil diunduh.
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Mobile-Crane-PT-IVAN-JAGO-PART-3-123.docx"
+            message:
+              schema:
+                type: string
+                example: BAP Mobile Crane berhasil diunduh
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+
 components:
   securitySchemes:
     bearerAuth:
@@ -2536,3 +2887,646 @@ components:
               type: string
               format: date-time
 
+
+      type: object
+      properties:
+        result:
+          type: string
+          nullable: true
+        status:
+          type: boolean
+          nullable: true
+          description: true = Baik/Lulus, false = Cacat/Gagal, null = Tidak Diperiks
+
+    # ======================================================
+    #               MOBILE CRANE SCHEMAS
+    # ======================================================
+    InspectionResultItemMobileCrane:
+      type: object
+      properties:
+        result:
+          type: string
+          nullable: true
+        status:
+          type: boolean
+          nullable: true
+          description: true = Baik/Lulus, false = Cacat/Gagal, null = Tidak Diperiksa
+
+    LoadTestItemSchema:
+      type: object
+      properties:
+        boomLength:
+          type: string
+        radius:
+          type: string
+        boomAngle:
+          type: string
+        testLoad:
+          type: string
+        safeWorkingLoad:
+          type: string
+        result:
+          type: string
+
+    LaporanMobileCranePayload:
+      type: object
+      required:
+        - inspectionType
+        - equipmentType
+        - examinationType
+        - generalData
+      properties:
+        inspectionType: { type: string }
+        equipmentType: { type: string }
+        examinationType: { type: string }
+        createdAt: { type: string, description: "Dapat dikirim sebagai string kosong, akan di-overwrite oleh server." }
+        extraId: { type: number }
+        generalData:
+          type: object
+          required:
+            - generalDataOwnerName
+            - generalDataInspectionDate
+          properties:
+            generalDataOwnerName: { type: string }
+            generalDataOwnerAddress: { type: string }
+            generalDataUserSubcontractorPersonInCharge: { type: string }
+            generalDataUserAddress: { type: string }
+            generalDataUnitLocation: { type: string }
+            generalDataOperatorName: { type: string }
+            generalDataManufacturer: { type: string }
+            generalDataBrandType: { type: string }
+            generalDataLocationAndYearOfManufacture: { type: string }
+            generalDataSerialNumberUnitNumber: { type: string }
+            generalDataCapacityWorkingLoad: { type: string }
+            generalDataIntendedUse: { type: string }
+            generalDataUsagePermitNumber: { type: string }
+            generalDataOperatorCertificate: { type: string }
+            generalDataEquipmentHistory: { type: string }
+            generalDataInspectionDate: { type: string }
+        technicalData:
+          type: object
+          properties:
+            technicalDataMaximumWorkingLoadCapacity: { type: string }
+            technicalDataBoomLength: { type: string }
+            technicalDataMaximumJibLength: { type: string }
+            technicalDataMaximumJibWorkingLoad: { type: string }
+            technicalDataMaxBoomJibLength: { type: string }
+            technicalDataCraneWeight: { type: string }
+            technicalDataMaxLiftingHeight: { type: string }
+            technicalDataBoomWorkingAngle: { type: string }
+            technicalDataEngineNumber: { type: string }
+            technicalDataType: { type: string }
+            technicalDataNumberOfCylinders: { type: string }
+            technicalDataNetPower: { type: string }
+            technicalDataBrandYearOfManufacture: { type: string }
+            technicalDataHookManufacturer: { type: string }
+            technicalDataMainHookType: { type: string }
+            technicalDataMainHookCapacity: { type: string }
+            technicalDataMainHookMaterial: { type: string }
+            technicalDataMainHookSerialNumber: { type: string }
+            technicalDataAuxiliaryHookType: { type: string }
+            technicalDataAuxiliaryHookCapacity: { type: string }
+            technicalDataAuxiliaryHookMaterial: { type: string }
+            technicalDataAuxiliaryHookSerialNumber: { type: string }
+            technicalDataWireRopeMainLoadHoistDrumDiameter: { type: string }
+            technicalDataWireRopeMainLoadHoistDrumType: { type: string }
+            technicalDataWireRopeMainLoadHoistDrumConstruction: { type: string }
+            technicalDataWireRopeMainLoadHoistDrumBreakingStrength: { type: string }
+            technicalDataWireRopeMainLoadHoistDrumLength: { type: string }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter: { type: string }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumType: { type: string }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction: { type: string }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumLength: { type: string }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength: { type: string }
+            technicalDataWireRopeBoomHoistDrumDiameter: { type: string }
+            technicalDataWireRopeBoomHoistDrumType: { type: string }
+            technicalDataWireRopeBoomHoistDrumConstruction: { type: string }
+            technicalDataWireRopeBoomHoistDrumLength: { type: string }
+            technicalDataWireRopeBoomHoistDrumBreakingStrength: { type: string }
+        inspectionAndTesting:
+          type: object
+          properties:
+            visualFoundationAndBoltsCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFoundationAndBoltsCracksResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFoundationAndBoltsDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFoundationAndBoltsTightnessResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFrameColumnsOnFoundationCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFrameColumnsOnFoundationCracksResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFrameColumnsOnFoundationDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFrameColumnsOnFoundationFasteningResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFrameColumnsOnFoundationTransverseReinforcementResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualFrameColumnsOnFoundationDiagonalReinforcementResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLadderCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLadderCracksResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLadderDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLadderFasteningResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualWorkingPlatformCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualWorkingPlatformCracksResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualWorkingPlatformDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualWorkingPlatformFasteningResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOutriggersOutriggerArmHousingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOutriggersOutriggerArmsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOutriggersJackResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOutriggersOutriggerPadsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOutriggersHousingConnectionToChassisResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOutriggersOutriggerSafetyLocksResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableSlewingRollerBearingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableBrakeHousingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntablePressureCylinderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableDrumAxleResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableLeversPinsBoltsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTurntableGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomMainBoomResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomBoomSectionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomTopPulleyResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomPulleyGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomWireRopeGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomPulleyGrooveLipResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomPivotPinResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLatticeBoomWireRopeGuidePulleyResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSteeringMainClutchResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTransmissionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSteeringFrontWheelResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSteeringMiddleWheelResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSteeringRearWheelResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeServiceBrakeResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeParkingBrakeResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeBrakeHousingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeLeversPinsBoltsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualBrakeGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTravelDrumClutchHousingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTravelDrumClutchLiningResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTravelDrumClutchDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTravelDrumLeversPinsBoltsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualTravelDrumGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchDrumMountingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchWindingDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchBrakeDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchBrakeHousingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchClutchLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchClutchDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchGrooveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchGrooveLipResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchFlangesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWinchBrakeActuatorLeversPinsAndBoltsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchDrumMountingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchWindingDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchBrakeLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchBrakeDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchBrakeHousingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchClutchLiningsAndShoesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchClutchDrumSurfaceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchGrooveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchGrooveLipResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchFlangesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWinchBrakeActuatorLeversPinsAndBoltsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHoistGearBlockLubricationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHoistGearBlockOilSealResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainPulleyPulleyGrooveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainPulleyPulleyGrooveLipResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainPulleyPulleyPinResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainPulleyBearingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainPulleyPulleyGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainPulleyWireRopeGuardResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainHookSwivelNutAndBearingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainHookTrunnionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainHookSafetyLatchResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryHookFreeFallWeightResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryHookSwivelNutAndBearingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryHookSafetyLatchResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWireRopeCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWireRopeWearResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWireRopeBreakageResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualMainWireRopeDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWireRopeCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWireRopeWearResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWireRopeBreakageResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualAuxiliaryWireRopeDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLimitSwitchLongTravelResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLimitSwitchCrossTravelResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualLimitSwitchHoistingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineCoolingSystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineLubricationSystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineEngineMountingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineSafetyGuardEquipmentResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineExhaustSystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineFuelSystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEnginePowerTransmissionSystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineBatteryResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineStarterMotorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineWiringInstallationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualInternalCombustionEngineTurbochargerResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicPumpResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicLinesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicFilterResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicTankResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicMainWinchMotorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicAuxiliaryWinchMotorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicBoomWinchMotorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicSwingMotorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveReliefValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveMainWinchValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveAuxiliaryWinchValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveBoomWinchValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveBoomMovementValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveSteeringCylinderValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveAxleOscillationValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualControlValveOutriggerMovementValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicCylinderBoomMovementCylinderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicCylinderOutriggerCylinderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicCylinderSteeringWheelCylinderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicCylinderAxleOscillationCylinderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualHydraulicCylinderTelescopicCylinderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualPneumaticCompressorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualPneumaticTankAndSafetyValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualPneumaticPressurizedAirLinesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualPneumaticAirFilterResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualPneumaticControlValveResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinSafetyLadderResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinDoorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinWindowResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinFanAcResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinControlLeversButtonsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinPendantControlResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinLightingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinHornSignalAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinFuseResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinCommunicationDeviceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinFireExtinguisherResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinOperatingSignsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinIgnitionKeyMasterSwitchResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualOperatorCabinButtonsHandlesLeversResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualElectricalComponentsPanelConductorConnectorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualElectricalComponentsConductorProtectionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualElectricalComponentsMotorInstallationSafetySystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualElectricalComponentsGroundingSystemResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualElectricalComponentsInstallationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesLadderHandrailResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesEngineOilLubricantPressureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesHydraulicOilPressureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesAirPressureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesAmperemeterResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesVoltageResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesEngineTemperatureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesTransmissionTemperatureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterOilTemperaturePressureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterSpeedometerIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterRotaryLampResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterMainHoistRopeUpDownLimitResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterAuxiliaryHoistRopeUpDownLimitResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterSwingMotionLimitResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterLevelIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterLoadWeightIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterLoadChartResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterAnemometerWindSpeedResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterBoomAngleIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterAirPressureIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterHydraulicPressureIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterSafetyValvesResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterMainWindingDrumSafetyLockResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterAuxiliaryWindingDrumSafetyLockResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterTelescopicMotionLimitResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterLightningArresterResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            visualSafetyDevicesConverterLiftingHeightIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtWireRopeMainLoadSpecDiameter: { type: string }
+            ndtWireRopeMainLoadActualDiameter: { type: string }
+            ndtWireRopeMainLoadConstruction: { type: string }
+            ndtWireRopeMainLoadType: { type: string }
+            ndtWireRopeMainLoadLength: { type: string }
+            ndtWireRopeMainLoadAge: { type: string }
+            ndtWireRopeMainLoadResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtWireRopeAuxiliaryLoadSpecDiameter: { type: string }
+            ndtWireRopeAuxiliaryLoadActualDiameter: { type: string }
+            ndtWireRopeAuxiliaryLoadConstruction: { type: string }
+            ndtWireRopeAuxiliaryLoadType: { type: string }
+            ndtWireRopeAuxiliaryLoadLength: { type: string }
+            ndtWireRopeAuxiliaryLoadAge: { type: string }
+            ndtWireRopeAuxiliaryLoadResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtWireRopeBoomHoistSpecDiameter: { type: string }
+            ndtWireRopeBoomHoistActualDiameter: { type: string }
+            ndtWireRopeBoomHoistConstruction: { type: string }
+            ndtWireRopeBoomHoistType: { type: string }
+            ndtWireRopeBoomHoistLength: { type: string }
+            ndtWireRopeBoomHoistAge: { type: string }
+            ndtWireRopeBoomHoistResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtBoomType: { type: string }
+            ndtBoomNdtType: { type: string }
+            ndtBoomInspection1Part: { type: string }
+            ndtBoomInspection1Location: { type: string }
+            ndtBoomInspection1Result: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtBoomInspection2Part: { type: string }
+            ndtBoomInspection2Location: { type: string }
+            ndtBoomInspection2Result: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtBoomInspection3Part: { type: string }
+            ndtBoomInspection3Location: { type: string }
+            ndtBoomInspection3Result: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainHookNdtType: { type: string }
+            ndtMainHookSpecificationA: { type: string }
+            ndtMainHookSpecificationB: { type: string }
+            ndtMainHookSpecificationC: { type: string }
+            ndtMainHookSpecificationD: { type: string }
+            ndtMainHookSpecificationE: { type: string }
+            ndtMainHookSpecificationF: { type: string }
+            ndtMainHookSpecificationG: { type: string }
+            ndtMainHookSpecificationH: { type: string }
+            ndtMainHookSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainHookMeasurementResultsA: { type: string }
+            ndtMainHookMeasurementResultsB: { type: string }
+            ndtMainHookMeasurementResultsC: { type: string }
+            ndtMainHookMeasurementResultsD: { type: string }
+            ndtMainHookMeasurementResultsE: { type: string }
+            ndtMainHookMeasurementResultsF: { type: string }
+            ndtMainHookMeasurementResultsG: { type: string }
+            ndtMainHookMeasurementResultsH: { type: string }
+            ndtMainHookMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainHookToleranceMeasureA: { type: string }
+            ndtMainHookToleranceMeasureB: { type: string }
+            ndtMainHookToleranceMeasureC: { type: string }
+            ndtMainHookToleranceMeasureD: { type: string }
+            ndtMainHookToleranceMeasureE: { type: string }
+            ndtMainHookToleranceMeasureF: { type: string }
+            ndtMainHookToleranceMeasureG: { type: string }
+            ndtMainHookToleranceMeasureH: { type: string }
+            ndtMainHookToleranceMeasureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryHookNdtType: { type: string }
+            ndtAuxiliaryHookSpecificationA: { type: string }
+            ndtAuxiliaryHookSpecificationB: { type: string }
+            ndtAuxiliaryHookSpecificationC: { type: string }
+            ndtAuxiliaryHookSpecificationD: { type: string }
+            ndtAuxiliaryHookSpecificationE: { type: string }
+            ndtAuxiliaryHookSpecificationF: { type: string }
+            ndtAuxiliaryHookSpecificationG: { type: string }
+            ndtAuxiliaryHookSpecificationH: { type: string }
+            ndtAuxiliaryHookSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryHookMeasurementResultsA: { type: string }
+            ndtAuxiliaryHookMeasurementResultsB: { type: string }
+            ndtAuxiliaryHookMeasurementResultsC: { type: string }
+            ndtAuxiliaryHookMeasurementResultsD: { type: string }
+            ndtAuxiliaryHookMeasurementResultsE: { type: string }
+            ndtAuxiliaryHookMeasurementResultsF: { type: string }
+            ndtAuxiliaryHookMeasurementResultsG: { type: string }
+            ndtAuxiliaryHookMeasurementResultsH: { type: string }
+            ndtAuxiliaryHookMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryHookToleranceMeasureA: { type: string }
+            ndtAuxiliaryHookToleranceMeasureB: { type: string }
+            ndtAuxiliaryHookToleranceMeasureC: { type: string }
+            ndtAuxiliaryHookToleranceMeasureD: { type: string }
+            ndtAuxiliaryHookToleranceMeasureE: { type: string }
+            ndtAuxiliaryHookToleranceMeasureF: { type: string }
+            ndtAuxiliaryHookToleranceMeasureG: { type: string }
+            ndtAuxiliaryHookToleranceMeasureH: { type: string }
+            ndtAuxiliaryHookToleranceMeasureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainDrumNdtType: { type: string }
+            ndtMainDrumSpecificationA: { type: string }
+            ndtMainDrumSpecificationB: { type: string }
+            ndtMainDrumSpecificationC: { type: string }
+            ndtMainDrumSpecificationD: { type: string }
+            ndtMainDrumSpecificationE: { type: string }
+            ndtMainDrumSpecificationF: { type: string }
+            ndtMainDrumSpecificationG: { type: string }
+            ndtMainDrumSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainDrumMeasurementResultsA: { type: string }
+            ndtMainDrumMeasurementResultsB: { type: string }
+            ndtMainDrumMeasurementResultsC: { type: string }
+            ndtMainDrumMeasurementResultsD: { type: string }
+            ndtMainDrumMeasurementResultsE: { type: string }
+            ndtMainDrumMeasurementResultsF: { type: string }
+            ndtMainDrumMeasurementResultsG: { type: string }
+            ndtMainDrumMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryDrumNdtType: { type: string }
+            ndtAuxiliaryDrumSpecificationA: { type: string }
+            ndtAuxiliaryDrumSpecificationB: { type: string }
+            ndtAuxiliaryDrumSpecificationC: { type: string }
+            ndtAuxiliaryDrumSpecificationD: { type: string }
+            ndtAuxiliaryDrumSpecificationE: { type: string }
+            ndtAuxiliaryDrumSpecificationF: { type: string }
+            ndtAuxiliaryDrumSpecificationG: { type: string }
+            ndtAuxiliaryDrumSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryDrumMeasurementResultsA: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsB: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsC: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsD: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsE: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsF: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsG: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainPulleySpecificationA: { type: string }
+            ndtMainPulleySpecificationB: { type: string }
+            ndtMainPulleySpecificationC: { type: string }
+            ndtMainPulleySpecificationD: { type: string }
+            ndtMainPulleySpecificationE: { type: string }
+            ndtMainPulleySpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtMainPulleyMeasurementResultsA: { type: string }
+            ndtMainPulleyMeasurementResultsB: { type: string }
+            ndtMainPulleyMeasurementResultsC: { type: string }
+            ndtMainPulleyMeasurementResultsD: { type: string }
+            ndtMainPulleyMeasurementResultsE: { type: string }
+            ndtMainPulleyMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryPulleySpecificationA: { type: string }
+            ndtAuxiliaryPulleySpecificationB: { type: string }
+            ndtAuxiliaryPulleySpecificationC: { type: string }
+            ndtAuxiliaryPulleySpecificationD: { type: string }
+            ndtAuxiliaryPulleySpecificationE: { type: string }
+            ndtAuxiliaryPulleySpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            ndtAuxiliaryPulleyMeasurementResultsA: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsB: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsC: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsD: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsE: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionHoistingLoweringResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionExtendedRectractedBoomResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionExtendedRectractedOutriggerResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionSwingSlewingResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionAntiTwoBlockResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionBoomStopResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionAnemometerWindSpeedResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionBrakeLockingDeviceResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionLoadMomentIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionTurnSignalResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionDrivingLightsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionLoadIndicatorLightResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionRotaryLampResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionHornResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionSwingAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionReverseAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            testingFunctionOverloadAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            dynamicMainHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/LoadTestItemSchema'
+            dynamicAuxiliaryHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/LoadTestItemSchema'
+            staticMainHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/LoadTestItemSchema'
+            staticAuxiliaryHookTests:
+              type: array
+              items:
+                $ref: '#/components/schemas/LoadTestItemSchema'
+        conclusion: { type: string }
+        recommendation: { type: string }
+
+    LaporanMobileCraneResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanMobileCranePayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Mobile Crane" }
+            documentType: { type: string, example: "Laporan" }
+            createdAt: { type: string, format: date-time }
+
+    LaporanMobileCraneSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanMobileCraneResponseData"
+
+    GetAllLaporanMobileCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Mobile Crane berhasil didapat
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanMobileCraneResponseData"
+
+    BapMobileCranePayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId: { type: string }
+        examinationType: { type: string }
+        inspectionDate: { type: string, format: date }
+        extraId: { type: number }
+        generalData:
+          type: object
+          properties:
+            ownerName: { type: string }
+            ownerAddress: { type: string }
+            userAddress: { type: string }
+        technicalData:
+          type: object
+          properties:
+            manufacturer: { type: string }
+            locationAndYearOfManufacture: { type: string }
+            serialNumberUnitNumber: { type: string }
+            capacityWorkingLoad: { type: string }
+            maxLiftingHeight: { type: string }
+            materialCertificateNumber: { type: string }
+            liftingSpeedMpm: { type: string }
+        inspectionResult:
+          type: object
+          properties:
+            visualCheck:
+              type: object
+              properties:
+                hasBoomDefects: { type: boolean }
+                isNameplateAttached: { type: boolean }
+                areBoltsAndNutsSecure: { type: boolean }
+                isSlingGoodCondition: { type: boolean }
+                isHookGoodCondition: { type: boolean }
+                isSafetyLatchInstalled: { type: boolean }
+                isTireGoodCondition: { type: boolean }
+                isWorkLampFunctional: { type: boolean }
+            functionalTest:
+              type: object
+              properties:
+                isForwardReverseFunctionOk: { type: boolean }
+                isSwingFunctionOk: { type: boolean }
+                isHoistingFunctionOk: { type: boolean }
+                loadTest:
+                  type: object
+                  properties:
+                    loadKg: { type: string }
+                    liftHeightMeters: { type: string }
+                    holdTimeSeconds: { type: string }
+                    isResultGood: { type: boolean }
+                ndtTest:
+                  type: object
+                  properties:
+                    method: { type: string }
+                    isResultGood: { type: boolean }
+        signature:
+          type: object
+          properties:
+            companyName: { type: string }
+
+    BapMobileCraneResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapMobileCranePayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Mobile Crane" }
+            documentType: { type: string, example: "Berita Acara dan Pemeriksaan Pengujian" }
+            createdAt: { type: string, format: date-time }
+
+    BapMobileCraneSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapMobileCraneResponseData"
+
+    GetAllBapMobileCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Mobile Crane berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapMobileCraneResponseData"
+
+    BapMobileCranePrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Mobile Crane berhasil dibuat
+        data:
+          $ref: "#/components/schemas/BapMobileCranePayload"
