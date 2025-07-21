@@ -1,12 +1,11 @@
 {
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
   "inspectionType": "PESAWAT ANGKAT DAN ANGKUT JENIS",
-  "reportNumber": "1387 / PKD / PAA / VI / 2023",
   "createdAt": "2025-07-15T11:36:36.173Z",
   "extraId": 123,
   "equipmentType": "Portable Gantry Crane",
   "generalData": {
-    "companyName": "PT. Sarana Steel Engineering",
+    "companyName": "PT. IVAN GACOR ",
     "companyLocation": "Kawasan Sentra Bizhub, Blok K No. 1, Jl. Raya Teluk Jambe, Teluk Jambe Timur, Karawang",
     "usageLocation": "PT. Sarana Steel Engineering",
     "location": "PT. Sarana Steel Engineering",

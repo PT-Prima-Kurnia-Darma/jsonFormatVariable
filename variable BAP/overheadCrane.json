@@ -1,43 +1,44 @@
 {
+  "laporanId": "DkBGHaNoG8dFruMczeNs",
   "reportHeader": {
-    "examinationType": "string",
-    "inspectionDate": "string",
-    "extraId": "number",
-    "inspectionType": "string",
-    "createdaAt": "string",
-    "equipmentType": "string"
+    "examinationType": "PERIODIK",
+    "inspectionDate": "Tangerang, 19 Juli 2025",
+    "extraId": 190725,
+    "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+    "createdAt": "2025-07-19T10:00:00.000Z",
+    "equipmentType": "Double Girder Overhead Crane"
   },
   "generalData": {
-    "companyName": "string",
-    "companyLocation": "string",
-    "userInCharge": "string",
-    "ownerAddress": "string"
+    "unitLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
+    "userInCharge": "Divisi Produksi",
+    "ownerName": "update",
+    "ownerAddress": "Area Fabrikasi Utama"
   },
   "technicalData": {
-    "brandType": "string",
-    "manufacturer": "string",
-    "locationAndYearOfManufacture": "string",
-    "serialNumberUnitNumber": "string",
-    "capacityWorkingLoad": "string",
-    "liftingSpeedMpm": "string"
+    "brandType": "KONECRANES / CXT",
+    "manufacturer": "Konecranes / Finland",
+    "locationAndYearOfManufacture": "2020",
+    "serialNumberUnitNumber": "KC-20-DG-98765",
+    "capacityWorkingLoad": "20000",
+    "liftingSpeedMpm": "5.0"
   },
-    "visualInspection": {
-      "hasConstructionDefects": "boolean",
-      "hookHasSafetyLatch": "boolean",
-      "isEmergencyStopInstalled": "boolean",
-      "isWireropeGoodCondition": "boolean",
-      "operatorHasK3License": "boolean"
+  "visualInspection": {
+    "hasConstructionDefects": false,
+    "hookHasSafetyLatch": true,
+    "isEmergencyStopInstalled": true,
+    "isWireropeGoodCondition": false,
+    "operatorHasK3License": true
+  },
+  "testing": {
+    "functionTest": true,
+    "loadTest": {
+      "loadTon": 25,
+      "isAbleToLift": true,
+      "hasLoadDrop": false
     },
-    "testing": {
-      "functionTest": "boolean",
-      "loadTest": {
-        "loadTon": "number",
-        "isAbleToLift": "boolean",
-        "hasLoadDrop": "boolean"
-      },
-      "ndtTest": {
-        "isNdtResultGood": "boolean",
-        "hasCrackIndication": "boolean"
-      }
+    "ndtTest": {
+      "isNdtResultGood": false,
+      "hasCrackIndication": true
     }
+  }
 }

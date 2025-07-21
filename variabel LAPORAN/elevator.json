@@ -5,7 +5,7 @@
   "equipmentType": "Elevator Penumpang",
   "extraId":   123,
   "generalData": {
-    "ownerName": "PT ANIME SEJAHTERA",
+    "ownerName": "PT TESTING",
     "ownerAddress": "Jl. Pejompongan Raya No. 15, Jakarta Pusat",
     "nameUsageLocation": "Gedung Kantor Pusat PT UHUY",
     "addressUsageLocation": "Jl. MH Thamrin No. 1, Jakarta Pusat",
@@ -183,5 +183,6 @@
       }
     }
   },
-  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, elevator penumpang dinyatakan LAIK dan aman untuk dioperasikan. Beberapa rekomendasi perbaikan kecil telah dicatat untuk pemeliharaan selanjutnya. Pemeliharaan rutin harus tetap dijalankan sesuai jadwal."
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, elevator penumpang dinyatakan LAIK dan aman untuk dioperasikan. Beberapa rekomendasi perbaikan kecil telah dicatat untuk pemeliharaan selanjutnya. Pemeliharaan rutin harus tetap dijalankan sesuai jadwal.",
+  "recomendations": "Berdasarkan hasil pemeriksaan dan pengujian, elevator penumpang dinyatakan LAIK dan aman untuk dioperasikan. Beberapa rekomendasi perbaikan kecil telah dicatat untuk pemeliharaan selanjutnya. Pemeliharaan rutin harus tetap dijalankan sesuai jadwal."
 }

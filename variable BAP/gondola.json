@@ -1,24 +1,24 @@
 {
-  "laporanId": "string",
-  "examinationType": "string",
-  "inspectionType": "string",
-  "inspectionDate": "string",
-  "equipmentType": "",
-  "createdAt": "string",
-  "extraId": "number",
+  "laporanId": "Hxo179TK4tAi8t7aAaDt",
+  "examinationType": "PEMERIKSAAN DAN PENGUJIAN",
+  "inspectionType": "BERKALA",
+  "inspectionDate": "2023-12-15",
+  "equipmentType": "Gondola",
+  "createdAt": "2023-12-15T11:00:00Z",
+  "extraId": 201,
   "generalData": {
-    "companyName": "string",
-    "companyLocation": "string",
-    "userInCharge": "string",
-    "ownerAddress": "string"
+    "companyName": "PT. IPAN NEW 2",
+    "companyLocation": "Ruko Citralake Sawangan Blok B06-01 Jl. Cinangka Raya, Bojongsari, Depok",
+    "userInCharge": "PT. Gondola Alta Fortuna",
+    "ownerAddress": "Essence Darmawangsa Apartement Tower South, Jl. Darmawangsa-X No.86, Jakarta Selatan"
   },
   "technicalData": {
-    "manufacturer": "string",
-    "locationAndYearOfManufacture": "string",
-    "serialNumberUnitNumber": "string",
-    "intendedUse": "string",
-    "capacityWorkingLoad": "string",
-    "maxLiftingHeightMeters": "string"
+    "manufacturer": "Skymax",
+    "locationAndYearOfManufacture": "2022 / China",
+    "serialNumberUnitNumber": "HZRDHT20220704-HZRDHT20220705",
+    "intendedUse": "Mengangkat orang dan barang",
+    "capacityWorkingLoad": "250 kg / 2 orang",
+    "maxLiftingHeightMeters": "9-11"
   },
   "inspectionResult": {
     "visualCheck": {
@@ -42,7 +42,7 @@
       "isEmergencyStopFunctional": true,
       "isSafetyLifelineFunctional": true,
       "ndtTest": {
-        "method": "string",
+        "method": "Visual dan Pengukuran",
         "isResultGood": true,
         "hasCrackIndication": false
       }

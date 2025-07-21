@@ -4,9 +4,9 @@
   "inspectionDate": "2025-07-15",
   "extraId": 123,
   "createdAt": "2025-07-15T11:36:36.173Z",
-  "equipmentType": "Forklift Diesel",
   "generalData": {
     "ownerName": "PT. GACOR",
+    "equipmentType": "Forklift Diesel",
     "ownerAddress": "Jl. Industri Raya No. 123, Cikarang",
     "userInCharge": "Gudang Pusat Distribusi",
     "subcontractorPersonInCharge": "Andi Wijaya",
