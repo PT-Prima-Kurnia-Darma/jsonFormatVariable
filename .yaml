@@ -37,6 +37,14 @@ tags:
     description: Manajemen data Laporan Pemeriksaan untuk Overhead Crane.
   - name: BAP Overhead Crane
     description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Overhead Crane.
+  - name: Laporan Instalasi Petir
+    description: Manajemen data Laporan Pemeriksaan untuk Instalasi Petir.
+  - name: BAP Instalasi Petir
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Petir.
+  - name: Laporan Instalasi Listrik
+    description: Manajemen data Laporan Pemeriksaan untuk Instalasi Listrik.
+  - name: BAP Instalasi Listrik
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Listrik.  
 paths:
   # ======================================================
   #                 AUTENTIFIKASI
@@ -2891,6 +2899,820 @@ paths:
         '500':
           $ref: '#/components/responses/InternalServerError'
 
+  # ======================================================
+  #          LAPORAN INSTALASI PETIR
+  # ======================================================
+  /petirListrik/instalasiPetir/laporan:
+    post:
+      tags:
+        - Laporan Instalasi Petir
+      summary: Buat Laporan Instalasi Petir Baru
+      description: Endpoint untuk membuat dokumen laporan pemeriksaan dan pengujian instalasi penyalur petir baru.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPetirPayload"
+      responses:
+        "201":
+          description: Laporan berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPetirSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - Laporan Instalasi Petir
+      summary: Dapatkan Semua Laporan Instalasi Petir
+      description: Mengambil daftar semua laporan untuk instalasi penyalur petir yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data laporan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllLaporanPetirResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiPetir/laporan/{id}:
+    get:
+      tags:
+        - Laporan Instalasi Petir
+      summary: Dapatkan Laporan Instalasi Petir Berdasarkan ID
+      description: Mengambil detail data sebuah laporan instalasi petir berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Petir.
+      responses:
+        "200":
+          description: Berhasil mengambil data laporan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPetirSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - Laporan Instalasi Petir
+      summary: Perbarui Laporan Instalasi Petir
+      description: Memperbarui data laporan instalasi petir yang sudah ada. Perubahan pada data umum dan teknis juga akan disinkronkan ke BAP yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Petir yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPetirPayload"
+      responses:
+        "200":
+          description: Laporan berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPetirSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - Laporan Instalasi Petir
+      summary: Hapus Laporan Instalasi Petir
+      description: Menghapus sebuah laporan instalasi petir berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Petir yang akan dihapus.
+      responses:
+        "200":
+          description: Laporan berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Instalasi Petir berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiPetir/laporan/download/{id}:
+    get:
+      tags:
+        - Laporan Instalasi Petir
+      summary: Unduh Dokumen Laporan Instalasi Petir
+      description: Mengunduh dokumen laporan dalam format .docx berdasarkan ID unik laporan.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Petir.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: Laporan Instalasi Petir berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Instalasi-Petir-PT-Gedung-Tinggi-Sejahtera.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
+  #           BAP INSTALASI PETIR
+  # ======================================================
+  /petirListrik/instalasiPetir/bap/prefill/{laporanId}:
+    get:
+      tags:
+        - BAP Instalasi Petir
+      summary: Ambil Data Prefill untuk BAP dari Laporan
+      description: Mengambil data dari Laporan Instalasi Petir yang sudah ada untuk mengisi (pre-fill) form BAP baru.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Petir yang menjadi acuan.
+      responses:
+        "200":
+          description: Berhasil mengambil data untuk prefill BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPetirPrefillSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiPetir/bap:
+    post:
+      tags:
+        - BAP Instalasi Petir
+      summary: Buat BAP Instalasi Petir Baru
+      description: Membuat BAP baru berdasarkan `laporanId`. Data umum dan teknis dari BAP ini akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPetirPayload"
+      responses:
+        "201":
+          description: BAP berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPetirSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          description: Laporan Instalasi Petir dengan `laporanId` yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - BAP Instalasi Petir
+      summary: Dapatkan Semua BAP Instalasi Petir
+      description: Mengambil daftar semua BAP untuk instalasi penyalur petir yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllBapPetirResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiPetir/bap/{id}:
+    get:
+      tags:
+        - BAP Instalasi Petir
+      summary: Dapatkan BAP Instalasi Petir Berdasarkan ID
+      description: Mengambil detail data sebuah BAP instalasi petir berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Petir.
+      responses:
+        "200":
+          description: Berhasil mengambil data BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPetirSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - BAP Instalasi Petir
+      summary: Perbarui BAP Instalasi Petir
+      description: Memperbarui data BAP yang sudah ada. Perubahan pada data umum dan teknis juga akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Petir yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPetirPayload"
+      responses:
+        "200":
+          description: BAP berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPetirSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - BAP Instalasi Petir
+      summary: Hapus BAP Instalasi Petir
+      description: Menghapus sebuah BAP instalasi petir berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Petir yang akan dihapus.
+      responses:
+        "200":
+          description: BAP berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Instalasi Petir berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiPetir/bap/download/{id}:
+    get:
+      tags:
+        - BAP Instalasi Petir
+      summary: Unduh Dokumen BAP Instalasi Petir
+      description: Mengunduh dokumen BAP dalam format .docx berdasarkan ID unik BAP.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Petir.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: BAP Instalasi Petir berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Instalasi-Petir-PT-Gedung-Tinggi-Sejahtera.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
+  #         LAPORAN INSTALASI LISTRIK
+  # ======================================================
+  /petirListrik/instalasiListrik/laporan:
+    post:
+      tags:
+        - Laporan Instalasi Listrik
+      summary: Buat Laporan Instalasi Listrik Baru
+      description: Endpoint untuk membuat dokumen laporan pemeriksaan dan pengujian instalasi listrik baru.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanListrikPayload"
+      responses:
+        "201":
+          description: Laporan berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanListrikSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - Laporan Instalasi Listrik
+      summary: Dapatkan Semua Laporan Instalasi Listrik
+      description: Mengambil daftar semua laporan untuk instalasi listrik yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data laporan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllLaporanListrikResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiListrik/laporan/{id}:
+    get:
+      tags:
+        - Laporan Instalasi Listrik
+      summary: Dapatkan Laporan Instalasi Listrik Berdasarkan ID
+      description: Mengambil detail data sebuah laporan instalasi listrik berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Listrik.
+      responses:
+        "200":
+          description: Berhasil mengambil data laporan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanListrikSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - Laporan Instalasi Listrik
+      summary: Perbarui Laporan Instalasi Listrik
+      description: Memperbarui data laporan instalasi listrik yang sudah ada. Perubahan pada data umum dan teknis juga akan disinkronkan ke BAP yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Listrik yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanListrikPayload"
+      responses:
+        "200":
+          description: Laporan berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanListrikSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - Laporan Instalasi Listrik
+      summary: Hapus Laporan Instalasi Listrik
+      description: Menghapus sebuah laporan instalasi listrik berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Listrik yang akan dihapus.
+      responses:
+        "200":
+          description: Laporan berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Instalasi Listrik berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiListrik/laporan/download/{id}:
+    get:
+      tags:
+        - Laporan Instalasi Listrik
+      summary: Unduh Dokumen Laporan Instalasi Listrik
+      description: Mengunduh dokumen laporan dalam format .docx berdasarkan ID unik laporan.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Listrik.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: Laporan Instalasi Listrik berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Instalasi-Listrik-PT-CONTOH-KARYA-INDONESIA.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
+  #         BAP INSTALASI LISTRIK
+  # ======================================================
+  /petirListrik/instalasiListrik/bap/prefill/{laporanId}:
+    get:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Ambil Data Prefill untuk BAP dari Laporan
+      description: Mengambil data dari Laporan Instalasi Listrik yang sudah ada untuk mengisi (pre-fill) form BAP baru.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Listrik yang menjadi acuan.
+      responses:
+        "200":
+          description: Berhasil mengambil data untuk prefill BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapListrikPrefillSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiListrik/bap:
+    post:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Buat BAP Instalasi Listrik Baru
+      description: Membuat BAP baru berdasarkan `laporanId`. Data umum dan teknis dari BAP ini akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapListrikPayload"
+      responses:
+        "201":
+          description: BAP berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapListrikSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          description: Laporan Instalasi Listrik dengan `laporanId` yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Dapatkan Semua BAP Instalasi Listrik
+      description: Mengambil daftar semua BAP untuk instalasi listrik yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllBapListrikResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiListrik/bap/{id}:
+    get:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Dapatkan BAP Instalasi Listrik Berdasarkan ID
+      description: Mengambil detail data sebuah BAP instalasi listrik berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Listrik.
+      responses:
+        "200":
+          description: Berhasil mengambil data BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapListrikSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Perbarui BAP Instalasi Listrik
+      description: Memperbarui data BAP yang sudah ada. Perubahan pada data umum dan teknis juga akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Listrik yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapListrikPayload"
+      responses:
+        "200":
+          description: BAP berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapListrikSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Hapus BAP Instalasi Listrik
+      description: Menghapus sebuah BAP instalasi listrik berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Listrik yang akan dihapus.
+      responses:
+        "200":
+          description: BAP berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Instalasi Listrik berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /petirListrik/instalasiListrik/bap/download/{id}:
+    get:
+      tags:
+        - BAP Instalasi Listrik
+      summary: Unduh Dokumen BAP Instalasi Listrik
+      description: Mengunduh dokumen BAP dalam format .docx berdasarkan ID unik BAP.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Listrik.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: BAP Instalasi Listrik berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Instalasi-Listrik-PT-INDO-TEKNOLOGI-NEW-GACOR.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
 components:
   securitySchemes:
     bearerAuth:
@@ -4002,6 +4824,10 @@ components:
             createdAt:
               type: string
               format: date-time
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
 
     BapForkliftPayload:
       type: object
@@ -4061,6 +4887,10 @@ components:
             createdAt:
               type: string
               format: date-time
+            subInspectionType:
+              type: string
+            documentType:
+              type: string
 
 
       type: object
@@ -5701,3 +6531,882 @@ components:
         data:
           $ref: "#/components/schemas/BapOverheadCranePayload"
 
+    # ======================================================
+    #           SCHEMAS - INSTALASI PETIR
+    # ======================================================
+    # Di bawah 'components: schemas:' tambahkan skema berikut:
+
+    # --- Skema Laporan Instalasi Petir ---
+    LaporanPetirPayload:
+      type: object
+      properties:
+        examinationType:
+          type: string
+          example: "Pemeriksaan dan Pengujian Berkala"
+        equipmentType:
+          type: string
+          example: "Panangkal Petir"
+        inspectionType:
+          type: string
+          example: "Instalasi Listrik dan Petir"
+        createdAt:
+          type: string
+          description: "Dapat dikosongkan, akan diisi otomatis oleh server."
+          example: "1323"
+        extraId:
+          type: string
+          example: "1"
+        pjk3Data:
+          type: object
+          properties:
+            companyNameandaddres:
+              type: string
+              example: "PT. Aman Sentosa K3 - Jl. Keselamatan No. 1, Jakarta"
+            companyPermitNo:
+              type: string
+              example: "SKP-PJK3/001/2024"
+            expertPermitNo:
+              type: string
+              example: "SKP-AHLI/007/2023"
+            expertName:
+              type: string
+              example: "REXY DARMAWAN"
+            riksaujiTools:
+              type: string
+              example: "Earth Ground Tester, Meteran, Kamera"
+        ownerData:
+          type: object
+          properties:
+            companyName:
+              type: string
+              example: "PT. Gedung Tinggi Sejahtera"
+            companyLocation:
+              type: string
+              example: "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+            usageLocation:
+              type: string
+              example: "Gedung Kantor Pusat"
+            objectType:
+              type: string
+              example: "Instalasi Penyalur Petir"
+            typeInspection:
+              type: string
+              example: "Berkala"
+            certificateNo:
+              type: string
+              example: "SK-001/2020"
+            inspectionDate:
+              type: string
+              format: date
+              example: "2025-07-21"
+        technicalData:
+          type: object
+          properties:
+            conductorType:
+              type: string
+              example: "Konvensional / Kurn"
+            buildingHeight:
+              type: string
+              example: "75 Meter"
+            buildingArea:
+              type: string
+              example: "2500 m²"
+            receiverHeight:
+              type: string
+              example: "3 Meter"
+            receiverCount:
+              type: integer
+              example: 2
+            testJointCount:
+              type: integer
+              example: 2
+            conductorDescription:
+              type: string
+              example: "2 Jalur"
+            groundingResistance:
+              type: string
+              example: "Kabel BC 70 mm²"
+            spreadingResistance:
+              type: string
+              example: "bla bla"
+            installer:
+              type: string
+              example: "2020 / PT. Listrik Aman"
+        physicalInspection:
+          type: object
+          properties:
+            installationSystem: { $ref: "#/components/schemas/ConditionCheck" }
+            receiverHead: { $ref: "#/components/schemas/ConditionCheck" }
+            receiverPole: { $ref: "#/components/schemas/ConditionCheck" }
+            poleReinforcement: { $ref: "#/components/schemas/ConditionCheck" }
+            downConductor: { $ref: "#/components/schemas/ConditionCheck" }
+            conductorClamps: { $ref: "#/components/schemas/ConditionCheck" }
+            jointConnections: { $ref: "#/components/schemas/ConditionCheck" }
+            groundingTerminalBox: { $ref: "#/components/schemas/ConditionCheck" }
+            controlBox: { $ref: "#/components/schemas/ConditionCheck" }
+            groundingSystem: { $ref: "#/components/schemas/ConditionCheck" }
+            conductorToGroundConnection: { $ref: "#/components/schemas/ConditionCheck" }
+            notes:
+              type: string
+              example: "Secara keseluruhan kondisi fisik komponen baik. Perlu pengencangan pada klem kabel penghantar."
+        visualInspection:
+          type: object
+          properties:
+            airTerminal:
+              type: string
+              example: "Terpasang kokoh, tidak ada korosi."
+            downConductorCheck:
+              type: string
+              example: "Terpasang rapi pada dinding, klem perlu dikencangkan di beberapa titik."
+            groundingAndTestJoint:
+              type: string
+              example: "Box kontrol bersih, sambungan baik, mudah diakses."
+        standardCompliance:
+          type: object
+          properties:
+            asBuiltDrawing: { $ref: "#/components/schemas/ComplianceCheck" }
+            terminalToConductorConnection: { $ref: "#/components/schemas/ComplianceCheck" }
+            downConductorJoints: { $ref: "#/components/schemas/ComplianceCheck" }
+            testJointBoxInstallation: { $ref: "#/components/schemas/ComplianceCheck" }
+            conductorMaterialStandard: { $ref: "#/components/schemas/ComplianceCheck" }
+            lightningCounter: { $ref: "#/components/schemas/ComplianceCheck" }
+            radioactiveTerminal: { $ref: "#/components/schemas/ComplianceCheck" }
+            groundingRodMaterial: { $ref: "#/components/schemas/ComplianceCheck" }
+            arresterInstallation: { $ref: "#/components/schemas/ComplianceCheck" }
+        dynamicTestItems:
+          type: array
+          items:
+            type: object
+            properties:
+              ecResult:
+                type: string
+                example: "10m"
+              epResult:
+                type: string
+                example: "20m"
+              rValue:
+                type: number
+                example: 0.45
+              result:
+                type: string
+                example: "Baik"
+        dynamicItems:
+          type: array
+          items:
+            type: object
+            properties:
+              materialConditionsItems:
+                type: string
+                example: "Pentanahan Head Terminal 1"
+              outcomeBaik:
+                type: boolean
+                example: true
+              outcomeBuruk:
+                type: boolean
+                example: false
+              rGradeItems:
+                type: string
+                example: "0.45"
+              result:
+                type: string
+                example: "LAYAK"
+        conclusion:
+          type: string
+          example: "Berdasarkan hasil pemeriksaan dan pengujian, Instalasi Penyalur Petir di PT. Gedung Tinggi Sejahtera secara umum dalam kondisi baik dan berfungsi sebagaimana mestinya. Nilai tahanan pembumian berada di bawah ambang batas yang dipersyaratkan (< 5 Ohm)."
+        recomendations:
+          type: string
+          example: "Disarankan untuk melakukan pengencangan pada klem kabel penghantar penurunan yang sedikit kendur untuk memastikan kekuatan mekanis dalam jangka panjang. Pemeriksaan rutin tahunan tetap harus dilakukan."
+
+    LaporanPetirResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanPetirPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+              example: "lMc4AsJXZwONn3TpOWs9"
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Instalasi Penyalur Petir"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Laporan"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+              example: "2025-07-21T10:00:00.000Z"
+
+    LaporanPetirSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Instalasi Petir berhasil dibuat
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanPetirResponseData"
+
+    GetAllLaporanPetirResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Semua Laporan Instalasi Petir berhasil didapatkan
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanPetirResponseData"
+
+    # --- Skema BAP Instalasi Petir ---
+    BapPetirPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId:
+          type: string
+          description: ID dari Laporan terkait yang akan dihubungkan dengan BAP ini.
+          example: "lMc4AsJXZwONn3TpOWs9"
+        examinationType:
+          type: string
+          example: "Berkala"
+        inspectionDate:
+          type: string
+          example: "Senin, 21 Juli 2025"
+        equipmentType:
+          type: string
+          example: "Instalasi Petir"
+        generalData:
+          type: object
+          properties:
+            companyName:
+              type: string
+              example: "PT. Gedung Tinggi Sejahtera part 1"
+            companyLocation:
+              type: string
+              example: "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+            usageLocation:
+              type: string
+              example: "Gedung Kantor Pusat"
+            addressUsageLocation:
+              type: string
+              example: "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+        technicalData:
+          type: object
+          properties:
+            conductorType:
+              type: string
+              example: "Elektrostatis Kurn R-150"
+            serialNumber:
+              type: string
+              example: "SN-A45712"
+            buildingHeight:
+              type: number
+              example: 75
+            buildingArea:
+              type: number
+              example: 2500
+            receiverHeight:
+              type: number
+              example: 3
+            receiverCount:
+              type: integer
+              example: 2
+            groundElectrodeCount:
+              type: integer
+              example: 2
+            conductorDescription:
+              type: string
+              example: "BC 70"
+            installer:
+              type: string
+              example: "2020"
+            groundingResistance:
+              type: number
+              example: 0.45
+        testResults:
+          type: object
+          properties:
+            visualInspection:
+              type: object
+              properties:
+                isSystemOverallGood: { type: boolean, example: true }
+                isReceiverConditionGood: { type: boolean, example: true }
+                isReceiverPoleConditionGood: { type: boolean, example: true }
+                isConductorInsulated: { type: boolean, example: true }
+                isControlBoxAvailable: { type: boolean, example: true }
+                isControlBoxConditionGood: { type: boolean, example: true }
+            measurement:
+              type: object
+              properties:
+                conductorContinuityResult:
+                  type: string
+                  example: "Baik / Kontinu"
+                measuredGroundingResistance:
+                  type: string
+                  example: "0,30"
+                measuredGroundingResistanceResult:
+                  type: boolean
+                  example: true
+
+    BapPetirResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapPetirPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+              example: "bapPetirId12345"
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Instalasi Penyalur Petir"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Berita Acara dan Pemeriksaan Pengujian"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+              example: "2025-07-21T11:00:00.000Z"
+            inspectionType:
+              type: string
+              description: "Diisi otomatis oleh server jika tidak disediakan."
+              example: "Instalasi Listrik dan Petir"
+
+    BapPetirSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Instalasi Petir berhasil dibuat
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapPetirResponseData"
+
+    GetAllBapPetirResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Semua BAP Instalasi Petir berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapPetirResponseData"
+
+    BapPetirPrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP berhasil didapatkan
+        data:
+          $ref: "#/components/schemas/BapPetirPayload"
+
+    # --- Skema Reusable ---
+    ConditionCheck:
+      type: object
+      properties:
+        good:
+          type: boolean
+        fair:
+          type: boolean
+        poor:
+          type: boolean
+      example:
+        good: true
+        fair: false
+        poor: false
+
+    ComplianceCheck:
+      type: object
+      properties:
+        good:
+          type: boolean
+        poor:
+          type: boolean
+        notes:
+          type: string
+      example:
+        good: true
+        poor: false
+        notes: "Sesuai"
+
+    # ======================================================
+    #         SCHEMAS - INSTALASI LISTRIK
+    # ======================================================
+    LaporanListrikPayload:
+      type: object
+      properties:
+        examinationType:
+          type: string
+          example: "BERKALA"
+        inspectionType:
+          type: string
+          example: "Instalasi listrik dan Petir"
+        extraid:
+          type: integer
+          example: 12
+        createdaAt:
+          type: string
+          example: "2025"
+        equipmentType:
+          type: string
+          example: "Instalasi Listrik"
+        generalData:
+          type: object
+          properties:
+            companyName:
+              type: string
+              example: "PT. CONTOH KARYA INDONESIA"
+            companyAddress:
+              type: string
+              example: "Jl. Industri Utama Kav. 1, Jakarta"
+            installationType:
+              type: string
+              example: "Instalasi Listrik Gedung"
+            businessField:
+              type: string
+              example: "Manufaktur"
+            safetyServiceProvider:
+              type: string
+              example: "PT. Prima Kurnia Darma"
+            ohsExpert:
+              type: string
+              example: "REXY DARMAWAN"
+            permitNumber:
+              type: string
+              example: "SK.01/CONTOH/VI/2023"
+            inspectionDate:
+              type: string
+              example: "19 Juni 2025"
+            inspectionLocation:
+              type: string
+              example: "Area Pabrik"
+        initialDocumentCheck:
+          type: object
+          properties:
+            sld:
+              type: object
+              properties:
+                isAvailable:
+                  type: boolean
+                result:
+                  type: string
+            layout:
+              type: object
+              properties:
+                isAvailable:
+                  type: boolean
+                result:
+                  type: string
+            permit:
+              type: object
+              properties:
+                isAvailable:
+                  type: boolean
+                result:
+                  type: string
+            technicianLicense:
+              type: object
+              properties:
+                isAvailable:
+                  type: boolean
+                result:
+                  type: string
+        technicalData:
+          type: object
+          properties:
+            plnPower:
+              type: string
+              example: "555"
+            generatorPower:
+              type: string
+              example: "800"
+            totalInstalledLoad:
+              type: string
+              example: "750000"
+            lightingPower:
+              type: string
+              example: "150000"
+            powerLoad:
+              type: string
+              example: "600000"
+        documentExamination1:
+          type: object
+          properties:
+            hasPlanningPermit: { type: boolean }
+            hasLocationMap: { type: boolean }
+            hasSld: { type: boolean }
+            hasLayout: { type: boolean }
+            hasWiringDiagram: { type: boolean }
+            hasAreaClassification: { type: boolean }
+            hasPanelComponentList: { type: boolean }
+            hasShortCircuitCalc: { type: boolean }
+            hasManualBook: { type: boolean }
+            hasMaintenanceBook: { type: boolean }
+            hasWarningSigns: { type: boolean }
+            hasManufacturerCert: { type: boolean }
+            hasTechSpec: { type: boolean }
+            hasTechSpecCert: { type: boolean }
+            hasPowerRecap: { type: boolean }
+            hasDailyRecord: { type: boolean }
+            hasPanelPointCount: { type: boolean }
+            isPanelCoverGood: { type: boolean }
+            hasOtherData: { type: boolean }
+        documentExamination2:
+          type: object
+          properties:
+            isUnitConstructionGood: { type: boolean }
+            isPlacementGood: { type: boolean }
+            isNameplateVerified: { type: boolean }
+            isAreaClassificationOk: { type: boolean }
+            isProtectionGood: { type: boolean }
+            isRadiationShieldingGood: { type: boolean }
+            hasPanelDoorHolder: { type: boolean }
+            areBoltsAndScrewsSecure: { type: boolean }
+            isBusbarIsolated: { type: boolean }
+            isBusbarClearanceGood: { type: boolean }
+            isCableInstallationOk: { type: boolean }
+            isDoorCableProtected: { type: boolean }
+            isFuseChangeSafe: { type: boolean }
+            hasCableTerminalProtection: { type: boolean }
+            areInstrumentsMarked: { type: boolean }
+            areEquipmentsCoded: { type: boolean }
+            isCableInOutGood: { type: boolean }
+            isBusbarSizeGood: { type: boolean }
+            isBusbarClean: { type: boolean }
+            isBusbarMarkingOk: { type: boolean }
+            isGroundingCableGood: { type: boolean }
+            isPanelDoorGood: { type: boolean }
+            areSparepartsOk: { type: boolean }
+            areSafetyFacilitiesGood: { type: boolean }
+            breakerData:
+              type: object
+              properties:
+                isCurrentRatingOk: { type: boolean }
+                isVoltageRatingOk: { type: boolean }
+                isBreakingCurrentOk: { type: boolean }
+                isControlVoltageOk: { type: boolean }
+                isManufacturerOk: { type: boolean }
+                isTypeOk: { type: boolean }
+                isSerialOk: { type: boolean }
+        testing:
+          type: object
+          properties:
+            isInsulationOk: { type: boolean }
+            isGroundingOk: { type: boolean }
+            isOverloadTripOk: { type: boolean }
+            isReversePowerRelayOk: { type: boolean }
+            isReverseCurrentRelayOk: { type: boolean }
+            isBreakerTripOk: { type: boolean }
+            isTemperatureOk: { type: boolean }
+            isIndicatorLampOk: { type: boolean }
+            isMeterDeviationOk: { type: boolean }
+            isSynchronizationOk: { type: boolean }
+            isConductorAmpacityOk: { type: boolean }
+            isProtectionRatingOk: { type: boolean }
+            isVoltageDropOk: { type: boolean }
+            hasLossConnection: { type: boolean }
+            breakerEquipment:
+              type: object
+              properties:
+                isCtOk: { type: boolean }
+                isPtOk: { type: boolean }
+                isInstrumentsOk: { type: boolean }
+                isFuseRatingOk: { type: boolean }
+                isMechanicalOk: { type: boolean }
+                isTerminalOk: { type: boolean }
+                isTerminalMarkingOk: { type: boolean }
+                isInterlockSystemOk: { type: boolean }
+                isAuxSwitchOk: { type: boolean }
+                isMechanicalTripOk: { type: boolean }
+        visualInspection:
+          type: object
+          properties:
+            sdpFront:
+              type: object
+              properties:
+                areIndicatorLampsGood: { type: boolean }
+                isDoorClearanceGood: { type: boolean }
+                isLightingGood: { type: boolean }
+                isProductionLightingGood: { type: boolean }
+                isOfficeLightingGood: { type: boolean }
+                isMainPanelLightingGood: { type: boolean }
+                isWarehouseLightingGood: { type: boolean }
+                isAreaClearOfUnusedItems: { type: boolean }
+                hasVentilationAndSigns: { type: boolean }
+            sdpFloors:
+              type: array
+              items:
+                type: object
+                properties:
+                  floorNumber: { type: number }
+                  hasCover: { type: boolean }
+                  hasSld: { type: boolean }
+                  hasBonding: { type: boolean }
+                  hasLabeling: { type: boolean }
+                  isColorCodeOk: { type: boolean }
+                  isClean: { type: boolean }
+                  isNeat: { type: boolean }
+            sdpTerminal:
+              type: object
+              properties:
+                isBusbarOk: { type: boolean }
+                isBreakerOk: { type: boolean }
+                areCableLugsOk: { type: boolean }
+                isGroundingSystemOk: { type: boolean }
+                isBusbarDistanceOk: { type: boolean }
+            sdpTesting:
+              type: object
+              properties:
+                isVoltageOk: { type: boolean }
+                isCurrentOk: { type: boolean }
+                isMeteringOk: { type: boolean }
+                hasPanelLabel: { type: boolean }
+                hasWarningSign: { type: boolean }
+                hasSwitchAndLock: { type: boolean }
+                isTerminalHeatTested: { type: boolean }
+                isGroundingTested: { type: boolean }
+                isConductorAmpacityOk: { type: boolean }
+                isProtectionRatingOk: { type: boolean }
+        found:
+          type: string
+          example: "SLD dan Layout tidak dipasang pada Panel Listrik.\nMika pelindung tidak dipasang pada Panel Listrik.\nTerdapat Panel Listrik yang belum dipasang label."
+        conclusion:
+          type: string
+          example: "Single line diagram dan wiring diagram instalasi tidak tersedia di Panel Listrik.\nTerdapat PHB belum memiliki mika pelindung tegangan kejut didalamnya.\nMCCB belum diberi label dan penamaan sesuai fungsinya.\nSecara keseluruhan instalasi listrik dalam keadaan baik dan dapat beroperasi dengan aman."
+        recommendations:
+          type: string
+          example: "Melengkapi SLD dan Layout pada panel listrik.\nMemperhatikan pengkodean warna kabel, kebersihan, dan kerapian panel listrik.\nSelalu merawat baik pemakaian dan memperhatikan pemakaian listrik secara benar.\nPemasangan dan pemeliharaan terhadap instalasi listrik agar memperhatikan ketentuan dalam Peraturan Umum Instalasi Listrik (PUIL) 2011."
+
+    LaporanListrikResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanListrikPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+              example: "lMc4AsJXZwONn3TpOWs9"
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Instalasi Listrik"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Laporan"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+              example: "2025-07-21T10:00:00.000Z"
+
+    LaporanListrikSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Instalasi Listrik berhasil dibuat
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanListrikResponseData"
+
+    GetAllLaporanListrikResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Semua Laporan Instalasi Listrik berhasil didapatkan
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanListrikResponseData"
+
+    BapListrikPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId:
+          type: string
+          description: ID dari Laporan terkait yang akan dihubungkan dengan BAP ini.
+          example: "XjlN5LKNftsHiIaRZNbh"
+        examinationType:
+          type: string
+          example: "BERKALA"
+        equipmentType:
+          type: string
+          example: "GEDUNG KANTOR"
+        inspectionDate:
+          type: string
+          example: "22 Juli 2025"
+        inspectionType:
+          type: string
+          example: "Listrik"
+        createdAt:
+          type: string
+          description: "Dapat dikosongkan, akan diisi otomatis oleh server."
+        extraId:
+          type: integer
+          example: 101
+        generalData:
+          type: object
+          properties:
+            companyName:
+              type: string
+              example: "PT. INDO TEKNOLOGI NEW GACOR"
+            companyLocation:
+              type: string
+              example: "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+            usageLocation:
+              type: string
+              example: "Ruang Panel Utama, Lantai B1"
+            addressUsageLocation:
+              type: string
+              example: "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        technicalData:
+          type: object
+          properties:
+            technicalDataPlnPower:
+              type: string
+              example: "2000"
+            technicalDataGeneratorPower:
+              type: string
+              example: "1500"
+            technicalDataLightingPower:
+              type: string
+              example: "500"
+            technicalDataPowerLoad:
+              type: string
+              example: "1200"
+            serialNumber:
+              type: string
+              example: "GENSET-001-XYZ"
+        visualInspection:
+          type: object
+          properties:
+            isRoomClean: { type: boolean }
+            isRoomClearItems: { type: boolean }
+            hasSingleLineDiagram: { type: boolean }
+            hasProtectiveCover: { type: boolean }
+            isLabelingComplete: { type: boolean }
+            isFireExtinguisherAvailable: { type: boolean }
+        testing:
+          type: object
+          properties:
+            isThermographTestOk: { type: boolean }
+            areSafetyDevicesFunctional: { type: boolean }
+            isVoltageBetweenPhasesNormal: { type: boolean }
+            isPhaseLoadBalanced: { type: boolean }
+
+    BapListrikResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapListrikPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+              example: "bapListrikId12345"
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Instalasi Listrik"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Berita Acara dan Pemeriksaan Pengujian"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+              example: "2025-07-22T11:00:00.000Z"
+
+    BapListrikSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Instalasi Listrik berhasil dibuat
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapListrikResponseData"
+
+    GetAllBapListrikResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Semua BAP Instalasi Listrik berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapListrikResponseData"
+
+    BapListrikPrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP berhasil didapatkan
+        data:
+          $ref: "#/components/schemas/BapListrikPayload"
