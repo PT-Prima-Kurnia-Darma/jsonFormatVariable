@@ -9,11 +9,10 @@
     "equipmentType": "Double Girder Overhead Crane"
   },
   "generalData": {
-    "ownerName": "update",
-    "companyLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
+    "unitLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
     "userInCharge": "Divisi Produksi",
-    "ownerAddress": "Area Fabrikasi Utama",
-    "unitLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang"
+    "ownerName": "update",
+    "ownerAddress": "Area Fabrikasi Utama"
   },
   "technicalData": {
     "brandType": "KONECRANES / CXT",

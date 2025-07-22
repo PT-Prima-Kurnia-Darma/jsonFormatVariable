@@ -1,10 +1,11 @@
 {
   "status": "success",
-  "message": "string",
+  "message": "BAP Overhead Crane berhasil didapat",
   "data": {
     "bap": [
       {
-        "laporanId": "DkBGHaNoG8dFruMczeNs",
+        "id": "VaqijHLgNyS7V7tsCjnl",
+        "laporanId": "7XXl6vesZYRq422PvEyI",
         "reportHeader": {
           "examinationType": "PERIODIK",
           "inspectionDate": "Tangerang, 19 Juli 2025",
@@ -14,7 +15,6 @@
           "equipmentType": "Double Girder Overhead Crane"
         },
         "generalData": {
-          "ownerName": "update",
           "companyLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
           "userInCharge": "Divisi Produksi",
           "ownerAddress": "Area Fabrikasi Utama",
@@ -47,10 +47,9 @@
             "hasCrackIndication": true
           }
         },
-        "id": "string",
         "subInspectionType": "Overhead Crane",
         "documentType": "Berita Acara dan Pemeriksaan Pengujian",
-        "createdAt": "2025-07-22T09:22:51.023Z"
+        "createdAt": "2025-07-22T23:20:29.014Z"
       }
     ]
   }

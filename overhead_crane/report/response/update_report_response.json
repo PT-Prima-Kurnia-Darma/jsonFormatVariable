@@ -1,13 +1,14 @@
 {
   "status": "success",
-  "message": "string",
+  "message": "Laporan Overhead Crane berhasil dibuat",
   "data": {
     "laporan": {
+      "id": "7XXl6vesZYRq422PvEyI",
       "examinationType": "PERIODIK",
       "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
       "inspectionDate": "Tangerang, 19 Juli 2025",
       "extraId": 190725,
-      "createdAt": "2025-07-22T09:22:51.023Z",
+      "createdAt": "2025-07-22T23:16:47.639Z",
       "generalData": {
         "ownerName": "PT. Konstruksi Baja Perkasa",
         "ownerAddress": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
@@ -20,7 +21,7 @@
         "yearOfManufacture": "2020",
         "serialNumberUnitNumber": "KC-20-DG-98765",
         "capacityWorkingLoadKg": "20000",
-        "legalBasis": "Undang – Undang No.1 Tahun 1970 Tentang Keselamatan Kerja,Permenaker No. 8 Tahun 2020 Tentang Keselamatan dan Kesehatan Kerja Pesawat Angkat & Pesawat Angkut",
+        "legalBasis": "Undang - Undang No.1 Tahun 1970 Tentang Keselamatan Kerja,Permenaker No. 8 Tahun 2020 Tentang Keselamatan dan Kesehatan Kerja Pesawat Angkat & Pesawat Angkut",
         "intendedUse": "Mengangkat dan memindahkan material baja berat",
         "usagePermitNumber": "123/SK/PJK3/VII/2024",
         "operatorCertificate": "Ada, SIO Kelas I (A/N Ahmad Dahlan)",
@@ -162,7 +163,636 @@
           }
         }
       },
-      "visualInspection": {},
+      "visualInspection": {
+        "foundation": {
+          "bolts": {
+            "corrosion": {
+              "status": true,
+              "remarks": "Kondisi Baik"
+            },
+            "cracks": {
+              "status": false,
+              "remarks": "Ditemukan retak rambut pada baut #3"
+            },
+            "deformation": {
+              "status": true,
+              "remarks": "Tidak ada deformasi"
+            },
+            "fastening": {
+              "status": false,
+              "remarks": "Baut #2 & #5 kendor, perlu dikencangkan"
+            }
+          }
+        },
+        "columnFrame": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Coating utuh, kondisi baik"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Tidak ada retak pada sambungan las"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak ada perubahan bentuk"
+          },
+          "fastening": {
+            "status": true,
+            "remarks": "Pengikatan kokoh"
+          },
+          "crossBracing": {
+            "status": false,
+            "remarks": "Ditemukan korosi pada bracing silang"
+          },
+          "diagonalBracing": {
+            "status": true,
+            "remarks": "Terpasang kokoh"
+          }
+        },
+        "stairs": {
+          "corrosion": {
+            "status": false,
+            "remarks": "Korosi pada railing tangga"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Tidak ada retak"
+          },
+          "deformation": {
+            "status": false,
+            "remarks": "Anak tangga no 7 sedikit bengkok"
+          },
+          "fastening": {
+            "status": true,
+            "remarks": "Ikatan kuat"
+          }
+        },
+        "platform": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Permukaan bersih"
+          },
+          "cracks": {
+            "status": false,
+            "remarks": "Retak pada plat bordes dekat kolom A"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak ada perubahan bentuk"
+          },
+          "fastening": {
+            "status": false,
+            "remarks": "Pengikat platform kendor"
+          }
+        },
+        "railSupportBeam": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "fastening": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          }
+        },
+        "travelingRail": {
+          "corrosion": {
+            "status": false,
+            "remarks": "Korosi pada permukaan rel"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Tidak ada retak"
+          },
+          "joints": {
+            "status": false,
+            "remarks": "Sambungan tidak rata"
+          },
+          "straightness": {
+            "status": true,
+            "remarks": "Kelurusan baik"
+          },
+          "interRailStraightness": {
+            "status": false,
+            "remarks": "Kelurusan antar rel perlu di-adjust"
+          },
+          "interRailEvenness": {
+            "status": true,
+            "remarks": "Kerataan baik"
+          },
+          "jointGap": {
+            "status": false,
+            "remarks": "Jarak tidak sesuai"
+          },
+          "fasteners": {
+            "status": true,
+            "remarks": "Pengikat lengkap"
+          },
+          "stopper": {
+            "status": false,
+            "remarks": "Baut stopper kendor"
+          }
+        },
+        "traversingRail": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Tidak ada retak"
+          },
+          "joints": {
+            "status": true,
+            "remarks": "Sambungan rata"
+          },
+          "straightness": {
+            "status": true,
+            "remarks": "Kelurusan baik"
+          },
+          "interRailStraightness": {
+            "status": true,
+            "remarks": "Kelurusan antar rel baik"
+          },
+          "interRailEvenness": {
+            "status": true,
+            "remarks": "Kerataan baik"
+          },
+          "jointGap": {
+            "status": true,
+            "remarks": "Jarak sesuai"
+          },
+          "fasteners": {
+            "status": false,
+            "remarks": "Baut pengikat rel hilang 1"
+          },
+          "stopper": {
+            "status": true,
+            "remarks": "Stopper kokoh"
+          }
+        },
+        "girder": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "cracks": {
+            "status": false,
+            "remarks": "Ditemukan retak pada sambungan girder"
+          },
+          "camber": {
+            "status": true,
+            "remarks": "Kecembungan normal"
+          },
+          "joints": {
+            "status": true,
+            "remarks": "Sambungan baik"
+          },
+          "endJoints": {
+            "status": false,
+            "remarks": "Baut sambungan ujung girder korosi"
+          },
+          "truckMount": {
+            "status": true,
+            "remarks": "Dudukan kokoh"
+          }
+        },
+        "travelingGearbox": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "cracks": {
+            "status": false,
+            "remarks": "Terdapat rembesan oli"
+          },
+          "lubricant": {
+            "status": true,
+            "remarks": "Volume cukup"
+          },
+          "oilSeal": {
+            "status": false,
+            "remarks": "Seal oli getas, perlu diganti"
+          }
+        },
+        "driveWheel": {
+          "wear": {
+            "status": true,
+            "remarks": "Keausan normal"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Tidak ada retak"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak ada perubahan bentuk"
+          },
+          "flange": {
+            "status": false,
+            "remarks": "Flensa roda aus"
+          },
+          "chain": {
+            "status": true,
+            "remarks": "Menggunakan shaft"
+          }
+        },
+        "idleWheel": {
+          "security": {
+            "status": true,
+            "remarks": "Terpasang aman"
+          },
+          "cracks": {
+            "status": false,
+            "remarks": "Ditemukan retak pada roda idle"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak ada perubahan bentuk"
+          },
+          "flange": {
+            "status": false,
+            "remarks": "Flensa roda aus"
+          }
+        },
+        "wheelConnector": {
+          "straightness": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "crossJoint": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "lubrication": {
+            "status": false,
+            "remarks": "Pelumasan kering"
+          }
+        },
+        "girderBumper": {
+          "condition": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "reinforcement": {
+            "status": false,
+            "remarks": "Bumper girder sobek"
+          }
+        },
+        "trolleyGearbox": {
+          "fastening": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "corrosion": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "cracks": {
+            "status": false,
+            "remarks": "Terdapat rembesan oli"
+          },
+          "lubricant": {
+            "status": true,
+            "remarks": "Volume cukup"
+          },
+          "oilSeal": {
+            "status": false,
+            "remarks": "Seal oli getas, perlu diganti"
+          }
+        },
+        "trolleyDriveWheel": {
+          "wear": {
+            "status": true,
+            "remarks": "Keausan normal"
+          },
+          "cracks": {
+            "status": true,
+            "remarks": "Tidak ada retak"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak ada perubahan bentuk"
+          },
+          "flange": {
+            "status": false,
+            "remarks": "Flensa roda aus"
+          },
+          "chain": {
+            "status": true,
+            "remarks": "Menggunakan shaft"
+          }
+        },
+        "trolleyIdleWheel": {
+          "wear": {
+            "status": true,
+            "remarks": "Keausan normal"
+          },
+          "cracks": {
+            "status": false,
+            "remarks": "Ditemukan retak pada roda idle"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak ada perubahan bentuk"
+          },
+          "flange": {
+            "status": false,
+            "remarks": "Flensa roda aus"
+          }
+        },
+        "trolleyWheelConnector": {
+          "straightness": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "crossJoint": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "lubrication": {
+            "status": false,
+            "remarks": "Pelumasan kering"
+          }
+        },
+        "trolleyBumper": {
+          "condition": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "reinforcement": {
+            "status": false,
+            "remarks": "Bumper trolley sobek"
+          }
+        },
+        "drum": {
+          "groove": {
+            "status": true,
+            "remarks": "Alur drum baik"
+          },
+          "grooveLip": {
+            "status": false,
+            "remarks": "Bibir alur aus"
+          },
+          "flanges": {
+            "status": true,
+            "remarks": "Flens utuh"
+          }
+        },
+        "brakeVisual": {
+          "wear": {
+            "status": false,
+            "remarks": "Kampas rem tipis"
+          },
+          "adjustment": {
+            "status": true,
+            "remarks": "Celah sesuai"
+          }
+        },
+        "hoistGearBox": {
+          "lubrication": {
+            "status": false,
+            "remarks": "Volume oli kurang"
+          },
+          "oilSeal": {
+            "status": true,
+            "remarks": "Tidak ada kebocoran"
+          }
+        },
+        "pulleyChainSprocket": {
+          "pulleyGroove": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "pulleyLip": {
+            "status": false,
+            "remarks": "Bibir puli aus"
+          },
+          "pulleyPin": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "pulleyBearing": {
+            "status": false,
+            "remarks": "Bantalan puli oblak"
+          },
+          "pulleyGuard": {
+            "status": true,
+            "remarks": "Terpasang"
+          },
+          "ropeChainGuard": {
+            "status": false,
+            "remarks": "Tidak terpasang"
+          }
+        },
+        "mainHook": {
+          "wear": {
+            "status": true,
+            "remarks": "Keausan normal"
+          },
+          "throatOpening": {
+            "status": false,
+            "remarks": "Bukaan tidak normal"
+          },
+          "swivel": {
+            "status": true,
+            "remarks": "Berputar lancar"
+          },
+          "trunnion": {
+            "status": false,
+            "remarks": "Trunnion retak"
+          }
+        },
+        "auxHook": {
+          "wear": {
+            "status": true,
+            "remarks": "Keausan normal"
+          },
+          "throatOpening": {
+            "status": false,
+            "remarks": "Bukaan tidak normal"
+          },
+          "swivel": {
+            "status": true,
+            "remarks": "Berputar lancar"
+          },
+          "trunnion": {
+            "status": false,
+            "remarks": "Trunnion retak"
+          }
+        },
+        "mainWireRope": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Tidak ada korosi"
+          },
+          "wear": {
+            "status": false,
+            "remarks": "Keausan melebihi batas"
+          },
+          "broken": {
+            "status": true,
+            "remarks": "Tidak ada kawat putus"
+          },
+          "deformation": {
+            "status": false,
+            "remarks": "Wire rope tertekuk"
+          }
+        },
+        "auxWireRope": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Tidak ada korosi"
+          },
+          "wear": {
+            "status": false,
+            "remarks": "Keausan melebihi batas"
+          },
+          "broken": {
+            "status": true,
+            "remarks": "Tidak ada kawat putus"
+          },
+          "deformation": {
+            "status": false,
+            "remarks": "Wire rope tertekuk"
+          }
+        },
+        "mainChain": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          },
+          "wear": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          },
+          "cracksBroken": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          }
+        },
+        "auxChain": {
+          "corrosion": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          },
+          "wear": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          },
+          "cracksBroken": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          },
+          "deformation": {
+            "status": true,
+            "remarks": "Tidak menggunakan rantai"
+          }
+        },
+        "limitSwitch": {
+          "longTraveling": {
+            "status": true,
+            "remarks": "Berfungsi baik"
+          },
+          "crossTraveling": {
+            "status": false,
+            "remarks": "Tidak berfungsi"
+          },
+          "lifting": {
+            "status": true,
+            "remarks": "Berfungsi baik (atas & bawah)"
+          }
+        },
+        "operatorCabin": {
+          "safetyStairs": {
+            "status": true,
+            "remarks": "Aman"
+          },
+          "door": {
+            "status": false,
+            "remarks": "Pintu tidak bisa dikunci"
+          },
+          "window": {
+            "status": true,
+            "remarks": "Bersih"
+          },
+          "fanAc": {
+            "status": false,
+            "remarks": "AC tidak dingin"
+          },
+          "controlLevers": {
+            "status": true,
+            "remarks": "Berfungsi"
+          },
+          "pendantControl": {
+            "status": true,
+            "remarks": "Berfungsi"
+          },
+          "lighting": {
+            "status": false,
+            "remarks": "Lampu kabin mati"
+          },
+          "horn": {
+            "status": true,
+            "remarks": "Nyaring"
+          },
+          "fuse": {
+            "status": true,
+            "remarks": "Baik"
+          },
+          "commTool": {
+            "status": false,
+            "remarks": "Radio mati"
+          },
+          "fireExtinguisher": {
+            "status": true,
+            "remarks": "Tersedia & valid"
+          },
+          "operatingSigns": {
+            "status": false,
+            "remarks": "Tidak terbaca"
+          },
+          "masterSwitch": {
+            "status": true,
+            "remarks": "Berfungsi"
+          }
+        },
+        "electricalComponents": {
+          "panelConnector": {
+            "status": true,
+            "remarks": "Kondisi Baik"
+          },
+          "conductorGuard": {
+            "status": false,
+            "remarks": "Tidak terpasang"
+          },
+          "motorSafetySystem": {
+            "status": true,
+            "remarks": "Overload berfungsi"
+          },
+          "groundingSystem": {
+            "status": false,
+            "remarks": "Tahanan 2.5 Ohm, tidak baik"
+          },
+          "installation": {
+            "status": true,
+            "remarks": "Rapi dan aman"
+          }
+        }
+      },
       "nonDestructiveExamination": {
         "chain": {
           "method": "Visual & Measurement",
@@ -177,6 +807,39 @@
               "defectAda": false,
               "defectTidakAda": true,
               "description": "Baik"
+            },
+            {
+              "chainLocaton": "Aux Rope",
+              "specDimension": "16",
+              "resultDimension": "15.9",
+              "extendLengthMax": "0.3",
+              "wearMax": "0.45",
+              "safetyFactor": "6",
+              "defectAda": true,
+              "defectTidakAda": false,
+              "description": "Ditemukan cacat"
+            },
+            {
+              "chainLocaton": "Aux Rope",
+              "specDimension": "16",
+              "resultDimension": "15.9",
+              "extendLengthMax": "0.3",
+              "wearMax": "0.45",
+              "safetyFactor": "6",
+              "defectAda": true,
+              "defectTidakAda": false,
+              "description": "Ditemukan cacat"
+            },
+            {
+              "chainLocaton": "Aux Rope",
+              "specDimension": "16",
+              "resultDimension": "15.9",
+              "extendLengthMax": "0.3",
+              "wearMax": "0.45",
+              "safetyFactor": "6",
+              "defectAda": true,
+              "defectTidakAda": false,
+              "description": "Ditemukan cacat"
             }
           ]
         },
@@ -213,9 +876,77 @@
               "shouldBe": "25.0 m/menit",
               "testedOrMeasured": "24.9 m/menit",
               "remarks": "Baik"
+            },
+            {
+              "test": "Traversing/Melintang",
+              "shouldBe": "15.0 m/menit",
+              "testedOrMeasured": "15.0 m/menit",
+              "remarks": "Baik"
+            },
+            {
+              "test": "Hoisting/Angkat",
+              "shouldBe": "5.0 m/menit",
+              "testedOrMeasured": "5.1 m/menit",
+              "remarks": "Baik"
+            },
+            {
+              "test": "Safety Latch",
+              "shouldBe": "Berfungsi",
+              "testedOrMeasured": "Dicoba",
+              "remarks": "Berfungsi Baik"
+            },
+            {
+              "test": "Brake Switch",
+              "shouldBe": "Berfungsi",
+              "testedOrMeasured": "Dicoba",
+              "remarks": "Berfungsi Baik"
+            },
+            {
+              "test": "Brake Locking Device",
+              "shouldBe": "Berfungsi",
+              "testedOrMeasured": "Dicoba",
+              "remarks": "Berfungsi Baik"
+            },
+            {
+              "test": "Instalasi Listrik",
+              "shouldBe": "Aman",
+              "testedOrMeasured": "Diperiksa",
+              "remarks": "Baik"
             }
           ],
           "withLoad": [
+            {
+              "load": "Tanpa Beban",
+              "hoist": "Baik",
+              "traversing": "Baik",
+              "traveling": "Baik",
+              "brakeSystem": "Berfungsi",
+              "remarks": "Baik"
+            },
+            {
+              "load": "25% SWL",
+              "hoist": "Baik",
+              "traversing": "Baik",
+              "traveling": "Baik",
+              "brakeSystem": "Berfungsi",
+              "remarks": "Baik"
+            },
+            {
+              "load": "50% SWL",
+              "hoist": "Baik",
+              "traversing": "Baik",
+              "traveling": "Baik",
+              "brakeSystem": "Berfungsi",
+              "remarks": "Baik"
+            },
+            {
+              "load": "75% SWL",
+              "hoist": "Baik",
+              "traversing": "Baik",
+              "traveling": "Baik",
+              "brakeSystem": "Berfungsi",
+              "remarks": "Baik"
+            },
             {
               "load": "100% SWL (20 Ton)",
               "hoist": "Baik",
@@ -253,7 +984,6 @@
       },
       "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian periodik, ditemukan beberapa ketidaksesuaian yang memerlukan perbaikan. Double Girder Overhead Crane KONE-CRANES dengan nomor seri KC-20-DG-98765 dinyatakan TIDAK LAIK DIOPERASIKAN dan memerlukan perbaikan sebelum pemeriksaan ulang.",
       "recommendations": "1. Ganti baut pondasi #3 yang retak dan kencangkan baut #2 & #5.\n2. Lakukan perbaikan korosi pada railing tangga dan bracing silang.\n3. Ganti seal oli pada gearbox traveling dan trolley.\n4. Ganti wire rope utama dan aux karena aus dan tertekuk.\n5. Perbaiki limit switch cross traveling.\n6. Perbaiki grounding system.",
-      "id": "string",
       "subInspectionType": "Overhead Crane",
       "documentType": "Laporan"
     }
