@@ -1,0 +1,62 @@
+{
+  "status": "success",
+  "message": "string",
+  "data": {
+    "bap": [
+      {
+        "laporanId": "string",
+        "examinationType": "Pemeriksaan dan Pengujian Berkala",
+        "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+        "inspectionDate": "16 Juli 2025",
+        "createdAt": "2025-07-22T09:22:51.023Z",
+        "extraId": 123,
+        "generalData": {
+          "companyName": "PT. IVAN GACOR PAR 2",
+          "companyLocation": "Kawasan Industri Modern, Jl. Logam No. 17, Cikande, Serang",
+          "usageLocation": "Gudang Fabrikasi Utama",
+          "location": "PT. Baja Perkasa Industri"
+        },
+        "technicalData": {
+          "brandOrType": "KITO / ER2-050S",
+          "manufacturerHoist": "KITO / Jepang",
+          "manufactureStructure": "PT. Karya Anak Bangsa",
+          "manufactureYear": "2021",
+          "manufactureCountry": "Indonesia",
+          "serialNumber": "K21-98765",
+          "maxLiftingCapacityKg": "5.000",
+          "liftingSpeedMpm": "5.2"
+        },
+        "inspectionResult": {
+          "visualCheck": {
+            "isMainStructureGood": true,
+            "areBoltsAndNutsSecure": false,
+            "isWireRopeGoodCondition": true,
+            "isHookGoodCondition": true,
+            "isGearboxGoodCondition": true,
+            "hasGearboxOilLeak": true,
+            "isWarningLampGoodCondition": false,
+            "isCapacityMarkingDisplayed": true
+          },
+          "functionalTest": {
+            "isForwardReverseFunctionOk": true,
+            "isHoistingFunctionOk": true,
+            "isLimitSwitchFunctional": false
+          },
+          "ndtTest": {
+            "method": "Magnetic Particle Inspection (MPI)",
+            "isNdtResultGood": true
+          },
+          "loadTest": {
+            "loadKg": "6.250 kg (125%)",
+            "liftHeightMeters": "2 meter",
+            "holdTimeSeconds": "600 detik (10 Menit)",
+            "isLoadTestResultGood": true
+          }
+        },
+        "id": "string",
+        "subInspectionType": "Gantry Crane",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      }
+    ]
+  }
+}
