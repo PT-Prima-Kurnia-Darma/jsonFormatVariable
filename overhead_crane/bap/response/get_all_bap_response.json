@@ -1,0 +1,57 @@
+{
+  "status": "success",
+  "message": "string",
+  "data": {
+    "bap": [
+      {
+        "laporanId": "DkBGHaNoG8dFruMczeNs",
+        "reportHeader": {
+          "examinationType": "PERIODIK",
+          "inspectionDate": "Tangerang, 19 Juli 2025",
+          "extraId": 190725,
+          "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+          "createdAt": "2025-07-19T10:00:00.000Z",
+          "equipmentType": "Double Girder Overhead Crane"
+        },
+        "generalData": {
+          "ownerName": "update",
+          "companyLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
+          "userInCharge": "Divisi Produksi",
+          "ownerAddress": "Area Fabrikasi Utama",
+          "unitLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang"
+        },
+        "technicalData": {
+          "brandType": "KONECRANES / CXT",
+          "manufacturer": "Konecranes / Finland",
+          "locationAndYearOfManufacture": "2020",
+          "serialNumberUnitNumber": "KC-20-DG-98765",
+          "capacityWorkingLoad": "20000",
+          "liftingSpeedMpm": "5.0"
+        },
+        "visualInspection": {
+          "hasConstructionDefects": false,
+          "hookHasSafetyLatch": true,
+          "isEmergencyStopInstalled": true,
+          "isWireropeGoodCondition": false,
+          "operatorHasK3License": true
+        },
+        "testing": {
+          "functionTest": true,
+          "loadTest": {
+            "loadTon": 25,
+            "isAbleToLift": true,
+            "hasLoadDrop": false
+          },
+          "ndtTest": {
+            "isNdtResultGood": false,
+            "hasCrackIndication": true
+          }
+        },
+        "id": "string",
+        "subInspectionType": "Overhead Crane",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": "2025-07-22T09:22:51.023Z"
+      }
+    ]
+  }
+}

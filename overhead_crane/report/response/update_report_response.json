@@ -1,0 +1,261 @@
+{
+  "status": "success",
+  "message": "string",
+  "data": {
+    "laporan": {
+      "examinationType": "PERIODIK",
+      "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+      "inspectionDate": "Tangerang, 19 Juli 2025",
+      "extraId": 190725,
+      "createdAt": "2025-07-22T09:22:51.023Z",
+      "generalData": {
+        "ownerName": "PT. Konstruksi Baja Perkasa",
+        "ownerAddress": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
+        "userInCharge": "PT. Konstruksi Baja Perkasa",
+        "subcontractorPersonInCharge": "Divisi Produksi",
+        "unitLocation": "Area Fabrikasi Utama",
+        "equipmentType": "Double Girder Overhead Crane",
+        "manufacturer": "Konecranes / Finland",
+        "brandType": "KONECRANES / CXT",
+        "yearOfManufacture": "2020",
+        "serialNumberUnitNumber": "KC-20-DG-98765",
+        "capacityWorkingLoadKg": "20000",
+        "legalBasis": "Undang – Undang No.1 Tahun 1970 Tentang Keselamatan Kerja,Permenaker No. 8 Tahun 2020 Tentang Keselamatan dan Kesehatan Kerja Pesawat Angkat & Pesawat Angkut",
+        "intendedUse": "Mengangkat dan memindahkan material baja berat",
+        "usagePermitNumber": "123/SK/PJK3/VII/2024",
+        "operatorCertificate": "Ada, SIO Kelas I (A/N Ahmad Dahlan)",
+        "technicalOrManualData": "Tersedia Lengkap"
+      },
+      "technicalData": {
+        "specifications": {
+          "liftingHeight": {
+            "hoisting": "12.0",
+            "traveling": "12.0",
+            "traversing": "12.0"
+          },
+          "girderLength": {
+            "hoisting": "15.0",
+            "traveling": "30",
+            "traversing": "15"
+          },
+          "speed_m_per_min": {
+            "hoisting": "5.0",
+            "traveling": "25.0",
+            "traversing": "15.0"
+          }
+        },
+        "driveMotor": {
+          "capacity_ton": {
+            "hoisting": "20.0",
+            "traveling": "2.5",
+            "traversing": "1.5"
+          },
+          "power_kw": {
+            "hoisting": "15.0",
+            "traveling": "3.0",
+            "traversing": "2.2"
+          },
+          "type": {
+            "hoisting": "AC Squirrel Cage",
+            "traveling": "AC Geared Brake Motor",
+            "traversing": "AC Geared Brake Motor"
+          },
+          "revolution_rpm": {
+            "hoisting": "1480",
+            "traveling": "1450",
+            "traversing": "1450"
+          },
+          "voltage_v": {
+            "hoisting": "380",
+            "traveling": "380",
+            "traversing": "380"
+          },
+          "current_a": {
+            "hoisting": "30.5",
+            "traveling": "6.5",
+            "traversing": "4.8"
+          },
+          "frequency_hz": {
+            "hoisting": "50",
+            "traveling": "50",
+            "traversing": "50"
+          }
+        },
+        "startingResistor": {
+          "type": {
+            "hoisting": "Inverter",
+            "traveling": "Inverter",
+            "traversing": "Inverter"
+          },
+          "voltage_v": {
+            "hoisting": "380",
+            "traveling": "380",
+            "traversing": "380"
+          },
+          "current_a": {
+            "hoisting": "30.5",
+            "traveling": "6.5",
+            "traversing": "4.8"
+          }
+        },
+        "brake": {
+          "kind": {
+            "hoisting": "Electromagnetic Disc",
+            "traveling": "Electromagnetic Disc",
+            "traversing": "Electromagnetic Disc"
+          },
+          "type": {
+            "hoisting": "Fail-safe DC Brake",
+            "traveling": "Integrated Motor Brake",
+            "traversing": "Integrated Motor Brake"
+          }
+        },
+        "controllerBrake": {
+          "kind": {
+            "hoisting": "Regenerative Braking",
+            "traveling": "Regenerative Braking",
+            "traversing": "Regenerative Braking"
+          },
+          "type": {
+            "hoisting": "Inverter Controlled",
+            "traveling": "Inverter Controlled",
+            "traversing": "Inverter Controlled"
+          }
+        },
+        "hook": {
+          "type": {
+            "hoisting": "Double Hook with Safety Latch",
+            "traveling": "Double Hook with Safety Latch",
+            "traversing": "Double Hook with Safety Latch"
+          },
+          "capacity": {
+            "hoisting": "20 ton",
+            "traveling": "20 ton",
+            "traversing": "20 ton"
+          },
+          "material": {
+            "hoisting": "High-tensile Forged Alloy Steel",
+            "traveling": "High-tensile Forged Alloy Steel",
+            "traversing": "High-tensile Forged Alloy Steel"
+          }
+        },
+        "chain": {
+          "type": {
+            "hoisting": "Wire Rope",
+            "traveling": "Wire Rope",
+            "traversing": "Wire Rope"
+          },
+          "construction": {
+            "hoisting": "6x36 WS-IWRC",
+            "traveling": "6x36 WS-IWRC",
+            "traversing": "6x36 WS-IWRC"
+          },
+          "diameter": {
+            "hoisting": "22 mm",
+            "traveling": "22 mm",
+            "traversing": "22 mm"
+          },
+          "length": {
+            "hoisting": "15 m",
+            "traveling": "15 m",
+            "traversing": "15 m"
+          }
+        }
+      },
+      "visualInspection": {},
+      "nonDestructiveExamination": {
+        "chain": {
+          "method": "Visual & Measurement",
+          "items": [
+            {
+              "chainLocaton": "Main Rope",
+              "specDimension": "22",
+              "resultDimension": "21.8",
+              "extendLengthMax": "0.4",
+              "wearMax": "0.9",
+              "safetyFactor": "6",
+              "defectAda": false,
+              "defectTidakAda": true,
+              "description": "Baik"
+            }
+          ]
+        },
+        "mainHook": {
+          "method": "Magnetic Particle Inspection & Visual",
+          "measurements": {
+            "A": "75.2",
+            "B": "80.5",
+            "C": "50.3",
+            "D": "150.1",
+            "E": "300.0",
+            "F": "50.2",
+            "G": "50.3",
+            "H": "50.4"
+          },
+          "tolerances": {
+            "A": "75.0",
+            "B": "80.0",
+            "C": "50.0",
+            "D": "150.0",
+            "E": "300.0",
+            "F": "50.0",
+            "G": "50.0",
+            "H": "50.0"
+          },
+          "result": "Ditemukan indikasi retak pada area leher hook."
+        }
+      },
+      "testing": {
+        "dynamicTest": {
+          "withoutLoad": [
+            {
+              "test": "Travelling/Memanjang",
+              "shouldBe": "25.0 m/menit",
+              "testedOrMeasured": "24.9 m/menit",
+              "remarks": "Baik"
+            }
+          ],
+          "withLoad": [
+            {
+              "load": "100% SWL (20 Ton)",
+              "hoist": "Baik",
+              "traversing": "Baik",
+              "traveling": "Baik",
+              "brakeSystem": "Berfungsi",
+              "remarks": "Baik, pengereman presisi."
+            }
+          ]
+        },
+        "staticTest": {
+          "testLoad": "125% SWL (25 Ton)",
+          "deflection": {
+            "singleGirder": {
+              "measurement": "12.0 mm",
+              "description": "Di bawah batas izin"
+            },
+            "doubleGirder": {
+              "measurement": "11.5 mm",
+              "description": "Di bawah batas izin"
+            }
+          },
+          "singleGirder": {
+            "design_mm": "34.0",
+            "span_mm": "30000",
+            "result": true
+          },
+          "doubleGirder": {
+            "design_mm": "34.0",
+            "span_mm": "30000",
+            "result": false
+          },
+          "notes": "Pengujian statis dilakukan selama 15 menit, tidak ditemukan deformasi permanen pada struktur girder."
+        }
+      },
+      "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian periodik, ditemukan beberapa ketidaksesuaian yang memerlukan perbaikan. Double Girder Overhead Crane KONE-CRANES dengan nomor seri KC-20-DG-98765 dinyatakan TIDAK LAIK DIOPERASIKAN dan memerlukan perbaikan sebelum pemeriksaan ulang.",
+      "recommendations": "1. Ganti baut pondasi #3 yang retak dan kencangkan baut #2 & #5.\n2. Lakukan perbaikan korosi pada railing tangga dan bracing silang.\n3. Ganti seal oli pada gearbox traveling dan trolley.\n4. Ganti wire rope utama dan aux karena aus dan tertekuk.\n5. Perbaiki limit switch cross traveling.\n6. Perbaiki grounding system.",
+      "id": "string",
+      "subInspectionType": "Overhead Crane",
+      "documentType": "Laporan"
+    }
+  }
+}
