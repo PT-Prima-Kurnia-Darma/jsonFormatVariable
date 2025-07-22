@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "message": "string",
+  "data": {
+    "bap": [
+      {
+        "laporanId": "string",
+        "inspectionDate": "string",
+        "examinationType": "string",
+        "equipmentType": "string",
+        "extraId": 1,
+        "inspectionType": "string",
+        "generalData": {
+          "ownerName": "",
+          "ownerAddress": "",
+          "nameUsageLocation": "",
+          "addressUsageLocation": ""
+        },
+        "technicalData": {
+          "elevatorType": "",
+          "manufacturerOrInstaller": "",
+          "brandOrType": "",
+          "countryAndYear": "",
+          "serialNumber": "",
+          "capacity": "",
+          "speed": "",
+          "floorsServed": ""
+        },
+        "visualInspection": {
+          "isMachineRoomConditionAcceptable": true,
+          "isPanelGoodCondition": true,
+          "isAparAvailableInPanelRoom": true,
+          "lightingCondition": true,
+          "isPitLadderAvailable": true
+        },
+        "testing": {
+          "isNdtThermographPanelOk": true,
+          "isArdFunctional": true,
+          "isGovernorFunctional": true,
+          "isSlingConditionOkByTester": true,
+          "limitSwitchTest": true,
+          "isDoorSwitchFunctional": true,
+          "pitEmergencyStopStatus": true,
+          "isIntercomFunctional": true,
+          "isFiremanSwitchFunctional": true
+        },
+        "id": "string",
+        "subInspectionType": "string",
+        "documentType": "string",
+        "createdAt": "2025-07-22T04:57:39.177Z"
+      }
+    ]
+  }
+}
