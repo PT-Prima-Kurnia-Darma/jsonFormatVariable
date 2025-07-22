@@ -1,0 +1,43 @@
+{
+  "laporanId": "8JFHuj4xgcKLVdlibgTu",
+  "inspectionDate": "Sabtu, 5 Juli 2025",
+  "examinationType": "Pemeriksaan dan Pengujian Berkala",
+  "equipmentType": "Elevator Penumpang",
+  "extraId": 123,
+  "createdAt": "2025-07-15T11:36:36.173Z",
+  "inspectionType": "Elevator dan Eskalator",
+  "generalData": {
+    "ownerName": "PT TESTING PART 2 ",
+    "ownerAddress": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Barat",
+    "nameUsageLocation": "Menara Perkantoran Sentral",
+    "addressUsageLocation": "Jl. MH Thamrin No. 1, Jakarta Pusat"
+  },
+  "technicalData": {
+    "elevatorType": "Traction",
+    "manufacturerOrInstaller": "PT Elevator Maju Jaya",
+    "brandOrType": "MajuLift Pro-X",
+    "countryAndYear": "Jepang / 2022",
+    "serialNumber": "MLPX-2022-12345",
+    "capacity": "1000 kg / 15 orang",
+    "speed": "150 m/min",
+    "floorsServed": "20 lantai (1-20)"
+  },
+  "visualInspection": {
+    "isMachineRoomConditionAcceptable": true,
+    "isPanelGoodCondition": true,
+    "isAparAvailableInPanelRoom": true,
+    "lightingCondition": true,
+    "isPitLadderAvailable": true
+  },
+  "testing": {
+    "isNdtThermographPanelOk": true,
+    "isArdFunctional": true,
+    "isGovernorFunctional": true,
+    "isSlingConditionOkByTester": true,
+    "limitSwitchTest": true,
+    "isDoorSwitchFunctional": true,
+    "pitEmergencyStopStatus": true,
+    "isIntercomFunctional": true,
+    "isFiremanSwitchFunctional": true
+  }
+}

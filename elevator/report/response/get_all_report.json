@@ -1,0 +1,571 @@
+{
+  "status": "success",
+  "message": "Data laporan berhasil didapatkan",
+  "data": {
+    "laporan": [
+      {
+        "id": "BnOlBQMd371m2BP3bnqu",
+        "inspectionType": "Elevator dan Eskalator",
+        "examinationType": "Pemeriksaan dan Pengujian Berkala",
+        "createdAt": "2025-07-22T14:10:34.738Z",
+        "equipmentType": "Elevator Penumpang",
+        "extraId": 123,
+        "generalData": {
+          "ownerName": "PT TESTING",
+          "ownerAddress": "Jl. Pejompongan Raya No. 15, Jakarta Pusat",
+          "nameUsageLocation": "Gedung Kantor Pusat PT UHUY",
+          "addressUsageLocation": "Jl. MH Thamrin No. 1, Jakarta Pusat",
+          "manufacturerOrInstaller": "PT Elevator Maju Jaya",
+          "elevatorType": "Traction",
+          "brandOrType": "MajuLift Pro-X",
+          "countryAndYear": "Jepang / 2022",
+          "serialNumber": "MLPX-2022-12345",
+          "capacity": "1000 kg / 15 orang",
+          "speed": "150 m/min",
+          "floorsServed": "20 lantai (1-20)",
+          "permitNumber": "SKP-ELEV-001/2022",
+          "inspectionDate": "2024-07-15"
+        },
+        "technicalDocumentInspection": {
+          "designDrawing": true,
+          "technicalCalculation": false,
+          "materialCertificate": true,
+          "controlPanelDiagram": false,
+          "asBuiltDrawing": true,
+          "componentCertificates": false,
+          "safeWorkProcedure": true
+        },
+        "inspectionAndTesting": {
+          "machineRoomAndMachinery": {
+            "machineMounting": {
+              "result": "Getaran terukur < 0.3 mm/s",
+              "status": true
+            },
+            "mechanicalBrake": {
+              "result": "Gesekan rata, tidak ada slip",
+              "status": false
+            },
+            "electricalBrake": {
+              "result": "Tegangan kontrol 24 V normal",
+              "status": true
+            },
+            "machineRoomConstruction": {
+              "result": "Struktur baja berkualitas",
+              "status": false
+            },
+            "machineRoomClearance": {
+              "result": "Clearance ≥ 1 meter",
+              "status": true
+            },
+            "machineRoomImplementation": {
+              "result": "Lampu LED 200 lux",
+              "status": true
+            },
+            "ventilation": {
+              "result": "Angin masuk 3 m³/min",
+              "status": false
+            },
+            "machineRoomDoor": {
+              "result": "Pintu baja tahan api 2 jam",
+              "status": true
+            },
+            "mainPowerPanelPosition": {
+              "result": "Panel mudah dijangkau",
+              "status": false
+            },
+            "rotatingPartsGuard": {
+              "result": "Pelindung baja 3 mm",
+              "status": true
+            },
+            "ropeHoleGuard": {
+              "result": "Bukaan maksimum 50 mm",
+              "status": true
+            },
+            "machineRoomAccessLadder": {
+              "result": "Tangga galvanis terpasang",
+              "status": false
+            },
+            "floorLevelDifference": {
+              "result": "Δ ≤ 3 mm",
+              "status": true
+            },
+            "fireExtinguisher": {
+              "result": "APAR Dry Powder 6 kg",
+              "status": true
+            },
+            "machineRoomless": {
+              "panelPlacement": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "lightingWorkArea": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "lightingBetweenWorkArea": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "manualBrakeRelease": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "fireExtinguisherPlacement": {
+                "result": "Tidak berlaku",
+                "status": true
+              }
+            },
+            "emergencyStopSwitch": {
+              "result": "Respon < 0.5 detik",
+              "status": false
+            }
+          },
+          "suspensionRopesAndBelts": {
+            "condition": {
+              "result": "Serabut utuh, bebas korosi",
+              "status": true
+            },
+            "chainUsage": {
+              "result": "Tidak menggunakan rantai",
+              "status": true
+            },
+            "safetyFactor": {
+              "result": "Factor 11.3×",
+              "status": false
+            },
+            "ropeWithCounterweight": {
+              "result": "4 tali Ø 10 mm",
+              "status": true
+            },
+            "ropeWithoutCounterweight": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "belt": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "slackRopeDevice": {
+              "result": "Tidak berlaku",
+              "status": true
+            }
+          },
+          "drumsAndSheaves": {
+            "drumGrooves": {
+              "result": "Alur bersih, tidak aus",
+              "status": true
+            },
+            "passengerDrumDiameter": {
+              "result": "Diameter 200 mm",
+              "status": false
+            },
+            "governorDrumDiameter": {
+              "result": "Diameter 150 mm",
+              "status": true
+            }
+          },
+          "hoistwayAndPit": {
+            "construction": {
+              "result": "Baja struktural padat",
+              "status": true
+            },
+            "walls": {
+              "result": "Beton halus, dicat epoksi",
+              "status": false
+            },
+            "inclinedElevatorTrackBed": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "cleanliness": {
+              "result": "Debu < 5 mg/m²",
+              "status": true
+            },
+            "lighting": {
+              "result": "120 lux terukur",
+              "status": false
+            },
+            "emergencyDoorNonStop": {
+              "result": "Sensor bekerja presisi",
+              "status": true
+            },
+            "emergencyDoorSize": {
+              "result": "Lebar 800 mm",
+              "status": true
+            },
+            "emergencyDoorSafetySwitch": {
+              "result": "Respon cepat",
+              "status": true
+            },
+            "emergencyDoorBridge": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "carTopClearance": {
+              "result": "600 mm",
+              "status": false
+            },
+            "pitClearance": {
+              "result": "650 mm",
+              "status": true
+            },
+            "pitLadder": {
+              "result": "Tangga aluminium",
+              "status": true
+            },
+            "pitBelowWorkingArea": {
+              "result": "Lantai beton padat",
+              "status": false
+            },
+            "pitAccessSwitch": {
+              "result": "Berfungsi normal",
+              "status": true
+            },
+            "pitScreen": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "hoistwayDoorLeaf": {
+              "result": "Tahan api 2 jam",
+              "status": true
+            },
+            "hoistwayDoorInterlock": {
+              "result": "Kunci magnetik aktif",
+              "status": false
+            },
+            "floorLeveling": {
+              "result": "± 2 mm akurasi",
+              "status": true
+            },
+            "hoistwaySeparatorBeam": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "inclinedElevatorStairs": {
+              "result": "Tidak berlaku",
+              "status": true
+            }
+          },
+          "car": {
+            "frame": {
+              "result": "Baja S275JK",
+              "status": true
+            },
+            "body": {
+              "result": "Laminasi stainless steel",
+              "status": true
+            },
+            "wallHeight": {
+              "result": "2200 mm",
+              "status": false
+            },
+            "floorArea": {
+              "result": "1.2 m²/orang",
+              "status": true
+            },
+            "carAreaExpansion": {
+              "result": "Tidak ada",
+              "status": true
+            },
+            "carDoor": {
+              "result": "Kecepatan 0.5 m/s",
+              "status": false
+            },
+            "carDoorSpecs": {
+              "size": {
+                "result": "800×2100 mm",
+                "status": true
+              },
+              "lockAndSwitch": {
+                "result": "Saklar magnetik OK",
+                "status": true
+              },
+              "sillClearance": {
+                "result": "30 mm",
+                "status": false
+              }
+            },
+            "carToBeamClearance": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "alarmBell": {
+              "result": "≥ 85 dB",
+              "status": true
+            },
+            "backupPowerARD": {
+              "result": "Baterai 24 V siap",
+              "status": false
+            },
+            "intercom": {
+              "result": "Jangkauan 10 m",
+              "status": true
+            },
+            "ventilation": {
+              "result": "Fan 50 CFM",
+              "status": true
+            },
+            "emergencyLighting": {
+              "result": "Lampu LED 2×5 W",
+              "status": false
+            },
+            "operatingPanel": {
+              "result": "Tombol tactile OK",
+              "status": true
+            },
+            "carPositionIndicator": {
+              "result": "4-digit LED",
+              "status": true
+            },
+            "carSignage": {
+              "manufacturerName": {
+                "result": "Tertera jelas",
+                "status": false
+              },
+              "loadCapacity": {
+                "result": "1000 kg",
+                "status": true
+              },
+              "noSmokingSign": {
+                "result": "Terpasang",
+                "status": true
+              },
+              "overloadIndicator": {
+                "result": "LED & buzzer OK",
+                "status": true
+              },
+              "doorOpenCloseButtons": {
+                "result": "Fungsi responsif",
+                "status": false
+              },
+              "floorButtons": {
+                "result": "Backlit OK",
+                "status": true
+              },
+              "alarmButton": {
+                "result": "Tombol merah OK",
+                "status": true
+              },
+              "twoWayIntercom": {
+                "result": "Speaker & mic OK",
+                "status": true
+              }
+            },
+            "carRoofStrength": {
+              "result": "Beban uji 500 kg",
+              "status": true
+            },
+            "carTopEmergencyExit": {
+              "result": "Handle luar OK",
+              "status": false
+            },
+            "carSideEmergencyExit": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "carTopGuardRail": {
+              "result": "1100 mm tinggi",
+              "status": true
+            },
+            "guardRailHeight300to850": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "guardRailHeightOver850": {
+              "result": "1100 mm",
+              "status": false
+            },
+            "carTopLighting": {
+              "result": "150 lux LED",
+              "status": true
+            },
+            "manualOperationButtons": {
+              "result": "Switch inspeksi OK",
+              "status": true
+            },
+            "carInterior": {
+              "result": "PVC anti-slip",
+              "status": false
+            }
+          },
+          "governorAndSafetyBrake": {
+            "governorRopeClamp": {
+              "result": "Clamp baja OK",
+              "status": true
+            },
+            "governorSwitch": {
+              "result": "Elektrik & mekanik OK",
+              "status": true
+            },
+            "safetyBrakeSpeed": {
+              "result": "Aktif pada 180 m/min",
+              "status": false
+            },
+            "safetyBrakeType": {
+              "result": "Progressive",
+              "status": true
+            },
+            "safetyBrakeMechanism": {
+              "result": "Mekanikal murni",
+              "status": false
+            },
+            "progressiveSafetyBrake": {
+              "result": "Respon halus",
+              "status": true
+            },
+            "instantaneousSafetyBrake": {
+              "result": "Tidak berlaku",
+              "status": true
+            },
+            "safetyBrakeOperation": {
+              "result": "Klip & bantalan OK",
+              "status": false
+            },
+            "electricalCutoutSwitch": {
+              "result": "Respon 0.2 detik",
+              "status": true
+            },
+            "limitSwitch": {
+              "result": "Normal & akhir batas OK",
+              "status": true
+            },
+            "overloadDevice": {
+              "result": "Uji 110% beban OK",
+              "status": false
+            }
+          },
+          "counterweightGuideRailsAndBuffers": {
+            "counterweightMaterial": {
+              "result": "Baja padat",
+              "status": true
+            },
+            "counterweightGuardScreen": {
+              "result": "Height 2.5 m",
+              "status": false
+            },
+            "guideRailConstruction": {
+              "result": "Rel H-section OK",
+              "status": true
+            },
+            "bufferType": {
+              "result": "Hidrolik 50 kN",
+              "status": false
+            },
+            "bufferFunction": {
+              "result": "Meredam halus",
+              "status": true
+            },
+            "bufferSafetySwitch": {
+              "result": "Bekerja konsisten",
+              "status": false
+            }
+          },
+          "electricalInstallation": {
+            "installationStandard": {
+              "result": "SNI 03-6005:2016",
+              "status": true
+            },
+            "electricalPanel": {
+              "result": "IP54 terpasang",
+              "status": false
+            },
+            "backupPowerARD": {
+              "result": "UPS 1 kVA",
+              "status": true
+            },
+            "groundingCable": {
+              "result": "Penampang 16 mm²",
+              "status": false
+            },
+            "fireAlarmConnection": {
+              "result": "Dipantau 24/7",
+              "status": true
+            },
+            "fireServiceElevator": {
+              "backupPower": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "specialOperation": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "fireSwitch": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "label": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "electricalFireResistance": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "hoistwayWallFireResistance": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "carSize": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "doorSize": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "travelTime": {
+                "result": "Tidak berlaku",
+                "status": true
+              },
+              "evacuationFloor": {
+                "result": "Tidak berlaku",
+                "status": true
+              }
+            },
+            "accessibilityElevator": {
+              "operatingPanel": {
+                "result": "Braille & raised buttons",
+                "status": false
+              },
+              "panelHeight": {
+                "result": "1000 mm",
+                "status": true
+              },
+              "doorOpenTime": {
+                "result": "≥ 5 detik",
+                "status": false
+              },
+              "doorWidth": {
+                "result": "800 mm",
+                "status": true
+              },
+              "audioInformation": {
+                "result": "Pengumuman otomatis OK",
+                "status": false
+              },
+              "label": {
+                "result": "Simbol kursi roda OK",
+                "status": true
+              }
+            },
+            "seismicSensor": {
+              "availability": {
+                "result": "Tersedia",
+                "status": true
+              },
+              "function": {
+                "result": "Respon goncangan OK",
+                "status": false
+              }
+            }
+          }
+        },
+        "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, elevator penumpang dinyatakan LAIK dan aman untuk dioperasikan. Beberapa rekomendasi perbaikan kecil telah dicatat untuk pemeliharaan selanjutnya. Pemeliharaan rutin harus tetap dijalankan sesuai jadwal.",
+        "recomendations": "Berdasarkan hasil pemeriksaan dan pengujian, elevator penumpang dinyatakan LAIK dan aman untuk dioperasikan. Beberapa rekomendasi perbaikan kecil telah dicatat untuk pemeliharaan selanjutnya. Pemeliharaan rutin harus tetap dijalankan sesuai jadwal.",
+        "subInspectionType": "Elevator",
+        "documentType": "Laporan"
+      }
+    ]
+  }
+}
