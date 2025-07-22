@@ -189,6 +189,50 @@ paths:
           $ref: "#/components/responses/Unauthorized"
 
   # ======================================================
+  #                 audits all
+  # ======================================================
+  /audits/all:
+    get:
+      tags:
+        - Audits-Combined
+      summary: Mengambil semua data audit dari berbagai koleksi dengan paginasi
+      description: Endpoint ini mengambil data dari koleksi 'paa', 'petirListrik', dan 'elevatorEskalator', menggabungkannya, mengurutkannya berdasarkan tanggal pembuatan terbaru, dan menyajikannya dalam format halaman (pagination).
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          description: Nomor halaman yang ingin ditampilkan.
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: size
+          in: query
+          description: Jumlah item per halaman (maksimal 100).
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+      responses:
+        "200":
+          description: Berhasil mengambil semua data audit gabungan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllAuditsSuccessResponse"
+        "400":
+          description: Permintaan tidak valid, misalnya nomor halaman melebihi total halaman yang ada.
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
   #                 LAPORAN ELEVATOR
   # ======================================================
   /elevatorEskalator/elevator/laporan:
@@ -2979,6 +3023,73 @@ components:
               type: string
             userId:
               type: string
+
+    # ======================================================
+    #                AUDIT all
+    # ======================================================
+    AuditItem:
+      type: object
+      description: Representasi sebuah item audit dari koleksi manapun. Strukturnya bisa bervariasi tergantung dari tipe auditnya.
+      properties:
+        id:
+          type: string
+          description: ID unik dari dokumen audit.
+          example: "Hxo179TK4tAi8t7aAaDt"
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp kapan dokumen audit dibuat.
+          example: "2024-05-20T14:30:00.000Z"
+        # Properti lainnya akan bervariasi tergantung pada tipe audit.
+        # 'additionalProperties: true' memungkinkan properti lain yang tidak didefinisikan secara eksplisit.
+      additionalProperties: true
+      example:
+        id: "Hxo179TK4tAi8t7aAaDt"
+        equipmentType: "Gondola"
+        documentType: "Laporan"
+        inspectionType: "PESAWAT ANGKAT DAN ANGKUT"
+        createdAt: "2023-12-15T10:00:00Z"
+        generalData:
+          ownerName: "PT. IPAN NEW"
+
+    PaginationInfo:
+      type: object
+      description: Detail informasi paginasi untuk daftar hasil.
+      properties:
+        currentPage:
+          type: integer
+          description: Halaman yang sedang ditampilkan.
+          example: 1
+        pageSize:
+          type: integer
+          description: Jumlah item per halaman.
+          example: 10
+        totalItems:
+          type: integer
+          description: Jumlah total item di semua halaman.
+          example: 53
+        totalPages:
+          type: integer
+          description: Jumlah total halaman yang tersedia.
+          example: 6
+
+    GetAllAuditsSuccessResponse:
+      type: object
+      description: Skema respons untuk permintaan yang berhasil mengambil semua data audit.
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Semua data audit berhasil diambil
+        data:
+          type: array
+          description: Daftar data audit untuk halaman saat ini.
+          items:
+            $ref: "#/components/schemas/AuditItem"
+        paging:
+          $ref: "#/components/schemas/PaginationInfo"
 
     # ======================================================
     #                 ELEVATOR SCHEMAS
