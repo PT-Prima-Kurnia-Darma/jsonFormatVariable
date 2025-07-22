@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "message": "BAP Forklift berhasil didapatkan",
+  "data": {
+    "bap": [
+      {
+        "laporanId": "string",
+        "examinationType": "string",
+        "inspectionDate": "string",
+        "createdAt": "2025-07-22T09:22:51.023Z",
+        "extraId": 1,
+        "generalData": {
+          "ownerName": "",
+          "ownerAddress": "",
+          "userInCharge": ""
+        },
+        "technicalData": {
+          "brandType": "",
+          "manufacturer": "",
+          "locationAndYearOfManufacture": "",
+          "serialNumberUnitNumber": "",
+          "capacityWorkingLoad": "",
+          "liftingHeightMeters": ""
+        },
+        "inspectionResult": {
+          "visualCheck": {
+            "hasForkDefects": true,
+            "isNameplateAttached": true,
+            "isAparAvailable": true,
+            "isCapacityMarkingDisplayed": true,
+            "hasHydraulicLeak": true,
+            "isChainGoodCondition": true
+          },
+          "functionalTest": {
+            "loadKg": "",
+            "liftHeightMeters": "",
+            "isAbleToLiftAndHold": true,
+            "isFunctioningWell": true,
+            "hasCrackIndication": true,
+            "isEmergencyStopFunctional": true,
+            "isWarningLampHornFunctional": true
+          }
+        },
+        "id": "string"
+      }
+    ]
+  }
+}

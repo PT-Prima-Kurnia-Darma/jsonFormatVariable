@@ -1,0 +1,700 @@
+{
+  "status": "success",
+  "message": "Laporan Forklift berhasil didapat",
+  "data": {
+    "laporan": {
+      "inspectionType": "string",
+      "examinationType": "string",
+      "inspectionDate": "2025-07-22",
+      "extraId": 1,
+      "generalData": {
+        "ownerName": "",
+        "ownerAddress": "",
+        "userInCharge": "",
+        "subcontractorPersonInCharge": "",
+        "unitLocation": "",
+        "operatorName": "",
+        "equipmentType": "",
+        "manufacturer": "",
+        "brandType": "",
+        "locationAndYearOfManufacture": "",
+        "serialNumberUnitNumber": "",
+        "capacityWorkingLoad": "",
+        "intendedUse": "",
+        "certificateNumber": "",
+        "equipmentHistory": ""
+      },
+      "technicalData": {
+        "specificationSerialNumber": "",
+        "specificationCapacity": "",
+        "specificationAttachment": "",
+        "specificationForkDimensions": "",
+        "specificationSpeedLifting": "",
+        "specificationSpeedLowering": "",
+        "specificationSpeedTravelling": "",
+        "primeMoverBrandType": "",
+        "primeMoverSerialNumber": "",
+        "primeMoverYearOfManufacture": "",
+        "primeMoverRevolution": "",
+        "primeMoverPower": "",
+        "primeMoverNumberOfCylinders": "",
+        "dimensionLength": "",
+        "dimensionWidth": "",
+        "dimensionHeight": "",
+        "dimensionForkLiftingHeight": "",
+        "tirePressureDriveWheel": "",
+        "tirePressureSteeringWheel": "",
+        "driveWheelSize": "",
+        "driveWheelType": "",
+        "steeringWheelSize": "",
+        "steeringWheelType": "",
+        "travellingBrakeSize": "",
+        "travellingBrakeType": "",
+        "hydraulicPumpPressure": "",
+        "hydraulicPumpType": "",
+        "hydraulicPumpReliefValve": ""
+      },
+      "inspectionAndTesting": {
+        "mainFrameAndChassis": {
+          "reinforcingFrameCorrosionResult": {
+            "result": null,
+            "status": null
+          },
+          "reinforcingFrameCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "reinforcingFrameDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "counterweightCorrosionResult": {
+            "result": null,
+            "status": null
+          },
+          "counterweightConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "otherEquipmentFloorDeckResult": {
+            "result": null,
+            "status": null
+          },
+          "otherEquipmentStairsStepsResult": {
+            "result": null,
+            "status": null
+          },
+          "otherEquipmentFasteningBoltsResult": {
+            "result": null,
+            "status": null
+          },
+          "otherEquipmentOperatorSeatResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "primeMover": {
+          "systemCoolingResult": {
+            "result": null,
+            "status": null
+          },
+          "systemLubricationResult": {
+            "result": null,
+            "status": null
+          },
+          "systemFuelResult": {
+            "result": null,
+            "status": null
+          },
+          "systemAirIntakeResult": {
+            "result": null,
+            "status": null
+          },
+          "systemExhaustGasResult": {
+            "result": null,
+            "status": null
+          },
+          "systemStarterResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalBatteryResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalStartingDynamoResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalAlternatorResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalBatteryCableResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalInstallationCableResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalLightingLampsResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalSafetyLampsResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalHornResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalFuseResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "dashboard": {
+          "tempIndicatorResult": {
+            "result": null,
+            "status": null
+          },
+          "oilPressureResult": {
+            "result": null,
+            "status": null
+          },
+          "hydraulicPressureResult": {
+            "result": null,
+            "status": null
+          },
+          "hourMeterResult": {
+            "result": null,
+            "status": null
+          },
+          "glowPlugResult": {
+            "result": null,
+            "status": null
+          },
+          "fuelIndicatorResult": {
+            "result": null,
+            "status": null
+          },
+          "loadIndicatorResult": {
+            "result": null,
+            "status": null
+          },
+          "loadChartResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "powerTrain": {
+          "starterDynamoResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringWheelResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringRodResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringGearBoxResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringPitmanResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringDragLinkResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringTieRodResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringLubeResult": {
+            "result": null,
+            "status": null
+          },
+          "wheelsFrontResult": {
+            "result": null,
+            "status": null
+          },
+          "wheelsRearResult": {
+            "result": null,
+            "status": null
+          },
+          "wheelsBoltsResult": {
+            "result": null,
+            "status": null
+          },
+          "wheelsDrumResult": {
+            "result": null,
+            "status": null
+          },
+          "wheelsLubeResult": {
+            "result": null,
+            "status": null
+          },
+          "wheelsMechanicalResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchHousingResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchTransOilResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchTransLeakResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchShaftResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchMechanicalResult": {
+            "result": null,
+            "status": null
+          },
+          "diffHousingResult": {
+            "result": null,
+            "status": null
+          },
+          "diffConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "diffOilResult": {
+            "result": null,
+            "status": null
+          },
+          "diffLeakResult": {
+            "result": null,
+            "status": null
+          },
+          "diffShaftResult": {
+            "result": null,
+            "status": null
+          },
+          "brakesMainResult": {
+            "result": null,
+            "status": null
+          },
+          "brakesHandResult": {
+            "result": null,
+            "status": null
+          },
+          "brakesEmergencyResult": {
+            "result": null,
+            "status": null
+          },
+          "brakesLeakResult": {
+            "result": null,
+            "status": null
+          },
+          "brakesMechanicalResult": {
+            "result": null,
+            "status": null
+          },
+          "transHousingResult": {
+            "result": null,
+            "status": null
+          },
+          "transOilResult": {
+            "result": null,
+            "status": null
+          },
+          "transLeakResult": {
+            "result": null,
+            "status": null
+          },
+          "transMechanicalResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "attachments": {
+          "mastWearResult": {
+            "result": null,
+            "status": null
+          },
+          "mastCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "mastDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "mastLubeResult": {
+            "result": null,
+            "status": null
+          },
+          "mastShaftBearingResult": {
+            "result": null,
+            "status": null
+          },
+          "liftChainConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "liftChainDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "liftChainLubeResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "personalBasketAndHandrail": {
+          "basketFloorCorrosionResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFloorCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFloorDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFloorFasteningResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFrameCorrosionResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFrameCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFrameDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFrameCrossBracingResult": {
+            "result": null,
+            "status": null
+          },
+          "basketFrameDiagonalBracingResult": {
+            "result": null,
+            "status": null
+          },
+          "basketBoltsCorrosionResult": {
+            "result": null,
+            "status": null
+          },
+          "basketBoltsCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "basketBoltsDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "basketBoltsFasteningResult": {
+            "result": null,
+            "status": null
+          },
+          "basketDoorCorrosionResult": {
+            "result": null,
+            "status": null
+          },
+          "basketDoorCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "basketDoorDeformationResult": {
+            "result": null,
+            "status": null
+          },
+          "basketDoorFasteningResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailCracksResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailWearResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailCracks2Result": {
+            "result": null,
+            "status": null
+          },
+          "handrailRailStraightnessResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailRailJointsResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailInterRailStraightnessResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailRailJointGapResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailRailFastenersResult": {
+            "result": null,
+            "status": null
+          },
+          "handrailRailStopperResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "hydraulicComponents": {
+          "tankLeakageResult": {
+            "result": null,
+            "status": null
+          },
+          "tankOilLevelResult": {
+            "result": null,
+            "status": null
+          },
+          "tankOilConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "tankSuctionLineResult": {
+            "result": null,
+            "status": null
+          },
+          "tankReturnLineResult": {
+            "result": null,
+            "status": null
+          },
+          "pumpLeakageResult": {
+            "result": null,
+            "status": null
+          },
+          "pumpSuctionLineResult": {
+            "result": null,
+            "status": null
+          },
+          "pumpPressureLineResult": {
+            "result": null,
+            "status": null
+          },
+          "pumpFunctionResult": {
+            "result": null,
+            "status": null
+          },
+          "pumpNoiseResult": {
+            "result": null,
+            "status": null
+          },
+          "valveLeakageResult": {
+            "result": null,
+            "status": null
+          },
+          "valveLineConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "valveReliefFunctionResult": {
+            "result": null,
+            "status": null
+          },
+          "valveNoiseResult": {
+            "result": null,
+            "status": null
+          },
+          "valveLiftCylinderResult": {
+            "result": null,
+            "status": null
+          },
+          "valveTiltCylinderResult": {
+            "result": null,
+            "status": null
+          },
+          "valveSteeringCylinderResult": {
+            "result": null,
+            "status": null
+          },
+          "actuatorLeakageResult": {
+            "result": null,
+            "status": null
+          },
+          "actuatorLineConditionResult": {
+            "result": null,
+            "status": null
+          },
+          "actuatorNoiseResult": {
+            "result": null,
+            "status": null
+          }
+        },
+        "engineOnChecks": {
+          "starterDynamoResult": {
+            "result": null,
+            "status": null
+          },
+          "instrumentResult": {
+            "result": null,
+            "status": null
+          },
+          "electricalResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageEngineOilResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageFuelResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageCoolantResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageHydraulicOilResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageTransmissionOilResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageFinalDriveOilResult": {
+            "result": null,
+            "status": null
+          },
+          "leakageBrakeFluidResult": {
+            "result": null,
+            "status": null
+          },
+          "clutchResult": {
+            "result": null,
+            "status": null
+          },
+          "transmissionResult": {
+            "result": null,
+            "status": null
+          },
+          "brakeResult": {
+            "result": null,
+            "status": null
+          },
+          "hornAlarmResult": {
+            "result": null,
+            "status": null
+          },
+          "lampsResult": {
+            "result": null,
+            "status": null
+          },
+          "hydraulicMotorResult": {
+            "result": null,
+            "status": null
+          },
+          "steeringCylinderResult": {
+            "result": null,
+            "status": null
+          },
+          "liftingCylinderResult": {
+            "result": null,
+            "status": null
+          },
+          "tiltingCylinderResult": {
+            "result": null,
+            "status": null
+          },
+          "exhaustGasResult": {
+            "result": null,
+            "status": null
+          },
+          "controlLeversResult": {
+            "result": null,
+            "status": null
+          },
+          "noiseEngineResult": {
+            "result": null,
+            "status": null
+          },
+          "noiseTurbochargerResult": {
+            "result": null,
+            "status": null
+          },
+          "noiseTransmissionResult": {
+            "result": null,
+            "status": null
+          },
+          "noiseHydraulicPumpResult": {
+            "result": null,
+            "status": null
+          },
+          "noiseProtectiveCoverResult": {
+            "result": null,
+            "status": null
+          }
+        }
+      },
+      "testingForklift": {
+        "liftingChainInspection": [
+          {
+            "inspectedPart": "",
+            "constructionType": "",
+            "standardPitch": "",
+            "measuredPitch": "",
+            "standardPin": "",
+            "measuredPin": "",
+            "result": ""
+          }
+        ],
+        "nonDestructiveTesting": {
+          "ndtType": "",
+          "results": [
+            {
+              "inspectedPart": "",
+              "location": "",
+              "defectFound": "",
+              "defectNotFound": "",
+              "result": ""
+            }
+          ]
+        },
+        "loadTesting": [
+          {
+            "liftingHeight": "",
+            "testLoad": "",
+            "speed": "",
+            "movement": "",
+            "remarks": "",
+            "result": ""
+          }
+        ]
+      },
+      "conclusion": "string",
+      "recommendation": "string",
+      "id": "string",
+      "createdAt": "2025-07-22T09:22:51.023Z"
+    }
+  }
+}

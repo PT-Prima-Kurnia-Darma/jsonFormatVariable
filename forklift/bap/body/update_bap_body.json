@@ -1,0 +1,39 @@
+{
+  "laporanId": "",
+  "examinationType": "",
+  "inspectionDate": "",
+  "createdAt": "",
+  "extraId": 1,
+  "generalData": {
+    "ownerName": "",
+    "ownerAddress": "",
+    "userInCharge": ""
+  },
+  "technicalData": {
+    "brandType": "",
+    "manufacturer": "",
+    "locationAndYearOfManufacture": "",
+    "serialNumberUnitNumber": "",
+    "capacityWorkingLoad": "",
+    "liftingHeightMeters": ""
+  },
+  "inspectionResult": {
+    "visualCheck": {
+      "hasForkDefects": true,
+      "isNameplateAttached": true,
+      "isAparAvailable": true,
+      "isCapacityMarkingDisplayed": true,
+      "hasHydraulicLeak": true,
+      "isChainGoodCondition": true
+    },
+    "functionalTest": {
+      "loadKg": "",
+      "liftHeightMeters": "",
+      "isAbleToLiftAndHold": true,
+      "isFunctioningWell": true,
+      "hasCrackIndication": true,
+      "isEmergencyStopFunctional": true,
+      "isWarningLampHornFunctional": true
+    }
+  }
+}
