@@ -1,0 +1,50 @@
+{
+  "laporanId": "",
+  "examinationType": "",
+  "inspectionDate": "",
+  "extraId": 1,
+  "generalData": {
+    "ownerName": "",
+    "ownerAddress": "",
+    "userAddress": ""
+  },
+  "technicalData": {
+    "manufacturer": "",
+    "locationAndYearOfManufacture": "",
+    "serialNumberUnitNumber": "",
+    "capacityWorkingLoad": "",
+    "maxLiftingHeight": "",
+    "materialCertificateNumber": "",
+    "liftingSpeedMpm": ""
+  },
+  "inspectionResult": {
+    "visualCheck": {
+      "hasBoomDefects": true,
+      "isNameplateAttached": true,
+      "areBoltsAndNutsSecure": true,
+      "isSlingGoodCondition": true,
+      "isHookGoodCondition": true,
+      "isSafetyLatchInstalled": true,
+      "isTireGoodCondition": true,
+      "isWorkLampFunctional": true
+    },
+    "functionalTest": {
+      "isForwardReverseFunctionOk": true,
+      "isSwingFunctionOk": true,
+      "isHoistingFunctionOk": true,
+      "loadTest": {
+        "loadKg": "",
+        "liftHeightMeters": "",
+        "holdTimeSeconds": "",
+        "isResultGood": true
+      },
+      "ndtTest": {
+        "method": "",
+        "isResultGood": true
+      }
+    }
+  },
+  "signature": {
+    "companyName": ""
+  }
+}
