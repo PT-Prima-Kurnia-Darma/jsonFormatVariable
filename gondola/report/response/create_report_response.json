@@ -1,0 +1,181 @@
+{
+  "status": "success",
+  "message": "string",
+  "data": {
+    "laporan": {
+      "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
+      "examinationType": "Pemeriksaan dan Pengujian Berkala",
+      "inspectionDate": "2023-12-15",
+      "extraId": 101,
+      "createdAt": "2025-07-22T09:22:51.023Z",
+      "generalData": {
+        "ownerName": "PT. IPAN NEW",
+        "ownerAddress": "Ruko Citralake Sawangan Blok B06-01 Jl. Cinangka Raya, Bojongsari, Depok",
+        "userInCharge": "PT. Gondola Alta Fortuna",
+        "subcontractorPersonInCharge": "Budi Sasmito, S.T.",
+        "unitLocation": "Essence Darmawangsa Apartement Tower South, Jl. Darmawangsa-X No.86, Rt.7,RW.8 Cipete Utara, Kec. Kby Baru, Jakarta Selatan",
+        "operatorName": "Slamet Riyadi",
+        "equipmentType": "Gondola",
+        "manufacturer": "Skymax",
+        "brandType": "ZLP630",
+        "locationAndYearOfManufacture": "2022 / China",
+        "serialNumberUnitNumber": "HZRDHT20220704-HZRDHT20220705",
+        "capacityWorkingLoad": "250 kg / 2 orang",
+        "intendedUse": "Mengangkat orang dan barang",
+        "usagePermitNumber": "505/PKD/PAA/XII/2023",
+        "operatorCertificate": "Ada"
+      },
+      "technicalData": {
+        "gondolaSpecification": {
+          "supportMastHeight": 1,
+          "frontBeamLength": 4,
+          "middleBeamLength": 4,
+          "rearBeamLength": 0,
+          "balanceWeightDistance": 0,
+          "capacity": "250 kg / 2 orang",
+          "speed": "9-11 m / menit",
+          "platformSize": "400 x 70 x 100",
+          "wireRopeDiameter": 8.3
+        },
+        "hoist": {
+          "model": "Electric Motor",
+          "liftingCapacity": 630,
+          "electricMotor": {
+            "type": "LTD 63",
+            "power": "2 x 6.3 kN",
+            "voltage": 380,
+            "voltageHz": 50
+          }
+        },
+        "safetyLockType": "LSF-30",
+        "brake": {
+          "type": "Automatic",
+          "model": "Internal",
+          "capacity": "Standard"
+        },
+        "suspensionMechanical": {
+          "supportMastHeight": 1,
+          "frontBeamLength": 4,
+          "material": "IWF"
+        },
+        "machineWeight": {
+          "totalPlatformWeight": 500,
+          "suspensionMechanicalWeight": 300,
+          "balanceWeight": 2000,
+          "totalMachineWeight": "2800"
+        }
+      },
+      "visualInspection": {
+        "suspensionStructure": {
+          "propertyName*": {
+            "result": "",
+            "status": true
+          }
+        },
+        "steelWireRope": {
+          "propertyName*": {
+            "result": "",
+            "status": true
+          }
+        },
+        "electricalSystem": {
+          "propertyName*": {
+            "result": "",
+            "status": true
+          }
+        },
+        "platform": {
+          "propertyName*": {
+            "result": "",
+            "status": true
+          }
+        },
+        "safetyDevices": {
+          "propertyName*": {
+            "result": "",
+            "status": true
+          }
+        }
+      },
+      "nonDestructiveTesting": {
+        "steelCableRope": {
+          "ndtType": "Visual dan Pengukuran",
+          "items": [
+            {
+              "usage": "Wirerope Utama",
+              "specDiameter": "8,3 mm",
+              "actualDiameter": "8,2 mm",
+              "construction": "IWRC",
+              "type": "Galvanized Wire Rope",
+              "length": "100m",
+              "age": "1 tahun",
+              "defectFound": false,
+              "result": "Kondisi Baik"
+            }
+          ]
+        },
+        "suspensionStructure": {
+          "ndtType": "Visual",
+          "items": [
+            {
+              "part": "Beam",
+              "location": "Sambungan",
+              "defectFound": false,
+              "result": "Tidak ditemukan cacat"
+            }
+          ]
+        },
+        "gondolaCage": {
+          "ndtType": "Visual",
+          "items": [
+            {
+              "part": "Kerangka sangkar",
+              "location": "Sambungan las-lasan",
+              "defectFound": false,
+              "result": "Tidak ditemukan cacat"
+            }
+          ]
+        },
+        "clamps": {
+          "items": [
+            {
+              "partCheck": "Tali penguat",
+              "location": "Clamp",
+              "defectFound": false,
+              "result": "Clamp dipasang benar dan sesuai standard"
+            }
+          ]
+        }
+      },
+      "testing": {
+        "dynamicLoadTest": {
+          "note": "Tidak Terjadi Kesalahan",
+          "items": [
+            {
+              "loadPercentage": "100% SWL",
+              "loadDetails": "2 orang",
+              "remarks": "Baik",
+              "result": "Mampu mengangkat"
+            }
+          ]
+        },
+        "staticLoadTest": {
+          "note": "Tidak Terjadi Kesalahan",
+          "items": [
+            {
+              "loadPercentage": "100% SWL",
+              "loadDetails": "3 orang",
+              "remarks": "Baik",
+              "result": "Diangkat 50 cm dan ditahan selama 15 menit tidak terjadi penurunan"
+            }
+          ]
+        }
+      },
+      "conclusion": "Secara keseluruhan dalam keadaan baik dan dapat beroperasi secara aman dengan menerapkan Norma Keselamatan dan Kesehatan Kerja.",
+      "recommendation": "Operator Gondola wajib memiliki Lisensi K3 dari Kementrian Ketenagakerjaan. Gondola tidak boleh dioperasikan melebihi SWL yang ditentukan.",
+      "id": "string",
+      "subInspectionType": "Gondola",
+      "documentType": "Laporan"
+    }
+  }
+}
