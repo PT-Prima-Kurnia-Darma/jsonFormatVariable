@@ -1,0 +1,366 @@
+{
+  "status": "success",
+  "message": "Data laporan eskalator berhasil didapatkan",
+  "data": {
+    "laporan": [
+      {
+        "inspectionType": "string",
+        "equipmentType": "string",
+        "extraId": 1,
+        "generalData": {
+          "ownerName": "",
+          "nameUsageLocation": "",
+          "safetyObjectTypeAndNumber": "",
+          "intendedUse": "",
+          "permitNumber": "",
+          "examinationType": "",
+          "inspectionDate": ""
+        },
+        "technicalData": {
+          "technicalDatamanufacturer": "",
+          "technicalDatabrand": "",
+          "technicalDatacountryAndYear": "",
+          "technicalDataserialNumber": "",
+          "technicalDatatransports": "",
+          "technicalDatacapacity": "",
+          "technicalDataliftHeight": "",
+          "technicalDataspeed": "",
+          "technicalDatadriveType": "",
+          "technicalDatamotorCurrent": "",
+          "technicalDatamotorPower": "",
+          "technicalDatasafetyDevices": ""
+        },
+        "inspectionAndTesting": {
+          "inspectionAndTestingframeAndMachineRoom": {
+            "inspectionAndTestingframeAndMachineRoomframeresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoomsupportBeamsresults": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoommachineRoomConditionresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoommachineRoomClearanceresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoommachineRoomLightingresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoommachineCoverPlateresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoompitConditionresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoompitClearanceresult": {
+              "result": "",
+              "status": true
+            },
+            "inspectionAndTestingframeAndMachineRoompitStepCoverPlateresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "driveEquipment": {
+            "driveEquipmentdriveMachineresult": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentspeedUnder30Degreesresult": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentspeed30to35Degreesresult": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmenttravelatorSpeedresult": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentstoppingDistance0_5result": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentstoppingDistance0_75result": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentstoppingDistance0_90result": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentdriveChainresult": {
+              "result": "",
+              "status": true
+            },
+            "driveEquipmentchainBreakingStrengthresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "stepsOrPallets": {
+            "stepsOrPalletsstepMaterialresult": {
+              "result": "",
+              "status": true
+            },
+            "stepsOrPalletsstepDimensionsresult": {
+              "result": "",
+              "status": true
+            },
+            "stepsOrPalletspalletDimensionsresult": {
+              "result": "",
+              "status": true
+            },
+            "stepsOrPalletsstepSurfaceresult": {
+              "result": "",
+              "status": true
+            },
+            "stepsOrPalletsstepLevelnessresult": {
+              "result": "",
+              "status": true
+            },
+            "stepsOrPalletsskirtBrushresult": {
+              "result": "",
+              "status": true
+            },
+            "stepsOrPalletsstepWheelsresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "landingArea": {
+            "landingArealandingPlatesresult": {
+              "result": "",
+              "status": true
+            },
+            "landingAreacombTeethresult": {
+              "result": "",
+              "status": true
+            },
+            "landingAreacombConditionresult": {
+              "result": "",
+              "status": true
+            },
+            "landingArealandingCoverresult": {
+              "result": "",
+              "status": true
+            },
+            "landingArealandingAccessArearesult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "balustrade": {
+            "balustradebalustradePanelmaterialresult": {
+              "result": "",
+              "status": true
+            },
+            "balustradebalustradePanelheightresult": {
+              "result": "",
+              "status": true
+            },
+            "balustradebalustradePanelsidePressureresult": {
+              "result": "",
+              "status": true
+            },
+            "balustradebalustradePanelverticalPressureresult": {
+              "result": "",
+              "status": true
+            },
+            "balustradeskirtPanelresult": {
+              "result": "",
+              "status": true
+            },
+            "balustradeskirtPanelFlexibilityresult": {
+              "result": "",
+              "status": true
+            },
+            "balustradestepToSkirtClearanceresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "handrail": {
+            "handrailhandrailConditionresult": {
+              "result": "",
+              "status": true
+            },
+            "handrailhandrailSpeedSynchronizationresult": {
+              "result": "",
+              "status": true
+            },
+            "handrailhandrailWidthresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "runway": {
+            "runwaybeamStrengthAndPositionresult": {
+              "result": "",
+              "status": true
+            },
+            "runwaypitWallConditionresult": {
+              "result": "",
+              "status": true
+            },
+            "runwayescalatorFrameEnclosureresult": {
+              "result": "",
+              "status": true
+            },
+            "runwaylightingresult": {
+              "result": "",
+              "status": true
+            },
+            "runwayheadroomClearanceresult": {
+              "result": "",
+              "status": true
+            },
+            "runwaybalustradeToObjectClearanceresult": {
+              "result": "",
+              "status": true
+            },
+            "runwayantiClimbDeviceHeightresult": {
+              "result": "",
+              "status": true
+            },
+            "runwayornamentPlacementresult": {
+              "result": "",
+              "status": true
+            },
+            "runwayoutdoorClearanceresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "safetyEquipment": {
+            "safetyEquipmentoperationControlKeyresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentemergencyStopSwitchresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentstepChainSafetyDeviceresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentdriveChainSafetyDeviceresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentstepSafetyDeviceresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmenthandrailSafetyDeviceresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentreversalStopDeviceresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmenthandrailEntryGuardresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentcombPlateSafetyDeviceresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentinnerDeckingBrushresult": {
+              "result": "",
+              "status": true
+            },
+            "safetyEquipmentstopButtonsresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "electricalInstallation": {
+            "electricalInstallationinstallationStandardresult": {
+              "result": "",
+              "status": true
+            },
+            "electricalInstallationelectricalPanelresult": {
+              "result": "",
+              "status": true
+            },
+            "electricalInstallationgroundingCableresult": {
+              "result": "",
+              "status": true
+            },
+            "electricalInstallationfireAlarmConnectionresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "outdoorSpecifics": {
+            "outdoorSpecificspitWaterPumpresult": {
+              "result": "",
+              "status": true
+            },
+            "outdoorSpecificsweatherproofComponentsresult": {
+              "result": "",
+              "status": true
+            }
+          },
+          "userSafety": {
+            "userSafetySignagenoBulkyItemsresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignagenoJumpingresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignageunattendedChildrenresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignagenoTrolleysOrStrollersresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignagenoLeaningresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignagenoSteppingOnSkirtresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignagesoftSoleFootwearWarningresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignagenoSittingOnStepsresult": {
+              "result": "",
+              "status": true
+            },
+            "userSafetySignageholdHandrailresult": {
+              "result": "",
+              "status": true
+            }
+          }
+        },
+        "testingEscalator": "string",
+        "conclusion": "string",
+        "id": "string",
+        "subInspectionType": "string",
+        "documentType": "string",
+        "createdAt": "2025-07-22T04:57:39.177Z"
+      }
+    ]
+  }
+}

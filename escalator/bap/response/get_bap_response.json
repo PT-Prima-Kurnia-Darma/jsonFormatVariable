@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "message": "Data BAP eskalator berhasil didapatkan",
+  "data": {
+    "bap": {
+      "laporanId": "string",
+      "examinationType": "string",
+      "inspectionType": "string",
+      "inspectionDate": "string",
+      "extraId": 1,
+      "generalData": {
+        "ownerName": "",
+        "companyLocation": "",
+        "nameUsageLocation": "",
+        "locationUsageLocation": ""
+      },
+      "technicalData": {
+        "equipmentType": "",
+        "technicalDatamanufacturer": "",
+        "technicalDatabrand": "",
+        "technicalDatacountryAndYear": "",
+        "technicalDataserialNumber": "",
+        "technicalDatacapacity": "",
+        "technicalDataspeed": "",
+        "technicalDatatransports": ""
+      },
+      "visualInspection": {
+        "isMachineRoomConditionAcceptable": true,
+        "isPanelConditionAcceptable": true,
+        "islightingConditionisPitLightAcceptable": true,
+        "areSafetySignsAvailable": true
+      },
+      "testing": {
+        "testingisNdtThermographPanel": true,
+        "testingareSafetyDevicesFunctional": true,
+        "testingisLimitSwitchFunctional": true,
+        "testingisDoorSwitchFunctiona": true,
+        "testingpitEmergencyStopStatusisAvailable": true,
+        "testingpitEmergencyStopStatusisFunctional": true,
+        "isEscalatorFunctionOk": true
+      },
+      "id": "string",
+      "subInspectionType": "string",
+      "documentType": "string",
+      "createdAt": "2025-07-22T04:57:39.177Z"
+    }
+  }
+}
