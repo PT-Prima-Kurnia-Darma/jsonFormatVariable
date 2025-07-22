@@ -1,700 +1,758 @@
 {
   "status": "success",
-  "message": "Laporan Forklift berhasil diperbarui",
+  "message": "Laporan Forklift berhasil dibuat",
   "data": {
     "laporan": {
-      "inspectionType": "string",
-      "examinationType": "string",
-      "inspectionDate": "2025-07-22",
-      "extraId": 1,
+      "id": "FczHFyXBDLGw3KlAbwlj",
+      "inspectionType": "Pesawat Angkat Angkut",
+      "examinationType": "Pemeriksaan dan Pengujian Berkala",
+      "inspectionDate": "2025-07-15",
+      "extraId": 123,
+      "createdAt": "2025-07-22T22:44:58.643Z",
       "generalData": {
-        "ownerName": "",
-        "ownerAddress": "",
-        "userInCharge": "",
-        "subcontractorPersonInCharge": "",
-        "unitLocation": "",
-        "operatorName": "",
-        "equipmentType": "",
-        "manufacturer": "",
-        "brandType": "",
-        "locationAndYearOfManufacture": "",
-        "serialNumberUnitNumber": "",
-        "capacityWorkingLoad": "",
-        "intendedUse": "",
-        "certificateNumber": "",
-        "equipmentHistory": ""
+        "ownerName": "PT. GACOR",
+        "equipmentType": "Forklift Diesel",
+        "ownerAddress": "Jl. Industri Raya No. 123, Cikarang",
+        "userInCharge": "Gudang Pusat Distribusi",
+        "subcontractorPersonInCharge": "Andi Wijaya",
+        "unitLocation": "Area Pemuatan Blok C",
+        "operatorName": "Budi Santoso",
+        "manufacturer": "Global Forklift Corp.",
+        "brandType": "PowerLift FX-5000",
+        "locationAndYearOfManufacture": "Jerman / 2019",
+        "serialNumberUnitNumber": "FX5K-987654321",
+        "capacityWorkingLoad": "5000",
+        "intendedUse": "Mengangkut palet barang jadi",
+        "certificateNumber": "SK/PAA/2024/001",
+        "equipmentHistory": "Perawatan rutin setiap 3 bulan, tidak ada riwayat kecelakaan."
       },
       "technicalData": {
-        "specificationSerialNumber": "",
-        "specificationCapacity": "",
-        "specificationAttachment": "",
-        "specificationForkDimensions": "",
-        "specificationSpeedLifting": "",
-        "specificationSpeedLowering": "",
-        "specificationSpeedTravelling": "",
-        "primeMoverBrandType": "",
-        "primeMoverSerialNumber": "",
-        "primeMoverYearOfManufacture": "",
-        "primeMoverRevolution": "",
-        "primeMoverPower": "",
-        "primeMoverNumberOfCylinders": "",
-        "dimensionLength": "",
-        "dimensionWidth": "",
-        "dimensionHeight": "",
-        "dimensionForkLiftingHeight": "",
-        "tirePressureDriveWheel": "",
-        "tirePressureSteeringWheel": "",
-        "driveWheelSize": "",
-        "driveWheelType": "",
-        "steeringWheelSize": "",
-        "steeringWheelType": "",
-        "travellingBrakeSize": "",
-        "travellingBrakeType": "",
-        "hydraulicPumpPressure": "",
-        "hydraulicPumpType": "",
-        "hydraulicPumpReliefValve": ""
+        "specificationSerialNumber": "TD-ENG-1A2B3C",
+        "specificationCapacity": "5000 kg",
+        "specificationAttachment": "Side Shifter",
+        "specificationForkDimensions": "1200 x 150 x 50 mm",
+        "specificationSpeedLifting": "0.5 m/s",
+        "specificationSpeedLowering": "0.45 m/s",
+        "specificationSpeedTravelling": "18 km/h",
+        "primeMoverBrandType": "Yanmar 4TNV98",
+        "primeMoverSerialNumber": "YM-SN-X9Y8Z7",
+        "primeMoverYearOfManufacture": "2019",
+        "primeMoverRevolution": "2500",
+        "primeMoverPower": "42.1",
+        "primeMoverNumberOfCylinders": "4",
+        "dimensionLength": "2800 mm",
+        "dimensionWidth": "1250 mm",
+        "dimensionHeight": "2200 mm",
+        "dimensionForkLiftingHeight": "4.5 meter",
+        "tirePressureDriveWheel": "100 PSI",
+        "tirePressureSteeringWheel": "95 PSI",
+        "driveWheelSize": "28x9-15",
+        "driveWheelType": "Solid Rubber",
+        "steeringWheelSize": "18x7-8",
+        "steeringWheelType": "Solid Rubber",
+        "travellingBrakeSize": "250 mm",
+        "travellingBrakeType": "Hydraulic Drum",
+        "hydraulicPumpPressure": "180 Bar",
+        "hydraulicPumpType": "Gear Pump",
+        "hydraulicPumpReliefValve": "190 Bar"
       },
       "inspectionAndTesting": {
         "mainFrameAndChassis": {
           "reinforcingFrameCorrosionResult": {
-            "result": null,
-            "status": null
+            "result": "Korosi minor ditemukan di bagian bawah",
+            "status": false
           },
           "reinforcingFrameCracksResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "reinforcingFrameDeformationResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada deformasi",
+            "status": true
           },
           "counterweightCorrosionResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "counterweightConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Terpasang dengan kencang",
+            "status": true
           },
           "otherEquipmentFloorDeckResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "otherEquipmentStairsStepsResult": {
-            "result": null,
-            "status": null
+            "result": "Lapisan anti-slip aus",
+            "status": false
           },
           "otherEquipmentFasteningBoltsResult": {
-            "result": null,
-            "status": null
+            "result": "Semua baut kencang",
+            "status": true
           },
           "otherEquipmentOperatorSeatResult": {
-            "result": null,
+            "result": "Tidak Diperiksa",
             "status": null
           }
         },
         "primeMover": {
           "systemCoolingResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "systemLubricationResult": {
-            "result": null,
-            "status": null
+            "result": "Level oli cukup",
+            "status": true
           },
           "systemFuelResult": {
-            "result": null,
-            "status": null
+            "result": "Filter bahan bakar bersih",
+            "status": true
           },
           "systemAirIntakeResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "systemExhaustGasResult": {
-            "result": null,
-            "status": null
+            "result": "Asap normal",
+            "status": true
           },
           "systemStarterResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "electricalBatteryResult": {
-            "result": null,
-            "status": null
+            "result": "Terminal bersih",
+            "status": true
           },
           "electricalStartingDynamoResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "electricalAlternatorResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "electricalBatteryCableResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kabel terkelupas",
+            "status": true
           },
           "electricalInstallationCableResult": {
-            "result": null,
-            "status": null
+            "result": "Perlu perapihan",
+            "status": false
           },
           "electricalLightingLampsResult": {
-            "result": null,
-            "status": null
+            "result": "Semua lampu berfungsi",
+            "status": true
           },
           "electricalSafetyLampsResult": {
-            "result": null,
-            "status": null
+            "result": "Lampu rotator berfungsi",
+            "status": true
           },
           "electricalHornResult": {
-            "result": null,
-            "status": null
+            "result": "Klakson berfungsi",
+            "status": true
           },
           "electricalFuseResult": {
-            "result": null,
+            "result": "Tidak diperiksa",
             "status": null
           }
         },
         "dashboard": {
           "tempIndicatorResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi",
+            "status": true
           },
           "oilPressureResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi",
+            "status": true
           },
           "hydraulicPressureResult": {
-            "result": null,
-            "status": null
+            "result": "Jarum indikator patah",
+            "status": false
           },
           "hourMeterResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi, 4321 Jam",
+            "status": true
           },
           "glowPlugResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi",
+            "status": true
           },
           "fuelIndicatorResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi",
+            "status": true
           },
           "loadIndicatorResult": {
-            "result": null,
+            "result": "Tidak terpasang",
             "status": null
           },
           "loadChartResult": {
-            "result": null,
-            "status": null
+            "result": "Terpasang dan jelas",
+            "status": true
           }
         },
         "powerTrain": {
           "starterDynamoResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "steeringWheelResult": {
-            "result": null,
-            "status": null
+            "result": "Responsif",
+            "status": true
           },
           "steeringRodResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "steeringGearBoxResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "steeringPitmanResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "steeringDragLinkResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "steeringTieRodResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "steeringLubeResult": {
-            "result": null,
-            "status": null
+            "result": "Cukup",
+            "status": true
           },
           "wheelsFrontResult": {
-            "result": null,
-            "status": null
+            "result": "Tapak ban 70%",
+            "status": true
           },
           "wheelsRearResult": {
-            "result": null,
-            "status": null
+            "result": "Tapak ban 65%",
+            "status": true
           },
           "wheelsBoltsResult": {
-            "result": null,
-            "status": null
+            "result": "Baut roda perlu dikencangkan ulang",
+            "status": false
           },
           "wheelsDrumResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "wheelsLubeResult": {
-            "result": null,
-            "status": null
+            "result": "Cukup",
+            "status": true
           },
           "wheelsMechanicalResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "clutchHousingResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "clutchConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak slip",
+            "status": true
           },
           "clutchTransOilResult": {
-            "result": null,
-            "status": null
+            "result": "Level cukup",
+            "status": true
           },
           "clutchTransLeakResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "clutchShaftResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "clutchMechanicalResult": {
-            "result": null,
+            "result": "Tidak Diperiksa",
             "status": null
           },
           "diffHousingResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "diffConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "diffOilResult": {
-            "result": null,
-            "status": null
+            "result": "Warna oli normal",
+            "status": true
           },
           "diffLeakResult": {
-            "result": null,
-            "status": null
+            "result": "Ada rembesan kecil",
+            "status": false
           },
           "diffShaftResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "brakesMainResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi baik",
+            "status": true
           },
           "brakesHandResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi baik",
+            "status": true
           },
           "brakesEmergencyResult": {
-            "result": null,
+            "result": "Tidak ada",
             "status": null
           },
           "brakesLeakResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "brakesMechanicalResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "transHousingResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "transOilResult": {
-            "result": null,
-            "status": null
+            "result": "Level cukup",
+            "status": true
           },
           "transLeakResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "transMechanicalResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           }
         },
         "attachments": {
           "mastWearResult": {
-            "result": null,
-            "status": null
+            "result": "Keausan dalam batas normal",
+            "status": true
           },
           "mastCracksResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ditemukan retak",
+            "status": true
           },
           "mastDeformationResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada deformasi",
+            "status": true
           },
           "mastLubeResult": {
-            "result": null,
-            "status": null
+            "result": "Cukup",
+            "status": true
           },
           "mastShaftBearingResult": {
-            "result": null,
-            "status": null
+            "result": "Roller aus, perlu diganti",
+            "status": false
           },
           "liftChainConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada pin yang kaku",
+            "status": true
           },
           "liftChainDeformationResult": {
-            "result": null,
-            "status": null
+            "result": "Elongasi 2%",
+            "status": true
           },
           "liftChainLubeResult": {
-            "result": null,
-            "status": null
+            "result": "Cukup",
+            "status": true
           }
         },
         "personalBasketAndHandrail": {
           "basketFloorCorrosionResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFloorCracksResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFloorDeformationResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFloorFasteningResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFrameCorrosionResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFrameCracksResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFrameDeformationResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFrameCrossBracingResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketFrameDiagonalBracingResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketBoltsCorrosionResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketBoltsCracksResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketBoltsDeformationResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketBoltsFasteningResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketDoorCorrosionResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketDoorCracksResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketDoorDeformationResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "basketDoorFasteningResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailCracksResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailWearResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailCracks2Result": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailRailStraightnessResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailRailJointsResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailInterRailStraightnessResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailRailJointGapResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailRailFastenersResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "handrailRailStopperResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           }
         },
         "hydraulicComponents": {
           "tankLeakageResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "tankOilLevelResult": {
-            "result": null,
-            "status": null
+            "result": "Level normal",
+            "status": true
           },
           "tankOilConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Warna oli keruh, perlu diganti",
+            "status": false
           },
           "tankSuctionLineResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "tankReturnLineResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "pumpLeakageResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "pumpSuctionLineResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "pumpPressureLineResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "pumpFunctionResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "pumpNoiseResult": {
-            "result": null,
-            "status": null
+            "result": "Suara normal",
+            "status": true
           },
           "valveLeakageResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "valveLineConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "valveReliefFunctionResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi baik",
+            "status": true
           },
           "valveNoiseResult": {
-            "result": null,
-            "status": null
+            "result": "Suara normal",
+            "status": true
           },
           "valveLiftCylinderResult": {
-            "result": null,
-            "status": null
+            "result": "Gerakan halus",
+            "status": true
           },
           "valveTiltCylinderResult": {
-            "result": null,
-            "status": null
+            "result": "Gerakan halus",
+            "status": true
           },
           "valveSteeringCylinderResult": {
-            "result": null,
+            "result": "Tidak diperiksa",
             "status": null
           },
           "actuatorLeakageResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "actuatorLineConditionResult": {
-            "result": null,
-            "status": null
+            "result": "Kondisi Baik",
+            "status": true
           },
           "actuatorNoiseResult": {
-            "result": null,
-            "status": null
+            "result": "Suara normal",
+            "status": true
           }
         },
         "engineOnChecks": {
           "starterDynamoResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "instrumentResult": {
-            "result": null,
-            "status": null
+            "result": "Semua instrumen berfungsi",
+            "status": true
           },
           "electricalResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "leakageEngineOilResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "leakageFuelResult": {
-            "result": null,
-            "status": null
+            "result": "Ada bau solar, konektor kendor",
+            "status": false
           },
           "leakageCoolantResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "leakageHydraulicOilResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "leakageTransmissionOilResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "leakageFinalDriveOilResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "leakageBrakeFluidResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "clutchResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "transmissionResult": {
-            "result": null,
-            "status": null
+            "result": "Perpindahan gigi halus",
+            "status": true
           },
           "brakeResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "hornAlarmResult": {
-            "result": null,
-            "status": null
+            "result": "Alarm mundur mati",
+            "status": false
           },
           "lampsResult": {
-            "result": null,
-            "status": null
+            "result": "Lampu rem kanan mati",
+            "status": false
           },
           "hydraulicMotorResult": {
-            "result": null,
-            "status": null
+            "result": "Berfungsi Baik",
+            "status": true
           },
           "steeringCylinderResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "liftingCylinderResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "tiltingCylinderResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada kebocoran",
+            "status": true
           },
           "exhaustGasResult": {
-            "result": null,
-            "status": null
+            "result": "Warna asap normal",
+            "status": true
           },
           "controlLeversResult": {
-            "result": null,
-            "status": null
+            "result": "Semua tuas berfungsi",
+            "status": true
           },
           "noiseEngineResult": {
-            "result": null,
-            "status": null
+            "result": "Suara mesin normal",
+            "status": true
           },
           "noiseTurbochargerResult": {
-            "result": null,
+            "result": "Tidak Ada",
             "status": null
           },
           "noiseTransmissionResult": {
-            "result": null,
-            "status": null
+            "result": "Suara transmisi normal",
+            "status": true
           },
           "noiseHydraulicPumpResult": {
-            "result": null,
-            "status": null
+            "result": "Suara pompa normal",
+            "status": true
           },
           "noiseProtectiveCoverResult": {
-            "result": null,
-            "status": null
+            "result": "Tidak ada getaran berlebih",
+            "status": true
           }
         }
       },
       "testingForklift": {
         "liftingChainInspection": [
           {
-            "inspectedPart": "",
-            "constructionType": "",
-            "standardPitch": "",
-            "measuredPitch": "",
-            "standardPin": "",
-            "measuredPin": "",
-            "result": ""
+            "inspectedPart": "Rantai Kiri",
+            "constructionType": "Leaf Chain",
+            "standardPitch": "50.0",
+            "measuredPitch": "50.5",
+            "standardPin": "10.0",
+            "measuredPin": "10.1",
+            "result": "Baik"
+          },
+          {
+            "inspectedPart": "Rantai Kanan",
+            "constructionType": "Leaf Chain",
+            "standardPitch": "50.0",
+            "measuredPitch": "50.6",
+            "standardPin": "10.0",
+            "measuredPin": "10.1",
+            "result": "Baik"
           }
         ],
         "nonDestructiveTesting": {
-          "ndtType": "",
+          "ndtType": "Magnetic Particle",
           "results": [
             {
-              "inspectedPart": "",
-              "location": "",
+              "inspectedPart": "Heel Kanan",
+              "location": "Area tekukan garpu",
               "defectFound": "",
+              "defectNotFound": "√",
+              "result": "Tidak ditemukan cacat"
+            },
+            {
+              "inspectedPart": "Heel Kiri",
+              "location": "Area tekukan garpu",
+              "defectFound": "√",
               "defectNotFound": "",
-              "result": ""
+              "result": "Ditemukan retak rambut 2mm"
             }
           ]
         },
         "loadTesting": [
           {
-            "liftingHeight": "",
-            "testLoad": "",
-            "speed": "",
-            "movement": "",
-            "remarks": "",
-            "result": ""
+            "liftingHeight": "3.0",
+            "testLoad": "0% SWL",
+            "speed": "18",
+            "movement": "Maju, mundur, belok",
+            "remarks": "OK",
+            "result": "Lulus"
+          },
+          {
+            "liftingHeight": "3.0",
+            "testLoad": "25% SWL",
+            "speed": "15",
+            "movement": "Angkat, turun",
+            "remarks": "OK",
+            "result": "Lulus"
+          },
+          {
+            "liftingHeight": "3.0",
+            "testLoad": "50% SWL",
+            "speed": "12",
+            "movement": "Angkat, turun",
+            "remarks": "OK",
+            "result": "Lulus"
+          },
+          {
+            "liftingHeight": "2.5",
+            "testLoad": "75% SWL",
+            "speed": "10",
+            "movement": "Angkat, turun",
+            "remarks": "OK",
+            "result": "Lulus"
+          },
+          {
+            "liftingHeight": "2.0",
+            "testLoad": "100% SWL",
+            "speed": "8",
+            "movement": "Angkat, tahan 5 menit",
+            "remarks": "OK",
+            "result": "Lulus"
+          },
+          {
+            "liftingHeight": "1.5",
+            "testLoad": "110% SWL",
+            "speed": "5",
+            "movement": "Angkat, tahan 10 menit",
+            "remarks": "Garpu turun 5mm",
+            "result": "Gagal"
           }
         ]
       },
-      "conclusion": "string",
-      "recommendation": "string",
-      "id": "string",
-      "createdAt": "2025-07-22T09:22:51.023Z"
+      "conclusion": "Forklift ditemukan memiliki beberapa kekurangan minor seperti kebocoran oli dan retak pada garpu kiri. Gagal menahan beban uji 110% SWL.",
+      "recommendation": "Lakukan perbaikan pada garpu kiri, ganti oli hidrolik, perbaiki alarm mundur dan lampu rem. Uji ulang beban setelah perbaikan sebelum dioperasikan kembali.",
+      "subInspectionType": "Forklift",
+      "documentType": "Laporan"
     }
   }
 }

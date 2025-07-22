@@ -1,13 +1,14 @@
 {
   "status": "success",
-  "message": "string",
+  "message": "Laporan Gondola berhasil dibuat",
   "data": {
     "laporan": {
+      "id": "A5jjJgXu58401Ey8ykej",
       "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
       "examinationType": "Pemeriksaan dan Pengujian Berkala",
       "inspectionDate": "2023-12-15",
       "extraId": 101,
-      "createdAt": "2025-07-22T09:22:51.023Z",
+      "createdAt": "2025-07-22T22:47:30.351Z",
       "generalData": {
         "ownerName": "PT. IPAN NEW",
         "ownerAddress": "Ruko Citralake Sawangan Blok B06-01 Jl. Cinangka Raya, Bojongsari, Depok",
@@ -67,33 +68,221 @@
       },
       "visualInspection": {
         "suspensionStructure": {
-          "propertyName*": {
-            "result": "",
-            "status": true
+          "frontBeam": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "middleBeam": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "rearBeam": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "frontBeamSupportMast": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "lowerFrontBeamSupportMast": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "mastAndBeamClamp": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "couplingSleeve": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "turnBuckle": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "reinforcementRope": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "rearSupportMast": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "balanceWeight": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "frontBeamSupportBase": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "rearBeamSupportBase": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "jackBaseJoint": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "connectionBolts": {
+            "status": true,
+            "result": "Kondisi Baik"
           }
         },
         "steelWireRope": {
-          "propertyName*": {
-            "result": "",
-            "status": true
+          "mainWireRope": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "safetyRope": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "slingFasteners": {
+            "status": true,
+            "result": "Kondisi Baik"
           }
         },
         "electricalSystem": {
-          "propertyName*": {
-            "result": "",
-            "status": true
+          "hoistMotor": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "brakeRelease": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "manualRelease": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "powerControl": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "powerCable": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "handleSwitch": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "upperLimitSwitch": {
+            "status": false,
+            "result": "Tidak tersedia"
+          },
+          "limitStopper": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "socketFitting": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "grounding": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "breakerFuse": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "emergencyStop": {
+            "status": true,
+            "result": "Kondisi Baik"
           }
         },
         "platform": {
-          "propertyName*": {
-            "result": "",
-            "status": true
+          "hoistMountFrame": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "frame": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "bottomPlate": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "pinsAndBolts": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "bracket": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "toeBoard": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "rollerAndGuidePulley": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "namePlate": {
+            "status": true,
+            "result": "Kondisi Baik"
           }
         },
         "safetyDevices": {
-          "propertyName*": {
-            "result": "",
-            "status": true
+          "safetyLock": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "rubberBumper": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "safetyLifeLine": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "loadLimitSwitch": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "limitBlock": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "upperLimitSwitch": {
+            "status": false,
+            "result": "Tidak tersedia"
+          },
+          "bodyHarness": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "harnessAnchorage": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "communicationTool": {
+            "status": true,
+            "result": "Tersedia Baik"
+          },
+          "handyTalkie": {
+            "status": false,
+            "result": "Tidak tersedia"
+          },
+          "safetyHelmet": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "handRail": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "otherPpe": {
+            "status": true,
+            "result": "Kondisi Baik"
+          },
+          "coupForGlass": {
+            "status": false,
+            "result": ""
           }
         }
       },
@@ -111,6 +300,28 @@
               "age": "1 tahun",
               "defectFound": false,
               "result": "Kondisi Baik"
+            },
+            {
+              "usage": "Safety Rope",
+              "specDiameter": "8,3 mm",
+              "actualDiameter": "8,2 mm",
+              "construction": "IWRC",
+              "type": "Galvanized Wire Rope",
+              "length": "100m",
+              "age": "1 tahun",
+              "defectFound": false,
+              "result": "Kondisi Baik"
+            },
+            {
+              "usage": "Safety Rope",
+              "specDiameter": "8,3 mm",
+              "actualDiameter": "8,2 mm",
+              "construction": "IWRC",
+              "type": "Galvanized Wire Rope",
+              "length": "100m",
+              "age": "1 tahun",
+              "defectFound": true,
+              "result": "kondisi tidak baik"
             }
           ]
         },
@@ -122,6 +333,18 @@
               "location": "Sambungan",
               "defectFound": false,
               "result": "Tidak ditemukan cacat"
+            },
+            {
+              "part": "Beam 2",
+              "location": "Sambungan",
+              "defectFound": true,
+              "result": "ditemukan cacat"
+            },
+            {
+              "part": "Beam 3",
+              "location": "Sambungan",
+              "defectFound": true,
+              "result": "ditemukan cacat"
             }
           ]
         },
@@ -133,6 +356,18 @@
               "location": "Sambungan las-lasan",
               "defectFound": false,
               "result": "Tidak ditemukan cacat"
+            },
+            {
+              "part": "Mur dan Baut",
+              "location": "Sangkar",
+              "defectFound": false,
+              "result": "Telah dilakukan pemasangan dengan baik"
+            },
+            {
+              "part": "Mur dan Baut dan skrup",
+              "location": "Sangkar",
+              "defectFound": true,
+              "result": "Tidak dilakukan pemasangan dengan baik"
             }
           ]
         },
@@ -140,6 +375,18 @@
           "items": [
             {
               "partCheck": "Tali penguat",
+              "location": "Clamp",
+              "defectFound": false,
+              "result": "Clamp dipasang benar dan sesuai standard"
+            },
+            {
+              "partCheck": "Tali penguat 2",
+              "location": "Clamp",
+              "defectFound": true,
+              "result": "Clamp tidak dipasang benar dan sesuai standard"
+            },
+            {
+              "partCheck": "Tali penguat 3",
               "location": "Clamp",
               "defectFound": false,
               "result": "Clamp dipasang benar dan sesuai standard"
@@ -151,6 +398,18 @@
         "dynamicLoadTest": {
           "note": "Tidak Terjadi Kesalahan",
           "items": [
+            {
+              "loadPercentage": "50% SWL",
+              "loadDetails": "1 orang",
+              "remarks": "Baik",
+              "result": "Mampu mengangkat"
+            },
+            {
+              "loadPercentage": "100% SWL",
+              "loadDetails": "2 orang",
+              "remarks": "Baik",
+              "result": "Mampu mengangkat"
+            },
             {
               "loadPercentage": "100% SWL",
               "loadDetails": "2 orang",
@@ -167,13 +426,24 @@
               "loadDetails": "3 orang",
               "remarks": "Baik",
               "result": "Diangkat 50 cm dan ditahan selama 15 menit tidak terjadi penurunan"
+            },
+            {
+              "loadPercentage": "100% SWL",
+              "loadDetails": "3 orang",
+              "remarks": "Baik",
+              "result": "Diangkat 50 cm dan ditahan selama 15 menit tidak terjadi penurunan"
+            },
+            {
+              "loadPercentage": "100% SWL",
+              "loadDetails": "3 orang",
+              "remarks": "Baik",
+              "result": "Diangkat 50 cm dan ditahan selama 15 menit tidak terjadi penurunan"
             }
           ]
         }
       },
       "conclusion": "Secara keseluruhan dalam keadaan baik dan dapat beroperasi secara aman dengan menerapkan Norma Keselamatan dan Kesehatan Kerja.",
       "recommendation": "Operator Gondola wajib memiliki Lisensi K3 dari Kementrian Ketenagakerjaan. Gondola tidak boleh dioperasikan melebihi SWL yang ditentukan.",
-      "id": "string",
       "subInspectionType": "Gondola",
       "documentType": "Laporan"
     }

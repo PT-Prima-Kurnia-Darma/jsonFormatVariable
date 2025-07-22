@@ -1,1130 +1,508 @@
 {
-  "inspectionType": "",
-  "equipmentType": "",
-  "examinationType": "",
-  "createdAt": "",
-  "extraId": 1,
+  "inspectionType": "PESAWAT ANGKAT ANGKUT JENIS",
+  "createdAt": "2025-07-15T11:36:36.173Z",
+  "extraId": 123,
+  "equipmentType": "MOBILE CRANE",
+  "examinationType": "Pemeriksaan dan Pengujian Berkala",
+
   "generalData": {
-    "generalDataOwnerName": "",
-    "generalDataOwnerAddress": "",
-    "generalDataUserSubcontractorPersonInCharge": "",
-    "generalDataUserAddress": "",
-    "generalDataUnitLocation": "",
-    "generalDataOperatorName": "",
-    "generalDataManufacturer": "",
-    "generalDataBrandType": "",
-    "generalDataLocationAndYearOfManufacture": "",
-    "generalDataSerialNumberUnitNumber": "",
-    "generalDataCapacityWorkingLoad": "",
-    "generalDataIntendedUse": "",
-    "generalDataUsagePermitNumber": "",
-    "generalDataOperatorCertificate": "",
-    "generalDataEquipmentHistory": "",
-    "generalDataInspectionDate": ""
+    "generalDataOwnerName": "PT. IVAN JAGO",
+    "generalDataOwnerAddress": "Jl. Gatot Subroto No. 112, Jakarta Selatan",
+    "generalDataUserSubcontractorPersonInCharge": "PT. Bangun Cipta Graha",
+    "generalDataUserAddress": "Kawasan Industri MM2100, Blok G, Cibitung",
+    "generalDataUnitLocation": "Proyek Pembangunan Jembatan Antar Kota",
+    "generalDataOperatorName": "Joko Susilo",
+    "generalDataManufacturer": "Liebherr",
+    "generalDataBrandType": "Liebherr / LTM 1090-4.2",
+    "generalDataLocationAndYearOfManufacture": "Jerman / 2020",
+    "generalDataSerialNumberUnitNumber": "LTM1090-98765",
+    "generalDataCapacityWorkingLoad": "90.000 kg",
+    "generalDataIntendedUse": "Pekerjaan konstruksi dan pengangkatan berat",
+    "generalDataUsagePermitNumber": "503/998/SIO-PAA/2024",
+    "generalDataOperatorCertificate": "Ada, No. 11223/OP-PAA/XII/2022",
+    "generalDataEquipmentHistory": "Penggantian oli hidrolik pada Januari 2025.",
+    "generalDataInspectionDate": "15 Juli 2025"
   },
   "technicalData": {
-    "technicalDataMaximumWorkingLoadCapacity": "",
-    "technicalDataBoomLength": "",
-    "technicalDataMaximumJibLength": "",
-    "technicalDataMaximumJibWorkingLoad": "",
-    "technicalDataMaxBoomJibLength": "",
-    "technicalDataCraneWeight": "",
-    "technicalDataMaxLiftingHeight": "",
-    "technicalDataBoomWorkingAngle": "",
-    "technicalDataEngineNumber": "",
-    "technicalDataType": "",
-    "technicalDataNumberOfCylinders": "",
-    "technicalDataNetPower": "",
-    "technicalDataBrandYearOfManufacture": "",
-    "technicalDataHookManufacturer": "",
-    "technicalDataMainHookType": "",
-    "technicalDataMainHookCapacity": "",
-    "technicalDataMainHookMaterial": "",
-    "technicalDataMainHookSerialNumber": "",
-    "technicalDataAuxiliaryHookType": "",
-    "technicalDataAuxiliaryHookCapacity": "",
-    "technicalDataAuxiliaryHookMaterial": "",
-    "technicalDataAuxiliaryHookSerialNumber": "",
-    "technicalDataWireRopeMainLoadHoistDrumDiameter": "",
-    "technicalDataWireRopeMainLoadHoistDrumType": "",
-    "technicalDataWireRopeMainLoadHoistDrumConstruction": "",
-    "technicalDataWireRopeMainLoadHoistDrumBreakingStrength": "",
-    "technicalDataWireRopeMainLoadHoistDrumLength": "",
-    "technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter": "",
-    "technicalDataWireRopeAuxiliaryLoadHoistDrumType": "",
-    "technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction": "",
-    "technicalDataWireRopeAuxiliaryLoadHoistDrumLength": "",
-    "technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength": "",
-    "technicalDataWireRopeBoomHoistDrumDiameter": "",
-    "technicalDataWireRopeBoomHoistDrumType": "",
-    "technicalDataWireRopeBoomHoistDrumConstruction": "",
-    "technicalDataWireRopeBoomHoistDrumLength": "",
-    "technicalDataWireRopeBoomHoistDrumBreakingStrength": ""
+    "technicalDataMaximumWorkingLoadCapacity": "90.000 kg",
+    "technicalDataBoomLength": "60.0 m",
+    "technicalDataMaximumJibLength": "16.0 m",
+    "technicalDataMaximumJibWorkingLoad": "8.000 kg",
+    "technicalDataMaxBoomJibLength": "76.0 m",
+    "technicalDataCraneWeight": "48.000 kg",
+    "technicalDataMaxLiftingHeight": "77.5 m",
+    "technicalDataBoomWorkingAngle": "0 - 83°",
+    "technicalDataEngineNumber": "LBR-D936-A7",
+    "technicalDataType": "Liebherr D936 A7",
+    "technicalDataNumberOfCylinders": "6 Silinder",
+    "technicalDataNetPower": "270 kW / 2100 rpm",
+    "technicalDataBrandYearOfManufacture": "Liebherr / 2020",
+    "technicalDataHookManufacturer": "Liebherr",
+    "technicalDataMainHookType": "Double Hook",
+    "technicalDataMainHookCapacity": "90 Ton",
+    "technicalDataMainHookMaterial": "Fine-Grain Structural Steel",
+    "technicalDataMainHookSerialNumber": "HK-90T-LBR-01",
+    "technicalDataAuxiliaryHookType": "Single Hook",
+    "technicalDataAuxiliaryHookCapacity": "8 Ton",
+    "technicalDataAuxiliaryHookMaterial": "Fine-Grain Structural Steel",
+    "technicalDataAuxiliaryHookSerialNumber": "HK-8T-LBR-02",
+    "technicalDataWireRopeMainLoadHoistDrumDiameter": "26 mm",
+    "technicalDataWireRopeMainLoadHoistDrumType": "IWRC 8x26 WS",
+    "technicalDataWireRopeMainLoadHoistDrumConstruction": "Right Hand Regular Lay",
+    "technicalDataWireRopeMainLoadHoistDrumBreakingStrength": "510 kN",
+    "technicalDataWireRopeMainLoadHoistDrumLength": "220 m",
+    "technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter": "22 mm",
+    "technicalDataWireRopeAuxiliaryLoadHoistDrumType": "IWRC 6x36 WS",
+    "technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction": "Right Hand Regular Lay",
+    "technicalDataWireRopeAuxiliaryLoadHoistDrumLength": "150 m",
+    "technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength": "380 kN",
+    "technicalDataWireRopeBoomHoistDrumDiameter": "22 mm",
+    "technicalDataWireRopeBoomHoistDrumType": "IWRC 6x25 Filler",
+    "technicalDataWireRopeBoomHoistDrumConstruction": "Right Hand Regular Lay",
+    "technicalDataWireRopeBoomHoistDrumLength": "180 m",
+    "technicalDataWireRopeBoomHoistDrumBreakingStrength": "380 kN"
   },
   "inspectionAndTesting": {
-    "visualFoundationAndBoltsCorrosionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFoundationAndBoltsCracksResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFoundationAndBoltsDeformationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFoundationAndBoltsTightnessResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFrameColumnsOnFoundationCorrosionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFrameColumnsOnFoundationCracksResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFrameColumnsOnFoundationDeformationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFrameColumnsOnFoundationFasteningResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFrameColumnsOnFoundationTransverseReinforcementResult": {
-      "result": null,
-      "status": null
-    },
-    "visualFrameColumnsOnFoundationDiagonalReinforcementResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLadderCorrosionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLadderCracksResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLadderDeformationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLadderFasteningResult": {
-      "result": null,
-      "status": null
-    },
-    "visualWorkingPlatformCorrosionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualWorkingPlatformCracksResult": {
-      "result": null,
-      "status": null
-    },
-    "visualWorkingPlatformDeformationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualWorkingPlatformFasteningResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOutriggersOutriggerArmHousingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOutriggersOutriggerArmsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOutriggersJackResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOutriggersOutriggerPadsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOutriggersHousingConnectionToChassisResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOutriggersOutriggerSafetyLocksResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableSlewingRollerBearingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableBrakeHousingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableBrakeLiningsAndShoesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntablePressureCylinderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableDrumAxleResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableLeversPinsBoltsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTurntableGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomMainBoomResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomBoomSectionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomTopPulleyResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomPulleyGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomWireRopeGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomPulleyGrooveLipResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomPivotPinResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLatticeBoomWireRopeGuidePulleyResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSteeringMainClutchResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTransmissionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSteeringFrontWheelResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSteeringMiddleWheelResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSteeringRearWheelResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeServiceBrakeResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeParkingBrakeResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeBrakeHousingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeBrakeLiningsAndShoesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeLeversPinsBoltsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualBrakeGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTravelDrumClutchHousingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTravelDrumClutchLiningResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTravelDrumClutchDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTravelDrumLeversPinsBoltsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualTravelDrumGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchDrumMountingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchWindingDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchBrakeLiningsAndShoesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchBrakeDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchBrakeHousingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchClutchLiningsAndShoesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchClutchDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchGrooveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchGrooveLipResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchFlangesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWinchBrakeActuatorLeversPinsAndBoltsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchDrumMountingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchWindingDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchBrakeLiningsAndShoesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchBrakeDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchBrakeHousingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchClutchLiningsAndShoesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchClutchDrumSurfaceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchGrooveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchGrooveLipResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchFlangesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWinchBrakeActuatorLeversPinsAndBoltsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHoistGearBlockLubricationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHoistGearBlockOilSealResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainPulleyPulleyGrooveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainPulleyPulleyGrooveLipResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainPulleyPulleyPinResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainPulleyBearingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainPulleyPulleyGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainPulleyWireRopeGuardResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainHookSwivelNutAndBearingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainHookTrunnionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainHookSafetyLatchResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryHookFreeFallWeightResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryHookSwivelNutAndBearingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryHookSafetyLatchResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWireRopeCorrosionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWireRopeWearResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWireRopeBreakageResult": {
-      "result": null,
-      "status": null
-    },
-    "visualMainWireRopeDeformationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWireRopeCorrosionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWireRopeWearResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWireRopeBreakageResult": {
-      "result": null,
-      "status": null
-    },
-    "visualAuxiliaryWireRopeDeformationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLimitSwitchLongTravelResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLimitSwitchCrossTravelResult": {
-      "result": null,
-      "status": null
-    },
-    "visualLimitSwitchHoistingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineCoolingSystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineLubricationSystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineEngineMountingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineSafetyGuardEquipmentResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineExhaustSystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineFuelSystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEnginePowerTransmissionSystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineBatteryResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineStarterMotorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineWiringInstallationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualInternalCombustionEngineTurbochargerResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicPumpResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicLinesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicFilterResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicTankResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicMainWinchMotorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicAuxiliaryWinchMotorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicBoomWinchMotorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicSwingMotorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveReliefValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveMainWinchValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveAuxiliaryWinchValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveBoomWinchValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveBoomMovementValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveSteeringCylinderValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveAxleOscillationValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualControlValveOutriggerMovementValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicCylinderBoomMovementCylinderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicCylinderOutriggerCylinderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicCylinderSteeringWheelCylinderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicCylinderAxleOscillationCylinderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualHydraulicCylinderTelescopicCylinderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualPneumaticCompressorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualPneumaticTankAndSafetyValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualPneumaticPressurizedAirLinesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualPneumaticAirFilterResult": {
-      "result": null,
-      "status": null
-    },
-    "visualPneumaticControlValveResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinSafetyLadderResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinDoorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinWindowResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinFanAcResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinControlLeversButtonsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinPendantControlResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinLightingResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinHornSignalAlarmResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinFuseResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinCommunicationDeviceResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinFireExtinguisherResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinOperatingSignsResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinIgnitionKeyMasterSwitchResult": {
-      "result": null,
-      "status": null
-    },
-    "visualOperatorCabinButtonsHandlesLeversResult": {
-      "result": null,
-      "status": null
-    },
-    "visualElectricalComponentsPanelConductorConnectorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualElectricalComponentsConductorProtectionResult": {
-      "result": null,
-      "status": null
-    },
-    "visualElectricalComponentsMotorInstallationSafetySystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualElectricalComponentsGroundingSystemResult": {
-      "result": null,
-      "status": null
-    },
-    "visualElectricalComponentsInstallationResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesLadderHandrailResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesEngineOilLubricantPressureResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesHydraulicOilPressureResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesAirPressureResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesAmperemeterResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesVoltageResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesEngineTemperatureResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesTransmissionTemperatureResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterOilTemperaturePressureResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterSpeedometerIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterRotaryLampResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterMainHoistRopeUpDownLimitResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterAuxiliaryHoistRopeUpDownLimitResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterSwingMotionLimitResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterLevelIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterLoadWeightIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterLoadChartResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterAnemometerWindSpeedResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterBoomAngleIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterAirPressureIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterHydraulicPressureIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterSafetyValvesResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterMainWindingDrumSafetyLockResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterAuxiliaryWindingDrumSafetyLockResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterTelescopicMotionLimitResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterLightningArresterResult": {
-      "result": null,
-      "status": null
-    },
-    "visualSafetyDevicesConverterLiftingHeightIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtWireRopeMainLoadSpecDiameter": "",
-    "ndtWireRopeMainLoadActualDiameter": "",
-    "ndtWireRopeMainLoadConstruction": "",
-    "ndtWireRopeMainLoadType": "",
-    "ndtWireRopeMainLoadLength": "",
-    "ndtWireRopeMainLoadAge": "",
-    "ndtWireRopeMainLoadResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtWireRopeAuxiliaryLoadSpecDiameter": "",
-    "ndtWireRopeAuxiliaryLoadActualDiameter": "",
-    "ndtWireRopeAuxiliaryLoadConstruction": "",
-    "ndtWireRopeAuxiliaryLoadType": "",
-    "ndtWireRopeAuxiliaryLoadLength": "",
-    "ndtWireRopeAuxiliaryLoadAge": "",
-    "ndtWireRopeAuxiliaryLoadResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtWireRopeBoomHoistSpecDiameter": "",
-    "ndtWireRopeBoomHoistActualDiameter": "",
-    "ndtWireRopeBoomHoistConstruction": "",
-    "ndtWireRopeBoomHoistType": "",
-    "ndtWireRopeBoomHoistLength": "",
-    "ndtWireRopeBoomHoistAge": "",
-    "ndtWireRopeBoomHoistResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtBoomType": "",
-    "ndtBoomNdtType": "",
-    "ndtBoomInspection1Part": "",
-    "ndtBoomInspection1Location": "",
-    "ndtBoomInspection1Result": {
-      "result": null,
-      "status": null
-    },
-    "ndtBoomInspection2Part": "",
-    "ndtBoomInspection2Location": "",
-    "ndtBoomInspection2Result": {
-      "result": null,
-      "status": null
-    },
-    "ndtBoomInspection3Part": "",
-    "ndtBoomInspection3Location": "",
-    "ndtBoomInspection3Result": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainHookNdtType": "",
-    "ndtMainHookSpecificationA": "",
-    "ndtMainHookSpecificationB": "",
-    "ndtMainHookSpecificationC": "",
-    "ndtMainHookSpecificationD": "",
-    "ndtMainHookSpecificationE": "",
-    "ndtMainHookSpecificationF": "",
-    "ndtMainHookSpecificationG": "",
-    "ndtMainHookSpecificationH": "",
-    "ndtMainHookSpecificationResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainHookMeasurementResultsA": "",
-    "ndtMainHookMeasurementResultsB": "",
-    "ndtMainHookMeasurementResultsC": "",
-    "ndtMainHookMeasurementResultsD": "",
-    "ndtMainHookMeasurementResultsE": "",
-    "ndtMainHookMeasurementResultsF": "",
-    "ndtMainHookMeasurementResultsG": "",
-    "ndtMainHookMeasurementResultsH": "",
-    "ndtMainHookMeasurementResultsResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainHookToleranceMeasureA": "",
-    "ndtMainHookToleranceMeasureB": "",
-    "ndtMainHookToleranceMeasureC": "",
-    "ndtMainHookToleranceMeasureD": "",
-    "ndtMainHookToleranceMeasureE": "",
-    "ndtMainHookToleranceMeasureF": "",
-    "ndtMainHookToleranceMeasureG": "",
-    "ndtMainHookToleranceMeasureH": "",
-    "ndtMainHookToleranceMeasureResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryHookNdtType": "",
-    "ndtAuxiliaryHookSpecificationA": "",
-    "ndtAuxiliaryHookSpecificationB": "",
-    "ndtAuxiliaryHookSpecificationC": "",
-    "ndtAuxiliaryHookSpecificationD": "",
-    "ndtAuxiliaryHookSpecificationE": "",
-    "ndtAuxiliaryHookSpecificationF": "",
-    "ndtAuxiliaryHookSpecificationG": "",
-    "ndtAuxiliaryHookSpecificationH": "",
-    "ndtAuxiliaryHookSpecificationResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryHookMeasurementResultsA": "",
-    "ndtAuxiliaryHookMeasurementResultsB": "",
-    "ndtAuxiliaryHookMeasurementResultsC": "",
-    "ndtAuxiliaryHookMeasurementResultsD": "",
-    "ndtAuxiliaryHookMeasurementResultsE": "",
-    "ndtAuxiliaryHookMeasurementResultsF": "",
-    "ndtAuxiliaryHookMeasurementResultsG": "",
-    "ndtAuxiliaryHookMeasurementResultsH": "",
-    "ndtAuxiliaryHookMeasurementResultsResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryHookToleranceMeasureA": "",
-    "ndtAuxiliaryHookToleranceMeasureB": "",
-    "ndtAuxiliaryHookToleranceMeasureC": "",
-    "ndtAuxiliaryHookToleranceMeasureD": "",
-    "ndtAuxiliaryHookToleranceMeasureE": "",
-    "ndtAuxiliaryHookToleranceMeasureF": "",
-    "ndtAuxiliaryHookToleranceMeasureG": "",
-    "ndtAuxiliaryHookToleranceMeasureH": "",
-    "ndtAuxiliaryHookToleranceMeasureResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainDrumNdtType": "",
-    "ndtMainDrumSpecificationA": "",
-    "ndtMainDrumSpecificationB": "",
-    "ndtMainDrumSpecificationC": "",
-    "ndtMainDrumSpecificationD": "",
-    "ndtMainDrumSpecificationE": "",
-    "ndtMainDrumSpecificationF": "",
-    "ndtMainDrumSpecificationG": "",
-    "ndtMainDrumSpecificationResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainDrumMeasurementResultsA": "",
-    "ndtMainDrumMeasurementResultsB": "",
-    "ndtMainDrumMeasurementResultsC": "",
-    "ndtMainDrumMeasurementResultsD": "",
-    "ndtMainDrumMeasurementResultsE": "",
-    "ndtMainDrumMeasurementResultsF": "",
-    "ndtMainDrumMeasurementResultsG": "",
-    "ndtMainDrumMeasurementResultsResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryDrumNdtType": "",
-    "ndtAuxiliaryDrumSpecificationA": "",
-    "ndtAuxiliaryDrumSpecificationB": "",
-    "ndtAuxiliaryDrumSpecificationC": "",
-    "ndtAuxiliaryDrumSpecificationD": "",
-    "ndtAuxiliaryDrumSpecificationE": "",
-    "ndtAuxiliaryDrumSpecificationF": "",
-    "ndtAuxiliaryDrumSpecificationG": "",
-    "ndtAuxiliaryDrumSpecificationResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryDrumMeasurementResultsA": "",
-    "ndtAuxiliaryDrumMeasurementResultsB": "",
-    "ndtAuxiliaryDrumMeasurementResultsC": "",
-    "ndtAuxiliaryDrumMeasurementResultsD": "",
-    "ndtAuxiliaryDrumMeasurementResultsE": "",
-    "ndtAuxiliaryDrumMeasurementResultsF": "",
-    "ndtAuxiliaryDrumMeasurementResultsG": "",
-    "ndtAuxiliaryDrumMeasurementResultsResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainPulleySpecificationA": "",
-    "ndtMainPulleySpecificationB": "",
-    "ndtMainPulleySpecificationC": "",
-    "ndtMainPulleySpecificationD": "",
-    "ndtMainPulleySpecificationE": "",
-    "ndtMainPulleySpecificationResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtMainPulleyMeasurementResultsA": "",
-    "ndtMainPulleyMeasurementResultsB": "",
-    "ndtMainPulleyMeasurementResultsC": "",
-    "ndtMainPulleyMeasurementResultsD": "",
-    "ndtMainPulleyMeasurementResultsE": "",
-    "ndtMainPulleyMeasurementResultsResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryPulleySpecificationA": "",
-    "ndtAuxiliaryPulleySpecificationB": "",
-    "ndtAuxiliaryPulleySpecificationC": "",
-    "ndtAuxiliaryPulleySpecificationD": "",
-    "ndtAuxiliaryPulleySpecificationE": "",
-    "ndtAuxiliaryPulleySpecificationResult": {
-      "result": null,
-      "status": null
-    },
-    "ndtAuxiliaryPulleyMeasurementResultsA": "",
-    "ndtAuxiliaryPulleyMeasurementResultsB": "",
-    "ndtAuxiliaryPulleyMeasurementResultsC": "",
-    "ndtAuxiliaryPulleyMeasurementResultsD": "",
-    "ndtAuxiliaryPulleyMeasurementResultsE": "",
-    "ndtAuxiliaryPulleyMeasurementResultsResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionHoistingLoweringResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionExtendedRectractedBoomResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionExtendedRectractedOutriggerResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionSwingSlewingResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionAntiTwoBlockResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionBoomStopResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionAnemometerWindSpeedResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionBrakeLockingDeviceResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionLoadMomentIndicatorResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionTurnSignalResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionDrivingLightsResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionLoadIndicatorLightResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionRotaryLampResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionHornResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionSwingAlarmResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionReverseAlarmResult": {
-      "result": null,
-      "status": null
-    },
-    "testingFunctionOverloadAlarmResult": {
-      "result": null,
-      "status": null
-    },
+    "visualFoundationAndBoltsCorrosionResult": { "result": "Baik", "status": true },
+    "visualFoundationAndBoltsCracksResult": { "result": "Retak rambut pada baut #3", "status": false },
+    "visualFoundationAndBoltsDeformationResult": { "result": "Baik", "status": true },
+    "visualFoundationAndBoltsTightnessResult": { "result": "Baik", "status": true },
+    "visualFrameColumnsOnFoundationCorrosionResult": { "result": "Baik", "status": true },
+    "visualFrameColumnsOnFoundationCracksResult": { "result": "Baik", "status": true },
+    "visualFrameColumnsOnFoundationDeformationResult": { "result": "Baik", "status": true },
+    "visualFrameColumnsOnFoundationFasteningResult": { "result": "Baik", "status": true },
+    "visualFrameColumnsOnFoundationTransverseReinforcementResult": { "result": "Baik", "status": true },
+    "visualFrameColumnsOnFoundationDiagonalReinforcementResult": { "result": "Baik", "status": true },
+    "visualLadderCorrosionResult": { "result": "Korosi ringan pada pegangan", "status": false },
+    "visualLadderCracksResult": { "result": "Baik", "status": true },
+    "visualLadderDeformationResult": { "result": "Sedikit bengkok di anak tangga ke-2", "status": false },
+    "visualLadderFasteningResult": { "result": "Baik", "status": true },
+    "visualWorkingPlatformCorrosionResult": { "result": "Baik", "status": true },
+    "visualWorkingPlatformCracksResult": { "result": "Baik", "status": true },
+    "visualWorkingPlatformDeformationResult": { "result": "Baik", "status": true },
+    "visualWorkingPlatformFasteningResult": { "result": "Baik", "status": true },
+    "visualOutriggersOutriggerArmHousingResult": { "result": "Baik", "status": true },
+    "visualOutriggersOutriggerArmsResult": { "result": "Baik", "status": true },
+    "visualOutriggersJackResult": { "result": "Rembersan oli pada jack depan kanan", "status": false },
+    "visualOutriggersOutriggerPadsResult": { "result": "Baik", "status": true },
+    "visualOutriggersHousingConnectionToChassisResult": { "result": "Baik", "status": true },
+    "visualOutriggersOutriggerSafetyLocksResult": { "result": "Baik", "status": true },
+    "visualTurntableSlewingRollerBearingResult": { "result": "Perlu dilumasi ulang", "status": false },
+    "visualTurntableBrakeHousingResult": { "result": "Baik", "status": true },
+    "visualTurntableBrakeLiningsAndShoesResult": { "result": "Baik", "status": true },
+    "visualTurntableDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualTurntablePressureCylinderResult": { "result": "Baik", "status": true },
+    "visualTurntableDrumAxleResult": { "result": "Baik", "status": true },
+    "visualTurntableLeversPinsBoltsResult": { "result": "Baik", "status": true },
+    "visualTurntableGuardResult": { "result": "Penyok di sisi kiri", "status": false },
+    "visualLatticeBoomMainBoomResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomBoomSectionResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomTopPulleyResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomPulleyGuardResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomWireRopeGuardResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomPulleyGrooveLipResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomPivotPinResult": { "result": "Telescopic Boom", "status": true },
+    "visualLatticeBoomWireRopeGuidePulleyResult": { "result": "Telescopic Boom", "status": true },
+    "visualSteeringMainClutchResult": { "result": "Baik", "status": true },
+    "visualTransmissionResult": { "result": "Baik", "status": true },
+    "visualSteeringFrontWheelResult": { "result": "Baik", "status": true },
+    "visualSteeringMiddleWheelResult": { "result": "Baik", "status": true },
+    "visualSteeringRearWheelResult": { "result": "Baik", "status": true },
+    "visualBrakeServiceBrakeResult": { "result": "Baik", "status": true },
+    "visualBrakeParkingBrakeResult": { "result": "Perlu penyetelan", "status": false },
+    "visualBrakeBrakeHousingResult": { "result": "Baik", "status": true },
+    "visualBrakeBrakeLiningsAndShoesResult": { "result": "Baik", "status": true },
+    "visualBrakeDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualBrakeLeversPinsBoltsResult": { "result": "Baik", "status": true },
+    "visualBrakeGuardResult": { "result": "Baik", "status": true },
+    "visualTravelDrumClutchHousingResult": { "result": "Baik", "status": true },
+    "visualTravelDrumClutchLiningResult": { "result": "Baik", "status": true },
+    "visualTravelDrumClutchDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualTravelDrumLeversPinsBoltsResult": { "result": "Baik", "status": true },
+    "visualTravelDrumGuardResult": { "result": "Baik", "status": true },
+    "visualMainWinchDrumMountingResult": { "result": "Baik", "status": true },
+    "visualMainWinchWindingDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualMainWinchBrakeLiningsAndShoesResult": { "result": "Baik", "status": true },
+    "visualMainWinchBrakeDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualMainWinchBrakeHousingResult": { "result": "Baik", "status": true },
+    "visualMainWinchClutchLiningsAndShoesResult": { "result": "Baik", "status": true },
+    "visualMainWinchClutchDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualMainWinchGrooveResult": { "result": "Baik", "status": true },
+    "visualMainWinchGrooveLipResult": { "result": "Baik", "status": true },
+    "visualMainWinchFlangesResult": { "result": "Baik", "status": true },
+    "visualMainWinchBrakeActuatorLeversPinsAndBoltsResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchDrumMountingResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchWindingDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchBrakeLiningsAndShoesResult": { "result": "Aus, perlu diganti", "status": false },
+    "visualAuxiliaryWinchBrakeDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchBrakeHousingResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchClutchLiningsAndShoesResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchClutchDrumSurfaceResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchGrooveResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchGrooveLipResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchFlangesResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWinchBrakeActuatorLeversPinsAndBoltsResult": { "result": "Baik", "status": true },
+    "visualHoistGearBlockLubricationResult": { "result": "Baik", "status": true },
+    "visualHoistGearBlockOilSealResult": { "result": "Baik", "status": true },
+    "visualMainPulleyPulleyGrooveResult": { "result": "Baik", "status": true },
+    "visualMainPulleyPulleyGrooveLipResult": { "result": "Baik", "status": true },
+    "visualMainPulleyPulleyPinResult": { "result": "Baik", "status": true },
+    "visualMainPulleyBearingResult": { "result": "Baik", "status": true },
+    "visualMainPulleyPulleyGuardResult": { "result": "Baik", "status": true },
+    "visualMainPulleyWireRopeGuardResult": { "result": "Baik", "status": true },
+    "visualMainHookSwivelNutAndBearingResult": { "result": "Baik", "status": true },
+    "visualMainHookTrunnionResult": { "result": "Baik", "status": true },
+    "visualMainHookSafetyLatchResult": { "result": "Terpasang", "status": true },
+    "visualAuxiliaryHookFreeFallWeightResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryHookSwivelNutAndBearingResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryHookSafetyLatchResult": { "result": "Tidak terpasang", "status": false },
+    "visualMainWireRopeCorrosionResult": { "result": "Baik", "status": true },
+    "visualMainWireRopeWearResult": { "result": "Baik", "status": true },
+    "visualMainWireRopeBreakageResult": { "result": "Baik", "status": true },
+    "visualMainWireRopeDeformationResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWireRopeCorrosionResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWireRopeWearResult": { "result": "Baik", "status": true },
+    "visualAuxiliaryWireRopeBreakageResult": { "result": "Beberapa kawat putus", "status": false },
+    "visualAuxiliaryWireRopeDeformationResult": { "result": "Baik", "status": true },
+    "visualLimitSwitchLongTravelResult": { "result": "N/A", "status": true },
+    "visualLimitSwitchCrossTravelResult": { "result": "N/A", "status": true },
+    "visualLimitSwitchHoistingResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineCoolingSystemResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineLubricationSystemResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineEngineMountingResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineSafetyGuardEquipmentResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineExhaustSystemResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineFuelSystemResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEnginePowerTransmissionSystemResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineBatteryResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineStarterMotorResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineWiringInstallationResult": { "result": "Baik", "status": true },
+    "visualInternalCombustionEngineTurbochargerResult": { "result": "Baik", "status": true },
+    "visualHydraulicPumpResult": { "result": "Baik", "status": true },
+    "visualHydraulicLinesResult": { "result": "Baik", "status": true },
+    "visualHydraulicFilterResult": { "result": "Baik", "status": true },
+    "visualHydraulicTankResult": { "result": "Baik", "status": true },
+    "visualHydraulicMainWinchMotorResult": { "result": "Baik", "status": true },
+    "visualHydraulicAuxiliaryWinchMotorResult": { "result": "Baik", "status": true },
+    "visualHydraulicBoomWinchMotorResult": { "result": "Baik", "status": true },
+    "visualHydraulicSwingMotorResult": { "result": "Baik", "status": true },
+    "visualControlValveReliefValveResult": { "result": "Baik", "status": true },
+    "visualControlValveMainWinchValveResult": { "result": "Baik", "status": true },
+    "visualControlValveAuxiliaryWinchValveResult": { "result": "Baik", "status": true },
+    "visualControlValveBoomWinchValveResult": { "result": "Baik", "status": true },
+    "visualControlValveBoomMovementValveResult": { "result": "Baik", "status": true },
+    "visualControlValveSteeringCylinderValveResult": { "result": "Baik", "status": true },
+    "visualControlValveAxleOscillationValveResult": { "result": "Baik", "status": true },
+    "visualControlValveOutriggerMovementValveResult": { "result": "Baik", "status": true },
+    "visualHydraulicCylinderBoomMovementCylinderResult": { "result": "Baik", "status": true },
+    "visualHydraulicCylinderOutriggerCylinderResult": { "result": "Baik", "status": true },
+    "visualHydraulicCylinderSteeringWheelCylinderResult": { "result": "Baik", "status": true },
+    "visualHydraulicCylinderAxleOscillationCylinderResult": { "result": "Baik", "status": true },
+    "visualHydraulicCylinderTelescopicCylinderResult": { "result": "Baik", "status": true },
+    "visualPneumaticCompressorResult": { "result": "Baik", "status": true },
+    "visualPneumaticTankAndSafetyValveResult": { "result": "Baik", "status": true },
+    "visualPneumaticPressurizedAirLinesResult": { "result": "Baik", "status": true },
+    "visualPneumaticAirFilterResult": { "result": "Perlu dibersihkan", "status": false },
+    "visualPneumaticControlValveResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinSafetyLadderResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinDoorResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinWindowResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinFanAcResult": { "result": "Berfungsi", "status": true },
+    "visualOperatorCabinControlLeversButtonsResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinPendantControlResult": { "result": "N/A", "status": true },
+    "visualOperatorCabinLightingResult": { "result": "Lampu kabin mati", "status": false },
+    "visualOperatorCabinHornSignalAlarmResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinFuseResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinCommunicationDeviceResult": { "result": "Tersedia (Radio)", "status": true },
+    "visualOperatorCabinFireExtinguisherResult": { "result": "Tersedia", "status": true },
+    "visualOperatorCabinOperatingSignsResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinIgnitionKeyMasterSwitchResult": { "result": "Baik", "status": true },
+    "visualOperatorCabinButtonsHandlesLeversResult": { "result": "Baik", "status": true },
+    "visualElectricalComponentsPanelConductorConnectorResult": { "result": "Baik", "status": true },
+    "visualElectricalComponentsConductorProtectionResult": { "result": "Baik", "status": true },
+    "visualElectricalComponentsMotorInstallationSafetySystemResult": { "result": "Baik", "status": true },
+    "visualElectricalComponentsGroundingSystemResult": { "result": "Baik", "status": true },
+    "visualElectricalComponentsInstallationResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesLadderHandrailResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesEngineOilLubricantPressureResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesHydraulicOilPressureResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesAirPressureResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesAmperemeterResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesVoltageResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesEngineTemperatureResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesTransmissionTemperatureResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterOilTemperaturePressureResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterSpeedometerIndicatorResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterRotaryLampResult": { "result": "Kaca retak", "status": false },
+    "visualSafetyDevicesConverterMainHoistRopeUpDownLimitResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterAuxiliaryHoistRopeUpDownLimitResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterSwingMotionLimitResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterLevelIndicatorResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterLoadWeightIndicatorResult": { "result": "Sensor tidak akurat", "status": false },
+    "visualSafetyDevicesConverterLoadChartResult": { "result": "Tersedia", "status": true },
+    "visualSafetyDevicesConverterAnemometerWindSpeedResult": { "result": "Berfungsi", "status": true },
+    "visualSafetyDevicesConverterBoomAngleIndicatorResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterAirPressureIndicatorResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterHydraulicPressureIndicatorResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterSafetyValvesResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterMainWindingDrumSafetyLockResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterAuxiliaryWindingDrumSafetyLockResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterTelescopicMotionLimitResult": { "result": "Baik", "status": true },
+    "visualSafetyDevicesConverterLightningArresterResult": { "result": "N/A", "status": true },
+    "visualSafetyDevicesConverterLiftingHeightIndicatorResult": { "result": "Baik", "status": true },
+    "ndtWireRopeMainLoadSpecDiameter": "26",
+    "ndtWireRopeMainLoadActualDiameter": "25.8",
+    "ndtWireRopeMainLoadConstruction": "IWRC 8x26 WS",
+    "ndtWireRopeMainLoadType": "Visual",
+    "ndtWireRopeMainLoadLength": "220",
+    "ndtWireRopeMainLoadAge": "2 Tahun",
+    "ndtWireRopeMainLoadResult": { "result": "Tidak ditemukan cacat", "status": true },
+    "ndtWireRopeAuxiliaryLoadSpecDiameter": "22",
+    "ndtWireRopeAuxiliaryLoadActualDiameter": "21.5",
+    "ndtWireRopeAuxiliaryLoadConstruction": "IWRC 6x36 WS",
+    "ndtWireRopeAuxiliaryLoadType": "Visual",
+    "ndtWireRopeAuxiliaryLoadLength": "150",
+    "ndtWireRopeAuxiliaryLoadAge": "2 Tahun",
+    "ndtWireRopeAuxiliaryLoadResult": { "result": "Perlu diganti (aus)", "status": false },
+    "ndtWireRopeBoomHoistSpecDiameter": "22",
+    "ndtWireRopeBoomHoistActualDiameter": "21.9",
+    "ndtWireRopeBoomHoistConstruction": "IWRC 6x25 Filler",
+    "ndtWireRopeBoomHoistType": "Visual",
+    "ndtWireRopeBoomHoistLength": "180",
+    "ndtWireRopeBoomHoistAge": "2 Tahun",
+    "ndtWireRopeBoomHoistResult": { "result": "Tidak ditemukan cacat", "status": true },
+    "ndtBoomType": "Telescopic",
+    "ndtBoomNdtType": "Magnetic Particle",
+    "ndtBoomInspection1Part": "Main Boom Section 1",
+    "ndtBoomInspection1Location": "Area Sambungan Las",
+    "ndtBoomInspection1Result": { "result": "Tidak ada indikasi retak", "status": true },
+    "ndtBoomInspection2Part": "Main Boom Section 3",
+    "ndtBoomInspection2Location": "Area Pin",
+    "ndtBoomInspection2Result": { "result": "Tidak ada indikasi retak", "status": true },
+    "ndtBoomInspection3Part": "Jib Section 2",
+    "ndtBoomInspection3Location": "Area Sambungan",
+    "ndtBoomInspection3Result": { "result": "Indikasi retak rambut", "status": false },
+    "ndtMainHookNdtType": "Penetrant Test",
+    "ndtMainHookSpecificationA": "120",
+    "ndtMainHookSpecificationB": "140",
+    "ndtMainHookSpecificationC": "155",
+    "ndtMainHookSpecificationD": "420",
+    "ndtMainHookSpecificationE": "400",
+    "ndtMainHookSpecificationF": "105",
+    "ndtMainHookSpecificationG": "130",
+    "ndtMainHookSpecificationH": "130",
+    "ndtMainHookSpecificationResult": { "result": "Sesuai standar pabrikan", "status": true },
+    "ndtMainHookMeasurementResultsA": "120",
+    "ndtMainHookMeasurementResultsB": "141",
+    "ndtMainHookMeasurementResultsC": "156",
+    "ndtMainHookMeasurementResultsD": "420",
+    "ndtMainHookMeasurementResultsE": "401",
+    "ndtMainHookMeasurementResultsF": "104",
+    "ndtMainHookMeasurementResultsG": "130",
+    "ndtMainHookMeasurementResultsH": "129",
+    "ndtMainHookMeasurementResultsResult": { "result": "Tidak ditemukan indikasi retak", "status": true },
+    "ndtMainHookToleranceMeasureA": "126",
+    "ndtMainHookToleranceMeasureB": "-",
+    "ndtMainHookToleranceMeasureC": "139.5",
+    "ndtMainHookToleranceMeasureD": "-",
+    "ndtMainHookToleranceMeasureE": "-",
+    "ndtMainHookToleranceMeasureF": "94.5",
+    "ndtMainHookToleranceMeasureG": "117",
+    "ndtMainHookToleranceMeasureH": "117",
+    "ndtMainHookToleranceMeasureResult": { "result": "Dalam batas toleransi", "status": true },
+    "ndtAuxiliaryHookNdtType": "Penetrant Test",
+    "ndtAuxiliaryHookSpecificationA": "60",
+    "ndtAuxiliaryHookSpecificationB": "70",
+    "ndtAuxiliaryHookSpecificationC": "80",
+    "ndtAuxiliaryHookSpecificationD": "220",
+    "ndtAuxiliaryHookSpecificationE": "200",
+    "ndtAuxiliaryHookSpecificationF": "50",
+    "ndtAuxiliaryHookSpecificationG": "65",
+    "ndtAuxiliaryHookSpecificationH": "65",
+    "ndtAuxiliaryHookSpecificationResult": { "result": "Sesuai standar pabrikan", "status": true },
+    "ndtAuxiliaryHookMeasurementResultsA": "60",
+    "ndtAuxiliaryHookMeasurementResultsB": "70",
+    "ndtAuxiliaryHookMeasurementResultsC": "80",
+    "ndtAuxiliaryHookMeasurementResultsD": "221",
+    "ndtAuxiliaryHookMeasurementResultsE": "200",
+    "ndtAuxiliaryHookMeasurementResultsF": "50",
+    "ndtAuxiliaryHookMeasurementResultsG": "65",
+    "ndtAuxiliaryHookMeasurementResultsH": "65",
+    "ndtAuxiliaryHookMeasurementResultsResult": { "result": "Tidak ditemukan indikasi retak", "status": true },
+    "ndtAuxiliaryHookToleranceMeasureA": "63",
+    "ndtAuxiliaryHookToleranceMeasureB": "-",
+    "ndtAuxiliaryHookToleranceMeasureC": "72",
+    "ndtAuxiliaryHookToleranceMeasureD": "-",
+    "ndtAuxiliaryHookToleranceMeasureE": "-",
+    "ndtAuxiliaryHookToleranceMeasureF": "45",
+    "ndtAuxiliaryHookToleranceMeasureG": "58.5",
+    "ndtAuxiliaryHookToleranceMeasureH": "58.5",
+    "ndtAuxiliaryHookToleranceMeasureResult": { "result": "Dalam batas toleransi", "status": true },
+    "ndtMainDrumNdtType": "Visual",
+    "ndtMainDrumSpecificationA": "50",
+    "ndtMainDrumSpecificationB": "700",
+    "ndtMainDrumSpecificationC": "550",
+    "ndtMainDrumSpecificationD": "800",
+    "ndtMainDrumSpecificationE": "50",
+    "ndtMainDrumSpecificationF": "170",
+    "ndtMainDrumSpecificationG": "60",
+    "ndtMainDrumSpecificationResult": { "result": "Sesuai standar", "status": true },
+    "ndtMainDrumMeasurementResultsA": "50",
+    "ndtMainDrumMeasurementResultsB": "700",
+    "ndtMainDrumMeasurementResultsC": "550",
+    "ndtMainDrumMeasurementResultsD": "800",
+    "ndtMainDrumMeasurementResultsE": "50",
+    "ndtMainDrumMeasurementResultsF": "170",
+    "ndtMainDrumMeasurementResultsG": "60",
+    "ndtMainDrumMeasurementResultsResult": { "result": "Kondisi Baik", "status": true },
+    "ndtAuxiliaryDrumNdtType": "Visual",
+    "ndtAuxiliaryDrumSpecificationA": "45",
+    "ndtAuxiliaryDrumSpecificationB": "650",
+    "ndtAuxiliaryDrumSpecificationC": "500",
+    "ndtAuxiliaryDrumSpecificationD": "750",
+    "ndtAuxiliaryDrumSpecificationE": "45",
+    "ndtAuxiliaryDrumSpecificationF": "160",
+    "ndtAuxiliaryDrumSpecificationG": "55",
+    "ndtAuxiliaryDrumSpecificationResult": { "result": "Sesuai standar", "status": true },
+    "ndtAuxiliaryDrumMeasurementResultsA": "45",
+    "ndtAuxiliaryDrumMeasurementResultsB": "650",
+    "ndtAuxiliaryDrumMeasurementResultsC": "500",
+    "ndtAuxiliaryDrumMeasurementResultsD": "750",
+    "ndtAuxiliaryDrumMeasurementResultsE": "45",
+    "ndtAuxiliaryDrumMeasurementResultsF": "160",
+    "ndtAuxiliaryDrumMeasurementResultsG": "55",
+    "ndtAuxiliaryDrumMeasurementResultsResult": { "result": "Kondisi Baik", "status": true },
+    "ndtMainPulleySpecificationA": "35",
+    "ndtMainPulleySpecificationB": "25",
+    "ndtMainPulleySpecificationC": "120",
+    "ndtMainPulleySpecificationD": "50",
+    "ndtMainPulleySpecificationE": "500",
+    "ndtMainPulleySpecificationResult": { "result": "Sesuai standar", "status": true },
+    "ndtMainPulleyMeasurementResultsA": "35",
+    "ndtMainPulleyMeasurementResultsB": "25",
+    "ndtMainPulleyMeasurementResultsC": "120",
+    "ndtMainPulleyMeasurementResultsD": "50",
+    "ndtMainPulleyMeasurementResultsE": "500",
+    "ndtMainPulleyMeasurementResultsResult": { "result": "Kondisi Baik", "status": true },
+    "ndtAuxiliaryPulleySpecificationA": "30",
+    "ndtAuxiliaryPulleySpecificationB": "20",
+    "ndtAuxiliaryPulleySpecificationC": "110",
+    "ndtAuxiliaryPulleySpecificationD": "45",
+    "ndtAuxiliaryPulleySpecificationE": "450",
+    "ndtAuxiliaryPulleySpecificationResult": { "result": "Sesuai standar", "status": true },
+    "ndtAuxiliaryPulleyMeasurementResultsA": "30",
+    "ndtAuxiliaryPulleyMeasurementResultsB": "20",
+    "ndtAuxiliaryPulleyMeasurementResultsC": "110",
+    "ndtAuxiliaryPulleyMeasurementResultsD": "45",
+    "ndtAuxiliaryPulleyMeasurementResultsE": "450",
+    "ndtAuxiliaryPulleyMeasurementResultsResult": { "result": "Kondisi Baik", "status": true },
+    "testingFunctionHoistingLoweringResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionExtendedRectractedBoomResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionExtendedRectractedOutriggerResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionSwingSlewingResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionAntiTwoBlockResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionBoomStopResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionAnemometerWindSpeedResult": { "result": "Berfungsi", "status": true },
+    "testingFunctionBrakeLockingDeviceResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionLoadMomentIndicatorResult": { "result": "Tidak berfungsi, perlu kalibrasi", "status": false },
+    "testingFunctionTurnSignalResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionDrivingLightsResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionLoadIndicatorLightResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionRotaryLampResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionHornResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionSwingAlarmResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionReverseAlarmResult": { "result": "Berfungsi dengan baik", "status": true },
+    "testingFunctionOverloadAlarmResult": { "result": "Berfungsi dengan baik", "status": true },
+    
     "dynamicMainHookTests": [
       {
-        "boomLength": "",
-        "radius": "",
-        "boomAngle": "",
-        "testLoad": "",
-        "safeWorkingLoad": "",
-        "result": ""
+        "boomLength": "30.0",
+        "radius": "10.0",
+        "boomAngle": "72",
+        "testLoad": "55000",
+        "safeWorkingLoad": "50000",
+        "result": "Baik"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "18.0",
+        "boomAngle": "70",
+        "testLoad": "13200",
+        "safeWorkingLoad": "12000",
+        "result": "Baik"
+      },
+      {
+        "boomLength": "45.0",
+        "radius": "14.0",
+        "boomAngle": "75",
+        "testLoad": "27500",
+        "safeWorkingLoad": "25000",
+        "result": "Baik, sedikit goyangan terdeteksi"
       }
     ],
     "dynamicAuxiliaryHookTests": [
       {
-        "boomLength": "",
-        "radius": "",
-        "boomAngle": "",
-        "testLoad": "",
-        "safeWorkingLoad": "",
-        "result": ""
+        "boomLength": "60.0",
+        "radius": "22.0",
+        "boomAngle": "65",
+        "testLoad": "8800",
+        "safeWorkingLoad": "8000",
+        "result": "Baik"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "28.0",
+        "boomAngle": "58",
+        "testLoad": "4400",
+        "safeWorkingLoad": "4000",
+        "result": "Baik"
       }
     ],
     "staticMainHookTests": [
       {
-        "boomLength": "",
-        "radius": "",
-        "boomAngle": "",
-        "testLoad": "",
-        "safeWorkingLoad": "",
-        "result": ""
+        "boomLength": "30.0",
+        "radius": "10.0",
+        "boomAngle": "72",
+        "testLoad": "62500",
+        "safeWorkingLoad": "50000",
+        "result": "Baik, tidak ada penurunan"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "18.0",
+        "boomAngle": "70",
+        "testLoad": "15000",
+        "safeWorkingLoad": "12000",
+        "result": "Baik, tidak ada penurunan"
       }
     ],
     "staticAuxiliaryHookTests": [
       {
-        "boomLength": "",
-        "radius": "",
-        "boomAngle": "",
-        "testLoad": "",
-        "safeWorkingLoad": "",
-        "result": ""
+        "boomLength": "60.0",
+        "radius": "22.0",
+        "boomAngle": "65",
+        "testLoad": "10000",
+        "safeWorkingLoad": "8000",
+        "result": "Baik, tidak ada penurunan"
+      },
+      {
+        "boomLength": "60.0",
+        "radius": "28.0",
+        "boomAngle": "58",
+        "testLoad": "5000",
+        "safeWorkingLoad": "4000",
+        "result": "Baik, tidak ada penurunan"
+      },
+      {
+        "boomLength": "76.0",
+        "radius": "34.0",
+        "boomAngle": "55",
+        "testLoad": "2750",
+        "safeWorkingLoad": "2500",
+        "result": "Baik, penurunan 0.1% terdeteksi (dalam batas aman)"
       }
     ]
   },
-  "conclusion": "",
-  "recommendation": ""
+  "conclusion": "Mobile Crane dinyatakan LAIK DIOPERASIKAN dengan beberapa catatan perbaikan. Sebagian besar sistem utama berfungsi baik, namun memerlukan perhatian pada beberapa komponen minor untuk memastikan keamanan operasional yang maksimal.",
+  "recommendation": "1. Segera lakukan perbaikan pada retak rambut di baut pondasi #3 dan Jib Section 2.\n2. Ganti kampas rem dan tali kawat baja pada winch tambahan yang terindikasi aus.\n3. Lakukan kalibrasi ulang pada Load Moment Indicator (LMI).\n4. Perbaiki safety latch pada kait tambahan dan ganti kaca lampu rotary.\n5. Lakukan pembersihan dan pengecatan pada area yang terkorosi.\n6. Pemeriksaan dan pengujian berkala berikutnya dilakukan sebelum 15 Juli 2026."
 }

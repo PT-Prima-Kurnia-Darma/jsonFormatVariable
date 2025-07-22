@@ -1,60 +1,60 @@
 {
   "status": "success",
-  "message": "string",
+  "message": "BAP Mobile Crane berhasil dibuat",
   "data": {
     "bap": {
-      "laporanId": "string",
-      "examinationType": "string",
-      "inspectionDate": "2025-07-22",
-      "extraId": 1,
+      "id": "6x5y4twN7g9rqbWOLItU",
+      "laporanId": "j7db1OO58yw5Kq2yK5jQ",
+      "examinationType": "Pemeriksaan dan Pengujian Berkala",
+      "inspectionDate": "15 Juli 2025",
+      "extraId": 123,
+      "createdAt": "2025-07-22T23:05:02.577Z",
       "generalData": {
-        "ownerName": "",
-        "ownerAddress": "",
-        "userAddress": ""
+        "ownerName": "PT. IVAN JAGO PART 3",
+        "ownerAddress": "Jl. Gatot Subroto No. 112, Jakarta Selatan",
+        "userAddress": "Kawasan Industri MM2100, Blok G, Cibitung"
       },
       "technicalData": {
-        "manufacturer": "",
-        "locationAndYearOfManufacture": "",
-        "serialNumberUnitNumber": "",
-        "capacityWorkingLoad": "",
-        "maxLiftingHeight": "",
-        "materialCertificateNumber": "",
-        "liftingSpeedMpm": ""
+        "manufacturer": "Liebherr",
+        "locationAndYearOfManufacture": "Jerman / 2020",
+        "serialNumberUnitNumber": "LTM1090-98765",
+        "capacityWorkingLoad": "90.000 kg",
+        "maxLiftingHeight": "77.5 m",
+        "materialCertificateNumber": "CERT-MAT-12345",
+        "liftingSpeedMpm": "120 m/min"
       },
       "inspectionResult": {
         "visualCheck": {
-          "hasBoomDefects": true,
+          "hasBoomDefects": false,
           "isNameplateAttached": true,
           "areBoltsAndNutsSecure": true,
           "isSlingGoodCondition": true,
           "isHookGoodCondition": true,
-          "isSafetyLatchInstalled": true,
+          "isSafetyLatchInstalled": false,
           "isTireGoodCondition": true,
-          "isWorkLampFunctional": true
+          "isWorkLampFunctional": false
         },
         "functionalTest": {
           "isForwardReverseFunctionOk": true,
           "isSwingFunctionOk": true,
           "isHoistingFunctionOk": true,
           "loadTest": {
-            "loadKg": "",
-            "liftHeightMeters": "",
-            "holdTimeSeconds": "",
+            "loadKg": "80000",
+            "liftHeightMeters": "15",
+            "holdTimeSeconds": "600",
             "isResultGood": true
           },
           "ndtTest": {
-            "method": "",
+            "method": "Magnetic Particle",
             "isResultGood": true
           }
         }
       },
       "signature": {
-        "companyName": ""
+        "companyName": "PT. IVAN ALIF HADRIAN"
       },
-      "id": "string",
       "subInspectionType": "Mobile Crane",
-      "documentType": "Berita Acara dan Pemeriksaan Pengujian",
-      "createdAt": "2025-07-22T09:22:51.023Z"
+      "documentType": "Berita Acara dan Pemeriksaan Pengujian"
     }
   }
 }
