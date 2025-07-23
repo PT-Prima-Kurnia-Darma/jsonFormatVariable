@@ -5054,7 +5054,43 @@ paths:
           $ref: "#/components/responses/InternalServerError"
 
   /proteksiKebakaran/bap/download/{id}:
-
+    get:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Unduh Dokumen BAP Instalasi Proteksi Kebakaran
+      description: Mengunduh dokumen BAP dalam format .docx berdasarkan ID unik BAP.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Proteksi Kebakaran.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: BAP Proteksi Kebakaran berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Proteksi-Kebakaran-PT-Gedung-Jaya.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
 
 components:
   securitySchemes:
@@ -9202,4 +9238,13 @@ components:
                 $ref: "#/components/schemas/BapProteksiKebakaranResponseData"
     
     BapProteksiKebakaranPrefillSuccessResponse:
-
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data untuk BAP berhasil disiapkan
+        data:
+          $ref: "#/components/schemas/BapProteksiKebakaranPayload"
