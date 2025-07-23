@@ -1,72 +1,54 @@
 {
-  "id": "",
-  "typeInspection": "",
-  "inspectionSchedule": "",
-  "typeFireProtection": "",
-  "day": "",
-  "time": null,
-  "companyName": "",
-  "companyLocation": "",
-  "usageLocation": "",
-  "location": "",
-  "areaSize": null,
-  "buildingSize": null,
-  "buildingHeight": null,
-  "totalFloors": null,
-  "totalHydrantPilar": null,
-  "totalHydrantBuilding": null,
-  "totalHoseRell": null,
-  "totalSpinkler": null,
-  "totalHeatDetector": null,
-  "totalSmokeDetector": null,
-  "totalFlameDetector": null,
-  "totalGasDetector": null,
-  "manualButton": null,
-  "alarmBell": null,
-  "signalAlarmLamp": null,
-  "emergencyExit": null,
-  "APAR": null,
-  "seriesNumber": null,
-  "visualInspection": {
-    "aparStatus": {
-      "isAvailable": null,
-      "isGoodCondition": null
-    },
-    "isHydrantPanelGoodCondition": null,
-    "pumpStatus": {
-      "jockeyPump": {
-        "isAvailable": null,
-        "isGoodCondition": null
-      },
-      "electricPump": {
-        "isAvailable": null,
-        "isGoodCondition": null
-      },
-      "dieselPump": {
-        "isAvailable": null,
-        "isGoodCondition": null
-      }
-    },
-    "sprinklerSystemStatus": {
-      "isAvailable": null,
-      "isGoodCondition": null
-    },
-    "detectorSystemStatus": {
-      "isAvailable": null,
-      "isGoodCondition": null
-    }
+  "examinationType": "String",
+  "inspectionDate": "String",
+  "extraid": "number",
+  "createdaAt": "string",
+  "inspectionType": "string",
+  "equipmentType": "string",
+  "generalData": {
+    "companyName": "String",
+    "companyLocation": "String",
+    "usageLocation": "String",
+    "addressUsageLocation": "String"
   },
-  "testing": {
-    "isAparFunctional": null,
-    "pumpTestResults": {
-      "isJockeyPumpFunctional": null,
-      "isElectricPumpFunctional": null,
-      "isDieselPumpFunctional": null
+  "technicalData": {
+    "landArea": "String",
+    "buildingArea": "String",
+    "buildingHeight": "String",
+    "floorCount": "String",
+    "pillarAndOutdoorHydrant": "String",
+    "totalHydrantBuilding": "String",
+    "totalHoseRell": "String",
+    "totalSprinkler": "String",
+    "totalHeatDetector": "String",
+    "totalSmokeDetector": "String",
+    "totalFlameDetector": "String",
+    "totalGasDetector": "String",
+    "manualButton": "String",
+    "alarmBell": "String",
+    "signalAlarmLamp": "String",
+    "emergencyExit": "String",
+    "aparCount": "String",
+    "certificateString": "String"
+  },
+  "testResults": {
+    "visualInspection": {
+      "isAparAvailable": "Boolean",
+      "isAparInGoodCondition": "Boolean",
+      "isHydrantPanelInGoodCondition": "Boolean",
+      "isPumpsAvailable": "Boolean",
+      "isPumpsInGoodCondition": "Boolean",
+      "isSprinklerSystemAvailable": "Boolean",
+      "isSprinklerSystemInGoodCondition": "Boolean",
+      "isDetectorSystemAvailable": "Boolean",
+      "isDetectorSystemInGoodCondition": "Boolean"
     },
-    "isSprinklerFunctional": null,
-    "detectorTestResults": {
-      "isFunctional": null,
-      "isConnectedToMcfa": null
+    "functionalTests": {
+      "isAparFunctional": "Boolean",
+      "arePumpsFunctional": "Boolean",
+      "isSprinklerFunctional": "Boolean",
+      "isDetectorFunctional": "Boolean",
+      "isDetectorConnectedToMcfa": "Boolean"
     }
   }
 }

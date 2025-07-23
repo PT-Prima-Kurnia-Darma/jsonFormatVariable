@@ -1,157 +1,211 @@
-{  
-  "typeInspection": "",
-  "registrationNumber": "",
+{
+  "examinationType": "String",
+  "extraid": "number",
+  "createdaAt": "string",
+  "inspectionType": "string",
+  "equipmentType": "string",
   "documentChecklist": {
-    "technicalDrawing": { "status": "", "notes": "" },
-    "previousTestDocumentation": { "status": "", "notes": "" },
-    "requestLetter": { "status": "", "notes": "" },
-    "specificationDocument": { "status": "", "notes": "" }
+    "technicalDrawing": {
+      "available": "Boolean",
+      "notes": "String"
+    },
+    "previousTestDocumentation": {
+      "available": "Boolean",
+      "notes": "String"
+    },
+    "requestLetter": {
+      "available": "Boolean",
+      "notes": "String"
+    },
+    "specificationDocument": {
+      "available": "Boolean",
+      "notes": "String"
+    }
   },
-  "equipmentUsed": [],
-  "owner": {
-    "name": "",
-    "address": "",
-    "location": "",
-    "certificateNumber": "",
-    "objectType": ""
+  "generalData": {
+    "companyName": "String",
+    "companyLocation": "String",
+    "usageLocation": "String",
+    "certificateNumber": "String",
+    "k3Object": "String",
+    "inspectionDate": "String"
   },
   "buildingData": {
-    "landArea": "",
-    "buildingArea": "",
-    "buildingHeight": "",
-    "floorCount": "",
-    "yearBuilt": "",
+    "landArea": "string",
+    "buildingArea": "string",
+    "buildingHeight": "string",
+    "floorCount": "string",
     "construction": {
-      "mainStructure": "",
-      "floorStructure": "",
-      "exteriorWalls": "",
-      "interiorWalls": "",
-      "ceilingFrame": "",
-      "ceilingCover": "",
-      "roofFrame": "",
-      "roofCover": ""
+      "mainStructure": "String",
+      "floorStructure": "String",
+      "exteriorWalls": "String",
+      "interiorWalls": "String",
+      "ceilingFrame": "String",
+      "ceilingCover": "String",
+      "roofFrame": "String",
+      "roofCover": "String"
     },
-    "protectionEquipment": {
-      "portableExtinguishers": "",
-      "indoorHydrantBox": "",
-      "pillarAndOutdoorHydrant": "",
-      "siameseConnection": "",
-      "sprinklerSystem": "",
-      "heatAndSmokeDetectors": "",
-      "exitSigns": "",
-      "emergencyStairs": "",
-      "assemblyPoint": ""
+    "yearBuilt": "String",
+    "fireProtectionEquipment": {
+      "portableExtinguishers": "String",
+      "indoorHydrantBox": "String",
+      "pillarAndOutdoorHydrant": "String",
+      "siameseConnection": "String",
+      "sprinklerSystem": "String",
+      "heatAndSmokeDetectors": "String",
+      "exitSigns": "String",
+      "emergencyStairs": "String",
+      "assemblyPoint": "String"
     }
   },
-  "fireAlarmSystem": {
+  "technicalSpecifications": {
     "mcfa": {
-      "brandOrType": "",
-      "backupBattery": "",
-      "powerIndicator": "",
-      "zoneIndicator": "",
-      "troubleIndicator": "",
-      "silenceSwitch": "",
-      "resetSwitch": "",
-      "generalAlarmSwitch": "",
-      "buzzer": ""
+      "brandOrType": "String",
+      "result": "String",
+      "ledAnnunciator": "String",
+      "type": "String",
+      "serialNumber": "String"
     },
     "heatDetector": {
-      "brandOrType": "",
-      "pointCount": "",
-      "spacing": "",
-      "operatingTemperature": ""
+      "brandOrType": "String",
+      "result": "String",
+      "pointCount": "string",
+      "spacing": "string",
+      "operatingTemperature": "String"
     },
     "smokeDetector": {
-      "brandOrType": "",
-      "pointCount": "",
-      "spacing": "",
-      "operatingTemperature": ""
+      "brandOrType": "String",
+      "result": "String",
+      "pointCount": "string",
+      "spacing": "string",
+      "operatingTemperature": "String"
     },
     "apar": {
-      "brandOrType": "",
-      "count": "",
-      "spacing": "",
-      "placement": ""
+      "brandOrType": "String",
+      "result": "String",
+      "count": "string",
+      "spacing": "string",
+      "placement": "String"
     }
   },
-  "alarmInstallationData": [],
+  "totalAlarmInstallation": "string",
+  "resultAlarmInstallation": "string",
+  "alarmInstallationData": [
+    {
+      "location": "String",
+      "zone": "String",
+      "ror": "String",
+      "fixed": "String",
+      "smoke": "String",
+      "tpm": "String",
+      "flsw": "String",
+      "bell": "String",
+      "lamp": "String",
+      "status": "String"
+    }
+  ],
   "alarmTestResults": {
-    "panelFunction": "",
-    "alarmTest": "",
-    "faultTest": "",
-    "interconnectionTest": ""
+    "panelFunction": "String",
+    "alarmTest": "String",
+    "faultTest": "String",
+    "interconnectionTest": "String"
   },
   "hydrantSystem": {
     "waterSource": {
-      "type": "",
-      "reservoirCapacity": ""
+      "specification": "String",
+      "status": "String",
+      "note": "String"
+    },
+    "groundReservoir": {
+      "backupSpec": "string",
+      "backupStatus": "String",
+      "backupResult": "String"
+    },
+    "gravitationTank": {
+      "spec": "String",
+      "status": "String",
+      "result": "String"
     },
     "siameseConnection": {
-      "count": "",
-      "status": ""
+      "spec": "String",
+      "status": "String",
+      "result": "String"
     },
-    "jockeyPump": {
-      "model": "",
-      "serialNumber": "",
-      "power": "",
-      "rpm": "",
-      "flowRate": "",
-      "head": "",
-      "autoStartPressure": "",
-      "autoStopPressure": ""
+    "pumps": {
+      "jockey": {
+        "quantity": "string",
+        "headM": "string",
+        "autoStart": "string",
+        "autoStop": "string"
+      },
+      "electric": {
+        "quantity": "string",
+        "headM": "string",
+        "autoStart": "string",
+        "stop": "String"
+      },
+      "diesel": {
+        "quantity": "string",
+        "headM": "string",
+        "autoStart": "string",
+        "stop": "String"
+      }
     },
-    "electricPump": {
-      "model": "",
-      "serialNumber": "",
-      "power": "",
-      "rpm": "",
-      "flowRate": "",
-      "head": "",
-      "autoStartPressure": "",
-      "stopType": ""
+    "indoorHydrant": {
+      "points": "string",
+      "diameter": "string",
+      "hoseLength": "string",
+      "placement": "String"
     },
-    "dieselPump": {
-      "model": "",
-      "serialNumber": "",
-      "engineType": "",
-      "flowRate": "",
-      "head": "",
-      "autoStartPressure": "",
-      "stopType": ""
+    "landingValve": {
+      "points": "string",
+      "diameter": "string",
+      "clutchType": "String",
+      "placement": "String"
     },
-    "buildingHydrant": {
-      "pointCount": "",
-      "outletDiameter": "",
-      "hoseLength": "",
-      "nozzleDiameter": ""
+    "outdoorHydrant": {
+      "points": "string",
+      "diameter": "string",
+      "hoseLength": "string",
+      "nozzleDiameter": "string",
+      "placement": "String"
     },
-    "pillarHydrant": {
-      "pointCount": "",
-      "outletDiameter": "",
-      "hoseLength": "",
-      "nozzleDiameter": ""
+    "fireServiceConnection": {
+      "points": "string",
+      "inletDiameter": "string",
+      "outletDiameter": "string",
+      "clutchType": "String",
+      "condition": "String",
+      "placement": "String"
     },
-    "fireDepartmentConnection": {
-      "pointCount": "",
-      "inletDiameter": "",
-      "outletDiameter": "",
-      "couplingType": ""
+    "pipingAndValves": {
+      "pressureReliefValve": { "spec": "String", "status": "String", "remarks": "String" },
+      "testValve": { "spec": "String", "status": "String", "remarks": "String" },
+      "suctionPipe": { "spec": "String", "status": "String", "remarks": "String" },
+      "mainPipe": { "spec": "String", "status": "String", "remarks": "String" },
+      "standPipe": { "spec": "String", "status": "String", "remarks": "String" },
+      "hydrantPillar": { "spec": "String", "status": "String", "remarks": "String" },
+      "innerHydrant": { "spec": "String", "status": "String", "remarks": "String" },
+      "hoseReel": { "spec": "String", "status": "String", "remarks": "String" }
     }
   },
-  "pumpFunctionTest": {
-    "jockeyPump": { "startPressure": "", "stopPressure": "" },
-    "electricPump": { "startPressure": "", "stopPressure": "" },
-    "dieselPump": { "startPressure": "", "stopPressure": "" }
-  },
-  "operationalTestResults": [],
-  "conclusion": {
-    "summary": "",
-    "conditions": [],
-    "nextInspectionDate": ""
-  },
-  "inspector": {
-    "company": "",
-    "name": "",
-    "title": ""
-  }
+  "pumpFunctionTest": [
+    {
+      "pumpType": "String",
+      "start": "String",
+      "stop": "String"
+    }
+  ],
+  "hydrantOperationalTest": [
+    {
+      "test": "String",
+      "pressure": "String",
+      "transmitPower": "String",
+      "nozzlePosition": "String",
+      "status": "String",
+      "description": "String"
+    }
+  ],
+  "summary": "String",
+  "recommendations": "String"
 }
