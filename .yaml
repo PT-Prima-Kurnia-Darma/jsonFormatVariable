@@ -44,7 +44,11 @@ tags:
   - name: Laporan Instalasi Listrik
     description: Manajemen data Laporan Pemeriksaan untuk Instalasi Listrik.
   - name: BAP Instalasi Listrik
-    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Listrik.  
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Listrik.
+  - name: Proteksi Kebakaran - Laporan
+    description: Manajemen data Laporan Pemeriksaan untuk Instalasi Proteksi Kebakaran.
+  - name: Proteksi Kebakaran - BAP
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Proteksi Kebakaran.  
 paths:
   # ======================================================
   #                 AUTENTIFIKASI
@@ -4689,6 +4693,369 @@ paths:
         "500":
           $ref: "#/components/responses/InternalServerError"
 
+  # ======================================================
+  #       LAPORAN INSTALASI PROTEKSI KEBAKARAN
+  # ======================================================
+  /proteksiKebakaran/laporan:
+    post:
+      tags:
+        - Proteksi Kebakaran - Laporan
+      summary: Buat Laporan Instalasi Proteksi Kebakaran Baru
+      description: Endpoint untuk membuat dokumen laporan pemeriksaan dan pengujian instalasi proteksi kebakaran baru.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanProteksiKebakaranPayload"
+      responses:
+        "201":
+          description: Laporan berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanProteksiKebakaranSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - Proteksi Kebakaran - Laporan
+      summary: Dapatkan Semua Laporan Instalasi Proteksi Kebakaran
+      description: Mengambil daftar semua laporan untuk instalasi proteksi kebakaran yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data laporan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllLaporanProteksiKebakaranResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /proteksiKebakaran/laporan/{id}:
+    get:
+      tags:
+        - Proteksi Kebakaran - Laporan
+      summary: Dapatkan Laporan Instalasi Proteksi Kebakaran Berdasarkan ID
+      description: Mengambil detail data sebuah laporan instalasi proteksi kebakaran berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Proteksi Kebakaran.
+      responses:
+        "200":
+          description: Berhasil mengambil data laporan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanProteksiKebakaranSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - Proteksi Kebakaran - Laporan
+      summary: Perbarui Laporan Instalasi Proteksi Kebakaran
+      description: Memperbarui data laporan instalasi proteksi kebakaran yang sudah ada. Perubahan pada data tertentu juga akan disinkronkan ke BAP yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Proteksi Kebakaran yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanProteksiKebakaranPayload"
+      responses:
+        "200":
+          description: Laporan berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanProteksiKebakaranSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - Proteksi Kebakaran - Laporan
+      summary: Hapus Laporan Instalasi Proteksi Kebakaran
+      description: Menghapus sebuah laporan instalasi proteksi kebakaran berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Proteksi Kebakaran yang akan dihapus.
+      responses:
+        "200":
+          description: Laporan berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Instalasi Proteksi Kebakaran berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /proteksiKebakaran/laporan/download/{id}:
+    get:
+      tags:
+        - Proteksi Kebakaran - Laporan
+      summary: Unduh Dokumen Laporan Instalasi Proteksi Kebakaran
+      description: Mengunduh dokumen laporan dalam format .docx berdasarkan ID unik laporan.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan Instalasi Proteksi Kebakaran.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: Laporan Instalasi Proteksi Kebakaran berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Proteksi-Kebakaran-PT-Gedung-Jaya.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
+  #         BAP INSTALASI PROTEKSI KEBAKARAN
+  # ======================================================
+  /proteksiKebakaran/bap/prefill/{laporanId}:
+    get:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Ambil Data Prefill untuk BAP dari Laporan
+      description: Mengambil data dari Laporan Instalasi Proteksi Kebakaran yang sudah ada untuk mengisi (pre-fill) form BAP baru.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan yang menjadi acuan.
+      responses:
+        "200":
+          description: Berhasil mengambil data untuk prefill BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapProteksiKebakaranPrefillSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /proteksiKebakaran/bap:
+    post:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Buat BAP Instalasi Proteksi Kebakaran Baru
+      description: Membuat BAP baru berdasarkan `laporanId`. Data tertentu dari BAP ini akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapProteksiKebakaranPayload"
+      responses:
+        "201":
+          description: BAP berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapProteksiKebakaranSuccessResponse"
+        "400":
+          description: Request tidak valid, misalnya `laporanId` tidak disertakan.
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          description: Laporan dengan `laporanId` yang diberikan tidak ditemukan.
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Dapatkan Semua BAP Instalasi Proteksi Kebakaran
+      description: Mengambil daftar semua BAP untuk instalasi proteksi kebakaran yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllBapProteksiKebakaranResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /proteksiKebakaran/bap/{id}:
+    get:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Dapatkan BAP Instalasi Proteksi Kebakaran Berdasarkan ID
+      description: Mengambil detail data sebuah BAP instalasi proteksi kebakaran berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP Instalasi Proteksi Kebakaran.
+      responses:
+        "200":
+          description: Berhasil mengambil data BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapProteksiKebakaranSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Perbarui BAP Instalasi Proteksi Kebakaran
+      description: Memperbarui data BAP yang sudah ada. Perubahan pada data tertentu juga akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapProteksiKebakaranPayload"
+      responses:
+        "200":
+          description: BAP berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapProteksiKebakaranSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - Proteksi Kebakaran - BAP
+      summary: Hapus BAP Instalasi Proteksi Kebakaran
+      description: Menghapus sebuah BAP instalasi proteksi kebakaran berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP yang akan dihapus.
+      responses:
+        "200":
+          description: BAP berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Proteksi Kebakaran berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /proteksiKebakaran/bap/download/{id}:
+
+
 components:
   securitySchemes:
     bearerAuth:
@@ -8410,3 +8777,429 @@ components:
           example: Data BAP berhasil didapatkan
         data:
           $ref: "#/components/schemas/BapListrikPayload"
+
+    # ======================================================
+    #   SCHEMAS - INSTALASI PROTEKSI KEBAKARAN
+    # ======================================================
+    DocumentChecklistItem:
+      type: object
+      properties:
+        available:
+          type: boolean
+          nullable: true
+        notes:
+          type: string
+
+    AlarmInstallationItem:
+      type: object
+      properties:
+        location: { type: string }
+        zone: { type: string }
+        ror: { type: string }
+        fixed: { type: string }
+        smoke: { type: string }
+        tpm: { type: string }
+        flsw: { type: string }
+        bell: { type: string }
+        lamp: { type: string }
+        status: { type: string }
+
+    PumpFunctionTestItem:
+      type: object
+      properties:
+        pumpType: { type: string }
+        start: { type: string }
+        stop: { type: string }
+
+    HydrantOperationalTestItem:
+      type: object
+      properties:
+        test: { type: string }
+        pressure: { type: string }
+        transmitPower: { type: string }
+        nozzlePosition: { type: string }
+        status: { type: string }
+        description: { type: string }
+    
+    # --- Skema Laporan Proteksi Kebakaran ---
+    LaporanProteksiKebakaranPayload:
+      type: object
+      properties:
+        examinationType: { type: string }
+        extraid: { type: number }
+        inspectionType: { type: string }
+        equipmentType: { type: string }
+        documentChecklist:
+          type: object
+          properties:
+            technicalDrawing: { $ref: '#/components/schemas/DocumentChecklistItem' }
+            previousTestDocumentation: { $ref: '#/components/schemas/DocumentChecklistItem' }
+            requestLetter: { $ref: '#/components/schemas/DocumentChecklistItem' }
+            specificationDocument: { $ref: '#/components/schemas/DocumentChecklistItem' }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string }
+            companyLocation: { type: string }
+            usageLocation: { type: string }
+            certificateNumber: { type: string }
+            k3Object: { type: string }
+            inspectionDate: { type: string, format: date }
+        buildingData:
+          type: object
+          properties:
+            landArea: { type: string }
+            buildingArea: { type: string }
+            buildingHeight: { type: string }
+            floorCount: { type: string }
+            construction:
+              type: object
+              properties:
+                mainStructure: { type: string }
+                floorStructure: { type: string }
+                exteriorWalls: { type: string }
+                interiorWalls: { type: string }
+                ceilingFrame: { type: string }
+                ceilingCover: { type: string }
+                roofFrame: { type: string }
+                roofCover: { type: string }
+            yearBuilt: { type: string }
+            fireProtectionEquipment:
+              type: object
+              properties:
+                portableExtinguishers: { type: string }
+                indoorHydrantBox: { type: string }
+                pillarAndOutdoorHydrant: { type: string }
+                siameseConnection: { type: string }
+                sprinklerSystem: { type: string }
+                heatAndSmokeDetectors: { type: string }
+                exitSigns: { type: string }
+                emergencyStairs: { type: string }
+                assemblyPoint: { type: string }
+        technicalSpecifications:
+          type: object
+          properties:
+            mcfa:
+              type: object
+              properties:
+                brandOrType: { type: string }
+                result: { type: string }
+                ledAnnunciator: { type: string }
+                type: { type: string }
+                serialNumber: { type: string }
+            heatDetector:
+              type: object
+              properties:
+                brandOrType: { type: string }
+                result: { type: string }
+                pointCount: { type: string }
+                spacing: { type: string }
+                operatingTemperature: { type: string }
+            smokeDetector:
+              type: object
+              properties:
+                brandOrType: { type: string }
+                result: { type: string }
+                pointCount: { type: string }
+                spacing: { type: string }
+                operatingTemperature: { type: string }
+            apar:
+              type: object
+              properties:
+                brandOrType: { type: string }
+                result: { type: string }
+                count: { type: string }
+                spacing: { type: string }
+                placement: { type: string }
+        resultAlarmInstallation: { type: string }
+        totalAlarmInstallation: { type: string }
+        alarmInstallationData:
+          type: array
+          items:
+            $ref: '#/components/schemas/AlarmInstallationItem'
+        alarmTestResults:
+          type: object
+          properties:
+            panelFunction: { type: string }
+            alarmTest: { type: string }
+            faultTest: { type: string }
+            interconnectionTest: { type: string }
+        hydrantSystem:
+          type: object
+          properties:
+            waterSource:
+              type: object
+              properties:
+                specification: { type: string }
+                status: { type: string }
+                note: { type: string }
+            groundReservoir:
+              type: object
+              properties:
+                backupSpec: { type: string }
+                backupStatus: { type: string }
+                backupResult: { type: string }
+            gravitationTank:
+              type: object
+              properties:
+                spec: { type: string }
+                status: { type: string }
+                result: { type: string }
+            siameseConnection:
+              type: object
+              properties:
+                spec: { type: string }
+                status: { type: string }
+                result: { type: string }
+            pumps:
+              type: object
+              properties:
+                jockey:
+                  type: object
+                  properties:
+                    quantity: { type: string }
+                    headM: { type: string }
+                    autoStart: { type: string }
+                    autoStop: { type: string }
+                electric:
+                  type: object
+                  properties:
+                    quantity: { type: string }
+                    headM: { type: string }
+                    autoStart: { type: string }
+                    stop: { type: string }
+                diesel:
+                  type: object
+                  properties:
+                    quantity: { type: string }
+                    headM: { type: string }
+                    autoStart: { type: string }
+                    stop: { type: string }
+            indoorHydrant:
+              type: object
+              properties:
+                points: { type: string }
+                diameter: { type: string }
+                hoseLength: { type: string }
+                placement: { type: string }
+            landingValve:
+              type: object
+              properties:
+                points: { type: string }
+                diameter: { type: string }
+                clutchType: { type: string }
+                placement: { type: string }
+            outdoorHydrant:
+              type: object
+              properties:
+                points: { type: string }
+                diameter: { type: string }
+                hoseLength: { type: string }
+                nozzleDiameter: { type: string }
+                placement: { type: string }
+            fireServiceConnection:
+              type: object
+              properties:
+                points: { type: string }
+                inletDiameter: { type: string }
+                outletDiameter: { type: string }
+                clutchType: { type: string }
+                condition: { type: string }
+                placement: { type: string }
+            pipingAndValves:
+              type: object
+              properties:
+                pressureReliefValve: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                testValve: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                suctionPipe: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                mainPipe: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                standPipe: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                hydrantPillar: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                innerHydrant: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+                hoseReel: { type: object, properties: { spec: { type: string }, status: { type: string }, remarks: { type: string } } }
+        pumpFunctionTest:
+          type: array
+          items:
+            $ref: '#/components/schemas/PumpFunctionTestItem'
+        hydrantOperationalTest:
+          type: array
+          items:
+            $ref: '#/components/schemas/HydrantOperationalTestItem'
+        summary: { type: string }
+        recommendations: { type: string }
+        conclusion: { type: string }
+
+    LaporanProteksiKebakaranResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanProteksiKebakaranPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Instalasi Proteksi Kebakaran"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Laporan"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+
+    LaporanProteksiKebakaranSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Instalasi Proteksi Kebakaran berhasil dibuat
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanProteksiKebakaranResponseData"
+    
+    GetAllLaporanProteksiKebakaranResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan Instalasi Proteksi Kebakaran berhasil didapatkan
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanProteksiKebakaranResponseData"
+
+    # --- Skema BAP Proteksi Kebakaran ---
+    BapProteksiKebakaranPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId:
+          type: string
+          description: ID dari Laporan terkait yang akan dihubungkan dengan BAP ini.
+        examinationType: { type: string }
+        inspectionDate: { type: string, format: date }
+        extraid: { type: number }
+        inspectionType: { type: string }
+        equipmentType: { type: string }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string }
+            companyLocation: { type: string }
+            usageLocation: { type: string }
+            addressUsageLocation: { type: string }
+        technicalData:
+          type: object
+          properties:
+            landArea: { type: string }
+            buildingArea: { type: string }
+            buildingHeight: { type: string }
+            floorCount: { type: string }
+            pillarAndOutdoorHydrant: { type: string }
+            totalHydrantBuilding: { type: string }
+            totalHoseRell: { type: string }
+            totalSpinkler: { type: string }
+            totalHeatDetector: { type: string }
+            totalSmokeDetector: { type: string }
+            totalFlameDetector: { type: string }
+            totalGasDetector: { type: string }
+            manualButton: { type: string }
+            alarmBell: { type: string }
+            signalAlarmLamp: { type: string }
+            emergencyExit: { type: string }
+            apar: { type: string }
+            certificateNumber: { type: string }
+        testResults:
+          type: object
+          properties:
+            visualInspection:
+              type: object
+              properties:
+                isAparAvailable: { type: boolean, nullable: true }
+                isAparInGoodCondition: { type: boolean, nullable: true }
+                isHydrantPanelInGoodCondition: { type: boolean, nullable: true }
+                isPumpsAvailable: { type: boolean, nullable: true }
+                isPumpsInGoodCondition: { type: boolean, nullable: true }
+                isSprinklerSystemAvailable: { type: boolean, nullable: true }
+                isSprinklerSystemInGoodCondition: { type: boolean, nullable: true }
+                isDetectorSystemAvailable: { type: boolean, nullable: true }
+                isDetectorSystemInGoodCondition: { type: boolean, nullable: true }
+            functionalTests:
+              type: object
+              properties:
+                isAparFunctional: { type: boolean, nullable: true }
+                arePumpsFunctional: { type: boolean, nullable: true }
+                isSprinklerFunctional: { type: boolean, nullable: true }
+                isDetectorFunctional: { type: boolean, nullable: true }
+                isDetectorConnectedToMcfa: { type: boolean, nullable: true }
+
+    BapProteksiKebakaranResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapProteksiKebakaranPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Instalasi Proteksi Kebakaran"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Berita Acara dan Pemeriksaan Pengujian"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+
+    BapProteksiKebakaranSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP Proteksi Kebakaran berhasil dibuat
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapProteksiKebakaranResponseData"
+
+    GetAllBapProteksiKebakaranResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Semua BAP Proteksi Kebakaran berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapProteksiKebakaranResponseData"
+    
+    BapProteksiKebakaranPrefillSuccessResponse:
+
