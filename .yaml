@@ -1501,7 +1501,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 
   # ======================================================
-  #               LAPORAN MOBILE CRANE
+  #                LAPORAN MOBILE CRANE
   # ======================================================
   /paa/mobileCrane/laporan:
     post:
@@ -1516,6 +1516,494 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LaporanMobileCranePayload'
+            example:
+              inspectionType: "PESAWAT ANGKAT ANGKUT JENIS"
+              createdAt: "2025-07-21"
+              extraId: 123
+              equipmentType: "MOBILE CRANE"
+              examinationType: "Pemeriksaan dan Pengujian Berkala"
+              generalData:
+                generalDataOwnerName: "PT. IVAN JAGO"
+                generalDataOwnerAddress: "Jl. Gatot Subroto No. 112, Jakarta Selatan"
+                generalDataUserSubcontractorPersonInCharge: "PT. Bangun Cipta Graha"
+                generalDataUserAddress: "Kawasan Industri MM2100, Blok G, Cibitung"
+                generalDataUnitLocation: "Proyek Pembangunan Jembatan Antar Kota"
+                generalDataOperatorName: "Joko Susilo"
+                generalDataManufacturer: "Liebherr"
+                generalDataBrandType: "Liebherr / LTM 1090-4.2"
+                generalDataLocationAndYearOfManufacture: "Jerman / 2020"
+                generalDataSerialNumberUnitNumber: "LTM1090-98765"
+                generalDataCapacityWorkingLoad: "90.000 kg"
+                generalDataIntendedUse: "Pekerjaan konstruksi dan pengangkatan berat"
+                generalDataUsagePermitNumber: "503/998/SIO-PAA/2024"
+                generalDataOperatorCertificate: "Ada, No. 11223/OP-PAA/XII/2022"
+                generalDataEquipmentHistory: "Penggantian oli hidrolik pada Januari 2025."
+                generalDataInspectionDate: "15 Juli 2025"
+              technicalData:
+                technicalDataMaximumWorkingLoadCapacity: "90.000 kg"
+                technicalDataBoomLength: "60.0 m"
+                technicalDataMaximumJibLength: "16.0 m"
+                technicalDataMaximumJibWorkingLoad: "8.000 kg"
+                technicalDataMaxBoomJibLength: "76.0 m"
+                technicalDataCraneWeight: "48.000 kg"
+                technicalDataMaxLiftingHeight: "77.5 m"
+                technicalDataBoomWorkingAngle: "0 - 83°"
+                technicalDataEngineNumber: "LBR-D936-A7"
+                technicalDataType: "Liebherr D936 A7"
+                technicalDataNumberOfCylinders: "6 Silinder"
+                technicalDataNetPower: "270 kW / 2100 rpm"
+                technicalDataBrandYearOfManufacture: "Liebherr / 2020"
+                technicalDataHookManufacturer: "Liebherr"
+                technicalDataMainHookType: "Double Hook"
+                technicalDataMainHookCapacity: "90 Ton"
+                technicalDataMainHookMaterial: "Fine-Grain Structural Steel"
+                technicalDataMainHookSerialNumber: "HK-90T-LBR-01"
+                technicalDataAuxiliaryHookType: "Single Hook"
+                technicalDataAuxiliaryHookCapacity: "8 Ton"
+                technicalDataAuxiliaryHookMaterial: "Fine-Grain Structural Steel"
+                technicalDataAuxiliaryHookSerialNumber: "HK-8T-LBR-02"
+                technicalDataWireRopeMainLoadHoistDrumDiameter: "26 mm"
+                technicalDataWireRopeMainLoadHoistDrumType: "IWRC 8x26 WS"
+                technicalDataWireRopeMainLoadHoistDrumConstruction: "Right Hand Regular Lay"
+                technicalDataWireRopeMainLoadHoistDrumBreakingStrength: "510 kN"
+                technicalDataWireRopeMainLoadHoistDrumLength: "220 m"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter: "22 mm"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumType: "IWRC 6x36 WS"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction: "Right Hand Regular Lay"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumLength: "150 m"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength: "380 kN"
+                technicalDataWireRopeBoomHoistDrumDiameter: "22 mm"
+                technicalDataWireRopeBoomHoistDrumType: "IWRC 6x25 Filler"
+                technicalDataWireRopeBoomHoistDrumConstruction: "Right Hand Regular Lay"
+                technicalDataWireRopeBoomHoistDrumLength: "180 m"
+                technicalDataWireRopeBoomHoistDrumBreakingStrength: "380 kN"
+              inspectionAndTesting:
+                visualFoundationAndBoltsCorrosionResult: { "result": "Baik", "status": true }
+                visualFoundationAndBoltsCracksResult: { "result": "Retak rambut pada baut #3", "status": false }
+                visualFoundationAndBoltsDeformationResult: { "result": "Baik", "status": true }
+                visualFoundationAndBoltsTightnessResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationCorrosionResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationCracksResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationDeformationResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationFasteningResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationTransverseReinforcementResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationDiagonalReinforcementResult: { "result": "Baik", "status": true }
+                visualLadderCorrosionResult: { "result": "Korosi ringan pada pegangan", "status": false }
+                visualLadderCracksResult: { "result": "Baik", "status": true }
+                visualLadderDeformationResult: { "result": "Sedikit bengkok di anak tangga ke-2", "status": false }
+                visualLadderFasteningResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformCorrosionResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformCracksResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformDeformationResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformFasteningResult: { "result": "Baik", "status": true }
+                visualOutriggersOutriggerArmHousingResult: { "result": "Baik", "status": true }
+                visualOutriggersOutriggerArmsResult: { "result": "Baik", "status": true }
+                visualOutriggersJackResult: { "result": "Rembersan oli pada jack depan kanan", "status": false }
+                visualOutriggersOutriggerPadsResult: { "result": "Baik", "status": true }
+                visualOutriggersHousingConnectionToChassisResult: { "result": "Baik", "status": true }
+                visualOutriggersOutriggerSafetyLocksResult: { "result": "Baik", "status": true }
+                visualTurntableSlewingRollerBearingResult: { "result": "Perlu dilumasi ulang", "status": false }
+                visualTurntableBrakeHousingResult: { "result": "Baik", "status": true }
+                visualTurntableBrakeLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualTurntableDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualTurntablePressureCylinderResult: { "result": "Baik", "status": true }
+                visualTurntableDrumAxleResult: { "result": "Baik", "status": true }
+                visualTurntableLeversPinsBoltsResult: { "result": "Baik", "status": true }
+                visualTurntableGuardResult: { "result": "Penyok di sisi kiri", "status": false }
+                visualLatticeBoomMainBoomResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomBoomSectionResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomTopPulleyResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomPulleyGuardResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomWireRopeGuardResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomPulleyGrooveLipResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomPivotPinResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomWireRopeGuidePulleyResult: { "result": "Telescopic Boom", "status": true }
+                visualSteeringMainClutchResult: { "result": "Baik", "status": true }
+                visualTransmissionResult: { "result": "Baik", "status": true }
+                visualSteeringFrontWheelResult: { "result": "Baik", "status": true }
+                visualSteeringMiddleWheelResult: { "result": "Baik", "status": true }
+                visualSteeringRearWheelResult: { "result": "Baik", "status": true }
+                visualBrakeServiceBrakeResult: { "result": "Baik", "status": true }
+                visualBrakeParkingBrakeResult: { "result": "Perlu penyetelan", "status": false }
+                visualBrakeBrakeHousingResult: { "result": "Baik", "status": true }
+                visualBrakeBrakeLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualBrakeDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualBrakeLeversPinsBoltsResult: { "result": "Baik", "status": true }
+                visualBrakeGuardResult: { "result": "Baik", "status": true }
+                visualTravelDrumClutchHousingResult: { "result": "Baik", "status": true }
+                visualTravelDrumClutchLiningResult: { "result": "Baik", "status": true }
+                visualTravelDrumClutchDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualTravelDrumLeversPinsBoltsResult: { "result": "Baik", "status": true }
+                visualTravelDrumGuardResult: { "result": "Baik", "status": true }
+                visualMainWinchDrumMountingResult: { "result": "Baik", "status": true }
+                visualMainWinchWindingDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeHousingResult: { "result": "Baik", "status": true }
+                visualMainWinchClutchLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualMainWinchClutchDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualMainWinchGrooveResult: { "result": "Baik", "status": true }
+                visualMainWinchGrooveLipResult: { "result": "Baik", "status": true }
+                visualMainWinchFlangesResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeActuatorLeversPinsAndBoltsResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchDrumMountingResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchWindingDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchBrakeLiningsAndShoesResult: { "result": "Aus, perlu diganti", "status": false }
+                visualAuxiliaryWinchBrakeDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchBrakeHousingResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchClutchLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchClutchDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchGrooveResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchGrooveLipResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchFlangesResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchBrakeActuatorLeversPinsAndBoltsResult: { "result": "Baik", "status": true }
+                visualHoistGearBlockLubricationResult: { "result": "Baik", "status": true }
+                visualHoistGearBlockOilSealResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyGrooveResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyGrooveLipResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyPinResult: { "result": "Baik", "status": true }
+                visualMainPulleyBearingResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyGuardResult: { "result": "Baik", "status": true }
+                visualMainPulleyWireRopeGuardResult: { "result": "Baik", "status": true }
+                visualMainHookSwivelNutAndBearingResult: { "result": "Baik", "status": true }
+                visualMainHookTrunnionResult: { "result": "Baik", "status": true }
+                visualMainHookSafetyLatchResult: { "result": "Terpasang", "status": true }
+                visualAuxiliaryHookFreeFallWeightResult: { "result": "Baik", "status": true }
+                visualAuxiliaryHookSwivelNutAndBearingResult: { "result": "Baik", "status": true }
+                visualAuxiliaryHookSafetyLatchResult: { "result": "Tidak terpasang", "status": false }
+                visualMainWireRopeCorrosionResult: { "result": "Baik", "status": true }
+                visualMainWireRopeWearResult: { "result": "Baik", "status": true }
+                visualMainWireRopeBreakageResult: { "result": "Baik", "status": true }
+                visualMainWireRopeDeformationResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWireRopeCorrosionResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWireRopeWearResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWireRopeBreakageResult: { "result": "Beberapa kawat putus", "status": false }
+                visualAuxiliaryWireRopeDeformationResult: { "result": "Baik", "status": true }
+                visualLimitSwitchLongTravelResult: { "result": "N/A", "status": true }
+                visualLimitSwitchCrossTravelResult: { "result": "N/A", "status": true }
+                visualLimitSwitchHoistingResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineCoolingSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineLubricationSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineEngineMountingResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineSafetyGuardEquipmentResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineExhaustSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineFuelSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEnginePowerTransmissionSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineBatteryResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineStarterMotorResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineWiringInstallationResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineTurbochargerResult: { "result": "Baik", "status": true }
+                visualHydraulicPumpResult: { "result": "Baik", "status": true }
+                visualHydraulicLinesResult: { "result": "Baik", "status": true }
+                visualHydraulicFilterResult: { "result": "Baik", "status": true }
+                visualHydraulicTankResult: { "result": "Baik", "status": true }
+                visualHydraulicMainWinchMotorResult: { "result": "Baik", "status": true }
+                visualHydraulicAuxiliaryWinchMotorResult: { "result": "Baik", "status": true }
+                visualHydraulicBoomWinchMotorResult: { "result": "Baik", "status": true }
+                visualHydraulicSwingMotorResult: { "result": "Baik", "status": true }
+                visualControlValveReliefValveResult: { "result": "Baik", "status": true }
+                visualControlValveMainWinchValveResult: { "result": "Baik", "status": true }
+                visualControlValveAuxiliaryWinchValveResult: { "result": "Baik", "status": true }
+                visualControlValveBoomWinchValveResult: { "result": "Baik", "status": true }
+                visualControlValveBoomMovementValveResult: { "result": "Baik", "status": true }
+                visualControlValveSteeringCylinderValveResult: { "result": "Baik", "status": true }
+                visualControlValveAxleOscillationValveResult: { "result": "Baik", "status": true }
+                visualControlValveOutriggerMovementValveResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderBoomMovementCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderOutriggerCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderSteeringWheelCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderAxleOscillationCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderTelescopicCylinderResult: { "result": "Baik", "status": true }
+                visualPneumaticCompressorResult: { "result": "Baik", "status": true }
+                visualPneumaticTankAndSafetyValveResult: { "result": "Baik", "status": true }
+                visualPneumaticPressurizedAirLinesResult: { "result": "Baik", "status": true }
+                visualPneumaticAirFilterResult: { "result": "Perlu dibersihkan", "status": false }
+                visualPneumaticControlValveResult: { "result": "Baik", "status": true }
+                visualOperatorCabinSafetyLadderResult: { "result": "Baik", "status": true }
+                visualOperatorCabinDoorResult: { "result": "Baik", "status": true }
+                visualOperatorCabinWindowResult: { "result": "Baik", "status": true }
+                visualOperatorCabinFanAcResult: { "result": "Berfungsi", "status": true }
+                visualOperatorCabinControlLeversButtonsResult: { "result": "Baik", "status": true }
+                visualOperatorCabinPendantControlResult: { "result": "N/A", "status": true }
+                visualOperatorCabinLightingResult: { "result": "Lampu kabin mati", "status": false }
+                visualOperatorCabinHornSignalAlarmResult: { "result": "Baik", "status": true }
+                visualOperatorCabinFuseResult: { "result": "Baik", "status": true }
+                visualOperatorCabinCommunicationDeviceResult: { "result": "Tersedia (Radio)", "status": true }
+                visualOperatorCabinFireExtinguisherResult: { "result": "Tersedia", "status": true }
+                visualOperatorCabinOperatingSignsResult: { "result": "Baik", "status": true }
+                visualOperatorCabinIgnitionKeyMasterSwitchResult: { "result": "Baik", "status": true }
+                visualOperatorCabinButtonsHandlesLeversResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsPanelConductorConnectorResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsConductorProtectionResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsMotorInstallationSafetySystemResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsGroundingSystemResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsInstallationResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesLadderHandrailResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesEngineOilLubricantPressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesHydraulicOilPressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesAirPressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesAmperemeterResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesVoltageResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesEngineTemperatureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesTransmissionTemperatureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterOilTemperaturePressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterSpeedometerIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterRotaryLampResult: { "result": "Kaca retak", "status": false }
+                visualSafetyDevicesConverterMainHoistRopeUpDownLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterAuxiliaryHoistRopeUpDownLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterSwingMotionLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterLevelIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterLoadWeightIndicatorResult: { "result": "Sensor tidak akurat", "status": false }
+                visualSafetyDevicesConverterLoadChartResult: { "result": "Tersedia", "status": true }
+                visualSafetyDevicesConverterAnemometerWindSpeedResult: { "result": "Berfungsi", "status": true }
+                visualSafetyDevicesConverterBoomAngleIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterAirPressureIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterHydraulicPressureIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterSafetyValvesResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterMainWindingDrumSafetyLockResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterAuxiliaryWindingDrumSafetyLockResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterTelescopicMotionLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterLightningArresterResult: { "result": "N/A", "status": true }
+                visualSafetyDevicesConverterLiftingHeightIndicatorResult: { "result": "Baik", "status": true }
+                steelWireRopeNdtType: "Visual"
+                ndtSteelWireRopes:
+                  - usageAt: "Main Load Hoist Drum"
+                    specDiameter: "26"
+                    actualDiameter: "25.8"
+                    construction: "IWRC 8x26 WS"
+                    type: "Visual"
+                    length: "220"
+                    age: "2 Tahun"
+                    result: { "result": "Tidak ditemukan cacat", "status": true }
+                  - usageAt: "Auxiliary load hoist drum"
+                    specDiameter: "22"
+                    actualDiameter: "21.5"
+                    construction: "IWRC 6x36 WS"
+                    type: "Visual"
+                    length: "150"
+                    age: "2 Tahun"
+                    result: { "result": "Perlu diganti (aus)", "status": false }
+                  - usageAt: "Boom Hoist Drum"
+                    specDiameter: "22"
+                    actualDiameter: "21.9"
+                    construction: "IWRC 6x25 Filler"
+                    type: "Visual"
+                    length: "180"
+                    age: "2 Tahun"
+                    result: { "result": "Tidak ditemukan cacat", "status": true }
+                ndtBoomType: "Telescopic"
+                boomNdtType: "Magnetic Particle"
+                ndtBoomInspections:
+                  - part: "Main Boom Section 1"
+                    location: "Area Sambungan Las"
+                    result: { "result": "Tidak ada indikasi retak", "status": true }
+                  - part: "Main Boom Section 3"
+                    location: "Area Pin"
+                    result: { "result": "Tidak ada indikasi retak", "status": true }
+                  - part: "Jib Section 2"
+                    location: "Area Sambungan"
+                    result: { "result": "Indikasi retak rambut", "status": false }
+                mainHookNdtType: "Penetrant Test"
+                capacityMainHook: "90 Ton"
+                ndtMainHookSpecificationA: "120"
+                ndtMainHookSpecificationB: "140"
+                ndtMainHookSpecificationC: "155"
+                ndtMainHookSpecificationD: "420"
+                ndtMainHookSpecificationE: "400"
+                ndtMainHookSpecificationF: "105"
+                ndtMainHookSpecificationG: "130"
+                ndtMainHookSpecificationH: "130"
+                ndtMainHookSpecificationResult: { "result": "Sesuai standar pabrikan", "status": true }
+                ndtMainHookMeasurementResultsA: "120"
+                ndtMainHookMeasurementResultsB: "141"
+                ndtMainHookMeasurementResultsC: "156"
+                ndtMainHookMeasurementResultsD: "420"
+                ndtMainHookMeasurementResultsE: "401"
+                ndtMainHookMeasurementResultsF: "104"
+                ndtMainHookMeasurementResultsG: "130"
+                ndtMainHookMeasurementResultsH: "129"
+                ndtMainHookMeasurementResultsResult: { "result": "Tidak ditemukan indikasi retak", "status": true }
+                ndtMainHookToleranceMeasureA: "126"
+                ndtMainHookToleranceMeasureB: "-"
+                ndtMainHookToleranceMeasureC: "139.5"
+                ndtMainHookToleranceMeasureD: "-"
+                ndtMainHookToleranceMeasureE: "-"
+                ndtMainHookToleranceMeasureF: "94.5"
+                ndtMainHookToleranceMeasureG: "117"
+                ndtMainHookToleranceMeasureH: "117"
+                ndtMainHookToleranceMeasureResult: { "result": "Dalam batas toleransi", "status": true }
+                auxiliaryHookNdtType: "Penetrant Test"
+                capacityOptionalHook: "8 Ton"
+                ndtAuxiliaryHookSpecificationA: "60"
+                ndtAuxiliaryHookSpecificationB: "70"
+                ndtAuxiliaryHookSpecificationC: "80"
+                ndtAuxiliaryHookSpecificationD: "220"
+                ndtAuxiliaryHookSpecificationE: "200"
+                ndtAuxiliaryHookSpecificationF: "50"
+                ndtAuxiliaryHookSpecificationG: "65"
+                ndtAuxiliaryHookSpecificationH: "65"
+                ndtAuxiliaryHookSpecificationResult: { "result": "Sesuai standar pabrikan", "status": true }
+                ndtAuxiliaryHookMeasurementResultsA: "60"
+                ndtAuxiliaryHookMeasurementResultsB: "70"
+                ndtAuxiliaryHookMeasurementResultsC: "80"
+                ndtAuxiliaryHookMeasurementResultsD: "221"
+                ndtAuxiliaryHookMeasurementResultsE: "200"
+                ndtAuxiliaryHookMeasurementResultsF: "50"
+                ndtAuxiliaryHookMeasurementResultsG: "65"
+                ndtAuxiliaryHookMeasurementResultsH: "65"
+                ndtAuxiliaryHookMeasurementResultsResult: { "result": "Tidak ditemukan indikasi retak", "status": true }
+                ndtAuxiliaryHookToleranceMeasureA: "63"
+                ndtAuxiliaryHookToleranceMeasureB: "-"
+                ndtAuxiliaryHookToleranceMeasureC: "72"
+                ndtAuxiliaryHookToleranceMeasureD: "-"
+                ndtAuxiliaryHookToleranceMeasureE: "-"
+                ndtAuxiliaryHookToleranceMeasureF: "45"
+                ndtAuxiliaryHookToleranceMeasureG: "58.5"
+                ndtAuxiliaryHookToleranceMeasureH: "58.5"
+                ndtAuxiliaryHookToleranceMeasureResult: { "result": "Dalam batas toleransi", "status": true }
+                mainDrumNdtType: "Visual"
+                ndtMainDrumSpecificationA: "50"
+                ndtMainDrumSpecificationB: "700"
+                ndtMainDrumSpecificationC: "550"
+                ndtMainDrumSpecificationD: "800"
+                ndtMainDrumSpecificationE: "50"
+                ndtMainDrumSpecificationF: "170"
+                ndtMainDrumSpecificationG: "60"
+                ndtMainDrumSpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtMainDrumMeasurementResultsA: "50"
+                ndtMainDrumMeasurementResultsB: "700"
+                ndtMainDrumMeasurementResultsC: "550"
+                ndtMainDrumMeasurementResultsD: "800"
+                ndtMainDrumMeasurementResultsE: "50"
+                ndtMainDrumMeasurementResultsF: "170"
+                ndtMainDrumMeasurementResultsG: "60"
+                ndtMainDrumMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                auxiliaryDrumNdtType: "Visual"
+                ndtAuxiliaryDrumSpecificationA: "45"
+                ndtAuxiliaryDrumSpecificationB: "650"
+                ndtAuxiliaryDrumSpecificationC: "500"
+                ndtAuxiliaryDrumSpecificationD: "750"
+                ndtAuxiliaryDrumSpecificationE: "45"
+                ndtAuxiliaryDrumSpecificationF: "160"
+                ndtAuxiliaryDrumSpecificationG: "55"
+                ndtAuxiliaryDrumSpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtAuxiliaryDrumMeasurementResultsA: "45"
+                ndtAuxiliaryDrumMeasurementResultsB: "650"
+                ndtAuxiliaryDrumMeasurementResultsC: "500"
+                ndtAuxiliaryDrumMeasurementResultsD: "750"
+                ndtAuxiliaryDrumMeasurementResultsE: "45"
+                ndtAuxiliaryDrumMeasurementResultsF: "160"
+                ndtAuxiliaryDrumMeasurementResultsG: "55"
+                ndtAuxiliaryDrumMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                puliNdtType: "Visual"
+                ndtMainPulleySpecificationA: "35"
+                ndtMainPulleySpecificationB: "25"
+                ndtMainPulleySpecificationC: "120"
+                ndtMainPulleySpecificationD: "50"
+                ndtMainPulleySpecificationE: "500"
+                ndtMainPulleySpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtMainPulleyMeasurementResultsA: "35"
+                ndtMainPulleyMeasurementResultsB: "25"
+                ndtMainPulleyMeasurementResultsC: "120"
+                ndtMainPulleyMeasurementResultsD: "50"
+                ndtMainPulleyMeasurementResultsE: "500"
+                ndtMainPulleyMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                puliOptionalType: "Visual"
+                ndtAuxiliaryPulleySpecificationA: "30"
+                ndtAuxiliaryPulleySpecificationB: "20"
+                ndtAuxiliaryPulleySpecificationC: "110"
+                ndtAuxiliaryPulleySpecificationD: "45"
+                ndtAuxiliaryPulleySpecificationE: "450"
+                ndtAuxiliaryPulleySpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtAuxiliaryPulleyMeasurementResultsA: "30"
+                ndtAuxiliaryPulleyMeasurementResultsB: "20"
+                ndtAuxiliaryPulleyMeasurementResultsC: "110"
+                ndtAuxiliaryPulleyMeasurementResultsD: "45"
+                ndtAuxiliaryPulleyMeasurementResultsE: "450"
+                ndtAuxiliaryPulleyMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                testingFunctionHoistingLoweringResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionExtendedRectractedBoomResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionExtendedRectractedOutriggerResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionSwingSlewingResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionAntiTwoBlockResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionBoomStopResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionAnemometerWindSpeedResult: { "result": "Berfungsi", "status": true }
+                testingFunctionBrakeLockingDeviceResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionLoadMomentIndicatorResult: { "result": "Tidak berfungsi, perlu kalibrasi", "status": false }
+                testingFunctionTurnSignalResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionDrivingLightsResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionLoadIndicatorLightResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionRotaryLampResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionHornResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionSwingAlarmResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionReverseAlarmResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionOverloadAlarmResult: { "result": "Berfungsi dengan baik", "status": true }
+                dynamicMainHookTests:
+                  - boomLength: "30.0"
+                    radius: "10.0"
+                    boomAngle: "72"
+                    testLoad: "55000"
+                    safeWorkingLoad: "50000"
+                    result: "Baik"
+                  - boomLength: "60.0"
+                    radius: "18.0"
+                    boomAngle: "70"
+                    testLoad: "13200"
+                    safeWorkingLoad: "12000"
+                    result: "Baik"
+                  - boomLength: "45.0"
+                    radius: "14.0"
+                    boomAngle: "75"
+                    testLoad: "27500"
+                    safeWorkingLoad: "25000"
+                    result: "Baik, sedikit goyangan terdeteksi"
+                dynamicAuxiliaryHookTests:
+                  - boomLength: "60.0"
+                    radius: "22.0"
+                    boomAngle: "65"
+                    testLoad: "8800"
+                    safeWorkingLoad: "8000"
+                    result: "Baik"
+                  - boomLength: "60.0"
+                    radius: "28.0"
+                    boomAngle: "58"
+                    testLoad: "4400"
+                    safeWorkingLoad: "4000"
+                    result: "Baik"
+                staticMainHookTests:
+                  - boomLength: "30.0"
+                    radius: "10.0"
+                    boomAngle: "72"
+                    testLoad: "62500"
+                    safeWorkingLoad: "50000"
+                    result: "Baik, tidak ada penurunan"
+                  - boomLength: "60.0"
+                    radius: "18.0"
+                    boomAngle: "70"
+                    testLoad: "15000"
+                    safeWorkingLoad: "12000"
+                    result: "Baik, tidak ada penurunan"
+                staticAuxiliaryHookTests:
+                  - boomLength: "60.0"
+                    radius: "22.0"
+                    boomAngle: "65"
+                    testLoad: "10000"
+                    safeWorkingLoad: "8000"
+                    result: "Baik, tidak ada penurunan"
+                  - boomLength: "60.0"
+                    radius: "28.0"
+                    boomAngle: "58"
+                    testLoad: "5000"
+                    safeWorkingLoad: "4000"
+                    result: "Baik, tidak ada penurunan"
+                  - boomLength: "76.0"
+                    radius: "34.0"
+                    boomAngle: "55"
+                    testLoad: "2750"
+                    safeWorkingLoad: "2500"
+                    result: "Baik, penurunan 0.1% terdeteksi (dalam batas aman)"
+              conclusion: "Mobile Crane dinyatakan LAIK DIOPERASIKAN dengan beberapa catatan perbaikan. Sebagian besar sistem utama berfungsi baik, namun memerlukan perhatian pada beberapa komponen minor untuk memastikan keamanan operasional yang maksimal."
+              recommendation: "1. Segera lakukan perbaikan pada retak rambut di baut pondasi #3 dan Jib Section 2.\n2. Ganti kampas rem dan tali kawat baja pada winch tambahan yang terindikasi aus.\n3. Lakukan kalibrasi ulang pada Load Moment Indicator (LMI).\n4. Perbaiki safety latch pada kait tambahan dan ganti kaca lampu rotary.\n5. Lakukan pembersihan dan pengecatan pada area yang terkorosi.\n6. Pemeriksaan dan pengujian berkala berikutnya dilakukan sebelum 15 Juli 2026."
       responses:
         '201':
           description: Laporan Mobile Crane berhasil dibuat.
@@ -1582,6 +2070,494 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LaporanMobileCranePayload'
+            example:
+              inspectionType: "PESAWAT ANGKAT ANGKUT JENIS"
+              createdAt: "2025-07-21"
+              extraId: 123
+              equipmentType: "MOBILE CRANE"
+              examinationType: "Pemeriksaan dan Pengujian Berkala"
+              generalData:
+                generalDataOwnerName: "PT. IVAN JAGO"
+                generalDataOwnerAddress: "Jl. Gatot Subroto No. 112, Jakarta Selatan"
+                generalDataUserSubcontractorPersonInCharge: "PT. Bangun Cipta Graha"
+                generalDataUserAddress: "Kawasan Industri MM2100, Blok G, Cibitung"
+                generalDataUnitLocation: "Proyek Pembangunan Jembatan Antar Kota"
+                generalDataOperatorName: "Joko Susilo"
+                generalDataManufacturer: "Liebherr"
+                generalDataBrandType: "Liebherr / LTM 1090-4.2"
+                generalDataLocationAndYearOfManufacture: "Jerman / 2020"
+                generalDataSerialNumberUnitNumber: "LTM1090-98765"
+                generalDataCapacityWorkingLoad: "90.000 kg"
+                generalDataIntendedUse: "Pekerjaan konstruksi dan pengangkatan berat"
+                generalDataUsagePermitNumber: "503/998/SIO-PAA/2024"
+                generalDataOperatorCertificate: "Ada, No. 11223/OP-PAA/XII/2022"
+                generalDataEquipmentHistory: "Penggantian oli hidrolik pada Januari 2025."
+                generalDataInspectionDate: "15 Juli 2025"
+              technicalData:
+                technicalDataMaximumWorkingLoadCapacity: "90.000 kg"
+                technicalDataBoomLength: "60.0 m"
+                technicalDataMaximumJibLength: "16.0 m"
+                technicalDataMaximumJibWorkingLoad: "8.000 kg"
+                technicalDataMaxBoomJibLength: "76.0 m"
+                technicalDataCraneWeight: "48.000 kg"
+                technicalDataMaxLiftingHeight: "77.5 m"
+                technicalDataBoomWorkingAngle: "0 - 83°"
+                technicalDataEngineNumber: "LBR-D936-A7"
+                technicalDataType: "Liebherr D936 A7"
+                technicalDataNumberOfCylinders: "6 Silinder"
+                technicalDataNetPower: "270 kW / 2100 rpm"
+                technicalDataBrandYearOfManufacture: "Liebherr / 2020"
+                technicalDataHookManufacturer: "Liebherr"
+                technicalDataMainHookType: "Double Hook"
+                technicalDataMainHookCapacity: "90 Ton"
+                technicalDataMainHookMaterial: "Fine-Grain Structural Steel"
+                technicalDataMainHookSerialNumber: "HK-90T-LBR-01"
+                technicalDataAuxiliaryHookType: "Single Hook"
+                technicalDataAuxiliaryHookCapacity: "8 Ton"
+                technicalDataAuxiliaryHookMaterial: "Fine-Grain Structural Steel"
+                technicalDataAuxiliaryHookSerialNumber: "HK-8T-LBR-02"
+                technicalDataWireRopeMainLoadHoistDrumDiameter: "26 mm"
+                technicalDataWireRopeMainLoadHoistDrumType: "IWRC 8x26 WS"
+                technicalDataWireRopeMainLoadHoistDrumConstruction: "Right Hand Regular Lay"
+                technicalDataWireRopeMainLoadHoistDrumBreakingStrength: "510 kN"
+                technicalDataWireRopeMainLoadHoistDrumLength: "220 m"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter: "22 mm"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumType: "IWRC 6x36 WS"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction: "Right Hand Regular Lay"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumLength: "150 m"
+                technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength: "380 kN"
+                technicalDataWireRopeBoomHoistDrumDiameter: "22 mm"
+                technicalDataWireRopeBoomHoistDrumType: "IWRC 6x25 Filler"
+                technicalDataWireRopeBoomHoistDrumConstruction: "Right Hand Regular Lay"
+                technicalDataWireRopeBoomHoistDrumLength: "180 m"
+                technicalDataWireRopeBoomHoistDrumBreakingStrength: "380 kN"
+              inspectionAndTesting:
+                visualFoundationAndBoltsCorrosionResult: { "result": "Baik", "status": true }
+                visualFoundationAndBoltsCracksResult: { "result": "Retak rambut pada baut #3", "status": false }
+                visualFoundationAndBoltsDeformationResult: { "result": "Baik", "status": true }
+                visualFoundationAndBoltsTightnessResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationCorrosionResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationCracksResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationDeformationResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationFasteningResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationTransverseReinforcementResult: { "result": "Baik", "status": true }
+                visualFrameColumnsOnFoundationDiagonalReinforcementResult: { "result": "Baik", "status": true }
+                visualLadderCorrosionResult: { "result": "Korosi ringan pada pegangan", "status": false }
+                visualLadderCracksResult: { "result": "Baik", "status": true }
+                visualLadderDeformationResult: { "result": "Sedikit bengkok di anak tangga ke-2", "status": false }
+                visualLadderFasteningResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformCorrosionResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformCracksResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformDeformationResult: { "result": "Baik", "status": true }
+                visualWorkingPlatformFasteningResult: { "result": "Baik", "status": true }
+                visualOutriggersOutriggerArmHousingResult: { "result": "Baik", "status": true }
+                visualOutriggersOutriggerArmsResult: { "result": "Baik", "status": true }
+                visualOutriggersJackResult: { "result": "Rembersan oli pada jack depan kanan", "status": false }
+                visualOutriggersOutriggerPadsResult: { "result": "Baik", "status": true }
+                visualOutriggersHousingConnectionToChassisResult: { "result": "Baik", "status": true }
+                visualOutriggersOutriggerSafetyLocksResult: { "result": "Baik", "status": true }
+                visualTurntableSlewingRollerBearingResult: { "result": "Perlu dilumasi ulang", "status": false }
+                visualTurntableBrakeHousingResult: { "result": "Baik", "status": true }
+                visualTurntableBrakeLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualTurntableDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualTurntablePressureCylinderResult: { "result": "Baik", "status": true }
+                visualTurntableDrumAxleResult: { "result": "Baik", "status": true }
+                visualTurntableLeversPinsBoltsResult: { "result": "Baik", "status": true }
+                visualTurntableGuardResult: { "result": "Penyok di sisi kiri", "status": false }
+                visualLatticeBoomMainBoomResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomBoomSectionResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomTopPulleyResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomPulleyGuardResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomWireRopeGuardResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomPulleyGrooveLipResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomPivotPinResult: { "result": "Telescopic Boom", "status": true }
+                visualLatticeBoomWireRopeGuidePulleyResult: { "result": "Telescopic Boom", "status": true }
+                visualSteeringMainClutchResult: { "result": "Baik", "status": true }
+                visualTransmissionResult: { "result": "Baik", "status": true }
+                visualSteeringFrontWheelResult: { "result": "Baik", "status": true }
+                visualSteeringMiddleWheelResult: { "result": "Baik", "status": true }
+                visualSteeringRearWheelResult: { "result": "Baik", "status": true }
+                visualBrakeServiceBrakeResult: { "result": "Baik", "status": true }
+                visualBrakeParkingBrakeResult: { "result": "Perlu penyetelan", "status": false }
+                visualBrakeBrakeHousingResult: { "result": "Baik", "status": true }
+                visualBrakeBrakeLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualBrakeDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualBrakeLeversPinsBoltsResult: { "result": "Baik", "status": true }
+                visualBrakeGuardResult: { "result": "Baik", "status": true }
+                visualTravelDrumClutchHousingResult: { "result": "Baik", "status": true }
+                visualTravelDrumClutchLiningResult: { "result": "Baik", "status": true }
+                visualTravelDrumClutchDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualTravelDrumLeversPinsBoltsResult: { "result": "Baik", "status": true }
+                visualTravelDrumGuardResult: { "result": "Baik", "status": true }
+                visualMainWinchDrumMountingResult: { "result": "Baik", "status": true }
+                visualMainWinchWindingDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeHousingResult: { "result": "Baik", "status": true }
+                visualMainWinchClutchLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualMainWinchClutchDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualMainWinchGrooveResult: { "result": "Baik", "status": true }
+                visualMainWinchGrooveLipResult: { "result": "Baik", "status": true }
+                visualMainWinchFlangesResult: { "result": "Baik", "status": true }
+                visualMainWinchBrakeActuatorLeversPinsAndBoltsResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchDrumMountingResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchWindingDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchBrakeLiningsAndShoesResult: { "result": "Aus, perlu diganti", "status": false }
+                visualAuxiliaryWinchBrakeDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchBrakeHousingResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchClutchLiningsAndShoesResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchClutchDrumSurfaceResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchGrooveResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchGrooveLipResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchFlangesResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWinchBrakeActuatorLeversPinsAndBoltsResult: { "result": "Baik", "status": true }
+                visualHoistGearBlockLubricationResult: { "result": "Baik", "status": true }
+                visualHoistGearBlockOilSealResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyGrooveResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyGrooveLipResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyPinResult: { "result": "Baik", "status": true }
+                visualMainPulleyBearingResult: { "result": "Baik", "status": true }
+                visualMainPulleyPulleyGuardResult: { "result": "Baik", "status": true }
+                visualMainPulleyWireRopeGuardResult: { "result": "Baik", "status": true }
+                visualMainHookSwivelNutAndBearingResult: { "result": "Baik", "status": true }
+                visualMainHookTrunnionResult: { "result": "Baik", "status": true }
+                visualMainHookSafetyLatchResult: { "result": "Terpasang", "status": true }
+                visualAuxiliaryHookFreeFallWeightResult: { "result": "Baik", "status": true }
+                visualAuxiliaryHookSwivelNutAndBearingResult: { "result": "Baik", "status": true }
+                visualAuxiliaryHookSafetyLatchResult: { "result": "Tidak terpasang", "status": false }
+                visualMainWireRopeCorrosionResult: { "result": "Baik", "status": true }
+                visualMainWireRopeWearResult: { "result": "Baik", "status": true }
+                visualMainWireRopeBreakageResult: { "result": "Baik", "status": true }
+                visualMainWireRopeDeformationResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWireRopeCorrosionResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWireRopeWearResult: { "result": "Baik", "status": true }
+                visualAuxiliaryWireRopeBreakageResult: { "result": "Beberapa kawat putus", "status": false }
+                visualAuxiliaryWireRopeDeformationResult: { "result": "Baik", "status": true }
+                visualLimitSwitchLongTravelResult: { "result": "N/A", "status": true }
+                visualLimitSwitchCrossTravelResult: { "result": "N/A", "status": true }
+                visualLimitSwitchHoistingResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineCoolingSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineLubricationSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineEngineMountingResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineSafetyGuardEquipmentResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineExhaustSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineFuelSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEnginePowerTransmissionSystemResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineBatteryResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineStarterMotorResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineWiringInstallationResult: { "result": "Baik", "status": true }
+                visualInternalCombustionEngineTurbochargerResult: { "result": "Baik", "status": true }
+                visualHydraulicPumpResult: { "result": "Baik", "status": true }
+                visualHydraulicLinesResult: { "result": "Baik", "status": true }
+                visualHydraulicFilterResult: { "result": "Baik", "status": true }
+                visualHydraulicTankResult: { "result": "Baik", "status": true }
+                visualHydraulicMainWinchMotorResult: { "result": "Baik", "status": true }
+                visualHydraulicAuxiliaryWinchMotorResult: { "result": "Baik", "status": true }
+                visualHydraulicBoomWinchMotorResult: { "result": "Baik", "status": true }
+                visualHydraulicSwingMotorResult: { "result": "Baik", "status": true }
+                visualControlValveReliefValveResult: { "result": "Baik", "status": true }
+                visualControlValveMainWinchValveResult: { "result": "Baik", "status": true }
+                visualControlValveAuxiliaryWinchValveResult: { "result": "Baik", "status": true }
+                visualControlValveBoomWinchValveResult: { "result": "Baik", "status": true }
+                visualControlValveBoomMovementValveResult: { "result": "Baik", "status": true }
+                visualControlValveSteeringCylinderValveResult: { "result": "Baik", "status": true }
+                visualControlValveAxleOscillationValveResult: { "result": "Baik", "status": true }
+                visualControlValveOutriggerMovementValveResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderBoomMovementCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderOutriggerCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderSteeringWheelCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderAxleOscillationCylinderResult: { "result": "Baik", "status": true }
+                visualHydraulicCylinderTelescopicCylinderResult: { "result": "Baik", "status": true }
+                visualPneumaticCompressorResult: { "result": "Baik", "status": true }
+                visualPneumaticTankAndSafetyValveResult: { "result": "Baik", "status": true }
+                visualPneumaticPressurizedAirLinesResult: { "result": "Baik", "status": true }
+                visualPneumaticAirFilterResult: { "result": "Perlu dibersihkan", "status": false }
+                visualPneumaticControlValveResult: { "result": "Baik", "status": true }
+                visualOperatorCabinSafetyLadderResult: { "result": "Baik", "status": true }
+                visualOperatorCabinDoorResult: { "result": "Baik", "status": true }
+                visualOperatorCabinWindowResult: { "result": "Baik", "status": true }
+                visualOperatorCabinFanAcResult: { "result": "Berfungsi", "status": true }
+                visualOperatorCabinControlLeversButtonsResult: { "result": "Baik", "status": true }
+                visualOperatorCabinPendantControlResult: { "result": "N/A", "status": true }
+                visualOperatorCabinLightingResult: { "result": "Lampu kabin mati", "status": false }
+                visualOperatorCabinHornSignalAlarmResult: { "result": "Baik", "status": true }
+                visualOperatorCabinFuseResult: { "result": "Baik", "status": true }
+                visualOperatorCabinCommunicationDeviceResult: { "result": "Tersedia (Radio)", "status": true }
+                visualOperatorCabinFireExtinguisherResult: { "result": "Tersedia", "status": true }
+                visualOperatorCabinOperatingSignsResult: { "result": "Baik", "status": true }
+                visualOperatorCabinIgnitionKeyMasterSwitchResult: { "result": "Baik", "status": true }
+                visualOperatorCabinButtonsHandlesLeversResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsPanelConductorConnectorResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsConductorProtectionResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsMotorInstallationSafetySystemResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsGroundingSystemResult: { "result": "Baik", "status": true }
+                visualElectricalComponentsInstallationResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesLadderHandrailResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesEngineOilLubricantPressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesHydraulicOilPressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesAirPressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesAmperemeterResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesVoltageResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesEngineTemperatureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesTransmissionTemperatureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterOilTemperaturePressureResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterSpeedometerIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterRotaryLampResult: { "result": "Kaca retak", "status": false }
+                visualSafetyDevicesConverterMainHoistRopeUpDownLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterAuxiliaryHoistRopeUpDownLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterSwingMotionLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterLevelIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterLoadWeightIndicatorResult: { "result": "Sensor tidak akurat", "status": false }
+                visualSafetyDevicesConverterLoadChartResult: { "result": "Tersedia", "status": true }
+                visualSafetyDevicesConverterAnemometerWindSpeedResult: { "result": "Berfungsi", "status": true }
+                visualSafetyDevicesConverterBoomAngleIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterAirPressureIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterHydraulicPressureIndicatorResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterSafetyValvesResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterMainWindingDrumSafetyLockResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterAuxiliaryWindingDrumSafetyLockResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterTelescopicMotionLimitResult: { "result": "Baik", "status": true }
+                visualSafetyDevicesConverterLightningArresterResult: { "result": "N/A", "status": true }
+                visualSafetyDevicesConverterLiftingHeightIndicatorResult: { "result": "Baik", "status": true }
+                steelWireRopeNdtType: "Visual"
+                ndtSteelWireRopes:
+                  - usageAt: "Main Load Hoist Drum"
+                    specDiameter: "26"
+                    actualDiameter: "25.8"
+                    construction: "IWRC 8x26 WS"
+                    type: "Visual"
+                    length: "220"
+                    age: "2 Tahun"
+                    result: { "result": "Tidak ditemukan cacat", "status": true }
+                  - usageAt: "Auxiliary load hoist drum"
+                    specDiameter: "22"
+                    actualDiameter: "21.5"
+                    construction: "IWRC 6x36 WS"
+                    type: "Visual"
+                    length: "150"
+                    age: "2 Tahun"
+                    result: { "result": "Perlu diganti (aus)", "status": false }
+                  - usageAt: "Boom Hoist Drum"
+                    specDiameter: "22"
+                    actualDiameter: "21.9"
+                    construction: "IWRC 6x25 Filler"
+                    type: "Visual"
+                    length: "180"
+                    age: "2 Tahun"
+                    result: { "result": "Tidak ditemukan cacat", "status": true }
+                ndtBoomType: "Telescopic"
+                boomNdtType: "Magnetic Particle"
+                ndtBoomInspections:
+                  - part: "Main Boom Section 1"
+                    location: "Area Sambungan Las"
+                    result: { "result": "Tidak ada indikasi retak", "status": true }
+                  - part: "Main Boom Section 3"
+                    location: "Area Pin"
+                    result: { "result": "Tidak ada indikasi retak", "status": true }
+                  - part: "Jib Section 2"
+                    location: "Area Sambungan"
+                    result: { "result": "Indikasi retak rambut", "status": false }
+                mainHookNdtType: "Penetrant Test"
+                capacityMainHook: "90 Ton"
+                ndtMainHookSpecificationA: "120"
+                ndtMainHookSpecificationB: "140"
+                ndtMainHookSpecificationC: "155"
+                ndtMainHookSpecificationD: "420"
+                ndtMainHookSpecificationE: "400"
+                ndtMainHookSpecificationF: "105"
+                ndtMainHookSpecificationG: "130"
+                ndtMainHookSpecificationH: "130"
+                ndtMainHookSpecificationResult: { "result": "Sesuai standar pabrikan", "status": true }
+                ndtMainHookMeasurementResultsA: "120"
+                ndtMainHookMeasurementResultsB: "141"
+                ndtMainHookMeasurementResultsC: "156"
+                ndtMainHookMeasurementResultsD: "420"
+                ndtMainHookMeasurementResultsE: "401"
+                ndtMainHookMeasurementResultsF: "104"
+                ndtMainHookMeasurementResultsG: "130"
+                ndtMainHookMeasurementResultsH: "129"
+                ndtMainHookMeasurementResultsResult: { "result": "Tidak ditemukan indikasi retak", "status": true }
+                ndtMainHookToleranceMeasureA: "126"
+                ndtMainHookToleranceMeasureB: "-"
+                ndtMainHookToleranceMeasureC: "139.5"
+                ndtMainHookToleranceMeasureD: "-"
+                ndtMainHookToleranceMeasureE: "-"
+                ndtMainHookToleranceMeasureF: "94.5"
+                ndtMainHookToleranceMeasureG: "117"
+                ndtMainHookToleranceMeasureH: "117"
+                ndtMainHookToleranceMeasureResult: { "result": "Dalam batas toleransi", "status": true }
+                auxiliaryHookNdtType: "Penetrant Test"
+                capacityOptionalHook: "8 Ton"
+                ndtAuxiliaryHookSpecificationA: "60"
+                ndtAuxiliaryHookSpecificationB: "70"
+                ndtAuxiliaryHookSpecificationC: "80"
+                ndtAuxiliaryHookSpecificationD: "220"
+                ndtAuxiliaryHookSpecificationE: "200"
+                ndtAuxiliaryHookSpecificationF: "50"
+                ndtAuxiliaryHookSpecificationG: "65"
+                ndtAuxiliaryHookSpecificationH: "65"
+                ndtAuxiliaryHookSpecificationResult: { "result": "Sesuai standar pabrikan", "status": true }
+                ndtAuxiliaryHookMeasurementResultsA: "60"
+                ndtAuxiliaryHookMeasurementResultsB: "70"
+                ndtAuxiliaryHookMeasurementResultsC: "80"
+                ndtAuxiliaryHookMeasurementResultsD: "221"
+                ndtAuxiliaryHookMeasurementResultsE: "200"
+                ndtAuxiliaryHookMeasurementResultsF: "50"
+                ndtAuxiliaryHookMeasurementResultsG: "65"
+                ndtAuxiliaryHookMeasurementResultsH: "65"
+                ndtAuxiliaryHookMeasurementResultsResult: { "result": "Tidak ditemukan indikasi retak", "status": true }
+                ndtAuxiliaryHookToleranceMeasureA: "63"
+                ndtAuxiliaryHookToleranceMeasureB: "-"
+                ndtAuxiliaryHookToleranceMeasureC: "72"
+                ndtAuxiliaryHookToleranceMeasureD: "-"
+                ndtAuxiliaryHookToleranceMeasureE: "-"
+                ndtAuxiliaryHookToleranceMeasureF: "45"
+                ndtAuxiliaryHookToleranceMeasureG: "58.5"
+                ndtAuxiliaryHookToleranceMeasureH: "58.5"
+                ndtAuxiliaryHookToleranceMeasureResult: { "result": "Dalam batas toleransi", "status": true }
+                mainDrumNdtType: "Visual"
+                ndtMainDrumSpecificationA: "50"
+                ndtMainDrumSpecificationB: "700"
+                ndtMainDrumSpecificationC: "550"
+                ndtMainDrumSpecificationD: "800"
+                ndtMainDrumSpecificationE: "50"
+                ndtMainDrumSpecificationF: "170"
+                ndtMainDrumSpecificationG: "60"
+                ndtMainDrumSpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtMainDrumMeasurementResultsA: "50"
+                ndtMainDrumMeasurementResultsB: "700"
+                ndtMainDrumMeasurementResultsC: "550"
+                ndtMainDrumMeasurementResultsD: "800"
+                ndtMainDrumMeasurementResultsE: "50"
+                ndtMainDrumMeasurementResultsF: "170"
+                ndtMainDrumMeasurementResultsG: "60"
+                ndtMainDrumMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                auxiliaryDrumNdtType: "Visual"
+                ndtAuxiliaryDrumSpecificationA: "45"
+                ndtAuxiliaryDrumSpecificationB: "650"
+                ndtAuxiliaryDrumSpecificationC: "500"
+                ndtAuxiliaryDrumSpecificationD: "750"
+                ndtAuxiliaryDrumSpecificationE: "45"
+                ndtAuxiliaryDrumSpecificationF: "160"
+                ndtAuxiliaryDrumSpecificationG: "55"
+                ndtAuxiliaryDrumSpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtAuxiliaryDrumMeasurementResultsA: "45"
+                ndtAuxiliaryDrumMeasurementResultsB: "650"
+                ndtAuxiliaryDrumMeasurementResultsC: "500"
+                ndtAuxiliaryDrumMeasurementResultsD: "750"
+                ndtAuxiliaryDrumMeasurementResultsE: "45"
+                ndtAuxiliaryDrumMeasurementResultsF: "160"
+                ndtAuxiliaryDrumMeasurementResultsG: "55"
+                ndtAuxiliaryDrumMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                puliNdtType: "Visual"
+                ndtMainPulleySpecificationA: "35"
+                ndtMainPulleySpecificationB: "25"
+                ndtMainPulleySpecificationC: "120"
+                ndtMainPulleySpecificationD: "50"
+                ndtMainPulleySpecificationE: "500"
+                ndtMainPulleySpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtMainPulleyMeasurementResultsA: "35"
+                ndtMainPulleyMeasurementResultsB: "25"
+                ndtMainPulleyMeasurementResultsC: "120"
+                ndtMainPulleyMeasurementResultsD: "50"
+                ndtMainPulleyMeasurementResultsE: "500"
+                ndtMainPulleyMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                puliOptionalType: "Visual"
+                ndtAuxiliaryPulleySpecificationA: "30"
+                ndtAuxiliaryPulleySpecificationB: "20"
+                ndtAuxiliaryPulleySpecificationC: "110"
+                ndtAuxiliaryPulleySpecificationD: "45"
+                ndtAuxiliaryPulleySpecificationE: "450"
+                ndtAuxiliaryPulleySpecificationResult: { "result": "Sesuai standar", "status": true }
+                ndtAuxiliaryPulleyMeasurementResultsA: "30"
+                ndtAuxiliaryPulleyMeasurementResultsB: "20"
+                ndtAuxiliaryPulleyMeasurementResultsC: "110"
+                ndtAuxiliaryPulleyMeasurementResultsD: "45"
+                ndtAuxiliaryPulleyMeasurementResultsE: "450"
+                ndtAuxiliaryPulleyMeasurementResultsResult: { "result": "Kondisi Baik", "status": true }
+                testingFunctionHoistingLoweringResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionExtendedRectractedBoomResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionExtendedRectractedOutriggerResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionSwingSlewingResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionAntiTwoBlockResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionBoomStopResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionAnemometerWindSpeedResult: { "result": "Berfungsi", "status": true }
+                testingFunctionBrakeLockingDeviceResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionLoadMomentIndicatorResult: { "result": "Tidak berfungsi, perlu kalibrasi", "status": false }
+                testingFunctionTurnSignalResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionDrivingLightsResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionLoadIndicatorLightResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionRotaryLampResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionHornResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionSwingAlarmResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionReverseAlarmResult: { "result": "Berfungsi dengan baik", "status": true }
+                testingFunctionOverloadAlarmResult: { "result": "Berfungsi dengan baik", "status": true }
+                dynamicMainHookTests:
+                  - boomLength: "30.0"
+                    radius: "10.0"
+                    boomAngle: "72"
+                    testLoad: "55000"
+                    safeWorkingLoad: "50000"
+                    result: "Baik"
+                  - boomLength: "60.0"
+                    radius: "18.0"
+                    boomAngle: "70"
+                    testLoad: "13200"
+                    safeWorkingLoad: "12000"
+                    result: "Baik"
+                  - boomLength: "45.0"
+                    radius: "14.0"
+                    boomAngle: "75"
+                    testLoad: "27500"
+                    safeWorkingLoad: "25000"
+                    result: "Baik, sedikit goyangan terdeteksi"
+                dynamicAuxiliaryHookTests:
+                  - boomLength: "60.0"
+                    radius: "22.0"
+                    boomAngle: "65"
+                    testLoad: "8800"
+                    safeWorkingLoad: "8000"
+                    result: "Baik"
+                  - boomLength: "60.0"
+                    radius: "28.0"
+                    boomAngle: "58"
+                    testLoad: "4400"
+                    safeWorkingLoad: "4000"
+                    result: "Baik"
+                staticMainHookTests:
+                  - boomLength: "30.0"
+                    radius: "10.0"
+                    boomAngle: "72"
+                    testLoad: "62500"
+                    safeWorkingLoad: "50000"
+                    result: "Baik, tidak ada penurunan"
+                  - boomLength: "60.0"
+                    radius: "18.0"
+                    boomAngle: "70"
+                    testLoad: "15000"
+                    safeWorkingLoad: "12000"
+                    result: "Baik, tidak ada penurunan"
+                staticAuxiliaryHookTests:
+                  - boomLength: "60.0"
+                    radius: "22.0"
+                    boomAngle: "65"
+                    testLoad: "10000"
+                    safeWorkingLoad: "8000"
+                    result: "Baik, tidak ada penurunan"
+                  - boomLength: "60.0"
+                    radius: "28.0"
+                    boomAngle: "58"
+                    testLoad: "5000"
+                    safeWorkingLoad: "4000"
+                    result: "Baik, tidak ada penurunan"
+                  - boomLength: "76.0"
+                    radius: "34.0"
+                    boomAngle: "55"
+                    testLoad: "2750"
+                    safeWorkingLoad: "2500"
+                    result: "Baik, penurunan 0.1% terdeteksi (dalam batas aman)"
+              conclusion: "Mobile Crane dinyatakan LAIK DIOPERASIKAN dengan beberapa catatan perbaikan. Sebagian besar sistem utama berfungsi baik, namun memerlukan perhatian pada beberapa komponen minor untuk memastikan keamanan operasional yang maksimal."
+              recommendation: "1. Segera lakukan perbaikan pada retak rambut di baut pondasi #3 dan Jib Section 2.\n2. Ganti kampas rem dan tali kawat baja pada winch tambahan yang terindikasi aus.\n3. Lakukan kalibrasi ulang pada Load Moment Indicator (LMI).\n4. Perbaiki safety latch pada kait tambahan dan ganti kaca lampu rotary.\n5. Lakukan pembersihan dan pengecatan pada area yang terkorosi.\n6. Pemeriksaan dan pengujian berkala berikutnya dilakukan sebelum 15 Juli 2026."
       responses:
         '200':
           description: Laporan Mobile Crane berhasil diperbarui.
@@ -4904,34 +5880,80 @@ components:
           description: true = Baik/Lulus, false = Cacat/Gagal, null = Tidak Diperiks
 
     # ======================================================
-    #               MOBILE CRANE SCHEMAS
+    #                  MOBILE CRANE SCHEMAS
     # ======================================================
     InspectionResultItemMobileCrane:
       type: object
       properties:
+        status:
+          type: boolean
+          description: Status hasil pemeriksaan (true untuk Baik/Lulus, false untuk Cacat/Gagal).
         result:
           type: string
           nullable: true
-        status:
-          type: boolean
-          nullable: true
-          description: true = Baik/Lulus, false = Cacat/Gagal, null = Tidak Diperiksa
+          description: Teks atau keterangan dari hasil pemeriksaan.
+          example: "Baik"
+
+    NdtSteelWireRopeItemSchema:
+      type: object
+      properties:
+        usageAt:
+          type: string
+          example: "Main Load Hoist Drum"
+        specDiameter:
+          type: string
+          example: "26"
+        actualDiameter:
+          type: string
+          example: "25.8"
+        construction:
+          type: string
+          example: "IWRC 8x26 WS"
+        type:
+          type: string
+          example: "Visual"
+        length:
+          type: string
+          example: "220"
+        age:
+          type: string
+          example: "2 Tahun"
+        result:
+          $ref: '#/components/schemas/InspectionResultItemMobileCrane'
+
+    NdtBoomInspectionItemSchema:
+      type: object
+      properties:
+        part:
+          type: string
+          example: "Main Boom Section 1"
+        location:
+          type: string
+          example: "Area Sambungan Las"
+        result:
+          $ref: '#/components/schemas/InspectionResultItemMobileCrane'
 
     LoadTestItemSchema:
       type: object
       properties:
         boomLength:
           type: string
+          example: "30.0"
         radius:
           type: string
+          example: "10.0"
         boomAngle:
           type: string
+          example: "72"
         testLoad:
           type: string
+          example: "55000"
         safeWorkingLoad:
           type: string
+          example: "50000"
         result:
           type: string
+          example: "Baik"
 
     LaporanMobileCranePayload:
       type: object
@@ -4940,77 +5962,80 @@ components:
         - equipmentType
         - examinationType
         - generalData
+        - technicalData
+        - inspectionAndTesting
       properties:
-        inspectionType: { type: string }
-        equipmentType: { type: string }
-        examinationType: { type: string }
-        createdAt: { type: string, description: "Dapat dikirim sebagai string kosong, akan di-overwrite oleh server." }
-        extraId: { type: number }
+        inspectionType: { type: string, example: "PESAWAT ANGKAT ANGKUT JENIS" }
+        createdAt: { type: string, format: date-time, readOnly: true, description: "Diisi otomatis oleh server." }
+        extraId: { type: number, example: 123 }
+        equipmentType: { type: string, example: "MOBILE CRANE" }
+        examinationType: { type: string, example: "Pemeriksaan dan Pengujian Berkala" }
         generalData:
           type: object
           required:
             - generalDataOwnerName
             - generalDataInspectionDate
           properties:
-            generalDataOwnerName: { type: string }
-            generalDataOwnerAddress: { type: string }
-            generalDataUserSubcontractorPersonInCharge: { type: string }
-            generalDataUserAddress: { type: string }
-            generalDataUnitLocation: { type: string }
-            generalDataOperatorName: { type: string }
-            generalDataManufacturer: { type: string }
-            generalDataBrandType: { type: string }
-            generalDataLocationAndYearOfManufacture: { type: string }
-            generalDataSerialNumberUnitNumber: { type: string }
-            generalDataCapacityWorkingLoad: { type: string }
-            generalDataIntendedUse: { type: string }
-            generalDataUsagePermitNumber: { type: string }
-            generalDataOperatorCertificate: { type: string }
-            generalDataEquipmentHistory: { type: string }
-            generalDataInspectionDate: { type: string }
+            generalDataOwnerName: { type: string, example: "PT. IVAN JAGO" }
+            generalDataOwnerAddress: { type: string, example: "Jl. Gatot Subroto No. 112, Jakarta Selatan" }
+            generalDataUserSubcontractorPersonInCharge: { type: string, example: "PT. Bangun Cipta Graha" }
+            generalDataUserAddress: { type: string, example: "Kawasan Industri MM2100, Blok G, Cibitung" }
+            generalDataUnitLocation: { type: string, example: "Proyek Pembangunan Jembatan Antar Kota" }
+            generalDataOperatorName: { type: string, example: "Joko Susilo" }
+            generalDataManufacturer: { type: string, example: "Liebherr" }
+            generalDataBrandType: { type: string, example: "Liebherr / LTM 1090-4.2" }
+            generalDataLocationAndYearOfManufacture: { type: string, example: "Jerman / 2020" }
+            generalDataSerialNumberUnitNumber: { type: string, example: "LTM1090-98765" }
+            generalDataCapacityWorkingLoad: { type: string, example: "90.000 kg" }
+            generalDataIntendedUse: { type: string, example: "Pekerjaan konstruksi dan pengangkatan berat" }
+            generalDataUsagePermitNumber: { type: string, example: "503/998/SIO-PAA/2024" }
+            generalDataOperatorCertificate: { type: string, example: "Ada, No. 11223/OP-PAA/XII/2022" }
+            generalDataEquipmentHistory: { type: string, example: "Penggantian oli hidrolik pada Januari 2025." }
+            generalDataInspectionDate: { type: string, example: "15 Juli 2025" }
         technicalData:
           type: object
           properties:
-            technicalDataMaximumWorkingLoadCapacity: { type: string }
-            technicalDataBoomLength: { type: string }
-            technicalDataMaximumJibLength: { type: string }
-            technicalDataMaximumJibWorkingLoad: { type: string }
-            technicalDataMaxBoomJibLength: { type: string }
-            technicalDataCraneWeight: { type: string }
-            technicalDataMaxLiftingHeight: { type: string }
-            technicalDataBoomWorkingAngle: { type: string }
-            technicalDataEngineNumber: { type: string }
-            technicalDataType: { type: string }
-            technicalDataNumberOfCylinders: { type: string }
-            technicalDataNetPower: { type: string }
-            technicalDataBrandYearOfManufacture: { type: string }
-            technicalDataHookManufacturer: { type: string }
-            technicalDataMainHookType: { type: string }
-            technicalDataMainHookCapacity: { type: string }
-            technicalDataMainHookMaterial: { type: string }
-            technicalDataMainHookSerialNumber: { type: string }
-            technicalDataAuxiliaryHookType: { type: string }
-            technicalDataAuxiliaryHookCapacity: { type: string }
-            technicalDataAuxiliaryHookMaterial: { type: string }
-            technicalDataAuxiliaryHookSerialNumber: { type: string }
-            technicalDataWireRopeMainLoadHoistDrumDiameter: { type: string }
-            technicalDataWireRopeMainLoadHoistDrumType: { type: string }
-            technicalDataWireRopeMainLoadHoistDrumConstruction: { type: string }
-            technicalDataWireRopeMainLoadHoistDrumBreakingStrength: { type: string }
-            technicalDataWireRopeMainLoadHoistDrumLength: { type: string }
-            technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter: { type: string }
-            technicalDataWireRopeAuxiliaryLoadHoistDrumType: { type: string }
-            technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction: { type: string }
-            technicalDataWireRopeAuxiliaryLoadHoistDrumLength: { type: string }
-            technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength: { type: string }
-            technicalDataWireRopeBoomHoistDrumDiameter: { type: string }
-            technicalDataWireRopeBoomHoistDrumType: { type: string }
-            technicalDataWireRopeBoomHoistDrumConstruction: { type: string }
-            technicalDataWireRopeBoomHoistDrumLength: { type: string }
-            technicalDataWireRopeBoomHoistDrumBreakingStrength: { type: string }
+            technicalDataMaximumWorkingLoadCapacity: { type: string, example: "90.000 kg" }
+            technicalDataBoomLength: { type: string, example: "60.0 m" }
+            technicalDataMaximumJibLength: { type: string, example: "16.0 m" }
+            technicalDataMaximumJibWorkingLoad: { type: string, example: "8.000 kg" }
+            technicalDataMaxBoomJibLength: { type: string, example: "76.0 m" }
+            technicalDataCraneWeight: { type: string, example: "48.000 kg" }
+            technicalDataMaxLiftingHeight: { type: string, example: "77.5 m" }
+            technicalDataBoomWorkingAngle: { type: string, example: "0 - 83°" }
+            technicalDataEngineNumber: { type: string, example: "LBR-D936-A7" }
+            technicalDataType: { type: string, example: "Liebherr D936 A7" }
+            technicalDataNumberOfCylinders: { type: string, example: "6 Silinder" }
+            technicalDataNetPower: { type: string, example: "270 kW / 2100 rpm" }
+            technicalDataBrandYearOfManufacture: { type: string, example: "Liebherr / 2020" }
+            technicalDataHookManufacturer: { type: string, example: "Liebherr" }
+            technicalDataMainHookType: { type: string, example: "Double Hook" }
+            technicalDataMainHookCapacity: { type: string, example: "90 Ton" }
+            technicalDataMainHookMaterial: { type: string, example: "Fine-Grain Structural Steel" }
+            technicalDataMainHookSerialNumber: { type: string, example: "HK-90T-LBR-01" }
+            technicalDataAuxiliaryHookType: { type: string, example: "Single Hook" }
+            technicalDataAuxiliaryHookCapacity: { type: string, example: "8 Ton" }
+            technicalDataAuxiliaryHookMaterial: { type: string, example: "Fine-Grain Structural Steel" }
+            technicalDataAuxiliaryHookSerialNumber: { type: string, example: "HK-8T-LBR-02" }
+            technicalDataWireRopeMainLoadHoistDrumDiameter: { type: string, example: "26 mm" }
+            technicalDataWireRopeMainLoadHoistDrumType: { type: string, example: "IWRC 8x26 WS" }
+            technicalDataWireRopeMainLoadHoistDrumConstruction: { type: string, example: "Right Hand Regular Lay" }
+            technicalDataWireRopeMainLoadHoistDrumBreakingStrength: { type: string, example: "510 kN" }
+            technicalDataWireRopeMainLoadHoistDrumLength: { type: string, example: "220 m" }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumDiameter: { type: string, example: "22 mm" }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumType: { type: string, example: "IWRC 6x36 WS" }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumConstruction: { type: string, example: "Right Hand Regular Lay" }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumLength: { type: string, example: "150 m" }
+            technicalDataWireRopeAuxiliaryLoadHoistDrumBreakingStrength: { type: string, example: "380 kN" }
+            technicalDataWireRopeBoomHoistDrumDiameter: { type: string, example: "22 mm" }
+            technicalDataWireRopeBoomHoistDrumType: { type: string, example: "IWRC 6x25 Filler" }
+            technicalDataWireRopeBoomHoistDrumConstruction: { type: string, example: "Right Hand Regular Lay" }
+            technicalDataWireRopeBoomHoistDrumLength: { type: string, example: "180 m" }
+            technicalDataWireRopeBoomHoistDrumBreakingStrength: { type: string, example: "380 kN" }
         inspectionAndTesting:
           type: object
           properties:
+            # Visual Inspection Results
             visualFoundationAndBoltsCorrosionResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             visualFoundationAndBoltsCracksResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             visualFoundationAndBoltsDeformationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
@@ -5198,152 +6223,139 @@ components:
             visualSafetyDevicesConverterTelescopicMotionLimitResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             visualSafetyDevicesConverterLightningArresterResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             visualSafetyDevicesConverterLiftingHeightIndicatorResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtWireRopeMainLoadSpecDiameter: { type: string }
-            ndtWireRopeMainLoadActualDiameter: { type: string }
-            ndtWireRopeMainLoadConstruction: { type: string }
-            ndtWireRopeMainLoadType: { type: string }
-            ndtWireRopeMainLoadLength: { type: string }
-            ndtWireRopeMainLoadAge: { type: string }
-            ndtWireRopeMainLoadResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtWireRopeAuxiliaryLoadSpecDiameter: { type: string }
-            ndtWireRopeAuxiliaryLoadActualDiameter: { type: string }
-            ndtWireRopeAuxiliaryLoadConstruction: { type: string }
-            ndtWireRopeAuxiliaryLoadType: { type: string }
-            ndtWireRopeAuxiliaryLoadLength: { type: string }
-            ndtWireRopeAuxiliaryLoadAge: { type: string }
-            ndtWireRopeAuxiliaryLoadResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtWireRopeBoomHoistSpecDiameter: { type: string }
-            ndtWireRopeBoomHoistActualDiameter: { type: string }
-            ndtWireRopeBoomHoistConstruction: { type: string }
-            ndtWireRopeBoomHoistType: { type: string }
-            ndtWireRopeBoomHoistLength: { type: string }
-            ndtWireRopeBoomHoistAge: { type: string }
-            ndtWireRopeBoomHoistResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtBoomType: { type: string }
-            ndtBoomNdtType: { type: string }
-            ndtBoomInspection1Part: { type: string }
-            ndtBoomInspection1Location: { type: string }
-            ndtBoomInspection1Result: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtBoomInspection2Part: { type: string }
-            ndtBoomInspection2Location: { type: string }
-            ndtBoomInspection2Result: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtBoomInspection3Part: { type: string }
-            ndtBoomInspection3Location: { type: string }
-            ndtBoomInspection3Result: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainHookNdtType: { type: string }
-            ndtMainHookSpecificationA: { type: string }
-            ndtMainHookSpecificationB: { type: string }
-            ndtMainHookSpecificationC: { type: string }
-            ndtMainHookSpecificationD: { type: string }
-            ndtMainHookSpecificationE: { type: string }
-            ndtMainHookSpecificationF: { type: string }
-            ndtMainHookSpecificationG: { type: string }
-            ndtMainHookSpecificationH: { type: string }
+
+            # NDT Section
+            steelWireRopeNdtType: { type: string, example: "Visual" }
+            ndtSteelWireRopes:
+              type: array
+              items:
+                $ref: '#/components/schemas/NdtSteelWireRopeItemSchema'
+            ndtBoomType: { type: string, example: "Telescopic" }
+            boomNdtType: { type: string, example: "Magnetic Particle" }
+            ndtBoomInspections:
+              type: array
+              items:
+                $ref: '#/components/schemas/NdtBoomInspectionItemSchema'
+            mainHookNdtType: { type: string, example: "Penetrant Test" }
+            capacityMainHook: { type: string, example: "90 Ton" }
+            ndtMainHookSpecificationA: { type: string, example: "120" }
+            ndtMainHookSpecificationB: { type: string, example: "140" }
+            ndtMainHookSpecificationC: { type: string, example: "155" }
+            ndtMainHookSpecificationD: { type: string, example: "420" }
+            ndtMainHookSpecificationE: { type: string, example: "400" }
+            ndtMainHookSpecificationF: { type: string, example: "105" }
+            ndtMainHookSpecificationG: { type: string, example: "130" }
+            ndtMainHookSpecificationH: { type: string, example: "130" }
             ndtMainHookSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainHookMeasurementResultsA: { type: string }
-            ndtMainHookMeasurementResultsB: { type: string }
-            ndtMainHookMeasurementResultsC: { type: string }
-            ndtMainHookMeasurementResultsD: { type: string }
-            ndtMainHookMeasurementResultsE: { type: string }
-            ndtMainHookMeasurementResultsF: { type: string }
-            ndtMainHookMeasurementResultsG: { type: string }
-            ndtMainHookMeasurementResultsH: { type: string }
+            ndtMainHookMeasurementResultsA: { type: string, example: "120" }
+            ndtMainHookMeasurementResultsB: { type: string, example: "141" }
+            ndtMainHookMeasurementResultsC: { type: string, example: "156" }
+            ndtMainHookMeasurementResultsD: { type: string, example: "420" }
+            ndtMainHookMeasurementResultsE: { type: string, example: "401" }
+            ndtMainHookMeasurementResultsF: { type: string, example: "104" }
+            ndtMainHookMeasurementResultsG: { type: string, example: "130" }
+            ndtMainHookMeasurementResultsH: { type: string, example: "129" }
             ndtMainHookMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainHookToleranceMeasureA: { type: string }
-            ndtMainHookToleranceMeasureB: { type: string }
-            ndtMainHookToleranceMeasureC: { type: string }
-            ndtMainHookToleranceMeasureD: { type: string }
-            ndtMainHookToleranceMeasureE: { type: string }
-            ndtMainHookToleranceMeasureF: { type: string }
-            ndtMainHookToleranceMeasureG: { type: string }
-            ndtMainHookToleranceMeasureH: { type: string }
+            ndtMainHookToleranceMeasureA: { type: string, example: "126" }
+            ndtMainHookToleranceMeasureB: { type: string, example: "-" }
+            ndtMainHookToleranceMeasureC: { type: string, example: "139.5" }
+            ndtMainHookToleranceMeasureD: { type: string, example: "-" }
+            ndtMainHookToleranceMeasureE: { type: string, example: "-" }
+            ndtMainHookToleranceMeasureF: { type: string, example: "94.5" }
+            ndtMainHookToleranceMeasureG: { type: string, example: "117" }
+            ndtMainHookToleranceMeasureH: { type: string, example: "117" }
             ndtMainHookToleranceMeasureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryHookNdtType: { type: string }
-            ndtAuxiliaryHookSpecificationA: { type: string }
-            ndtAuxiliaryHookSpecificationB: { type: string }
-            ndtAuxiliaryHookSpecificationC: { type: string }
-            ndtAuxiliaryHookSpecificationD: { type: string }
-            ndtAuxiliaryHookSpecificationE: { type: string }
-            ndtAuxiliaryHookSpecificationF: { type: string }
-            ndtAuxiliaryHookSpecificationG: { type: string }
-            ndtAuxiliaryHookSpecificationH: { type: string }
+            auxiliaryHookNdtType: { type: string, example: "Penetrant Test" }
+            capacityOptionalHook: { type: string, example: "8 Ton" }
+            ndtAuxiliaryHookSpecificationA: { type: string, example: "60" }
+            ndtAuxiliaryHookSpecificationB: { type: string, example: "70" }
+            ndtAuxiliaryHookSpecificationC: { type: string, example: "80" }
+            ndtAuxiliaryHookSpecificationD: { type: string, example: "220" }
+            ndtAuxiliaryHookSpecificationE: { type: string, example: "200" }
+            ndtAuxiliaryHookSpecificationF: { type: string, example: "50" }
+            ndtAuxiliaryHookSpecificationG: { type: string, example: "65" }
+            ndtAuxiliaryHookSpecificationH: { type: string, example: "65" }
             ndtAuxiliaryHookSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryHookMeasurementResultsA: { type: string }
-            ndtAuxiliaryHookMeasurementResultsB: { type: string }
-            ndtAuxiliaryHookMeasurementResultsC: { type: string }
-            ndtAuxiliaryHookMeasurementResultsD: { type: string }
-            ndtAuxiliaryHookMeasurementResultsE: { type: string }
-            ndtAuxiliaryHookMeasurementResultsF: { type: string }
-            ndtAuxiliaryHookMeasurementResultsG: { type: string }
-            ndtAuxiliaryHookMeasurementResultsH: { type: string }
+            ndtAuxiliaryHookMeasurementResultsA: { type: string, example: "60" }
+            ndtAuxiliaryHookMeasurementResultsB: { type: string, example: "70" }
+            ndtAuxiliaryHookMeasurementResultsC: { type: string, example: "80" }
+            ndtAuxiliaryHookMeasurementResultsD: { type: string, example: "221" }
+            ndtAuxiliaryHookMeasurementResultsE: { type: string, example: "200" }
+            ndtAuxiliaryHookMeasurementResultsF: { type: string, example: "50" }
+            ndtAuxiliaryHookMeasurementResultsG: { type: string, example: "65" }
+            ndtAuxiliaryHookMeasurementResultsH: { type: string, example: "65" }
             ndtAuxiliaryHookMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryHookToleranceMeasureA: { type: string }
-            ndtAuxiliaryHookToleranceMeasureB: { type: string }
-            ndtAuxiliaryHookToleranceMeasureC: { type: string }
-            ndtAuxiliaryHookToleranceMeasureD: { type: string }
-            ndtAuxiliaryHookToleranceMeasureE: { type: string }
-            ndtAuxiliaryHookToleranceMeasureF: { type: string }
-            ndtAuxiliaryHookToleranceMeasureG: { type: string }
-            ndtAuxiliaryHookToleranceMeasureH: { type: string }
+            ndtAuxiliaryHookToleranceMeasureA: { type: string, example: "63" }
+            ndtAuxiliaryHookToleranceMeasureB: { type: string, example: "-" }
+            ndtAuxiliaryHookToleranceMeasureC: { type: string, example: "72" }
+            ndtAuxiliaryHookToleranceMeasureD: { type: string, example: "-" }
+            ndtAuxiliaryHookToleranceMeasureE: { type: string, example: "-" }
+            ndtAuxiliaryHookToleranceMeasureF: { type: string, example: "45" }
+            ndtAuxiliaryHookToleranceMeasureG: { type: string, example: "58.5" }
+            ndtAuxiliaryHookToleranceMeasureH: { type: string, example: "58.5" }
             ndtAuxiliaryHookToleranceMeasureResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainDrumNdtType: { type: string }
-            ndtMainDrumSpecificationA: { type: string }
-            ndtMainDrumSpecificationB: { type: string }
-            ndtMainDrumSpecificationC: { type: string }
-            ndtMainDrumSpecificationD: { type: string }
-            ndtMainDrumSpecificationE: { type: string }
-            ndtMainDrumSpecificationF: { type: string }
-            ndtMainDrumSpecificationG: { type: string }
+            mainDrumNdtType: { type: string, example: "Visual" }
+            ndtMainDrumSpecificationA: { type: string, example: "50" }
+            ndtMainDrumSpecificationB: { type: string, example: "700" }
+            ndtMainDrumSpecificationC: { type: string, example: "550" }
+            ndtMainDrumSpecificationD: { type: string, example: "800" }
+            ndtMainDrumSpecificationE: { type: string, example: "50" }
+            ndtMainDrumSpecificationF: { type: string, example: "170" }
+            ndtMainDrumSpecificationG: { type: string, example: "60" }
             ndtMainDrumSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainDrumMeasurementResultsA: { type: string }
-            ndtMainDrumMeasurementResultsB: { type: string }
-            ndtMainDrumMeasurementResultsC: { type: string }
-            ndtMainDrumMeasurementResultsD: { type: string }
-            ndtMainDrumMeasurementResultsE: { type: string }
-            ndtMainDrumMeasurementResultsF: { type: string }
-            ndtMainDrumMeasurementResultsG: { type: string }
+            ndtMainDrumMeasurementResultsA: { type: string, example: "50" }
+            ndtMainDrumMeasurementResultsB: { type: string, example: "700" }
+            ndtMainDrumMeasurementResultsC: { type: string, example: "550" }
+            ndtMainDrumMeasurementResultsD: { type: string, example: "800" }
+            ndtMainDrumMeasurementResultsE: { type: string, example: "50" }
+            ndtMainDrumMeasurementResultsF: { type: string, example: "170" }
+            ndtMainDrumMeasurementResultsG: { type: string, example: "60" }
             ndtMainDrumMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryDrumNdtType: { type: string }
-            ndtAuxiliaryDrumSpecificationA: { type: string }
-            ndtAuxiliaryDrumSpecificationB: { type: string }
-            ndtAuxiliaryDrumSpecificationC: { type: string }
-            ndtAuxiliaryDrumSpecificationD: { type: string }
-            ndtAuxiliaryDrumSpecificationE: { type: string }
-            ndtAuxiliaryDrumSpecificationF: { type: string }
-            ndtAuxiliaryDrumSpecificationG: { type: string }
+            auxiliaryDrumNdtType: { type: string, example: "Visual" }
+            ndtAuxiliaryDrumSpecificationA: { type: string, example: "45" }
+            ndtAuxiliaryDrumSpecificationB: { type: string, example: "650" }
+            ndtAuxiliaryDrumSpecificationC: { type: string, example: "500" }
+            ndtAuxiliaryDrumSpecificationD: { type: string, example: "750" }
+            ndtAuxiliaryDrumSpecificationE: { type: string, example: "45" }
+            ndtAuxiliaryDrumSpecificationF: { type: string, example: "160" }
+            ndtAuxiliaryDrumSpecificationG: { type: string, example: "55" }
             ndtAuxiliaryDrumSpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryDrumMeasurementResultsA: { type: string }
-            ndtAuxiliaryDrumMeasurementResultsB: { type: string }
-            ndtAuxiliaryDrumMeasurementResultsC: { type: string }
-            ndtAuxiliaryDrumMeasurementResultsD: { type: string }
-            ndtAuxiliaryDrumMeasurementResultsE: { type: string }
-            ndtAuxiliaryDrumMeasurementResultsF: { type: string }
-            ndtAuxiliaryDrumMeasurementResultsG: { type: string }
+            ndtAuxiliaryDrumMeasurementResultsA: { type: string, example: "45" }
+            ndtAuxiliaryDrumMeasurementResultsB: { type: string, example: "650" }
+            ndtAuxiliaryDrumMeasurementResultsC: { type: string, example: "500" }
+            ndtAuxiliaryDrumMeasurementResultsD: { type: string, example: "750" }
+            ndtAuxiliaryDrumMeasurementResultsE: { type: string, example: "45" }
+            ndtAuxiliaryDrumMeasurementResultsF: { type: string, example: "160" }
+            ndtAuxiliaryDrumMeasurementResultsG: { type: string, example: "55" }
             ndtAuxiliaryDrumMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainPulleySpecificationA: { type: string }
-            ndtMainPulleySpecificationB: { type: string }
-            ndtMainPulleySpecificationC: { type: string }
-            ndtMainPulleySpecificationD: { type: string }
-            ndtMainPulleySpecificationE: { type: string }
+            puliNdtType: { type: string, example: "Visual" }
+            ndtMainPulleySpecificationA: { type: string, example: "35" }
+            ndtMainPulleySpecificationB: { type: string, example: "25" }
+            ndtMainPulleySpecificationC: { type: string, example: "120" }
+            ndtMainPulleySpecificationD: { type: string, example: "50" }
+            ndtMainPulleySpecificationE: { type: string, example: "500" }
             ndtMainPulleySpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtMainPulleyMeasurementResultsA: { type: string }
-            ndtMainPulleyMeasurementResultsB: { type: string }
-            ndtMainPulleyMeasurementResultsC: { type: string }
-            ndtMainPulleyMeasurementResultsD: { type: string }
-            ndtMainPulleyMeasurementResultsE: { type: string }
+            ndtMainPulleyMeasurementResultsA: { type: string, example: "35" }
+            ndtMainPulleyMeasurementResultsB: { type: string, example: "25" }
+            ndtMainPulleyMeasurementResultsC: { type: string, example: "120" }
+            ndtMainPulleyMeasurementResultsD: { type: string, example: "50" }
+            ndtMainPulleyMeasurementResultsE: { type: string, example: "500" }
             ndtMainPulleyMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryPulleySpecificationA: { type: string }
-            ndtAuxiliaryPulleySpecificationB: { type: string }
-            ndtAuxiliaryPulleySpecificationC: { type: string }
-            ndtAuxiliaryPulleySpecificationD: { type: string }
-            ndtAuxiliaryPulleySpecificationE: { type: string }
+            puliOptionalType: { type: string, example: "Visual" }
+            ndtAuxiliaryPulleySpecificationA: { type: string, example: "30" }
+            ndtAuxiliaryPulleySpecificationB: { type: string, example: "20" }
+            ndtAuxiliaryPulleySpecificationC: { type: string, example: "110" }
+            ndtAuxiliaryPulleySpecificationD: { type: string, example: "45" }
+            ndtAuxiliaryPulleySpecificationE: { type: string, example: "450" }
             ndtAuxiliaryPulleySpecificationResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
-            ndtAuxiliaryPulleyMeasurementResultsA: { type: string }
-            ndtAuxiliaryPulleyMeasurementResultsB: { type: string }
-            ndtAuxiliaryPulleyMeasurementResultsC: { type: string }
-            ndtAuxiliaryPulleyMeasurementResultsD: { type: string }
-            ndtAuxiliaryPulleyMeasurementResultsE: { type: string }
+            ndtAuxiliaryPulleyMeasurementResultsA: { type: string, example: "30" }
+            ndtAuxiliaryPulleyMeasurementResultsB: { type: string, example: "20" }
+            ndtAuxiliaryPulleyMeasurementResultsC: { type: string, example: "110" }
+            ndtAuxiliaryPulleyMeasurementResultsD: { type: string, example: "45" }
+            ndtAuxiliaryPulleyMeasurementResultsE: { type: string, example: "450" }
             ndtAuxiliaryPulleyMeasurementResultsResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+            
+            # Function Testing Results
             testingFunctionHoistingLoweringResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             testingFunctionExtendedRectractedBoomResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             testingFunctionExtendedRectractedOutriggerResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
@@ -5361,6 +6373,8 @@ components:
             testingFunctionSwingAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             testingFunctionReverseAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
             testingFunctionOverloadAlarmResult: { $ref: '#/components/schemas/InspectionResultItemMobileCrane' }
+
+            # Load Testing Arrays
             dynamicMainHookTests:
               type: array
               items:
@@ -5377,18 +6391,18 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/LoadTestItemSchema'
-        conclusion: { type: string }
-        recommendation: { type: string }
+        conclusion: { type: string, example: "Mobile Crane dinyatakan LAIK DIOPERASIKAN dengan beberapa catatan perbaikan." }
+        recommendation: { type: string, example: "1. Segera lakukan perbaikan pada retak rambut di baut pondasi #3.\n2. Ganti kampas rem pada winch tambahan." }
 
     LaporanMobileCraneResponseData:
       allOf:
         - $ref: "#/components/schemas/LaporanMobileCranePayload"
         - type: object
           properties:
-            id: { type: string }
+            id: { type: string, example: "aBcDeFgHiJkLmNoPqRsT" }
             subInspectionType: { type: string, example: "Mobile Crane" }
             documentType: { type: string, example: "Laporan" }
-            createdAt: { type: string, format: date-time }
+            createdAt: { type: string, format: date-time, example: "2025-07-21T10:00:00.000Z" }
 
     LaporanMobileCraneSuccessResponse:
       type: object
@@ -5398,6 +6412,7 @@ components:
           example: success
         message:
           type: string
+          example: Laporan Mobile Crane berhasil dibuat
         data:
           type: object
           properties:
@@ -5405,21 +6420,6 @@ components:
               $ref: "#/components/schemas/LaporanMobileCraneResponseData"
 
     GetAllLaporanMobileCraneResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          example: success
-        message:
-          type: string
-          example: Laporan Mobile Crane berhasil didapat
-        data:
-          type: object
-          properties:
-            laporan:
-              type: array
-              items:
-                $ref: "#/components/schemas/LaporanMobileCraneResponseData"
 
     BapMobileCranePayload:
       type: object
