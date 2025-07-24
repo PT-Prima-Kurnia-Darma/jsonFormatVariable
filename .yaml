@@ -6823,6 +6823,21 @@ components:
               $ref: "#/components/schemas/LaporanMobileCraneResponseData"
 
     GetAllLaporanMobileCraneResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: "Data semua Laporan Mobile Crane berhasil didapatkan"
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanMobileCraneResponseData"
 
     BapMobileCranePayload:
       type: object
@@ -7039,8 +7054,9 @@ components:
             mediumTypetraversinglength: { type: string, example: "N/A" }
         visualInspection:
           type: object
-          properties:
-            # Dynamically create properties for each visual inspection item
+          description: "Hasil inspeksi visual. Kunci (key) adalah nama item yang diperiksa, dan nilainya (value) adalah hasil inspeksi."
+          additionalProperties:
+            $ref: '#/components/schemas/InspectionResultItemGantryCrane'
         ndt:
           type: object
           properties:
@@ -7728,8 +7744,9 @@ components:
                 length: { type: object, properties: { hoisting: { type: string, example: "15 m" }, traveling: { type: string, example: "15 m" }, traversing: { type: string, example: "15 m" } } }
         visualInspection:
           type: object
-          properties:
-            # Dynamically create properties for each visual inspection item
+          description: "Hasil inspeksi visual. Kunci (key) adalah nama item yang diperiksa, dan nilainya (value) adalah hasil inspeksi."
+          additionalProperties:
+            $ref: '#/components/schemas/InspectionResultItemOverheadCrane'
         nonDestructiveExamination:
           type: object
           properties:
