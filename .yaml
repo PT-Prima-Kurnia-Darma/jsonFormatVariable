@@ -48,7 +48,11 @@ tags:
   - name: Proteksi Kebakaran - Laporan
     description: Manajemen data Laporan Pemeriksaan untuk Instalasi Proteksi Kebakaran.
   - name: Proteksi Kebakaran - BAP
-    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Proteksi Kebakaran.  
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Instalasi Proteksi Kebakaran.
+  - name: PUBT - Laporan
+    description: Manajemen data Laporan Pemeriksaan untuk Pesawat Uap dan Bejana Tekan.
+  - name: PUBT - BAP
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Pesawat Uap dan Bejana Tekan.  
 paths:
   # ======================================================
   #                 AUTENTIFIKASI
@@ -5092,6 +5096,357 @@ paths:
         "500":
           $ref: "#/components/responses/InternalServerError"
 
+  # ======================================================
+  #       LAPORAN PESAWAT UAP & BEJANA TEKAN (PUBT)
+  # ======================================================
+  /pubt/laporan:
+    post:
+      tags:
+        - PUBT - Laporan
+      summary: Buat Laporan PUBT Baru
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPubtPayload"
+      responses:
+        "201":
+          description: Laporan PUBT berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPubtSuccessResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - PUBT - Laporan
+      summary: Dapatkan Semua Laporan PUBT
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil daftar laporan PUBT.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllLaporanPubtResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /pubt/laporan/{id}:
+    get:
+      tags:
+        - PUBT - Laporan
+      summary: Dapatkan Laporan PUBT Berdasarkan ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Berhasil mengambil data laporan PUBT.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPubtSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - PUBT - Laporan
+      summary: Perbarui Laporan PUBT
+      description: Memperbarui data laporan PUBT. Perubahan pada data umum dan teknis juga akan disinkronkan ke BAP yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPubtPayload"
+      responses:
+        "200":
+          description: Laporan PUBT berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPubtSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - PUBT - Laporan
+      summary: Hapus Laporan PUBT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Laporan PUBT berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan PUBT berhasil dihapus
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /pubt/laporan/download/{id}:
+    get:
+      tags:
+        - PUBT - Laporan
+      summary: Unduh Dokumen Laporan PUBT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: Laporan PUBT berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-PUBT-PT-Sentosa-Abadi-Jaya.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
+  #         BAP PESAWAT UAP & BEJANA TEKAN (PUBT)
+  # ======================================================
+  /pubt/bap/prefill/{laporanId}:
+    get:
+      tags:
+        - PUBT - BAP
+      summary: Ambil Data Prefill untuk BAP PUBT
+      description: Mengambil data dari Laporan PUBT yang sudah ada untuk mengisi form BAP baru.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Berhasil mengambil data untuk prefill BAP PUBT.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPubtPrefillSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /pubt/bap:
+    post:
+      tags:
+        - PUBT - BAP
+      summary: Buat BAP PUBT Baru
+      description: Membuat BAP baru berdasarkan laporanId. Data umum dan teknis dari BAP ini akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPubtPayload"
+      responses:
+        "201":
+          description: BAP PUBT berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPubtSuccessResponse"
+        "404":
+          description: Laporan PUBT dengan laporanId yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - PUBT - BAP
+      summary: Dapatkan Semua BAP PUBT
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil daftar BAP PUBT.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllBapPubtResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /pubt/bap/{id}:
+    get:
+      tags:
+        - PUBT - BAP
+      summary: Dapatkan BAP PUBT Berdasarkan ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Berhasil mengambil data BAP PUBT.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPubtSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - PUBT - BAP
+      summary: Perbarui BAP PUBT
+      description: Memperbarui data BAP. Perubahan pada data umum dan teknis juga akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPubtPayload"
+      responses:
+        "200":
+          description: BAP PUBT berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPubtSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - PUBT - BAP
+      summary: Hapus BAP PUBT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: BAP PUBT berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP PUBT berhasil dihapus
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /pubt/bap/download/{id}:
+    get:
+      tags:
+        - PUBT - BAP
+      summary: Unduh Dokumen BAP PUBT
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: BAP PUBT berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-PUBT-PT-CONTOH-PERUSAHAAN.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+
 components:
   securitySchemes:
     bearerAuth:
@@ -9265,3 +9620,284 @@ components:
           example: Data untuk BAP berhasil disiapkan
         data:
           $ref: "#/components/schemas/BapProteksiKebakaranPayload"
+
+    # ======================================================
+    #      SCHEMAS - PESAWAT UAP & BEJANA TEKAN (PUBT)
+    # ======================================================
+    LaporanPubtPayload:
+      type: object
+      properties:
+        examinationType: { type: string }
+        inspectionType: { type: string }
+        extraId: { type: string }
+        createdAt: { type: string, format: date-time }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string }
+            companyLocation: { type: string }
+            userUsage: { type: string }
+            userAddress: { type: string }
+            operatorName: { type: string }
+            equipmentType: { type: string }
+            manufacturer: { type: string }
+            brandType: { type: string }
+            countryAndYearOfManufacture: { type: string }
+            serialNumberUnitNumber: { type: string }
+            designPressure: { type: number }
+            maxAllowableWorkingPressure: { type: number }
+            capacityWorkingLoad: { type: number }
+            steamTemperature: { type: string }
+            operatingPressure: { type: number }
+            fuelType: { type: string }
+            intendedUse: { type: string }
+            permitNumber: { type: string }
+            operatorCertificate: { type: string }
+            equipmentHistory: { type: string }
+            inspectionDate: { type: string, format: date }
+        technicalData:
+          type: object
+          properties:
+            shell:
+              type: object
+              properties:
+                numberOfRounds: { type: number, nullable: true }
+                connectionMethod: { type: string }
+                material: { type: string }
+                pipeDiameter: { type: number, nullable: true }
+                thickness: { type: number }
+                bodyLength: { type: number }
+                heads:
+                  type: object
+                  properties:
+                    top: { type: object, properties: { diameter: { type: number }, thickness: { type: number } } }
+                    rear: { type: object, properties: { diameter: { type: number }, thickness: { type: number } } }
+                tubePlate:
+                  type: object
+                  properties:
+                    front: { type: object, properties: { dim1: { type: string }, dim2: { type: string } } }
+                    rear: { type: object, properties: { dim1: { type: string }, dim2: { type: string } } }
+            furnace:
+              type: object
+              properties:
+                type: { type: string }
+                material: { type: string }
+                outerDiameter: { type: number, nullable: true }
+                innerDiameter: { type: number, nullable: true }
+                thickness: { type: number, nullable: true }
+            waterTubes:
+              type: object
+              properties:
+                firstPass: { type: object, properties: { diameter: { type: number }, thickness: { type: number }, length: { type: number }, quantity: { type: number } } }
+                secondPass: { type: object, properties: { diameter: { type: number, nullable: true }, thickness: { type: number, nullable: true }, length: { type: number, nullable: true }, quantity: { type: number, nullable: true } } }
+                stayTube: { type: object, properties: { diameter: { type: number, nullable: true }, thickness: { type: number, nullable: true }, length: { type: number, nullable: true }, quantity: { type: number, nullable: true } } }
+                material: { type: object, properties: { diameter: { type: number, nullable: true }, thickness: { type: number, nullable: true }, length: { type: number, nullable: true }, quantity: { type: number, nullable: true } } }
+            tubePlateSplicing: { type: string }
+        inspectionAndMeasurement:
+          type: object
+          properties:
+            visualChecks:
+              type: object
+              additionalProperties:
+                type: object
+                additionalProperties:
+                  type: object
+                  properties:
+                    status: { type: boolean }
+                    result: { type: string }
+            materialThickness:
+              type: object
+              properties:
+                bodyShell: { type: object, properties: { thickness: { type: string }, diameter: { type: string }, thicknessResult: { type: string }, diameterResult: { type: string } } }
+                vaporReceiverHeader: { type: object, properties: { thickness: { type: string }, diameter: { type: string }, length: { type: string }, thicknessResult: { type: string }, diameterResult: { type: string }, lengthResult: { type: string } } }
+                fireHallFurnance1: { type: object, properties: { thickness: { type: string }, diameter: { type: string }, length: { type: string }, thicknessResult: { type: string }, diameterResult: { type: string }, lengthResult: { type: string } } }
+                fireHallFurnance2: { type: object, properties: { thickness: { type: string }, diameter: { type: string }, length: { type: string }, thicknessResult: { type: string }, diameterResult: { type: string }, lengthResult: { type: string } } }
+            thicknessMeasurementSetup:
+              type: object
+              properties:
+                owner: { type: string }
+                inspectionDate: { type: string, format: date }
+                project: { type: string }
+                objectType: { type: string }
+                workOrderNo: { type: string }
+                equipmentUsed: { type: string }
+                methodUsed: { type: string }
+                probeType: { type: string }
+                materialType: { type: string }
+                probeStyle: { type: string }
+                operatingTemp: { type: string }
+                surfaceCondition: { type: string }
+                weldingProcess: { type: string }
+                laminatingCheck: { type: string }
+                couplantUsed: { type: string }
+            measurementResults:
+              type: object
+              properties:
+                topHead: { type: object, properties: { nominal: { type: number, nullable: true }, point1: { type: number }, point2: { type: number }, point3: { type: number }, minimum: { type: number }, maximum: { type: number, nullable: true } } }
+                shell: { type: object, properties: { nominal: { type: number, nullable: true }, point1: { type: number }, point2: { type: number }, point3: { type: number }, minimum: { type: number }, maximum: { type: number, nullable: true } } }
+                buttonHead: { type: object, properties: { nominal: { type: number, nullable: true }, point1: { type: number }, point2: { type: number }, point3: { type: number }, minimum: { type: number }, maximum: { type: number, nullable: true } } }
+            ndt:
+              type: object
+              properties:
+                shell: { type: object, properties: { testMethod: { type: string }, longitudinalWeldJoint: { type: object, properties: { location: { type: string }, status: { type: boolean }, result: { type: string } } }, circumferentialWeldJoint: { type: object, properties: { location: { type: string }, status: { type: boolean }, result: { type: string } } } } }
+                furnace: { type: object, properties: { testMethod: { type: string }, longitudinalWeldJoint: { type: object, properties: { location: { type: string }, status: { type: boolean }, result: { type: string } } }, circumferentialWeldJoint: { type: object, properties: { location: { type: string }, status: { type: boolean }, result: { type: string } } } } }
+                fireTubes: { type: object, properties: { testMethod: { type: string }, weldJointFront: { type: object, properties: { location: { type: string }, status: { type: boolean }, result: { type: string } } }, weldJointRear: { type: object, properties: { location: { type: string }, status: { type: boolean }, result: { type: string } } } } }
+            hydrotest:
+              type: object
+              properties:
+                testPressure: { type: number }
+                mawp: { type: number }
+                testMedium: { type: string }
+                testDate: { type: string }
+                testResult: { type: string }
+            appendagesCheck:
+              type: object
+              properties:
+                workingPressureGauge: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                manHole: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                safetyValveFullOpen: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                mainSteamValve: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                levelGlassIndicator: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                blowdownValve: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                feedwaterStopValve: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                feedwaterInletValve: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                steamDrier: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                waterPump: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                controlPanel: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+                nameplate: { type: object, properties: { quantity: { type: number }, status: { type: boolean }, result: { type: string } } }
+            safetyValveTest:
+              type: object
+              properties:
+                header: { type: string }
+                startsToOpen: { type: number }
+                valveInfo: { type: string }
+        conclusion: { type: string }
+        recommendations: { type: string }
+
+    LaporanPubtResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanPubtPayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string }
+            documentType: { type: string }
+            createdAt: { type: string, format: date-time }
+
+    LaporanPubtSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: success }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanPubtResponseData"
+
+    GetAllLaporanPubtResponse:
+      type: object
+      properties:
+        status: { type: string, example: success }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanPubtResponseData"
+
+    BapPubtPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId: { type: string }
+        examinationType: { type: string }
+        inspectionType: { type: string }
+        inspectionDate: { type: string }
+        extraId: { type: number }
+        equipmentType: { type: string }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string }
+            companyLocation: { type: string }
+            userUsage: { type: string }
+            userAddress: { type: string }
+        technicalData:
+          type: object
+          properties:
+            brandType: { type: string }
+            manufacturer: { type: string }
+            countryAndYearOfManufacture: { type: string }
+            serialNumberUnitNumber: { type: string }
+            fuelType: { type: string }
+            operatingPressure: { type: string }
+            designPressureKgCm2: { type: number }
+            maxAllowableWorkingPressure: { type: number }
+            technicalDataShellMaterial: { type: string }
+            safetyValveType: { type: string }
+            volumeLiters: { type: number }
+        visualInspection:
+          type: object
+          properties:
+            foundationCondition: { type: boolean }
+            safetyValveIsInstalled: { type: boolean }
+            safetyValveCondition: { type: boolean }
+            aparAvailable: { type: boolean }
+            aparCondition: { type: boolean }
+            wheelCondition: { type: boolean }
+            pipeCondition: { type: boolean }
+        testing:
+          type: object
+          properties:
+            ndtTestingFulfilled: { type: boolean }
+            thicknessTestingComply: { type: boolean }
+            pneumaticTestingCondition: { type: boolean }
+            hydroTestingFullFilled: { type: boolean }
+            safetyValveTestingCondition: { type: boolean }
+
+    BapPubtResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapPubtPayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string }
+            documentType: { type: string }
+            createdAt: { type: string, format: date-time }
+
+    BapPubtSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: success }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapPubtResponseData"
+
+    GetAllBapPubtResponse:
+      type: object
+      properties:
+        status: { type: string, example: success }
+        message: { type: string }
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapPubtResponseData"
+    
+    BapPubtPrefillSuccessResponse:
+      type: object
+      properties:
+        status: { type: string, example: success }
+        message: { type: string }
+        data:
+          $ref: "#/components/schemas/BapPubtPayload"
+
