@@ -1,596 +1,222 @@
 {
-  "examinationType": "",
+  "examinationType": "BERKALA",
+  "inspectionType": "",
+  "cratedAt": "",
+  "extraId": "",
   "generalData": {
-    "ownerName": "",
-    "ownerAddress": "",
-    "userSubcontractorPersonInCharge": "",
-    "userAddress": "",
-    "operatorName": "",
-    "equipmentType": "",
-    "manufacturer": "",
-    "brandType": "",
-    "countryAndYearOfManufacture": "",
-    "serialNumberUnitNumber": "",
-    "designPressure": "",
-    "maxAllowableWorkingPressure": "",
-    "capacityWorkingLoad": "",
-    "steamTemperature": "",
-    "operatingPressure": "",
-    "fuelType": "",
-    "intendedUse": "",
-    "permitNumber": "",
-    "operatorCertificate": "",
-    "equipmentHistory": "",
-    "inspectionDate": ""
-  }
-}
-{
+    "companyName": "PT RAJA JEVA NISI",
+    "companyLocation": "Jl. Raya Kosambi Curug Km 8, Dusun Krajan RT 15/03, Curug, Kec. Klari, Karawang Timur, Jawa Barat 41371",
+    "userUsage": "PT RAJA JEVA NISI",
+    "userAddress": "Jl. Raya Kosambi Curug Km 8, Dusun Krajan RT 15/03, Curug, Kec. Klari, Karawang Timur, Jawa Barat 41371",
+    "operatorName": "-",
+    "equipmentType": "Ketel Uap Darat Berpindah (Water Tube Boiler)",
+    "manufacturer": "PT. MULTI MAKMUR TEKNIKATAMA",
+    "brandType": "MULTIHEATECH BOILER",
+    "countryAndYearOfManufacture": "Indonesia / 2025",
+    "serialNumberUnitNumber": "MMT/I/004/25",
+    "designPressure": 15,
+    "maxAllowableWorkingPressure": 10,
+    "capacityWorkingLoad": 1000,
+    "steamTemperature": "N/A",
+    "operatingPressure": 10,
+    "fuelType": "Tungku",
+    "intendedUse": "Penghasil Uap Untuk Proses Produksi",
+    "permitNumber": "-",
+    "operatorCertificate": "Terferifikasi Kemenaker",
+    "equipmentHistory": "Tahun 2025",
+    "inspectionDate": "2025-01-24"
+  },
   "technicalData": {
     "shell": {
-      "technicalDataShellNumberOfRounds": "",
-      "technicalDataShellConnectionMethod": "",
-      "technicalDataShellMaterial": "",
-      "technicalDataShellPipeDiameter": "",
-      "technicalDataShellThickness": "",
-      "technicalDataShellBodyLength": "",
+      "numberOfRounds": null,
+      "connectionMethod": "Double Welded",
+      "material": "SA516 GR 70",
+      "pipeDiameter": null,
+      "thickness": 20,
+      "bodyLength": 3720,
       "heads": {
-        "technicalDataShellHeadsType": "Rata",
         "top": {
-          "technicalDataShellHeadsTopDiameter": "",
-          "technicalDataShellHeadsTopThickness": ""
+          "diameter": 800,
+          "thickness": 16
         },
         "rear": {
-          "technicalDataShellHeadsRearDiameter": "",
-          "technicalDataShellHeadsRearThickness": ""
+          "diameter": 800,
+          "thickness": 16
         }
       },
       "tubePlate": {
         "front": {
-          "technicalDataShellTubePlateFrontDim1": "",
-          "technicalDataShellTubePlateFrontDim2": ""
+          "dim1": "-",
+          "dim2": "-"
         },
         "rear": {
-          "technicalDataShellTubePlateRearDim1": "",
-          "technicalDataShellTubePlateRearDim2": ""
+          "dim1": "-",
+          "dim2": "-"
         }
       }
     },
     "furnace": {
-      "technicalDataFurnaceType": "Lurus",
-      "technicalDataFurnaceMaterial": "",
-      "technicalDataFurnaceOuterDiameter": "",
-      "technicalDataFurnaceInnerDiameter": "",
-      "technicalDataFurnaceThickness": ""
+      "type": "Lurus",
+      "material": "EN 10216-2 GR P235GH",
+      "outerDiameter": null,
+      "innerDiameter": null,
+      "thickness": null
     },
     "waterTubes": {
       "firstPass": {
-        "technicalDataWaterTubesFirstPassDiameter": "",
-        "technicalDataWaterTubesFirstPassThickness": "",
-        "technicalDataWaterTubesFirstPassLength": "",
-        "technicalDataWaterTubesFirstPassQuantity": ""
+        "diameter": 78,
+        "thickness": 3.6,
+        "length": 3720,
+        "quantity": 120
       },
       "secondPass": {
-        "technicalDataWaterTubesSecondPassDiameter": "",
-        "technicalDataWaterTubesSecondPassThickness": "",
-        "technicalDataWaterTubesSecondPassLength": "",
-        "technicalDataWaterTubesSecondPassQuantity": ""
+        "diameter": null,
+        "thickness": null,
+        "length": null,
+        "quantity": null
       },
       "stayTube": {
-        "technicalDataWaterTubesStayTubeDiameter": "",
-        "technicalDataWaterTubesStayTubeThickness": "",
-        "technicalDataWaterTubesStayTubeLength": "",
-        "technicalDataWaterTubesStayTubeQuantity": ""
+        "diameter": null,
+        "thickness": null,
+        "length": null,
+        "quantity": null
       },
       "material": {
-        "technicalDataWaterTubesMaterialDiameter": "",
-        "technicalDataWaterTubesMaterialThickness": "",
-        "technicalDataWaterTubesMaterialLength": "",
-        "technicalDataWaterTubesMaterialQuantity": ""
+        "diameter": null,
+        "thickness": null,
+        "length": null,
+        "quantity": null
+      }
+    },
+    "tubePlateSplicing": "Welding"
+  },
+  "inspectionAndMeasurement": {
+    "visualChecks": {
+      "steamEquipment": {
+        "shellDrum": { "status": true, "result": "Baik" },
+        "bouileur": { "status": false, "result": "" },
+        "furnace": { "status": true, "result": "Baik" },
+        "fireChamber": { "status": true, "result": "Baik" },
+        "refractory": { "status": true, "result": "Baik" },
+        "combustionChamber": { "status": true, "result": "Baik" },
+        "fireTubes": { "status": true, "result": "Baik" },
+        "superHeater": { "status": false, "result": "" },
+        "reheater": { "status": false, "result": "" },
+        "economizer": { "status": true, "result": "Baik" }
       },
-    }
-  }
-}
-{
-  "visualCheck": {
-    "steamEquipmentComponents": {
-      "shellDrum": {
-        "visualCheckSteamEquipmentShellDrumMemenuhi": "",
-        "visualCheckSteamEquipmentShellDrumTidakMemenuhi": "",
-        "visualCheckSteamEquipmentShellDrumResult": ""
+      "boilerDetails": {
+        "grate": { "status": true, "result": "Baik" },
+        "burner": { "status": true, "result": "Berfungsi" },
+        "fdf": { "status": true, "result": "Berfungsi" },
+        "idf": { "status": true, "result": "Berfungsi" },
+        "airHeater": { "status": true, "result": "Berfungsi" },
+        "airDuct": { "status": true, "result": "Berfungsi" },
+        "gasDuct": { "status": true, "result": "Berfungsi" },
+        "ashCatcher": { "status": false, "result": "N/A" },
+        "chimney": { "status": true, "result": "Baik" },
+        "stairs": { "status": true, "result": "Terpasang" },
+        "insulation": { "status": true, "result": "Terpasang" }
       },
-      "bouileur": {
-        "visualCheckSteamEquipmentBouileurMemenuhi": "",
-        "visualCheckSteamEquipmentBouileurTidakMemenuhi": "",
-        "visualCheckSteamEquipmentBouileurResult": ""
+      "safetyDevices": {
+        "safetyValveRing": { "status": true, "result": "Baik" },
+        "safetyValvePipe": { "status": true, "result": "Baik" },
+        "safetyValveExhaust": { "status": true, "result": "Baik" },
+        "pressureGaugeMark": { "status": true, "result": "Terpasang" },
+        "pressureGaugeSiphon": { "status": true, "result": "Terpasang" },
+        "pressureGaugeCock": { "status": true, "result": "Baik" },
+        "gaugeGlassTryCocks": { "status": true, "result": "Baik" },
+        "gaugeGlassBlowdown": { "status": true, "result": "Baik" },
+        "waterLevelLowestMark": { "status": true, "result": "Berfungsi" },
+        "waterLevelPosition": { "status": true, "result": "Berfungsi" },
+        "feedwaterPump": { "status": true, "result": "Berfungsi" },
+        "feedwaterCapacity": { "status": true, "result": "Berfungsi" },
+        "feedwaterMotor": { "status": true, "result": "Berfungsi" },
+        "feedwaterCheckValve": { "status": true, "result": "Berfungsi" },
+        "controlBlacksFluit": { "status": true, "result": "Berfungsi" },
+        "controlFusiblePlug": { "status": true, "result": "Berfungsi" },
+        "controlWaterLevel": { "status": true, "result": "Berfungsi" },
+        "controlSteamPressure": { "status": true, "result": "Berfungsi" },
+        "blowdownDesc": { "status": true, "result": "Berfungsi" },
+        "blowdownMaterial": { "status": true, "result": "Berfungsi" },
+        "manholeManhole": { "status": true, "result": "Ada" },
+        "manholeInspectionHole": { "status": true, "result": "Ada" },
+        "idMarkNameplate": { "status": true, "result": "Ada" },
+        "idMarkDataMatch": { "status": true, "result": "Sesuai" },
+        "idMarkForm9Stamp": { "status": false, "result": "" }
+      }
+    },
+    "materialThickness": {
+      "bodyShell": {"thickness": "16 mm", "diameter": "1435 mm", "thicknessResult": "-", "diameterResult": "-" },
+      "vaporReceiverHeader": {"thickness": "-", "diameter": "-", "length":"-", "thicknessResult": "-", "diameterResult": "-", "lengthResult":"-"},
+      "fireHallFurnance1": {"thickness": "-", "diameter": "-", "length":"-", "thicknessResult": "-", "diameterResult": "-", "lengthResult":"-"},
+      "fireHallFurnance2": {"thickness": "-", "diameter": "-", "length":"-", "thicknessResult": "-", "diameterResult": "-", "lengthResult":"-" }
+    },
+    "thicknessMeasurementSetup": {
+      "owner": "PT. Multi Makmur Teknikatama",
+      "inspectionDate": "2025-01-24",
+      "project": "Spot Thickness",
+      "objectType": "Bejana Tekan",
+      "workOrderNo": "-",
+      "equipmentUsed": "Ultrasonic Thickness",
+      "methodUsed": "Spot Check",
+      "probeType": "-",
+      "materialType": "SA516 GR 70",
+      "probeStyle": "Standard",
+      "operatingTemp": "Ambient",
+      "surfaceCondition": "Smooth",
+      "weldingProcess": "-",
+      "laminatingCheck": "N/A",
+      "couplantUsed": "-"
+    },
+    "measurementResults": {
+      "topHead": { "nominal": null, "point1": 16.02, "point2": 16.01, "point3": 16.01, "minimum": 16.01, "maximum": null },
+      "shell": { "nominal": null, "point1": 16.31, "point2": 16.31, "point3": 16.33, "minimum": 16.31, "maximum": null },
+      "buttonHead": { "nominal": null, "point1": 16.01, "point2": 16.01, "point3": 16.00, "minimum": 16.00, "maximum": null }
+    },
+    "ndt": {
+      "shell": {
+        "testMethod": "MT",
+        "longitudinalWeldJoint": { "location": "Inside Shell", "status": true, "result": "" },
+        "circumferentialWeldJoint": { "location": "Inside Sjell", "status": true, "result": "" }
       },
       "furnace": {
-        "visualCheckSteamEquipmentFurnaceMemenuhi": "",
-        "visualCheckSteamEquipmentFurnaceTidakMemenuhi": "",
-        "visualCheckSteamEquipmentFurnaceResult": ""
-      },
-      "fireChamber": {
-        "visualCheckSteamEquipmentFireChamberMemenuhi": "",
-        "visualCheckSteamEquipmentFireChamberTidakMemenuhi": "",
-        "visualCheckSteamEquipmentFireChamberResult": ""
-      },
-      "refractoryLining": {
-        "visualCheckSteamEquipmentRefractoryMemenuhi": "",
-        "visualCheckSteamEquipmentRefractoryTidakMemenuhi": "",
-        "visualCheckSteamEquipmentRefractoryResult": ""
-      },
-      "combustionChamber": {
-        "visualCheckSteamEquipmentCombustionChamberMemenuhi": "",
-        "visualCheckSteamEquipmentCombustionChamberTidakMemenuhi": "",
-        "visualCheckSteamEquipmentCombustionChamberResult": ""
+        "testMethod": "MT",
+        "longitudinalWeldJoint": { "location": "Inside Shell", "status": true, "result": "" },
+        "circumferentialWeldJoint": { "location": "Inside Sjell", "status": true, "result": "" }
       },
       "fireTubes": {
-        "visualCheckSteamEquipmentFireTubesMemenuhi": "",
-        "visualCheckSteamEquipmentFireTubesTidakMemenuhi": "",
-        "visualCheckSteamEquipmentFireTubesResult": ""
-      },
-      "superHeater": {
-        "visualCheckSteamEquipmentSuperHeaterMemenuhi": "",
-        "visualCheckSteamEquipmentSuperHeaterTidakMemenuhi": "",
-        "visualCheckSteamEquipmentSuperHeaterResult": ""
-      },
-      "reheater": {
-        "visualCheckSteamEquipmentReheaterMemenuhi": "",
-        "visualCheckSteamEquipmentReheaterTidakMemenuhi": "",
-        "visualCheckSteamEquipmentReheaterResult": ""
-      },
-      "economizer": {
-        "visualCheckSteamEquipmentEconomizerMemenuhi": "",
-        "visualCheckSteamEquipmentEconomizerTidakMemenuhi": "",
-        "visualCheckSteamEquipmentEconomizerResult": ""
+        "testMethod": "MT",
+        "weldJointFront": { "location": "Pipa Api", "status": true, "result": "" },
+        "weldJointRear": { "location": "Bagian Luar", "status": true, "result": "" }
       }
     },
-    "boilerDetails": {
-      "grate": {
-        "visualCheckBoilerDetailsGrateMemenuhi": "",
-        "visualCheckBoilerDetailsGrateTidakMemenuhi": "",
-        "visualCheckBoilerDetailsGrateResult": ""
-      },
-      "burner": {
-        "visualCheckBoilerDetailsBurnerMemenuhi": "",
-        "visualCheckBoilerDetailsBurnerTidakMemenuhi": "",
-        "visualCheckBoilerDetailsBurnerResult": ""
-      },
-      "forcedDraftFan": {
-        "visualCheckBoilerDetailsFdfMemenuhi": "",
-        "visualCheckBoilerDetailsFdfTidakMemenuhi": "",
-        "visualCheckBoilerDetailsFdfResult": ""
-      },
-      "inducedDraftFan": {
-        "visualCheckBoilerDetailsIdfMemenuhi": "",
-        "visualCheckBoilerDetailsIdfTidakMemenuhi": "",
-        "visualCheckBoilerDetailsIdfResult": ""
-      },
-      "combustionAirHeater": {
-        "visualCheckBoilerDetailsAirHeaterMemenuhi": "",
-        "visualCheckBoilerDetailsAirHeaterTidakMemenuhi": "",
-        "visualCheckBoilerDetailsAirHeaterResult": ""
-      },
-      "combustionAirDuct": {
-        "visualCheckBoilerDetailsAirDuctMemenuhi": "",
-        "visualCheckBoilerDetailsAirDuctTidakMemenuhi": "",
-        "visualCheckBoilerDetailsAirDuctResult": ""
-      },
-      "flueGasDuct": {
-        "visualCheckBoilerDetailsGasDuctMemenuhi": "",
-        "visualCheckBoilerDetailsGasDuctTidakMemenuhi": "",
-        "visualCheckBoilerDetailsGasDuctResult": ""
-      },
-      "flyAshCatcher": {
-        "visualCheckBoilerDetailsAshCatcherMemenuhi": "",
-        "visualCheckBoilerDetailsAshCatcherTidakMemenuhi": "",
-        "visualCheckBoilerDetailsAshCatcherResult": ""
-      },
-      "chimney": {
-        "visualCheckBoilerDetailsChimneyMemenuhi": "",
-        "visualCheckBoilerDetailsChimneyTidakMemenuhi": "",
-        "visualCheckBoilerDetailsChimneyResult": ""
-      },
-      "stairsAndPlatforms": {
-        "visualCheckBoilerDetailsStairsMemenuhi": "",
-        "visualCheckBoilerDetailsStairsTidakMemenuhi": "",
-        "visualCheckBoilerDetailsStairsResult": ""
-      },
-      "insulation": {
-        "visualCheckBoilerDetailsInsulationMemenuhi": "",
-        "visualCheckBoilerDetailsInsulationTidakMemenuhi": "",
-        "visualCheckBoilerDetailsInsulationResult": ""
-      }
+    "hydrotest": {
+      "testPressure": 15,
+      "mawp": 10,
+      "testMedium": "Menggunakan Air",
+      "testDate": "2025-01",
+      "testResult": "Baik"
     },
-    "safetyDevices": {
-      "regulationNote": "(Pasal 12,13,15 Peraturan Uap 1930)",
-      "safetyValve": {
-        "quantity": "Jumlah 1 Unit",
-        "adjustingRing": {
-          "visualCheckSafetyValveRingMemenuhi": "",
-          "visualCheckSafetyValveRingTidakMemenuhi": "",
-          "visualCheckSafetyValveRingResult": ""
-        },
-        "safetyPipe": {
-          "visualCheckSafetyValvePipeMemenuhi": "",
-          "visualCheckSafetyValvePipeTidakMemenuhi": "",
-          "visualCheckSafetyValvePipeResult": ""
-        },
-        "exhaustPipe": {
-          "visualCheckSafetyValveExhaustMemenuhi": "",
-          "visualCheckSafetyValveExhaustTidakMemenuhi": "",
-          "visualCheckSafetyValveExhaustResult": ""
-        }
-      },
-      "pressureGauge": {
-        "maxPressureMark": {
-          "visualCheckPressureGaugeMarkMemenuhi": "",
-          "visualCheckPressureGaugeMarkTidakMemenuhi": "",
-          "visualCheckPressureGaugeMarkResult": ""
-        },
-        "siphonPipe": {
-          "visualCheckPressureGaugeSiphonMemenuhi": "",
-          "visualCheckPressureGaugeSiphonTidakMemenuhi": "",
-          "visualCheckPressureGaugeSiphonResult": ""
-        },
-        "threeWayCockAndTestFlange": {
-          "visualCheckPressureGaugeCockMemenuhi": "",
-          "visualCheckPressureGaugeCockTidakMemenuhi": "",
-          "visualCheckPressureGaugeCockResult": ""
-        }
-      },
-      "gaugeGlass": {
-        "tryCocks": {
-          "visualCheckGaugeGlassTryCocksMemenuhi": "",
-          "visualCheckGaugeGlassTryCocksTidakMemenuhi": "",
-          "visualCheckGaugeGlassTryCocksResult": ""
-        },
-        "blowdownValves": {
-          "visualCheckGaugeGlassBlowdownMemenuhi": "",
-          "visualCheckGaugeGlassBlowdownTidakMemenuhi": "",
-          "visualCheckGaugeGlassBlowdownResult": ""
-        }
-      },
-      "waterLevelMark": {
-        "lowestWaterLevelMark": {
-          "visualCheckWaterLevelLowestMarkMemenuhi": "",
-          "visualCheckWaterLevelLowestMarkTidakMemenuhi": "",
-          "visualCheckWaterLevelLowestMarkResult": ""
-        },
-        "positionAboveFireLine": {
-          "visualCheckWaterLevelPositionMemenuhi": "",
-          "visualCheckWaterLevelPositionTidakMemenuhi": "",
-          "visualCheckWaterLevelPositionResult": ""
-        }
-      },
-      "feedwaterSystem": {
-        "feedPump": {
-          "visualCheckFeedwaterPumpMemenuhi": "",
-          "visualCheckFeedwaterPumpTidakMemenuhi": "",
-          "visualCheckFeedwaterPumpResult": ""
-        },
-        "pumpCapacity": {
-          "visualCheckFeedwaterCapacityMemenuhi": "",
-          "visualCheckFeedwaterCapacityTidakMemenuhi": "",
-          "visualCheckFeedwaterCapacityResult": ""
-        },
-        "driveMotor": {
-          "visualCheckFeedwaterMotorMemenuhi": "",
-          "visualCheckFeedwaterMotorTidakMemenuhi": "",
-          "visualCheckFeedwaterMotorResult": ""
-        },
-        "checkValve": {
-          "visualCheckFeedwaterCheckValveMemenuhi": "",
-          "visualCheckFeedwaterCheckValveTidakMemenuhi": "",
-          "visualCheckFeedwaterCheckValveResult": ""
-        }
-      },
-      "controlEquipment": {
-        "blacksFluit": {
-          "visualCheckControlBlacksFluitMemenuhi": "",
-          "visualCheckControlBlacksFluitTidakMemenuhi": "",
-          "visualCheckControlBlacksFluitResult": ""
-        },
-        "fusiblePlug": {
-          "visualCheckControlFusiblePlugMemenuhi": "",
-          "visualCheckControlFusiblePlugTidakMemenuhi": "",
-          "visualCheckControlFusiblePlugResult": ""
-        },
-        "waterLevelControl": {
-          "visualCheckControlWaterLevelMemenuhi": "",
-          "visualCheckControlWaterLevelTidakMemenuhi": "",
-          "visualCheckControlWaterLevelResult": ""
-        },
-        "steamPressureControl": {
-          "visualCheckControlSteamPressureMemenuhi": "",
-          "visualCheckControlSteamPressureTidakMemenuhi": "",
-          "visualCheckControlSteamPressureResult": ""
-        }
-      },
-      "blowdownValve": {
-        "blowdownDescription": {
-          "visualCheckBlowdownDescMemenuhi": "",
-          "visualCheckBlowdownDescTidakMemenuhi": "",
-          "visualCheckBlowdownDescResult": ""
-        },
-        "blowdownValveMaterial": {
-          "visualCheckBlowdownMaterialMemenuhi": "",
-          "visualCheckBlowdownMaterialTidakMemenuhi": "",
-          "visualCheckBlowdownMaterialResult": ""
-        }
-      },
-      "manholes": {
-        "manhole": {
-          "visualCheckManholeManholeMemenuhi": "",
-          "visualCheckManholeManholeTidakMemenuhi": "",
-          "visualCheckManholeManholeResult": ""
-        },
-        "inspectionOrWashoutHole": {
-          "visualCheckManholeInspectionHoleMemenuhi": "",
-          "visualCheckManholeInspectionHoleTidakMemenuhi": "",
-          "visualCheckManholeInspectionHoleResult": ""
-        }
-      },
-      "identificationMark": {
-        "nameplate": {
-          "visualCheckIdMarkNameplateMemenuhi": "",
-          "visualCheckIdMarkNameplateTidakMemenuhi": "",
-          "visualCheckIdMarkNameplateResult": ""
-        },
-        "nameplateDataMatch": {
-          "visualCheckIdMarkDataMatchMemenuhi": "",
-          "visualCheckIdMarkDataMatchTidakMemenuhi": "",
-          "visualCheckIdMarkDataMatchResult": ""
-        },
-        "form9Stamp": {
-          "visualCheckIdMarkForm9StampMemenuhi": "",
-          "visualCheckIdMarkForm9StampTidakMemenuhi": "",
-          "visualCheckIdMarkForm9StampResult": ""
-        }
-      }
+    "appendagesCheck": {
+      "workingPressureGauge": { "quantity": 1, "status": true, "result": "10 Kg / Cm2" },
+      "manHole": { "quantity": 2, "status": false, "result": "Tidak Ada" },
+      "safetyValveFullOpen": { "quantity": 2, "status": true, "result": "15 Kg / Cm2" },
+      "mainSteamValve": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "levelGlassIndicator": { "quantity": 2, "status": true, "result": "Berfungsi" },
+      "blowdownValve": { "quantity": 2, "status": true, "result": "Berfungsi" },
+      "feedwaterStopValve": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "feedwaterInletValve": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "steamDrier": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "waterPump": { "quantity": 2, "status": true, "result": "Berfungsi" },
+      "controlPanel": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "nameplate": { "quantity": 1, "status": true, "result": "Berfungsi" }
+    },
+    "safetyValveTest": {
+      "header": "Safety Valve 1",
+      "startsToOpen": 15,
+      "valveInfo": "YUMING VALVE GROUP CO.,LTD, Opening 6-10 Sec, Closing 0,8 sec"
     }
-  }
-}
-{
-  "materialThicknessMeasurement": {
-    "shell": {
-      "thickness": {
-        "materialThicknessShellThicknessValue": "",
-        "materialThicknessShellThicknessResult": ""
-      },
-      "diameter": {
-        "materialThicknessShellDiameterValue": "",
-        "materialThicknessShellDiameterResult": ""
-      }
-    },
-    "steamHeader": {
-      "diameter": {
-        "materialThicknessHeaderDiameterValue": "",
-        "materialThicknessHeaderDiameterResult": ""
-      },
-      "thickness": {
-        "materialThicknessHeaderThicknessValue": "",
-        "materialThicknessHeaderThicknessResult": ""
-      },
-      "length": {
-        "materialThicknessHeaderLengthValue": "",
-        "materialThicknessHeaderLengthResult": ""
-      }
-    },
-    "furnace1": {
-      "diameter": {
-        "materialThicknessFurnace1DiameterValue": "",
-        "materialThicknessFurnace1DiameterResult": ""
-      },
-      "thickness": {
-        "materialThicknessFurnace1ThicknessValue": "",
-        "materialThicknessFurnace1ThicknessResult": ""
-      },
-      "length": {
-        "materialThicknessFurnace1LengthValue": "",
-        "materialThicknessFurnace1LengthResult": ""
-      }
-    },
-    "furnace2": {
-      "diameter": {
-        "materialThicknessFurnace2DiameterValue": "",
-        "materialThicknessFurnace2DiameterResult": ""
-      },
-      "thickness": {
-        "materialThicknessFurnace2ThicknessValue": "",
-        "materialThicknessFurnace2ThicknessResult": ""
-      },
-      "length": {
-        "materialThicknessFurnace2LengthValue": "",
-        "materialThicknessFurnace2LengthResult": ""
-      }
-    }
-  }
-}
-{
-  "thicknessMeasurementSetup": {
-    "thicknessMeasurementSetupOwner": "",
-    "thicknessMeasurementSetupInspectionDate": "",
-    "thicknessMeasurementSetupProject": "",
-    "thicknessMeasurementSetupObjectType": "",
-    "thicknessMeasurementSetupWorkOrderNo": "",
-    "thicknessMeasurementSetupEquipmentUsed": "",
-    "thicknessMeasurementSetupMethodUsed": "",
-    "thicknessMeasurementSetupProbeType": "",
-    "thicknessMeasurementSetupMaterialType": "",
-    "thicknessMeasurementSetupProbeStyle": "",
-    "thicknessMeasurementSetupOperatingTemp": "",
-    "thicknessMeasurementSetupSurfaceCondition": "",
-    "thicknessMeasurementSetupWeldingProcess": "",
-    "thicknessMeasurementSetupLaminatingCheck": "",
-    "thicknessMeasurementSetupCouplantUsed": ""
-  }
-}
-{
-  "measurementResults": {
-    "topHead": {
-      "measurementResultsTopHeadNominal": "",
-      "measurementResultsTopHeadPoint1": "",
-      "measurementResultsTopHeadPoint2": "",
-      "measurementResultsTopHeadPoint3": "",
-      "measurementResultsTopHeadMinimum": "",
-      "measurementResultsTopHeadMaximum": ""
-    },
-    "shell": {
-      "measurementResultsShellNominal": "",
-      "measurementResultsShellPoint1": "",
-      "measurementResultsShellPoint2": "",
-      "measurementResultsShellPoint3": "",
-      "measurementResultsShellMinimum": "",
-      "measurementResultsShellMaximum": ""
-    },
-    "buttonHead": {
-      "measurementResultsButtonHeadNominal": "",
-      "measurementResultsButtonHeadPoint1": "",
-      "measurementResultsButtonHeadPoint2": "",
-      "measurementResultsButtonHeadPoint3": "",
-      "measurementResultsButtonHeadMinimum": "",
-      "measurementResultsButtonHeadMaximum": ""
-    }
-  }
-}
-{
-  "ndtShell": {
-    "ndtShellTestMethod": "",
-    "longitudinalWeldJoint": {
-      "ndtShellLongitudinalWeldJointLocation": "",
-      "ndtShellLongitudinalWeldJointTrue": "",
-      "ndtShellLongitudinalWeldJointFalse": "",
-      "ndtShellLongitudinalWeldJointResult": ""
-    },
-    "circumferentialWeldJoint": {
-      "ndtShellCircumferentialWeldJointLocation": "",
-      "ndtShellCircumferentialWeldJointTrue": "",
-      "ndtShellCircumferentialWeldJointFalse": "",
-      "ndtShellCircumferentialWeldJointResult": ""
-    },
-  }
-}
-{
-  "ndtFurnace": {
-    "ndtFurnaceTestMethod": "",
-    "longitudinalWeldJoint": {
-      "ndtFurnaceLongitudinalWeldJointLocation": "",
-      "ndtFurnaceLongitudinalWeldJointTrue": "",
-      "ndtFurnaceLongitudinalWeldJointFalse": "",
-      "ndtFurnaceLongitudinalWeldJointResult": ""
-    },
-    "circumferentialWeldJoint": {
-      "ndtFurnaceCircumferentialWeldJointLocation": "",
-      "ndtFurnaceCircumferentialWeldJointTrue": "",
-      "ndtFurnaceCircumferentialWeldJointFalse": "",
-      "ndtFurnaceCircumferentialWeldJointResult": ""
-    },
   },
-  "ndtFireTubes": {
-    "ndtFireTubesTestMethod": "",
-    "weldJointFront": {
-      "ndtFireTubesWeldJointFrontLocation": "",
-      "ndtFireTubesWeldJointFrontTrue": "",
-      "ndtFireTubesWeldJointFrontFalse": "",
-      "ndtFireTubesWeldJointFrontResult": ""
-    },
-    "weldJointRear": {
-      "ndtFireTubesWeldJointRearLocation": "",
-      "ndtFireTubesWeldJointRearTrue": "",
-      "ndtFireTubesWeldJointRearFalse": "",
-      "ndtFireTubesWeldJointRearResult": ""
-    },
-  }
-}
-{
-  "hydrotest": {
-    "hydrotestTestPressure": "",
-    "hydrotestMawp": "",
-    "hydrotestTestMedium": "",
-    "hydrotestTestDate": "",
-    "hydrotestTestResult": ""
-  }
-}
-{
-  "appendagesCheck": {
-    "workingPressureGauge": {
-      "appendagesCheckPressureGaugeQuantity": "",
-      "appendagesCheckPressureGaugeTrue": "",
-      "appendagesCheckPressureGaugeFalse": "",
-      "appendagesCheckPressureGaugeResult": ""
-    },
-    "manHole": {
-      "appendagesCheckManHoleQuantity": "",
-      "appendagesCheckManHoleTrue": "",
-      "appendagesCheckManHoleFalse": "",
-      "appendagesCheckManHoleResult": ""
-    },
-    "safetyValve": {
-      "appendagesCheckSafetyValveQuantity": "",
-      "appendagesCheckSafetyValveTrue": "",
-      "appendagesCheckSafetyValveFalse": "",
-      "appendagesCheckSafetyValveResult": ""
-    },
-    "mainSteamValve": {
-      "appendagesCheckMainSteamValveQuantity": "",
-      "appendagesCheckMainSteamValveTrue": "",
-      "appendagesCheckMainSteamValveFalse": "",
-      "appendagesCheckMainSteamValveResult": ""
-    },
-    "levelGlassIndicator": {
-      "appendagesCheckLevelGlassQuantity": "",
-      "appendagesCheckLevelGlassTrue": "",
-      "appendagesCheckLevelGlassFalse": "",
-      "appendagesCheckLevelGlassResult": ""
-    },
-    "blowdownValve": {
-      "appendagesCheckBlowdownValveQuantity": "",
-      "appendagesCheckBlowdownValveTrue": "",
-      "appendagesCheckBlowdownValveFalse": "",
-      "appendagesCheckBlowdownValveResult": ""
-    },
-    "feedwaterStopValve": {
-      "appendagesCheckFeedwaterStopValveQuantity": "",
-      "appendagesCheckFeedwaterStopValveTrue": "",
-      "appendagesCheckFeedwaterStopValveFalse": "",
-      "appendagesCheckFeedwaterStopValveResult": ""
-    },
-    "feedwaterInletValve": {
-      "appendagesCheckFeedwaterInletValveQuantity": "",
-      "appendagesCheckFeedwaterInletValveTrue": "",
-      "appendagesCheckFeedwaterInletValveFalse": "",
-      "appendagesCheckFeedwaterInletValveResult": ""
-    },
-    "steamDrier": {
-      "appendagesCheckSteamDrierQuantity": "",
-      "appendagesCheckSteamDrierTrue": "",
-      "appendagesCheckSteamDrierFalse": "",
-      "appendagesCheckSteamDrierResult": ""
-    },
-    "waterPump": {
-      "appendagesCheckWaterPumpQuantity": "",
-      "appendagesCheckWaterPumpTrue": "",
-      "appendagesCheckWaterPumpFalse": "",
-      "appendagesCheckWaterPumpResult": ""
-    },
-    "controlPanel": {
-      "appendagesCheckControlPanelQuantity": "",
-      "appendagesCheckControlPanelTrue": "",
-      "appendagesCheckControlPanelFalse": "",
-      "appendagesCheckControlPanelResult": ""
-    },
-    "nameplate": {
-      "appendagesCheckNameplateQuantity": "",
-      "appendagesCheckNameplateTrue": "",
-      "appendagesCheckNameplateFalse": "",
-      "appendagesCheckNameplateResult": ""
-    }
-  }
-}
-{
-  "safetyValveTest": {
-    "safetyValveTestHeader": "",
-    "safetyValveTestStartsToOpen": "",
-    "safetyValveTestValveInfo": ""
-  }
+  "conclusion": "Dari hasil penelaahan dokumen yang ada, pemeriksaan serta pengujian terhadap Ketel Uap / Boiler tersebut diatas dapat diambil kesimpulan sebagai berikut :\nHasil pemeriksaan visual disimpulkan bahwa peralatan yang ada pada pesawat boiler tersebut secara umum masih dalam kondisi bekerja normal(memenuhi standard & kesehatan kerja).\nPada saat dilakukan pemeriksaan dan pengujian terhadap ketel uap / boiler layak dioperasikan.\nHasil pemeriksaan terhadap apendages (peralatan pengaman) ketel uap masih lengkap dan berfungsi normal.\nHasol NDT pada pipa dan pelat pipa, diperoleh hasil bahwa; sambungan las tidak ditemukan keretakan atau kebocoran\nHasil hidrotest tidak ditemukan kebocoran pada boiler\nHasil pemeriksaan secara visual menunjukkan bahwa tidak ada kebocoran dalam sambunganlas dan tidak terjadi deformasi (perubahan bentuk) pada ketel uap.\nSafety valve masih berfungsi normal\nAutorun burner berfungsi normal.",
+  "recommendations": "Untuk selanjutnya karena tidak terdapat hal yang memberatkan maka Air Receiver Tank dapat dioperasikan dengan Syarat K3 sebagai berikut :\nBoiler dioperasikan oleh operator yang mempunyai SIO Operator Boiler Kelas I.\nAgar unit selalu dilakukanpemeliharaan & pemeriksaan secara berkala.\nOperator boiler harus selalu standby saat boiler beroperasi & selalu mengontrol level air dalam kondisi normal.\nAgar didalam pengoperasian boiler tersebut hendaknya selalu dicatat dalam buku check sheet.\nSafety Valve 1 dan 2 harus dilakukan pengujian minimal 1 bulan sekali.\nKetel Uap harus selalu dipasang perlengkapan safety sesuai pasal 12 peraturan Uap tahun 1930.\nKonstruksi ketel uap harus sesuai gambar awal atau pertama, apabila ada perubahan perusahaan wajib melaporkan ke Dinas Tenaga Kerja Dan Transmigrasi Setempat\nUnit Ketel Uap Harus Diperiksa Kembali Paling Lambat Januari 2026."
 }
