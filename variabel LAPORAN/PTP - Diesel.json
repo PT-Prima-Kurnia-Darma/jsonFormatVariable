@@ -1,0 +1,240 @@
+{
+  "examinationType": "BERKALA",
+  "subInspectionType": "MOTOR DIESEL",
+  "extraId": 123,
+  "createdAt": "sabtu",
+  "generalData": {
+    "companyName": "PT. Prima Kurnia Darma",
+    "companyLocation": "Jl. Cipinang Jaya No. 1, Jakarta Timur",
+    "userInCharge": "PT. Klien Sejahtera",
+    "userAddressInCharge": "Jl. Gatot Subroto Kav. 5, Jakarta Selatan",
+    "subcontractorPersonInCharge": "Bapak Budi Sasmito, S.T.",
+    "unitLocation": "Area Genset, Gedung Utama",
+    "equipmentType": "Genset",
+    "brandType": "Caterpillar / 3406C",
+    "serialNumberUnitNumber": "CAT123XYZ",
+    "manufacturer": "Caterpillar Inc.",
+    "locationAndYearOfManufacture": "USA / 2020",
+    "capacityWorkingLoad": "500 KVA / 1500 RPM",
+    "intendedUse": "Sumber Listrik Cadangan",
+    "pjk3SkpNo": "5/2345/AS.02.00/X/2023",
+    "ak3SkpNo": "KEP.123/DJPPK/V/2022",
+    "portableOrStationer": "Stationer",
+    "usagePermitNumber": "123/IZIN-PAKAI/DISNAKER/2021",
+    "operatorName": "Joko Susilo",
+    "equipmentHistory": "Pemeriksaan berkala sebelumnya pada Juni 2024"
+  },
+  "technicalData": {
+    "dieselMotor": {
+      "brandModel": "Caterpillar / 3406C",
+      "manufacturer": "Caterpillar Inc. / USA / 2020",
+      "classification": "Diesel Engine",
+      "serialNumber": "DM-CAT-9876",
+      "powerRpm": "450 kW / 1500 RPM",
+      "startingPower": "Electric Starter",
+      "cylinderCount": "6"
+    },
+    "generator": {
+      "brandType": "Leroy-Somer / LSA 47.2",
+      "manufacturer": "Leroy-Somer / Prancis / 2020",
+      "serialNumber": "GEN-LS-5432",
+      "power": "500 KVA",
+      "frequency": "50 Hz",
+      "rpm": "1500 RPM",
+      "voltage": "220/380 V",
+      "powerFactor": "0.8",
+      "current": "760 A"
+    }
+  },
+  "visualChecks": {
+    "basicConstruction": {
+      "foundation": { "status": true, "result": "Kondisi kokoh, tidak ada keretakan" },
+      "dieselHousing": { "status": true, "result": "Tidak ada korosi atau kerusakan" },
+      "support": { "status": true, "result": "Terpasang dengan baik dan kencang" },
+      "anchorBolt": { "status": true, "result": "Semua baut terpasang dan kencang" }
+    },
+    "structuralConstruction": {
+      "dailyTank": { "status": true, "result": "Bersih, tidak ada kebocoran" },
+      "muffler": { "status": true, "result": "Terpasang dengan baik, tidak ada kebocoran gas buang" },
+      "airVessel": { "status": true, "result": "N/A" },
+      "panel": { "status": true, "result": "Pintu panel dapat ditutup rapat" }
+    },
+    "lubricationSystem": {
+      "oil": { "status": false, "result": "Level cukup, namun warna sudah keruh, perlu diganti" },
+      "oilStrainer": { "status": true, "result": "Bersih" },
+      "oilCooler": { "status": true, "result": "Tidak ada kebocoran" },
+      "oilFilter": { "status": true, "result": "Tidak ada kebocoran" },
+      "byPassFilter": { "status": true, "result": "Berfungsi baik" },
+      "safetyValve": { "status": true, "result": "Berfungsi baik" },
+      "packing": { "status": true, "result": "Tidak ada rembesan oli" }
+    },
+    "fuelSystem": {
+      "dailyTank": { "status": true, "result": "Lengkapi dengan Stiker Rambu K3" },
+      "fuelInjector": { "status": true, "result": "Kondisi Baik" },
+      "connections": { "status": true, "result": "Tidak ada kebocoran bahan bakar" },
+      "floatTank": { "status": true, "result": "Kondisi Baik" },
+      "fuelFilter": { "status": true, "result": "Bersih, tidak ada sumbatan" },
+      "fuelPump": { "status": true, "result": "Berfungsi normal" },
+      "magneticScreen": { "status": true, "result": "Kondisi Baik" },
+      "governor": { "status": true, "result": "Berfungsi normal" },
+      "throttleShaft": { "status": true, "result": "Kondisi Baik" },
+      "regulator": { "status": true, "result": "Kondisi Baik" },
+      "shutOffValve": { "status": true, "result": "Berfungsi normal" }
+    },
+    "startingAid": {
+      "feedPump": { "status": true, "result": "Kondisi Baik" },
+      "fuelValve": { "status": true, "result": "Kondisi Baik" },
+      "primingPump": { "status": true, "result": "Kondisi Baik" },
+      "heaterPlug": { "status": true, "result": "N/A" },
+      "heaterSwitch": { "status": true, "result": "N/A" },
+      "preHeater": { "status": true, "result": "N/A" },
+      "waterSignal": { "status": true, "result": "Berfungsi baik" },
+      "startingSwitch": { "status": true, "result": "Berfungsi baik" },
+      "batteryPoles": { "status": true, "result": "Bersih dan terpasang kencang" },
+      "thermostartTank": { "status": true, "result": "N/A" },
+      "thermostart": { "status": true, "result": "N/A" },
+      "heaterSignal": { "status": true, "result": "N/A" },
+      "thermostartSwitch": { "status": true, "result": "N/A" },
+      "glowPlug": { "status": true, "result": "N/A" },
+      "speedSensor": { "status": true, "result": "Berfungsi baik" },
+      "serviceMeter": { "status": true, "result": "Berfungsi baik" },
+      "tempSensor": { "status": true, "result": "Berfungsi baik" },
+      "startingMotor": { "status": true, "result": "Berfungsi baik" }
+    },
+    "coolingSystem": {
+      "coolingWater": { "status": true, "result": "Level cukup, tidak keruh" },
+      "bolts": { "status": true, "result": "Terpasang kencang" },
+      "clamps": { "status": true, "result": "Terpasang kencang" },
+      "radiator": { "status": true, "result": "Bersih, tidak ada kebocoran" },
+      "thermostat": { "status": true, "result": "Berfungsi baik" },
+      "fan": { "status": true, "result": "Tidak ada kerusakan pada bilah" },
+      "fanGuard": { "status": true, "result": "Terpasang dengan baik" },
+      "fanRotation": { "status": true, "result": "Normal" },
+      "bearing": { "status": true, "result": "Tidak ada suara aneh" }
+    },
+    "airCirculationSystem": {
+      "preCleaner": { "status": true, "result": "Bersih" },
+      "dustIndicator": { "status": true, "result": "Normal" },
+      "airCleaner": { "status": true, "result": "Bersih" },
+      "turboCharger": { "status": true, "result": "Tidak ada suara aneh" },
+      "clamps": { "status": true, "result": "Terpasang kencang" },
+      "afterCooler": { "status": true, "result": "Bersih" },
+      "muffler": { "status": true, "result": "Terpasang baik" },
+      "silencer": { "status": true, "result": "Terpasang baik" },
+      "heatDamper": { "status": true, "result": "Terpasang baik" },
+      "bolts": { "status": true, "result": "Terpasang kencang" }
+    },
+    "mainParts": {
+      "damperBolts": { "status": true, "result": "Terpasang kencang" },
+      "support": { "status": true, "result": "Terpasang baik" },
+      "flyWheelHousing": { "status": true, "result": "Tidak ada kerusakan" },
+      "flyWheel": { "status": true, "result": "Tidak ada kerusakan" },
+      "vibrationDamper": { "status": true, "result": "Kondisi baik" },
+      "beltAndPulley": { "status": true, "result": "Kondisi baik, tidak getas" },
+      "crankshaft": { "status": true, "result": "Kondisi baik" }
+    },
+    "generatorParts": {
+      "terminal": { "status": true, "result": "Koneksi kencang, tidak ada panas berlebih" },
+      "cable": { "status": true, "result": "Isolasi baik, tidak ada kerusakan" },
+      "panel": { "status": false, "result": "Panel Board tidak berfungsi" },
+      "ampereMeter": { "status": true, "result": "Berfungsi Baik" },
+      "voltMeter": { "status": true, "result": "Berfungsi Baik" },
+      "frequencyMeter": { "status": true, "result": "Berfungsi Baik" },
+      "circuitBreaker": { "status": true, "result": "Berfungsi Baik" },
+      "onOffSwitch": { "status": true, "result": "Berfungsi Baik" }
+    },
+    "transmission": {
+      "gear": { "status": true, "result": "N/A" },
+      "belt": { "status": true, "result": "Kondisi baik" },
+      "chain": { "status": true, "result": "N/A" }
+    },
+    "mdp": {
+      "cable": { "status": true, "result": "Kondisi Baik" },
+      "condition": { "status": true, "result": "Kondisi Baik" },
+      "ampereMeter": { "status": true, "result": "Berfungsi Baik" },
+      "voltMeter": { "status": true, "result": "Berfungsi Baik" },
+      "mainCircuitBreaker": { "status": true, "result": "Berfungsi Baik" }
+    },
+    "safetyDevice": {
+      "grounding": { "status": true, "result": "0.8 Ω" },
+      "lightningArrester": { "status": true, "result": "Terpasang" },
+      "emergencyStop": { "status": true, "result": "Berfungsi Baik" },
+      "governor": { "status": true, "result": "Berfungsi Baik" },
+      "thermostat": { "status": true, "result": "Berfungsi Baik" },
+      "waterSignal": { "status": true, "result": "Berfungsi Baik" },
+      "fanGuard": { "status": true, "result": "Terpasang Baik" },
+      "silencer": { "status": true, "result": "Berfungsi Baik" },
+      "vibrationDamper": { "status": true, "result": "Berfungsi dengan Baik" },
+      "circuitBreaker": { "status": true, "result": "MCCB sesuai" },
+      "avr": { "status": true, "result": "Baik" }
+    }
+  },
+  "tests": {
+    "ndt": {
+      "shaftRpm": { "remarks": "1502 RPM", "result": "Baik" },
+      "weldJoint": { "remarks": "N/A", "result": "N/A" },
+      "noise": { "remarks": "Terlampir", "result": "Memenuhi NAB <85 dB" },
+      "lighting": { "remarks": "Terlampir", "result": "Memenuhi NAB >100 lux" },
+      "loadTest": { "remarks": "Beban 80%", "result": "Mampu memenuhi kebutuhan listrik" }
+    },
+    "safetyDevice": {
+      "governor": { "remarks": "Berfungsi", "result": "Baik" },
+      "emergencyStop": { "remarks": "Berfungsi", "result": "Baik" },
+      "grounding": { "remarks": "0.8 Ohm", "result": "Baik" },
+      "indicatorPanel": { "remarks": "Berfungsi", "result": "Baik" },
+      "pressureGauge": { "remarks": "Berfungsi", "result": "Baik" },
+      "tempIndicator": { "remarks": "Berfungsi", "result": "Baik" },
+      "waterIndicator": { "remarks": "Berfungsi", "result": "Baik" },
+      "safetyValves": { "remarks": "N/A", "result": "N/A" },
+      "radiator": { "remarks": "Berfungsi", "result": "Baik" }
+    }
+  },
+  "electricalComponents": {
+    "panelControl": {
+      "ka": "Drawing",
+      "voltage": {
+        "rs": 381,
+        "rt": 380,
+        "st": 382,
+        "rn": 221,
+        "rg": 220,
+        "ng": 1
+      },
+      "powerInfo": {
+        "frequency": "50.1 HZ",
+        "cosQ": 0.8,
+        "ampere": {
+          "r": 700,
+          "s": 702,
+          "t": 701
+        },
+        "result": "AMAN"
+      }
+    }
+  },
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian yang dilakukan oleh Ahli K3 Bidang Pesawat Tenaga dan Produksi PT. Prima Kurnia Darma bahwa Genset merk Caterpillar / 3406C dengan No.seri CAT123XYZ didapat temuan:\n- Oli mesin perlu diganti.\n- Panel board tidak berfungsi dan perlu perbaikan segera.\nSecara keseluruhan Genset dalam keadaan cukup baik dan laik beroperasi, dengan mengikuti persyaratan yang direkomendasikan.",
+  "recommendations": "1. Lakukan penggantian oli mesin.\n2. Lakukan perbaikan pada Panel Board.\n3. Pasang stiker rambu K3 pada tangki harian.\n4. Lakukan pemeriksaan dan pengujian berikutnya paling lambat 1 tahun yaitu pada Juni 2026.",
+  "inspectionDate": "24 Juli 2025",
+  "mcbCalculation": {
+    "phase": 3,
+    "voltage": "220/380",
+    "cosQ": 0.8,
+    "generatorPowerKva": 500,
+    "generatorPowerKw": 400,
+    "resultCalculation": 760,
+    "requirementCalculation": 950,
+    "conclusion": "Disarankan MCCB yang terpasang pada objek adalah 1000 A, maka sesuai dengan perhitungan dan dapat dipastikan aman."
+  },
+  "noiseMeasurement": {
+    "pointA": { "result": 84.5, "status": "Memenuhi" },
+    "pointB": { "result": 83.9, "status": "Memenuhi" },
+    "pointC": { "result": 84.1, "status": "Memenuhi" },
+    "pointD": { "result": 84.3, "status": "Memenuhi" }
+  },
+  "lightingMeasurement": {
+    "pointA": { "result": 150, "status": "Memenuhi" },
+    "pointB": { "result": 145, "status": "Memenuhi" },
+    "pointC": { "result": 155, "status": "Memenuhi" },
+    "pointD": { "result": 160, "status": "Memenuhi" }
+  }
+}

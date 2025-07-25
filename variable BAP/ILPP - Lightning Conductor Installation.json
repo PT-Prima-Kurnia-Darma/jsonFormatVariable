@@ -1,11 +1,13 @@
 {
+  "laporanId": "XjlN5LKNftsHiIaRZNbh",
   "examinationType": "BERKALA",
   "equipmentType": "GEDUNG KANTOR",
   "inspectionDate": "22 Juli 2025",
-  "cereatedAt": "",
+  "inspectionType": "Listrik",
+  "createdAt": "",
   "extraId": 101,
   "generalData": {
-    "companyName": "PT. INDO TEKNOLOGI",
+    "companyName": "PT. INDO TEKNOLOGI NEW GACOR",
     "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
     "usageLocation": "Ruang Panel Utama, Lantai B1",
     "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
@@ -25,7 +27,7 @@
     "isLabelingComplete": false,
     "isFireExtinguisherAvailable": true
   },
-  "Testing": {
+  "testing": {
     "isThermographTestOk": true,
     "areSafetyDevicesFunctional": true,
     "isVoltageBetweenPhasesNormal": true,
