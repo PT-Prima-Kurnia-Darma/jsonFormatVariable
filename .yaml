@@ -53,6 +53,10 @@ tags:
     description: Manajemen data Laporan Pemeriksaan untuk Pesawat Uap dan Bejana Tekan.
   - name: PUBT - BAP
     description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Pesawat Uap dan Bejana Tekan.  
+  - name: PTP - Laporan Motor Diesel
+    description: Manajemen data Laporan Pemeriksaan untuk  Pesawat Tenaga dan Produksi (PTP) Motor Diesel.
+  - name: PUBT - BAP Motor Diesel
+    description: Manajemen data Berita Acara Pemeriksaan (BAP) untuk Pesawat Tenaga dan Produksi (PTP) Motor Diesel.
 paths:
   # ======================================================
   #                 AUTENTIFIKASI
@@ -5446,6 +5450,357 @@ paths:
         "500":
           $ref: "#/components/responses/InternalServerError"
 
+  # ======================================================
+  #         PTP - LAPORAN MOTOR DIESEL
+  # ======================================================
+  /ptp/motorDiesel/laporan:
+    post:
+      tags:
+        - PTP - Laporan Motor Diesel
+      summary: Buat Laporan Motor Diesel Baru
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPtpDieselPayload"
+      responses:
+        "201":
+          description: Laporan Motor Diesel berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPtpDieselSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - PTP - Laporan Motor Diesel
+      summary: Dapatkan Semua Laporan Motor Diesel
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua Laporan Motor Diesel.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllLaporanPtpDieselResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /ptp/motorDiesel/laporan/{id}:
+    get:
+      tags:
+        - PTP - Laporan Motor Diesel
+      summary: Dapatkan Laporan Motor Diesel Berdasarkan ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Berhasil mengambil data Laporan Motor Diesel.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPtpDieselSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - PTP - Laporan Motor Diesel
+      summary: Perbarui Laporan Motor Diesel
+      description: Memperbarui data laporan motor diesel. Perubahan pada data umum dan teknis juga akan disinkronkan ke BAP yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPtpDieselPayload"
+      responses:
+        "200":
+          description: Laporan Motor Diesel berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPtpDieselSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - PTP - Laporan Motor Diesel
+      summary: Hapus Laporan Motor Diesel
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Laporan Motor Diesel berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan Motor Diesel berhasil dihapus
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /ptp/motorDiesel/laporan/download/{id}:
+    get:
+      tags:
+        - PTP - Laporan Motor Diesel
+      summary: Unduh Dokumen Laporan Motor Diesel
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: Laporan Motor Diesel berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-Motor-Diesel-PT-Prima-Kurnia-Darma-123.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ======================================================
+  #         PTP - BAP MOTOR DIESEL
+  # ======================================================
+  /ptp/motorDiesel/bap/prefill/{laporanId}:
+    get:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Ambil Data Prefill untuk BAP dari Laporan
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Berhasil mengambil data untuk prefill BAP.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMotorDieselPrefillSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /ptp/motorDiesel/bap:
+    post:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Buat BAP Motor Diesel Baru
+      description: Membuat BAP baru berdasarkan laporanId. Data umum dan teknis dari BAP ini akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPtpMotorDieselPayload"
+      responses:
+        "201":
+          description: BAP Motor Diesel berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMotorDieselSuccessResponse"
+        "404":
+          description: Laporan Motor Diesel dengan laporanId yang diberikan tidak ditemukan.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Dapatkan Semua BAP Motor Diesel
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua BAP Motor Diesel.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllBapPtpMotorDieselResponse"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /ptp/motorDiesel/bap/{id}:
+    get:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Dapatkan BAP Motor Diesel Berdasarkan ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Berhasil mengambil data BAP Motor Diesel.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMotorDieselSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Perbarui BAP Motor Diesel
+      description: Memperbarui data BAP. Perubahan pada data umum dan teknis juga akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPtpMotorDieselPayload"
+      responses:
+        "200":
+          description: BAP Motor Diesel berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMotorDieselSuccessResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Hapus BAP Motor Diesel
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: BAP Motor Diesel berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP Motor Diesel berhasil dihapus
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /ptp/motorDiesel/bap/download/{id}:
+    get:
+      tags:
+        - PTP - BAP Motor Diesel
+      summary: Unduh Dokumen BAP Motor Diesel
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: BAP Motor Diesel berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-Motor-Diesel-PT-Klien-Sejahtera-part-2-123.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
 
 components:
   securitySchemes:
@@ -9900,4 +10255,350 @@ components:
         message: { type: string }
         data:
           $ref: "#/components/schemas/BapPubtPayload"
+
+    # ======================================================
+    #         PTP - MOTOR DIESEL SCHEMAS
+    # ======================================================
+    InspectionItemPtpDiesel:
+      type: object
+      properties:
+        status:
+          type: boolean
+          nullable: true
+        result:
+          type: string
+          nullable: true
+          
+    TestResultPtpDiesel:
+      type: object
+      properties:
+        remarks:
+          type: string
+          nullable: true
+        result:
+          type: string
+          nullable: true
+
+    LaporanPtpDieselPayload:
+      type: object
+      properties:
+        examinationType: { type: string, nullable: true }
+        extraId: { type: number, nullable: true }
+        inspectionType: { type: string, nullable: true }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string, nullable: true }
+            companyLocation: { type: string, nullable: true }
+            userInCharge: { type: string, nullable: true }
+            userAddressInCharge: { type: string, nullable: true }
+            subcontractorPersonInCharge: { type: string, nullable: true }
+            unitLocation: { type: string, nullable: true }
+            equipmentType: { type: string, nullable: true }
+            brandType: { type: string, nullable: true }
+            serialNumberUnitNumber: { type: string, nullable: true }
+            manufacturer: { type: string, nullable: true }
+            locationAndYearOfManufacture: { type: string, nullable: true }
+            capacityWorkingLoad: { type: string, nullable: true }
+            intendedUse: { type: string, nullable: true }
+            pjk3SkpNo: { type: string, nullable: true }
+            ak3SkpNo: { type: string, nullable: true }
+            portableOrStationer: { type: string, nullable: true }
+            usagePermitNumber: { type: string, nullable: true }
+            operatorName: { type: string, nullable: true }
+            equipmentHistory: { type: string, nullable: true }
+        technicalData:
+          type: object
+          properties:
+            dieselMotor:
+              type: object
+              properties:
+                brandModel: { type: string, nullable: true }
+                manufacturer: { type: string, nullable: true }
+                classification: { type: string, nullable: true }
+                serialNumber: { type: string, nullable: true }
+                powerRpm: { type: string, nullable: true }
+                startingPower: { type: string, nullable: true }
+                cylinderCount: { type: string, nullable: true }
+            generator:
+              type: object
+              properties:
+                brandType: { type: string, nullable: true }
+                manufacturer: { type: string, nullable: true }
+                serialNumber: { type: string, nullable: true }
+                power: { type: string, nullable: true }
+                frequency: { type: string, nullable: true }
+                rpm: { type: string, nullable: true }
+                voltage: { type: string, nullable: true }
+                powerFactor: { type: string, nullable: true }
+                current: { type: string, nullable: true }
+        visualChecks:
+          type: object
+          properties:
+            basicConstruction:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            structuralConstruction:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            lubricationSystem:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            fuelSystem:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            startingAid:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            coolingSystem:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            airCirculationSystem:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            mainParts:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            generatorParts:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            transmission:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            mdp:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+            safetyDevice:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/InspectionItemPtpDiesel'
+        tests:
+          type: object
+          properties:
+            ndt:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/TestResultPtpDiesel'
+            safetyDevice:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/TestResultPtpDiesel'
+        electricalComponents:
+          type: object
+          properties:
+            panelControl:
+              type: object
+              properties:
+                ka: { type: string, nullable: true }
+                voltage:
+                  type: object
+                  properties:
+                    rs: { type: number, nullable: true }
+                    rt: { type: number, nullable: true }
+                    st: { type: number, nullable: true }
+                    rn: { type: number, nullable: true }
+                    rg: { type: number, nullable: true }
+                    ng: { type: number, nullable: true }
+                powerInfo:
+                  type: object
+                  properties:
+                    frequency: { type: string, nullable: true }
+                    cosQ: { type: number, nullable: true }
+                    ampere:
+                      type: object
+                      properties:
+                        r: { type: number, nullable: true }
+                        s: { type: number, nullable: true }
+                        t: { type: number, nullable: true }
+                    result: { type: string, nullable: true }
+        conclusion: { type: string, nullable: true }
+        recommendations: { type: string, nullable: true }
+        inspectionDate: { type: string, nullable: true }
+        mcbCalculation:
+          type: object
+          properties:
+            phase: { type: number, nullable: true }
+            voltage: { type: string, nullable: true }
+            cosQ: { type: number, nullable: true }
+            generatorPowerKva: { type: number, nullable: true }
+            generatorPowerKw: { type: number, nullable: true }
+            resultCalculation: { type: number, nullable: true }
+            requirementCalculation: { type: number, nullable: true }
+            conclusion: { type: string, nullable: true }
+        noiseMeasurement:
+          type: object
+          properties:
+            pointA: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+            pointB: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+            pointC: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+            pointD: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+        lightingMeasurement:
+          type: object
+          properties:
+            pointA: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+            pointB: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+            pointC: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+            pointD: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string, nullable: true } } }
+
+    LaporanPtpDieselResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanPtpDieselPayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Motor Diesel" }
+            documentType: { type: string, example: "Laporan" }
+            createdAt: { type: string, format: date-time }
+
+    LaporanPtpDieselSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanPtpDieselResponseData"
+
+    GetAllLaporanPtpDieselResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanPtpDieselResponseData"
+
+    BapPtpMotorDieselPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId: { type: string }
+        examinationType: { type: string, nullable: true }
+        inspectionDate: { type: string, nullable: true }
+        extraId: { type: number, nullable: true }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string, nullable: true }
+            companyLocation: { type: string, nullable: true }
+            unitLocation: { type: string, nullable: true }
+            userAddressInCharge: { type: string, nullable: true }
+        technicalData:
+          type: object
+          properties:
+            brandType: { type: string, nullable: true }
+            manufacturer: { type: string, nullable: true }
+            locationAndYearOfManufacture: { type: string, nullable: true }
+            serialNumberUnitNumber: { type: string, nullable: true }
+            capacityWorkingLoad: { type: string, nullable: true }
+            technicalDataDieselMotorPowerRpm: { type: string, nullable: true }
+            specialSpecification: { type: string, nullable: true }
+            dimensionsDescription: { type: string, nullable: true }
+            rotationRpm: { type: string, nullable: true }
+            technicalDataGeneratorFrequency: { type: string, nullable: true }
+            technicalDataGeneratorCurrent: { type: string, nullable: true }
+            machineWeightKg: { type: string, nullable: true }
+            areSafetyFeaturesInstalled: { type: string, nullable: true }
+        visualChecks:
+          type: object
+          properties:
+            isMachineGoodCondition: { type: boolean, nullable: true }
+            areElectricalIndicatorsGood: { type: boolean, nullable: true }
+            isAparAvailable: { type: boolean, nullable: true }
+            isPpeAvailable: { type: boolean, nullable: true }
+            isGroundingInstalled: { type: boolean, nullable: true }
+            isBatteryGoodCondition: { type: boolean, nullable: true }
+            hasLubricationLeak: { type: boolean, nullable: true }
+            isFoundationGoodCondition: { type: boolean, nullable: true }
+            hasHydraulicLeak: { type: boolean, nullable: true }
+        functionalTests:
+          type: object
+          properties:
+            isLightingCompliant: { type: boolean, nullable: true }
+            isNoiseLevelCompliant: { type: boolean, nullable: true }
+            isEmergencyStopFunctional: { type: boolean, nullable: true }
+            isMachineFunctional: { type: boolean, nullable: true }
+            isVibrationLevelCompliant: { type: boolean, nullable: true }
+            isInsulationResistanceOk: { type: boolean, nullable: true }
+            isShaftRotationCompliant: { type: boolean, nullable: true }
+            isGroundingResistanceCompliant: { type: boolean, nullable: true }
+            isNdtWeldTestOk: { type: boolean, nullable: true }
+            isVoltageBetweenPhasesNormal: { type: boolean, nullable: true }
+            isPhaseLoadBalanced: { type: boolean, nullable: true }
+
+    BapPtpMotorDieselResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapPtpMotorDieselPayload"
+        - type: object
+          properties:
+            id: { type: string }
+            subInspectionType: { type: string, example: "Motor Diesel" }
+            documentType: { type: string, example: "Berita Acara dan Pemeriksaan Pengujian" }
+            createdAt: { type: string, format: date-time }
+
+    BapPtpMotorDieselSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapPtpMotorDieselResponseData"
+              
+    GetAllBapPtpMotorDieselResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapPtpMotorDieselResponseData"
+
+    BapPtpMotorDieselPrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data untuk BAP berhasil disiapkan
+        data:
+          $ref: "#/components/schemas/BapPtpMotorDieselPayload"
 
