@@ -1,0 +1,280 @@
+{
+  "status": "success",
+  "message": "Semua BAP Instalasi Listrik berhasil didapatkan",
+  "data": {
+    "bap": [
+      {
+        "id": "MM0wUwmrvKAIsDAfTeAa",
+        "laporanId": "XlDegF3TNixq9G7Ntuzs",
+        "examinationType": "BERKALA",
+        "equipmentType": "GEDUNG KANTOR",
+        "inspectionDate": "22 Juli 2025",
+        "inspectionType": "Listrik",
+        "createdAt": "2025-07-26T13:47:43.777Z",
+        "extraId": 101,
+        "generalData": {
+          "companyName": "PT. INDO TEKNOLOGI NEW GACOR",
+          "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
+          "usageLocation": "Ruang Panel Utama, Lantai B1",
+          "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        },
+        "technicalData": {
+          "technicalDataPlnPower": "2000",
+          "technicalDataGeneratorPower": "1500",
+          "technicalDataLightingPower": "500",
+          "technicalDataPowerLoad": "1200",
+          "serialNumber": "GENSET-001-XYZ"
+        },
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      },
+      {
+        "id": "VrBE6alSkBs7EffOpkcw",
+        "laporanId": "7dP9UmoqzJyP4MBhiW4K",
+        "examinationType": "BERKALA",
+        "equipmentType": "GEDUNG KANTOR",
+        "inspectionDate": "22 Juli 2025",
+        "inspectionType": "Listrik",
+        "createdAt": "2025-07-26T13:44:50.813Z",
+        "extraId": 101,
+        "generalData": {
+          "companyName": "PT. INDO TEKNOLOGI NEW GACOR",
+          "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
+          "usageLocation": "Ruang Panel Utama, Lantai B1",
+          "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        },
+        "technicalData": {
+          "technicalDataPlnPower": "2000",
+          "technicalDataGeneratorPower": "1500",
+          "technicalDataLightingPower": "500",
+          "technicalDataPowerLoad": "1200",
+          "serialNumber": "GENSET-001-XYZ"
+        },
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      },
+      {
+        "id": "mhVPkXkAGqaPenYqPFOf",
+        "laporanId": "a84njeVs0Ki3Hd7Qi6ey",
+        "examinationType": "BERKALA",
+        "equipmentType": "GEDUNG KANTOR",
+        "inspectionDate": "22 Juli 2025",
+        "inspectionType": "Listrik",
+        "createdAt": "2025-07-22T14:17:56.053Z",
+        "extraId": 101,
+        "generalData": {
+          "companyName": "PT. INDO TEKNOLOGI",
+          "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
+          "usageLocation": "Ruang Panel Utama, Lantai B1",
+          "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        },
+        "technicalData": {
+          "technicalDataPlnPower": "2000",
+          "technicalDataGeneratorPower": "1500",
+          "technicalDataLightingPower": "500",
+          "technicalDataPowerLoad": "1200",
+          "serialNumber": "GENSET-001-XYZ"
+        },
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      },
+      {
+        "id": "QTtO75cdHJnJ4cN5pRfo",
+        "laporanId": "Yiqpt9GVNbjT3Q3Jv54W",
+        "examinationType": "BERKALA",
+        "equipmentType": "GEDUNG KANTOR",
+        "inspectionDate": "22 Juli 2025",
+        "inspectionType": "Listrik",
+        "createdAt": "2025-07-22T13:55:09.640Z",
+        "extraId": 101,
+        "generalData": {
+          "companyName": "PT. INDO TEKNOLOGI",
+          "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
+          "usageLocation": "Ruang Panel Utama, Lantai B1",
+          "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        },
+        "technicalData": {
+          "technicalDataPlnPower": "2000",
+          "technicalDataGeneratorPower": "1500",
+          "technicalDataLightingPower": "500",
+          "technicalDataPowerLoad": "1200",
+          "serialNumber": "GENSET-001-XYZ"
+        },
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      },
+      {
+        "id": "EeYShLkPkpNQHEHDTEGT",
+        "laporanId": "uTpgAvZnuIouWPhCfrtT",
+        "examinationType": "BERKALA",
+        "equipmentType": "GEDUNG KANTOR",
+        "inspectionDate": "22 Juli 2025",
+        "createdAt": "2025-07-22T13:54:15.162Z",
+        "extraId": 101,
+        "generalData": {
+          "companyName": "PT. INDO TEKNOLOGI",
+          "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
+          "usageLocation": "Ruang Panel Utama, Lantai B1",
+          "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        },
+        "technicalData": {
+          "technicalDataPlnPower": "2000",
+          "technicalDataGeneratorPower": "1500",
+          "technicalDataLightingPower": "500",
+          "technicalDataPowerLoad": "1200",
+          "serialNumber": "GENSET-001-XYZ"
+        },
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      },
+      {
+        "id": "mCWuXBIYEbUCLlMT5m0u",
+        "laporanId": "a84njeVs0Ki3Hd7Qi6ey",
+        "examinationType": "BERKALA",
+        "equipmentType": "GEDUNG KANTOR",
+        "inspectionDate": "22 Juli 2025",
+        "inspectionType": "Listrik",
+        "extraId": 101,
+        "generalData": {
+          "companyName": "PT. INDO TEKNOLOGI",
+          "companyLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat",
+          "usageLocation": "Ruang Panel Utama, Lantai B1",
+          "addressUsageLocation": "Jl. M.H. Thamrin No. 1, Jakarta Pusat"
+        },
+        "technicalData": {
+          "technicalDataPlnPower": "2000",
+          "technicalDataGeneratorPower": "1500",
+          "technicalDataLightingPower": "500",
+          "technicalDataPowerLoad": "1200",
+          "serialNumber": "GENSET-001-XYZ"
+        },
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": ""
+      },
+      {
+        "id": "8kE89H5bVsv8DOPXLIzs",
+        "laporanId": "XjlN5LKNftsHiIaRZNbh",
+        "examinationType": "BERKALA",
+        "inspectionType": "Listrik",
+        "extraId": 101,
+        "visualInspection": {
+          "isRoomClean": true,
+          "isRoomClearItems": true,
+          "hasSingleLineDiagram": true,
+          "hasProtectiveCover": true,
+          "isLabelingComplete": false,
+          "isFireExtinguisherAvailable": true
+        },
+        "testing": {
+          "isThermographTestOk": true,
+          "areSafetyDevicesFunctional": true,
+          "isVoltageBetweenPhasesNormal": true,
+          "isPhaseLoadBalanced": false
+        },
+        "subInspectionType": "Instalasi Listrik",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": "",
+        "technicalData": {
+          "serialNumber": "GENSET-001-XYZ",
+          "technicalDataPlnPower": "555",
+          "technicalDataGeneratorPower": "800",
+          "technicalDataLightingPower": "150000",
+          "technicalDataPowerLoad": "600000"
+        },
+        "generalData": {
+          "companyName": "PT. CONTOH KARYA INDONESIA NEW PART 3",
+          "usageLocation": "Area Pabrik",
+          "companyLocation": "Jl. Industri Utama Kav. 1, Jakarta",
+          "addressUsageLocation": "Jl. Industri Utama Kav. 1, Jakarta"
+        },
+        "inspectionDate": "19 Juni 2025",
+        "equipmentType": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "status": "success",
+  "message": "Semua BAP Instalasi Petir berhasil didapatkan",
+  "data": {
+    "bap": [
+      {
+        "id": "ynGCe9gJ9LSEJpP2xRy8",
+        "laporanId": "sIWshlYDZmbUmAHaR9W8",
+        "examinationType": "Berkala",
+        "inspectionDate": "Senin, 21 Juli 2025",
+        "equipmentType": "Instalasi Petir",
+        "generalData": {
+          "companyName": "PT. Gedung Tinggi Sejahtera part 1",
+          "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "usageLocation": "Gedung Kantor Pusat",
+          "addressUsageLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+        },
+        "technicalData": {
+          "conductorType": "Elektrostatis Kurn R-150",
+          "serialNumber": "SN-A45712",
+          "buildingHeight": 75,
+          "buildingArea": 2500,
+          "receiverHeight": 3,
+          "receiverCount": 2,
+          "groundElectrodeCount": 2,
+          "conductorDescription": "BC 70",
+          "installer": "2020",
+          "groundingResistance": 0.45
+        },
+        "testResults": {
+          "visualInspection": {
+            "isSystemOverallGood": true,
+            "isReceiverConditionGood": true,
+            "isReceiverPoleConditionGood": true,
+            "isConductorInsulated": true,
+            "isControlBoxAvailable": true,
+            "isControlBoxConditionGood": true
+          },
+          "measurement": {
+            "conductorContinuityResult": "Baik / Kontinu",
+            "measuredGroundingResistance": "0,30",
+            "measuredGroundingResistanceResult": true
+          }
+        },
+        "subInspectionType": "Instalasi Penyalur Petir",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": "2025-07-26T13:58:32.762Z"
+      },
+      {
+        "id": "CWb8Eb5c66l36HW0s8R5",
+        "laporanId": "IvgGv4hRKNIihzS5tHJj",
+        "examinationType": "Berkala",
+        "inspectionDate": "Senin, 21 Juli 2025",
+        "equipmentType": "Instalasi Petir",
+        "generalData": {
+          "companyName": "PT. Gedung Tinggi Sejahtera part 1",
+          "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "usageLocation": "Gedung Kantor Pusat",
+          "addressUsageLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+        },
+        "technicalData": {
+          "conductorType": "Elektrostatis Kurn R-150",
+          "serialNumber": "SN-A45712",
+          "buildingHeight": 75,
+          "buildingArea": 2500,
+          "receiverHeight": 3,
+          "receiverCount": 2,
+          "groundElectrodeCount": 2,
+          "conductorDescription": "BC 70",
+          "installer": "2020",
+          "groundingResistance": 0.45
+        },
+        "testResults": {
+          "visualInspection": {
+            "isSystemOverallGood": true,
+            "isReceiverConditionGood": true,
+            "isReceiverPoleConditionGood": true,
+            "isConductorInsulated": true,
+            "isControlBoxAvailable": true,
+            "isControlBoxConditionGood": true
+          },
+          "measurement": {
+            "conductorContinuityResult": "Baik / Kontinu",
+            "measuredGroundingResistance": "0,30",
+            "measuredGroundingResistanceResult": true
+          }
+        },
+        "subInspectionType": "Instalasi Penyalur Petir",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": "2025-07-26T13:56:53.060Z"
+      },
+      {
+        "id": "q3VCR9OMaJQUoiYqMVDx",
+        "laporanId": "IvgGv4hRKNIihzS5tHJj",
+        "examinationType": "Berkala",
+        "inspectionDate": "Senin, 21 Juli 2025",
+        "equipmentType": "Instalasi Petir",
+        "generalData": {
+          "companyName": "PT. Gedung Tinggi Sejahtera part 1",
+          "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "usageLocation": "Gedung Kantor Pusat",
+          "addressUsageLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+        },
+        "technicalData": {
+          "conductorType": "Elektrostatis Kurn R-150",
+          "serialNumber": "SN-A45712",
+          "buildingHeight": 75,
+          "buildingArea": 2500,
+          "receiverHeight": 3,
+          "receiverCount": 2,
+          "groundElectrodeCount": 2,
+          "conductorDescription": "BC 70",
+          "installer": "2020",
+          "groundingResistance": 0.45
+        },
+        "testResults": {
+          "visualInspection": {
+            "isSystemOverallGood": true,
+            "isReceiverConditionGood": true,
+            "isReceiverPoleConditionGood": true,
+            "isConductorInsulated": true,
+            "isControlBoxAvailable": true,
+            "isControlBoxConditionGood": true
+          },
+          "measurement": {
+            "conductorContinuityResult": "Baik / Kontinu",
+            "measuredGroundingResistance": "0,30",
+            "measuredGroundingResistanceResult": true
+          }
+        },
+        "subInspectionType": "Instalasi Penyalur Petir",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": "2025-07-26T13:53:17.011Z"
+      },
+      {
+        "id": "r6EN3vd3362W0Z6XrfFI",
+        "laporanId": "mHLrLFK1JykkHzjJKCjQ",
+        "examinationType": "Berkala",
+        "inspectionDate": "Senin, 21 Juli 2025",
+        "equipmentType": "Instalasi Petir",
+        "generalData": {
+          "companyName": "PT. Gedung Tinggi Sejahtera part 1",
+          "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "usageLocation": "Gedung Kantor Pusat",
+          "addressUsageLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+        },
+        "technicalData": {
+          "conductorType": "Elektrostatis Kurn R-150",
+          "serialNumber": "SN-A45712",
+          "buildingHeight": 75,
+          "buildingArea": 2500,
+          "receiverHeight": 3,
+          "receiverCount": 2,
+          "groundElectrodeCount": 2,
+          "conductorDescription": "BC 70",
+          "installer": "2020",
+          "groundingResistance": 0.45
+        },
+        "testResults": {
+          "visualInspection": {
+            "isSystemOverallGood": true,
+            "isReceiverConditionGood": true,
+            "isReceiverPoleConditionGood": true,
+            "isConductorInsulated": true,
+            "isControlBoxAvailable": true,
+            "isControlBoxConditionGood": true
+          },
+          "measurement": {
+            "conductorContinuityResult": "Baik / Kontinu",
+            "measuredGroundingResistance": "0,30",
+            "measuredGroundingResistanceResult": true
+          }
+        },
+        "subInspectionType": "Instalasi Penyalur Petir",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian",
+        "createdAt": "2025-07-26T13:23:57.589Z"
+      }
+    ]
+  }
+}

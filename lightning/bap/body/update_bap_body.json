@@ -1,0 +1,39 @@
+{
+  "laporanId": "sIWshlYDZmbUmAHaR9W8",
+  "examinationType": "Berkala",
+  "inspectionDate": "Senin, 21 Juli 2025",
+  "equipmentType": "Instalasi Petir",
+  "generalData": {
+    "companyName": "PT. Gedung Tinggi Sejahtera part 1",
+    "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+    "usageLocation": "Gedung Kantor Pusat",
+    "addressUsageLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+  },
+  "technicalData": {
+    "conductorType": "Elektrostatis Kurn R-150",
+    "serialNumber": "SN-A45712",
+    "buildingHeight": 75,
+    "buildingArea": 2500,
+    "receiverHeight": 3,
+    "receiverCount": 2,
+    "groundElectrodeCount": 2,
+    "conductorDescription": "BC 70",
+    "installer": "2020",
+    "groundingResistance": 0.45
+  },
+  "testResults": {
+    "visualInspection": {
+      "isSystemOverallGood": true,
+      "isReceiverConditionGood": true,
+      "isReceiverPoleConditionGood": true,
+      "isConductorInsulated": true,
+      "isControlBoxAvailable": true,
+      "isControlBoxConditionGood": true
+    },
+    "measurement": {
+      "conductorContinuityResult": "Baik / Kontinu",
+      "measuredGroundingResistance": "0,30",
+      "measuredGroundingResistanceResult": true
+    }
+  }
+}

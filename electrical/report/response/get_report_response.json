@@ -1,0 +1,214 @@
+{
+  "status": "success",
+  "message": "Laporan Instalasi Listrik berhasil dibuat",
+  "data": {
+    "laporan": {
+      "id": "XlDegF3TNixq9G7Ntuzs",
+      "examinationType": "BERKALA",
+      "inspectionType": "Instalasi listrik dan Petir",
+      "extraid": 12,
+      "createdaAt": "",
+      "equipmentType": "",
+      "generalData": {
+        "companyName": "PT. CONTOH KARYA INDONESIA",
+        "companyAddress": "Jl. Industri Utama Kav. 1, Jakarta",
+        "installationType": "Instalasi Listrik Gedung",
+        "businessField": "Manufaktur",
+        "safetyServiceProvider": "PT. Prima Kurnia Darma",
+        "ohsExpert": "REXY DARMAWAN",
+        "permitNumber": "SK.01/CONTOH/VI/2023",
+        "inspectionDate": "19 Juni 2025",
+        "inspectionLocation": "Area Pabrik"
+      },
+      "initialDocumentCheck": {
+        "sld": {
+          "isAvailable": true,
+          "result": "Sesuai"
+        },
+        "layout": {
+          "isAvailable": true,
+          "result": "Sesuai"
+        },
+        "permit": {
+          "isAvailable": true,
+          "result": "Memiliki Sertifikat Izin"
+        },
+        "technicianLicense": {
+          "isAvailable": false,
+          "result": "Tidak Tersertifikasi"
+        }
+      },
+      "technicalData": {
+        "plnPower": "555",
+        "generatorPower": "800",
+        "totalInstalledLoad": "750000",
+        "lightingPower": "150000",
+        "powerLoad": "600000"
+      },
+      "documentExamination1": {
+        "hasPlanningPermit": true,
+        "hasLocationMap": true,
+        "hasSld": true,
+        "hasLayout": true,
+        "hasWiringDiagram": true,
+        "hasAreaClassification": false,
+        "hasPanelComponentList": true,
+        "hasShortCircuitCalc": false,
+        "hasManualBook": true,
+        "hasMaintenanceBook": true,
+        "hasWarningSigns": true,
+        "hasManufacturerCert": true,
+        "hasTechSpec": true,
+        "hasTechSpecCert": true,
+        "hasPowerRecap": true,
+        "hasDailyRecord": true,
+        "hasPanelPointCount": true,
+        "isPanelCoverGood": true,
+        "hasOtherData": false
+      },
+      "documentExamination2": {
+        "isUnitConstructionGood": true,
+        "isPlacementGood": true,
+        "isNameplateVerified": true,
+        "isAreaClassificationOk": true,
+        "isProtectionGood": true,
+        "isRadiationShieldingGood": true,
+        "hasPanelDoorHolder": true,
+        "areBoltsAndScrewsSecure": true,
+        "isBusbarIsolated": true,
+        "isBusbarClearanceGood": true,
+        "isCableInstallationOk": true,
+        "isDoorCableProtected": true,
+        "isFuseChangeSafe": true,
+        "hasCableTerminalProtection": true,
+        "areInstrumentsMarked": true,
+        "areEquipmentsCoded": true,
+        "isCableInOutGood": true,
+        "isBusbarSizeGood": true,
+        "isBusbarClean": true,
+        "isBusbarMarkingOk": true,
+        "isGroundingCableGood": true,
+        "isPanelDoorGood": true,
+        "areSparepartsOk": true,
+        "areSafetyFacilitiesGood": true,
+        "breakerData": {
+          "isCurrentRatingOk": true,
+          "isVoltageRatingOk": true,
+          "isBreakingCurrentOk": true,
+          "isControlVoltageOk": true,
+          "isManufacturerOk": true,
+          "isTypeOk": true,
+          "isSerialOk": true
+        }
+      },
+      "testing": {
+        "isInsulationOk": true,
+        "isGroundingOk": true,
+        "isOverloadTripOk": true,
+        "isReversePowerRelayOk": false,
+        "isReverseCurrentRelayOk": false,
+        "isBreakerTripOk": true,
+        "isTemperatureOk": true,
+        "isIndicatorLampOk": true,
+        "isMeterDeviationOk": true,
+        "isSynchronizationOk": false,
+        "isConductorAmpacityOk": true,
+        "isProtectionRatingOk": true,
+        "isVoltageDropOk": true,
+        "hasLossConnection": false,
+        "breakerEquipment": {
+          "isCtOk": true,
+          "isPtOk": true,
+          "isInstrumentsOk": true,
+          "isFuseRatingOk": true,
+          "isMechanicalOk": true,
+          "isTerminalOk": true,
+          "isTerminalMarkingOk": true,
+          "isInterlockSystemOk": true,
+          "isAuxSwitchOk": true,
+          "isMechanicalTripOk": true
+        }
+      },
+      "visualInspection": {
+        "sdpFront": {
+          "areIndicatorLampsGood": true,
+          "isDoorClearanceGood": true,
+          "isLightingGood": true,
+          "isProductionLightingGood": true,
+          "isOfficeLightingGood": true,
+          "isMainPanelLightingGood": true,
+          "isWarehouseLightingGood": true,
+          "isAreaClearOfUnusedItems": true,
+          "hasVentilationAndSigns": true
+        },
+        "sdpFloors": [
+          {
+            "floorNumber": 1,
+            "hasCover": true,
+            "hasSld": true,
+            "hasBonding": true,
+            "hasLabeling": true,
+            "isColorCodeOk": true,
+            "isClean": true,
+            "isNeat": true
+          },
+          {
+            "floorNumber": 2,
+            "hasCover": true,
+            "hasSld": true,
+            "hasBonding": true,
+            "hasLabeling": true,
+            "isColorCodeOk": true,
+            "isClean": true,
+            "isNeat": true
+          },
+          {
+            "floorNumber": 3,
+            "hasCover": true,
+            "hasSld": true,
+            "hasBonding": true,
+            "hasLabeling": true,
+            "isColorCodeOk": true,
+            "isClean": true,
+            "isNeat": true
+          },
+          {
+            "floorNumber": 4,
+            "hasCover": false,
+            "hasSld": false,
+            "hasBonding": true,
+            "hasLabeling": false,
+            "isColorCodeOk": true,
+            "isClean": false,
+            "isNeat": false
+          }
+        ],
+        "sdpTerminal": {
+          "isBusbarOk": true,
+          "isBreakerOk": true,
+          "areCableLugsOk": true,
+          "isGroundingSystemOk": true,
+          "isBusbarDistanceOk": true
+        },
+        "sdpTesting": {
+          "isVoltageOk": true,
+          "isCurrentOk": true,
+          "isMeteringOk": true,
+          "hasPanelLabel": true,
+          "hasWarningSign": true,
+          "hasSwitchAndLock": true,
+          "isTerminalHeatTested": true,
+          "isGroundingTested": true,
+          "isConductorAmpacityOk": true,
+          "isProtectionRatingOk": true
+        }
+      },
+      "found": "SLD dan Layout tidak dipasang pada Panel Listrik.\nMika pelindung tidak dipasang pada Panel Listrik.\nTerdapat Panel Listrik yang belum dipasang label.",
+      "conclusion": "Single line diagram dan wiring diagram instalasi tidak tersedia di Panel Listrik.\nTerdapat PHB belum memiliki mika pelindung tegangan kejut didalamnya.\nMCCB belum diberi label dan penamaan sesuai fungsinya.\nSecara keseluruhan instalasi listrik dalam keadaan baik dan dapat beroperasi dengan aman.",
+      "recommendations": "Melengkapi SLD dan Layout pada panel listrik.\nMemperhatikan pengkodean warna kabel, kebersihan, dan kerapian panel listrik.\nSelalu merawat baik pemakaian dan memperhatikan pemakaian listrik secara benar.\nPemasangan dan pemeliharaan terhadap instalasi listrik agar memperhatikan ketentuan dalam Peraturan Umum Instalasi Listrik (PUIL) 2011.",
+      "subInspectionType": "Instalasi Listrik",
+      "documentType": "Laporan",
+      "createdAt": "2025-07-26T13:41:17.680Z"
+    }
+  }
+}

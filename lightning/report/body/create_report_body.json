@@ -1,0 +1,123 @@
+{
+  "examinationType": "Pemeriksaan dan Pengujian Berkala",
+  "equipmentType": "",
+  "inspectionType": "",
+  "createdAt": "",
+  "extraId": "",
+  "pjk3Data": {
+    "companyNameandaddres": "PT. Aman Sentosa K3 - Jl. Keselamatan No. 1, Jakarta",
+    "companyPermitNo": "SKP-PJK3/001/2024",
+    "expertPermitNo": "SKP-AHLI/007/2023",
+    "expertName": "REXY DARMAWAN",
+    "riksaujiTools": "Earth Ground Tester, Meteran, Kamera"
+  },
+  "ownerData": {
+    "companyName": "PT. Gedung Tinggi Sejahtera",
+    "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+    "usageLocation": "Gedung Kantor Pusat",
+    "objectType": "Instalasi Penyalur Petir",
+    "typeInspection": "Berkala",
+    "certificateNo": "SK-001/2020",
+    "inspectionDate": "2025-07-21"
+  },
+  "technicalData": {
+    "conductorType": "Konvensional / Kurn",
+    "buildingHeight": "75 Meter",
+    "buildingArea": "2500 m²",
+    "receiverHeight": "3 Meter",
+    "receiverCount": 2,
+    "testJointCount": 2,
+    "conductorDescription": "2 Jalur",
+    "groundingResistance": "Kabel BC 70 mm²",
+    "spreadingResistance": "bla bla",
+    "installer": "2020 / PT. Listrik Aman"
+  },
+  "physicalInspection": {
+    "installationSystem": { "good": true, "fair": false, "poor": false },
+    "receiverHead": { "good": true, "fair": false, "poor": false },
+    "receiverPole": { "good": true, "fair": false, "poor": false },
+    "poleReinforcement": { "good": true, "fair": false, "poor": false },
+    "downConductor": { "good": true, "fair": false, "poor": false },
+    "conductorClamps": { "good": false, "fair": true, "poor": false },
+    "jointConnections": { "good": true, "fair": false, "poor": false },
+    "groundingTerminalBox": { "good": true, "fair": false, "poor": false },
+    "controlBox": { "good": true, "fair": false, "poor": false },
+    "groundingSystem": { "good": true, "fair": false, "poor": false },
+    "conductorToGroundConnection": {
+      "good": true,
+      "fair": false,
+      "poor": false
+    },
+    "notes": "Secara keseluruhan kondisi fisik komponen baik. Perlu pengencangan pada klem kabel penghantar."
+  },
+  "visualInspection": {
+    "airTerminal": "Terpasang kokoh, tidak ada korosi.",
+    "downConductorCheck": "Terpasang rapi pada dinding, klem perlu dikencangkan di beberapa titik.",
+    "groundingAndTestJoint": "Box kontrol bersih, sambungan baik, mudah diakses."
+  },
+  "standardCompliance": {
+    "asBuiltDrawing": { "good": true, "poor": false, "notes": "Sesuai" },
+    "terminalToConductorConnection": {
+      "good": true,
+      "poor": false,
+      "notes": "Terhubung dengan baik"
+    },
+    "downConductorJoints": {
+      "good": true,
+      "poor": false,
+      "notes": "Tidak ada sambungan"
+    },
+    "testJointBoxInstallation": {
+      "good": true,
+      "poor": false,
+      "notes": "Terpasang"
+    },
+    "conductorMaterialStandard": {
+      "good": true,
+      "poor": false,
+      "notes": "Sesuai standar"
+    },
+    "lightningCounter": {
+      "good": false,
+      "poor": true,
+      "notes": "Tidak terpasang"
+    },
+    "radioactiveTerminal": {
+      "good": true,
+      "poor": false,
+      "notes": "Tidak menggunakan bahan radioaktif"
+    },
+    "groundingRodMaterial": {
+      "good": true,
+      "poor": false,
+      "notes": "Bahan non-korosif"
+    },
+    "arresterInstallation": {
+      "good": true,
+      "poor": false,
+      "notes": "Sudah dilengkapi arrester"
+    }
+  },
+  "dynamicTestItems": [
+    { "ecResult": "10m", "epResult": "20m", "rValue": 0.45, "result": "Baik" },
+    { "ecResult": "10m", "epResult": "20m", "rValue": 0.48, "result": "Baik" }
+  ],
+  "dynamicItems": [
+    {
+      "materialConditionsItems": "Pentanahan Head Terminal 1",
+      "outcomeBaik": true,
+      "outcomeBuruk": false,
+      "rGradeItems": "0.45",
+      "result": "LAYAK"
+    },
+    {
+      "materialConditionsItems": "Pentanahan Head Terminal 2",
+      "outcomeBaik": true,
+      "outcomeBuruk": false,
+      "rGradeItems": "0.48",
+      "result": "LAYAK"
+    }
+  ],
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, Instalasi Penyalur Petir di PT. Gedung Tinggi Sejahtera secara umum dalam kondisi baik dan berfungsi sebagaimana mestinya. Nilai tahanan pembumian berada di bawah ambang batas yang dipersyaratkan (< 5 Ohm).",
+  "recomendations": "Disarankan untuk melakukan pengencangan pada klem kabel penghantar penurunan yang sedikit kendur untuk memastikan kekuatan mekanis dalam jangka panjang. Pemeriksaan rutin tahunan tetap harus dilakukan."
+}
