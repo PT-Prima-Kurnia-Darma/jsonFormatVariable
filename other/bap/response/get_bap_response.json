@@ -1,0 +1,61 @@
+{
+  "status": "success",
+  "message": "BAP Motor Diesel berhasil dibuat",
+  "data": {
+    "bap": {
+      "id": "80XBFOKtS9uA9YIP3rLk",
+      "laporanId": "ZSf6loUa6o5WnwnNRikh",
+      "examinationType": "BERKALA",
+      "inspectionDate": "Jumat, 25 Juli 2025",
+      "createdAt": "2025-07-26T14:44:32.111Z",
+      "extraId": 123,
+      "generalData": {
+        "companyName": "PT. Klien Sejahtera part 2",
+        "companyLocation": "Jl. Gatot Subroto Kav. 5, Jakarta Selatan part 2",
+        "unitLocation": "Area Genset, Gedung Utama part 2",
+        "userAddressInCharge": "Jl. Gatot Subroto Kav. 5, Jakarta Selatan part 2"
+      },
+      "technicalData": {
+        "brandType": "Caterpillar / 3406C part 2",
+        "manufacturer": "Caterpillar Inc. part 2",
+        "locationAndYearOfManufacture": "USA / 2020",
+        "serialNumberUnitNumber": "CAT123XYZ",
+        "capacityWorkingLoad": "500 KVA",
+        "technicalDataDieselMotorPowerRpm": "450",
+        "specialSpecification": "Silent Type",
+        "dimensionsDescription": "4m x 1.5m x 2m",
+        "rotationRpm": "1500",
+        "technicalDataGeneratorFrequency": "50",
+        "technicalDataGeneratorCurrent": "760",
+        "machineWeightKg": "4500",
+        "areSafetyFeaturesInstalled": false
+      },
+      "visualChecks": {
+        "isMachineGoodCondition": true,
+        "areElectricalIndicatorsGood": true,
+        "isAparAvailable": true,
+        "isPpeAvailable": true,
+        "isGroundingInstalled": true,
+        "isBatteryGoodCondition": true,
+        "hasLubricationLeak": false,
+        "isFoundationGoodCondition": true,
+        "hasHydraulicLeak": false
+      },
+      "functionalTests": {
+        "isLightingCompliant": true,
+        "isNoiseLevelCompliant": true,
+        "isEmergencyStopFunctional": true,
+        "isMachineFunctional": true,
+        "isVibrationLevelCompliant": true,
+        "isInsulationResistanceOk": true,
+        "isShaftRotationCompliant": true,
+        "isGroundingResistanceCompliant": true,
+        "isNdtWeldTestOk": true,
+        "isVoltageBetweenPhasesNormal": true,
+        "isPhaseLoadBalanced": true
+      },
+      "subInspectionType": "Motor Diesel",
+      "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+    }
+  }
+}
