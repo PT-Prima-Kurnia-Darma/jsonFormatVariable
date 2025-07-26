@@ -23,7 +23,7 @@
     "technicalDataGeneratorFrequency": "50",
     "technicalDataGeneratorCurrent": "760",
     "machineWeightKg": "4500",
-    "areSafetyFeaturesInstalled": "Emergency Stop, Circuit Breaker, APAR"
+    "areSafetyFeaturesInstalled": true
   },
   "visualChecks": {
       "isMachineGoodCondition": true,
