@@ -1,0 +1,301 @@
+{
+  "status": "success",
+  "message": "Laporan PTP Mesin berhasil didapatkan",
+  "data": {
+    "laporan": [
+      {
+        "id": "q6tKsOm3BCS2VXydWtpM",
+        "examinationType": "Pemeriksaan dan Pengujian Pertama",
+        "extraId": 123,
+        "inspectionType": "Pesawat Tenaga dan Produksi",
+        "createdAt": "2025-07-26T14:48:54.180Z",
+        "generalData": {
+          "companyName": "PT. Gedung Perkantoran Sentosa",
+          "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "userInCharge": "PT. Gedung Perkantoran Sentosa",
+          "userAddressInCharge": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "subcontractorPersonInCharge": "Bapak Suryo Pranoto (Chief Engineer)",
+          "unitLocation": "Ruang Genset, Basement 2",
+          "equipmentType": "Diesel Generator Set",
+          "brandType": "Perkins / 4008-30TAG3",
+          "serialNumberUnitNumber": "DGB-01-2022-7891",
+          "manufacturer": "Perkins Engines Company Ltd.",
+          "locationAndYearOfManufacture": "United Kingdom / 2022",
+          "technicalDataDieselMotorPowerRpm": "750 kVA / 1500 RPM",
+          "intendedUse": "Sumber tenaga listrik cadangan (standby power)",
+          "pjk3SkpNo": "KEP.123/BINWASK3-PNK3/PJK3/XI/2023",
+          "ak3SkpNo": "KEP.456/BINWASK3/AK3-PTP/XI/2023",
+          "usagePermitNumber": "Baru",
+          "operatorName": "Tim Engineering Gedung",
+          "equipmentHistory": "Instalasi baru, belum pernah beroperasi kecuali untuk testing."
+        },
+        "technicalData": {
+          "machineSpecification": {
+            "brandType": "Perkins / 4008-30TAG3",
+            "technicalDataMaxFeederSpeed": null,
+            "technicalDataMaxPlateWidth": null,
+            "technicalDataPlateThickness": null,
+            "technicalDataMaxPlateWeight": null,
+            "technicalDataMaxInnerCoilDiameter": null,
+            "technicalDataMaxOuterCoilDiameter": null,
+            "technicalDataDriveMotor": "Mesin Diesel 8 Silinder",
+            "technicalDataDieselMotorPowerRpm": 677,
+            "serialNumberUnitNumber": "DGB-01-2022-7891",
+            "locationAndYearOfManufacture": "United Kingdom / 2022",
+            "technicalDataMachineWeight": 5500,
+            "technicalDataOverallDimension": "4000 x 1800 x 2200"
+          },
+          "foundationDimension": {
+            "technicalDataFoundationDim": "4000 x 1800 x 800",
+            "technicalDataFoundationDistance": "Terpasang pada skid base",
+            "technicalDataVibrationDamperType": "Spring Mounting",
+            "technicalDataFoundationWeight1": 13824,
+            "technicalDataFoundationWeight2": 13824
+          }
+        },
+        "visualInspection": {
+          "foundation": {
+            "status": true,
+            "result": "Kokoh, tidak ada keretakan"
+          },
+          "foundationBearing": {
+            "status": true,
+            "result": "Spring mounting terpasang baik"
+          },
+          "machineFrame": {
+            "mainFrame": {
+              "status": true,
+              "result": "Skid base kokoh, tidak ada korosi"
+            },
+            "braceFrame": {
+              "status": true,
+              "result": "Terpasang dengan baik"
+            }
+          },
+          "roller": {
+            "status": null,
+            "result": "Tidak Berlaku"
+          },
+          "controlPanel": {
+            "status": true,
+            "result": "Panel Deep Sea, bersih dan terawat"
+          },
+          "display": {
+            "status": true,
+            "result": "Layar LCD berfungsi, pembacaan jelas"
+          },
+          "operationButtons": {
+            "status": true,
+            "result": "Tombol Start/Stop/Auto berfungsi"
+          },
+          "electricalComponents": {
+            "measurements": {
+              "electricVoltage": 400,
+              "electricPhase": 3,
+              "electricFrequency": 50,
+              "electricAmper": 1082
+            },
+            "voltage": {
+              "status": true,
+              "result": "Sesuai standar"
+            },
+            "power": {
+              "status": true,
+              "result": "Sesuai spesifikasi"
+            },
+            "phase": {
+              "status": true,
+              "result": "Lengkap"
+            },
+            "frequency": {
+              "status": true,
+              "result": "Sesuai standar"
+            },
+            "current": {
+              "status": true,
+              "result": "Sesuai kapasitas"
+            },
+            "electricalPanel": {
+              "status": true,
+              "result": "Terminal bersih, pengkabelan rapi"
+            },
+            "conductor": {
+              "status": true,
+              "result": "Isolasi kabel utuh, ukuran sesuai"
+            },
+            "insulation": {
+              "status": true,
+              "result": "Tahanan isolasi baik"
+            }
+          },
+          "safetyDevices": {
+            "limitSwitchUp": {
+              "status": null,
+              "result": "Tidak Berlaku"
+            },
+            "limitSwitchDown": {
+              "status": null,
+              "result": "Tidak Berlaku"
+            },
+            "grounding": {
+              "status": true,
+              "result": "Terpasang pada body dan panel"
+            },
+            "safetyGuard": {
+              "status": true,
+              "result": "Belt guard & radiator guard terpasang"
+            },
+            "stampLock": {
+              "status": null,
+              "result": "Tidak Berlaku"
+            },
+            "pressureIndicator": {
+              "status": true,
+              "result": "Indikator tekanan oli berfungsi"
+            },
+            "emergencyStop": {
+              "status": true,
+              "result": "Tombol jamur terpasang dan mudah dijangkau"
+            },
+            "handSensor": {
+              "status": null,
+              "result": "Tidak Berlaku"
+            }
+          },
+          "hydraulic": {
+            "pump": {
+              "status": null,
+              "result": "Tidak Berlaku"
+            },
+            "hose": {
+              "status": true,
+              "result": "Selang bahan bakar kondisi baik, tidak getas"
+            }
+          }
+        },
+        "testingAndMeasurement": {
+          "safetyDeviceTest": {
+            "grounding": {
+              "status": true,
+              "result": "Hasil ukur 0.3 Ohm"
+            },
+            "safetyGuard": {
+              "status": true,
+              "result": "Terpasang kuat"
+            },
+            "roller": {
+              "status": null,
+              "result": "Tidak Berlaku"
+            },
+            "emergencyStop": {
+              "status": true,
+              "result": "Mesin langsung mati saat ditekan"
+            }
+          },
+          "speedTest": {
+            "status": true,
+            "result": "Stabil di 1500 RPM"
+          },
+          "functionTest": {
+            "status": true,
+            "result": "Berfungsi normal saat uji beban (load test)"
+          },
+          "weldJointTest": {
+            "status": true,
+            "result": "Tidak ditemukan cacat pada las skid base"
+          },
+          "vibrationTest": {
+            "status": true,
+            "result": "Getaran dalam batas toleransi"
+          },
+          "lightingTest": {
+            "status": true,
+            "result": "300 Lux di sekitar unit"
+          },
+          "noiseTest": {
+            "status": false,
+            "result": "98 dB (di dalam ruang genset)"
+          }
+        },
+        "electricalPanelComponents": {
+          "ka": "N/A",
+          "voltage": {
+            "rs": 401,
+            "rt": 400,
+            "st": 402,
+            "rn": 231,
+            "rg": 0.5,
+            "ng": 0.5
+          },
+          "powerInfo": {
+            "frequency": 50,
+            "cosQ": 0.8,
+            "ampere": {
+              "r": 0,
+              "s": 0,
+              "t": 0
+            },
+            "result": "Pengukuran tanpa beban (no load)"
+          }
+        },
+        "conclusionAndRecommendation": {
+          "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, Diesel Generator Set merk Perkins / 4008-30TAG3 dengan No. Seri DGB-01-2022-7891 dinyatakan LAIK dan aman untuk dioperasikan dengan catatan.",
+          "recommendations": "1. Operator wajib menggunakan APD (earmuff/earplug) saat berada di ruang genset yang sedang beroperasi karena tingkat kebisingan melebihi NAB.\n2. Lakukan pemanasan mesin secara rutin seminggu sekali."
+        },
+        "administration": {
+          "inspectionDate": "26 Juli 2024"
+        },
+        "foundationAnalysis": {
+          "actualWeight": 5.5,
+          "additionalMeterials": 0,
+          "totalWeight": 5.5,
+          "minimumFoundationWeight": 5.5,
+          "totalMinimumFoundationWeight": 8.25,
+          "foundationWeight": 13.82,
+          "heightFoundation": 0.8,
+          "foundationAnalysisResult": "Memenuhi"
+        },
+        "environmentalMeasurement": {
+          "noise": {
+            "pointA": {
+              "result": 98,
+              "status": "Tidak Memenuhi"
+            },
+            "pointB": {
+              "result": 97,
+              "status": "Tidak Memenuhi"
+            },
+            "pointC": {
+              "result": 98,
+              "status": "Tidak Memenuhi"
+            },
+            "pointD": {
+              "result": 96,
+              "status": "Tidak Memenuhi"
+            }
+          },
+          "lighting": {
+            "pointA": {
+              "result": 310,
+              "status": "Memenuhi"
+            },
+            "pointB": {
+              "result": 300,
+              "status": "Memenuhi"
+            },
+            "pointC": {
+              "result": 290,
+              "status": "Memenuhi"
+            },
+            "pointD": {
+              "result": 305,
+              "status": "Memenuhi"
+            }
+          }
+        },
+        "subInspectionType": "Mesin",
+        "documentType": "Laporan"
+      }
+    ]
+  }
+}
