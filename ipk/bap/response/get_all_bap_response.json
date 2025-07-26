@@ -1,0 +1,66 @@
+{
+  "status": "success",
+  "message": "Semua BAP Proteksi Kebakaran berhasil didapatkan",
+  "data": {
+    "bap": [
+      {
+        "id": "6JqQFZWpMtgd2vgf9iir",
+        "laporanId": "cmep4TFw1MDRSPF3VU6v",
+        "examinationType": "Pemeriksaan dan Pengujian",
+        "inspectionDate": "2024-07-22",
+        "extraid": 101,
+        "createdAt": "2025-07-26T14:13:42.556Z",
+        "inspectionType": "Riksa Uji",
+        "equipmentType": "Instalasi Proteksi Kebakaran",
+        "generalData": {
+          "companyName": "PT Gedung Jaya Megah PART 2",
+          "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
+          "usageLocation": "Gedung Perkantoran A",
+          "addressUsageLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan"
+        },
+        "technicalData": {
+          "landArea": "5000 m²",
+          "buildingArea": "20000 m²",
+          "buildingHeight": "75 m",
+          "floorCount": "20 Lantai",
+          "pillarAndOutdoorHydrant": "Ada, 4 Titik",
+          "totalHydrantBuilding": "40 Titik",
+          "totalHoseRell": "40 Unit",
+          "totalSpinkler": "1200 Titik",
+          "totalHeatDetector": "350 Titik",
+          "totalSmokeDetector": "400 Titik",
+          "totalFlameDetector": "0",
+          "totalGasDetector": "0",
+          "manualButton": "20 Titik",
+          "alarmBell": "20 Unit",
+          "signalAlarmLamp": "20 Unit",
+          "emergencyExit": "8 Pintu",
+          "apar": "60 Tabung",
+          "certificateNumber": "123/SK/IPK/2022"
+        },
+        "testResults": {
+          "visualInspection": {
+            "isAparAvailable": true,
+            "isAparInGoodCondition": true,
+            "isHydrantPanelInGoodCondition": true,
+            "isPumpsAvailable": true,
+            "isPumpsInGoodCondition": true,
+            "isSprinklerSystemAvailable": true,
+            "isSprinklerSystemInGoodCondition": true,
+            "isDetectorSystemAvailable": true,
+            "isDetectorSystemInGoodCondition": false
+          },
+          "functionalTests": {
+            "isAparFunctional": true,
+            "arePumpsFunctional": true,
+            "isSprinklerFunctional": true,
+            "isDetectorFunctional": true,
+            "isDetectorConnectedToMcfa": true
+          }
+        },
+        "subInspectionType": "Instalasi Proteksi Kebakaran",
+        "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+      }
+    ]
+  }
+}
