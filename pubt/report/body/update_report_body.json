@@ -1,0 +1,363 @@
+{
+  "examinationType": "PERTAMA",
+  "inspectionType": "Pesawat Uap dan Bejana Tekan",
+  "createdAt": "2025-07-24T04:14:00.000Z",
+  "extraId": "doc-pubt-001",
+  "generalData": {
+    "companyName": "PT. Sentosa Abadi Jaya",
+    "companyLocation": "Kawasan Industri Modern Cikande, Jl. Raya Jakarta-Serang KM. 68, Serang, Banten 42186",
+    "userUsage": "PT. Sentosa Abadi Jaya",
+    "userAddress": "Kawasan Industri Modern Cikande, Jl. Raya Jakarta-Serang KM. 68, Serang, Banten 42186",
+    "operatorName": "Budi Santoso",
+    "equipmentType": "Steam Boiler (Fire Tube)",
+    "manufacturer": "PT. Mitra Boiler Indonesia",
+    "brandType": "MBI-FT-2000",
+    "countryAndYearOfManufacture": "Indonesia / 2024",
+    "serialNumberUnitNumber": "MBI/FT/24/0123",
+    "designPressure": 18,
+    "maxAllowableWorkingPressure": 12,
+    "capacityWorkingLoad": 2000,
+    "steamTemperature": "185°C",
+    "operatingPressure": 10,
+    "fuelType": "Gas Alam",
+    "intendedUse": "Pemanas Untuk Proses Produksi Tekstil",
+    "permitNumber": "SKP-011/PUBT/2024",
+    "operatorCertificate": "Sertifikat SIO Kelas 1",
+    "equipmentHistory": "Pemasangan baru pada tahun 2024",
+    "inspectionDate": "2025-07-20"
+  },
+  "technicalData": {
+    "shell": {
+      "numberOfRounds": 3,
+      "connectionMethod": "Seamless",
+      "material": "SA-285 GR C",
+      "pipeDiameter": 1500,
+      "thickness": 18,
+      "bodyLength": 4500,
+      "heads": {
+        "top": {
+          "diameter": 1500,
+          "thickness": 20
+        },
+        "rear": {
+          "diameter": 1500,
+          "thickness": 20
+        }
+      },
+      "tubePlate": {
+        "front": {
+          "dim1": "1500 mm",
+          "dim2": "22 mm"
+        },
+        "rear": {
+          "dim1": "1500 mm",
+          "dim2": "22 mm"
+        }
+      }
+    },
+    "furnace": {
+      "type": "Corrugated",
+      "material": "SA-516 GR 70",
+      "outerDiameter": 900,
+      "innerDiameter": 880,
+      "thickness": 10
+    },
+    "waterTubes": {
+      "firstPass": {
+        "diameter": 63.5,
+        "thickness": 3.2,
+        "length": 4500,
+        "quantity": 80
+      },
+      "secondPass": {
+        "diameter": 63.5,
+        "thickness": 3.2,
+        "length": 4500,
+        "quantity": 70
+      },
+      "stayTube": {
+        "diameter": 12,
+        "thickness": 12,
+        "length": 12,
+        "quantity": 12
+      },
+      "material": {
+        "diameter": 12,
+        "thickness": 12,
+        "length": 12,
+        "quantity": 12
+      }
+    },
+    "tubePlateSplicing": "Expanded and Welded"
+  },
+  "inspectionAndMeasurement": {
+    "visualChecks": {
+      "steamEquipment": {
+        "shellDrum": { "status": true, "result": "Baik, tidak ada korosi" },
+        "bouileur": { "status": false, "result": "Tidak terpasang" },
+        "furnace": { "status": true, "result": "Baik, tidak ada deformasi" },
+        "fireChamber": {
+          "status": false,
+          "result": "Terlihat jelaga berlebih"
+        },
+        "refractory": { "status": true, "result": "Baik, tidak ada keretakan" },
+        "combustionChamber": { "status": false, "result": "Perlu dibersihkan" },
+        "fireTubes": {
+          "status": true,
+          "result": "Baik, tidak ada penyumbatan"
+        },
+        "superHeater": { "status": false, "result": "Tidak terpasang" },
+        "reheater": { "status": true, "result": "Tidak terpasang" },
+        "economizer": {
+          "status": false,
+          "result": "Ditemukan sedikit kebocoran air"
+        }
+      },
+      "boilerDetails": {
+        "grate": { "status": true, "result": "Tidak ada (Gas)" },
+        "burner": { "status": false, "result": "Api terlihat tidak stabil" },
+        "fdf": { "status": true, "result": "Berfungsi dengan baik" },
+        "idf": {
+          "status": false,
+          "result": "Suara berisik, perlu pengecekan bearing"
+        },
+        "airHeater": { "status": true, "result": "Tidak terpasang" },
+        "airDuct": { "status": false, "result": "Sedikit kotor" },
+        "gasDuct": { "status": true, "result": "Baik" },
+        "ashCatcher": { "status": false, "result": "Tidak ada (Gas)" },
+        "chimney": { "status": true, "result": "Baik, tidak ada karat" },
+        "stairs": {
+          "status": false,
+          "result": "Handrail goyang, perlu dikencangkan"
+        },
+        "insulation": { "status": true, "result": "Terpasang dengan baik" }
+      },
+      "safetyDevices": {
+        "safetyValveRing": { "status": false, "result": "Segel rusak" },
+        "safetyValvePipe": { "status": true, "result": "Baik" },
+        "safetyValveExhaust": {
+          "status": false,
+          "result": "Arah pembuangan tidak aman"
+        },
+        "pressureGaugeMark": {
+          "status": true,
+          "result": "Terpasang dan jelas"
+        },
+        "pressureGaugeSiphon": { "status": false, "result": "Tidak terpasang" },
+        "pressureGaugeCock": { "status": true, "result": "Berfungsi baik" },
+        "gaugeGlassTryCocks": { "status": false, "result": "Satu macet" },
+        "gaugeGlassBlowdown": { "status": true, "result": "Berfungsi baik" },
+        "waterLevelLowestMark": {
+          "status": false,
+          "result": "Low level alarm tidak berbunyi"
+        },
+        "waterLevelPosition": { "status": true, "result": "Posisi sesuai" },
+        "feedwaterPump": {
+          "status": false,
+          "result": "Pompa cadangan tidak otomatis menyala"
+        },
+        "feedwaterCapacity": { "status": true, "result": "Kapasitas sesuai" },
+        "feedwaterMotor": { "status": false, "result": "Getaran berlebih" },
+        "feedwaterCheckValve": { "status": true, "result": "Berfungsi baik" },
+        "controlBlacksFluit": { "status": false, "result": "Berfungsi baik" },
+        "controlFusiblePlug": { "status": true, "result": "Terpasang" },
+        "controlWaterLevel": { "status": false, "result": "Respon lambat" },
+        "controlSteamPressure": { "status": true, "result": "Berfungsi baik" },
+        "blowdownDesc": { "status": false, "result": "Valve sedikit bocor" },
+        "blowdownMaterial": { "status": true, "result": "Sesuai standar" },
+        "manholeManhole": { "status": false, "result": "Gasket perlu diganti" },
+        "manholeInspectionHole": { "status": true, "result": "Baik" },
+        "idMarkNameplate": { "status": false, "result": "Sulit terbaca" },
+        "idMarkDataMatch": {
+          "status": true,
+          "result": "Sesuai dengan dokumen"
+        },
+        "idMarkForm9Stamp": { "status": false, "result": "Belum ada" }
+      }
+    },
+    "materialThickness": {
+      "bodyShell": {
+        "thickness": "18 mm",
+        "diameter": "1500 mm",
+        "thicknessResult": "OK",
+        "diameterResult": "OK"
+      },
+      "vaporReceiverHeader": {
+        "thickness": "12",
+        "diameter": "12",
+        "length": "12",
+        "thicknessResult": "Ok",
+        "diameterResult": "Ok",
+        "lengthResult": "Ok"
+      },
+      "fireHallFurnance1": {
+        "thickness": "10 mm",
+        "diameter": "900 mm",
+        "length": "4500 mm",
+        "thicknessResult": "OK",
+        "diameterResult": "OK",
+        "lengthResult": "OK"
+      },
+      "fireHallFurnance2": {
+        "thickness": "12",
+        "diameter": "12",
+        "length": "12",
+        "thicknessResult": "Ok",
+        "diameterResult": "Ok",
+        "lengthResult": "Ok"
+      }
+    },
+    "thicknessMeasurementSetup": {
+      "owner": "PT. Prima Kurnia Darma",
+      "inspectionDate": "2025-07-20",
+      "project": "Pemeriksaan Berkala",
+      "objectType": "Pesawat Uap",
+      "workOrderNo": "WO-2025/07/125",
+      "equipmentUsed": "Ultrasonic Thickness Gauge",
+      "methodUsed": "Spot Check",
+      "probeType": "5 MHz Dual Element",
+      "materialType": "Carbon Steel",
+      "probeStyle": "Standard",
+      "operatingTemp": "Ambient",
+      "surfaceCondition": "Coated",
+      "weldingProcess": "SMAW",
+      "laminatingCheck": "OK",
+      "couplantUsed": "Glycerin"
+    },
+    "measurementResults": {
+      "topHead": {
+        "nominal": 20,
+        "point1": 19.8,
+        "point2": 19.7,
+        "point3": 19.9,
+        "minimum": 19.7,
+        "maximum": 19.9
+      },
+      "shell": {
+        "nominal": 18,
+        "point1": 17.9,
+        "point2": 18.1,
+        "point3": 18.0,
+        "minimum": 17.9,
+        "maximum": 18.1
+      },
+      "buttonHead": {
+        "nominal": 20,
+        "point1": 19.9,
+        "point2": 20.0,
+        "point3": 19.8,
+        "minimum": 19.8,
+        "maximum": 20.0
+      }
+    },
+    "ndt": {
+      "shell": {
+        "testMethod": "UT",
+        "longitudinalWeldJoint": {
+          "location": "Sambungan memanjang",
+          "status": true,
+          "result": "Tidak ditemukan cacat"
+        },
+        "circumferentialWeldJoint": {
+          "location": "Sambungan melingkar",
+          "status": false,
+          "result": "Ditemukan indikasi porositas"
+        }
+      },
+      "furnace": {
+        "testMethod": "PT",
+        "longitudinalWeldJoint": {
+          "location": "Ok (Seamless)",
+          "status": true,
+          "result": ""
+        },
+        "circumferentialWeldJoint": {
+          "location": "Sambungan ke tube plate",
+          "status": false,
+          "result": "Ditemukan retak permukaan"
+        }
+      },
+      "fireTubes": {
+        "testMethod": "VT",
+        "weldJointFront": {
+          "location": "Tube plate depan",
+          "status": true,
+          "result": "Baik"
+        },
+        "weldJointRear": {
+          "location": "Tube plate belakang",
+          "status": false,
+          "result": "Terlihat ada rembesan"
+        }
+      }
+    },
+    "hydrotest": {
+      "testPressure": 18,
+      "mawp": 12,
+      "testMedium": "Air Bersih",
+      "testDate": "2025-07-21",
+      "testResult": "Gagal, ditemukan rembesan pada sambungan las."
+    },
+    "appendagesCheck": {
+      "workingPressureGauge": {
+        "quantity": 2,
+        "status": true,
+        "result": "10 Kg/Cm2, berfungsi"
+      },
+      "manHole": { "quantity": 1, "status": false, "result": "Gasket bocor" },
+      "safetyValveFullOpen": {
+        "quantity": 2,
+        "status": true,
+        "result": "12.5 Kg/Cm2, membuka penuh"
+      },
+      "mainSteamValve": {
+        "quantity": 1,
+        "status": false,
+        "result": "Sulit dioperasikan"
+      },
+      "levelGlassIndicator": {
+        "quantity": 2,
+        "status": true,
+        "result": "Jelas dan berfungsi"
+      },
+      "blowdownValve": {
+        "quantity": 2,
+        "status": false,
+        "result": "Tidak menutup sempurna"
+      },
+      "feedwaterStopValve": {
+        "quantity": 2,
+        "status": true,
+        "result": "Berfungsi"
+      },
+      "feedwaterInletValve": {
+        "quantity": 2,
+        "status": false,
+        "result": "Macet"
+      },
+      "steamDrier": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "waterPump": {
+        "quantity": 2,
+        "status": false,
+        "result": "Satu pompa bergetar hebat"
+      },
+      "controlPanel": {
+        "quantity": 1,
+        "status": true,
+        "result": "Semua indikator berfungsi"
+      },
+      "nameplate": {
+        "quantity": 1,
+        "status": false,
+        "result": "Kotor dan sulit dibaca"
+      }
+    },
+    "safetyValveTest": {
+      "header": "Safety Valve 1 & 2",
+      "startsToOpen": 12.5,
+      "valveInfo": "Brand: TOYO, Model: SV-100. Hasil tes: Membuka pada 12.5 Kg/Cm2, menutup pada 11.8 Kg/Cm2. Sesuai."
+    }
+  },
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, ditemukan beberapa ketidaksesuaian yang signifikan. Pemeriksaan visual menunjukkan adanya masalah pada refractory, burner, dan beberapa alat pengaman. Hasil NDT mengindikasikan adanya cacat las pada sambungan melingkar shell dan keretakan pada furnace. Unit GAGAL dalam pengujian hidrostatik karena ditemukan rembesan. Beberapa perlengkapan (appendages) juga tidak berfungsi dengan baik.",
+  "recommendations": "Unit Ketel Uap ini dinyatakan TIDAK AMAN untuk dioperasikan sampai perbaikan dilakukan. Rekomendasi:\n1. Lakukan perbaikan pada cacat las yang ditemukan melalui hasil NDT dan lakukan NDT ulang.\n2. Ganti gasket manhole dan perbaiki semua katup yang bocor atau macet.\n3. Perbaiki/ganti alarm level air dan pompa air umpan yang bermasalah.\n4. Bersihkan dan perbaiki burner agar pembakaran sempurna.\n5. Lakukan pengujian hidrostatik ulang setelah semua perbaikan kebocoran selesai.\n6. Jadwalkan pemeriksaan ulang selambat-lambatnya 3 bulan setelah perbaikan dilakukan."
+}

@@ -1,0 +1,53 @@
+{
+  "status": "success",
+  "message": "BAP PUBT berhasil dibuat",
+  "data": {
+    "bap": {
+      "id": "krrMHDMa3PF9I4TjxxIs",
+      "laporanId": "oyq3m2pK6bKhrqX4F9zu",
+      "examinationType": "BERKALA",
+      "inspectionType": "AIR RECEIVER TANK",
+      "inspectionDate": "Kamis, 24 Juli 2025",
+      "extraId": 123,
+      "createdAt": "2025-07-26T14:27:00.091Z",
+      "equipmentType": "",
+      "generalData": {
+        "companyName": "PT. CONTOH PERUSAHAAN",
+        "companyLocation": "Jalan Industri No. 123, Jakarta",
+        "userUsage": "PT. CONTOH PERUSAHAAN",
+        "userAddress": "Jalan Industri No. 123, Jakarta"
+      },
+      "technicalData": {
+        "brandType": "CONTOH-BRAND / AB-1000",
+        "manufacturer": "PABRIK METAL INDONESIA",
+        "countryAndYearOfManufacture": "Indonesia / 2020",
+        "serialNumberUnitNumber": "SN-987654321",
+        "fuelType": "N/A",
+        "operatingPressure": "Udara Bertekanan",
+        "designPressureKgCm2": 12,
+        "maxAllowableWorkingPressure": 10,
+        "technicalDataShellMaterial": "SA-516 Gr. 70",
+        "safetyValveType": "Spring Loaded",
+        "volumeLiters": 1000
+      },
+      "visualInspection": {
+        "foundationCondition": true,
+        "safetyValveIsInstalled": true,
+        "safetyValveCondition": true,
+        "aparAvailable": true,
+        "aparCondition": true,
+        "wheelCondition": true,
+        "pipeCondition": true
+      },
+      "testing": {
+        "ndtTestingFulfilled": true,
+        "thicknessTestingComply": true,
+        "pneumaticTestingCondition": true,
+        "hydroTestingFullFilled": true,
+        "safetyValveTestingCondition": true
+      },
+      "subInspectionType": "Pesawat Uap dan Bejana Tekan",
+      "documentType": "Berita Acara dan Pemeriksaan Pengujian"
+    }
+  }
+}
