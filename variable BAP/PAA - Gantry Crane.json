@@ -1,9 +1,10 @@
 {
-  "laporanId": "JPFMYLkJfGP1hKctr14v",
+  "laporanId": "9Ml766ZKNaaEpJCDK4sA",
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
   "inspectionType": "PESAWAT ANGKAT DAN ANGKUT",
   "inspectionDate": "16 Juli 2025",
   "extraId": 123,
+  "equipmentType": "Ganty Crane",
   "generalData": {
     "companyName": "PT. IVAN GACOR PAR 2",
     "companyLocation": "Kawasan Industri Modern, Jl. Logam No. 17, Cikande, Serang",
