@@ -1,9 +1,10 @@
 {
-  "laporanId": "",
+  "laporanId": "H6nRWJquhLPCnwevt1Bb",
   "examinationType": "BERKALA",
   "inspectionType": "AIR RECEIVER TANK",
   "inspectionDate": "Kamis, 24 Juli 2025",
   "extraId": 123,
+  "createdAt": "",
   "equipmentType": "",
   "generalData": {
     "companyName": "PT. CONTOH PERUSAHAAN",

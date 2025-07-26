@@ -1,222 +1,222 @@
 {
-  "examinationType": "BERKALA",
-  "inspectionType": "",
-  "cratedAt": "",
-  "extraId": "",
+  "examinationType": "PERTAMA",
+  "inspectionType": "Pesawat Uap dan Bejana Tekan",
+  "createdAt": "2025-07-24T04:14:00.000Z",
+  "extraId": "doc-pubt-001",
   "generalData": {
-    "companyName": "PT RAJA JEVA NISI",
-    "companyLocation": "Jl. Raya Kosambi Curug Km 8, Dusun Krajan RT 15/03, Curug, Kec. Klari, Karawang Timur, Jawa Barat 41371",
-    "userUsage": "PT RAJA JEVA NISI",
-    "userAddress": "Jl. Raya Kosambi Curug Km 8, Dusun Krajan RT 15/03, Curug, Kec. Klari, Karawang Timur, Jawa Barat 41371",
-    "operatorName": "-",
-    "equipmentType": "Ketel Uap Darat Berpindah (Water Tube Boiler)",
-    "manufacturer": "PT. MULTI MAKMUR TEKNIKATAMA",
-    "brandType": "MULTIHEATECH BOILER",
-    "countryAndYearOfManufacture": "Indonesia / 2025",
-    "serialNumberUnitNumber": "MMT/I/004/25",
-    "designPressure": 15,
-    "maxAllowableWorkingPressure": 10,
-    "capacityWorkingLoad": 1000,
-    "steamTemperature": "N/A",
+    "companyName": "PT. Sentosa Abadi Jaya",
+    "companyLocation": "Kawasan Industri Modern Cikande, Jl. Raya Jakarta-Serang KM. 68, Serang, Banten 42186",
+    "userUsage": "PT. Sentosa Abadi Jaya",
+    "userAddress": "Kawasan Industri Modern Cikande, Jl. Raya Jakarta-Serang KM. 68, Serang, Banten 42186",
+    "operatorName": "Budi Santoso",
+    "equipmentType": "Steam Boiler (Fire Tube)",
+    "manufacturer": "PT. Mitra Boiler Indonesia",
+    "brandType": "MBI-FT-2000",
+    "countryAndYearOfManufacture": "Indonesia / 2024",
+    "serialNumberUnitNumber": "MBI/FT/24/0123",
+    "designPressure": 18,
+    "maxAllowableWorkingPressure": 12,
+    "capacityWorkingLoad": 2000,
+    "steamTemperature": "185°C",
     "operatingPressure": 10,
-    "fuelType": "Tungku",
-    "intendedUse": "Penghasil Uap Untuk Proses Produksi",
-    "permitNumber": "-",
-    "operatorCertificate": "Terferifikasi Kemenaker",
-    "equipmentHistory": "Tahun 2025",
-    "inspectionDate": "2025-01-24"
+    "fuelType": "Gas Alam",
+    "intendedUse": "Pemanas Untuk Proses Produksi Tekstil",
+    "permitNumber": "SKP-011/PUBT/2024",
+    "operatorCertificate": "Sertifikat SIO Kelas 1",
+    "equipmentHistory": "Pemasangan baru pada tahun 2024",
+    "inspectionDate": "2025-07-20"
   },
   "technicalData": {
     "shell": {
-      "numberOfRounds": null,
-      "connectionMethod": "Double Welded",
-      "material": "SA516 GR 70",
-      "pipeDiameter": null,
-      "thickness": 20,
-      "bodyLength": 3720,
+      "numberOfRounds": 3,
+      "connectionMethod": "Seamless",
+      "material": "SA-285 GR C",
+      "pipeDiameter": 1500,
+      "thickness": 18,
+      "bodyLength": 4500,
       "heads": {
         "top": {
-          "diameter": 800,
-          "thickness": 16
+          "diameter": 1500,
+          "thickness": 20
         },
         "rear": {
-          "diameter": 800,
-          "thickness": 16
+          "diameter": 1500,
+          "thickness": 20
         }
       },
       "tubePlate": {
         "front": {
-          "dim1": "-",
-          "dim2": "-"
+          "dim1": "1500 mm",
+          "dim2": "22 mm"
         },
         "rear": {
-          "dim1": "-",
-          "dim2": "-"
+          "dim1": "1500 mm",
+          "dim2": "22 mm"
         }
       }
     },
     "furnace": {
-      "type": "Lurus",
-      "material": "EN 10216-2 GR P235GH",
-      "outerDiameter": null,
-      "innerDiameter": null,
-      "thickness": null
+      "type": "Corrugated",
+      "material": "SA-516 GR 70",
+      "outerDiameter": 900,
+      "innerDiameter": 880,
+      "thickness": 10
     },
     "waterTubes": {
       "firstPass": {
-        "diameter": 78,
-        "thickness": 3.6,
-        "length": 3720,
-        "quantity": 120
+        "diameter": 63.5,
+        "thickness": 3.2,
+        "length": 4500,
+        "quantity": 80
       },
       "secondPass": {
-        "diameter": null,
-        "thickness": null,
-        "length": null,
-        "quantity": null
+        "diameter": 63.5,
+        "thickness": 3.2,
+        "length": 4500,
+        "quantity": 70
       },
       "stayTube": {
-        "diameter": null,
-        "thickness": null,
-        "length": null,
-        "quantity": null
+        "diameter": 12,
+        "thickness": 12,
+        "length": 12,
+        "quantity": 12
       },
       "material": {
-        "diameter": null,
-        "thickness": null,
-        "length": null,
-        "quantity": null
+        "diameter": 12,
+        "thickness": 12,
+        "length": 12,
+        "quantity": 12
       }
     },
-    "tubePlateSplicing": "Welding"
+    "tubePlateSplicing": "Expanded and Welded"
   },
   "inspectionAndMeasurement": {
     "visualChecks": {
       "steamEquipment": {
-        "shellDrum": { "status": true, "result": "Baik" },
-        "bouileur": { "status": false, "result": "" },
-        "furnace": { "status": true, "result": "Baik" },
-        "fireChamber": { "status": true, "result": "Baik" },
-        "refractory": { "status": true, "result": "Baik" },
-        "combustionChamber": { "status": true, "result": "Baik" },
-        "fireTubes": { "status": true, "result": "Baik" },
-        "superHeater": { "status": false, "result": "" },
-        "reheater": { "status": false, "result": "" },
-        "economizer": { "status": true, "result": "Baik" }
+        "shellDrum": { "status": true, "result": "Baik, tidak ada korosi" },
+        "bouileur": { "status": false, "result": "Tidak terpasang" },
+        "furnace": { "status": true, "result": "Baik, tidak ada deformasi" },
+        "fireChamber": { "status": false, "result": "Terlihat jelaga berlebih" },
+        "refractory": { "status": true, "result": "Baik, tidak ada keretakan" },
+        "combustionChamber": { "status": false, "result": "Perlu dibersihkan" },
+        "fireTubes": { "status": true, "result": "Baik, tidak ada penyumbatan" },
+        "superHeater": { "status": false, "result": "Tidak terpasang" },
+        "reheater": { "status": true, "result": "Tidak terpasang" },
+        "economizer": { "status": false, "result": "Ditemukan sedikit kebocoran air" }
       },
       "boilerDetails": {
-        "grate": { "status": true, "result": "Baik" },
-        "burner": { "status": true, "result": "Berfungsi" },
-        "fdf": { "status": true, "result": "Berfungsi" },
-        "idf": { "status": true, "result": "Berfungsi" },
-        "airHeater": { "status": true, "result": "Berfungsi" },
-        "airDuct": { "status": true, "result": "Berfungsi" },
-        "gasDuct": { "status": true, "result": "Berfungsi" },
-        "ashCatcher": { "status": false, "result": "N/A" },
-        "chimney": { "status": true, "result": "Baik" },
-        "stairs": { "status": true, "result": "Terpasang" },
-        "insulation": { "status": true, "result": "Terpasang" }
+        "grate": { "status": true, "result": "Tidak ada (Gas)" },
+        "burner": { "status": false, "result": "Api terlihat tidak stabil" },
+        "fdf": { "status": true, "result": "Berfungsi dengan baik" },
+        "idf": { "status": false, "result": "Suara berisik, perlu pengecekan bearing" },
+        "airHeater": { "status": true, "result": "Tidak terpasang" },
+        "airDuct": { "status": false, "result": "Sedikit kotor" },
+        "gasDuct": { "status": true, "result": "Baik" },
+        "ashCatcher": { "status": false, "result": "Tidak ada (Gas)" },
+        "chimney": { "status": true, "result": "Baik, tidak ada karat" },
+        "stairs": { "status": false, "result": "Handrail goyang, perlu dikencangkan" },
+        "insulation": { "status": true, "result": "Terpasang dengan baik" }
       },
       "safetyDevices": {
-        "safetyValveRing": { "status": true, "result": "Baik" },
+        "safetyValveRing": { "status": false, "result": "Segel rusak" },
         "safetyValvePipe": { "status": true, "result": "Baik" },
-        "safetyValveExhaust": { "status": true, "result": "Baik" },
-        "pressureGaugeMark": { "status": true, "result": "Terpasang" },
-        "pressureGaugeSiphon": { "status": true, "result": "Terpasang" },
-        "pressureGaugeCock": { "status": true, "result": "Baik" },
-        "gaugeGlassTryCocks": { "status": true, "result": "Baik" },
-        "gaugeGlassBlowdown": { "status": true, "result": "Baik" },
-        "waterLevelLowestMark": { "status": true, "result": "Berfungsi" },
-        "waterLevelPosition": { "status": true, "result": "Berfungsi" },
-        "feedwaterPump": { "status": true, "result": "Berfungsi" },
-        "feedwaterCapacity": { "status": true, "result": "Berfungsi" },
-        "feedwaterMotor": { "status": true, "result": "Berfungsi" },
-        "feedwaterCheckValve": { "status": true, "result": "Berfungsi" },
-        "controlBlacksFluit": { "status": true, "result": "Berfungsi" },
-        "controlFusiblePlug": { "status": true, "result": "Berfungsi" },
-        "controlWaterLevel": { "status": true, "result": "Berfungsi" },
-        "controlSteamPressure": { "status": true, "result": "Berfungsi" },
-        "blowdownDesc": { "status": true, "result": "Berfungsi" },
-        "blowdownMaterial": { "status": true, "result": "Berfungsi" },
-        "manholeManhole": { "status": true, "result": "Ada" },
-        "manholeInspectionHole": { "status": true, "result": "Ada" },
-        "idMarkNameplate": { "status": true, "result": "Ada" },
-        "idMarkDataMatch": { "status": true, "result": "Sesuai" },
-        "idMarkForm9Stamp": { "status": false, "result": "" }
+        "safetyValveExhaust": { "status": false, "result": "Arah pembuangan tidak aman" },
+        "pressureGaugeMark": { "status": true, "result": "Terpasang dan jelas" },
+        "pressureGaugeSiphon": { "status": false, "result": "Tidak terpasang" },
+        "pressureGaugeCock": { "status": true, "result": "Berfungsi baik" },
+        "gaugeGlassTryCocks": { "status": false, "result": "Satu macet" },
+        "gaugeGlassBlowdown": { "status": true, "result": "Berfungsi baik" },
+        "waterLevelLowestMark": { "status": false, "result": "Low level alarm tidak berbunyi" },
+        "waterLevelPosition": { "status": true, "result": "Posisi sesuai" },
+        "feedwaterPump": { "status": false, "result": "Pompa cadangan tidak otomatis menyala" },
+        "feedwaterCapacity": { "status": true, "result": "Kapasitas sesuai" },
+        "feedwaterMotor": { "status": false, "result": "Getaran berlebih" },
+        "feedwaterCheckValve": { "status": true, "result": "Berfungsi baik" },
+        "controlBlacksFluit": { "status": false, "result": "Berfungsi baik" },
+        "controlFusiblePlug": { "status": true, "result": "Terpasang" },
+        "controlWaterLevel": { "status": false, "result": "Respon lambat" },
+        "controlSteamPressure": { "status": true, "result": "Berfungsi baik" },
+        "blowdownDesc": { "status": false, "result": "Valve sedikit bocor" },
+        "blowdownMaterial": { "status": true, "result": "Sesuai standar" },
+        "manholeManhole": { "status": false, "result": "Gasket perlu diganti" },
+        "manholeInspectionHole": { "status": true, "result": "Baik" },
+        "idMarkNameplate": { "status": false, "result": "Sulit terbaca" },
+        "idMarkDataMatch": { "status": true, "result": "Sesuai dengan dokumen" },
+        "idMarkForm9Stamp": { "status": false, "result": "Belum ada" }
       }
     },
     "materialThickness": {
-      "bodyShell": {"thickness": "16 mm", "diameter": "1435 mm", "thicknessResult": "-", "diameterResult": "-" },
-      "vaporReceiverHeader": {"thickness": "-", "diameter": "-", "length":"-", "thicknessResult": "-", "diameterResult": "-", "lengthResult":"-"},
-      "fireHallFurnance1": {"thickness": "-", "diameter": "-", "length":"-", "thicknessResult": "-", "diameterResult": "-", "lengthResult":"-"},
-      "fireHallFurnance2": {"thickness": "-", "diameter": "-", "length":"-", "thicknessResult": "-", "diameterResult": "-", "lengthResult":"-" }
+      "bodyShell": {"thickness": "18 mm", "diameter": "1500 mm", "thicknessResult": "OK", "diameterResult": "OK" },
+      "vaporReceiverHeader": {"thickness": "12", "diameter": "12", "length":"12", "thicknessResult": "Ok", "diameterResult": "Ok", "lengthResult":"Ok"},
+      "fireHallFurnance1": {"thickness": "10 mm", "diameter": "900 mm", "length":"4500 mm", "thicknessResult": "OK", "diameterResult": "OK", "lengthResult":"OK"},
+      "fireHallFurnance2": {"thickness": "12", "diameter": "12", "length":"12", "thicknessResult": "Ok", "diameterResult": "Ok", "lengthResult":"Ok" }
     },
     "thicknessMeasurementSetup": {
-      "owner": "PT. Multi Makmur Teknikatama",
-      "inspectionDate": "2025-01-24",
-      "project": "Spot Thickness",
-      "objectType": "Bejana Tekan",
-      "workOrderNo": "-",
-      "equipmentUsed": "Ultrasonic Thickness",
+      "owner": "PT. Prima Kurnia Darma",
+      "inspectionDate": "2025-07-20",
+      "project": "Pemeriksaan Berkala",
+      "objectType": "Pesawat Uap",
+      "workOrderNo": "WO-2025/07/125",
+      "equipmentUsed": "Ultrasonic Thickness Gauge",
       "methodUsed": "Spot Check",
-      "probeType": "-",
-      "materialType": "SA516 GR 70",
+      "probeType": "5 MHz Dual Element",
+      "materialType": "Carbon Steel",
       "probeStyle": "Standard",
       "operatingTemp": "Ambient",
-      "surfaceCondition": "Smooth",
-      "weldingProcess": "-",
-      "laminatingCheck": "N/A",
-      "couplantUsed": "-"
+      "surfaceCondition": "Coated",
+      "weldingProcess": "SMAW",
+      "laminatingCheck": "OK",
+      "couplantUsed": "Glycerin"
     },
     "measurementResults": {
-      "topHead": { "nominal": null, "point1": 16.02, "point2": 16.01, "point3": 16.01, "minimum": 16.01, "maximum": null },
-      "shell": { "nominal": null, "point1": 16.31, "point2": 16.31, "point3": 16.33, "minimum": 16.31, "maximum": null },
-      "buttonHead": { "nominal": null, "point1": 16.01, "point2": 16.01, "point3": 16.00, "minimum": 16.00, "maximum": null }
+      "topHead": { "nominal": 20, "point1": 19.8, "point2": 19.7, "point3": 19.9, "minimum": 19.7, "maximum": 19.9 },
+      "shell": { "nominal": 18, "point1": 17.9, "point2": 18.1, "point3": 18.0, "minimum": 17.9, "maximum": 18.1 },
+      "buttonHead": { "nominal": 20, "point1": 19.9, "point2": 20.0, "point3": 19.8, "minimum": 19.8, "maximum": 20.0 }
     },
     "ndt": {
       "shell": {
-        "testMethod": "MT",
-        "longitudinalWeldJoint": { "location": "Inside Shell", "status": true, "result": "" },
-        "circumferentialWeldJoint": { "location": "Inside Sjell", "status": true, "result": "" }
+        "testMethod": "UT",
+        "longitudinalWeldJoint": { "location": "Sambungan memanjang", "status": true, "result": "Tidak ditemukan cacat" },
+        "circumferentialWeldJoint": { "location": "Sambungan melingkar", "status": false, "result": "Ditemukan indikasi porositas" }
       },
       "furnace": {
-        "testMethod": "MT",
-        "longitudinalWeldJoint": { "location": "Inside Shell", "status": true, "result": "" },
-        "circumferentialWeldJoint": { "location": "Inside Sjell", "status": true, "result": "" }
+        "testMethod": "PT",
+        "longitudinalWeldJoint": { "location": "Ok (Seamless)", "status": true, "result": "" },
+        "circumferentialWeldJoint": { "location": "Sambungan ke tube plate", "status": false, "result": "Ditemukan retak permukaan" }
       },
       "fireTubes": {
-        "testMethod": "MT",
-        "weldJointFront": { "location": "Pipa Api", "status": true, "result": "" },
-        "weldJointRear": { "location": "Bagian Luar", "status": true, "result": "" }
+        "testMethod": "VT",
+        "weldJointFront": { "location": "Tube plate depan", "status": true, "result": "Baik" },
+        "weldJointRear": { "location": "Tube plate belakang", "status": false, "result": "Terlihat ada rembesan" }
       }
     },
     "hydrotest": {
-      "testPressure": 15,
-      "mawp": 10,
-      "testMedium": "Menggunakan Air",
-      "testDate": "2025-01",
-      "testResult": "Baik"
+      "testPressure": 18,
+      "mawp": 12,
+      "testMedium": "Air Bersih",
+      "testDate": "2025-07-21",
+      "testResult": "Gagal, ditemukan rembesan pada sambungan las."
     },
     "appendagesCheck": {
-      "workingPressureGauge": { "quantity": 1, "status": true, "result": "10 Kg / Cm2" },
-      "manHole": { "quantity": 2, "status": false, "result": "Tidak Ada" },
-      "safetyValveFullOpen": { "quantity": 2, "status": true, "result": "15 Kg / Cm2" },
-      "mainSteamValve": { "quantity": 1, "status": true, "result": "Berfungsi" },
-      "levelGlassIndicator": { "quantity": 2, "status": true, "result": "Berfungsi" },
-      "blowdownValve": { "quantity": 2, "status": true, "result": "Berfungsi" },
-      "feedwaterStopValve": { "quantity": 1, "status": true, "result": "Berfungsi" },
-      "feedwaterInletValve": { "quantity": 1, "status": true, "result": "Berfungsi" },
+      "workingPressureGauge": { "quantity": 2, "status": true, "result": "10 Kg/Cm2, berfungsi" },
+      "manHole": { "quantity": 1, "status": false, "result": "Gasket bocor" },
+      "safetyValveFullOpen": { "quantity": 2, "status": true, "result": "12.5 Kg/Cm2, membuka penuh" },
+      "mainSteamValve": { "quantity": 1, "status": false, "result": "Sulit dioperasikan" },
+      "levelGlassIndicator": { "quantity": 2, "status": true, "result": "Jelas dan berfungsi" },
+      "blowdownValve": { "quantity": 2, "status": false, "result": "Tidak menutup sempurna" },
+      "feedwaterStopValve": { "quantity": 2, "status": true, "result": "Berfungsi" },
+      "feedwaterInletValve": { "quantity": 2, "status": false, "result": "Macet" },
       "steamDrier": { "quantity": 1, "status": true, "result": "Berfungsi" },
-      "waterPump": { "quantity": 2, "status": true, "result": "Berfungsi" },
-      "controlPanel": { "quantity": 1, "status": true, "result": "Berfungsi" },
-      "nameplate": { "quantity": 1, "status": true, "result": "Berfungsi" }
+      "waterPump": { "quantity": 2, "status": false, "result": "Satu pompa bergetar hebat" },
+      "controlPanel": { "quantity": 1, "status": true, "result": "Semua indikator berfungsi" },
+      "nameplate": { "quantity": 1, "status": false, "result": "Kotor dan sulit dibaca" }
     },
     "safetyValveTest": {
-      "header": "Safety Valve 1",
-      "startsToOpen": 15,
-      "valveInfo": "YUMING VALVE GROUP CO.,LTD, Opening 6-10 Sec, Closing 0,8 sec"
+      "header": "Safety Valve 1 & 2",
+      "startsToOpen": 12.5,
+      "valveInfo": "Brand: TOYO, Model: SV-100. Hasil tes: Membuka pada 12.5 Kg/Cm2, menutup pada 11.8 Kg/Cm2. Sesuai."
     }
   },
-  "conclusion": "Dari hasil penelaahan dokumen yang ada, pemeriksaan serta pengujian terhadap Ketel Uap / Boiler tersebut diatas dapat diambil kesimpulan sebagai berikut :\nHasil pemeriksaan visual disimpulkan bahwa peralatan yang ada pada pesawat boiler tersebut secara umum masih dalam kondisi bekerja normal(memenuhi standard & kesehatan kerja).\nPada saat dilakukan pemeriksaan dan pengujian terhadap ketel uap / boiler layak dioperasikan.\nHasil pemeriksaan terhadap apendages (peralatan pengaman) ketel uap masih lengkap dan berfungsi normal.\nHasol NDT pada pipa dan pelat pipa, diperoleh hasil bahwa; sambungan las tidak ditemukan keretakan atau kebocoran\nHasil hidrotest tidak ditemukan kebocoran pada boiler\nHasil pemeriksaan secara visual menunjukkan bahwa tidak ada kebocoran dalam sambunganlas dan tidak terjadi deformasi (perubahan bentuk) pada ketel uap.\nSafety valve masih berfungsi normal\nAutorun burner berfungsi normal.",
-  "recommendations": "Untuk selanjutnya karena tidak terdapat hal yang memberatkan maka Air Receiver Tank dapat dioperasikan dengan Syarat K3 sebagai berikut :\nBoiler dioperasikan oleh operator yang mempunyai SIO Operator Boiler Kelas I.\nAgar unit selalu dilakukanpemeliharaan & pemeriksaan secara berkala.\nOperator boiler harus selalu standby saat boiler beroperasi & selalu mengontrol level air dalam kondisi normal.\nAgar didalam pengoperasian boiler tersebut hendaknya selalu dicatat dalam buku check sheet.\nSafety Valve 1 dan 2 harus dilakukan pengujian minimal 1 bulan sekali.\nKetel Uap harus selalu dipasang perlengkapan safety sesuai pasal 12 peraturan Uap tahun 1930.\nKonstruksi ketel uap harus sesuai gambar awal atau pertama, apabila ada perubahan perusahaan wajib melaporkan ke Dinas Tenaga Kerja Dan Transmigrasi Setempat\nUnit Ketel Uap Harus Diperiksa Kembali Paling Lambat Januari 2026."
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, ditemukan beberapa ketidaksesuaian yang signifikan. Pemeriksaan visual menunjukkan adanya masalah pada refractory, burner, dan beberapa alat pengaman. Hasil NDT mengindikasikan adanya cacat las pada sambungan melingkar shell dan keretakan pada furnace. Unit GAGAL dalam pengujian hidrostatik karena ditemukan rembesan. Beberapa perlengkapan (appendages) juga tidak berfungsi dengan baik.",
+  "recommendations": "Unit Ketel Uap ini dinyatakan TIDAK AMAN untuk dioperasikan sampai perbaikan dilakukan. Rekomendasi:\n1. Lakukan perbaikan pada cacat las yang ditemukan melalui hasil NDT dan lakukan NDT ulang.\n2. Ganti gasket manhole dan perbaiki semua katup yang bocor atau macet.\n3. Perbaiki/ganti alarm level air dan pompa air umpan yang bermasalah.\n4. Bersihkan dan perbaiki burner agar pembakaran sempurna.\n5. Lakukan pengujian hidrostatik ulang setelah semua perbaikan kebocoran selesai.\n6. Jadwalkan pemeriksaan ulang selambat-lambatnya 3 bulan setelah perbaikan dilakukan."
 }
