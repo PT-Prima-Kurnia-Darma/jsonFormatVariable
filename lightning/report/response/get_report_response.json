@@ -3,12 +3,12 @@
   "message": "Laporan Instalasi Petir berhasil dibuat",
   "data": {
     "laporan": {
-      "id": "oX1VRkNrb0uBMYe2MuaO",
+      "id": "tOtaUcDGRJ2kYiRIQpym",
       "examinationType": "Pemeriksaan dan Pengujian Berkala",
       "equipmentType": "",
       "inspectionType": "",
-      "createdAt": "2025-07-26T13:50:08.009Z",
-      "extraId": "",
+      "createdAt": "2025-07-26T19:14:58.162Z",
+      "extraId": 1,
       "pjk3Data": {
         "companyNameandaddres": "PT. Aman Sentosa K3 - Jl. Keselamatan No. 1, Jakarta",
         "companyPermitNo": "SKP-PJK3/001/2024",
