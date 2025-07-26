@@ -5801,6 +5801,413 @@ paths:
         "500":
           $ref: "#/components/responses/InternalServerError"
 
+  # ======================================================
+  #         PTP - LAPORAN MESIN
+  # ======================================================
+  /ptp/mesin/laporan:
+    post:
+      tags:
+        - PTP - Laporan Mesin
+      summary: Buat Laporan PTP Mesin Baru
+      description: Endpoint untuk membuat dokumen laporan pemeriksaan dan pengujian Pesawat Tenaga dan Produksi (PTP) jenis Mesin baru.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPtpMesinPayload"
+      responses:
+        "201":
+          description: Laporan PTP Mesin berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPtpMesinSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - PTP - Laporan Mesin
+      summary: Dapatkan Semua Laporan PTP Mesin
+      description: Mengambil daftar semua laporan untuk PTP Mesin yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data laporan PTP Mesin.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllLaporanPtpMesinResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /ptp/mesin/laporan/{id}:
+    get:
+      tags:
+        - PTP - Laporan Mesin
+      summary: Dapatkan Laporan PTP Mesin Berdasarkan ID
+      description: Mengambil detail data sebuah laporan PTP Mesin berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan PTP Mesin.
+      responses:
+        "200":
+          description: Berhasil mengambil data laporan PTP Mesin.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPtpMesinSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - PTP - Laporan Mesin
+      summary: Perbarui Laporan PTP Mesin
+      description: Memperbarui data laporan PTP Mesin yang sudah ada. Perubahan pada data tertentu juga akan disinkronkan ke BAP yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan PTP Mesin yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LaporanPtpMesinPayload"
+      responses:
+        "200":
+          description: Laporan PTP Mesin berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LaporanPtpMesinSuccessResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - PTP - Laporan Mesin
+      summary: Hapus Laporan PTP Mesin
+      description: Menghapus sebuah laporan PTP Mesin berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan PTP Mesin yang akan dihapus.
+      responses:
+        "200":
+          description: Laporan PTP Mesin berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: Laporan PTP Mesin berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /ptp/mesin/laporan/download/{id}:
+    get:
+      tags:
+        - PTP - Laporan Mesin
+      summary: Unduh Dokumen Laporan PTP Mesin
+      description: Mengunduh dokumen laporan PTP Mesin dalam format .docx berdasarkan ID unik laporan.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan PTP Mesin.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: Laporan PTP Mesin berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="Laporan-PTP-Mesin-PT-IVAN-GACOR.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+      # ======================================================
+      #         PTP - BAP MESIN
+      # ======================================================
+  
+  
+  # ======================================================
+  #         PTP - LAPORAN MESIN
+  # ======================================================
+  /ptp/mesin/bap/prefill/{laporanId}:
+    get:
+      tags:
+        - PTP - BAP Mesin
+      summary: Ambil Data Prefill untuk BAP Mesin dari Laporan
+      description: Mengambil data dari Laporan PTP Mesin yang sudah ada untuk mengisi (pre-fill) form BAP baru.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: laporanId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari Laporan PTP Mesin yang menjadi acuan.
+      responses:
+        "200":
+          description: Berhasil mengambil data untuk prefill BAP PTP Mesin.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMesinPrefillSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /ptp/mesin/bap:
+    post:
+      tags:
+        - PTP - BAP Mesin
+      summary: Buat BAP PTP Mesin Baru
+      description: Membuat BAP baru berdasarkan `laporanId`. Data tertentu dari BAP ini akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPtpMesinPayload"
+      responses:
+        "201":
+          description: BAP PTP Mesin berhasil dibuat.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMesinSuccessResponse"
+        "400":
+          description: Request tidak valid, misalnya `laporanId` tidak disertakan.
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          description: Laporan dengan `laporanId` yang diberikan tidak ditemukan.
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    get:
+      tags:
+        - PTP - BAP Mesin
+      summary: Dapatkan Semua BAP PTP Mesin
+      description: Mengambil daftar semua BAP untuk PTP Mesin yang telah dibuat, diurutkan dari yang terbaru.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Berhasil mengambil semua data BAP PTP Mesin.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetAllBapPtpMesinResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /ptp/mesin/bap/{id}:
+    get:
+      tags:
+        - PTP - BAP Mesin
+      summary: Dapatkan BAP PTP Mesin Berdasarkan ID
+      description: Mengambil detail data sebuah BAP PTP Mesin berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP PTP Mesin.
+      responses:
+        "200":
+          description: Berhasil mengambil data BAP PTP Mesin.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMesinSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    put:
+      tags:
+        - PTP - BAP Mesin
+      summary: Perbarui BAP PTP Mesin
+      description: Memperbarui data BAP yang sudah ada. Perubahan pada data tertentu juga akan disinkronkan kembali ke Laporan yang terhubung.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP yang akan diperbarui.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BapPtpMesinPayload"
+      responses:
+        "200":
+          description: BAP PTP Mesin berhasil diperbarui.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BapPtpMesinSuccessResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - PTP - BAP Mesin
+      summary: Hapus BAP PTP Mesin
+      description: Menghapus sebuah BAP PTP Mesin berdasarkan ID uniknya.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP yang akan dihapus.
+      responses:
+        "200":
+          description: BAP PTP Mesin berhasil dihapus.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: BAP PTP Mesin berhasil dihapus
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /ptp/mesin/bap/download/{id}:
+    get:
+      tags:
+        - PTP - BAP Mesin
+      summary: Unduh Dokumen BAP PTP Mesin
+      description: Mengunduh dokumen BAP PTP Mesin dalam format .docx berdasarkan ID unik BAP.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID unik dari BAP PTP Mesin.
+      responses:
+        "200":
+          description: File .docx berhasil diunduh.
+          headers:
+            message:
+              schema:
+                type: string
+                example: BAP PTP Mesin berhasil diunduh
+            Content-Disposition:
+              schema:
+                type: string
+                example: attachment; filename="BAP-PTP-Mesin-PT-IVAN-GACOR-PART-2.docx"
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
 
 components:
   securitySchemes:
@@ -10602,3 +11009,384 @@ components:
         data:
           $ref: "#/components/schemas/BapPtpMotorDieselPayload"
 
+    # ======================================================
+    #         PTP - MESIN SCHEMAS
+    # ======================================================
+    InspectionItemPtpMesin:
+      type: object
+      properties:
+        status:
+          type: boolean
+          nullable: true
+          description: Status hasil pemeriksaan (true untuk Baik/Lulus, false untuk Cacat/Gagal, null jika tidak berlaku).
+        result:
+          type: string
+          nullable: true
+          description: Keterangan atau hasil dari item pemeriksaan.
+    
+    LaporanPtpMesinPayload:
+      type: object
+      properties:
+        examinationType:
+          type: string
+          description: Jenis pemeriksaan (e.g., "Pemeriksaan Berkala").
+        extraId:
+          type: number
+          nullable: true
+          description: ID tambahan jika diperlukan.
+        inspectionType:
+          type: string
+          description: Tipe inspeksi umum (e.g., "Pesawat Tenaga dan Produksi").
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string }
+            companyLocation: { type: string }
+            userInCharge: { type: string }
+            userAddressInCharge: { type: string }
+            subcontractorPersonInCharge: { type: string }
+            unitLocation: { type: string }
+            equipmentType: { type: string }
+            brandType: { type: string }
+            serialNumberUnitNumber: { type: string }
+            manufacturer: { type: string }
+            locationAndYearOfManufacture: { type: string }
+            technicalDataDieselMotorPowerRpm: { type: string }
+            intendedUse: { type: string }
+            pjk3SkpNo: { type: string }
+            ak3SkpNo: { type: string }
+            usagePermitNumber: { type: string }
+            operatorName: { type: string }
+            equipmentHistory: { type: string }
+        technicalData:
+          type: object
+          properties:
+            machineSpecification:
+              type: object
+              properties:
+                brandType: { type: string }
+                technicalDataMaxFeederSpeed: { type: number, nullable: true }
+                technicalDataMaxPlateWidth: { type: number, nullable: true }
+                technicalDataPlateThickness: { type: number, nullable: true }
+                technicalDataMaxPlateWeight: { type: number, nullable: true }
+                technicalDataMaxInnerCoilDiameter: { type: number, nullable: true }
+                technicalDataMaxOuterCoilDiameter: { type: number, nullable: true }
+                technicalDataDriveMotor: { type: string }
+                technicalDataDieselMotorPowerRpm: { type: number, nullable: true }
+                serialNumberUnitNumber: { type: string }
+                locationAndYearOfManufacture: { type: string }
+                technicalDataMachineWeight: { type: number, nullable: true }
+                technicalDataOverallDimension: { type: string }
+            foundationDimension:
+              type: object
+              properties:
+                technicalDataFoundationDim: { type: string }
+                technicalDataFoundationDistance: { type: string }
+                technicalDataVibrationDamperType: { type: string }
+                technicalDataFoundationWeight1: { type: number, nullable: true }
+                technicalDataFoundationWeight2: { type: number, nullable: true }
+        visualInspection:
+          type: object
+          properties:
+            foundation: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            foundationBearing: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            machineFrame:
+              type: object
+              properties:
+                mainFrame: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                braceFrame: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            roller: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            controlPanel: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            display: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            operationButtons: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            electricalComponents:
+              type: object
+              properties:
+                measurements:
+                  type: object
+                  properties:
+                    electricVoltage: { type: number, nullable: true }
+                    electricPhase: { type: number, nullable: true }
+                    electricFrequency: { type: number, nullable: true }
+                    electricAmper: { type: number, nullable: true }
+                voltage: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                power: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                phase: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                frequency: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                current: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                electricalPanel: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                conductor: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                insulation: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            safetyDevices:
+              type: object
+              properties:
+                limitSwitchUp: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                limitSwitchDown: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                grounding: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                safetyGuard: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                stampLock: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                pressureIndicator: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                emergencyStop: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                handSensor: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            hydraulic:
+              type: object
+              properties:
+                pump: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                hose: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+        testingAndMeasurement:
+          type: object
+          properties:
+            safetyDeviceTest:
+              type: object
+              properties:
+                grounding: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                safetyGuard: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                roller: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+                emergencyStop: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            speedTest: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            functionTest: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            weldJointTest: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            vibrationTest: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            lightingTest: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+            noiseTest: { $ref: '#/components/schemas/InspectionItemPtpMesin' }
+        electricalPanelComponents:
+          type: object
+          properties:
+            ka: { type: string }
+            voltage:
+              type: object
+              properties:
+                rs: { type: number, nullable: true }
+                rt: { type: number, nullable: true }
+                st: { type: number, nullable: true }
+                rn: { type: number, nullable: true }
+                rg: { type: number, nullable: true }
+                ng: { type: number, nullable: true }
+            powerInfo:
+              type: object
+              properties:
+                frequency: { type: number, nullable: true }
+                cosQ: { type: number, nullable: true }
+                ampere:
+                  type: object
+                  properties:
+                    r: { type: number, nullable: true }
+                    s: { type: number, nullable: true }
+                    t: { type: number, nullable: true }
+                result: { type: string }
+        conclusionAndRecommendation:
+          type: object
+          properties:
+            conclusion: { type: string }
+            recommendations: { type: string }
+        administration:
+          type: object
+          properties:
+            inspectionDate: { type: string }
+        foundationAnalysis:
+          type: object
+          properties:
+            actualWeight: { type: number, nullable: true }
+            additionalMeterials: { type: number, nullable: true }
+            totalWeight: { type: number, nullable: true }
+            minimumFoundationWeight: { type: number, nullable: true }
+            totalMinimumFoundationWeight: { type: number, nullable: true }
+            foundationWeight: { type: number, nullable: true }
+            heightFoundation: { type: number, nullable: true }
+            foundationAnalysisResult: { type: string }
+        environmentalMeasurement:
+          type: object
+          properties:
+            noise:
+              type: object
+              properties:
+                pointA: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+                pointB: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+                pointC: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+                pointD: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+            lighting:
+              type: object
+              properties:
+                pointA: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+                pointB: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+                pointC: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+                pointD: { type: object, properties: { result: { type: number, nullable: true }, status: { type: string } } }
+
+    LaporanPtpMesinResponseData:
+      allOf:
+        - $ref: "#/components/schemas/LaporanPtpMesinPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Mesin"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Laporan"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+
+    LaporanPtpMesinSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan PTP Mesin berhasil dibuat
+        data:
+          type: object
+          properties:
+            laporan:
+              $ref: "#/components/schemas/LaporanPtpMesinResponseData"
+
+    GetAllLaporanPtpMesinResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Laporan PTP Mesin berhasil didapatkan
+        data:
+          type: object
+          properties:
+            laporan:
+              type: array
+              items:
+                $ref: "#/components/schemas/LaporanPtpMesinResponseData"
+
+    BapPtpMesinPayload:
+      type: object
+      required:
+        - laporanId
+      properties:
+        laporanId:
+          type: string
+          description: ID dari Laporan PTP Mesin terkait.
+        examinationType: { type: string }
+        inspectionDate: { type: string }
+        extraId: { type: number, nullable: true }
+        generalData:
+          type: object
+          properties:
+            companyName: { type: string }
+            companyLocation: { type: string }
+            unitLocation: { type: string }
+            userAddressInCharge: { type: string }
+        technicalData:
+          type: object
+          properties:
+            brandType: { type: string }
+            manufacturer: { type: string }
+            locationAndYearOfManufacture: { type: string }
+            serialNumberUnitNumber: { type: string }
+            capacityWorkingLoad: { type: string }
+            technicalDataDieselMotorPowerRpm: { type: string }
+            specialSpecification: { type: string }
+            dimensionsDescription: { type: string }
+            rotationRpm: { type: string }
+            technicalDataGeneratorFrequency: { type: string }
+            technicalDataGeneratorCurrent: { type: string }
+            machineWeightKg: { type: string }
+            areSafetyFeaturesInstalled: { type: boolean, nullable: true }
+        visualChecks:
+          type: object
+          properties:
+            isMachineGoodCondition: { type: boolean, nullable: true }
+            areElectricalIndicatorsGood: { type: boolean, nullable: true }
+            isAparAvailable: { type: boolean, nullable: true }
+            isPpeAvailable: { type: boolean, nullable: true }
+            isGroundingInstalled: { type: boolean, nullable: true }
+            isBatteryGoodCondition: { type: boolean, nullable: true }
+            hasLubricationLeak: { type: boolean, nullable: true }
+            isFoundationGoodCondition: { type: boolean, nullable: true }
+            hasHydraulicLeak: { type: boolean, nullable: true }
+        functionalTests:
+          type: object
+          properties:
+            isLightingCompliant: { type: boolean, nullable: true }
+            isNoiseLevelCompliant: { type: boolean, nullable: true }
+            isEmergencyStopFunctional: { type: boolean, nullable: true }
+            isMachineFunctional: { type: boolean, nullable: true }
+            isVibrationLevelCompliant: { type: boolean, nullable: true }
+            isInsulationResistanceOk: { type: boolean, nullable: true }
+            isShaftRotationCompliant: { type: boolean, nullable: true }
+            isGroundingResistanceCompliant: { type: boolean, nullable: true }
+            isNdtWeldTestOk: { type: boolean, nullable: true }
+            isVoltageBetweenPhasesNormal: { type: boolean, nullable: true }
+            isPhaseLoadBalanced: { type: boolean, nullable: true }
+
+    BapPtpMesinResponseData:
+      allOf:
+        - $ref: "#/components/schemas/BapPtpMesinPayload"
+        - type: object
+          properties:
+            id:
+              type: string
+              description: ID unik yang digenerate oleh Firestore.
+            subInspectionType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Mesin"
+            documentType:
+              type: string
+              description: Diisi otomatis oleh server.
+              example: "Berita Acara dan Pemeriksaan Pengujian"
+            createdAt:
+              type: string
+              format: date-time
+              description: Timestamp ISO 8601 yang digenerate oleh server.
+
+    BapPtpMesinSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP PTP Mesin berhasil dibuat
+        data:
+          type: object
+          properties:
+            bap:
+              $ref: "#/components/schemas/BapPtpMesinResponseData"
+
+    GetAllBapPtpMesinResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: BAP PTP Mesin berhasil didapatkan
+        data:
+          type: object
+          properties:
+            bap:
+              type: array
+              items:
+                $ref: "#/components/schemas/BapPtpMesinResponseData"
+
+    BapPtpMesinPrefillSuccessResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: success
+        message:
+          type: string
+          example: Data BAP PTP Mesin berhasil didapat
+        data:
+          $ref: "#/components/schemas/BapPtpMesinPayload"
