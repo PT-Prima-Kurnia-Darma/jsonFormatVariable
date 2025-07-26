@@ -3,11 +3,12 @@
   "message": "BAP Instalasi Petir berhasil dibuat",
   "data": {
     "bap": {
-      "id": "ynGCe9gJ9LSEJpP2xRy8",
-      "laporanId": "sIWshlYDZmbUmAHaR9W8",
+      "id": "WOJwvn4RPmxqKdetZCxz",
+      "laporanId": "IvgGv4hRKNIihzS5tHJj",
       "examinationType": "Berkala",
       "inspectionDate": "Senin, 21 Juli 2025",
       "equipmentType": "Instalasi Petir",
+      "extraId": 1,
       "generalData": {
         "companyName": "PT. Gedung Tinggi Sejahtera part 1",
         "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
@@ -43,7 +44,7 @@
       },
       "subInspectionType": "Instalasi Penyalur Petir",
       "documentType": "Berita Acara dan Pemeriksaan Pengujian",
-      "createdAt": "2025-07-26T13:58:32.762Z"
+      "createdAt": "2025-07-26T19:10:46.531Z"
     }
   }
 }
