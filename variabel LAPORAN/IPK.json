@@ -1,211 +1,348 @@
 {
-  "examinationType": "String",
-  "extraid": "number",
-  "createdaAt": "string",
-  "inspectionType": "string",
-  "equipmentType": "string",
+  "examinationType": "Riksa Uji",
+  "extraid": 101,
+  "createdAt": "2025-07-23T14:00:00Z",
+  "inspectionType": "Periodik",
+  "equipmentType": "Instalasi Proteksi Kebakaran",
   "documentChecklist": {
     "technicalDrawing": {
-      "available": "Boolean",
-      "notes": "String"
+      "available": true,
+      "notes": "Gambar teknis lengkap dan sesuai dengan instalasi terpasang."
     },
     "previousTestDocumentation": {
-      "available": "Boolean",
-      "notes": "String"
+      "available": false,
+      "notes": "Dokumentasi riksa uji sebelumnya tidak ditemukan."
     },
     "requestLetter": {
-      "available": "Boolean",
-      "notes": "String"
+      "available": true,
+      "notes": "Surat permohonan dari manajemen gedung."
     },
     "specificationDocument": {
-      "available": "Boolean",
-      "notes": "String"
+      "available": false,
+      "notes": "Dokumen spesifikasi teknis peralatan tidak ada."
     }
   },
   "generalData": {
-    "companyName": "String",
-    "companyLocation": "String",
-    "usageLocation": "String",
-    "certificateNumber": "String",
-    "k3Object": "String",
-    "inspectionDate": "String"
+    "companyName": "PT. Gedung Perkantoran Jaya",
+    "companyLocation": "Jl. Jenderal Sudirman No. 45, Jakarta Selatan",
+    "usageLocation": "Gedung Perkantoran Utama",
+    "certificateNumber": "PK-001/SKT/VII/2025",
+    "k3Object": "Sistem Proteksi Kebakaran Aktif",
+    "inspectionDate": "2025-07-20"
   },
   "buildingData": {
-    "landArea": "string",
-    "buildingArea": "string",
-    "buildingHeight": "string",
-    "floorCount": "string",
+    "landArea": "5000",
+    "buildingArea": "12000",
+    "buildingHeight": "40",
+    "floorCount": "10",
     "construction": {
-      "mainStructure": "String",
-      "floorStructure": "String",
-      "exteriorWalls": "String",
-      "interiorWalls": "String",
-      "ceilingFrame": "String",
-      "ceilingCover": "String",
-      "roofFrame": "String",
-      "roofCover": "String"
+      "mainStructure": "Beton Bertulang",
+      "floorStructure": "Pelat Beton",
+      "exteriorWalls": "Dinding Tirai Kaca",
+      "interiorWalls": "Partisi Gypsum",
+      "ceilingFrame": "Rangka Metal Furing",
+      "ceilingCover": "Papan Akustik",
+      "roofFrame": "Baja Ringan",
+      "roofCover": "Dak Beton"
     },
-    "yearBuilt": "String",
+    "yearBuilt": "2015",
     "fireProtectionEquipment": {
-      "portableExtinguishers": "String",
-      "indoorHydrantBox": "String",
-      "pillarAndOutdoorHydrant": "String",
-      "siameseConnection": "String",
-      "sprinklerSystem": "String",
-      "heatAndSmokeDetectors": "String",
-      "exitSigns": "String",
-      "emergencyStairs": "String",
-      "assemblyPoint": "String"
+      "portableExtinguishers": "Tersedia di setiap lantai",
+      "indoorHydrantBox": "Tersedia di setiap koridor",
+      "pillarAndOutdoorHydrant": "Tersedia di area parkir dan taman",
+      "siameseConnection": "Tersedia di lobi utama",
+      "sprinklerSystem": "Terpasang di seluruh area",
+      "heatAndSmokeDetectors": "Terpasang di seluruh ruangan",
+      "exitSigns": "Tersedia di semua jalur evakuasi",
+      "emergencyStairs": "Tersedia di sisi timur dan barat",
+      "assemblyPoint": "Tersedia di lapangan parkir depan"
     }
   },
   "technicalSpecifications": {
     "mcfa": {
-      "brandOrType": "String",
-      "result": "String",
-      "ledAnnunciator": "String",
-      "type": "String",
-      "serialNumber": "String"
+      "brandOrType": "Hooseki H-100",
+      "result": "Berfungsi Baik",
+      "ledAnnunciator": "Semua LED normal",
+      "type": "Addressable",
+      "serialNumber": "HSK-987654321"
     },
     "heatDetector": {
-      "brandOrType": "String",
-      "result": "String",
-      "pointCount": "string",
-      "spacing": "string",
-      "operatingTemperature": "String"
+      "brandOrType": "Appron AH-9920",
+      "result": "Berfungsi Baik",
+      "pointCount": "150",
+      "spacing": "8",
+      "operatingTemperature": "58"
     },
     "smokeDetector": {
-      "brandOrType": "String",
-      "result": "String",
-      "pointCount": "string",
-      "spacing": "string",
-      "operatingTemperature": "String"
+      "brandOrType": "Notifier SD-651",
+      "result": "Berfungsi Baik",
+      "pointCount": "200",
+      "spacing": "9",
+      "operatingTemperature": "N/A"
     },
     "apar": {
-      "brandOrType": "String",
-      "result": "String",
-      "count": "string",
-      "spacing": "string",
-      "placement": "String"
+      "brandOrType": "Yamato Powder ABC",
+      "result": "Siap Pakai",
+      "count": "50",
+      "spacing": "15",
+      "placement": "Dekat pintu keluar dan area berisiko"
     }
   },
-  "totalAlarmInstallation": "string",
-  "resultAlarmInstallation": "string",
+  "resultAlarmInstallation": "123",
+  "totalAlarmInstallation": "123",
   "alarmInstallationData": [
     {
-      "location": "String",
-      "zone": "String",
-      "ror": "String",
-      "fixed": "String",
-      "smoke": "String",
-      "tpm": "String",
-      "flsw": "String",
-      "bell": "String",
-      "lamp": "String",
-      "status": "String"
+      "location": "Lobby Utama",
+      "zone": "1",
+      "ror": "N/A",
+      "fixed": "N/A",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
+    },
+    {
+      "location": "Ruang Server Lt. 5",
+      "zone": "5",
+      "ror": "Aktif",
+      "fixed": "Aktif",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
+    },
+    {
+      "location": "Ruang Server Lt. 5",
+      "zone": "5",
+      "ror": "Aktif",
+      "fixed": "Aktif",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
+    },
+    {
+      "location": "Ruang Server Lt. 5",
+      "zone": "5",
+      "ror": "Aktif",
+      "fixed": "Aktif",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
+    },
+    {
+      "location": "Ruang Server Lt. 5",
+      "zone": "5",
+      "ror": "Aktif",
+      "fixed": "Aktif",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
+    },
+    {
+      "location": "Ruang Server Lt. 5",
+      "zone": "5",
+      "ror": "Aktif",
+      "fixed": "Aktif",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
+    },
+    {
+      "location": "Ruang Server Lt. 5",
+      "zone": "5",
+      "ror": "Aktif",
+      "fixed": "Aktif",
+      "smoke": "Aktif",
+      "tpm": "Aktif",
+      "flsw": "Aktif",
+      "bell": "Aktif",
+      "lamp": "Aktif",
+      "status": "Normal"
     }
   ],
   "alarmTestResults": {
-    "panelFunction": "String",
-    "alarmTest": "String",
-    "faultTest": "String",
-    "interconnectionTest": "String"
+    "panelFunction": "Semua fungsi panel berjalan normal",
+    "alarmTest": "Alarm bell dan lampu indikator aktif saat sampling",
+    "faultTest": "Simulasi fault berhasil, panel menunjukkan indikasi gangguan",
+    "interconnectionTest": "Panel terhubung dengan sistem lain dengan baik"
   },
   "hydrantSystem": {
     "waterSource": {
-      "specification": "String",
-      "status": "String",
-      "note": "String"
+      "specification": "Ground Water Tank & PDAM",
+      "status": "Tersedia",
+      "note": "Kapasitas air cukup untuk 60 menit"
     },
     "groundReservoir": {
-      "backupSpec": "string",
-      "backupStatus": "String",
-      "backupResult": "String"
+      "backupSpec": "150",
+      "backupStatus": "Memenuhi",
+      "backupResult": "Cukup"
     },
     "gravitationTank": {
-      "spec": "String",
-      "status": "String",
-      "result": "String"
+      "spec": "20 m3",
+      "status": "Tersedia",
+      "result": "Baik"
     },
     "siameseConnection": {
-      "spec": "String",
-      "status": "String",
-      "result": "String"
+      "spec": "4 inch VDH",
+      "status": "Tersedia",
+      "result": "Baik"
     },
     "pumps": {
       "jockey": {
-        "quantity": "string",
-        "headM": "string",
-        "autoStart": "string",
-        "autoStop": "string"
+        "quantity": "3",
+        "headM": "100",
+        "autoStart": "8",
+        "autoStop": "10"
       },
       "electric": {
-        "quantity": "string",
-        "headM": "string",
-        "autoStart": "string",
-        "stop": "String"
+        "quantity": "750",
+        "headM": "90",
+        "autoStart": "6",
+        "stop": "Manual"
       },
       "diesel": {
-        "quantity": "string",
-        "headM": "string",
-        "autoStart": "string",
-        "stop": "String"
+        "quantity": "750",
+        "headM": "90",
+        "autoStart": "4",
+        "stop": "Manual"
       }
     },
     "indoorHydrant": {
-      "points": "string",
-      "diameter": "string",
-      "hoseLength": "string",
-      "placement": "String"
+      "points": "20",
+      "diameter": "1.5",
+      "hoseLength": "30",
+      "placement": "Setiap koridor"
     },
     "landingValve": {
-      "points": "string",
-      "diameter": "string",
-      "clutchType": "String",
-      "placement": "String"
+      "points": "10",
+      "diameter": "2.5",
+      "clutchType": "Machino",
+      "placement": "Setiap tangga darurat"
     },
     "outdoorHydrant": {
-      "points": "string",
-      "diameter": "string",
-      "hoseLength": "string",
-      "nozzleDiameter": "string",
-      "placement": "String"
+      "points": "4",
+      "diameter": "2.5",
+      "hoseLength": "30",
+      "nozzleDiameter": "2.5",
+      "placement": "Area parkir dan taman"
     },
     "fireServiceConnection": {
-      "points": "string",
-      "inletDiameter": "string",
-      "outletDiameter": "string",
-      "clutchType": "String",
-      "condition": "String",
-      "placement": "String"
+      "points": "2",
+      "inletDiameter": "4",
+      "outletDiameter": "2.5",
+      "clutchType": "VDH",
+      "condition": "Baik",
+      "placement": "Depan dan belakang gedung"
     },
     "pipingAndValves": {
-      "pressureReliefValve": { "spec": "String", "status": "String", "remarks": "String" },
-      "testValve": { "spec": "String", "status": "String", "remarks": "String" },
-      "suctionPipe": { "spec": "String", "status": "String", "remarks": "String" },
-      "mainPipe": { "spec": "String", "status": "String", "remarks": "String" },
-      "standPipe": { "spec": "String", "status": "String", "remarks": "String" },
-      "hydrantPillar": { "spec": "String", "status": "String", "remarks": "String" },
-      "innerHydrant": { "spec": "String", "status": "String", "remarks": "String" },
-      "hoseReel": { "spec": "String", "status": "String", "remarks": "String" }
+      "pressureReliefValve": { "spec": "ANSI 150", "status": "Baik", "remarks": "Tidak ada kebocoran" },
+      "testValve": { "spec": "ANSI 150", "status": "Baik", "remarks": "Dapat dioperasikan" },
+      "suctionPipe": { "spec": "Steel Sch 40", "status": "Baik", "remarks": "Tidak ada korosi" },
+      "mainPipe": { "spec": "Steel Sch 40", "status": "Baik", "remarks": "Pengecatan ulang diperlukan" },
+      "standPipe": { "spec": "Steel Sch 40", "status": "Baik", "remarks": "Tidak ada kebocoran" },
+      "hydrantPillar": { "spec": "Cast Iron", "status": "Baik", "remarks": "Lengkap dengan kunci" },
+      "innerHydrant": { "spec": "Steel", "status": "Baik", "remarks": "Tidak ada sumbatan" },
+      "hoseReel": { "spec": "Rubber", "status": "Baik", "remarks": "Fleksibel dan tidak retak" }
     }
   },
   "pumpFunctionTest": [
     {
-      "pumpType": "String",
-      "start": "String",
-      "stop": "String"
+      "pumpType": "Jockey Pump",
+      "start": "10 Kg/cm²",
+      "stop": "8 Kg/cm²"
+    },
+    {
+      "pumpType": "Main Pump (Electric)",
+      "start": "6 Kg/cm²",
+      "stop": "Manual"
+    },
+    {
+      "pumpType": "Diesel Pump",
+      "start": "4 Kg/cm²",
+      "stop": "Manual"
+    },
+    {
+      "pumpType": "Jockey Pump",
+      "start": "10 Kg/cm²",
+      "stop": "8 Kg/cm²"
+    },
+    {
+      "pumpType": "Main Pump (Electric)",
+      "start": "6 Kg/cm²",
+      "stop": "Manual"
+    },
+    {
+      "pumpType": "Diesel Pump",
+      "start": "4 Kg/cm²",
+      "stop": "Manual"
     }
   ],
   "hydrantOperationalTest": [
     {
-      "test": "String",
-      "pressure": "String",
-      "transmitPower": "String",
-      "nozzlePosition": "String",
-      "status": "String",
-      "description": "String"
+      "test": "Hydrant Halaman 01",
+      "pressure": "7 bar",
+      "transmitPower": "25 meter",
+      "nozzlePosition": "Jet & Spray",
+      "status": "Baik",
+      "description": "Pancaran air kuat dan stabil"
+    },
+    {
+      "test": "Hydrant Gedung Lt. 10",
+      "pressure": "5 bar",
+      "transmitPower": "20 meter",
+      "nozzlePosition": "Jet & Spray",
+      "status": "Baik",
+      "description": "Tekanan sesuai standar"
+    },
+    {
+      "test": "Hydrant Halaman 01",
+      "pressure": "7 bar",
+      "transmitPower": "25 meter",
+      "nozzlePosition": "Jet & Spray",
+      "status": "Baik",
+      "description": "Pancaran air kuat dan stabil"
+    },
+    {
+      "test": "Hydrant Gedung Lt. 10",
+      "pressure": "5 bar",
+      "transmitPower": "20 meter",
+      "nozzlePosition": "Jet & Spray",
+      "status": "Baik",
+      "description": "Tekanan sesuai standar"
+    },
+    {
+      "test": "Hydrant Halaman 01",
+      "pressure": "7 bar",
+      "transmitPower": "25 meter",
+      "nozzlePosition": "Jet & Spray",
+      "status": "Baik",
+      "description": "Pancaran air kuat dan stabil"
+    },
+    {
+      "test": "Hydrant Gedung Lt. 10",
+      "pressure": "5 bar",
+      "transmitPower": "20 meter",
+      "nozzlePosition": "Jet & Spray",
+      "status": "Baik",
+      "description": "Tekanan sesuai standar"
     }
   ],
-  "conclusion": "String",
-  "recommendations": "String"
+  "conclusion": "Secara keseluruhan, sistem proteksi kebakaran di PT. Gedung Perkantoran Jaya dalam kondisi baik dan memenuhi persyaratan K3, namun memerlukan perbaikan kecil pada pengecatan pipa utama dan penambahan dokumentasi.",
+  "recommendations": "1. Melakukan pengecatan ulang pada jalur pipa utama untuk mencegah korosi. 2. Melengkapi dokumen riksa uji sebelumnya untuk arsip. 3. Melakukan pengujian rutin setiap 6 bulan sekali."
 }
