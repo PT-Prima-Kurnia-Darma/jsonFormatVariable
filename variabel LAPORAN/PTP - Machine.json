@@ -1,142 +1,142 @@
 {
-  "examinationType": "Pemeriksaan dan Pengujian Pertama",
-  "extraId": 123,
+  "examinationType": "Pemeriksaan Berkala",
+  "extraId": 456,
   "inspectionType": "Pesawat Tenaga dan Produksi",
-  "createdAt": "sabtu",
+  "createdAt": "Jumat, 25 Juli 2025",
   "generalData": {
-    "companyName": "PT. Gedung Perkantoran Sentosa",
-    "companyLocation": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
-    "userInCharge": "PT. Gedung Perkantoran Sentosa",
-    "userAddressInCharge": "Jl. Jenderal Sudirman Kav. 52-53, Jakarta Selatan",
-    "subcontractorPersonInCharge": "Bapak Suryo Pranoto (Chief Engineer)",
-    "unitLocation": "Ruang Genset, Basement 2",
-    "equipmentType": "Diesel Generator Set",
-    "brandType": "Perkins / 4008-30TAG3",
-    "serialNumberUnitNumber": "DGB-01-2022-7891",
-    "manufacturer": "Perkins Engines Company Ltd.",
-    "locationAndYearOfManufacture": "United Kingdom / 2022",
-    "technicalDataDieselMotorPowerRpm": "750 kVA / 1500 RPM",
-    "intendedUse": "Sumber tenaga listrik cadangan (standby power)",
-    "pjk3SkpNo": "KEP.123/BINWASK3-PNK3/PJK3/XI/2023",
-    "ak3SkpNo": "KEP.456/BINWASK3/AK3-PTP/XI/2023",
-    "usagePermitNumber": "Baru",
-    "operatorName": "Tim Engineering Gedung",
-    "equipmentHistory": "Instalasi baru, belum pernah beroperasi kecuali untuk testing."
+    "companyName": "PT. IVAN GACOR",
+    "companyLocation": "Kawasan Industri Rungkut, Jl. Rungkut Industri Raya No. 10, Surabaya",
+    "userInCharge": "PT. Industri Manufaktur Prima",
+    "userAddressInCharge": "Kawasan Industri Rungkut, Jl. Rungkut Industri Raya No. 10, Surabaya",
+    "subcontractorPersonInCharge": "Bapak Agung Wijoyo (Manajer Pabrik)",
+    "unitLocation": "Power House A",
+    "equipmentType": "Diesel Engine",
+    "brandType": "Cummins / KTA50-G3",
+    "serialNumberUnitNumber": "CMN-2019-03-5512",
+    "manufacturer": "Cummins Inc.",
+    "locationAndYearOfManufacture": "USA / 2019",
+    "technicalDataDieselMotorPowerRpm": "1250 kVA / 1500 RPM",
+    "intendedUse": "Penggerak utama pompa hidrolik",
+    "pjk3SkpNo": "SKP.789/BINWASK3-PNK3/PJK3/V/2024",
+    "ak3SkpNo": "SKP.987/BINWASK3/AK3-PTP/V/2024",
+    "usagePermitNumber": "560/112/Disnaker/2019",
+    "operatorName": "Andi Setiawan",
+    "equipmentHistory": "Overhaul pada tahun 2023. Penggantian injector set."
   },
   "technicalData": {
     "machineSpecification": {
-      "brandType": "Perkins / 4008-30TAG3",
-      "technicalDataMaxFeederSpeed": null,
-      "technicalDataMaxPlateWidth": null,
-      "technicalDataPlateThickness": null,
-      "technicalDataMaxPlateWeight": null,
-      "technicalDataMaxInnerCoilDiameter": null,
-      "technicalDataMaxOuterCoilDiameter": null,
-      "technicalDataDriveMotor": "Mesin Diesel 8 Silinder",
-      "technicalDataDieselMotorPowerRpm": 677,
-      "serialNumberUnitNumber": "DGB-01-2022-7891",
-      "locationAndYearOfManufacture": "United Kingdom / 2022",
-      "technicalDataMachineWeight": 5500,
-      "technicalDataOverallDimension": "4000 x 1800 x 2200"
+      "brandType": "Cummins / KTA50-G3",
+      "technicalDataMaxFeederSpeed": 0,
+      "technicalDataMaxPlateWidth": 0,
+      "technicalDataPlateThickness": 0,
+      "technicalDataMaxPlateWeight": 0,
+      "technicalDataMaxInnerCoilDiameter": 0,
+      "technicalDataMaxOuterCoilDiameter": 0,
+      "technicalDataDriveMotor": "Mesin Diesel 16 Silinder V-Type",
+      "technicalDataDieselMotorPowerRpm": 1120,
+      "serialNumberUnitNumber": "CMN-2019-03-5512",
+      "locationAndYearOfManufacture": "USA / 2019",
+      "technicalDataMachineWeight": 8700,
+      "technicalDataOverallDimension": "5500 x 2100 x 2500"
     },
     "foundationDimension": {
-      "technicalDataFoundationDim": "4000 x 1800 x 800",
-      "technicalDataFoundationDistance": "Terpasang pada skid base",
-      "technicalDataVibrationDamperType": "Spring Mounting",
-      "technicalDataFoundationWeight1": 13824,
-      "technicalDataFoundationWeight2": 13824
+      "technicalDataFoundationDim": "5500 x 2100 x 1200",
+      "technicalDataFoundationDistance": "Sesuai gambar instalasi",
+      "technicalDataVibrationDamperType": "Kombinasi Karet dan Pegas",
+      "technicalDataFoundationWeight1": 33264,
+      "technicalDataFoundationWeight2": 33264
     }
   },
   "visualInspection": {
-    "foundation": { "status": true, "result": "Kokoh, tidak ada keretakan" },
-    "foundationBearing": { "status": true, "result": "Spring mounting terpasang baik" },
+    "foundation": { "status": true, "result": "Kondisi baik, tidak ada keretakan visual." },
+    "foundationBearing": { "status": false, "result": "Ditemukan karet bantalan yang mulai getas." },
     "machineFrame": {
-      "mainFrame": { "status": true, "result": "Skid base kokoh, tidak ada korosi" },
-      "braceFrame": { "status": true, "result": "Terpasang dengan baik" }
+      "mainFrame": { "status": true, "result": "Rangka utama kokoh, cat masih bagus." },
+      "braceFrame": { "status": false, "result": "Baut pada rangka penguat sisi kanan kendor." }
     },
-    "roller": { "status": null, "result": "Tidak Berlaku" },
-    "controlPanel": { "status": true, "result": "Panel Deep Sea, bersih dan terawat" },
-    "display": { "status": true, "result": "Layar LCD berfungsi, pembacaan jelas" },
-    "operationButtons": { "status": true, "result": "Tombol Start/Stop/Auto berfungsi" },
+    "roller": { "status": true, "result": "Tidak Berlaku, komponen tidak ada pada unit ini." },
+    "controlPanel": { "status": false, "result": "Beberapa label instruksi pada panel mulai pudar." },
+    "display": { "status": true, "result": "Layar display berfungsi normal dan pembacaan jelas." },
+    "operationButtons": { "status": false, "result": "Tombol 'Test Lamp' macet dan tidak berfungsi." },
     "electricalComponents": {
-      "measurements": { "electricVoltage": 400, "electricPhase": 3, "electricFrequency": 50, "electricAmper": 1082 },
-      "voltage": { "status": true, "result": "Sesuai standar" },
-      "power": { "status": true, "result": "Sesuai spesifikasi" },
-      "phase": { "status": true, "result": "Lengkap" },
-      "frequency": { "status": true, "result": "Sesuai standar" },
-      "current": { "status": true, "result": "Sesuai kapasitas" },
-      "electricalPanel": { "status": true, "result": "Terminal bersih, pengkabelan rapi" },
-      "conductor": { "status": true, "result": "Isolasi kabel utuh, ukuran sesuai" },
-      "insulation": { "status": true, "result": "Tahanan isolasi baik" }
+      "measurements": { "electricVoltage": 380, "electricPhase": 3, "electricFrequency": 50, "electricAmper": 1899 },
+      "voltage": { "status": true, "result": "Tegangan terukur stabil sesuai standar." },
+      "power": { "status": false, "result": "Daya sedikit di bawah nameplate saat beban penuh." },
+      "phase": { "status": true, "result": "Keseimbangan phase masih dalam batas toleransi." },
+      "frequency": { "status": false, "result": "Frekuensi mengalami drop sesaat ketika start awal." },
+      "current": { "status": true, "result": "Arus normal dan seimbang di semua phase." },
+      "electricalPanel": { "status": false, "result": "Ditemukan debu berlebih di dalam terminal panel." },
+      "conductor": { "status": true, "result": "Kondisi penghantar baik, tidak terdeteksi panas berlebih." },
+      "insulation": { "status": false, "result": "Tahanan isolasi pada kabel minor terdeteksi sedikit menurun." }
     },
     "safetyDevices": {
-      "limitSwitchUp": { "status": null, "result": "Tidak Berlaku" },
-      "limitSwitchDown": { "status": null, "result": "Tidak Berlaku" },
-      "grounding": { "status": true, "result": "Terpasang pada body dan panel" },
-      "safetyGuard": { "status": true, "result": "Belt guard & radiator guard terpasang" },
-      "stampLock": { "status": null, "result": "Tidak Berlaku" },
-      "pressureIndicator": { "status": true, "result": "Indikator tekanan oli berfungsi" },
-      "emergencyStop": { "status": true, "result": "Tombol jamur terpasang dan mudah dijangkau" },
-      "handSensor": { "status": null, "result": "Tidak Berlaku" }
+      "limitSwitchUp": { "status": true, "result": "Tidak Berlaku, komponen tidak ada." },
+      "limitSwitchDown": { "status": false, "result": "Tidak Berlaku, komponen tidak ada." },
+      "grounding": { "status": true, "result": "Kabel grounding terpasang baik pada body dan panel." },
+      "safetyGuard": { "status": false, "result": "Tutup pengaman belt ditemukan sedikit kendor." },
+      "stampLock": { "status": true, "result": "Tidak Berlaku, komponen tidak ada." },
+      "pressureIndicator": { "status": false, "result": "Indikator tekanan oli analog dan sensor digital menunjukkan selisih 5%." },
+      "emergencyStop": { "status": true, "result": "Tombol darurat mudah diakses dan berfungsi dengan baik." },
+      "handSensor": { "status": false, "result": "Tidak Berlaku, komponen tidak ada." }
     },
     "hydraulic": {
-      "pump": { "status": null, "result": "Tidak Berlaku" },
-      "hose": { "status": true, "result": "Selang bahan bakar kondisi baik, tidak getas" }
+      "pump": { "status": true, "result": "Tidak Berlaku, unit tidak menggunakan pompa hidrolik." },
+      "hose": { "status": false, "result": "Selang bahan bakar kondisi baik, tidak ditemukan getas atau retak." }
     }
   },
   "testingAndMeasurement": {
     "safetyDeviceTest": {
-      "grounding": { "status": true, "result": "Hasil ukur 0.3 Ohm" },
-      "safetyGuard": { "status": true, "result": "Terpasang kuat" },
-      "roller": { "status": null, "result": "Tidak Berlaku" },
-      "emergencyStop": { "status": true, "result": "Mesin langsung mati saat ditekan" }
+      "grounding": { "status": true, "result": "Hasil ukur 0.7 Ohm, memenuhi syarat." },
+      "safetyGuard": { "status": false, "result": "Gagal, tutup pengaman bergetar berlebihan saat RPM tinggi." },
+      "roller": { "status": true, "result": "Tidak Berlaku, komponen tidak ada." },
+      "emergencyStop": { "status": false, "result": "Gagal, waktu henti mesin setelah tombol ditekan lebih dari 5 detik." }
     },
-    "speedTest": { "status": true, "result": "Stabil di 1500 RPM" },
-    "functionTest": { "status": true, "result": "Berfungsi normal saat uji beban (load test)" },
-    "weldJointTest": { "status": true, "result": "Tidak ditemukan cacat pada las skid base" },
-    "vibrationTest": { "status": true, "result": "Getaran dalam batas toleransi" },
-    "lightingTest": { "status": true, "result": "300 Lux di sekitar unit" },
-    "noiseTest": { "status": false, "result": "98 dB (di dalam ruang genset)" }
+    "speedTest": { "status": true, "result": "Kecepatan stabil di 1500 RPM tanpa fluktuasi." },
+    "functionTest": { "status": false, "result": "Fungsi utama berjalan, namun terdeteksi ada sedikit penurunan performa." },
+    "weldJointTest": { "status": true, "result": "Tidak ditemukan cacat atau retak pada sambungan las di skid base." },
+    "vibrationTest": { "status": false, "result": "Getaran pada sisi kiri mesin melebihi batas toleransi yang diizinkan." },
+    "lightingTest": { "status": true, "result": "Pencahayaan di area kerja 300 Lux, sangat baik." },
+    "noiseTest": { "status": false, "result": "Kebisingan terukur 98 dB, melebihi NAB 85 dB." }
   },
   "electricalPanelComponents": {
-    "ka": "N/A",
-    "voltage": { "rs": 401, "rt": 400, "st": 402, "rn": 231, "rg": 0.5, "ng": 0.5 },
+    "ka": "50kA",
+    "voltage": { "rs": 376, "rt": 375, "st": 377, "rn": 218, "rg": 1.2, "ng": 1.1 },
     "powerInfo": {
-      "frequency": 50.0,
-      "cosQ": 0.8,
-      "ampere": { "r": 0, "s": 0, "t": 0 },
-      "result": "Pengukuran tanpa beban (no load)"
+      "frequency": 50.1,
+      "cosQ": 0.82,
+      "ampere": { "r": 1501, "s": 1650, "t": 1505 },
+      "result": "Pengukuran saat beban 80%, terdeteksi arus tidak seimbang."
     }
   },
   "conclusionAndRecommendation": {
-    "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, Diesel Generator Set merk Perkins / 4008-30TAG3 dengan No. Seri DGB-01-2022-7891 dinyatakan LAIK dan aman untuk dioperasikan dengan catatan.",
-    "recommendations": "1. Operator wajib menggunakan APD (earmuff/earplug) saat berada di ruang genset yang sedang beroperasi karena tingkat kebisingan melebihi NAB.\n2. Lakukan pemanasan mesin secara rutin seminggu sekali."
+    "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, Diesel Engine merk Cummins / KTA50-G3 dengan No. Seri CMN-2019-03-5512 dinyatakan TIDAK LAIK beroperasi dan memerlukan perbaikan sebelum dapat digunakan kembali.",
+    "recommendations": "1. Perbaiki bantalan pondasi yang getas.\n2. Kencangkan baut rangka penguat.\n3. Perbaiki tombol 'Test Lamp' yang macet.\n4. Lakukan balancing beban pada panel listrik.\n5. Kencangkan tutup pengaman belt dan lakukan uji ulang.\n6. Lakukan tune-up mesin untuk mengatasi penurunan performa dan getaran berlebih."
   },
   "administration": {
-    "inspectionDate": "26 Juli 2024"
+    "inspectionDate": "25 Juli 2025"
   },
   "foundationAnalysis": {
-    "actualWeight": 5.5,
+    "actualWeight": 8.7,
     "additionalMeterials": 0,
-    "totalWeight": 5.5,
-    "minimumFoundationWeight": 5.5,
-    "totalMinimumFoundationWeight": 8.25,
-    "foundationWeight": 13.82,
-    "heightFoundation": 0.8,
+    "totalWeight": 8.7,
+    "minimumFoundationWeight": 8.7,
+    "totalMinimumFoundationWeight": 13.05,
+    "foundationWeight": 33.26,
+    "heightFoundation": 1.2,
     "foundationAnalysisResult": "Memenuhi"
   },
   "environmentalMeasurement": {
     "noise": {
-      "pointA": { "result": 98, "status": "Tidak Memenuhi" },
-      "pointB": { "result": 97, "status": "Tidak Memenuhi" },
-      "pointC": { "result": 98, "status": "Tidak Memenuhi" },
-      "pointD": { "result": 96, "status": "Tidak Memenuhi" }
+      "pointA": { "result": 95, "status": "Memenuhi" },
+      "pointB": { "result": 98, "status": "Tidak Memenuhi" },
+      "pointC": { "result": 94, "status": "Memenuhi" },
+      "pointD": { "result": 95, "status": "Memenuhi" }
     },
     "lighting": {
-      "pointA": { "result": 310, "status": "Memenuhi" },
-      "pointB": { "result": 300, "status": "Memenuhi" },
-      "pointC": { "result": 290, "status": "Memenuhi" },
-      "pointD": { "result": 305, "status": "Memenuhi" }
+      "pointA": { "result": 250, "status": "Memenuhi" },
+      "pointB": { "result": 80, "status": "Tidak Memenuhi" },
+      "pointC": { "result": 240, "status": "Memenuhi" },
+      "pointD": { "result": 260, "status": "Memenuhi" }
     }
   }
 }
