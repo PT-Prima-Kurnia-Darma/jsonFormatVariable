@@ -7,7 +7,8 @@
   "generalData": {
     "ownerName": "PT. IVAN JAGO PART 3",
     "ownerAddress": "Jl. Gatot Subroto No. 112, Jakarta Selatan",
-    "userAddress": "Kawasan Industri MM2100, Blok G, Cibitung"
+    "userAddress": "Kawasan Industri MM2100, Blok G, Cibitung",
+    "inspectionType": ""
   },
   "technicalData": {
     "manufacturer": "Liebherr",
@@ -16,7 +17,7 @@
     "capacityWorkingLoad": "90.000 kg",
     "maxLiftingHeight": "77.5 m",
     "materialCertificateNumber": "CERT-MAT-12345",
-    "liftingSpeedMpm": "120 m/min" 
+    "liftingSpeedMpm": "120 m/min"
   },
   "inspectionResult": {
     "visualCheck": {

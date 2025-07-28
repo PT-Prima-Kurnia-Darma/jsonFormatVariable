@@ -336,23 +336,27 @@
     },
     "ndtMainDrum": {
       "ndtType": "Visual",
-      "specification": { "a": "50", "b": "700", "c": "550", "d": "800", "e": "50", "f": "170", "g": "60", "result": { "status": false, "result": "Sesuai standar" } },
-      "measurementResults": { "a": "50", "b": "700", "c": "550", "d": "800", "e": "50", "f": "170", "g": "60", "result": { "status": true, "result": "Kondisi Baik" } }
+      "capacity": "",
+      "specification": { "a": "50", "b": "700", "c": "550", "d": "800", "e": "50", "f": "170", "g": "60", "h": "", "result": { "status": false, "result": "Sesuai standar" } },
+      "measurementResults": { "a": "50", "b": "700", "c": "550", "d": "800", "e": "50", "f": "170", "g": "60", "h": "", "result": { "status": true, "result": "Kondisi Baik" } }
     },
     "ndtAuxiliaryDrum": {
       "ndtType": "Visual",
-      "specification": { "a": "45", "b": "650", "c": "500", "d": "750", "e": "45", "f": "160", "g": "55", "result": { "status": false, "result": "Sesuai standar" } },
-      "measurementResults": { "a": "45", "b": "650", "c": "500", "d": "750", "e": "45", "f": "160", "g": "55", "result": { "status": true, "result": "Kondisi Baik" } }
+      "capacity": "",
+      "specification": { "a": "45", "b": "650", "c": "500", "d": "750", "e": "45", "f": "160", "g": "55", "h": "", "result": { "status": false, "result": "Sesuai standar" } },
+      "measurementResults": { "a": "45", "b": "650", "c": "500", "d": "750", "e": "45", "f": "160", "g": "55", "h": "", "result": { "status": true, "result": "Kondisi Baik" } }
     },
     "ndtMainPulley": {
       "ndtType": "Visual",
-      "specification": { "a": "35", "b": "25", "c": "120", "d": "50", "e": "500", "result": { "status": false, "result": "Sesuai standar" } },
-      "measurementResults": { "a": "35", "b": "25", "c": "120", "d": "50", "e": "500", "result": { "status": true, "result": "Kondisi Baik" } }
+      "capacity": "",
+      "specification": { "a": "35", "b": "25", "c": "120", "d": "50", "e": "500", "f": "", "g": "", "h": "", "result": { "status": false, "result": "Sesuai standar" } },
+      "measurementResults": { "a": "35", "b": "25", "c": "120", "d": "50", "e": "500", "f": "", "g": "", "h": "", "result": { "status": true, "result": "Kondisi Baik" } }
     },
     "ndtAuxiliaryPulley": {
       "ndtType": "Visual",
-      "specification": { "a": "30", "b": "20", "c": "110", "d": "45", "e": "450", "result": { "status": false, "result": "Sesuai standar" } },
-      "measurementResults": { "a": "30", "b": "20", "c": "110", "d": "45", "e": "450", "result": { "status": true, "result": "Kondisi Baik" } }
+      "capacity": "",
+      "specification": { "a": "30", "b": "20", "c": "110", "d": "45", "e": "450", "f": "", "g": "", "h": "", "result": { "status": false, "result": "Sesuai standar" } },
+      "measurementResults": { "a": "30", "b": "20", "c": "110", "d": "45", "e": "450", "f": "", "g": "", "h": "", "result": { "status": true, "result": "Kondisi Baik" } }
     },
     "testingFunction": {
       "hoistingLowering": { "status": false, "result": "Berfungsi dengan baik" },
