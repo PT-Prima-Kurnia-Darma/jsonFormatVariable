@@ -26,25 +26,25 @@
   "technicalData": {
     "machineSpecification": {
       "brandType": "Cummins / KTA50-G3",
-      "technicalDataMaxFeederSpeed": 0,
-      "technicalDataMaxPlateWidth": 0,
-      "technicalDataPlateThickness": 0,
-      "technicalDataMaxPlateWeight": 0,
-      "technicalDataMaxInnerCoilDiameter": 0,
-      "technicalDataMaxOuterCoilDiameter": 0,
+      "technicalDataMaxFeederSpeed": "10",
+      "technicalDataMaxPlateWidth": "10",
+      "technicalDataPlateThickness": "10",
+      "technicalDataMaxPlateWeight": "10",
+      "technicalDataMaxInnerCoilDiameter": "10",
+      "technicalDataMaxOuterCoilDiameter": "10",
       "technicalDataDriveMotor": "Mesin Diesel 16 Silinder V-Type",
-      "technicalDataDieselMotorPowerRpm": 1120,
+      "technicalDataDieselMotorPowerRpm": "10",
       "serialNumberUnitNumber": "CMN-2019-03-5512",
       "locationAndYearOfManufacture": "USA / 2019",
-      "technicalDataMachineWeight": 8700,
+      "technicalDataMachineWeight": "10",
       "technicalDataOverallDimension": "5500 x 2100 x 2500"
     },
     "foundationDimension": {
       "technicalDataFoundationDim": "5500 x 2100 x 1200",
       "technicalDataFoundationDistance": "Sesuai gambar instalasi",
       "technicalDataVibrationDamperType": "Kombinasi Karet dan Pegas",
-      "technicalDataFoundationWeight1": 33264,
-      "technicalDataFoundationWeight2": 33264
+      "technicalDataFoundationWeight1": "10",
+      "technicalDataFoundationWeight2": "10"
     }
   },
   "visualInspection": {
@@ -59,7 +59,7 @@
     "display": { "status": true, "result": "Layar display berfungsi normal dan pembacaan jelas." },
     "operationButtons": { "status": false, "result": "Tombol 'Test Lamp' macet dan tidak berfungsi." },
     "electricalComponents": {
-      "measurements": { "electricVoltage": 380, "electricPhase": 3, "electricFrequency": 50, "electricAmper": 1899 },
+      "measurements": { "electricVoltage": "10", "electricPhase": "10", "electricFrequency": "10", "electricAmper": "10" },
       "voltage": { "status": true, "result": "Tegangan terukur stabil sesuai standar." },
       "power": { "status": false, "result": "Daya sedikit di bawah nameplate saat beban penuh." },
       "phase": { "status": true, "result": "Keseimbangan phase masih dalam batas toleransi." },
@@ -100,11 +100,11 @@
   },
   "electricalPanelComponents": {
     "ka": "50kA",
-    "voltage": { "rs": 376, "rt": 375, "st": 377, "rn": 218, "rg": 1.2, "ng": 1.1 },
+    "voltage": { "rs": "10", "rt": "10", "st": "10", "rn": "10", "rg": "10", "ng": "10" },
     "powerInfo": {
-      "frequency": 50.1,
-      "cosQ": 0.82,
-      "ampere": { "r": 1501, "s": 1650, "t": 1505 },
+      "frequency": "10",
+      "cosQ": "10",
+      "ampere": { "r": "10", "s": "10", "t": "10" },
       "result": "Pengukuran saat beban 80%, terdeteksi arus tidak seimbang."
     }
   },
@@ -116,27 +116,27 @@
     "inspectionDate": "25 Juli 2025"
   },
   "foundationAnalysis": {
-    "actualWeight": 8.7,
-    "additionalMeterials": 0,
-    "totalWeight": 8.7,
-    "minimumFoundationWeight": 8.7,
-    "totalMinimumFoundationWeight": 13.05,
-    "foundationWeight": 33.26,
-    "heightFoundation": 1.2,
+    "actualWeight": "10",
+    "additionalMeterials": "10",
+    "totalWeight": "10",
+    "minimumFoundationWeight": "10",
+    "totalMinimumFoundationWeight": "10",
+    "foundationWeight": "10",
+    "heightFoundation": "10",
     "foundationAnalysisResult": "Memenuhi"
   },
   "environmentalMeasurement": {
     "noise": {
-      "pointA": { "result": 95, "status": "Memenuhi" },
-      "pointB": { "result": 98, "status": "Tidak Memenuhi" },
-      "pointC": { "result": 94, "status": "Memenuhi" },
-      "pointD": { "result": 95, "status": "Memenuhi" }
+      "pointA": { "result": "10", "status": "Memenuhi" },
+      "pointB": { "result": "10", "status": "Tidak Memenuhi" },
+      "pointC": { "result": "10", "status": "Memenuhi" },
+      "pointD": { "result": "10", "status": "Memenuhi" }
     },
     "lighting": {
-      "pointA": { "result": 250, "status": "Memenuhi" },
-      "pointB": { "result": 80, "status": "Tidak Memenuhi" },
-      "pointC": { "result": 240, "status": "Memenuhi" },
-      "pointD": { "result": 260, "status": "Memenuhi" }
+      "pointA": { "result": "10", "status": "Memenuhi" },
+      "pointB": { "result": "10", "status": "Tidak Memenuhi" },
+      "pointC": { "result": "10", "status": "Memenuhi" },
+      "pointD": { "result": "10", "status": "Memenuhi" }
     }
   }
 }
