@@ -49,123 +49,123 @@
   "visualChecks": {
     "basicConstruction": {
       "foundation": { "status": true, "result": "Kondisi kokoh, tidak ada keretakan" },
-      "dieselHousing": { "status": true, "result": "Tidak ada korosi atau kerusakan" },
+      "dieselHousing": { "status": false, "result": "Terdapat sedikit korosi di bagian bawah" },
       "support": { "status": true, "result": "Terpasang dengan baik dan kencang" },
-      "anchorBolt": { "status": true, "result": "Semua baut terpasang dan kencang" }
+      "anchorBolt": { "status": false, "result": "Satu baut kendor, perlu dikencangkan" }
     },
     "structuralConstruction": {
       "dailyTank": { "status": true, "result": "Bersih, tidak ada kebocoran" },
-      "muffler": { "status": true, "result": "Terpasang dengan baik, tidak ada kebocoran gas buang" },
+      "muffler": { "status": false, "result": "Sedikit rembesan gas buang terdeteksi" },
       "airVessel": { "status": true, "result": "N/A" },
-      "panel": { "status": true, "result": "Pintu panel dapat ditutup rapat" }
+      "panel": { "status": false, "result": "Pintu panel sulit ditutup rapat" }
     },
     "lubricationSystem": {
-      "oil": { "status": false, "result": "Level cukup, namun warna sudah keruh, perlu diganti" },
-      "oilStrainer": { "status": true, "result": "Bersih" },
+      "oil": { "status": true, "result": "Level oli cukup dan jernih" },
+      "oilStrainer": { "status": false, "result": "Ditemukan sedikit endapan" },
       "oilCooler": { "status": true, "result": "Tidak ada kebocoran" },
-      "oilFilter": { "status": true, "result": "Tidak ada kebocoran" },
+      "oilFilter": { "status": false, "result": "Indikator filter menunjukkan kotor" },
       "byPassFilter": { "status": true, "result": "Berfungsi baik" },
-      "safetyValve": { "status": true, "result": "Berfungsi baik" },
+      "safetyValve": { "status": false, "result": "Perlu pengujian ulang" },
       "packing": { "status": true, "result": "Tidak ada rembesan oli" }
     },
     "fuelSystem": {
       "dailyTank": { "status": true, "result": "Lengkapi dengan Stiker Rambu K3" },
-      "fuelInjector": { "status": true, "result": "Kondisi Baik" },
+      "fuelInjector": { "status": false, "result": "Semprotan tidak merata pada silinder 3" },
       "connections": { "status": true, "result": "Tidak ada kebocoran bahan bakar" },
-      "floatTank": { "status": true, "result": "Kondisi Baik" },
+      "floatTank": { "status": false, "result": "Level pelampung tidak akurat" },
       "fuelFilter": { "status": true, "result": "Bersih, tidak ada sumbatan" },
-      "fuelPump": { "status": true, "result": "Berfungsi normal" },
+      "fuelPump": { "status": false, "result": "Tekanan sedikit di bawah standar" },
       "magneticScreen": { "status": true, "result": "Kondisi Baik" },
-      "governor": { "status": true, "result": "Berfungsi normal" },
+      "governor": { "status": false, "result": "Respon sedikit lambat" },
       "throttleShaft": { "status": true, "result": "Kondisi Baik" },
-      "regulator": { "status": true, "result": "Kondisi Baik" },
+      "regulator": { "status": false, "result": "Tegangan output tidak stabil" },
       "shutOffValve": { "status": true, "result": "Berfungsi normal" }
     },
     "startingAid": {
       "feedPump": { "status": true, "result": "Kondisi Baik" },
-      "fuelValve": { "status": true, "result": "Kondisi Baik" },
+      "fuelValve": { "status": false, "result": "Sedikit macet saat dibuka" },
       "primingPump": { "status": true, "result": "Kondisi Baik" },
-      "heaterPlug": { "status": true, "result": "N/A" },
+      "heaterPlug": { "status": false, "result": "N/A" },
       "heaterSwitch": { "status": true, "result": "N/A" },
-      "preHeater": { "status": true, "result": "N/A" },
+      "preHeater": { "status": false, "result": "N/A" },
       "waterSignal": { "status": true, "result": "Berfungsi baik" },
-      "startingSwitch": { "status": true, "result": "Berfungsi baik" },
+      "startingSwitch": { "status": false, "result": "Kontak kadang tidak terhubung" },
       "batteryPoles": { "status": true, "result": "Bersih dan terpasang kencang" },
-      "thermostartTank": { "status": true, "result": "N/A" },
+      "thermostartTank": { "status": false, "result": "N/A" },
       "thermostart": { "status": true, "result": "N/A" },
-      "heaterSignal": { "status": true, "result": "N/A" },
+      "heaterSignal": { "status": false, "result": "N/A" },
       "thermostartSwitch": { "status": true, "result": "N/A" },
-      "glowPlug": { "status": true, "result": "N/A" },
+      "glowPlug": { "status": false, "result": "N/A" },
       "speedSensor": { "status": true, "result": "Berfungsi baik" },
-      "serviceMeter": { "status": true, "result": "Berfungsi baik" },
+      "serviceMeter": { "status": false, "result": "Angka tidak berubah" },
       "tempSensor": { "status": true, "result": "Berfungsi baik" },
-      "startingMotor": { "status": true, "result": "Berfungsi baik" }
+      "startingMotor": { "status": false, "result": "Suara sedikit kasar saat start" }
     },
     "coolingSystem": {
       "coolingWater": { "status": true, "result": "Level cukup, tidak keruh" },
-      "bolts": { "status": true, "result": "Terpasang kencang" },
+      "bolts": { "status": false, "result": "Satu baut pada rumah kipas kendor" },
       "clamps": { "status": true, "result": "Terpasang kencang" },
-      "radiator": { "status": true, "result": "Bersih, tidak ada kebocoran" },
+      "radiator": { "status": false, "result": "Terdapat sirip yang bengkok" },
       "thermostat": { "status": true, "result": "Berfungsi baik" },
-      "fan": { "status": true, "result": "Tidak ada kerusakan pada bilah" },
+      "fan": { "status": false, "result": "Sedikit retak pada satu bilah" },
       "fanGuard": { "status": true, "result": "Terpasang dengan baik" },
-      "fanRotation": { "status": true, "result": "Normal" },
+      "fanRotation": { "status": false, "result": "Sedikit goyang" },
       "bearing": { "status": true, "result": "Tidak ada suara aneh" }
     },
     "airCirculationSystem": {
       "preCleaner": { "status": true, "result": "Bersih" },
-      "dustIndicator": { "status": true, "result": "Normal" },
+      "dustIndicator": { "status": false, "result": "Indikator sudah merah" },
       "airCleaner": { "status": true, "result": "Bersih" },
-      "turboCharger": { "status": true, "result": "Tidak ada suara aneh" },
+      "turboCharger": { "status": false, "result": "Terdengar siulan tidak normal" },
       "clamps": { "status": true, "result": "Terpasang kencang" },
-      "afterCooler": { "status": true, "result": "Bersih" },
+      "afterCooler": { "status": false, "result": "Perlu dibersihkan" },
       "muffler": { "status": true, "result": "Terpasang baik" },
-      "silencer": { "status": true, "result": "Terpasang baik" },
+      "silencer": { "status": false, "result": "Agak kotor" },
       "heatDamper": { "status": true, "result": "Terpasang baik" },
-      "bolts": { "status": true, "result": "Terpasang kencang" }
+      "bolts": { "status": false, "result": "Perlu dikencangkan ulang" }
     },
     "mainParts": {
       "damperBolts": { "status": true, "result": "Terpasang kencang" },
-      "support": { "status": true, "result": "Terpasang baik" },
+      "support": { "status": false, "result": "Karet support getas" },
       "flyWheelHousing": { "status": true, "result": "Tidak ada kerusakan" },
-      "flyWheel": { "status": true, "result": "Tidak ada kerusakan" },
+      "flyWheel": { "status": false, "result": "Gigi starter sedikit aus" },
       "vibrationDamper": { "status": true, "result": "Kondisi baik" },
-      "beltAndPulley": { "status": true, "result": "Kondisi baik, tidak getas" },
+      "beltAndPulley": { "status": false, "result": "Belt terlihat retak-retak" },
       "crankshaft": { "status": true, "result": "Kondisi baik" }
     },
     "generatorParts": {
       "terminal": { "status": true, "result": "Koneksi kencang, tidak ada panas berlebih" },
-      "cable": { "status": true, "result": "Isolasi baik, tidak ada kerusakan" },
-      "panel": { "status": false, "result": "Panel Board tidak berfungsi" },
-      "ampereMeter": { "status": true, "result": "Berfungsi Baik" },
+      "cable": { "status": false, "result": "Isolasi kabel ada yang terkelupas" },
+      "panel": { "status": true, "result": "Panel Board berfungsi normal" },
+      "ampereMeter": { "status": false, "result": "Jarum tidak stabil" },
       "voltMeter": { "status": true, "result": "Berfungsi Baik" },
-      "frequencyMeter": { "status": true, "result": "Berfungsi Baik" },
+      "frequencyMeter": { "status": false, "result": "Angka bergeser 0.5 Hz" },
       "circuitBreaker": { "status": true, "result": "Berfungsi Baik" },
-      "onOffSwitch": { "status": true, "result": "Berfungsi Baik" }
+      "onOffSwitch": { "status": false, "result": "Agak keras saat dioperasikan" }
     },
     "transmission": {
       "gear": { "status": true, "result": "N/A" },
-      "belt": { "status": true, "result": "Kondisi baik" },
+      "belt": { "status": false, "result": "Perlu penyesuaian kekencangan" },
       "chain": { "status": true, "result": "N/A" }
     },
     "mdp": {
       "cable": { "status": true, "result": "Kondisi Baik" },
-      "condition": { "status": true, "result": "Kondisi Baik" },
+      "condition": { "status": false, "result": "Terdapat debu tebal di dalam panel" },
       "ampereMeter": { "status": true, "result": "Berfungsi Baik" },
-      "voltMeter": { "status": true, "result": "Berfungsi Baik" },
+      "voltMeter": { "status": false, "result": "Pembacaan tidak akurat" },
       "mainCircuitBreaker": { "status": true, "result": "Berfungsi Baik" }
     },
     "safetyDevice": {
-      "grounding": { "status": true, "result": "0.8 Ω" },
-      "lightningArrester": { "status": true, "result": "Terpasang" },
+      "grounding": { "status": true, "result": "0.8 Ω" },
+      "lightningArrester": { "status": false, "result": "Kabel koneksi korosi" },
       "emergencyStop": { "status": true, "result": "Berfungsi Baik" },
-      "governor": { "status": true, "result": "Berfungsi Baik" },
+      "governor": { "status": false, "result": "Perlu kalibrasi ulang" },
       "thermostat": { "status": true, "result": "Berfungsi Baik" },
-      "waterSignal": { "status": true, "result": "Berfungsi Baik" },
+      "waterSignal": { "status": false, "result": "Alarm tidak berbunyi saat diuji" },
       "fanGuard": { "status": true, "result": "Terpasang Baik" },
-      "silencer": { "status": true, "result": "Berfungsi Baik" },
+      "silencer": { "status": false, "result": "Banyak jelaga" },
       "vibrationDamper": { "status": true, "result": "Berfungsi dengan Baik" },
-      "circuitBreaker": { "status": true, "result": "MCCB sesuai" },
+      "circuitBreaker": { "status": false, "result": "Trip pada arus lebih rendah dari seharusnya" },
       "avr": { "status": true, "result": "Baik" }
     }
   },
@@ -193,48 +193,48 @@
     "panelControl": {
       "ka": "Drawing",
       "voltage": {
-        "rs": 381,
-        "rt": 380,
-        "st": 382,
-        "rn": 221,
-        "rg": 220,
-        "ng": 1
+        "rs": "6",
+        "rt": "6",
+        "st": "6",
+        "rn": "6",
+        "rg": "6",
+        "ng": "6"
       },
       "powerInfo": {
         "frequency": "50.1 HZ",
-        "cosQ": 0.8,
+        "cosQ": "6",
         "ampere": {
-          "r": 700,
-          "s": 702,
-          "t": 701
+          "r": "6",
+          "s": "6",
+          "t": "6"
         },
         "result": "AMAN"
       }
     }
   },
-  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian yang dilakukan oleh Ahli K3 Bidang Pesawat Tenaga dan Produksi PT. Prima Kurnia Darma bahwa Genset merk Caterpillar / 3406C dengan No.seri CAT123XYZ didapat temuan:\n- Oli mesin perlu diganti.\n- Panel board tidak berfungsi dan perlu perbaikan segera.\nSecara keseluruhan Genset dalam keadaan cukup baik dan laik beroperasi, dengan mengikuti persyaratan yang direkomendasikan.",
-  "recommendations": "1. Lakukan penggantian oli mesin.\n2. Lakukan perbaikan pada Panel Board.\n3. Pasang stiker rambu K3 pada tangki harian.\n4. Lakukan pemeriksaan dan pengujian berikutnya paling lambat 1 tahun yaitu pada Juni 2026.",
-  "inspectionDate": "24 Juli 2025",
+  "conclusion": "Berdasarkan hasil pemeriksaan dan pengujian, ditemukan beberapa item yang memerlukan perhatian dan perbaikan segera. Meskipun secara umum masih dapat beroperasi, perbaikan direkomendasikan untuk memastikan keandalan jangka panjang dan memenuhi standar keselamatan.",
+  "recommendations": "1. Lakukan perbaikan pada semua item yang ditandai 'BURUK'.\n2. Jadwalkan servis besar dalam 3 bulan ke depan.\n3. Lakukan pembersihan menyeluruh pada unit genset dan area sekitarnya.\n4. Lakukan pemeriksaan dan pengujian berikutnya paling lambat pada Juli 2026.",
+  "inspectionDate": "25 Juli 2025",
   "mcbCalculation": {
-    "phase": 3,
+    "phase": "6",
     "voltage": "220/380",
-    "cosQ": 0.8,
-    "generatorPowerKva": 500,
-    "generatorPowerKw": 400,
-    "resultCalculation": 760,
-    "requirementCalculation": 950,
+    "cosQ": "6",
+    "generatorPowerKva": "6",
+    "generatorPowerKw": "6",
+    "resultCalculation": "6",
+    "requirementCalculation": "6",
     "conclusion": "Disarankan MCCB yang terpasang pada objek adalah 1000 A, maka sesuai dengan perhitungan dan dapat dipastikan aman."
   },
   "noiseMeasurement": {
-    "pointA": { "result": 84.5, "status": "Memenuhi" },
-    "pointB": { "result": 83.9, "status": "Memenuhi" },
-    "pointC": { "result": 84.1, "status": "Memenuhi" },
-    "pointD": { "result": 84.3, "status": "Memenuhi" }
+    "pointA": { "result": "6", "status": "Memenuhi" },
+    "pointB": { "result": "6", "status": "Memenuhi" },
+    "pointC": { "result": "6", "status": "Memenuhi" },
+    "pointD": { "result": "6", "status": "Memenuhi" }
   },
   "lightingMeasurement": {
-    "pointA": { "result": 150, "status": "Memenuhi" },
-    "pointB": { "result": 145, "status": "Memenuhi" },
-    "pointC": { "result": 155, "status": "Memenuhi" },
-    "pointD": { "result": 160, "status": "Memenuhi" }
+    "pointA": { "result": "6", "status": "Memenuhi" },
+    "pointB": { "result": "6", "status": "Memenuhi" },
+    "pointC": { "result": "6", "status": "Memenuhi" },
+    "pointD": { "result": "6", "status": "Memenuhi" }
   }
 }
