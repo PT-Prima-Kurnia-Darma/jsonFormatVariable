@@ -1,5 +1,5 @@
 {
-  "laporanId": "N6zeoAYfIkDTvO6YSSeb",
+  "laporanId": "JB3zMGOiEOffZGQiOKhp",
   "reportHeader": {
     "examinationType": "PERIODIK",
     "inspectionDate": "Tangerang, 19 Juli 2025",
@@ -9,10 +9,10 @@
     "equipmentType": "Double Girder Overhead Crane"
   },
   "generalData": {
-    "unitLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang",
-    "userInCharge": "Divisi Produksi",
     "ownerName": "update",
-    "ownerAddress": "Area Fabrikasi Utama"
+    "userInCharge": "Divisi Produksi",
+    "ownerAddress": "Area Fabrikasi Utama",
+    "unitLocation": "Jl. Raya Serang Km. 15, Cikupa, Tangerang"
   },
   "technicalData": {
     "brandType": "KONECRANES / CXT",
@@ -32,7 +32,7 @@
   "testing": {
     "functionTest": true,
     "loadTest": {
-      "loadTon": 25,
+      "loadTon": "25",
       "isAbleToLift": true,
       "hasLoadDrop": false
     },
