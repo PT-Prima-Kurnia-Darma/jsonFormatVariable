@@ -2,7 +2,7 @@
   "examinationType": "PERTAMA",
   "inspectionType": "Pesawat Uap dan Bejana Tekan",
   "createdAt": "2025-07-24T04:14:00.000Z",
-  "extraId": "doc-pubt-001",
+  "extraId": 1,
   "generalData": {
     "companyName": "PT. Sentosa Abadi Jaya",
     "companyLocation": "Kawasan Industri Modern Cikande, Jl. Raya Jakarta-Serang KM. 68, Serang, Banten 42186",
@@ -14,11 +14,11 @@
     "brandType": "MBI-FT-2000",
     "countryAndYearOfManufacture": "Indonesia / 2024",
     "serialNumberUnitNumber": "MBI/FT/24/0123",
-    "designPressure": 18,
-    "maxAllowableWorkingPressure": 12,
-    "capacityWorkingLoad": 2000,
+    "designPressure": "18",
+    "maxAllowableWorkingPressure": "12",
+    "capacityWorkingLoad": "2000",
     "steamTemperature": "185°C",
-    "operatingPressure": 10,
+    "operatingPressure": "10",
     "fuelType": "Gas Alam",
     "intendedUse": "Pemanas Untuk Proses Produksi Tekstil",
     "permitNumber": "SKP-011/PUBT/2024",
@@ -28,20 +28,20 @@
   },
   "technicalData": {
     "shell": {
-      "numberOfRounds": 3,
+      "numberOfRounds": "20",
       "connectionMethod": "Seamless",
       "material": "SA-285 GR C",
-      "pipeDiameter": 1500,
-      "thickness": 18,
-      "bodyLength": 4500,
+      "pipeDiameter": "1500",
+      "thickness": "18",
+      "bodyLength": "4500",
       "heads": {
         "top": {
-          "diameter": 1500,
-          "thickness": 20
-        },
+          "diameter": "1500",
+          "thickness": "20"
+          },
         "rear": {
-          "diameter": 1500,
-          "thickness": 20
+          "diameter": "1500",
+          "thickness": "20"
         }
       },
       "tubePlate": {
@@ -58,34 +58,34 @@
     "furnace": {
       "type": "Corrugated",
       "material": "SA-516 GR 70",
-      "outerDiameter": 900,
-      "innerDiameter": 880,
-      "thickness": 10
+      "outerDiameter": "20",
+      "innerDiameter": "20",
+      "thickness": "20"
     },
     "waterTubes": {
       "firstPass": {
-        "diameter": 63.5,
-        "thickness": 3.2,
-        "length": 4500,
-        "quantity": 80
+        "diameter": "20",
+        "thickness": "20",
+        "length": "20",
+        "quantity": "20"
       },
       "secondPass": {
-        "diameter": 63.5,
-        "thickness": 3.2,
-        "length": 4500,
-        "quantity": 70
+        "diameter": "20",
+        "thickness": "20",
+        "length": "20",
+        "quantity": "20"
       },
       "stayTube": {
-        "diameter": 12,
-        "thickness": 12,
-        "length": 12,
-        "quantity": 12
+        "diameter": "20",
+        "thickness": "20",
+        "length": "20",
+        "quantity": "20"
       },
       "material": {
-        "diameter": 12,
-        "thickness": 12,
-        "length": 12,
-        "quantity": 12
+        "diameter": "20",
+        "thickness": "20",
+        "length": "20",
+        "quantity": "20"
       }
     },
     "tubePlateSplicing": "Expanded and Welded"
@@ -169,9 +169,9 @@
       "couplantUsed": "Glycerin"
     },
     "measurementResults": {
-      "topHead": { "nominal": 20, "point1": 19.8, "point2": 19.7, "point3": 19.9, "minimum": 19.7, "maximum": 19.9 },
-      "shell": { "nominal": 18, "point1": 17.9, "point2": 18.1, "point3": 18.0, "minimum": 17.9, "maximum": 18.1 },
-      "buttonHead": { "nominal": 20, "point1": 19.9, "point2": 20.0, "point3": 19.8, "minimum": 19.8, "maximum": 20.0 }
+      "topHead": { "nominal": "20", "point1": "20", "point2": "20", "point3": "20", "minimum": "20", "maximum": "20" },
+      "shell": { "nominal": "20", "point1": "20", "point2": "20", "point3": "20", "minimum": "20", "maximum": "20" },
+      "buttonHead": { "nominal": "20", "point1": "20", "point2": "20", "point3": "20", "minimum": "20", "maximum": "20" }
     },
     "ndt": {
       "shell": {
@@ -191,29 +191,29 @@
       }
     },
     "hydrotest": {
-      "testPressure": 18,
-      "mawp": 12,
+      "testPressure": "20",
+      "mawp": "20",
       "testMedium": "Air Bersih",
       "testDate": "2025-07-21",
       "testResult": "Gagal, ditemukan rembesan pada sambungan las."
     },
     "appendagesCheck": {
-      "workingPressureGauge": { "quantity": 2, "status": true, "result": "10 Kg/Cm2, berfungsi" },
-      "manHole": { "quantity": 1, "status": false, "result": "Gasket bocor" },
-      "safetyValveFullOpen": { "quantity": 2, "status": true, "result": "12.5 Kg/Cm2, membuka penuh" },
-      "mainSteamValve": { "quantity": 1, "status": false, "result": "Sulit dioperasikan" },
-      "levelGlassIndicator": { "quantity": 2, "status": true, "result": "Jelas dan berfungsi" },
-      "blowdownValve": { "quantity": 2, "status": false, "result": "Tidak menutup sempurna" },
-      "feedwaterStopValve": { "quantity": 2, "status": true, "result": "Berfungsi" },
-      "feedwaterInletValve": { "quantity": 2, "status": false, "result": "Macet" },
-      "steamDrier": { "quantity": 1, "status": true, "result": "Berfungsi" },
-      "waterPump": { "quantity": 2, "status": false, "result": "Satu pompa bergetar hebat" },
-      "controlPanel": { "quantity": 1, "status": true, "result": "Semua indikator berfungsi" },
-      "nameplate": { "quantity": 1, "status": false, "result": "Kotor dan sulit dibaca" }
+      "workingPressureGauge": { "quantity": "20", "status": true, "result": "10 Kg/Cm2, berfungsi" },
+      "manHole": { "quantity": "20", "status": false, "result": "Gasket bocor" },
+      "safetyValveFullOpen": { "quantity": "20", "status": true, "result": "12.5 Kg/Cm2, membuka penuh" },
+      "mainSteamValve": { "quantity": "20", "status": false, "result": "Sulit dioperasikan" },
+      "levelGlassIndicator": { "quantity": "20", "status": true, "result": "Jelas dan berfungsi" },
+      "blowdownValve": { "quantity": "20", "status": false, "result": "Tidak menutup sempurna" },
+      "feedwaterStopValve": { "quantity": "20", "status": true, "result": "Berfungsi" },
+      "feedwaterInletValve": { "quantity": "20", "status": false, "result": "Macet" },
+      "steamDrier": { "quantity": "20", "status": true, "result": "Berfungsi" },
+      "waterPump": { "quantity": "20", "status": false, "result": "Satu pompa bergetar hebat" },
+      "controlPanel": { "quantity": "20", "status": true, "result": "Semua indikator berfungsi" },
+      "nameplate": { "quantity": "20", "status": false, "result": "Kotor dan sulit dibaca" }
     },
     "safetyValveTest": {
       "header": "Safety Valve 1 & 2",
-      "startsToOpen": 12.5,
+      "startsToOpen": "20",
       "valveInfo": "Brand: TOYO, Model: SV-100. Hasil tes: Membuka pada 12.5 Kg/Cm2, menutup pada 11.8 Kg/Cm2. Sesuai."
     }
   },

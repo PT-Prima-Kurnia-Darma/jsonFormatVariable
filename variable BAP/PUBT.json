@@ -1,5 +1,5 @@
 {
-  "laporanId": "H6nRWJquhLPCnwevt1Bb",
+  "laporanId": "kgdtCovQtWgt3AP59OQn",
   "examinationType": "BERKALA",
   "inspectionType": "AIR RECEIVER TANK",
   "inspectionDate": "Kamis, 24 Juli 2025",
@@ -19,11 +19,11 @@
     "serialNumberUnitNumber": "SN-987654321",
     "fuelType": "N/A",
     "operatingPressure": "Udara Bertekanan",
-    "designPressureKgCm2": 12,
-    "maxAllowableWorkingPressure": 10,
+    "designPressureKgCm2":"20",
+    "maxAllowableWorkingPressure": "20",
     "technicalDataShellMaterial": "SA-516 Gr. 70",
     "safetyValveType": "Spring Loaded",
-    "volumeLiters": 1000
+    "volumeLiters": "20"
   },
   "visualInspection": {
     "foundationCondition": true,
