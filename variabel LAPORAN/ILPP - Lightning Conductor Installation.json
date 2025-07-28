@@ -1,8 +1,8 @@
 {
   "examinationType": "Pemeriksaan dan Pengujian Berkala",
-  "equipmentType": "",
-  "inspectionType": "",
-  "createdAt": "",
+  "equipmentType": "Panangkal Petir",
+  "inspectionType": "Instalasi Listrik dan Petir",
+  "createdAt": "1323",
   "extraId": 1,
   "pjk3Data": {
     "companyNameandaddres": "PT. Aman Sentosa K3 - Jl. Keselamatan No. 1, Jakarta",
@@ -25,8 +25,8 @@
     "buildingHeight": "75 Meter",
     "buildingArea": "2500 m²",
     "receiverHeight": "3 Meter",
-    "receiverCount": 2,
-    "testJointCount": 2,
+    "receiverCount": "10",
+    "testJointCount": "10",
     "conductorDescription": "2 Jalur",
     "groundingResistance": "Kabel BC 70 mm²",
     "spreadingResistance": "bla bla",
@@ -63,8 +63,8 @@
     "arresterInstallation": { "good": true, "poor": false, "notes": "Sudah dilengkapi arrester" }
   },
   "dynamicTestItems": [
-    { "ecResult": "10m", "epResult": "20m", "rValue": 0.45, "result": "Baik" },
-    { "ecResult": "10m", "epResult": "20m", "rValue": 0.48, "result": "Baik" }
+    { "ecResult": "10m", "epResult": "20m", "rValue": "10", "result": "Baik" },
+    { "ecResult": "10m", "epResult": "20m", "rValue": "10", "result": "Baik" }
   ],
   "dynamicItems": [
     { "materialConditionsItems": "Pentanahan Head Terminal 1", "outcomeBaik": true, "outcomeBuruk": false, "rGradeItems": "0.45", "result": "LAYAK" },
