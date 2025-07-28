@@ -1,9 +1,11 @@
 {
-  "laporanId":"3eh0R10HYk93s5v4jS92",
+  "laporanId":"Bb7rP6jAxXF317Hb4Hxn",
   "examinationType": "Pemeriksaan Berkala",
   "inspectionDate": "2025-07-15",
+  "equipmentType": "test",
   "extraId":   123,
   "createdAt": "2025-07-15T11:36:36.173Z",
+  "inspectionType": "",
   "generalData": {
     "ownerName": "PT. GACOR PART 3",
     "ownerAddress": "Jl. Raya Industri No. 45, Kawasan Industri Bekasi",
