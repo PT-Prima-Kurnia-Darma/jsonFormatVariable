@@ -23,24 +23,24 @@
   },
   "technicalData": {
     "gondolaSpecification": {
-      "supportMastHeight": 1,
-      "frontBeamLength": 4,
-      "middleBeamLength": 4,
-      "rearBeamLength": 0,
-      "balanceWeightDistance": 0,
+      "supportMastHeight": "1",
+      "frontBeamLength": "1",
+      "middleBeamLength": "1",
+      "rearBeamLength": "1",
+      "balanceWeightDistance": "1",
       "capacity": "250 kg / 2 orang",
       "speed": "9-11 m / menit",
       "platformSize": "400 x 70 x 100",
-      "wireRopeDiameter": 8.3
+      "wireRopeDiameter": "1"
     },
     "hoist": {
       "model": "Electric Motor",
-      "liftingCapacity": 630,
+      "liftingCapacity": "1",
       "electricMotor": {
         "type": "LTD 63",
         "power": "2 x 6.3 kN",
-        "voltage": 380,
-        "voltageHz": 50
+        "voltage": "1",
+        "voltageHz": "1"
       }
     },
     "safetyLockType": "LSF-30",
@@ -50,14 +50,14 @@
       "capacity": "Standard"
     },
     "suspensionMechanical": {
-      "supportMastHeight": 1,
-      "frontBeamLength": 4,
+      "supportMastHeight": "1",
+      "frontBeamLength": "1",
       "material": "IWF"
     },
     "machineWeight": {
-      "totalPlatformWeight": 500,
-      "suspensionMechanicalWeight": 300,
-      "balanceWeight": 2000,
+      "totalPlatformWeight": "1",
+      "suspensionMechanicalWeight": "1",
+      "balanceWeight": "1",
       "totalMachineWeight": "2800"
     }
   },
